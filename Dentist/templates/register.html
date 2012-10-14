@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/register/" method="post"> {% csrf_token %}
+	{{ form.non_field_errors }}
+	<div class="fieldWrapper">
+        {{ form.username.errors }}
+        {{ form.username.label_tag }}: 
+        {{ form.username }}
+    </div>
+    
+    <div class="fieldWrapper">
+        {{ form.first_name.errors }}
+        {{ form.first_name.label_tag }}: 
+        {{ form.first_name }}
+    </div>
+    
+    <div class="fieldWrapper">
+        {{ form.last_name.errors }}
+        {{ form.last_name.label_tag }}: 
+        {{ form.last_name }}
+    </div>
+    
+    <div class="fieldWrapper">
+        {{ form.email.errors }}
+        {{ form.email.label_tag }}: 
+        {{ form.email }}
+    </div>
+    
+    <div class="fieldWrapper">
+        {{ form.password.errors }} 
+        {{ form.password.label_tag }}: 
+        <input id="id_password" type="password" name="password" maxlength="128" />
+    </div>
+    
+    <div class="fieldWrapper">
+        {{ form.password2.errors }}
+        Powtórz hasło: 
+         <input id="id_password2" type="password" name="password2" maxlength="128" />
+    </div>
+	<p><input type="submit" value="Register" /></p>
+</form>
+{% endblock %}

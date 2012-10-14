@@ -3,27 +3,11 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-class patient(models.Model):
-    birth_date = models.DateField("Data ur.")
-    address = models.CharField("Adres", max_length=100)
-    PESEL = models.CharField("PESEL", max_length=11, unique=True)
-    insurance_number = models.CharField("Nr ubezp.", max_length=10)
-    phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
-    comment = models.TextField("O pacjencie", blank=True, null=True)
-    user_id = models.ForeignKey(User, verbose_name="User")
-    
-    class Meta:
-        verbose_name= "Pacjent"
-
-    def __unicode__(self):
-        user = User.objects.get(id=self.user_id)
-        return u'Pacjent: %s %s' % (user.first_name, user.last_name)
-    
 class dentist(models.Model):
     title = models.CharField("Tytuł", max_length=30, blank=True, null=True)
     description = models.TextField("O dentyście", blank=True, null=True)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
-    user_id = models.ForeignKey(User, verbose_name="User")
+    user = models.ForeignKey(User, verbose_name="User")
     
     class Meta:
         verbose_name = "Dentysta"
@@ -41,9 +25,26 @@ class disease(models.Model):
     def __unicode__(self):
         return u'Choroba: %s' % (self.disease_name)
     
+class patient(models.Model):
+    birth_date = models.DateField("Data ur.")
+    address = models.CharField("Adres", max_length=100)
+    PESEL = models.CharField("PESEL", max_length=11, unique=True)
+    insurance_number = models.CharField("Nr ubezp.", max_length=10)
+    phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
+    comment = models.TextField("O pacjencie", blank=True, null=True)
+    user = models.ForeignKey(User, verbose_name="User")
+    diseases = models.ManyToManyField(disease, through="patient_diseases")
+    
+    class Meta:
+        verbose_name= "Pacjent"
+
+    def __unicode__(self):
+        user = User.objects.get(id=self.user_id)
+        return u'Pacjent: %s %s' % (user.first_name, user.last_name)
+    
 class patient_diseases(models.Model):
-    patient_id = models.ForeignKey(patient, verbose_name="Pacjent")
-    disease_id = models.ForeignKey(disease, verbose_name="Choroba")
+    patient = models.ForeignKey(patient, verbose_name="Pacjent")
+    disease = models.ForeignKey(disease, verbose_name="Choroba")
     date = models.DateField("Data")
     
     class Meta:
@@ -70,8 +71,8 @@ class hours(models.Model):
     week_day = models.IntegerField("Dzień tygodnia", max_length=1)
     begin = models.TimeField("Przyjmuje od")
     end = models.TimeField("Przyjmuje do")
-    dentist_id = models.ForeignKey(dentist, verbose_name="Dentysta")
-    dental_office_id = models.ForeignKey(dental_office, verbose_name="Gabinet")
+    dentist = models.ForeignKey(dentist, verbose_name="Dentysta")
+    dental_office = models.ForeignKey(dental_office, verbose_name="Gabinet")
     room = models.CharField("Pokój", max_length=5) 
     
     class Meta:
@@ -87,8 +88,8 @@ class dates(models.Model):
     date = models.DateField("Data")
     begin = models.TimeField("Od")
     end = models.TimeField("Do")
-    dentist_id = models.ForeignKey(dentist, verbose_name="Dentysta")
-    dental_office_id = models.ForeignKey(dental_office, verbose_name="Gabinet")
+    dentist = models.ForeignKey(dentist, verbose_name="Dentysta")
+    dental_office = models.ForeignKey(dental_office, verbose_name="Gabinet")
     room = models.CharField("Pokój", max_length=5) 
     
     class Meta:
@@ -110,10 +111,10 @@ class appointment_type(models.Model):
 class appointment(models.Model):
     date = models.DateField("Data")
     description = models.TextField("Opis", blank=True, null=True)
-    dentist_id = models.ForeignKey(dentist, verbose_name="Dentysta")
-    patient_id = models.ForeignKey(patient, verbose_name="Pacjent")
-    dental_office_id = models.ForeignKey(dental_office, verbose_name="Gabinet")
-    appointment_type_id = models.ForeignKey(appointment_type, verbose_name="Typ wizyty")
+    dentist = models.ForeignKey(dentist, verbose_name="Dentysta")
+    patient = models.ForeignKey(patient, verbose_name="Pacjent")
+    dental_office = models.ForeignKey(dental_office, verbose_name="Gabinet")
+    appointment_type = models.ForeignKey(appointment_type, verbose_name="Typ wizyty")
     
     class Meta:
         verbose_name = "Wizyta"
@@ -155,10 +156,10 @@ class tooth_part(models.Model):
         return self.name
     
 class tooth_loss(models.Model):
-    appointment_id = models.ForeignKey(appointment, verbose_name="Wizyta")
-    tooth_id = models.ForeignKey(tooth, verbose_name="Ząb")
-    loss_type_id = models.ForeignKey(loss_type, verbose_name="Typ ubytku")
-    tooth_part_id = models.ForeignKey(tooth_part, verbose_name="Część zęba")
+    appointment = models.ForeignKey(appointment, verbose_name="Wizyta")
+    tooth = models.ForeignKey(tooth, verbose_name="Ząb")
+    loss_type = models.ForeignKey(loss_type, verbose_name="Typ ubytku")
+    tooth_part = models.ForeignKey(tooth_part, verbose_name="Część zęba")
     comment = models.TextField("Komentarz", blank=True, null=True)
     
     class Meta:

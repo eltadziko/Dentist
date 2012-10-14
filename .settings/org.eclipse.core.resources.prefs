@@ -1,13 +1,11 @@
-<<<<<<< HEAD
+#Mon Oct 15 01:10:03 CEST 2012
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=b2913c7dbaef275a639a372630055653ddea688f
 eclipse.preferences.version=1
 encoding//Dentist/models.py=utf-8
 encoding//Dentist/templates/base.html=UTF-8
-encoding//Dentist/views.py=UTF-8
-encoding/<project>=UTF-8
-=======
-#Sat Oct 13 20:28:32 CEST 2012
-eclipse.preferences.version=1
-encoding//Dentist/templates/base.html=UTF-8
+encoding//Dentist/templates/register.html=UTF-8
+encoding//Dentist/views.py=utf-8
 encoding/<project>=UTF-8
 encoding/Dentist=UTF-8
->>>>>>> b2913c7dbaef275a639a372630055653ddea688f
