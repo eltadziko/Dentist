@@ -1,9 +1,10 @@
-#Mon Oct 15 20:56:44 CEST 2012
+#Tue Oct 16 00:58:58 CEST 2012
 =\=\=\=\=\=\=
 <<<<<<<=HEAD
 >>>>>>>=b2913c7dbaef275a639a372630055653ddea688f
 eclipse.preferences.version=1
-encoding//Dentist/forms.py=utf-8
+encoding//Dentist/forms/patient_form.py=utf-8
+encoding//Dentist/forms/user_form.py=utf-8
 encoding//Dentist/models.py=utf-8
 encoding//Dentist/templates/base.html=UTF-8
 encoding//Dentist/templates/register.html=UTF-8
