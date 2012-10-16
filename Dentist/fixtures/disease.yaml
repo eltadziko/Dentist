@@ -1,35 +1,35 @@
 - model: Dentist.disease
   pk: 1
   fields:
-    disease_name: Alergia
+    disease_name: alergia
 - model: Dentist.disease
   pk: 2
   fields:
-    disease_name: Nadciśnienie
+    disease_name: nadciśnienie
 - model: Dentist.disease
   pk: 3
   fields:
-    disease_name: Cukrzyca
+    disease_name: cukrzyca
 - model: Dentist.disease
   pk: 4
   fields:
-    disease_name: Choroby tarczycy
+    disease_name: choroby tarczycy
 - model: Dentist.disease
   pk: 5
   fields:
-    disease_name: Epilepsja
+    disease_name: epilepsja
 - model: Dentist.disease
   pk: 6
   fields:
-    disease_name: Ciąża
+    disease_name: ciąża
 - model: Dentist.disease
   pk: 7
   fields:
-    disease_name: Żółtaczka
+    disease_name: żółtaczka
 - model: Dentist.disease
   pk: 8
   fields:
-    disease_name: Gruźlica
+    disease_name: gruźlica
 - model: Dentist.disease
   pk: 9
   fields:
@@ -37,4 +37,4 @@
 - model: Dentist.disease
   pk: 10
   fields:
-    disease_name: Choroby serca
+    disease_name: choroby serca

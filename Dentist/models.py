@@ -123,12 +123,12 @@ class appointment(models.Model):
         return self.date
     
 class tooth(models.Model):
-    TYPE_CHOICES = (('si', 'siekacz'),('ki', 'kieł'),('pr', 'przedtrzonowiec'),('tr', 'trzonowiec'))
-    type = models.CharField("Rodzaj zęba", max_length=2, choices=TYPE_CHOICES)
-    JAW_CHOICES = (('g', 'górna'), ('d', 'dolna'))
-    jaw = models.CharField("Szczęka", max_length=1, choices=JAW_CHOICES)
-    SIDE_CHOICES = (('l', 'lewa'), ('p', 'prawa'))
-    side = models.CharField("Strona", max_length=1, choices=SIDE_CHOICES)
+    TYPE_CHOICES = (('siekacz', 'siekacz'),('kieł', 'kieł'),('przedtrzonowiec', 'przedtrzonowiec'),('trzonowiec', 'trzonowiec'))
+    type = models.CharField("Rodzaj zęba", max_length=15, choices=TYPE_CHOICES)
+    JAW_CHOICES = (('górna', 'górna'), ('dolna', 'dolna'))
+    jaw = models.CharField("Szczęka", max_length=5, choices=JAW_CHOICES)
+    SIDE_CHOICES = (('lewa', 'lewa'), ('prawa', 'prawa'))
+    side = models.CharField("Strona", max_length=5, choices=SIDE_CHOICES)
     tooth_number = models.IntegerField("Nr zęba")
     
     class Meta:

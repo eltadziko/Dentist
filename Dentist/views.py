@@ -8,6 +8,7 @@ import datetime
 from models import *
 from forms.user_form import UserForm
 from forms.patient_form import PatientForm
+from forms.diseases_form import DiseasesForm
 
 def register(request):
     if request.method == 'POST':
@@ -37,5 +38,6 @@ def register(request):
     return render(request, 'register.html', {'form': form, 'form_patient': form_patient})
 
 def diseases(request):
-    return render(request, 'diseases.html')
+    form = DiseasesForm
+    return render(request, 'diseases.html', {'form': form})
     
