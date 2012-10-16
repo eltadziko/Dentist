@@ -7,7 +7,7 @@ class dentist(models.Model):
     title = models.CharField("Tytuł", max_length=30, blank=True, null=True)
     description = models.TextField("O dentyście", blank=True, null=True)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
-    user = models.ForeignKey(User, verbose_name="User")
+    user = models.OneToOneField(User, verbose_name="User")
     
     class Meta:
         verbose_name = "Dentysta"
@@ -32,7 +32,7 @@ class patient(models.Model):
     insurance_number = models.CharField("Nr ubezp.", max_length=10)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
     comment = models.TextField("O pacjencie", blank=True, null=True)
-    user = models.ForeignKey(User, verbose_name="User")
+    user = models.OneToOneField(User, verbose_name="User")
     diseases = models.ManyToManyField(disease, through="patient_diseases")
     
     class Meta:
