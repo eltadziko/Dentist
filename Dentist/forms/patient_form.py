@@ -6,3 +6,8 @@ class PatientForm(forms.ModelForm):
     class Meta:
         model = patient
         exclude = ("diseases", "user", "comment")
+        
+class PatientProfileForm(forms.ModelForm):
+    class Meta:
+        model = patient
+        exclude = ("diseases", "user")

@@ -7,7 +7,8 @@ from django.contrib.auth import login, authenticate
 import datetime
 from models import *
 from forms.user_form import UserForm
-from forms.patient_form import PatientForm
+from forms.profile_form import ProfileForm
+from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm
 from django.contrib.auth.decorators import login_required
 
@@ -53,4 +54,21 @@ def diseases(request):
     else:
         form = DiseasesForm(request.user)
     return render(request, 'diseases.html', {'form': form})
+
+@login_required
+def update_profile(request):
+    user = User.objects.get(id = request.user.id)
+    pat = patient.objects.get(user = user.id)
+    
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance = user)
+        form_patient = PatientProfileForm(request.POST, instance = pat)
+        if form.is_valid() and form_patient.is_valid(): 
+            form.save()            
+            form_patient.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form = ProfileForm(instance = user)
+        form_patient = PatientProfileForm(instance = pat)
+    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient})
     
