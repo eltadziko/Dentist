@@ -38,20 +38,19 @@ def register(request):
         form_patient = PatientForm
     return render(request, 'register.html', {'form': form, 'form_patient': form_patient})
 
-#@login_required
+@login_required
 def diseases(request):
     if request.POST:
-        form = DiseasesForm(request.POST)
+        form = DiseasesForm(request.user, request.POST)
         if form.is_valid():
+            pat = patient.objects.get(user=request.user.id)
+            patient_diseases.objects.filter(patient_id=pat.id).delete()
             for disease2 in request.POST.getlist('diseases'):
-                pat = patient.objects.get(user=3)
                 dis = disease.objects.get(id=disease2)
                 pat_dis = patient_diseases(patient=pat,disease=dis, date=datetime.datetime.now().date())
                 pat_dis.save()
             return HttpResponseRedirect('/index/')
-        else:
-            return render(request, 'test.html', {'form': request.POST})
     else:
-        form = DiseasesForm
+        form = DiseasesForm(request.user)
     return render(request, 'diseases.html', {'form': form})
     
