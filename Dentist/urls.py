@@ -19,4 +19,5 @@ urlpatterns = patterns('',
     url(r'^register/', views.register),
     url(r'^diseases/', views.diseases),
     url(r'^profile/', views.update_profile),
+    url(r'^password/', views.change_password),
 )

@@ -1,0 +1,10 @@
+#Thu Oct 18 23:32:20 CEST 2012
+eclipse.preferences.version=1
+encoding//Dentist/forms/diseases_form.py=utf-8
+encoding//Dentist/forms/password_form.py=utf-8
+encoding//Dentist/forms/patient_form.py=utf-8
+encoding//Dentist/forms/profile_form.py=utf-8
+encoding//Dentist/forms/user_form.py=utf-8
+encoding//Dentist/models.py=utf-8
+encoding//Dentist/templates/password.html=UTF-8
+encoding//Dentist/views.py=utf-8

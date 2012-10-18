@@ -10,6 +10,7 @@ from forms.user_form import UserForm
 from forms.profile_form import ProfileForm
 from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm
+from forms.password_form import PasswordForm
 from django.contrib.auth.decorators import login_required
 
 def register(request):
@@ -71,4 +72,17 @@ def update_profile(request):
         form = ProfileForm(instance = user)
         form_patient = PatientProfileForm(instance = pat)
     return render(request, 'profile.html', {'form': form, 'form_patient': form_patient})
+
+@login_required
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordForm(request.user, request.POST)
+        if form.is_valid():
+            request.user.set_password(request.POST['password'])
+            request.user.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form = PasswordForm(request.user)
+    return render(request, 'password.html', {'form': form})
+        
     
