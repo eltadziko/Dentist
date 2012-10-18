@@ -1,0 +1,35 @@
+﻿- model: Dentist.disease
+  pk: 1
+  fields:
+    title: Paweł Kosior
+    description: Lekarz pracuje w gabinecie w miejscowości Wrocław, w województwie dolnośląskim. Prowadzi leczenie w obrębie 3 specjalizacji: stomatolog, implanty, chirurg, stomatolog, protetyk. 
+    phone: 713519393
+    user: dentysta
+- model: Dentist.disease
+  pk: 2
+  fields:
+    title: Ewa Minch
+    description: Lekarz pracuje w gabinecie w miejscowości Wrocław, w województwie dolnośląskim. Prowadzi leczenie w obrębie 3 specjalizacji: stomatolog, implanty, ortodonta, stomatolog, protetyk.
+    phone: 713446612
+    user: dentysta
+- model: Dentist.disease
+  pk: 3
+  fields:
+    title: Ziemowit Sartys
+    description: Lekarz pracuje w gabinecie w miejscowości Wrocław, w województwie dolnośląskim. Prowadzi leczenie w obrębie 2 specjalizacji: stomatolog, protetyk, stomatolog, implanty.
+    phone: 717958063
+    user: dentysta
+- model: Dentist.disease
+  pk: 4
+  fields:
+    title: Anna Paradowska
+    description: Lekarz pracuje w gabinecie w miejscowości Wrocław, w województwie dolnośląskim. Prowadzi leczenie w obrębie 3 specjalizacji: stomatolog, protetyk, ortodonta, psycholog.
+    phone:  606917742
+    user: dentysta
+- model: Dentist.disease
+  pk: 5
+  fields:
+    title: Edyta Cygnarowska
+    description: Lekarz pracuje w gabinecie w miejscowości Wrocław, w województwie dolnośląskim. Prowadzi leczenie w obrębie 2 specjalizacji: stomatolog, implanty, stomatolog, protetyk.
+    phone:  608620828
+    user: dentysta

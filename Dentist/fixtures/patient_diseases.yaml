@@ -1,0 +1,30 @@
+﻿- model: Dentist.patient_diseases
+  pk: 1
+  fields:
+    patient: 
+    disease: choroby tarczycy
+    date:       
+- model: Dentist.patient_diseases
+  pk: 2
+  fields:
+    patient: 
+    disease: alergia
+    date:    
+- model: Dentist.patient_diseases
+  pk: 3
+  fields:
+    patient: 
+    disease: 
+    date:    
+- model: Dentist.patient_diseases
+  pk: 4
+  fields:
+    patient: 
+    disease: 
+    date:    
+- model: Dentist.patient_diseases
+  pk: 5
+  fields:
+    patient: 
+    disease: cukrzyca
+    date:    

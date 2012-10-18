@@ -1,0 +1,10 @@
+﻿- model: Dentist.tooth_loss
+  pk: 1
+  fields:
+    appointment: 
+    tooth: 
+    loss_type: 
+    tooth_part: 
+    comment: 
+
+

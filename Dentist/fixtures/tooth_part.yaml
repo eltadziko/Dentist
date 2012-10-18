@@ -1,0 +1,28 @@
+﻿- model: Dentist.tooth_part
+  pk: 1
+  fields:
+    name: korzeń
+- model: Dentist.tooth_part
+  pk: 2
+  fields:
+    name: korona
+- model: Dentist.tooth_part
+  pk: 3
+  fields:
+    name: szyjka
+- model: Dentist.tooth_part
+  pk: 4
+  fields:
+    name: szkliwo
+- model: Dentist.tooth_part
+  pk: 5
+  fields:
+    name: zębina
+- model: Dentist.tooth_part
+  pk: 6
+  fields:
+    name: miazga
+- model: Dentist.tooth_part
+  pk: 7
+  fields:
+    name: kanał

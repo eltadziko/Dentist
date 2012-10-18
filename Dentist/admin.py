@@ -41,7 +41,13 @@ class PatientAdmin(admin.ModelAdmin):
                      'insurance_number', 'phone', 'comment', 'show_user_url')
     list_display_links = ('user_first_name', 'user_last_name', 'PESEL',)
    
+class DiseaseAdmin(admin.ModelAdmin):
+    def show_disease_name(self, obj):
+        return '%s' % (obj.disease_name)
     
+    list_display = ('show_disease_name',)
+       
 # admin.site.register(User, UsAdmin)
 admin.site.register(dentist, DentistAdmin)
 admin.site.register(patient, PatientAdmin)
+admin.site.register(disease, DiseaseAdmin)

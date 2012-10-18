@@ -14,7 +14,14 @@ class MyCheckboxSelectMultiple(CheckboxSelectMultiple):
 		html = html.replace('Choroba: ', '')
 		return mark_safe(html)
 
-class DiseasesForm(forms.Form):		
+class DiseasesForm(forms.Form):
+	
+	def __init__(self, user, *args, **kwargs):
+		self.user = user
+		super(DiseasesForm, self).__init__(*args, **kwargs)
+		pat = patient.objects.get(user=user.id)
+		self.fields['diseases'].initial = patient_diseases.objects.values_list('disease_id', flat=True).filter(patient=pat.id)
+	
 	diseases = forms.ModelMultipleChoiceField(queryset=disease.objects.all(),
                                                     widget=MyCheckboxSelectMultiple(),
                                                     required=False)			

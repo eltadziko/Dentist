@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form action="/profile/" method="post"> {% csrf_token %}
+	{% if form.non_field_errors %}
+       	<div class="error">
+		    {% for error in form.non_field_errors %}
+		        <strong>{{ error|escape }} </strong>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	{% for field in form %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }}: 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+    {% for field in form_patient %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }}: 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+	<p><input type="submit" value="Zapisz zmiany" /></p>
+</form>
+{% endblock %}

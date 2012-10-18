@@ -7,7 +7,8 @@ from django.contrib.auth import login, authenticate
 import datetime
 from models import *
 from forms.user_form import UserForm
-from forms.patient_form import PatientForm
+from forms.profile_form import ProfileForm
+from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm
 from django.contrib.auth.decorators import login_required
 
@@ -38,20 +39,36 @@ def register(request):
         form_patient = PatientForm
     return render(request, 'register.html', {'form': form, 'form_patient': form_patient})
 
-#@login_required
+@login_required
 def diseases(request):
     if request.POST:
-        form = DiseasesForm(request.POST)
+        form = DiseasesForm(request.user, request.POST)
         if form.is_valid():
+            pat = patient.objects.get(user=request.user.id)
+            patient_diseases.objects.filter(patient_id=pat.id).delete()
             for disease2 in request.POST.getlist('diseases'):
-                pat = patient.objects.get(user=3)
                 dis = disease.objects.get(id=disease2)
                 pat_dis = patient_diseases(patient=pat,disease=dis, date=datetime.datetime.now().date())
                 pat_dis.save()
             return HttpResponseRedirect('/index/')
-        else:
-            return render(request, 'test.html', {'form': request.POST})
     else:
-        form = DiseasesForm
+        form = DiseasesForm(request.user)
     return render(request, 'diseases.html', {'form': form})
+
+@login_required
+def update_profile(request):
+    user = User.objects.get(id = request.user.id)
+    pat = patient.objects.get(user = user.id)
+    
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance = user)
+        form_patient = PatientProfileForm(request.POST, instance = pat)
+        if form.is_valid() and form_patient.is_valid(): 
+            form.save()            
+            form_patient.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form = ProfileForm(instance = user)
+        form_patient = PatientProfileForm(instance = pat)
+    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient})
     
