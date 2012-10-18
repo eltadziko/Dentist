@@ -1,0 +1,179 @@
+﻿- model: Dentist.hours
+  pk: 1
+  fields:
+    week_day: 1
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room:   
+- model: Dentist.hours
+  pk: 2
+  fields:
+    week_day: 1
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 3
+  fields:
+    week_day: 1
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 4
+  fields:
+    week_day: 1
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 5
+  fields:
+    week_day: 2
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 6
+  fields:
+    week_day: 2
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 7
+  fields:
+    week_day: 2
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 8
+  fields:
+    week_day: 3
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 9
+  fields:
+    week_day: 3
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 10
+  fields:
+    week_day: 3
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 11
+  fields:
+    week_day: 4
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 12
+  fields:
+    week_day: 4
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 13
+  fields:
+    week_day: 4
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 14
+  fields:
+    week_day: 4
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 15
+  fields:
+    week_day: 4
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: - model: Dentist.hours
+  pk: 16
+  fields:
+    week_day: 5
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 17
+  fields:
+    week_day: 5
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 18
+  fields:
+    week_day: 5
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 19
+  fields:
+    week_day: 5
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 
+    room: 
+- model: Dentist.hours
+  pk: 20
+  fields:
+    week_day: 
+    begin: 
+    end: 
+    dentist: 
+    dental_office: 5
+    room: 

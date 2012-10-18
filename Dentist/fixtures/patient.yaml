@@ -1,0 +1,110 @@
+﻿- model: Dentist.patient
+  pk: 1
+  fields:
+    birth_date: 23.02.1990
+    address: Zawiszy Czarnego 23/34
+    PESEL: 90022303723
+    insurance_number:
+    phone: 665238987
+    comment: 
+    user: pacjent
+    diseases: alergia, ciąża
+- model: Dentist.patient
+  pk: 2
+  fields:
+    birth_date: 13.03.1993
+    address: Długa 117
+    PESEL: 93031367237
+    insurance_number: NFZ Wrocław WF1
+    phone: 667548988
+    comment: 
+    user: pacjent 
+    diseases: nadciśnienie, choroby serca
+- model: Dentist.patient
+  pk: 3
+  fields:
+    birth_date: 01.01.2001
+    address: Borowska 74/07
+    PESEL: 01010123456
+    insurance_number:
+    phone: 534234876
+    comment: 
+    user: pacjent
+    diseases: choroby serca
+- model: Dentist.patient
+  pk: 4
+  fields:
+    birth_date: 05.12.1991
+    address: Piękna 20/68
+    PESEL: 91120587876
+    insurance_number:
+    phone: 788345234
+    comment: 
+    user: pacjent 
+    diseases: cukrzyca
+- model: Dentist.patient
+  pk: 5
+  fields:
+    birth_date: 03.10.1986
+    address: Zaporowska 57/19
+    PESEL: 86100323876
+    insurance_number:
+    phone: 567342802
+    comment: 
+    user: pacjent 
+    diseases: epilepsja
+- model: Dentist.patient
+  pk: 5
+  fields:
+    birth_date: 09.02.1973
+    address: Wittiga 9/1024
+    PESEL: 73020923987
+    insurance_number:
+    phone: 765987234
+    comment: 
+    user: pacjent 
+    diseases: alergia
+- model: Dentist.patient
+  pk: 7
+  fields:
+    birth_date: 17.08.1951
+    address: Grunwaldzka 73/5
+    PESEL: 51081798765
+    insurance_number:
+    phone: 534876091
+    comment: 
+    user: pacjent 
+    diseases: nadciśnienie
+- model: Dentist.patient
+  pk: 8
+  fields:
+    birth_date: 02.02.2002
+    address: Wołowska 23
+    PESEL: 02020276543
+    insurance_number:
+    phone: 543290001
+    comment: 
+    user: pacjent 
+    diseases: AIDS
+- model: Dentist.patient
+  pk: 9
+  fields:
+    birth_date: 11.05.1985
+    address: Zamojska 34/7
+    PESEL: 85051198754
+    insurance_number:
+    phone: 537899001
+    comment: 
+    user: pacjent 
+    diseases: choroby tarczycy
+- model: Dentist.patient
+  pk: 10
+  fields:
+    birth_date: 31.01.1967
+    address: Dworcowa 15/30
+    PESEL: 67013187643
+    insurance_number:
+    phone: 654876564
+    comment: 
+    user: pacjent 
+    diseases: cukrzyca, choroby tarczycy, nadciśnienie 

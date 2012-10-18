@@ -1,0 +1,10 @@
+﻿- model: Dentist.appointment
+  pk: 1
+  fields:
+    date: 
+    description: 
+    dentist: 
+    patient: 
+    dental_office: 
+    appointment_type: 
+

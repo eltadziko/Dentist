@@ -1,0 +1,6 @@
+﻿- model: Dentist.appointment_type
+  pk: 1
+  fields:
+    type: 
+    length: 
+

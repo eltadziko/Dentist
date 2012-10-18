@@ -1,0 +1,12 @@
+﻿- model: Dentist.loss_type
+  pk: 1
+  fields:
+    type: ubytki koronowe
+- model: Dentist.loss_type
+  pk: 2
+  fields:
+    type: ubytki korzenne
+- model: Dentist.loss_type
+  pk: 3
+  fields:
+    type: próchnica nawracająca
