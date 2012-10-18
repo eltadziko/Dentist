@@ -11,6 +11,7 @@ class dentist(models.Model):
     
     class Meta:
         verbose_name = "Dentysta"
+        verbose_name_plural = "Dentyści"
 
     def __unicode__(self):
         user = User.objects.get(id=self.user_id)
@@ -37,6 +38,7 @@ class patient(models.Model):
     
     class Meta:
         verbose_name= "Pacjent"
+        verbose_name_plural = "Pacjenci"
 
     def __unicode__(self):
         user = User.objects.get(id=self.user_id)
