@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import forms
 from django.utils.translation import ugettext_lazy as _
+import re
 
 class PasswordForm(forms.Form):
 
@@ -12,7 +13,9 @@ class PasswordForm(forms.Form):
         'password_mismatch': _("The two password fields didn't match."),
         'required': _("This field is required."),
         'bad_password': _("Your old password was entered incorrectly. Please enter it again."),
-        'too_short': 'Hasło jest za krótkie. Musi posiadać co najmniej 8 znaków'
+        'too_short': 'Hasło jest za krótkie. Musi posiadać co najmniej 8 znaków',
+        'no_letter': 'Hasło musi zawierać co najmniej jedną literę.',
+        'no_number': 'Hasło musi zawierać co namniej jedną cyfrę.'
     }
 
     old_password = forms.CharField(label=_("Old password"),
@@ -30,9 +33,14 @@ class PasswordForm(forms.Form):
             raise forms.ValidationError(
                 self.error_messages['too_short'])
         else:
-            if password != password2:
-                raise forms.ValidationError(
-                self.error_messages['password_mismatch'])
+            if not re.match('[a-zA-Z]+', password):
+                raise forms.ValidationError(self.error_messages['no_letter'])
+            else:
+                if not re.match('[0-9]+', password):
+                    raise forms.ValidationError(self.error_messages['no_number'])
+                else:
+                    if password != password2:
+                        raise forms.ValidationError(self.error_messages['password_mismatch'])
         return password
     
     def clean_old_password(self):

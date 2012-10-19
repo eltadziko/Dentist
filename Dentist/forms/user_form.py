@@ -2,6 +2,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
+import re
 
 class UserForm(forms.ModelForm):
 
@@ -9,7 +10,9 @@ class UserForm(forms.ModelForm):
         'duplicate_username': _("A user with that username already exists."),
         'password_mismatch': _("The two password fields didn't match."),
         'required': _("This field is required."),
-        'too_short': 'Hasło jest za krótkie. Musi posiadać co najmniej 8 znaków'
+        'too_short': 'Hasło jest za krótkie. Musi posiadać co najmniej 8 znaków',
+        'no_letter': 'Hasło musi zawierać co najmniej jedną literę.',
+        'no_number': 'Hasło musi zawierać co namniej jedną cyfrę.'
     }
 
     password = forms.CharField(label=_("Password"),
@@ -37,9 +40,14 @@ class UserForm(forms.ModelForm):
             raise forms.ValidationError(
                 self.error_messages['too_short'])
         else:
-            if password != password2:
-                raise forms.ValidationError(
-                self.error_messages['password_mismatch'])
+            if not re.match('[a-zA-Z]+', password):
+                raise forms.ValidationError(self.error_messages['no_letter'])
+            else:
+                if not re.match('[0-9]+', password):
+                    raise forms.ValidationError(self.error_messages['no_number'])
+                else:
+                    if password != password2:
+                        raise forms.ValidationError(self.error_messages['password_mismatch'])
         return password
     
     def clean_first_name(self):

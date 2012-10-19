@@ -3,6 +3,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
+#Imie i nazwisko w dentyscie i pacjencie, user w pacjencie moze byc null. 
+#Dodac do pacjenta typ ubezpieczenia, numer ubezp zmienic na max_length=255
+#ZMienić chorobas w adminie
 class dentist(models.Model):
     title = models.CharField("Tytuł", max_length=30, blank=True, null=True)
     description = models.TextField("O dentyście", blank=True, null=True)

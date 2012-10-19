@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render_to_response
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import Group
@@ -9,10 +8,15 @@ from models import *
 from forms.user_form import UserForm
 from forms.profile_form import ProfileForm
 from forms.patient_form import PatientForm, PatientProfileForm
-from forms.diseases_form import DiseasesForm
+from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
+from decorators import *
 
+def access_denied(request):
+    return render(request, 'access_denied.html')
+
+@anonymous_required
 def register(request):
     if request.method == 'POST':
         form = UserForm(request.POST, initial={'date_joined': datetime.date.today, 'last_login': datetime.date.today})
@@ -41,6 +45,25 @@ def register(request):
     return render(request, 'register.html', {'form': form, 'form_patient': form_patient})
 
 @login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+def register_by_receptionist(request):
+    if request.method == 'POST':
+        form_patient = PatientForm(request.POST)
+        form_diseases = DiseasesFormReceptionist(request.POST)
+        if form_patient.is_valid():             
+            patient = form_patient.save()
+            for disease2 in request.POST.getlist('diseases'):
+                dis = disease.objects.get(id=disease2)
+                pat_dis = patient_diseases(patient=patient.id, disease=dis, date=datetime.datetime.now().date())
+                pat_dis.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form_patient = PatientForm
+        form_diseases = DiseasesFormReceptionist
+    return render(request, 'register_patient.html', {'form_patient': form_patient, 'form_diseases': form_diseases})
+
+@login_required
+@user_passes_test(in_patient_group, login_url='/access_denied/')
 def diseases(request):
     if request.POST:
         form = DiseasesForm(request.user, request.POST)
@@ -57,6 +80,7 @@ def diseases(request):
     return render(request, 'diseases.html', {'form': form})
 
 @login_required
+@user_passes_test(in_patient_group, login_url='/access_denied/')
 def update_profile(request):
     user = User.objects.get(id = request.user.id)
     pat = patient.objects.get(user = user.id)
