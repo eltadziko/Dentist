@@ -27,6 +27,7 @@ class disease(models.Model):
 
     class Meta:
         verbose_name = "Choroba"
+        verbose_name_plural = "Choroby"
 
     def __unicode__(self):
         return u'Choroba: %s' % (self.disease_name)
