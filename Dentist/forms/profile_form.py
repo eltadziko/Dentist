@@ -12,7 +12,7 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ("first_name", "last_name", "email")
+        fields = ("email",)
     
     def clean_first_name(self):
         first_name = self.cleaned_data.get("first_name")

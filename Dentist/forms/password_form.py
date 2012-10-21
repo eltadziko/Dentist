@@ -15,7 +15,8 @@ class PasswordForm(forms.Form):
         'bad_password': _("Your old password was entered incorrectly. Please enter it again."),
         'too_short': 'Hasło jest za krótkie. Musi posiadać co najmniej 8 znaków',
         'no_letter': 'Hasło musi zawierać co najmniej jedną literę.',
-        'no_number': 'Hasło musi zawierać co namniej jedną cyfrę.'
+        'no_number': 'Hasło musi zawierać co namniej jedną cyfrę.',
+        'no_change': 'Nowe hasło musi się różnić od starego.',
     }
 
     old_password = forms.CharField(label=_("Old password"),
@@ -29,6 +30,7 @@ class PasswordForm(forms.Form):
     def clean_password(self):
         password = self.cleaned_data["password"]
         password2 = self.cleaned_data.get("password2", "")
+        old_password = self.cleaned_data.get("old_password")
         if len(password) < 8:
             raise forms.ValidationError(
                 self.error_messages['too_short'])
@@ -41,6 +43,9 @@ class PasswordForm(forms.Form):
                 else:
                     if password != password2:
                         raise forms.ValidationError(self.error_messages['password_mismatch'])
+                    else:
+                        if password == old_password:
+                           raise forms.ValidationError(self.error_messages['no_change']) 
         return password
     
     def clean_old_password(self):

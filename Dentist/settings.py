@@ -10,6 +10,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/index/'
 
 DATABASES = {
     'default': {

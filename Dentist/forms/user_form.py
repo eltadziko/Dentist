@@ -23,7 +23,7 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ("username","first_name", "last_name", "email")
+        fields = ("username", "email")
 
     def clean_username(self):
         username = self.cleaned_data["username"]
@@ -49,18 +49,6 @@ class UserForm(forms.ModelForm):
                     if password != password2:
                         raise forms.ValidationError(self.error_messages['password_mismatch'])
         return password
-    
-    def clean_first_name(self):
-        first_name = self.cleaned_data.get("first_name")
-        if first_name == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return first_name
-    
-    def clean_last_name(self):
-        last_name = self.cleaned_data.get("last_name")
-        if last_name == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return last_name
     
     def clean_email(self):
         email = self.cleaned_data.get("email")

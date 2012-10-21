@@ -59,10 +59,10 @@ class patient(models.Model):
                     ('ubezpieczony w UE EFTA', 'poświadczenie wydane przez NFZ – w przypadku zamieszkiwania na terenie RP'),
                     ('ubezpieczony w UE EFTA2', 'karta EKUZ (lub certyfikat ją zastępujący) wydana przez inny niż Polska kraj członkowski UE lub EFTA – w przypadku pobytu na terenie RP'),
                     ('zasiłek chorobowy', 'zaświadczenia z ZUS informujące o wypłacie zasiłku'),)
-    insurance_type = models.CharField("Rodzaj zęba", max_length=200, choices=TYPE_CHOICES)
+    insurance_type = models.CharField("Rodzaj ubezpieczenia", max_length=200, choices=TYPE_CHOICES)
     insurance_number = models.CharField("Nr ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
-    comment = models.TextField("O pacjencie", blank=True, null=True)
+    comment = models.TextField("Uwagi", blank=True, null=True)
     user = models.OneToOneField(User, verbose_name="User",  blank=True, null=True)
     diseases = models.ManyToManyField(disease, through="patient_diseases")
     
@@ -201,7 +201,7 @@ class tooth_loss(models.Model):
         return self.comment
     
 class password_creation(models.Model):
-    user = models.OneToOneField(User, verbose_name="User")
+    user = models.OneToOneField(User, verbose_name="Użytkownik")
     last_change = models.DateField("Data")
     
     class Meta:
