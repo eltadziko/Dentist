@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class dentist(models.Model):
+    first_name = models.CharField("Imię", max_length=30)
+    last_name = models.CharField("Nazwisko", max_length=30)
     title = models.CharField("Tytuł", max_length=30, blank=True, null=True)
     description = models.TextField("O dentyście", blank=True, null=True)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
@@ -27,13 +29,37 @@ class disease(models.Model):
         return u'Choroba: %s' % (self.disease_name)
     
 class patient(models.Model):
+    first_name = models.CharField("Imię", max_length=30)
+    last_name = models.CharField("Nazwisko", max_length=30)
     birth_date = models.DateField("Data ur.")
     address = models.CharField("Adres", max_length=100)
     PESEL = models.CharField("PESEL", max_length=11, unique=True)
-    insurance_number = models.CharField("Nr ubezp.", max_length=10)
+    TYPE_CHOICES = (('praca RMUA', 'druk zgłoszenia do ubezpieczenia zdrowotnego oraz aktualnie potwierdzony raport miesięczny ZUS RMUA wydawany przez pracodawcę (nie dotyczy osób na urlopie bezpłatnym powyżej 30 dni)'),
+                    ('praca zaświadczenie', 'aktualne zaświadczenie z zakładu pracy'),
+                    ('praca legitymacja', 'legitymacja ubezpieczeniowa'),
+                    ('działalność gospodarcza', 'druk zgłoszenia do ubezpieczenia zdrowotnego oraz aktualny dowód wpłaty składki na ubezpieczenie zdrowotne'),
+                    ('KRUS', 'zaświadczenie lub legitymacja aktualnie podstemplowane przez KRUS'),
+                    ('emeryt', 'legitymacja emeryta'),
+                    ('rencista', 'legitymacja rencisty'),
+                    ('bezrobotny', 'aktualne zaświadczenie z urzędu pracy o zgłoszeniu do ubezpieczenia zdrowotnego'),
+                    ('ubezpieczony dobrowolnie', 'umowa zawarta z NFZ i dokument ZUS potwierdzający zgłoszenie do ubezpieczenia zdrowotnego wraz z aktualnym dowodem opłacenia składki zdrowotnej'),
+                    ('członek rodziny ubezp. dowód', 'dowód opłacenia składki zdrowotnej przez osobę, która zgłosiła członków rodziny doubezpieczenia zdrowotnego wraz z kserokopią zgłoszenia (druki: ZUS RMUA + druk ZUSZCNA jeżeli zgłoszenie nastąpiło po 1 lipca 2008 r. (ZUS ZCZA jeżeli zgłoszenie nastąpiło przed dniem 1 lipca 2008 r.)'),
+                    ('członek rodziny ubezp. pracodawca', 'aktualne zaświadczenie wydane przez pracodawcę o zgłoszeniu członków rodziny'),
+                    ('członek rodziny ubezp. KRUS', 'zaświadczenie z KRUS o ubezpieczeniu członków rodziny'),
+                    ('członek rodziny ubezp. legitymacja', 'legitymacja rodzinna z wpisanymi danymi członków rodziny wraz z aktualną datą i pieczątką zakładu pracy lub ZUS'),
+                    ('członek rodziny ubezp. emeryt', 'legitymacja emeryta z wpisanymi członkami rodziny podlegającymi ubezpieczeniu, potwierdzająca dokonanie zgłoszenia w dniu 1 stycznia 1999 r. lub później, wraz z aktualnym odcinkiem wypłaty świadczenia – dotyczy tylko KRUS'),
+                    ('członek rodziny ubezp. rencista', 'legitymacja rencisty z wpisanymi członkami rodziny podlegającymi ubezpieczeniu, potwierdzająca dokonanie zgłoszenia w dniu 1 stycznia 1999 r. lub później, wraz z aktualnym odcinkiem wypłaty świadczenia – dotyczy tylko KRUS'),
+                    ('członek rodziny ubezp. dzieci', 'pomiędzy 18. a 26. rokiem życia – dodatkowo należy przedstawić dokument potwierdzający fakt kontynuacji nauki – np. legitymację szkolną/studencką lub dokument potwierdzający znaczny stopień niepełnosprawności'),
+                    ('student po 26', 'zgłoszenie do ubezpieczenia przez uczelnię (druk ZUS ZZA) oraz legitymacja studencka lub doktorancka'),
+                    ('nieubezp. spełn. kryt. dochodowe', 'decyzja wójta (burmistrza, prezydenta) gminy właściwej ze względu na miejsce zamieszkania tej osoby'),
+                    ('ubezpieczony w UE EFTA', 'poświadczenie wydane przez NFZ – w przypadku zamieszkiwania na terenie RP'),
+                    ('ubezpieczony w UE EFTA2', 'karta EKUZ (lub certyfikat ją zastępujący) wydana przez inny niż Polska kraj członkowski UE lub EFTA – w przypadku pobytu na terenie RP'),
+                    ('zasiłek chorobowy', 'zaświadczenia z ZUS informujące o wypłacie zasiłku'),)
+    insurance_type = models.CharField("Rodzaj zęba", max_length=200, choices=TYPE_CHOICES)
+    insurance_number = models.CharField("Nr ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
     comment = models.TextField("O pacjencie", blank=True, null=True)
-    user = models.OneToOneField(User, verbose_name="User")
+    user = models.OneToOneField(User, verbose_name="User",  blank=True, null=True)
     diseases = models.ManyToManyField(disease, through="patient_diseases")
     
     class Meta:
@@ -169,3 +195,14 @@ class tooth_loss(models.Model):
 
     def __unicode__(self):
         return self.comment
+    
+class password_creation(models.Model):
+    user = models.OneToOneField(User, verbose_name="User")
+    last_change = models.DateField("Data")
+    
+    class Meta:
+        verbose_name = "Hasło"
+        verbose_name_plural = "Hasła"
+
+    def __unicode__(self):
+        return self.last_change
