@@ -1,37 +1,30 @@
 # -*- coding: utf-8 -*-
 from django import forms
-from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 import re
 
-class UserForm(forms.ModelForm):
+class PasswordForm(forms.Form):
 
+    def __init__(self, user, *args, **kwargs):
+        self.user = user
+        super(PasswordForm, self).__init__(*args, **kwargs)
+       
     error_messages = {
-        'duplicate_username': _("A user with that username already exists."),
         'password_mismatch': _("The two password fields didn't match."),
         'required': _("This field is required."),
+        'bad_password': _("Your old password was entered incorrectly. Please enter it again."),
         'too_short': 'Hasło jest za krótkie. Musi posiadać co najmniej 8 znaków',
         'no_letter': 'Hasło musi zawierać co najmniej jedną literę.',
         'no_number': 'Hasło musi zawierać co namniej jedną cyfrę.'
     }
 
-    password = forms.CharField(label=_("Password"),
+    old_password = forms.CharField(label=_("Old password"),
         widget=forms.PasswordInput)
-    password2 = forms.CharField(label=_("Password confirmation"),
+    password = forms.CharField(label=_("New password"),
+        widget=forms.PasswordInput)
+    password2 = forms.CharField(label=_("New password confirmation"),
         widget=forms.PasswordInput,
         help_text = _("Enter the same password as above, for verification."))
-
-    class Meta:
-        model = User
-        fields = ("username","first_name", "last_name", "email")
-
-    def clean_username(self):
-        username = self.cleaned_data["username"]
-        try:
-            User.objects.get(username=username)
-        except User.DoesNotExist:
-            return username
-        raise forms.ValidationError(self.error_messages['duplicate_username'])
 
     def clean_password(self):
         password = self.cleaned_data["password"]
@@ -50,20 +43,9 @@ class UserForm(forms.ModelForm):
                         raise forms.ValidationError(self.error_messages['password_mismatch'])
         return password
     
-    def clean_first_name(self):
-        first_name = self.cleaned_data.get("first_name")
-        if first_name == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return first_name
-    
-    def clean_last_name(self):
-        last_name = self.cleaned_data.get("last_name")
-        if last_name == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return last_name
-    
-    def clean_email(self):
-        email = self.cleaned_data.get("email")
-        if email == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return email
+    def clean_old_password(self):
+        old_password = self.cleaned_data["old_password"]
+        if not self.user.check_password(old_password):
+            raise forms.ValidationError(
+                self.error_messages['bad_password'])
+        return old_password            

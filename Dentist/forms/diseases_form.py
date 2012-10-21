@@ -24,4 +24,9 @@ class DiseasesForm(forms.Form):
 	
 	diseases = forms.ModelMultipleChoiceField(queryset=disease.objects.all(),
                                                     widget=MyCheckboxSelectMultiple(),
-                                                    required=False)			
+                                                    required=False)	
+	
+class DiseasesFormReceptionist(forms.Form):
+	diseases = forms.ModelMultipleChoiceField(queryset=disease.objects.all(),
+                                                    widget=MyCheckboxSelectMultiple(),
+                                                    required=False)		
