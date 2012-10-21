@@ -2,7 +2,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib.auth.models import Group
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 import datetime
 from models import *
 from forms.user_form import UserForm
@@ -32,7 +32,10 @@ def register(request):
             
             patient = form_patient.save(commit=False)
             patient.user = user
-            patient.save();
+            patient.save()
+            
+            password = password_creation(user = user, last_change = datetime.datetime.now().date())
+            password.save()
             
             #automatyczne logowanie użytkownika
             user2 = authenticate(username = user.username, password = request.POST['password'])
@@ -104,9 +107,15 @@ def change_password(request):
         if form.is_valid():
             request.user.set_password(request.POST['password'])
             request.user.save()
+            
+            password = password_creation(user = request.user, last_change = datetime.datetime.now().date())
+            password.save()
             return HttpResponseRedirect('/index/')
     else:
         form = PasswordForm(request.user)
     return render(request, 'password.html', {'form': form})
         
-    
+@login_required
+def logout_view(request):
+    logout(request) 
+    return HttpResponseRedirect('/index/')   

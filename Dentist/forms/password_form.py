@@ -35,10 +35,10 @@ class PasswordForm(forms.Form):
             raise forms.ValidationError(
                 self.error_messages['too_short'])
         else:
-            if not re.match('[a-zA-Z]+', password):
+            if not re.search('[a-zA-Z]+', password):
                 raise forms.ValidationError(self.error_messages['no_letter'])
             else:
-                if not re.match('[0-9]+', password):
+                if not re.search('[0-9]+', password):
                     raise forms.ValidationError(self.error_messages['no_number'])
                 else:
                     if password != password2:

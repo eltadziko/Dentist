@@ -34,20 +34,19 @@ class UserForm(forms.ModelForm):
         raise forms.ValidationError(self.error_messages['duplicate_username'])
 
     def clean_password(self):
-        password = self.cleaned_data["password"]
-        password2 = self.cleaned_data.get("password2", "")
+        password = self.cleaned_data.get("password")
+        password2 = self.cleaned_data.get("password2")
         if len(password) < 8:
             raise forms.ValidationError(
                 self.error_messages['too_short'])
         else:
-            if not re.match('[a-zA-Z]+', password):
+            if not re.search('[a-zA-Z]+', password):
                 raise forms.ValidationError(self.error_messages['no_letter'])
             else:
-                if not re.match('[0-9]+', password):
+                if not re.search('[0-9]+', password):
                     raise forms.ValidationError(self.error_messages['no_number'])
-                else:
-                    if password != password2:
-                        raise forms.ValidationError(self.error_messages['password_mismatch'])
+        if password != password2:
+            raise forms.ValidationError(self.error_messages['password_mismatch'])
         return password
     
     def clean_email(self):
