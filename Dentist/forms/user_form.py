@@ -23,7 +23,7 @@ class UserForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ("username","first_name", "last_name", "email")
+        fields = ("username", "email")
 
     def clean_username(self):
         username = self.cleaned_data["username"]
@@ -34,33 +34,20 @@ class UserForm(forms.ModelForm):
         raise forms.ValidationError(self.error_messages['duplicate_username'])
 
     def clean_password(self):
-        password = self.cleaned_data["password"]
-        password2 = self.cleaned_data.get("password2", "")
+        password = self.cleaned_data.get("password")
+        password2 = self.cleaned_data.get("password2")
         if len(password) < 8:
             raise forms.ValidationError(
                 self.error_messages['too_short'])
         else:
-            if not re.match('[a-zA-Z]+', password):
+            if not re.search('[a-zA-Z]+', password):
                 raise forms.ValidationError(self.error_messages['no_letter'])
             else:
-                if not re.match('[0-9]+', password):
+                if not re.search('[0-9]+', password):
                     raise forms.ValidationError(self.error_messages['no_number'])
-                else:
-                    if password != password2:
-                        raise forms.ValidationError(self.error_messages['password_mismatch'])
+        if password != password2:
+            raise forms.ValidationError(self.error_messages['password_mismatch'])
         return password
-    
-    def clean_first_name(self):
-        first_name = self.cleaned_data.get("first_name")
-        if first_name == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return first_name
-    
-    def clean_last_name(self):
-        last_name = self.cleaned_data.get("last_name")
-        if last_name == "":
-            raise forms.ValidationError(self.error_messages['required'])
-        return last_name
     
     def clean_email(self):
         email = self.cleaned_data.get("email")

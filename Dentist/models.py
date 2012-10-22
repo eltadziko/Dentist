@@ -62,7 +62,7 @@ class patient(models.Model):
     insurance_type = models.CharField("Rodzaj ubezpieczenia", max_length=200, choices=TYPE_CHOICES)
     insurance_number = models.CharField("Nr ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
-    comment = models.TextField("O pacjencie", blank=True, null=True)
+    comment = models.TextField("Uwagi", blank=True, null=True)
     user = models.OneToOneField(User, verbose_name="User",  blank=True, null=True)
     diseases = models.ManyToManyField(disease, through="patient_diseases")
     
@@ -201,7 +201,7 @@ class tooth_loss(models.Model):
         return self.comment
     
 class password_creation(models.Model):
-    user = models.OneToOneField(User, verbose_name="User")
+    user = models.OneToOneField(User, verbose_name="Użytkownik")
     last_change = models.DateField("Data")
     
     class Meta:

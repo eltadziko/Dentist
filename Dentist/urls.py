@@ -20,7 +20,10 @@ urlpatterns = patterns('',
     url(r'^register_patient/', views.register_by_receptionist),
     url(r'^diseases/', views.diseases),
     url(r'^profile/', views.update_profile),
-    url(r'^password/', views.change_password),
+    url(r'^password/$', views.change_password),
+    url(r'^password/', include('django.contrib.auth.urls')),
     url(r'^access_denied/', views.access_denied),
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
+    url(r'^logout/', views.logout_view),
+    
 )
