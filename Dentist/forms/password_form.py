@@ -28,9 +28,7 @@ class PasswordForm(forms.Form):
         help_text = _("Enter the same password as above, for verification."))
 
     def clean_password(self):
-        password = self.cleaned_data["password"]
-        password2 = self.cleaned_data.get("password2", "")
-        old_password = self.cleaned_data.get("old_password")
+        password = self.cleaned_data.get("password")
         if len(password) < 8:
             raise forms.ValidationError(
                 self.error_messages['too_short'])
@@ -40,13 +38,14 @@ class PasswordForm(forms.Form):
             else:
                 if not re.search('[0-9]+', password):
                     raise forms.ValidationError(self.error_messages['no_number'])
-                else:
-                    if password != password2:
-                        raise forms.ValidationError(self.error_messages['password_mismatch'])
-                    else:
-                        if password == old_password:
-                           raise forms.ValidationError(self.error_messages['no_change']) 
         return password
+
+    def clean_password2(self):
+        password = self.cleaned_data.get("password")
+        password2 = self.cleaned_data.get("password2")
+        if password != password2:
+            raise forms.ValidationError(self.error_messages['password_mismatch'])
+        return password2
     
     def clean_old_password(self):
         old_password = self.cleaned_data["old_password"]

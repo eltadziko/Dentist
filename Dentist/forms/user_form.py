@@ -32,10 +32,9 @@ class UserForm(forms.ModelForm):
         except User.DoesNotExist:
             return username
         raise forms.ValidationError(self.error_messages['duplicate_username'])
-
+    
     def clean_password(self):
         password = self.cleaned_data.get("password")
-        password2 = self.cleaned_data.get("password2")
         if len(password) < 8:
             raise forms.ValidationError(
                 self.error_messages['too_short'])
@@ -45,9 +44,14 @@ class UserForm(forms.ModelForm):
             else:
                 if not re.search('[0-9]+', password):
                     raise forms.ValidationError(self.error_messages['no_number'])
+        return password
+
+    def clean_password2(self):
+        password = self.cleaned_data.get("password")
+        password2 = self.cleaned_data.get("password2")
         if password != password2:
             raise forms.ValidationError(self.error_messages['password_mismatch'])
-        return password
+        return password2
     
     def clean_email(self):
         email = self.cleaned_data.get("email")

@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
 from Dentist import views
+from forms.set_password_form import SetPasswordForm
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -21,6 +22,9 @@ urlpatterns = patterns('',
     url(r'^diseases/', views.diseases),
     url(r'^profile/', views.update_profile),
     url(r'^password/$', views.change_password),
+    url(r'^password/reset/(?P<uidb36>[0-9A-Za-z]{1,13})-(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        'django.contrib.auth.views.password_reset_confirm', 
+        {'set_password_form' : SetPasswordForm}),
     url(r'^password/', include('django.contrib.auth.urls')),
     url(r'^access_denied/', views.access_denied),
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
