@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
-{% block content %}
-<form action="/register_patient/" method="post"> {% csrf_token %}
+{% block right_column %}
+<form action="{% url views.register_by_receptionist %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
 		    {% for error in form.non_field_errors %}

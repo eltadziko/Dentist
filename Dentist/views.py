@@ -133,6 +133,8 @@ def patient_list(request):
     patients = patient.objects.all()
     return render(request, 'patients.html', {'patients': patients}) 
 
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
 def patient_user(request):
     if request.POST:
         form = PatientUserForm(request.POST['pat'], request.POST)
@@ -145,3 +147,6 @@ def patient_user(request):
     else:
         form = PatientUserForm('')
     return render(request, 'patient_user.html', {'form': form}) 
+
+def index(request):
+    return render(request, 'base.html')
