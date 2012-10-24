@@ -38,27 +38,27 @@ class patient(models.Model):
     birth_date = models.DateField("Data ur.")
     address = models.CharField("Adres", max_length=100)
     PESEL = models.CharField("PESEL", max_length=11, unique=True)
-    TYPE_CHOICES = (('praca RMUA', 'druk zgłoszenia do ubezpieczenia zdrowotnego oraz aktualnie potwierdzony raport miesięczny ZUS RMUA wydawany przez pracodawcę (nie dotyczy osób na urlopie bezpłatnym powyżej 30 dni)'),
-                    ('praca zaświadczenie', 'aktualne zaświadczenie z zakładu pracy'),
+    TYPE_CHOICES = (('praca RMUA', 'raport miesięczny ZUS RMUA'),
+                    ('praca zaświadczenie', 'zaświadczenie z zakładu pracy'),
                     ('praca legitymacja', 'legitymacja ubezpieczeniowa'),
-                    ('działalność gospodarcza', 'druk zgłoszenia do ubezpieczenia zdrowotnego oraz aktualny dowód wpłaty składki na ubezpieczenie zdrowotne'),
-                    ('KRUS', 'zaświadczenie lub legitymacja aktualnie podstemplowane przez KRUS'),
+                    ('działalność gospodarcza', 'działalność gospodarcza'),
+                    ('KRUS', 'KRUS'),
                     ('emeryt', 'legitymacja emeryta'),
                     ('rencista', 'legitymacja rencisty'),
-                    ('bezrobotny', 'aktualne zaświadczenie z urzędu pracy o zgłoszeniu do ubezpieczenia zdrowotnego'),
-                    ('ubezpieczony dobrowolnie', 'umowa zawarta z NFZ i dokument ZUS potwierdzający zgłoszenie do ubezpieczenia zdrowotnego wraz z aktualnym dowodem opłacenia składki zdrowotnej'),
-                    ('członek rodziny ubezp. dowód', 'dowód opłacenia składki zdrowotnej przez osobę, która zgłosiła członków rodziny doubezpieczenia zdrowotnego wraz z kserokopią zgłoszenia (druki: ZUS RMUA + druk ZUSZCNA jeżeli zgłoszenie nastąpiło po 1 lipca 2008 r. (ZUS ZCZA jeżeli zgłoszenie nastąpiło przed dniem 1 lipca 2008 r.)'),
-                    ('członek rodziny ubezp. pracodawca', 'aktualne zaświadczenie wydane przez pracodawcę o zgłoszeniu członków rodziny'),
-                    ('członek rodziny ubezp. KRUS', 'zaświadczenie z KRUS o ubezpieczeniu członków rodziny'),
-                    ('członek rodziny ubezp. legitymacja', 'legitymacja rodzinna z wpisanymi danymi członków rodziny wraz z aktualną datą i pieczątką zakładu pracy lub ZUS'),
-                    ('członek rodziny ubezp. emeryt', 'legitymacja emeryta z wpisanymi członkami rodziny podlegającymi ubezpieczeniu, potwierdzająca dokonanie zgłoszenia w dniu 1 stycznia 1999 r. lub później, wraz z aktualnym odcinkiem wypłaty świadczenia – dotyczy tylko KRUS'),
-                    ('członek rodziny ubezp. rencista', 'legitymacja rencisty z wpisanymi członkami rodziny podlegającymi ubezpieczeniu, potwierdzająca dokonanie zgłoszenia w dniu 1 stycznia 1999 r. lub później, wraz z aktualnym odcinkiem wypłaty świadczenia – dotyczy tylko KRUS'),
-                    ('członek rodziny ubezp. dzieci', 'pomiędzy 18. a 26. rokiem życia – dodatkowo należy przedstawić dokument potwierdzający fakt kontynuacji nauki – np. legitymację szkolną/studencką lub dokument potwierdzający znaczny stopień niepełnosprawności'),
-                    ('student po 26', 'zgłoszenie do ubezpieczenia przez uczelnię (druk ZUS ZZA) oraz legitymacja studencka lub doktorancka'),
-                    ('nieubezp. spełn. kryt. dochodowe', 'decyzja wójta (burmistrza, prezydenta) gminy właściwej ze względu na miejsce zamieszkania tej osoby'),
-                    ('ubezpieczony w UE EFTA', 'poświadczenie wydane przez NFZ – w przypadku zamieszkiwania na terenie RP'),
-                    ('ubezpieczony w UE EFTA2', 'karta EKUZ (lub certyfikat ją zastępujący) wydana przez inny niż Polska kraj członkowski UE lub EFTA – w przypadku pobytu na terenie RP'),
-                    ('zasiłek chorobowy', 'zaświadczenia z ZUS informujące o wypłacie zasiłku'),)
+                    ('bezrobotny', 'zaświadczenie z urzędu pracy'),
+                    ('ubezpieczony dobrowolnie', 'ubezpieczony dobrowolnie'),
+                    ('członek rodziny ubezp. dowód', 'członek rodziny ubezp. dowód'),
+                    ('członek rodziny ubezp. pracodawca', 'członek rodziny ubezp. pracodawca'),
+                    ('członek rodziny ubezp. KRUS', 'członek rodziny ubezp. KRUS'),
+                    ('członek rodziny ubezp. legitymacja', 'członek rodziny ubezp. legitymacja'),
+                    ('członek rodziny ubezp. emeryt', 'członek rodziny ubezp. emeryt'),
+                    ('członek rodziny ubezp. rencista', 'członek rodziny ubezp. rencista'),
+                    ('członek rodziny ubezp. dzieci', 'członek rodziny ubezp. dzieci'),
+                    ('student po 26', 'student po 26'),
+                    ('nieubezp. spełn. kryt. dochodowe', 'nieubezp. spełn. kryt. dochodowe'),
+                    ('ubezpieczony w UE EFTA', 'ubezpieczony w UE EFTA'),
+                    ('ubezpieczony w UE EFTA2', 'ubezpieczony w UE EFTA2'),
+                    ('zasiłek chorobowy', 'zasiłek chorobowy'),)
     insurance_type = models.CharField("Rodzaj ubezpieczenia", max_length=200, choices=TYPE_CHOICES)
     insurance_number = models.CharField("Nr ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
