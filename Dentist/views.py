@@ -10,6 +10,7 @@ from forms.profile_form import ProfileForm
 from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
+from forms.patient_user_form import PatientUserForm
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 
@@ -131,3 +132,16 @@ def logout_view(request):
 def patient_list(request):
     patients = patient.objects.all()
     return render(request, 'patients.html', {'patients': patients}) 
+
+def patient_user(request):
+    if request.POST:
+        form = PatientUserForm(request.POST['pat'], request.POST)
+        if 'patients' in request.POST.keys():
+            pat = patient.objects.get(id = request.POST['patients'])
+            user = User.objects.get(username = request.POST['login'])
+            pat.user = user
+            pat.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form = PatientUserForm('')
+    return render(request, 'patient_user.html', {'form': form}) 

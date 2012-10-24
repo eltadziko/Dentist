@@ -72,7 +72,7 @@ class patient(models.Model):
 
     def __unicode__(self):
         user = User.objects.get(id=self.user_id)
-        return u'Pacjent: %s %s' % (user.first_name, user.last_name)
+        return u'%s %s, %s' % (self.last_name, self.first_name, self.address)
     
 class patient_diseases(models.Model):
     patient = models.ForeignKey(patient, verbose_name="Pacjent")

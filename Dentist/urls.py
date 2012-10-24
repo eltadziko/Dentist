@@ -31,5 +31,6 @@ urlpatterns = patterns('',
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
     url(r'^logout/', views.logout_view),
     url(r'^patients/', views.patient_list),
+    url(r'^patient_user/', views.patient_user),
     
 )
