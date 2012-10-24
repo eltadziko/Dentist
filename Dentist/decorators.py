@@ -26,3 +26,8 @@ def in_receptionist_group(user):
     if user:
         return user.groups.filter(name='rejestrator').count() == 1
     return False
+
+def in_group(user):
+    if user:
+        return user.groups.filter(name='rejestrator').count() == 1 or user.groups.filter(name='pacjent').count() == 1
+    return False

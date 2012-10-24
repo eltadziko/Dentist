@@ -83,10 +83,16 @@ def diseases(request):
     return render(request, 'diseases.html', {'form': form})
 
 @login_required
-@user_passes_test(in_patient_group, login_url='/access_denied/')
-def update_profile(request):
-    user = User.objects.get(id = request.user.id)
-    pat = patient.objects.get(user = user.id)
+@user_passes_test(in_group, login_url='/access_denied/')
+def update_profile(request, patient_id = -1):
+    if request.user.groups.filter(name='pacjent').count() == 1:
+        user = User.objects.get(id = request.user.id)
+        pat = patient.objects.get(user = user.id)
+    else:
+        if patient_id == -1:
+            return HttpResponseRedirect('/access_denied/')
+        pat = patient.objects.get(id = patient_id)
+        user = User.objects.get(id = pat.user_id)
     
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance = user)
@@ -118,4 +124,10 @@ def change_password(request):
 @login_required
 def logout_view(request):
     logout(request) 
-    return HttpResponseRedirect('/index/')   
+    return HttpResponseRedirect('/index/')  
+
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+def patient_list(request):
+    patients = patient.objects.all()
+    return render(request, 'patients.html', {'patients': patients}) 

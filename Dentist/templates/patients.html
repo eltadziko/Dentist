@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	{% for row in patients %}
+		<div class="patient">
+			<a href = "{% url views.update_profile %}{{ row.id }}">
+	        	{{ row.last_name }} {{ row.first_name }}, {{ row.address }}
+	        </a>
+	    </div>
+    {% endfor %}
+
+{% endblock %}
