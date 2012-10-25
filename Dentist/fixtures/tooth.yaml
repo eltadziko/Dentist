@@ -2,56 +2,56 @@
   pk: 1
   fields:
     type: siekacz
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 11
 - model: Dentist.tooth
   pk: 2
   fields:
     type: siekacz
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 12
 - model: Dentist.tooth
   pk: 3
   fields:
-    type: kie≈Ç
-    jaw: g√≥rna
+    type: kie≥
+    jaw: gÛrna
     side: prawa
     tooth_number: 13
 - model: Dentist.tooth
   pk: 4
   fields:
     type: przedtrzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 14
 - model: Dentist.tooth
   pk: 5
   fields:
     type: przedtrzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 15
 - model: Dentist.tooth
   pk: 6
   fields:
     type: trzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 16
 - model: Dentist.tooth
   pk: 7
   fields:
     type: trzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 17
 - model: Dentist.tooth
   pk: 8
   fields:
     type: trzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: prawa
     tooth_number: 18
     
@@ -59,56 +59,56 @@
   pk: 9
   fields:
     type: siekacz
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 21
 - model: Dentist.tooth
   pk: 10
   fields:
     type: siekacz
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 22
 - model: Dentist.tooth
   pk: 11
   fields:
-    type: kie≈Ç
-    jaw: g√≥rna
+    type: kie≥Ç
+    jaw: gÛrna
     side: lewa
     tooth_number: 23
 - model: Dentist.tooth
   pk: 12
   fields:
     type: przedtrzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 24
 - model: Dentist.tooth
   pk: 13
   fields:
     type: przedtrzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 25
 - model: Dentist.tooth
   pk: 14
   fields:
     type: trzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 26
 - model: Dentist.tooth
   pk: 15
   fields:
     type: trzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 27
 - model: Dentist.tooth
   pk: 16
   fields:
     type: trzonowiec
-    jaw: g√≥rna
+    jaw: gÛrna
     side: lewa
     tooth_number: 28
     
@@ -129,7 +129,7 @@
 - model: Dentist.tooth
   pk: 19
   fields:
-    type: kie≈Ç
+    type: kie≥Ç
     jaw: dolna
     side: lewa
     tooth_number: 33
@@ -186,7 +186,7 @@
 - model: Dentist.tooth
   pk: 27
   fields:
-    type: kie≈Ç
+    type: kie≥Ç
     jaw: dolna
     side: prawa
     tooth_number: 43

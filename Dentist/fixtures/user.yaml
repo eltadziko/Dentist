@@ -1,0 +1,308 @@
+- model: Dentist.user
+  pk: 1
+  fields:
+    id: 1
+    username: pawel_kosior
+    first_name: Pawe³ 
+    last_name: Kosior
+    email: pawel_kosior@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 2
+  fields:
+    id: 2
+    username: pawel_kosior
+    first_name: Pawe³ 
+    last_name: Kosior
+    email: pawel_kosior@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 3
+  fields:
+    id: 3
+    username: ewa_minch
+    first_name: Ewa 
+    last_name: Minch
+    email: ewa_minch@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 4
+  fields:
+    id: 4
+    username: ziemowit_sartys
+    first_name: Ziemowit 
+    last_name: Sartys
+    email: ziemowit_sartys@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 5
+  fields:
+    id: 5
+    username: anna_paradowska 
+    first_name: Anna 
+    last_name: Paradowska
+    email: anna_paradowska@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 6
+  fields:
+    id: 6
+    username: edyta_cygnarowska
+    first_name: Edyta 
+    last_name: Cygnarowska
+    email: edyta_cygnarowska@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 7
+  fields:
+    id: 7
+	username: rados³aw_jadach
+	first_name: Rados³aw
+	last_name: Jadach 
+	email: rados³aw_jadach@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 8
+  fields:
+    id: 8
+	username: janina_tecz
+	first_name: Janina
+	last_name: Têcza 
+	email: janina_têcza@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+   	is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 9
+  fields:
+    id: 9
+	username: maciej_kawala
+	first_name: Maciej
+	last_name: Kawala
+	email: maciej_kawala@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 10
+  fields:
+    id: 10
+	username: krzysztof_rozycki
+	first_name: Krzysztof
+	last_name: Ró¿ycki 
+	email: krzysztof_ró¿ycki@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 11
+  fields:
+    id: 11
+	username: magdalena_kadziela
+	first_name: Magdalena
+	last_name: K¹dziela
+	email: magdalena_k¹dziela@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 12
+  fields:
+    id: 12
+	username: lidia_kittel
+	first_name: Lidia
+	last_name: Kittel 
+	email: lidia_kittel@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 13
+  fields:
+    id: 13
+	username: ewa_mlynczak
+	first_name: Ewa
+	last_name: M³yñczak 
+	email: ewa_m³yñczak@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 14
+  fields:
+    id: 14
+	username: jozef_andrzej_komorski
+	first_name: Józef Andrzej
+	last_name: Komorski 
+	email: józef_andrzej_komorski@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 15
+  fields:
+    id: 15
+	username: marek_wieznowski
+	first_name: Marek
+	last_name: Wiêznowski 
+	email: marek_wiêznowski@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 16
+  fields:
+    id: 16
+	username: jaroslaw_zochowski
+	first_name: Jaros³aw
+	last_name: ¯ochowski 
+	email: jaros³aw_¿ochowski@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 17
+  fields:
+    id: 17
+	username: ryszard_tomasz_malysa
+	first_name: Ryszard Tomasz
+	last_name: Ma³ysa
+	email: ryszard_tomasz_ma³ysa@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 18
+  fields:
+    id: 18
+	username: izabela_zawislak
+	first_name: Izabela
+	last_name: Zawiœlak 
+	email: izabela_zawiœlak@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 19
+  fields:
+  	id: 19
+	username: anna_michalska-motas
+	first_name: Anna
+	last_name: Michalska- Motas 
+	email: anna_michalska-motas@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 20
+  fields:
+    id: 20
+	username: iwona_gorska-galka
+	first_name: Iwona
+	last_name: Górska-Ga³ka 
+	email: iwona_górska-ga³ka@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 21
+  fields:
+    id: 21
+	username: eugeniusz_nosow
+	first_name: Eugeniusz
+	last_name: Nosow
+	email: eugeniusz_nosow@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+- model: Dentist.user
+  pk: 22
+  fields:
+    id: 22
+	username: malgorzata_bohater
+	first_name: Ma³gorzata 
+	last_name: Bohater 
+	email: ma³gorzata_bohater@dentist.pl 
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02

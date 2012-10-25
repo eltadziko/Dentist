@@ -1,35 +1,140 @@
-ï»¿- model: Dentist.disease
+- model: Dentist.disease
   pk: 1
   fields:
-    title: PaweÅ‚ Kosior
-    description: Lekarz pracuje w gabinecie w miejscowoÅ›ci WrocÅ‚aw, w wojewÃ³dztwie dolnoÅ›lÄ…skim. Prowadzi leczenie w obrÄ™bie 3 specjalizacji: stomatolog, implanty, chirurg, stomatolog, protetyk. 
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, chirurg, stomatolog protetyk. 
     phone: 713519393
-    user: dentysta
+    user: 1
 - model: Dentist.disease
   pk: 2
   fields:
-    title: Ewa Minch
-    description: Lekarz pracuje w gabinecie w miejscowoÅ›ci WrocÅ‚aw, w wojewÃ³dztwie dolnoÅ›lÄ…skim. Prowadzi leczenie w obrÄ™bie 3 specjalizacji: stomatolog, implanty, ortodonta, stomatolog, protetyk.
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, ortodonta, stomatolog protetyk.
     phone: 713446612
-    user: dentysta
+    user: 2
 - model: Dentist.disease
   pk: 3
   fields:
-    title: Ziemowit Sartys
-    description: Lekarz pracuje w gabinecie w miejscowoÅ›ci WrocÅ‚aw, w wojewÃ³dztwie dolnoÅ›lÄ…skim. Prowadzi leczenie w obrÄ™bie 2 specjalizacji: stomatolog, protetyk, stomatolog, implanty.
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog protetyk, stomatolog, implanty.
     phone: 717958063
-    user: dentysta
+    user: 3
 - model: Dentist.disease
   pk: 4
   fields:
-    title: Anna Paradowska
-    description: Lekarz pracuje w gabinecie w miejscowoÅ›ci WrocÅ‚aw, w wojewÃ³dztwie dolnoÅ›lÄ…skim. Prowadzi leczenie w obrÄ™bie 3 specjalizacji: stomatolog, protetyk, ortodonta, psycholog.
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog protetyk, ortodonta, psycholog.
     phone:  606917742
-    user: dentysta
+    user: 4
 - model: Dentist.disease
   pk: 5
   fields:
-    title: Edyta Cygnarowska
-    description: Lekarz pracuje w gabinecie w miejscowoÅ›ci WrocÅ‚aw, w wojewÃ³dztwie dolnoÅ›lÄ…skim. Prowadzi leczenie w obrÄ™bie 2 specjalizacji: stomatolog, implanty, stomatolog, protetyk.
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog implanty, stomatolog protetyk.
     phone:  608620828
-    user: dentysta
+    user: 5
+- model: Dentist.disease
+  pk: 6
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog implanty, stomatolog protetyk.
+    phone:  233420828
+    user: 6
+- model: Dentist.disease
+  pk: 7
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, chirurg, stomatolog protetyk. 
+    phone: 513519393
+    user: 7
+- model: Dentist.disease
+  pk: 8
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, ortodonta, stomatolog protetyk.
+    phone: 513446612
+    user: 8
+- model: Dentist.disease
+  pk: 9
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog protetyk, stomatolog, implanty.
+    phone: 787958063
+    user: 9
+- model: Dentist.disease
+  pk: 10
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog protetyk, ortodonta, psycholog.
+    phone:  526917742
+    user: 10
+- model: Dentist.disease
+  pk: 11
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog implanty, stomatolog protetyk.
+    phone:  728620828
+    user: 11
+- model: Dentist.disease
+  pk: 12
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog implanty, stomatolog protetyk.
+    phone:  513420828
+    user: 12
+- model: Dentist.disease
+  pk: 13
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, chirurg, stomatolog protetyk. 
+    phone: 653519393
+    user: 13
+- model: Dentist.disease
+  pk: 14
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, ortodonta, stomatolog protetyk.
+    phone: 433446612
+    user: 14
+- model: Dentist.disease
+  pk: 15
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog protetyk, stomatolog, implanty.
+    phone: 797958063
+    user: 15
+- model: Dentist.disease
+  pk: 16
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog protetyk, ortodonta, psycholog.
+    phone:  666917742
+    user: 16
+- model: Dentist.disease
+  pk: 17
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog implanty, stomatolog protetyk.
+    phone:  658620828
+    user: 17
+- model: Dentist.disease
+  pk: 18
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 2 specjalizacji: stomatolog implanty, stomatolog protetyk.
+    phone: 712348812
+    user: 18
+- model: Dentist.disease
+  pk: 19
+  fields:
+    title: lek. dent.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, chirurg, stomatolog protetyk. 
+    phone: 778519393
+    user: 19
+- model: Dentist.disease
+  pk: 20
+  fields:
+    title: dr n. med.
+    description: Lekarz pracuje w gabinecie w miejscowoœci Wroc³aw, w województwie dolnoœl¹skim. Prowadzi leczenie w obrêbie 3 specjalizacji: stomatolog implanty, ortodonta, stomatolog protetyk.
+    phone: 723448812
+    user: 20

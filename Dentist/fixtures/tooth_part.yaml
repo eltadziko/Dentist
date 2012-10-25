@@ -1,7 +1,7 @@
-ï»¿- model: Dentist.tooth_part
+- model: Dentist.tooth_part
   pk: 1
   fields:
-    name: korzeÅ„
+    name: korzeñ
 - model: Dentist.tooth_part
   pk: 2
   fields:
@@ -17,7 +17,7 @@
 - model: Dentist.tooth_part
   pk: 5
   fields:
-    name: zÄ™bina
+    name: zêbina
 - model: Dentist.tooth_part
   pk: 6
   fields:
@@ -25,4 +25,4 @@
 - model: Dentist.tooth_part
   pk: 7
   fields:
-    name: kanaÅ‚
+    name: kana³
