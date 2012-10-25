@@ -1,4 +1,6 @@
 {% load url from future %}
+{% load group_filter %}
+
 <!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -48,7 +50,7 @@
         <form action="{% url 'django.contrib.auth.views.login' %}" method="POST">
         {% csrf_token %}
         <input name="username" value="Login" onfocus="if(this.value=='' || this.value == 'Login') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="text">
-        <input name="password" value="Hasło" onfocus="if(this.value=='' || this.value == 'Hasło') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="text">
+        <input name="password" value="Hasło" onfocus="if(this.value=='' || this.value == 'Hasło') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="password">
         <input id="send_log" name="send_log" value=">>" type="submit"/>
         </form>
       </div>
@@ -76,14 +78,14 @@
       <div id="submenu">
         <ul>
         	
-        	{% if user.groups.all == 'pacjent' %}
-           <li><a href="{% url 'views.update_profile' %}">PROFIL</a></li>
-           <li><a href="{% url 'views.change_password' %}">ZMIANA HASŁA</a></li>
-           <li><a href="{% url 'views.diseases' %}">CHOROBY</a></li>
-           {% else %}
-           <li><a href="{% url 'views.register_by_receptionist' %}">REJESTRACJA PACJENTA</a></li>
-           <li><a href="{% url 'views.change_password' %}">ZMIANA HASŁA</a></li>
-           <li><a href="{% url 'views.patient_list' %}">AKTUALIZACJA PACJENTA</a></li>
+        	{% if user|in_group:'pacjent' %}
+	           <li><a href="{% url 'views.update_profile' %}">PROFIL</a></li>
+	           <li><a href="{% url 'views.change_password' %}">ZMIANA HASŁA</a></li>
+	           <li><a href="{% url 'views.diseases' %}">CHOROBY</a></li>
+           {% elif user|in_group:'rejestrator' %}
+	           <li><a href="{% url 'views.register_by_receptionist' %}">REJESTRACJA PACJENTA</a></li>
+	           <li><a href="{% url 'views.change_password' %}">ZMIANA HASŁA</a></li>
+	           <li><a href="{% url 'views.patient_list' %}">AKTUALIZACJA PACJENTA</a></li>
            {% endif %}
            
         </ul>

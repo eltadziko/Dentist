@@ -5,7 +5,7 @@
 - model: Dentist.disease
   pk: 2
   fields:
-    disease_name: nadciúnienie
+    disease_name: nadci≈õnienie
 - model: Dentist.disease
   pk: 3
   fields:
@@ -21,15 +21,15 @@
 - model: Dentist.disease
   pk: 6
   fields:
-    disease_name: ciπøa
+    disease_name: ciƒÖ≈ºa
 - model: Dentist.disease
   pk: 7
   fields:
-    disease_name: øÛ≥taczka
+    disease_name: ≈º√≥≈Çtaczka
 - model: Dentist.disease
   pk: 8
   fields:
-    disease_name: gruülica
+    disease_name: gru≈∫lica
 - model: Dentist.disease
   pk: 9
   fields:
