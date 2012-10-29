@@ -419,8 +419,8 @@
     description: 
     dentist: 12
     patient: 139
-    dental_office: 
-    appointment_type: 
+    dental_office: 1
+    appointment_type: 1
 - model: Dentist.appointment
   pk: 48
   fields:

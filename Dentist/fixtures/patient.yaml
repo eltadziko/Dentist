@@ -1,12 +1,13 @@
 - model: Dentist.patient
-  pk: 2
+  pk: 5
   fields:
-  	first_name: Tadeusz
-  	last_name: Cekała
+    first_name: Tadeusz
+    last_name: Cekała
     birth_date: 1958-09-08
     address: ul. Balonowa 23/4, 54-129 Wrocław
     PESEL: 58090869737
     insurance_type: praca RMUA
     insurance_number: komentarz
     phone: 665238987
-    user: 3
+    user: 13
+    diseases: [1]

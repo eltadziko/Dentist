@@ -71,7 +71,6 @@ class patient(models.Model):
         verbose_name_plural = "Pacjenci"
 
     def __unicode__(self):
-        user = User.objects.get(id=self.user_id)
         return u'%s %s, %s' % (self.last_name, self.first_name, self.address)
     
 class patient_diseases(models.Model):
