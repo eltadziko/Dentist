@@ -48,6 +48,23 @@ def register(request):
         form_patient = PatientForm
     return render(request, 'register.html', {'form': form, 'form_patient': form_patient})
 
+@anonymous_required
+def register2(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST, initial={'date_joined': datetime.date.today, 'last_login': datetime.date.today})
+        if form.is_valid(): 
+            user = form.save(commit=False)
+            user.set_password(request.POST['password'])
+            user.save()
+            
+            password = password_creation(user = user, last_change = datetime.datetime.now().date())
+            password.save()
+            
+            return HttpResponseRedirect('/confirm_register/')
+    else:
+        form = UserForm
+    return render(request, 'register2.html', {'form': form})
+
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 def register_by_receptionist(request):
@@ -138,17 +155,16 @@ def patient_list(request):
 def patient_user(request):
     if request.is_ajax:
         if request.POST:
-             form = PatientUserForm(request.POST['pat'], request.POST)
-        else:
-            form = PatientUserForm('')
-    else:     
-        if request.POST:
+            form = PatientUserForm(request.POST['pat'], request.POST)
             if form.is_valid():
                 if 'patients' in request.POST.keys():
                     pat = patient.objects.get(id = request.POST['patients'])
                     user = User.objects.get(username = request.POST['login'])
                     pat.user = user
                     pat.save()
+                    
+                    g = Group.objects.get(name='pacjent')
+                    g.user_set.add(user)
                     return HttpResponseRedirect('/index/')
         else:
             form = PatientUserForm('')
@@ -156,3 +172,6 @@ def patient_user(request):
 
 def index(request):
     return render(request, 'base.html')
+
+def confirm_register(request):
+    return render(request, 'confirm_register.html')

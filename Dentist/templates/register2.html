@@ -1,8 +1,7 @@
 {% extends 'base.html' %}
 
 {% block right_column %}
-<a href="{% url views.register2 %}">Jestem już pacjentem gabinetu dentystycznego</a>
-<form action="{% url views.register %}" method="post"> {% csrf_token %}
+<form action="{% url views.register2 %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
 		    {% for error in form.non_field_errors %}
@@ -12,20 +11,6 @@
 	{% endif %}
 	
 	{% for field in form %}
-		<div class="fieldWrapper">
-	        {% if field.errors %}
-	        	<div class="error">
-			    {% for error in field.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			    </div>
-			{% endif %}
-	        {{ field.label_tag }}: 
-	        {{ field }}
-	    </div>
-    {% endfor %}
-    
-    {% for field in form_patient %}
 		<div class="fieldWrapper">
 	        {% if field.errors %}
 	        	<div class="error">
