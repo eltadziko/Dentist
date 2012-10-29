@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+=======
+#Mon Oct 29 21:20:25 CET 2012
+>>>>>>> 9ffb5d78d33000f5d8d93f2c7d688b3af5449c61
 eclipse.preferences.version=1
 encoding//Dentist/admin.py=utf-8
 encoding//Dentist/decorators.py=utf-8
+encoding//Dentist/fixtures/appointment.yaml=UTF-8
+encoding//Dentist/fixtures/appointment_type.yaml=UTF-8
 encoding//Dentist/fixtures/dentist.yaml=UTF-8
 encoding//Dentist/fixtures/disease.yaml=UTF-8
 encoding//Dentist/fixtures/group.yaml=UTF-8

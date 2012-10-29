@@ -136,16 +136,22 @@ def patient_list(request):
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 def patient_user(request):
-    if request.POST:
-        form = PatientUserForm(request.POST['pat'], request.POST)
-        if 'patients' in request.POST.keys():
-            pat = patient.objects.get(id = request.POST['patients'])
-            user = User.objects.get(username = request.POST['login'])
-            pat.user = user
-            pat.save()
-            return HttpResponseRedirect('/index/')
-    else:
-        form = PatientUserForm('')
+    if request.is_ajax:
+        if request.POST:
+             form = PatientUserForm(request.POST['pat'], request.POST)
+        else:
+            form = PatientUserForm('')
+    else:     
+        if request.POST:
+            if form.is_valid():
+                if 'patients' in request.POST.keys():
+                    pat = patient.objects.get(id = request.POST['patients'])
+                    user = User.objects.get(username = request.POST['login'])
+                    pat.user = user
+                    pat.save()
+                    return HttpResponseRedirect('/index/')
+        else:
+            form = PatientUserForm('')
     return render(request, 'patient_user.html', {'form': form}) 
 
 def index(request):

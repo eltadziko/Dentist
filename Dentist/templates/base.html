@@ -11,10 +11,12 @@
 	Stomatologia Coldix
 {% endblock %}
 </title>
+
 {% block css %}
 	<link href="{{ MEDIA_URL }}/css/style.css" rel="stylesheet" media="all" type="text/css" />
 {% endblock %}
 {% block javascript %}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 {%endblock %}
 <link rel="shortcut icon" href="{{ MEDIA_URL }}/img/favicon.ico" type="image/x-icon" />
 
@@ -30,15 +32,15 @@
     <div id="belka_gora">
       <div id="log_box">
       {% if user.is_authenticated %}
-      <div id="tekst_log">Witaj <a href="{% url 'views.update_profile' %}">{{ user.username }}</a>.</div>
-      <img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
-      <div id="tekst_log"><a href="{% url 'views.logout_view' %}">Wyloguj</a>.</div>
+      	<div id="tekst_log">Witaj <a href="{% url 'views.update_profile' %}">{{ user.username }}</a>.</div>
+      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
+      	<div id="tekst_log"><a href="{% url 'views.logout_view' %}">Wyloguj</a>.</div>
       {% else %}
-      <div id="tekst_log">Witaj <a href="#">Gość</a>.</div>
-      <img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
-      <div id="tekst_log"><a href="{% url 'django.contrib.auth.views.login' %}">Zaloguj się </a>lub <a href="{% url 'views.register' %}">Zarejestruj</a>, jeśli nie posiadasz konta.</div>
-      <img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
-      <div id="tekst_log"><a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałem hasła</a>.</div>
+      	<div id="tekst_log">Witaj <a href="#">Gość</a>.</div>
+      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
+     	<div id="tekst_log"><a href="{% url 'django.contrib.auth.views.login' %}">Zaloguj się </a>lub <a href="{% url 'views.register' %}">Zarejestruj</a>, jeśli nie posiadasz konta.</div>
+      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
+      	<div id="tekst_log"><a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałem hasła</a>.</div>
       {% endif %}
       </div>
     </div>
@@ -46,14 +48,14 @@
     <div id="baner">
       <img src="{{ MEDIA_URL }}/img/logo.png"/>
       {% if not user.is_authenticated %}
-      <div id="form_log">
-        <form action="{% url 'django.contrib.auth.views.login' %}" method="POST">
-        {% csrf_token %}
-        <input name="username" value="Login" onfocus="if(this.value=='' || this.value == 'Login') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="text">
-        <input name="password" value="Hasło" onfocus="if(this.value=='' || this.value == 'Hasło') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="password">
-        <input id="send_log" name="send_log" value=">>" type="submit"/>
-        </form>
-      </div>
+	      <div id="form_log">
+		  	<form action="{% url 'django.contrib.auth.views.login' %}" method="POST">
+		    	{% csrf_token %}
+		      	<input name="username" value="Login" onfocus="if(this.value=='' || this.value == 'Login') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="text">
+		        <input name="password" value="Hasło" onfocus="if(this.value=='' || this.value == 'Hasło') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="password">
+		        <input id="send_log" name="send_log" value=">>" type="submit"/>
+		    </form>
+	      </div>
       {% endif %}
     </div>
     
@@ -79,14 +81,15 @@
         <ul>
         	
         	{% if user|in_group:'pacjent' %}
-	           <li><a href="{% url 'views.update_profile' %}">PROFIL</a></li>
-	           <li><a href="{% url 'views.change_password' %}">ZMIANA HASŁA</a></li>
-	           <li><a href="{% url 'views.diseases' %}">CHOROBY</a></li>
-           {% elif user|in_group:'rejestrator' %}
-	           <li><a href="{% url 'views.register_by_receptionist' %}">REJESTRACJA PACJENTA</a></li>
-	           <li><a href="{% url 'views.change_password' %}">ZMIANA HASŁA</a></li>
-	           <li><a href="{% url 'views.patient_list' %}">AKTUALIZACJA PACJENTA</a></li>
-           {% endif %}
+	           	<li><a href="{% url 'views.update_profile' %}">Profil</a></li>
+	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+	           	<li><a href="{% url 'views.diseases' %}">Choroby</a></li>
+           	{% elif user|in_group:'rejestrator' %}
+	           	<li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
+	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+	           	<li><a href="{% url 'views.patient_list' %}">Aktualizacja pacj.</a></li>
+	           	<li><a href="{% url 'views.patient_user' %}">Połączenie konta</a></li>
+           	{% endif %}
            
         </ul>
       </div>
