@@ -1,0 +1,126 @@
+- model: Dentist.insurance
+  pk: 1
+  fields:
+    short_name: praca RMUA
+    name: raport miesięczny ZUS RMUA
+    description: 
+- model: Dentist.insurance
+  pk: 2
+  fields:
+    short_name: praca zaświadczenie
+    name: zaświadczenie z zakładu pracy
+    description:
+- model: Dentist.insurance
+  pk: 3
+  fields:
+    short_name: praca legitymacja
+    name: legitymacja ubezpieczeniowa
+    description:
+- model: Dentist.insurance
+  pk: 4
+  fields:
+    short_name: działalność gospodarcza
+    name: działalność gospodarcza
+    description:
+- model: Dentist.insurance
+  pk: 5
+  fields:
+    short_name: KRUS
+    name: KRUS
+    description:
+- model: Dentist.insurance
+  pk: 6
+  fields:
+    short_name: emeryt 
+    name: legitymacja emeryta
+    description:
+- model: Dentist.insurance
+  pk: 7
+  fields:
+    short_name: rencista
+    name: legitymacja rencisty
+    description:
+- model: Dentist.insurance
+  pk: 8
+  fields:
+    short_name: bezrobotny
+    name: zaświadczenie z urzędu pracy
+    description:
+- model: Dentist.insurance
+  pk: 9
+  fields:
+    short_name: ubezpieczony dobrowolnie
+    name: ubezpieczony dobrowolnie
+    description:
+- model: Dentist.insurance
+  pk: 10
+  fields:
+    short_name: członek rodz. ubezp. dowód
+    name: członek rodziny ubezpieczonego dowód
+    description:
+- model: Dentist.insurance
+  pk: 11
+  fields:
+    short_name: członek rodz. ubezp. pracodawca 
+    name: członek rodziny ubezpieczonego pracodawca
+    description:
+- model: Dentist.insurance
+  pk: 12
+  fields:
+    short_name: członek rodz. ubezp. KRUS
+    name: członek rodziny ubezpieczonego KRUS
+    description:
+- model: Dentist.insurance
+  pk: 13
+  fields:
+    short_name: członek rodz. ubezp. leg.
+    name: członek rodziny ubezpieczonego legitymacja
+    description:
+- model: Dentist.insurance
+  pk: 14
+  fields:
+    short_name: członek rodz. ubezp. emeryt
+    name: członek rodziny ubezpieczonego emeryt
+    description:
+- model: Dentist.insurance
+  pk: 15
+  fields:
+    short_name: członek rodz. ubezp. rencista
+    name: członek rodziny ubezpieczonego rencista
+    description:
+- model: Dentist.insurance
+  pk: 16
+  fields:
+    short_name: członek rodz. ubezp. dzieci 
+    name: członek rodziny ubezpieczonego dzieci
+    description:
+- model: Dentist.insurance
+  pk: 17
+  fields:
+    short_name: student po 26
+    name: student po 26
+    description:
+- model: Dentist.insurance
+  pk: 18
+  fields:
+    short_name: nieubezp. spełn. kryt. doch. 
+    name: nieubezpiecozny spełniający kryterium dochodowe
+    description:
+- model: Dentist.insurance
+  pk: 19
+  fields:
+    short_name: ubezp. w UE EFTA
+    name: ubezpieczony w UE EFTA
+    description:
+- model: Dentist.insurance
+  pk: 20
+  fields:
+    short_name: ubezp. w UE EFTA2 
+    name: ubezpieczony w UE EFTA2
+    description:
+- model: Dentist.insurance
+  pk: 21
+  fields:
+    short_name: zasiłek chorobowy
+    name: zasiłek chorobowy
+    description:
