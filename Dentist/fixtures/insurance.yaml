@@ -3,19 +3,19 @@
   fields:
     short_name: praca RMUA
     name: raport miesięczny ZUS RMUA
-    description: 
+    description: Ważna w dniu wizyty.
 - model: Dentist.insurance
   pk: 2
   fields:
     short_name: praca zaświadczenie
     name: zaświadczenie z zakładu pracy
-    description:
+    description: Ważne w dniu wizyty.
 - model: Dentist.insurance
   pk: 3
   fields:
     short_name: praca legitymacja
     name: legitymacja ubezpieczeniowa
-    description:
+    description: Ważna w dniu wizyty.
 - model: Dentist.insurance
   pk: 4
   fields:
@@ -27,31 +27,31 @@
   fields:
     short_name: KRUS
     name: KRUS
-    description:
+    description: 
 - model: Dentist.insurance
   pk: 6
   fields:
     short_name: emeryt 
     name: legitymacja emeryta
-    description:
+    description: Ważna w dniu wizyty.
 - model: Dentist.insurance
   pk: 7
   fields:
     short_name: rencista
     name: legitymacja rencisty
-    description:
+    description: Ważna w dniu wizyty.
 - model: Dentist.insurance
   pk: 8
   fields:
     short_name: bezrobotny
     name: zaświadczenie z urzędu pracy
-    description:
+    description: Ważne w dniu wizyty.
 - model: Dentist.insurance
   pk: 9
   fields:
     short_name: ubezpieczony dobrowolnie
     name: ubezpieczony dobrowolnie
-    description:
+    description: 
 - model: Dentist.insurance
   pk: 10
   fields:
@@ -93,13 +93,13 @@
   fields:
     short_name: członek rodz. ubezp. dzieci 
     name: członek rodziny ubezpieczonego dzieci
-    description:
+    description: 
 - model: Dentist.insurance
   pk: 17
   fields:
     short_name: student po 26
     name: student po 26
-    description:
+    description: 
 - model: Dentist.insurance
   pk: 18
   fields:
@@ -111,13 +111,13 @@
   fields:
     short_name: ubezp. w UE EFTA
     name: ubezpieczony w UE EFTA
-    description:
+    description: 
 - model: Dentist.insurance
   pk: 20
   fields:
     short_name: ubezp. w UE EFTA2 
     name: ubezpieczony w UE EFTA2
-    description:
+    description: 
 - model: Dentist.insurance
   pk: 21
   fields:

@@ -2,9 +2,259 @@
   pk: 1
   fields:
     username: pawel_kosior
-    first_name: Paweł
-    last_name: Kosior
-    email: pawel_kosior@auth.pl
+    email: pawel_kosior@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 2
+  fields:
+    username: radoslaw_jadach
+    email: radoslaw_jadach@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 3
+  fields:
+    username: janina_tecza
+    email: janina_tecza@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+ - model: auth.User
+  pk: 4
+  fields:
+    username: maciej_kawala
+    email: maciej_kawala@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 5
+  fields:
+    username: krzysztof_rozycki
+    email: krzysztof_rozycki@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 6
+  fields:
+    username: magdalena_kadziela
+    email: magdalena_kadziela@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 7
+  fields:
+    username: lidia_kittel
+    email: lidia_kittel@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 8
+  fields:
+    username: ewa_mlynczak
+    email: ewa_mlynczak@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 9
+  fields:
+    username: jozef_andrzej_komorski
+    email: jozef_andrzej_komorski@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 10
+  fields:
+    username: marek_wieznowski
+    email: marek_wieznowski@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 11
+  fields:
+    username: jaroslaw_zochowski
+    email: jaroslaw_zochowski@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 12
+  fields:
+    username: ryszard_tomasz_malysa
+    email: ryszard_tomasz_malysa@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 13
+  fields:
+    username: izabela_zawislak
+    email: izabela_zawislak@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 14
+  fields:
+    username: anna_michalska-motas
+    email: anna_michalska-motas@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 15
+  fields:
+    username: iwona_gorska-galka
+    email: iwona_gorska-galka@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 16
+  fields:
+    username: eugeniusz_nosow
+    email: eugeniusz_nosow@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 17
+  fields:
+    username: ewa_minch
+    email: ewa_minch@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 18
+  fields:
+    username: malgorzata_bohater
+    email: malgorzata_bohater@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 19
+  fields:
+    username: ziemowit_sartys
+    email: ziemowit_sartys@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 20
+  fields:
+    username: anna_paradowska 
+    email: anna_paradowska@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 21
+  fields:
+    username: edyta_cygnarowska
+    email: edyta_cygnarowska@dentist.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [3]
+- model: auth.User
+  pk: 22
+  fields:
+    username: katarzyna_nielepkowicz
+    email: katarzyna_nielepkowicz@patient.pl
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
     is_active: 1
@@ -12,3 +262,471 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
+- model: auth.User
+  pk: 23
+  fields:
+    username: michal_iwanicki 
+    email: michal_iwanicki@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 24
+  fields:
+    username: jacek_czapinski
+    email: jacek_czapinski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 25
+  fields:
+    username: grzegorz_gawrys
+    email: grzegorz_gawrys@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 26
+  fields:
+    username: grzegorz_myszczyszyn
+    email: grzegorz_myszczyszyn@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 27
+  fields:
+    username: beata_wisnicka
+    email: beata_wisnicka@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 28
+  fields:
+    username: marek_pudelko
+    email: marek_pudelko@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 29
+  fields:
+    username: zbigniew_malachowski
+    email: zbigniew_malachowski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 30
+  fields:
+    username: ewa_nojek
+    email: ewa_nojek@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 31
+  fields:
+    username: alina_strzalkowska
+    email: alina_strzalkowska@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 32
+  fields:
+    username: lukasz_garbien
+    email: łukasz_garbien@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 33
+  fields:
+    username: zbigniew_lukaszewski
+    email: zbigniew_lukaszewski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+ - model: auth.User
+  pk: 34
+  fields:
+    username: maciej_baglaj
+    email: maciej_bagłaj@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 35
+  fields:
+    username: mateusz_tylko
+    email: mateusz_tylko@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 36
+  fields:
+    username: ewa_strus
+    email: ewa_strus@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 37
+  fields:
+    username: lukasz_duda
+    email: lukasz_duda@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 38
+  fields:
+    username: malgorzata_gajewczyk
+    email: malgorzata_gajewczyk@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 39
+  fields:
+    username: grzegorz_rajca
+    email: grzegorz_rajca@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 40
+  fields:
+    username: dariusz_krasnicki
+    email: dariusz_krasnicki@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 41
+  fields:
+    username: janusz_biezynski
+    email: janusz_biezynski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 42
+  fields:
+    username: leslaw_zub
+    email: leslaw_zub@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 43
+  fields:
+    username: jacek_jarlinski
+    email: jacek_jarlinski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+ - model: auth.User
+  pk: 44
+  fields:
+    username: radoslaw_jadach
+    email: radoslaw_jadach@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 45
+  fields:
+    username: daniel_paplinski
+    email: daniel_paplinski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 46
+  fields:
+    username: marita_nittner
+    email: marita_nittner@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 47
+  fields:
+    username: adam_domanasiewicz
+    email: adam_domanasiewicz@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 48
+  fields:
+    username: bogdan_czapiga
+    email: bogdan_czapiga@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 49
+  fields:
+    username: jan_godzinski
+    email: jan_godzinski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 50
+  fields:
+    username: marek_wegrzyn
+    email: marek_wegrzyn@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 51
+  fields:
+    username: jaroslaw_gruszka
+    email: jaroslaw_gruszka@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 52
+  fields:
+    username: piotr_paluch 
+    email: piotr_paluch@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 53
+  fields:
+    username: dariusz_niedzielski
+    email: dariusz_niedzielski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+ - model: auth.User
+  pk: 54
+  fields:
+    username: tomasz_zatonski
+    email: tomasz_zatonski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 55
+  fields:
+    username: grzegorz_dobaczewski
+    email: grzegorz_dobaczewski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 56
+  fields:
+    username: maciej_krzeszewski
+    email: maciej_krzeszewski@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 57
+  fields:
+    username: marcin_jedryka
+    email: marcin_jedryka@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 58
+  fields:
+    username: jaroslaw_bukwald
+    email: jaroslaw_bukwald@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 59
+  fields:
+    username: joanna_michniewicz
+    email: joanna_michniewicz@patient.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [1]
+- model: auth.User
+  pk: 60
+  fields:
+    username: anna_kowalska
+    email: anna_kowalska@rejestrator.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 1
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [2]
+- model: auth.User
+  pk: 61
+  fields:
+    username: jak_kowalski
+    email: jak_kowalski@rejestrator.pl
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 1
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [2]

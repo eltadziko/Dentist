@@ -4,14 +4,12 @@
     type: wizyta kontrolna
     length: 15
 - model: Dentist.appointment_type
-  pk: 3
+  pk: 2
   fields:
     type: leczenie
     length: 30
 - model: Dentist.appointment_type
-  pk: 4
+  pk: 3
   fields:
     type: zabieg
     length: 60 
-
-

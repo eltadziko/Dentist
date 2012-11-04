@@ -10,7 +10,7 @@
   pk: 3
   fields:
     type: braki zêbowe kl. III(wg Galasiñskiej Landsbergerowej)
-    - model: Dentist.loss_type
+- model: Dentist.loss_type
   pk: 4
   fields:
     type: braki zêbowe kl. IV (wg Galasiñskiej Landsbergerowej)
