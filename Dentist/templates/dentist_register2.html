@@ -5,6 +5,15 @@
 	
 	<script>
 	$(document).ready(function() {
+		var dent = $('input[name=dentist]:checked').val();
+		if(dent == undefined) {
+			$.post('/dentist_register2/',
+			{ office: $('#id_office').val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		}
 		
 		$("#id_pat").live('change', function() {
 			var dent = $('input[name=dentist]:checked').val();
@@ -44,14 +53,6 @@
 		 	
 		 	return false;
 		 });
-		 
-		$.post('/dentist_register2/',
-		{ office: $('#id_office').val(),
-		  csrfmiddlewaretoken: '{{ csrf_token }}' },
-		function(data) { 
-			$('#content').html(data); 
-		});
-	
 		
 			
 		 $("#id_office").live('change', function() {
