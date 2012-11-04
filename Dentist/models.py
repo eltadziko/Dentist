@@ -132,7 +132,7 @@ class appointment_type(models.Model):
         verbose_name_plural = "Typy wizyt"
     
     def __unicode__(self):
-        return u'%s' % (self.type)
+        return u'%s (%s min)' % (self.type, self.length)
     
 class appointment(models.Model):
     date = models.DateField("Data")

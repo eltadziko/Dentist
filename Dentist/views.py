@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.contrib.auth.models import Group
 from django.contrib.auth import login, authenticate, logout
 import datetime
+import time
 from models import *
 from forms.user_form import UserForm
 from forms.profile_form import ProfileForm
@@ -11,6 +12,7 @@ from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
 from forms.patient_user_form import PatientUserForm
+from forms.register_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 
@@ -175,3 +177,55 @@ def index(request):
 
 def confirm_register(request):
     return render(request, 'confirm_register.html')
+
+@login_required
+@user_passes_test(in_patient_group, login_url='/access_denied/')
+def dentist_register(request):
+    if request.POST:
+        if 'type' in request.POST.keys():
+            typ = request.POST['type']
+        else:
+            typ = -1
+        if 'dentist' in request.POST.keys():
+            if 'date' in request.POST.keys():
+                if 'appoint' in request.POST.keys():
+                    day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
+                    appoint = appointment(date = day.date(),
+                                          hour = day.time(),
+                                          dentist = dentist.objects.get(id=request.POST['dentist']),
+                                          dental_office = dental_office.objects.get(id=request.POST['office']),
+                                          appointment_type = appointment_type.objects.get(id=request.POST['type']),
+                                          patient = patient.objects.get(user=request.user.id))
+                    appoint.save()
+                    return HttpResponseRedirect('/index/')
+                else:
+                    apps = []
+                    day = dates.objects.get(id=request.POST['date'])
+                    dayend = datetime.datetime.combine(day.date, day.end)
+                    hour = datetime.datetime.combine(day.date, day.begin)
+                    minutes = appointment_type.objects.get(id=typ).length
+                    while hour + datetime.timedelta(minutes=minutes)<=dayend:
+                        apps.append(hour)
+                        hour = hour + datetime.timedelta(minutes=minutes)
+                    
+                    deleted_apps = []
+                    for h in apps:
+                        for ap in appointment.objects.filter(date = day).filter(dentist = request.POST['dentist']).filter(dental_office = request.POST['office']):
+                            ap_date = datetime.datetime.combine(ap.date, ap.hour)
+                            length = ap.appointment_type.length
+                            ap_end = datetime.datetime.combine(ap.date, ap.hour) + datetime.timedelta(minutes=length)
+                            h_end = h + datetime.timedelta(minutes=appointment_type.objects.get(id=typ).length)
+                            if h >= ap_date and h.time() < ap_end.time() or h <= ap_date and h_end > ap_date:
+                                if not h in deleted_apps:
+                                    deleted_apps.append(h)
+                                
+                    for h in deleted_apps:            
+                        apps.remove(h)
+                    form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ)
+            else:
+                form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ)
+        else:
+            form = RegisterForm(request.POST['office'], -1, -1, -1, typ)        
+    else:
+        form = RegisterForm(-1, -1, -1, -1, -1)
+    return render(request, 'dentist_register.html', {'form': form})

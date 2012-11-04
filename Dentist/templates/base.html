@@ -65,7 +65,7 @@
            <li><a href="{% url 'views.index' %}">HOME</a></li>
            <li><a href="onas.html">O NAS</a></li>
            <li><a href="oferta.html">OFERTA</a></li>
-           <li><a href="rejestracja.html">REJESTRACJA</a></li>
+           <li><a href="{% url 'views.dentist_register' %}">REJESTRACJA</a></li>
            <li><a href="kontakt.html">KONTAKT</a></li>
         </ul>
       </div>
@@ -84,6 +84,7 @@
 	           	<li><a href="{% url 'views.update_profile' %}">Profil</a></li>
 	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
 	           	<li><a href="{% url 'views.diseases' %}">Choroby</a></li>
+	           	<li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
            	{% elif user|in_group:'rejestrator' %}
 	           	<li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
 	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>

@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+{% block javascript %}
+	{{ block.super }}
+	
+	<script>
+	$(document).ready(function() {
+		
+		$.post('/dentist_register/',
+		{ office: $('#id_office').val(),
+		  csrfmiddlewaretoken: '{{ csrf_token }}' },
+		function(data) { 
+			$('#content').html(data); 
+		});
+			
+		 $("#id_office").live('change', function() {
+			$.post('/dentist_register/',
+			{ office: $(this).val(),
+			  type: $('#id_type').val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
+		 
+		 $("input[name=dentist]").live('change', function() {
+			$.post('/dentist_register/',
+			{ office: $('#id_office').val(),
+			  dentist: $(this).val(),
+			  type: $('#id_type').val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
+		 
+		 $("input[name=date]").live('change', function() {
+			$.post('/dentist_register/',
+			{ office: $('#id_office').val(),
+			  dentist: $('input[name=dentist]:checked').val(),
+			  date: $(this).val(),
+			  type: $('#id_type').val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
+		 
+		 $("#id_type").live('change', function() {
+			$.post('/dentist_register/',
+			{ office: $('#id_office').val(),
+			  dentist: $('input[name=dentist]:checked').val(),
+			  date: $('input[name=date]:checked').val(),
+			  type: $(this).val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
+		 
+		 
+	});
+	</script>
+{% endblock %}
+
+{% block right_column %}
+<form action="{% url views.dentist_register %}" method="post"> {% csrf_token %}
+	{% if form.non_field_errors %}
+       	<div class="error">
+		    {% for error in form.non_field_errors %}
+		        <strong>{{ error|escape }} </strong>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	{% for field in form %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }}: 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+	<p><input type="submit" value="Zarejestruj" /></p>
+</form>
+{% endblock %}
