@@ -285,7 +285,7 @@
     tooth: 16
     loss_type: 32
     tooth_part: 3
-    comment: Potrzebne zdjêcie rtg.
+    comment: Potrzebne zdjÄ™cie rtg.
 - model: Dentist.tooth_loss
   pk: 37
   fields:
@@ -341,7 +341,7 @@
     tooth: 56
     loss_type: 9
     tooth_part: 2
-    comment: Potrzebne zdjêcie rtg.
+    comment: Potrzebne zdjÄ™cie rtg.
 - model: Dentist.tooth_loss
   pk: 44
   fields:
@@ -357,7 +357,7 @@
     tooth: 7
     loss_type: 43 
     tooth_part: 2
-    comment: Potrzebne zdjêcie rtg.
+    comment: Potrzebne zdjÄ™cie rtg.
 - model: Dentist.tooth_loss
   pk: 46
   fields:
@@ -365,7 +365,7 @@
     tooth: 13
     loss_type: 13
     tooth_part: 3
-    comment: Potrzebne zdjêcie rtg.
+    comment: Potrzebne zdjÄ™cie rtg.
 - model: Dentist.tooth_loss
   pk: 47
   fields:

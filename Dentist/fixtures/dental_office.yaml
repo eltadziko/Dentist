@@ -2,17 +2,17 @@
   pk: 1
   fields:
     name: Centrum Stomatologii Estetycznej i Rodzinnej   
-    address: ul. Boles≥awa Krzywoustego 19b, Wroc≥aw
+    address: ul. Boles≈Çawa Krzywoustego 19b, Wroc≈Çaw
     description: Prywatna Praktyka Stomatologiczna, specjalizacja: chirurgia, zachowawcza, protetyka.
 - model: Dentist.dental_office
   pk: 2
   fields:
     name: ALL-DENT
-    address: ul. Partynicka 32E, Wroc≥aw
-    description: Lekarze dentyúci oferujπ pe≥ny zakres us≥ug w dziedzinie stomatologii.
+    address: ul. Partynicka 32E, Wroc≈Çaw
+    description: Lekarze denty≈õci oferujƒÖ pe≈Çny zakres us≈Çug w dziedzinie stomatologii.
 - model: Dentist.dental_office
   pk: 3
   fields:
     name: AMF Gabinet Stomatologiczny
-    address:  ul. Widok 1 /13, Wroc≥aw
+    address:  ul. Widok 1 /13, Wroc≈Çaw
     description: Gabinet stomatologiczny.

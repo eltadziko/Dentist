@@ -1,31 +1,31 @@
 - model: Dentist.loss_type
   pk: 1
   fields:
-    type: braki zêbowe kl. I(wg Galasiñskiej Landsbergerowej)
+    type: braki zÄ™bowe kl. I(wg GalasiÅ„skiej Landsbergerowej)
 - model: Dentist.loss_type
   pk: 2
   fields:
-    type: braki zêbowe kl. II(wg Galasiñskiej Landsbergerowej)
+    type: braki zÄ™bowe kl. II(wg GalasiÅ„skiej Landsbergerowej)
 - model: Dentist.loss_type
   pk: 3
   fields:
-    type: braki zêbowe kl. III(wg Galasiñskiej Landsbergerowej)
+    type: braki zÄ™bowe kl. III(wg GalasiÅ„skiej Landsbergerowej)
 - model: Dentist.loss_type
   pk: 4
   fields:
-    type: braki zêbowe kl. IV (wg Galasiñskiej Landsbergerowej)
+    type: braki zÄ™bowe kl. IV (wg GalasiÅ„skiej Landsbergerowej)
 - model: Dentist.loss_type
   pk: 5
   fields:
-    type: braki zêbowe kl. V (wg Galasiñskiej Landsbergerowej)
+    type: braki zÄ™bowe kl. V (wg GalasiÅ„skiej Landsbergerowej)
 - model: Dentist.loss_type
   pk: 6
   fields:
-    type: kieszeñ dzi¹s³owa
+    type: kieszeÅ„ dziÄ…sÅ‚owa
 - model: Dentist.loss_type
   pk: 7
   fields:
-    type: kieszeñ kostna
+    type: kieszeÅ„ kostna
 - model: Dentist.loss_type
   pk: 8
   fields:
@@ -33,7 +33,7 @@
 - model: Dentist.loss_type
   pk: 9
   fields:
-    type: martwica przy komorze zamkniêtej
+    type: martwica przy komorze zamkniÄ™tej
 - model: Dentist.loss_type
   pk: 10
   fields:
@@ -41,151 +41,151 @@
 - model: Dentist.loss_type
   pk: 11
   fields:
-    type: od³amanie korony
+    type: odÅ‚amanie korony
 - model: Dentist.loss_type
   pk: 12
   fields:
-    type: osad nazêbny
+    type: osad nazÄ™bny
 - model: Dentist.loss_type
   pk: 13
   fields:
-    type: ostre pocz¹tkowe zapalenie tkanek oko³owierzcho³owych
+    type: ostre poczÄ…tkowe zapalenie tkanek okoÅ‚owierzchoÅ‚owych
 - model: Dentist.loss_type
   pk: 14
   fields:
-    type: ostre ropne zapalenie tkanek oko³owierzcho³owych
+    type: ostre ropne zapalenie tkanek okoÅ‚owierzchoÅ‚owych
 - model: Dentist.loss_type
   pk: 15
   fields:
-    type: perforacja korony zêba
+    type: perforacja korony zÄ™ba
 - model: Dentist.loss_type
   pk: 16
   fields:
-    type: perforacja korzenia zêba
+    type: perforacja korzenia zÄ™ba
 - model: Dentist.loss_type
   pk: 17
   fields:
-    type: próchnica g³êboka kl. I
+    type: prÃ³chnica gÅ‚Ä™boka kl. I
 - model: Dentist.loss_type
   pk: 18
   fields:
-    type: próchnica g³êboka kl. II 
+    type: prÃ³chnica gÅ‚Ä™boka kl. II 
 - model: Dentist.loss_type
   pk: 19
   fields:
-    type: próchnica g³êboka kl. III 
+    type: prÃ³chnica gÅ‚Ä™boka kl. III 
 - model: Dentist.loss_type
   pk: 20
   fields:
-    type: próchnica g³êboka kl. IV
+    type: prÃ³chnica gÅ‚Ä™boka kl. IV
 - model: Dentist.loss_type
   pk: 21
   fields:
-    type: próchnica g³êboka kl. V
+    type: prÃ³chnica gÅ‚Ä™boka kl. V
 - model: Dentist.loss_type
   pk: 22
   fields:
-    type: Próchnica okrê¿na
+    type: PrÃ³chnica okrÄ™Å¼na
 - model: Dentist.loss_type
   pk: 23
   fields:
-    type: Próchnica powierzchniowa kl. I
+    type: PrÃ³chnica powierzchniowa kl. I
 - model: Dentist.loss_type
   pk: 24
   fields:
-    type: Próchnica powierzchniowa kl. II
+    type: PrÃ³chnica powierzchniowa kl. II
 - model: Dentist.loss_type
   pk: 25
   fields:
-    type: Próchnica powierzchniowa kl. III
+    type: PrÃ³chnica powierzchniowa kl. III
 - model: Dentist.loss_type
   pk: 26
   fields:
-    type: Próchnica powierzchniowa kl. IV
+    type: PrÃ³chnica powierzchniowa kl. IV
 - model: Dentist.loss_type
   pk: 27
   fields:
-    type: Próchnica powierzchniowa kl. V
+    type: PrÃ³chnica powierzchniowa kl. V
 - model: Dentist.loss_type
   pk: 28
   fields:
-    type: Próchnica œrednia kl. I
+    type: PrÃ³chnica Å›rednia kl. I
 - model: Dentist.loss_type
   pk: 29
   fields:
-    type: Próchnica œrednia kl. II
+    type: PrÃ³chnica Å›rednia kl. II
 - model: Dentist.loss_type
   pk: 30
   fields:
-    type: Próchnica œrednia kl. III
+    type: PrÃ³chnica Å›rednia kl. III
 - model: Dentist.loss_type
   pk: 31
   fields:
-    type: Próchnica œrednia kl. IV
+    type: PrÃ³chnica Å›rednia kl. IV
 - model: Dentist.loss_type
   pk: 32
   fields:
-    type: Próchnica œrednia kl. V
+    type: PrÃ³chnica Å›rednia kl. V
 - model: Dentist.loss_type
   pk: 33
   fields:
-    type: Próchnica wtórna kl. I
+    type: PrÃ³chnica wtÃ³rna kl. I
 - model: Dentist.loss_type
   pk: 34
   fields:
-    type: Próchnica wtórna kl. II
+    type: PrÃ³chnica wtÃ³rna kl. II
 - model: Dentist.loss_type
   pk: 35
   fields:
-    type: Próchnica wtórna kl. III
+    type: PrÃ³chnica wtÃ³rna kl. III
 - model: Dentist.loss_type
   pk: 36
   fields:
-    type: Próchnica wtórna kl. IV
+    type: PrÃ³chnica wtÃ³rna kl. IV
 - model: Dentist.loss_type
   pk: 37
   fields:
-    type: Próchnica wtórna kl. V
+    type: PrÃ³chnica wtÃ³rna kl. V
 - model: Dentist.loss_type
   pk: 38
   fields:
-    type: Próchnicowe zniszczenie korony
+    type: PrÃ³chnicowe zniszczenie korony
 - model: Dentist.loss_type
   pk: 39
   fields:
-    type: Przebarnienie zêba
+    type: Przebarnienie zÄ™ba
 - model: Dentist.loss_type
   pk: 40
   fields:
-    type: Przewlek³e ropne zapalenia tkanek oko³owierzcho³owych
+    type: PrzewlekÅ‚e ropne zapalenia tkanek okoÅ‚owierzchoÅ‚owych
 - model: Dentist.loss_type
   pk: 41
   fields:
-    type: Przewlek³e w³ókniste zapalenia tkanek oko³owierzcho³owych
+    type: PrzewlekÅ‚e wÅ‚Ã³kniste zapalenia tkanek okoÅ‚owierzchoÅ‚owych
 - model: Dentist.loss_type
   pk: 42
   fields:
-    type: Przewlek³e zaostrzone zapalenia tkanek oko³owierzcho³owych
+    type: PrzewlekÅ‚e zaostrzone zapalenia tkanek okoÅ‚owierzchoÅ‚owych
 - model: Dentist.loss_type
   pk: 43
   fields:
-    type: Przewlek³e ziarninowe zapalenia tkanek oko³owierzcho³owych
+    type: PrzewlekÅ‚e ziarninowe zapalenia tkanek okoÅ‚owierzchoÅ‚owych
 - model: Dentist.loss_type
   pk: 44
   fields:
-    type: Ropieñ oko³owierzcho³kowy
+    type: RopieÅ„ okoÅ‚owierzchoÅ‚kowy
 - model: Dentist.loss_type
   pk: 45
   fields:
-    type: Ropieñ podokostnowy
+    type: RopieÅ„ podokostnowy
 - model: Dentist.loss_type
   pk: 46
   fields:
-    type: Ropieñ podœlizówkowy
+    type: RopieÅ„ podÅ›lizÃ³wkowy
 - model: Dentist.loss_type
   pk: 47
   fields:
-    type: Rozchwianie zêba I st.
+    type: Rozchwianie zÄ™ba I st.
 - model: Dentist.loss_type
   pk: 48
   fields:
@@ -193,23 +193,23 @@
 - model: Dentist.loss_type
   pk: 49
   fields:
-    type: Rozchwianie zêba II st.
+    type: Rozchwianie zÄ™ba II st.
 - model: Dentist.loss_type
   pk: 50
   fields:
-    type: Rozchwianie zêba III st.
+    type: Rozchwianie zÄ™ba III st.
 - model: Dentist.loss_type
   pk: 51
   fields:
-    type: St³oczenie zêbów pierwotne
+    type: StÅ‚oczenie zÄ™bÃ³w pierwotne
 - model: Dentist.loss_type
   pk: 52
   fields:
-    type: St³oczenie zêbów wtórne
+    type: StÅ‚oczenie zÄ™bÃ³w wtÃ³rne
 - model: Dentist.loss_type
   pk: 53
   fields:
-    type: Torbiel oko³owierzcho³kowy
+    type: Torbiel okoÅ‚owierzchoÅ‚kowy
 - model: Dentist.loss_type
   pk: 54
   fields:
@@ -217,7 +217,7 @@
 - model: Dentist.loss_type
   pk: 55
   fields:
-    type: Ubytek niepróchnicowy
+    type: Ubytek nieprÃ³chnicowy
 - model: Dentist.loss_type
   pk: 56
   fields:
@@ -225,7 +225,7 @@
 - model: Dentist.loss_type
   pk: 57
   fields:
-    type: Wybicie zêba
+    type: Wybicie zÄ™ba
 - model: Dentist.loss_type
   pk: 58
   fields:
@@ -233,15 +233,15 @@
 - model: Dentist.loss_type
   pk: 59
   fields:
-    type: Zapalnie nieodwraclene przy komorze zamkniêtej
+    type: Zapalnie nieodwraclene przy komorze zamkniÄ™tej
 - model: Dentist.loss_type
   pk: 60
   fields:
-    type: Zapalnie nieodwraclene przy komorze z próchnicowym obna¿eniem miazgi
+    type: Zapalnie nieodwraclene przy komorze z prÃ³chnicowym obnaÅ¼eniem miazgi
 - model: Dentist.loss_type
   pk: 61
   fields:
-    type: Zapalnie nieodwraclene przy komorze z przypadkowym obna¿eniem miazgi
+    type: Zapalnie nieodwraclene przy komorze z przypadkowym obnaÅ¼eniem miazgi
 - model: Dentist.loss_type
   pk: 62
   fields:
@@ -249,28 +249,28 @@
 - model: Dentist.loss_type
   pk: 63
   fields:
-    type: Zapalenie przyzêbia
+    type: Zapalenie przyzÄ™bia
 - model: Dentist.loss_type
   pk: 64
   fields:
-    type: Zwichniêcie zêba
+    type: ZwichniÄ™cie zÄ™ba
 - model: Dentist.loss_type
   pk: 65
   fields:
-    type: Z³amanie poprzeczne korzenia
+    type: ZÅ‚amanie poprzeczne korzenia
 - model: Dentist.loss_type
   pk: 66
   fields:
-    type: Z³amanie pod³u¿ne korzenia
+    type: ZÅ‚amanie podÅ‚uÅ¼ne korzenia
 - model: Dentist.loss_type
   pk: 67
   fields:
-    type: Z³amanie zêbe w obrêbie szkliwa i zêbiny
+    type: ZÅ‚amanie zÄ™be w obrÄ™bie szkliwa i zÄ™biny
 - model: Dentist.loss_type
   pk: 68
   fields:
-    type: Z³amanie zêbe w obrêbie szkliwa
+    type: ZÅ‚amanie zÄ™be w obrÄ™bie szkliwa
 - model: Dentist.loss_type
   pk: 69
   fields:
-    type: Z³amanie zêba z obna¿eniem miazgi
+    type: ZÅ‚amanie zÄ™ba z obnaÅ¼eniem miazgi

@@ -7,8 +7,9 @@
     address: ul. Balonowa 23/4, 54-129 Wrocław
     PESEL: 58090869737
     insurance_type: praca RMUA
-    insurance_number: a
+    insurance_number: 
     phone: 665238987
+    comment: 
     user: 22
     diseases: [1]
 - model: Dentist.patient
@@ -20,8 +21,9 @@
     address: Długa 117, 53-633 Wrocław
     PESEL: 89100837543
     insurance_type: praca zaświadczenie
-    insurance_number: a
+    insurance_number: 
     phone: 667548988
+    comment:
     user: 23
     diseases: [1, 2] 
 - model: Dentist.patient
@@ -33,7 +35,8 @@
     address: Borowska 74/07, 50-532 Wrocław
     PESEL: 74080965395
     insurance_type: praca legitymacja
-    insurance_number: a
+    insurance_number: 
+    comment:
     phone: 534234876 
     user: 24
     diseases: [5]
@@ -46,8 +49,9 @@
     address: Piękna 20/68, 50-505 Wrocław
     PESEL: 72100852638
     insurance_type: działalność gospodarcza
-    insurance_number: a
+    insurance_number: 
     phone: 788345234
+    comment:
     user: 25
     diseases: [4, 1]
 - model: Dentist.patient
@@ -59,8 +63,9 @@
     address: Zaporowska 57/19, 53-519 Wrocław
     PESEL: 49062252349
     insurance_type: KRUS
-    insurance_number: a
+    insurance_number: 
     phone: 567342802 
+    comment:
     user: 26 
     diseases: [6]
 - model: Dentist.patient
@@ -72,8 +77,9 @@
     address: Wittiga 9/1024, 51-628 Wrocław;
     PESEL: 55050973934
     insurance_type: emeryt
-    insurance_number: a
+    insurance_number: 
     phone: 765987234
+    comment:
     user: 27
     diseases: [5]
 - model: Dentist.patient
@@ -85,8 +91,9 @@
     address: Grunwaldzka 73/5, 50-357 Wrocław
     PESEL: 63102612461
     insurance_type: rencista
-    insurance_number: a
+    insurance_number: 
     phone: 534876091
+    comment:
     user: 28
     diseases: [3]
 - model: Dentist.patient
@@ -98,8 +105,9 @@
     address: Wołowska 23, 51-116 Wrocław
     PESEL: 54061073231
     insurance_type: bezrobotny
-    insurance_number: a
+    insurance_number: 
     phone: 543290001 
+    comment:
     user: 29
     diseases: [3, 1, 4]
 - model: Dentist.patient
@@ -111,8 +119,9 @@
     address: Zamojska 34/7, 54-102 Wrocław
 	PESEL: 90012542856
     insurance_type: ubezpieczony dobrowolnie
-    insurance_number: a
+    insurance_number: 
     phone: 537899001
+    comment:
     user: 30
     diseases: [4]
 - model: Dentist.patient
@@ -124,8 +133,9 @@
     address: Dworcowa 15/30, 50-456 Wrocław
     PESEL: 96081079321
     insurance_type: członek rodziny ubezp. dowód
-    insurance_number: a
+    insurance_number: 
     phone: 654876564
+    comment:
     user: 31
     diseases: [7]
 ﻿- model: Dentist.patient
@@ -137,8 +147,9 @@
     address: Zawiszy Czarnego 23/34, 52-241 Wrocław
     PESEL: 42011867988
     insurance_type: członek rodziny ubezp. pracodawca
-    insurance_number: a
+    insurance_number: 
     phone: 665238987 
+    comment:
     user: 32
     diseases: [3]
 - model: Dentist.patient
@@ -150,8 +161,9 @@
     address: Zaułek Rogoziński 23/7, 51-116 Wrocław 
     PESEL: 38110145841
     insurance_type: członek rodziny ubezp. KRUS
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 33
     diseases: [3]
 - model: Dentist.patient
@@ -163,8 +175,9 @@
     address: Forsycjowa 2/54, 51-253 Wrocław
     PESEL: 51040168115
     insurance_type: członek rodziny ubezp. legitymacja  
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 34
     diseases: [5, 6, 2]
 - model: Dentist.patient
@@ -176,8 +189,9 @@
     address: Bardzka 11/3, 50-516 Wrocław
     PESEL: 61061333917
     insurance_type: członek rodziny ubezp. emeryt
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 35
     diseases: [3]
 - model: Dentist.patient
@@ -189,8 +203,9 @@
     address: Batorego Stefana 23/78, 54-007 Wrocław   
     PESEL: 60021824711
     insurance_type: członek rodziny ubezp. rencista
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 36
     diseases: [2]
 - model: Dentist.patient
@@ -202,8 +217,9 @@
     address: Ługowa  4, 51-180 Wrocław
     PESEL: 76120329976
     insurance_type: członek rodziny ubezp. rencista
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 37
     diseases: [7, 1]
 - model: Dentist.patient
@@ -215,8 +231,9 @@
     address: Gazowa 56/33, 50-513 Wrocław
     PESEL: 56022249873
     insurance_type: student po 26
-    insurance_number: a
+    insurance_number: 
     phone: 674234876
+    comment:
     user: 38
     diseases: [4, 5]
 - model: Dentist.patient
@@ -228,8 +245,9 @@
     address: Papiernicza 56/3, 54-134 Wrocław
     PESEL: 55061252792
     insurance_type: nieubezp. spełn. kryt. dochodowe
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 39
     diseases: [2]
 - model: Dentist.patient
@@ -241,8 +259,9 @@
     address: Pilata Stanisława 22, 51-605 Wrocław
     PESEL: 83120763329
     insurance_type: ubezpieczony w UE EFTA2
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 40
     diseases: [5]
 - model: Dentist.patient
@@ -254,8 +273,9 @@
     address: Zapotocze 87, 51-180 Wrocław
     PESEL: 68112087676
     insurance_type: praca RMUA
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 41
     diseases: [7]
 - model: Dentist.patient
@@ -267,8 +287,9 @@
     address:  Żołnierska  55, 53-014 Wrocław
     PESEL: 54091839357
     insurance_type: praca zaświadczenie
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 42
     diseases: [3]
 - model: Dentist.patient
@@ -280,8 +301,9 @@
     address:  Malborska 9/45, 51-351 Wrocław
     PESEL: 41011564413
     insurance_type: praca legitymacja
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 43
     diseases: [1]
 - model: Dentist.patient
@@ -293,8 +315,9 @@
     address: Kocha Roberta 45/7, 51-112 Wrocław
     PESEL: 78062158287
     insurance_type: działalność gospodarcza
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 44
     diseases: [6]
 - model: Dentist.patient
@@ -306,8 +329,9 @@
     address: Karpacka 1, 54-617 Wrocław
     PESEL: 92120234512
     insurance_type: KRUS
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 45
     diseases: [3]
 - model: Dentist.patient
@@ -319,8 +343,9 @@
     address: Kłodzka 6/10, 50-536 Wrocław
     PESEL: 86022186339
     insurance_type: emeryt
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 46
     diseases: [4]
 - model: Dentist.patient
@@ -332,8 +357,9 @@
     address: Darwina Karola 9/87, 52-415 Wrocław
     PESEL: 75120123597
     insurance_type: rencista
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 47
     diseases: [2]
 - model: Dentist.patient
@@ -345,8 +371,9 @@
     address: Husarska 2/34, 53-004 Wrocław
     PESEL: 52080497481
     insurance_type: bezrobotny
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 48
     diseases: [4, 6]
 - model: Dentist.patient
@@ -358,8 +385,9 @@
     address: Janowska 2, 54-067 Wrocław
     PESEL: 68112278982
     insurance_type: ubezpieczony dobrowolnie
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 49
     diseases: [1, 2, 3]
 - model: Dentist.patient
@@ -371,8 +399,9 @@
     address: Gubińska 34, 54-434 Wrocław
     PESEL: 74072133982
     insurance_type: członek rodziny ubezp. dowód
-    insurance_number: a
+    insurance_number: 
     phone: 534234876 
+    comment:
     user: 50
     diseases: [2]
 - model: Dentist.patient
@@ -384,7 +413,8 @@
     address: Komorowska 65, 54-436 Wrocław
     PESEL: 53122862517
     insurance_type: członek rodziny ubezp. pracodawca
-    insurance_number: a
+    insurance_number: 
+    comment:
     phone: 534234876
     user: 51
     diseases: [5]
@@ -397,8 +427,9 @@
     address: Lazurowa 5/9, 54-044 Wrocław
     PESEL: 66052095728
     insurance_type: członek rodziny ubezp. KRUS
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 52
     diseases: [6]
 - model: Dentist.patient
@@ -410,8 +441,9 @@
     address: Oboźna 54, 52-244 Wrocław
     PESEL: 44041643455
     insurance_type: członek rodziny ubezp. legitymacja
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 53
     diseases: [3]
 - model: Dentist.patient
@@ -423,8 +455,9 @@
     address: Kiełczowska 55/54, 51-316 Wrocław
     PESEL: 40121987172
     insurance_type: członek rodziny ubezp. emeryt
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 54
     diseases: [5]
 - model: Dentist.patient
@@ -436,8 +469,9 @@
     address: Hodowlana 23/54, 54-109 Wrocław
     PESEL: 63061866956
     insurance_type: członek rodziny ubezp. rencista
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 55
     diseases: [3]
 - model: Dentist.patient
@@ -449,8 +483,9 @@
     address:  Imbirowa 3/6, 54-066 Wrocław
     PESEL: 61122293923
     insurance_type: członek rodziny ubezp. dzieci
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 56
     diseases: [2, 6] 
 - model: Dentist.patient
@@ -462,8 +497,9 @@
     address: Mazepy 76, 51-347 Wrocław
     PESEL: 56090722331
     insurance_type: student po 26
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 57
     diseases: [5]
 - model: Dentist.patient
@@ -475,8 +511,9 @@
     address: Paryska 34/54, 51-215 Wrocław
     PESEL: 40062055253
     insurance_type: nieubezp. spełn. kryt. dochodowe
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 58
     diseases: [2]
 - model: Dentist.patient
@@ -488,7 +525,8 @@
     address: Sołtysia 23/6, 53-652 Wrocław
     PESEL: 91032643389
     insurance_type: ubezpieczony w UE EFTA2
-    insurance_number: a
+    insurance_number: 
     phone: 534234876
+    comment:
     user: 59
     diseases: [1]
