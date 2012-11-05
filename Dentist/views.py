@@ -292,3 +292,23 @@ def dentist_register2(request):
     else:
         form = RegisterReceptionistForm(-1, -1, -1, -1, -1, '', -1)
     return render(request, 'dentist_register2.html', {'form': form})
+
+@login_required
+@user_passes_test(in_dentist_group, login_url='/access_denied/')
+def appointment_list(request):
+    if request.POST:
+        if request.POST['date']!='0':
+            date = request.POST['date']
+        else:
+            date = datetime.datetime.today().date()
+    else:
+        date = datetime.datetime.today().date()
+    dent = dentist.objects.get(user = request.user.id)
+    appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
+    ends = []
+    for a in appoints:
+        ends.append((datetime.datetime.combine(a.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time())
+    app = [{'appoint': t[0], 'end': t[1]} for t in zip(appoints, ends)]
+    if not request.POST or request.POST and request.POST['date']=='0':
+        date = date.strftime("%Y-%m-%d")
+    return render(request, 'appointment_list.html', {'appoints': app, 'date': date})

@@ -40,6 +40,7 @@ urlpatterns = patterns('',
     url(r'^logout/', views.logout_view),
     url(r'^patients/', views.patient_list),
     url(r'^patient_user/', views.patient_user),
+    url(r'^appointment_list/$', views.appointment_list),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     
 )

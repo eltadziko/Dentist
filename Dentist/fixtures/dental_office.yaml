@@ -1,9 +1,9 @@
 - model: Dentist.dental_office
   pk: 1
   fields:
-    name: Centrum Stomatologii Estetycznej i Rodzinnej   
+    name: Centrum Stomatologii  
     address: ul. Bolesława Krzywoustego 19b, Wrocław
-    description: Prywatna Praktyka Stomatologiczna, specjalizacja: chirurgia, zachowawcza, protetyka.
+    description: Prywatna Praktyka Stomatologiczna, specjalizacja - chirurgia, zachowawcza, protetyka.
 - model: Dentist.dental_office
   pk: 2
   fields:

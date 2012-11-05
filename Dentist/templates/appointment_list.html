@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block javascript %}
+	{{ block.super }}
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="http://jquery-ui.googlecode.com/svn/trunk/ui/i18n/jquery.ui.datepicker-pl.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
+			
+			$("#date").live('change', function() {
+				$.post('/appointment_list/',
+					{ date: $(this).val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
+			 
+			$("#today").submit(function() {
+				$.post('/appointment_list/',
+					{ date: '0',
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 }); 
+		});
+	</script>
+{% endblock %}
+
+{% block right_column %}
+<form id="today">
+Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
+</form>
+
+<table>
+<tr><th>Początek</th><th>Koniec</th><th>Pacjent</th></tr>
+	{% for a in appoints %}
+		<tr>
+			<td>{{ a.appoint.hour|time:"H:i" }}</td>
+			<td>{{ a.end|time:"H:i" }}</td>
+			<td>{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
+		</tr>
+	{% endfor %} 
+</table>
+{% endblock %}

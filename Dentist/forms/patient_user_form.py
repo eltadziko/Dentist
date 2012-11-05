@@ -30,7 +30,7 @@ class PatientUserForm(forms.Form):
 
     pat = forms.CharField(label="Nazwisko pacjenta")
     login = forms.CharField(label="Login pacjenta")
-    patients = forms.ModelChoiceField(queryset=patient.objects.all(), widget=MyRadioSelect, initial=1, label="Pacjenci")
+    patients = forms.ModelChoiceField(queryset=patient.objects.all(), widget=MyRadioSelect, empty_label=None, label="Pacjenci")
     
     def clean_login(self):
         login = self.cleaned_data.get("login")
