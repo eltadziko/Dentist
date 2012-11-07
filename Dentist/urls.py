@@ -41,6 +41,8 @@ urlpatterns = patterns('',
     url(r'^patients/', views.patient_list),
     url(r'^patient_user/', views.patient_user),
     url(r'^appointment_list/$', views.appointment_list),
+    url(r'^appointment_list2/$', views.appointment_list2),
+    url(r'^day_graphic/$', views.day_graphic),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     
 )

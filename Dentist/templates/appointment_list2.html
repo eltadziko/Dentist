@@ -11,7 +11,7 @@
 			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
 			
 			$("#date").live('change', function() {
-				$.post('/appointment_list/',
+				$.post('/appointment_list2/',
 					{ date: $(this).val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
@@ -21,7 +21,7 @@
 			 });
 			 
 			$("#today").submit(function() {
-				$.post('/appointment_list/',
+				$.post('/appointment_list2/',
 					{ date: '0',
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
@@ -31,7 +31,7 @@
 			 }); 
 			 
 			 $("#graphic").submit(function() {
-				$.post('/appointment_list2/',
+				$.post('/appointment_list/',
 					{ date: $('#date').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
@@ -49,15 +49,19 @@
 Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
 </form>
 <form id="graphic">
-<input type="submit" value="Graficzny" />
+<input type="submit" value="Tekstowy" />
 </form>
 <table>
-<tr><th>Początek</th><th>Koniec</th><th>Pacjent</th></tr>
+<tr><th>Godzina</th><th>Pacjent</th></tr>
 	{% for a in appoints %}
 		<tr>
-			<td>{{ a.appoint.hour|time:"H:i" }}</td>
-			<td>{{ a.end|time:"H:i" }}</td>
-			<td>{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
+			<td>{{ a.hour|time:"H:i" }}</td>
+			{% if a.length > 0 and a.appoint %}
+			<td rowspan="{{a.length}}">{{ a.appoint.patient.last_name }}</td>
+			{% elif a.length > 0 %}
+			{% else %}
+			<td></td>
+			{% endif %}
 		</tr>
 	{% endfor %} 
 </table>

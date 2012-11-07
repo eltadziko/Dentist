@@ -91,6 +91,7 @@
 	           	<li><a href="{% url 'views.patient_list' %}">Aktualizacja pacj.</a></li>
 	           	<li><a href="{% url 'views.patient_user' %}">Połączenie konta</a></li>
 	           	<li><a href="{% url 'views.dentist_register2' %}">Rejestracja do dentysty</a></li>
+	           	<li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
 	        {% elif user|in_group:'dentysta' %}
 	        	<li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
            	{% endif %}

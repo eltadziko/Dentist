@@ -311,4 +311,108 @@ def appointment_list(request):
     app = [{'appoint': t[0], 'end': t[1]} for t in zip(appoints, ends)]
     if not request.POST or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
+
     return render(request, 'appointment_list.html', {'appoints': app, 'date': date})
+
+@login_required
+@user_passes_test(in_dentist_group, login_url='/access_denied/')
+def appointment_list2(request):
+    if request.POST:
+        if request.POST['date']!='0':
+            date = request.POST['date']
+        else:
+            date = datetime.datetime.today().date()
+    else:
+        date = datetime.datetime.today().date()
+    dent = dentist.objects.get(user = request.user.id)
+    appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
+
+    hours = []
+    hour = dates.objects.filter(date=date) 
+
+    if appoints.count()!=0:
+        begin = datetime.datetime.combine(appoints[0].date, hour[0].begin)
+        end = datetime.datetime.combine(appoints[0].date, hour[0].end)
+        while begin<end:
+            hours.append(begin.time())
+            begin = begin + datetime.timedelta(minutes=15)
+    appoints = list(appoints)
+    app = []
+    
+    i = 0
+    for h in hours:
+        dodano = False
+        for a in appoints:
+            if h == a.hour:
+                app.append({'appoint':a, 'hour':h, 'length':a.appointment_type.length/15})
+                dodano = True
+                i = a.appointment_type.length/15
+        if not dodano:
+            i = i-1
+            app.append({'appoint':None, 'hour':h, 'length':i})
+    
+
+    if not request.POST or request.POST and request.POST['date']=='0':
+        date = date.strftime("%Y-%m-%d")
+        
+    return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours})
+
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+def day_graphic(request):
+    if request.POST:
+        if request.POST['date']!='0':
+            date = request.POST['date']
+        else:
+            date = datetime.datetime.today().date()
+    else:
+        date = datetime.datetime.today().date()
+    
+    office = 1
+    dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
+    dent = dentist.objects.filter(id__in = dents)
+    
+    hours2 = []
+    hours = dates.objects.filter(date = date).filter(dental_office = office)
+    if hours.count() > 0:
+        min = hours[0].begin
+        max = hours[0].end
+        
+        for h in hours:
+            if h.begin < min:
+                min = h.begin
+            if h.end > max:
+                max = h.end
+                
+        begin = datetime.datetime.combine(hours[0].date, min)
+        end = datetime.datetime.combine(hours[0].date, max)
+        while begin<end:
+            hours2.append(begin.time())
+            begin = begin + datetime.timedelta(minutes=15)
+        
+    
+    appoints = []
+    for d in dent:
+        appoints.append(appointment.objects.filter(date = date).filter(dentist = d).order_by('hour'))
+    
+    graphics = []    
+    for h in hours2:
+        appoint = []
+        for d in appoints:
+            i = 0
+            dodano = False
+            for a in d:
+                if a.hour == h:
+                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15})
+                    dodano = True
+                    i = a.appointment_type.length/15
+            if not dodano:
+                i = i-1
+                appoint.append({'appoint': None, 'length': i})  
+        graphics.append({'hour': h, 'appoint': appoint})  
+            
+    
+    if not request.POST or request.POST and request.POST['date']=='0':
+        date = date.strftime("%Y-%m-%d")
+
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent})
