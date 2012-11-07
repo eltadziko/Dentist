@@ -183,7 +183,7 @@ def confirm_register(request):
 def dentist_register(request):
     if request.POST:
         if 'type' in request.POST.keys():
-            typ = request.POST['type']
+            typ = int(request.POST['type'])
         else:
             typ = -1
         if 'dentist' in request.POST.keys():
@@ -202,7 +202,23 @@ def dentist_register(request):
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
                     dayend = datetime.datetime.combine(day.date, day.end)
-                    hour = datetime.datetime.combine(day.date, day.begin)
+                    if day.date == datetime.datetime.now().date():
+                        hour = datetime.datetime.now()
+                        minute = hour.time().minute
+                        h = datetime.datetime.combine(day.date, hour.time())
+                        typ2 = appointment_type.objects.get(id = typ).length
+                        if minute < 15 and typ2 == 15:
+                            h = h + datetime.timedelta(minutes=(15 - minute))
+                        elif minute < 30 and typ2 < 60:
+                            h = h + datetime.timedelta(minutes=(30 - minute))
+                        elif minute < 45 and typ2 == 15:
+                            h = h + datetime.timedelta(minutes=(45 - minute))
+                        else:
+                            h = h + datetime.timedelta(minutes=(60 - minute))
+                        h = h - datetime.timedelta(seconds = hour.time().second, microseconds = hour.time().microsecond)
+                        hour = h
+                    else:
+                        hour = datetime.datetime.combine(day.date, day.begin)
                     minutes = appointment_type.objects.get(id=typ).length
                     while hour + datetime.timedelta(minutes=minutes)<=dayend:
                         apps.append(hour)
@@ -236,7 +252,7 @@ def dentist_register(request):
 def dentist_register2(request):
     if request.POST:
         if 'type' in request.POST.keys():
-            typ = request.POST['type']
+            typ = int(request.POST['type'])
         else:
             typ = -1
             
@@ -266,7 +282,23 @@ def dentist_register2(request):
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
                     dayend = datetime.datetime.combine(day.date, day.end)
-                    hour = datetime.datetime.combine(day.date, day.begin)
+                    if day.date == datetime.datetime.now().date():
+                        hour = datetime.datetime.now()
+                        minute = hour.time().minute
+                        h = datetime.datetime.combine(day.date, hour.time())
+                        typ2 = appointment_type.objects.get(id = typ).length
+                        if minute < 15 and typ2 == 15:
+                            h = h + datetime.timedelta(minutes=(15 - minute))
+                        elif minute < 30 and typ2 < 60:
+                            h = h + datetime.timedelta(minutes=(30 - minute))
+                        elif minute < 45 and typ2 == 15:
+                            h = h + datetime.timedelta(minutes=(45 - minute))
+                        else:
+                            h = h + datetime.timedelta(minutes=(60 - minute))
+                        h = h - datetime.timedelta(seconds = hour.time().second, microseconds = hour.time().microsecond)
+                        hour = h
+                    else:
+                        hour = datetime.datetime.combine(day.date, day.begin)
                     minutes = appointment_type.objects.get(id=typ).length
                     while hour + datetime.timedelta(minutes=minutes)<=dayend:
                         apps.append(hour)

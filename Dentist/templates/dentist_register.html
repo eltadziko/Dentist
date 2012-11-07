@@ -6,7 +6,7 @@
 	<script>
 	$(document).ready(function() {
 			
-		 $("#id_office").live('change', function() {
+		 $("#id_office").change(function() {
 			$.post('/dentist_register/',
 			{ office: $(this).val(),
 			  type: $('#id_type').val(),
@@ -17,7 +17,7 @@
 		 	return false;
 		 });
 		 
-		 $("input[name=dentist]").live('change', function() {
+		 $("input[name=dentist]").change(function() {
 			$.post('/dentist_register/',
 			{ office: $('#id_office').val(),
 			  dentist: $(this).val(),
@@ -29,7 +29,7 @@
 		 	return false;
 		 });
 		 
-		 $("input[name=date]").live('change', function() {
+		 $("input[name=date]").change(function() {
 			$.post('/dentist_register/',
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
@@ -42,7 +42,7 @@
 		 	return false;
 		 });
 		 
-		 $("#id_type").live('change', function() {
+		 $("#id_type").change(function() {
 			$.post('/dentist_register/',
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
