@@ -5,16 +5,6 @@
 	
 	<script>
 	$(document).ready(function() {
-		
-		var dent = $('input[name=dentist]:checked').val();
-		if(dent == undefined) {
-			$.post('/dentist_register/',
-			{ office: $('#id_office').val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				$('#content').html(data); 
-			});
-		}
 			
 		 $("#id_office").live('change', function() {
 			$.post('/dentist_register/',

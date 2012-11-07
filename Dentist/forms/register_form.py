@@ -21,7 +21,7 @@ class RegisterForm(forms.Form):
 		super(RegisterForm, self).__init__(*args, **kwargs)
 		if office!=-1:
 			self.fields['office'].initial = office
-			dats = dates.objects.filter(dental_office=office).filter(date__gte=datetime.date.today)
+			dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
 			dents = dentist.objects.filter(id__in=dats)
 			self.fields['dentist'].queryset = dents
 			if dent!=-1:
@@ -62,7 +62,7 @@ class RegisterReceptionistForm(forms.Form):
         super(RegisterReceptionistForm, self).__init__(*args, **kwargs)
         if office!=-1:
             self.fields['office'].initial = office
-            dats = dates.objects.filter(dental_office=office).filter(date__gte=datetime.date.today)
+            dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
             dents = dentist.objects.filter(id__in=dats)
             self.fields['dentist'].queryset = dents
             if dent!=-1:

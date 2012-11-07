@@ -227,7 +227,8 @@ def dentist_register(request):
         else:
             form = RegisterForm(request.POST['office'], -1, -1, -1, typ)        
     else:
-        form = RegisterForm(-1, -1, -1, -1, -1)
+        offices = dental_office.objects.all()
+        form = RegisterForm(offices[0].id, -1, -1, -1, -1)
     return render(request, 'dentist_register.html', {'form': form})
 
 @login_required
@@ -290,7 +291,8 @@ def dentist_register2(request):
         else:
             form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients)        
     else:
-        form = RegisterReceptionistForm(-1, -1, -1, -1, -1, '', -1)
+        offices = dental_office.objects.all()
+        form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1)
     return render(request, 'dentist_register2.html', {'form': form})
 
 @login_required
@@ -360,15 +362,18 @@ def appointment_list2(request):
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 def day_graphic(request):
+    offices = dental_office.objects.all()
+    
     if request.POST:
         if request.POST['date']!='0':
             date = request.POST['date']
         else:
             date = datetime.datetime.today().date()
+        office = int(request.POST['office'])
     else:
         date = datetime.datetime.today().date()
-    
-    office = 1
+        office = offices[0].id
+        
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents)
     
@@ -415,4 +420,4 @@ def day_graphic(request):
     if not request.POST or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
 
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent})
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office})

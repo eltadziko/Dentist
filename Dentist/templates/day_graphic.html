@@ -13,6 +13,7 @@
 			$("#date").live('change', function() {
 				$.post('/day_graphic/',
 					{ date: $(this).val(),
+					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
@@ -23,9 +24,21 @@
 			$("#today").submit(function() {
 				$.post('/day_graphic/',
 					{ date: '0',
+					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
+				});
+			 	return false;
+			 });
+			 
+			 $('#office').change(function() {
+			 	$.post('/day_graphic/',
+					{ date: $('#date').val(),
+					  office: $('#office option:selected').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data);
 				});
 			 	return false;
 			 }); 
@@ -37,6 +50,15 @@
 {% block right_column %}
 <form id="today">
 Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
+Gabinet: <select id="office" name="office">
+	{% for o in offices %}
+		{% if o.id == office %}
+			<option value="{{ o.id }}" selected="selected">{{ o }}</option>
+		{% else %}
+			<option value="{{ o.id }}">{{ o }}</option>
+		{% endif %}
+	{% endfor %}
+</select>
 </form>
 <table>
 <tr>

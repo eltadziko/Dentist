@@ -5,17 +5,17 @@
 	
 	<script>
 	$(document).ready(function() {
-		var dent = $('input[name=dentist]:checked').val();
-		if(dent == undefined) {
-			$.post('/dentist_register2/',
-			{ office: $('#id_office').val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				$('#content').html(data); 
-			});
-		}
+	//	var dent = $('input[name=dentist]:checked').val();
+	//	if(dent == undefined) {
+	//		$.post('/dentist_register2/',
+	//		{ office: $('#id_office').val(),
+	//		  csrfmiddlewaretoken: '{{ csrf_token }}' },
+	//		function(data) { 
+	//			$('#content').html(data); 
+	//		});
+	//	}
 		
-		$("#id_pat").live('change', function() {
+		$("#id_pat").change(function() {
 			var dent = $('input[name=dentist]:checked').val();
 			var date = $('input[name=date]:checked').val();
 			
@@ -55,7 +55,7 @@
 		 });
 		
 			
-		 $("#id_office").live('change', function() {
+		 $("#id_office").change(function() {
 			$.post('/dentist_register2/',
 			{ office: $(this).val(),
 			  pat: $("#id_pat").val(),
@@ -68,7 +68,7 @@
 		 	return false;
 		 });
 		 
-		 $("input[name=dentist]").live('change', function() {
+		 $("input[name=dentist]").change(function() {
 			$.post('/dentist_register2/',
 			{ office: $('#id_office').val(),
 			  dentist: $(this).val(),
@@ -82,7 +82,7 @@
 		 	return false;
 		 });
 		 
-		 $("input[name=date]").live('change', function() {
+		 $("input[name=date]").change(function() {
 			$.post('/dentist_register2/',
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
@@ -97,7 +97,7 @@
 		 	return false;
 		 });
 		 
-		 $("#id_type").live('change', function() {
+		 $("#id_type").change(function() {
 			$.post('/dentist_register2/',
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
