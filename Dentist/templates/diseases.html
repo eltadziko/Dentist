@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% url load form future %}
 
-{% block content %}
+{% block right_column %}
 Moje choroby:
-<form action="/diseases/" method="post"> {% csrf_token %}
+<form action="{% url views.diseases %}" method="post"> {% csrf_token %}
 	{% for field in form %}
 		{{ field }}
 	{% endfor %}

@@ -1,6 +1,15 @@
-﻿- model: Dentist.appointment_type
+- model: Dentist.appointment_type
   pk: 1
   fields:
-    type: 
-    length: 
-
+    type: wizyta kontrolna
+    length: 15
+- model: Dentist.appointment_type
+  pk: 2
+  fields:
+    type: leczenie
+    length: 30
+- model: Dentist.appointment_type
+  pk: 3
+  fields:
+    type: zabieg
+    length: 60 

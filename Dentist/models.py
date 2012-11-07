@@ -20,7 +20,7 @@ class dentist(models.Model):
 
     def __unicode__(self):
         user = User.objects.get(id=self.user_id)
-        return u'Dentysta: %s %s' % (user.first_name, user.last_name)
+        return u'%s %s' % (self.first_name, self.last_name)
 
 class disease(models.Model):
     disease_name = models.CharField("Nazwa choroby", max_length=30)
@@ -30,7 +30,19 @@ class disease(models.Model):
         verbose_name_plural = "Choroby"
 
     def __unicode__(self):
-        return u'Choroba: %s' % (self.disease_name)
+        return u'%s' % (self.disease_name)
+    
+class insurance(models.Model):
+    short_name = models.CharField("Krótka nazwa", max_length=30)
+    name = models.CharField("Nazwa", max_length=100)
+    description = models.CharField("Opis", max_length=300, blank=True, null=True)
+    
+    class Meta:
+        verbose_name = "Ubezpieczenie"
+        verbose_name_plural = "Ubezpieczenia"
+
+    def __unicode__(self):
+        return u'%s' % (self.short_name)
     
 class patient(models.Model):
     first_name = models.CharField("Imię", max_length=30)
@@ -38,28 +50,7 @@ class patient(models.Model):
     birth_date = models.DateField("Data ur.")
     address = models.CharField("Adres", max_length=100)
     PESEL = models.CharField("PESEL", max_length=11, unique=True)
-    TYPE_CHOICES = (('praca RMUA', 'druk zgłoszenia do ubezpieczenia zdrowotnego oraz aktualnie potwierdzony raport miesięczny ZUS RMUA wydawany przez pracodawcę (nie dotyczy osób na urlopie bezpłatnym powyżej 30 dni)'),
-                    ('praca zaświadczenie', 'aktualne zaświadczenie z zakładu pracy'),
-                    ('praca legitymacja', 'legitymacja ubezpieczeniowa'),
-                    ('działalność gospodarcza', 'druk zgłoszenia do ubezpieczenia zdrowotnego oraz aktualny dowód wpłaty składki na ubezpieczenie zdrowotne'),
-                    ('KRUS', 'zaświadczenie lub legitymacja aktualnie podstemplowane przez KRUS'),
-                    ('emeryt', 'legitymacja emeryta'),
-                    ('rencista', 'legitymacja rencisty'),
-                    ('bezrobotny', 'aktualne zaświadczenie z urzędu pracy o zgłoszeniu do ubezpieczenia zdrowotnego'),
-                    ('ubezpieczony dobrowolnie', 'umowa zawarta z NFZ i dokument ZUS potwierdzający zgłoszenie do ubezpieczenia zdrowotnego wraz z aktualnym dowodem opłacenia składki zdrowotnej'),
-                    ('członek rodziny ubezp. dowód', 'dowód opłacenia składki zdrowotnej przez osobę, która zgłosiła członków rodziny doubezpieczenia zdrowotnego wraz z kserokopią zgłoszenia (druki: ZUS RMUA + druk ZUSZCNA jeżeli zgłoszenie nastąpiło po 1 lipca 2008 r. (ZUS ZCZA jeżeli zgłoszenie nastąpiło przed dniem 1 lipca 2008 r.)'),
-                    ('członek rodziny ubezp. pracodawca', 'aktualne zaświadczenie wydane przez pracodawcę o zgłoszeniu członków rodziny'),
-                    ('członek rodziny ubezp. KRUS', 'zaświadczenie z KRUS o ubezpieczeniu członków rodziny'),
-                    ('członek rodziny ubezp. legitymacja', 'legitymacja rodzinna z wpisanymi danymi członków rodziny wraz z aktualną datą i pieczątką zakładu pracy lub ZUS'),
-                    ('członek rodziny ubezp. emeryt', 'legitymacja emeryta z wpisanymi członkami rodziny podlegającymi ubezpieczeniu, potwierdzająca dokonanie zgłoszenia w dniu 1 stycznia 1999 r. lub później, wraz z aktualnym odcinkiem wypłaty świadczenia – dotyczy tylko KRUS'),
-                    ('członek rodziny ubezp. rencista', 'legitymacja rencisty z wpisanymi członkami rodziny podlegającymi ubezpieczeniu, potwierdzająca dokonanie zgłoszenia w dniu 1 stycznia 1999 r. lub później, wraz z aktualnym odcinkiem wypłaty świadczenia – dotyczy tylko KRUS'),
-                    ('członek rodziny ubezp. dzieci', 'pomiędzy 18. a 26. rokiem życia – dodatkowo należy przedstawić dokument potwierdzający fakt kontynuacji nauki – np. legitymację szkolną/studencką lub dokument potwierdzający znaczny stopień niepełnosprawności'),
-                    ('student po 26', 'zgłoszenie do ubezpieczenia przez uczelnię (druk ZUS ZZA) oraz legitymacja studencka lub doktorancka'),
-                    ('nieubezp. spełn. kryt. dochodowe', 'decyzja wójta (burmistrza, prezydenta) gminy właściwej ze względu na miejsce zamieszkania tej osoby'),
-                    ('ubezpieczony w UE EFTA', 'poświadczenie wydane przez NFZ – w przypadku zamieszkiwania na terenie RP'),
-                    ('ubezpieczony w UE EFTA2', 'karta EKUZ (lub certyfikat ją zastępujący) wydana przez inny niż Polska kraj członkowski UE lub EFTA – w przypadku pobytu na terenie RP'),
-                    ('zasiłek chorobowy', 'zaświadczenia z ZUS informujące o wypłacie zasiłku'),)
-    insurance_type = models.CharField("Rodzaj ubezpieczenia", max_length=200, choices=TYPE_CHOICES)
+    insurance_type = models.OneToOneField(insurance, verbose_name="Typ ubezpieczenia")
     insurance_number = models.CharField("Nr ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
     comment = models.TextField("Uwagi", blank=True, null=True)
@@ -71,8 +62,7 @@ class patient(models.Model):
         verbose_name_plural = "Pacjenci"
 
     def __unicode__(self):
-        user = User.objects.get(id=self.user_id)
-        return u'%s %s, %s' % (self.last_name, self.first_name, self.address)
+        return u'%s %s' % (self.first_name, self.last_name)
     
 class patient_diseases(models.Model):
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
@@ -95,9 +85,10 @@ class dental_office(models.Model):
 
     class Meta:
         verbose_name = "Gabinet"
+        verbose_name_plural = "Gabinety"
 
     def __unicode__(self):
-        return u'Gabinet: %s' % (self.name)
+        return u'%s' % (self.address)
     
 class hours(models.Model):
     week_day = models.IntegerField("Dzień tygodnia", max_length=1)
@@ -109,12 +100,13 @@ class hours(models.Model):
     
     class Meta:
         verbose_name = "Godziny"
+        verbose_name_plural = "Godziny"
 
     def __unicode__(self):
         d = dentist.objects.get(id=self.dentist_id)
         user = User.objects.get(id=d.user_id)
         do = dental_office.objects.get(id=self.dental_office_id)
-        return u'Dentysta %s %s przyjmujący w %s w godzinach %t-%t w gabinecie %s' % (user.first_name, user.last_name, self.week_day, self.begin, self.end, do.name)
+        return u'%i' % (self.week_day)
     
 class dates(models.Model):
     date = models.DateField("Data")
@@ -126,9 +118,10 @@ class dates(models.Model):
     
     class Meta:
         verbose_name = "Termin"
+        verbose_name_plural = "Terminy"
 
     def __unicode__(self):
-        return self.date
+        return u'%s' % (self.date)
     
 class appointment_type(models.Model):
     type = models.CharField("Typ", max_length=30)
@@ -136,12 +129,14 @@ class appointment_type(models.Model):
     
     class Meta:
         verbose_name = "Typ wizyty"
+        verbose_name_plural = "Typy wizyt"
     
     def __unicode__(self):
-        return self.length
+        return u'%s (%s min)' % (self.type, self.length)
     
 class appointment(models.Model):
     date = models.DateField("Data")
+    hour = models.TimeField("Godzina")
     description = models.TextField("Opis", blank=True, null=True)
     dentist = models.ForeignKey(dentist, verbose_name="Dentysta")
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
@@ -150,9 +145,10 @@ class appointment(models.Model):
     
     class Meta:
         verbose_name = "Wizyta"
+        verbose_name_plural = "Wizyty"
 
     def __unicode__(self):
-        return self.date
+        return u'%s' % (self.date)
     
 class tooth(models.Model):
     TYPE_CHOICES = (('siekacz', 'siekacz'),('kieł', 'kieł'),('przedtrzonowiec', 'przedtrzonowiec'),('trzonowiec', 'trzonowiec'))

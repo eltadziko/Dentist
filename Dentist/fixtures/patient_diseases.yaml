@@ -1,30 +1,300 @@
-﻿- model: Dentist.patient_diseases
+- model: Dentist.patient_diseases
   pk: 1
   fields:
-    patient: 
-    disease: choroby tarczycy
-    date:       
+    patient: 1
+    disease: 1
+    date: 2001-05-16       
 - model: Dentist.patient_diseases
   pk: 2
   fields:
-    patient: 
-    disease: alergia
-    date:    
+    patient: 2
+    disease: 1
+    date: 2005-05-21   
 - model: Dentist.patient_diseases
   pk: 3
   fields:
-    patient: 
-    disease: 
-    date:    
+    patient: 2
+    disease: 2
+    date: 2008-08-21    
 - model: Dentist.patient_diseases
   pk: 4
   fields:
-    patient: 
-    disease: 
-    date:    
+    patient: 3
+    disease: 5
+    date: 2007-07-17    
 - model: Dentist.patient_diseases
   pk: 5
   fields:
-    patient: 
-    disease: cukrzyca
-    date:    
+    patient: 4
+    disease: 4
+    date: 2011-07-15   
+- model: Dentist.patient_diseases
+  pk: 6
+  fields:
+    patient: 4
+    disease: 1
+    date: 2000-01-01       
+- model: Dentist.patient_diseases
+  pk: 7
+  fields:
+    patient: 5
+    disease: 6
+    date: 2012-07-21   
+- model: Dentist.patient_diseases
+  pk: 8
+  fields:
+    patient: 6
+    disease: 5
+    date: 2008-11-21   
+- model: Dentist.patient_diseases
+  pk: 9
+  fields:
+    patient: 7
+    disease: 3
+    date: 2012-02-12   
+- model: Dentist.patient_diseases
+  pk: 10
+  fields:
+    patient: 8
+    disease: 3
+    date: 2012-03-15   
+- model: Dentist.patient_diseases
+  pk: 11
+  fields:
+    patient: 8
+    disease: 1
+    date: 2003-07-21      
+- model: Dentist.patient_diseases
+  pk: 12
+  fields:
+    patient: 8
+    disease: 4
+    date: 2012-07-21   
+- model: Dentist.patient_diseases
+  pk: 13
+  fields:
+    patient: 9
+    disease: 4
+    date: 2012-06-07   
+- model: Dentist.patient_diseases
+  pk: 14
+  fields:
+    patient: 10
+    disease: 7
+    date: 2012-03-21    
+- model: Dentist.patient_diseases
+  pk: 15
+  fields:
+    patient: 11
+    disease: 3
+    date: 2011-07-16   
+- model: Dentist.patient_diseases
+  pk: 16
+  fields:
+    patient: 12
+    disease: 3
+    date: 2009-02-21      
+- model: Dentist.patient_diseases
+  pk: 17
+  fields:
+    patient: 13
+    disease: 5
+    date: 2009-05-12   
+- model: Dentist.patient_diseases
+  pk: 18
+  fields:
+    patient: 13
+    disease: 6
+    date: 2012-09-21   
+- model: Dentist.patient_diseases
+  pk: 19
+  fields:
+    patient: 13
+    disease: 2
+    date: 2011-07-31    
+- model: Dentist.patient_diseases
+  pk: 20
+  fields: 
+    patient: 14
+    disease: 3
+    date: 2012-07-12   
+- model: Dentist.patient_diseases
+  pk: 21
+  fields:
+    patient: 15
+    disease: 2
+    date: 2002-02-21        
+- model: Dentist.patient_diseases
+  pk: 22
+  fields:
+    patient: 16
+    disease: 7
+    date: 2009-07-09     
+- model: Dentist.patient_diseases
+  pk: 23
+  fields:
+    patient: 16
+    disease: 1
+    date: 2011-08-21    
+- model: Dentist.patient_diseases
+  pk: 24
+  fields:
+    patient: 17
+    disease: 4
+    date: 2012-02-11    
+- model: Dentist.patient_diseases
+  pk: 25
+  fields:
+    patient: 17
+    disease: 5
+    date: 2012-12-06    
+- model: Dentist.patient_diseases
+  pk: 26
+  fields:
+    patient: 18
+    disease: 2
+    date: 2002-05-26       
+- model: Dentist.patient_diseases
+  pk: 27
+  fields:
+    patient: 19
+    disease: 5
+    date: 2007-07-21    
+- model: Dentist.patient_diseases
+  pk: 28
+  fields:
+    patient: 20
+    disease: 7
+    date: 2012-07-21     
+- model: Dentist.patient_diseases
+  pk: 29
+  fields:
+    patient: 21
+    disease: 3
+    date: 2012-07-21     
+- model: Dentist.patient_diseases
+  pk: 30
+  fields:
+    patient: 22
+    disease: 1
+    date: 2002-02-21    
+- model: Dentist.patient_diseases
+  pk: 31
+  fields:
+    patient: 23
+    disease: 6
+    date:       
+- model: Dentist.patient_diseases
+  pk: 32
+  fields:
+    patient: 24
+    disease: 3
+    date: 2008-11-21     
+- model: Dentist.patient_diseases
+  pk: 33
+  fields:
+    patient: 25
+    disease: 4
+    date: 2012-09-21     
+- model: Dentist.patient_diseases
+  pk: 34
+  fields:
+    patient: 26
+    disease: 2
+    date: 2012-07-15     
+- model: Dentist.patient_diseases
+  pk: 35
+  fields:
+    patient: 27
+    disease: 6
+    date: 2009-07-21     
+- model: Dentist.patient_diseases
+  pk: 36
+  fields:
+    patient: 27
+    disease: 4
+    date: 2005-05-21        
+- model: Dentist.patient_diseases
+  pk: 37
+  fields:
+    patient: 28
+    disease: 1
+    date: 2012-07-21     
+- model: Dentist.patient_diseases
+  pk: 38
+  fields:
+    patient: 28
+    disease: 2
+    date: 2012-02-13    
+- model: Dentist.patient_diseases
+  pk: 39
+  fields:
+    patient: 28
+    disease: 3
+    date: 2012-02-07     
+- model: Dentist.patient_diseases
+  pk: 40
+  fields:
+    patient: 29
+    disease: 2
+    date: 2011-03-23     
+- model: Dentist.patient_diseases
+  pk: 41
+  fields:
+    patient: 30
+    disease: 5
+    date: 2011-04-14        
+- model: Dentist.patient_diseases
+  pk: 42
+  fields:
+    patient: 31
+    disease: 6
+    date: 2012-09-21     
+- model: Dentist.patient_diseases
+  pk: 43
+  fields:
+    patient: 32
+    disease: 3
+    date: 2012-07-22    
+- model: Dentist.patient_diseases
+  pk: 44
+  fields:
+    patient: 33
+    disease: 5
+    date: 2009-07-21     
+- model: Dentist.patient_diseases
+  pk: 45
+  fields:
+    patient: 34
+    disease: 3
+    date: 2012-09-27     
+- model: Dentist.patient_diseases
+  pk: 46
+  fields:
+    patient: 35
+    disease: 2
+    date: 2012-03-16        
+- model: Dentist.patient_diseases
+  pk: 47
+  fields:
+    patient: 35
+    disease: 6
+    date: 2012-07-19     
+- model: Dentist.patient_diseases
+  pk: 48
+  fields:
+    patient: 36
+    disease: 5
+    date: 2012-02-21     
+- model: Dentist.patient_diseases
+  pk: 49
+  fields:
+    patient: 37
+    disease: 2
+    date: 2012-07-29     
+- model: Dentist.patient_diseases
+  pk: 50
+  fields:
+    patient: 38
+    disease: 1
+    date: 2012-07-30     

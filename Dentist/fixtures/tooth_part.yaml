@@ -1,4 +1,4 @@
-﻿- model: Dentist.tooth_part
+- model: Dentist.tooth_part
   pk: 1
   fields:
     name: korzeń

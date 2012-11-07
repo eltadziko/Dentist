@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block right_column %}
+<form action="{% url views.register2 %}" method="post"> {% csrf_token %}
+	{% if form.non_field_errors %}
+       	<div class="error">
+		    {% for error in form.non_field_errors %}
+		        <strong>{{ error|escape }} </strong>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	{% for field in form %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }}: 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+	<p><input type="submit" value="Zarejestruj" /></p>
+</form>
+{% endblock %}

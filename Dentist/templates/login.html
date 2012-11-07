@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load url from future %}
 
-{% block content %}
+{% block right_column %}
 
 {% if form.errors %}
 <p>Podałeś błędny login i/lub hasło.</p>
@@ -23,5 +23,5 @@
 <input type="submit" value="Zaloguj" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
-<a href="/">Zapomniałeś hasła?</a>
+<a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałeś hasła?</a>
 {% endblock %}

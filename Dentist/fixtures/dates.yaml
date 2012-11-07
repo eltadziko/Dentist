@@ -1,46 +1,864 @@
 - model: Dentist.dates
   pk: 1
   fields:
-    date: 
-    begin: 
-    end: 
-    dentist: 
-    dental_office: 
-    room:
+    date: 2012-11-05
+    begin: 8:00
+    end: 9:00
+    dentist: 1
+    dental_office: 1
+    room: 1.0
 - model: Dentist.dates
   pk: 2
   fields:
-    date: 
-    begin: 
-    end: 
-    dentist: 
-    dental_office: 
-    room:
+    date: 2012-11-05
+    begin: 9:00
+    end: 10:00
+    dentist: 1
+    dental_office: 1
+    room: 1.0
 - model: Dentist.dates
   pk: 3
   fields:
-    date: 
-    begin: 
-    end: 
-    dentist: 
-    dental_office: 
-    room:
+    date: 2012-11-05
+    begin: 11:00
+    end: 12:00
+    dentist: 1
+    dental_office: 1
+    room: 1.0
 - model: Dentist.dates
   pk: 4
   fields:
-    date: 
-    begin: 
-    end: 
-    dentist: 
-    dental_office: 
-    room:
+    date: 2012-11-05
+    begin: 12:00
+    end: 13:00
+    dentist: 1
+    dental_office: 1 
+    room: 1.0
 - model: Dentist.dates
   pk: 5
   fields:
-    date: 
-    begin: 
-    end: 
-    dentist: 
-    dental_office: 
-    room:
-
+    date: 2012-11-05
+    begin: 13:00
+    end: 14:00
+    dentist: 1
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 6
+  fields:
+    date: 2012-11-05
+    begin: 14:00
+    end: 15:00
+    dentist: 1
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 7
+  fields:
+    date: 2012-11-05
+    begin: 15:00
+    end: 16:00
+    dentist: 1
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 8
+  fields:
+    date: 2012-11-05
+    begin: 12:00
+    end: 13:00
+    dentist: 2
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 9
+  fields:
+    date: 2012-11-05
+    begin: 13:00
+    end: 14:00
+    dentist: 2
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 10
+  fields:
+    date: 2012-11-05
+    begin: 14:00
+    end: 15:00
+    dentist: 2
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 11
+  fields:
+    date: 2012-11-05
+    begin: 15:00
+    end: 16:00
+    dentist: 2
+    dental_office: 2 
+    room: 2.0
+- model: Dentist.dates
+  pk: 12
+  fields:
+    date: 2012-11-05
+    begin: 16:00
+    end: 17:00
+    dentist: 2
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 13
+  fields:
+    date: 2012-11-05
+    begin: 17:00
+    end: 18:00
+    dentist: 1
+    dental_office: 1 
+    room: 1
+- model: Dentist.dates
+  pk: 14
+  fields:
+    date: 2012-11-05
+    begin: 8:00
+    end: 9:00
+    dentist: 3
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 15
+  fields:
+    date: 2012-11-05
+    begin: 9:00
+    end: 10:00
+    dentist: 3
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 16
+  fields:
+    date: 2012-11-05
+    begin: 10:00
+    end: 11:00
+    dentist: 3
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 17
+  fields:
+    date: 2012-11-05
+    begin: 11:00
+    end: 12:00
+    dentist: 3
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 18
+  fields:
+    date: 2012-11-05
+    begin: 12:00
+    end: 13:00
+    dentist: 3
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 19
+  fields:
+    date: 2012-11-05
+    begin: 13:00
+    end: 14:00
+    dentist: 3
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 20
+  fields:
+    date: 2012-11-05
+    begin: 14:00
+    end: 15:00
+    dentist: 3
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 21
+  fields:
+    date: 2012-11-05
+    begin: 15:00
+    end: 16:00
+    dentist: 3
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 22
+  fields:
+    date: 2012-11-05
+    begin: 7:30
+    end: 8:30
+    dentist: 4
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 23
+  fields:
+    date: 2012-11-05
+    begin: 8:30
+    end: 9:30
+    dentist: 4
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 24
+  fields:
+    date: 2012-11-05
+    begin: 9:30
+    end: 10:30
+    dentist: 4
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 25
+  fields:
+    date: 2012-11-05
+    begin: 10:30
+    end: 11:30
+    dentist: 4
+    dental_office: 4 
+    room: 4.0
+- model: Dentist.dates
+  pk: 26
+  fields:
+    date: 2012-11-05
+    begin: 11:30
+    end: 12:30
+    dentist: 4
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 27
+  fields:
+    date: 2012-11-05
+    begin: 12:30
+    end: 12:30
+    dentist: 4
+    dental_office: 4 
+    room: 4
+- model: Dentist.dates
+  pk: 28
+  fields:
+    date: 2012-11-06
+    begin: 8:00
+    end: 9:00
+    dentist: 5
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 29
+  fields:
+    date: 2012-11-06
+    begin: 9:00
+    end: 10:00
+    dentist: 5
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 30
+  fields:
+    date: 2012-11-06
+    begin: 11:00
+    end: 12:00
+    dentist: 5
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 31
+  fields:
+    date: 2012-11-06
+    begin: 12:00
+    end: 13:00
+    dentist: 5
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 32
+  fields:
+    date: 2012-11-06
+    begin: 13:00
+    end: 14:00
+    dentist: 5
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 33
+  fields:
+    date: 2012-11-06
+    begin: 14:00
+    end: 15:00
+    dentist: 5
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 34
+  fields:
+    date: 2012-11-06
+    begin: 15:00
+    end: 16:00
+    dentist: 5
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 35
+  fields:
+    date: 2012-11-06
+    begin: 12:00
+    end: 13:00
+    dentist: 6
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 36
+  fields:
+    date: 2012-11-06
+    begin: 13:00
+    end: 14:00
+    dentist: 6
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 37
+  fields:
+    date: 2012-11-06
+    begin: 14:00
+    end: 15:00
+    dentist: 6
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 38
+  fields:
+    date: 2012-11-06
+    begin: 15:00
+    end: 16:00
+    dentist: 6
+    dental_office: 2 
+    room: 2.0
+- model: Dentist.dates
+  pk: 39
+  fields:
+    date: 2012-11-06
+    begin: 16:00
+    end: 17:00
+    dentist: 6
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 40
+  fields:
+    date: 2012-11-06
+    begin: 17:00
+    end: 18:00
+    dentist: 6
+    dental_office: 1 
+    room: 1
+- model: Dentist.dates
+  pk: 41
+  fields:
+    date: 2012-11-06
+    begin: 8:00
+    end: 9:00
+    dentist: 7
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 42
+  fields:
+    date: 2012-11-06
+    begin: 9:00
+    end: 10:00
+    dentist: 7
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 43
+  fields:
+    date: 2012-11-06
+    begin: 10:00
+    end: 11:00
+    dentist: 7
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 44
+  fields:
+    date: 2012-11-06
+    begin: 11:00
+    end: 12:00
+    dentist: 7
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 45
+  fields:
+    date: 2012-11-06
+    begin: 12:00
+    end: 13:00
+    dentist: 7
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 46
+  fields:
+    date: 2012-11-06
+    begin: 13:00
+    end: 14:00
+    dentist: 8
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 47
+  fields:
+    date: 2012-11-06
+    begin: 14:00
+    end: 15:00
+    dentist: 8
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 48
+  fields:
+    date: 2012-11-06
+    begin: 15:00
+    end: 16:00
+    dentist: 8
+    dental_office: 3 
+    room: 3.0   
+- model: Dentist.dates
+  pk: 49
+  fields:
+    date: 2012-11-07
+    begin: 8:00
+    end: 9:00
+    dentist: 9
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 50
+  fields:
+    date: 2012-11-07
+    begin: 9:00
+    end: 10:00
+    dentist: 9
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 51
+  fields:
+    date: 2012-11-07
+    begin: 11:00
+    end: 12:00
+    dentist: 9
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 52
+  fields:
+    date: 2012-11-07
+    begin: 12:00
+    end: 13:00
+    dentist: 9
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 53
+  fields:
+    date: 2012-11-07
+    begin: 13:00
+    end: 14:00
+    dentist: 9
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 54
+  fields:
+    date: 2012-11-07
+    begin: 14:00
+    end: 15:00
+    dentist: 9
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 55
+  fields:
+    date: 2012-11-07
+    begin: 15:00
+    end: 16:00
+    dentist: 9
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 56
+  fields:
+    date: 2012-11-07
+    begin: 12:00
+    end: 13:00
+    dentist: 10
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 57
+  fields:
+    date: 2012-11-07
+    begin: 13:00
+    end: 14:00
+    dentist: 10
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 58
+  fields:
+    date: 2012-11-07
+    begin: 14:00
+    end: 15:00
+    dentist: 10
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 59
+  fields:
+    date: 2012-11-07
+    begin: 15:00
+    end: 16:00
+    dentist: 10
+    dental_office: 2 
+    room: 2.0
+- model: Dentist.dates
+  pk: 60
+  fields:
+    date: 2012-11-07
+    begin: 16:00
+    end: 17:00
+    dentist: 10
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 61
+  fields:
+    date: 2012-11-07
+    begin: 17:00
+    end: 18:00
+    dentist: 10
+    dental_office: 1 
+    room: 1
+- model: Dentist.dates
+  pk: 62
+  fields:
+    date: 2012-11-07
+    begin: 8:00
+    end: 9:00
+    dentist: 11
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 63
+  fields:
+    date: 2012-11-07
+    begin: 9:00
+    end: 10:00
+    dentist: 11
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 64
+  fields:
+    date: 2012-11-07
+    begin: 10:00
+    end: 11:00
+    dentist: 11
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 65
+  fields:
+    date: 2012-11-07
+    begin: 11:00
+    end: 12:00
+    dentist: 11
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 66
+  fields:
+    date: 2012-11-07
+    begin: 12:00
+    end: 13:00
+    dentist: 11
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 67
+  fields:
+    date: 2012-11-07
+    begin: 13:00
+    end: 14:00
+    dentist: 11
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 68
+  fields:
+    date: 2012-11-07
+    begin: 14:00
+    end: 15:00
+    dentist: 11
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 69
+  fields:
+    date: 2012-11-07
+    begin: 15:00
+    end: 16:00
+    dentist: 11
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 70
+  fields:
+    date: 2012-11-07
+    begin: 7:30
+    end: 8:30
+    dentist: 12
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 71
+  fields:
+    date: 2012-11-07
+    begin: 8:30
+    end: 9:30
+    dentist: 12
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 72
+  fields:
+    date: 2012-11-07
+    begin: 9:30
+    end: 10:30
+    dentist: 12
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 73
+  fields:
+    date: 2012-11-07
+    begin: 10:30
+    end: 11:30
+    dentist: 12
+    dental_office: 4 
+    room: 4.0
+- model: Dentist.dates
+  pk: 74
+  fields:
+    date: 2012-11-07
+    begin: 11:30
+    end: 12:30
+    dentist: 12
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 75
+  fields:
+    date: 2012-11-07
+    begin: 12:30
+    end: 12:30
+    dentist: 12
+    dental_office: 4 
+    room: 4.0
+- model: Dentist.dates
+  pk: 76
+  fields:
+    date: 2012-11-08
+    begin: 8:00
+    end: 9:00
+    dentist: 13
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 77
+  fields:
+    date: 2012-11-08
+    begin: 9:00
+    end: 10:00
+    dentist: 13
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 78
+  fields:
+    date: 2012-11-08
+    begin: 11:00
+    end: 12:00
+    dentist: 13
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 79
+  fields:
+    date: 2012-11-08
+    begin: 12:00
+    end: 13:00
+    dentist: 13
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 80
+  fields:
+    date: 2012-11-08
+    begin: 13:00
+    end: 14:00
+    dentist: 13
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 81
+  fields:
+    date: 2012-11-08
+    begin: 14:00
+    end: 15:00
+    dentist: 13
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 82
+  fields:
+    date: 2012-11-08
+    begin: 15:00
+    end: 16:00
+    dentist: 13
+    dental_office: 1 
+    room: 1.0
+- model: Dentist.dates
+  pk: 83
+  fields:
+    date: 2012-11-08
+    begin: 12:00
+    end: 13:00
+    dentist: 14
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 84
+  fields:
+    date: 2012-11-08
+    begin: 13:00
+    end: 14:00
+    dentist: 14
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 85
+  fields:
+    date: 2012-11-08
+    begin: 14:00
+    end: 15:00
+    dentist: 14
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 86
+  fields:
+    date: 2012-11-08
+    begin: 15:00
+    end: 16:00
+    dentist: 14
+    dental_office: 2 
+    room: 2.0
+- model: Dentist.dates
+  pk: 87
+  fields:
+    date: 2012-11-08
+    begin: 16:00
+    end: 17:00
+    dentist: 14
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 88
+  fields:
+    date: 2012-11-08
+    begin: 17:00
+    end: 18:00
+    dentist: 14
+    dental_office: 1 
+    room: 1
+- model: Dentist.dates
+  pk: 89
+  fields:
+    date: 2012-11-08
+    begin: 8:00
+    end: 9:00
+    dentist: 15
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 90
+  fields:
+    date: 2012-11-08
+    begin: 9:00
+    end: 10:00
+    dentist: 15
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 91
+  fields:
+    date: 2012-11-08
+    begin: 10:00
+    end: 11:00
+    dentist: 15
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 92
+  fields:
+    date: 2012-11-08
+    begin: 11:00
+    end: 12:00
+    dentist: 15
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 93
+  fields:
+    date: 2012-11-08
+    begin: 12:00
+    end: 13:00
+    dentist: 15
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 94
+  fields:
+    date: 2012-11-08
+    begin: 13:00
+    end: 14:00
+    dentist: 15
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 95
+  fields:
+    date: 2012-11-08
+    begin: 14:00
+    end: 15:00
+    dentist: 15
+    dental_office: 3 
+    room: 3.0
+- model: Dentist.dates
+  pk: 96
+  fields:
+    date: 2012-11-08
+    begin: 15:00
+    end: 16:00
+    dentist: 15
+    dental_office: 3 
+    room: 3.0      

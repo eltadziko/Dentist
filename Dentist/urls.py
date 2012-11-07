@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
 from Dentist import views
 from forms.set_password_form import SetPasswordForm
+from django.views.static import *
+from django.conf import settings
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -17,7 +19,13 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', views.index),
+    url(r'^index', views.index),
     url(r'^register/', views.register),
+    url(r'^register2/', views.register2),
+    url(r'^dentist_register/', views.dentist_register),
+    url(r'^dentist_register2/', views.dentist_register2),
+    url(r'^confirm_register/', views.confirm_register),
     url(r'^register_patient/', views.register_by_receptionist),
     url(r'^diseases/', views.diseases),
     url(r'^profile/$', views.update_profile),
@@ -32,5 +40,9 @@ urlpatterns = patterns('',
     url(r'^logout/', views.logout_view),
     url(r'^patients/', views.patient_list),
     url(r'^patient_user/', views.patient_user),
+    url(r'^appointment_list/$', views.appointment_list),
+    url(r'^appointment_list2/$', views.appointment_list2),
+    url(r'^day_graphic/$', views.day_graphic),
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     
 )

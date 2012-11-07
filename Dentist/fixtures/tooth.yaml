@@ -111,7 +111,6 @@
     jaw: górna
     side: lewa
     tooth_number: 28
-    
 - model: Dentist.tooth
   pk: 17
   fields:
@@ -168,7 +167,6 @@
     jaw: dolna
     side: lewa
     tooth_number: 38
-    
 - model: Dentist.tooth
   pk: 25
   fields:

@@ -1,110 +1,532 @@
-﻿- model: Dentist.patient
+- model: Dentist.patient
   pk: 1
   fields:
-    birth_date: 23.02.1990
-    address: Zawiszy Czarnego 23/34
-    PESEL: 90022303723
-    insurance_number:
+    first_name: Katarzyna 
+    last_name: Nielepkowicz
+    birth_date: 1958-09-08
+    address: ul. Balonowa 23/4, 54-129 Wrocław
+    PESEL: 58090869737
+    insurance_type: praca RMUA
+    insurance_number: 
     phone: 665238987
     comment: 
-    user: pacjent
-    diseases: alergia, ciąża
+    user: 22
+    diseases: [1]
 - model: Dentist.patient
   pk: 2
   fields:
-    birth_date: 13.03.1993
-    address: Długa 117
-    PESEL: 93031367237
-    insurance_number: NFZ Wrocław WF1
+    first_name: Michał
+    last_name: Iwanicki
+    birth_date: 1989-10-08
+    address: Długa 117, 53-633 Wrocław
+    PESEL: 89100837543
+    insurance_type: praca zaświadczenie
+    insurance_number: 
     phone: 667548988
-    comment: 
-    user: pacjent 
-    diseases: nadciśnienie, choroby serca
+    comment:
+    user: 23
+    diseases: [1, 2] 
 - model: Dentist.patient
   pk: 3
   fields:
-    birth_date: 01.01.2001
-    address: Borowska 74/07
-    PESEL: 01010123456
-    insurance_number:
-    phone: 534234876
-    comment: 
-    user: pacjent
-    diseases: choroby serca
+    first_name: Jacek
+    last_name: Czapiński
+    birth_date: 1974-08-09
+    address: Borowska 74/07, 50-532 Wrocław
+    PESEL: 74080965395
+    insurance_type: praca legitymacja
+    insurance_number: 
+    comment:
+    phone: 534234876 
+    user: 24
+    diseases: [5]
 - model: Dentist.patient
   pk: 4
   fields:
-    birth_date: 05.12.1991
-    address: Piękna 20/68
-    PESEL: 91120587876
-    insurance_number:
+    first_name: Grzegorz
+    last_name: Gawryś
+    birth_date: 1972-10-08
+    address: Piękna 20/68, 50-505 Wrocław
+    PESEL: 72100852638
+    insurance_type: działalność gospodarcza
+    insurance_number: 
     phone: 788345234
-    comment: 
-    user: pacjent 
-    diseases: cukrzyca
+    comment:
+    user: 25
+    diseases: [4, 1]
 - model: Dentist.patient
   pk: 5
   fields:
-    birth_date: 03.10.1986
-    address: Zaporowska 57/19
-    PESEL: 86100323876
-    insurance_number:
-    phone: 567342802
-    comment: 
-    user: pacjent 
-    diseases: epilepsja
+    first_name: Grzegorz
+    last_name: Myszczyszyn
+    birth_date: 1949-06-22
+    address: Zaporowska 57/19, 53-519 Wrocław
+    PESEL: 49062252349
+    insurance_type: KRUS
+    insurance_number: 
+    phone: 567342802 
+    comment:
+    user: 26 
+    diseases: [6]
 - model: Dentist.patient
-  pk: 5
+  pk: 6
   fields:
-    birth_date: 09.02.1973
-    address: Wittiga 9/1024
-    PESEL: 73020923987
-    insurance_number:
+    first_name: Beata 
+    last_name:  Wiśnicka  
+    birth_date: 1955-05-09
+    address: Wittiga 9/1024, 51-628 Wrocław;
+    PESEL: 55050973934
+    insurance_type: emeryt
+    insurance_number: 
     phone: 765987234
-    comment: 
-    user: pacjent 
-    diseases: alergia
+    comment:
+    user: 27
+    diseases: [5]
 - model: Dentist.patient
   pk: 7
   fields:
-    birth_date: 17.08.1951
-    address: Grunwaldzka 73/5
-    PESEL: 51081798765
-    insurance_number:
+    first_name: Marek 
+    last_name: Pudełko
+    birth_date: 1963-10-26
+    address: Grunwaldzka 73/5, 50-357 Wrocław
+    PESEL: 63102612461
+    insurance_type: rencista
+    insurance_number: 
     phone: 534876091
-    comment: 
-    user: pacjent 
-    diseases: nadciśnienie
+    comment:
+    user: 28
+    diseases: [3]
 - model: Dentist.patient
   pk: 8
   fields:
-    birth_date: 02.02.2002
-    address: Wołowska 23
-    PESEL: 02020276543
-    insurance_number:
-    phone: 543290001
-    comment: 
-    user: pacjent 
-    diseases: AIDS
+    first_name: Zbigniew 
+    last_name: Małachowski 
+    birth_date: 1954-06-10
+    address: Wołowska 23, 51-116 Wrocław
+    PESEL: 54061073231
+    insurance_type: bezrobotny
+    insurance_number: 
+    phone: 543290001 
+    comment:
+    user: 29
+    diseases: [3, 1, 4]
 - model: Dentist.patient
   pk: 9
   fields:
-    birth_date: 11.05.1985
-    address: Zamojska 34/7
-    PESEL: 85051198754
-    insurance_number:
+    first_name: Ewa 
+    last_name: Nojek
+    birth_date: 1990-01-25
+    address: Zamojska 34/7, 54-102 Wrocław
+	PESEL: 90012542856
+    insurance_type: ubezpieczony dobrowolnie
+    insurance_number: 
     phone: 537899001
-    comment: 
-    user: pacjent 
-    diseases: choroby tarczycy
+    comment:
+    user: 30
+    diseases: [4]
 - model: Dentist.patient
   pk: 10
   fields:
-    birth_date: 31.01.1967
-    address: Dworcowa 15/30
-    PESEL: 67013187643
-    insurance_number:
+    first_name: Alina 
+    last_name: Strzałkowska
+    birth_date: 1996-08-10
+    address: Dworcowa 15/30, 50-456 Wrocław
+    PESEL: 96081079321
+    insurance_type: członek rodziny ubezp. dowód
+    insurance_number: 
     phone: 654876564
-    comment: 
-    user: pacjent 
-    diseases: cukrzyca, choroby tarczycy, nadciśnienie 
+    comment:
+    user: 31
+    diseases: [7]
+﻿- model: Dentist.patient
+  pk: 11
+  fields:
+    first_name: Łukasz 
+    last_name: Garbień 
+    birth_date: 1942-01-18
+    address: Zawiszy Czarnego 23/34, 52-241 Wrocław
+    PESEL: 42011867988
+    insurance_type: członek rodziny ubezp. pracodawca
+    insurance_number: 
+    phone: 665238987 
+    comment:
+    user: 32
+    diseases: [3]
+- model: Dentist.patient
+  pk: 12
+  fields:
+    first_name: Zbigniew 
+    last_name: Łukaszewski
+    birth_date: 1938-11-01
+    address: Zaułek Rogoziński 23/7, 51-116 Wrocław 
+    PESEL: 38110145841
+    insurance_type: członek rodziny ubezp. KRUS
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 33
+    diseases: [3]
+- model: Dentist.patient
+  pk: 13
+  fields:
+    first_name: Maciej 
+    last_name: Bagłaj
+    birth_date: 1951-04-01
+    address: Forsycjowa 2/54, 51-253 Wrocław
+    PESEL: 51040168115
+    insurance_type: członek rodziny ubezp. legitymacja  
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 34
+    diseases: [5, 6, 2]
+- model: Dentist.patient
+  pk: 14
+  fields:
+    first_name: Mateusz 
+    last_name: Tylko 
+    birth_date: 1961-06-13
+    address: Bardzka 11/3, 50-516 Wrocław
+    PESEL: 61061333917
+    insurance_type: członek rodziny ubezp. emeryt
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 35
+    diseases: [3]
+- model: Dentist.patient
+  pk: 15
+  fields:
+    first_name: Ewa 
+    last_name: Struś
+    birth_date: 1960-02-18
+    address: Batorego Stefana 23/78, 54-007 Wrocław   
+    PESEL: 60021824711
+    insurance_type: członek rodziny ubezp. rencista
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 36
+    diseases: [2]
+- model: Dentist.patient
+  pk: 16
+  fields:
+    first_name: Łukasz 
+    last_name: Duda
+    birth_date: 1976-12-03
+    address: Ługowa  4, 51-180 Wrocław
+    PESEL: 76120329976
+    insurance_type: członek rodziny ubezp. rencista
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 37
+    diseases: [7, 1]
+- model: Dentist.patient
+  pk: 17
+  fields:
+    first_name: Małgorzata 
+    last_name: Gajewczyk  
+    birth_date: 1956-02-22
+    address: Gazowa 56/33, 50-513 Wrocław
+    PESEL: 56022249873
+    insurance_type: student po 26
+    insurance_number: 
+    phone: 674234876
+    comment:
+    user: 38
+    diseases: [4, 5]
+- model: Dentist.patient
+  pk: 18
+  fields:
+    first_name: Grzegorz 
+    last_name: Rajca  
+    birth_date: 1955-06-12
+    address: Papiernicza 56/3, 54-134 Wrocław
+    PESEL: 55061252792
+    insurance_type: nieubezp. spełn. kryt. dochodowe
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 39
+    diseases: [2]
+- model: Dentist.patient
+  pk: 19
+  fields:
+    first_name: Dariusz 
+    last_name: Kraśnicki 
+    birth_date: 1983-12-07
+    address: Pilata Stanisława 22, 51-605 Wrocław
+    PESEL: 83120763329
+    insurance_type: ubezpieczony w UE EFTA2
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 40
+    diseases: [5]
+- model: Dentist.patient
+  pk: 20
+  fields:
+    first_name: Janusz 
+    last_name: Bieżyński 
+    birth_date: 1968-11-20
+    address: Zapotocze 87, 51-180 Wrocław
+    PESEL: 68112087676
+    insurance_type: praca RMUA
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 41
+    diseases: [7]
+- model: Dentist.patient
+  pk: 21
+  fields:
+    first_name: Lesław 
+    last_name: Zub 
+    birth_date: 1954-09-18
+    address:  Żołnierska  55, 53-014 Wrocław
+    PESEL: 54091839357
+    insurance_type: praca zaświadczenie
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 42
+    diseases: [3]
+- model: Dentist.patient
+  pk: 22
+  fields:
+    first_name: Jacek 
+    last_name: Jarliński 
+    birth_date: 1941-01-15
+    address:  Malborska 9/45, 51-351 Wrocław
+    PESEL: 41011564413
+    insurance_type: praca legitymacja
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 43
+    diseases: [1]
+- model: Dentist.patient
+  pk: 23
+  fields:
+    first_name: Radosław 
+    last_name: Jadach 
+    birth_date: 1978-06-21
+    address: Kocha Roberta 45/7, 51-112 Wrocław
+    PESEL: 78062158287
+    insurance_type: działalność gospodarcza
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 44
+    diseases: [6]
+- model: Dentist.patient
+  pk: 24
+  fields:
+    first_name: Daniel 
+    last_name: Papliński
+    birth_date: 1992-12-02
+    address: Karpacka 1, 54-617 Wrocław
+    PESEL: 92120234512
+    insurance_type: KRUS
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 45
+    diseases: [3]
+- model: Dentist.patient
+  pk: 25
+  fields:
+    first_name: Marita 
+    last_name: Nittner
+    birth_date: 1986-02-21
+    address: Kłodzka 6/10, 50-536 Wrocław
+    PESEL: 86022186339
+    insurance_type: emeryt
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 46
+    diseases: [4]
+- model: Dentist.patient
+  pk: 26
+  fields:
+    first_name: Adam 
+    last_name: Domanasiewicz 
+    birth_date: 1975-12-01
+    address: Darwina Karola 9/87, 52-415 Wrocław
+    PESEL: 75120123597
+    insurance_type: rencista
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 47
+    diseases: [2]
+- model: Dentist.patient
+  pk: 27
+  fields:
+    first_name: Bogdan 
+    last_name: Czapiga 
+    birth_date: 1952-08-04
+    address: Husarska 2/34, 53-004 Wrocław
+    PESEL: 52080497481
+    insurance_type: bezrobotny
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 48
+    diseases: [4, 6]
+- model: Dentist.patient
+  pk: 28
+  fields:
+    first_name: Jan 
+    last_name: Godziński
+    birth_date: 1968-11-22
+    address: Janowska 2, 54-067 Wrocław
+    PESEL: 68112278982
+    insurance_type: ubezpieczony dobrowolnie
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 49
+    diseases: [1, 2, 3]
+- model: Dentist.patient
+  pk: 29
+  fields:
+    first_name: Marek 
+    last_name: Węgrzyn 
+    birth_date: 1974-07-21
+    address: Gubińska 34, 54-434 Wrocław
+    PESEL: 74072133982
+    insurance_type: członek rodziny ubezp. dowód
+    insurance_number: 
+    phone: 534234876 
+    comment:
+    user: 50
+    diseases: [2]
+- model: Dentist.patient
+  pk: 30
+  fields:
+    first_name: Jarosław 
+    last_name: Gruszka
+    birth_date: 1953-12-28
+    address: Komorowska 65, 54-436 Wrocław
+    PESEL: 53122862517
+    insurance_type: członek rodziny ubezp. pracodawca
+    insurance_number: 
+    comment:
+    phone: 534234876
+    user: 51
+    diseases: [5]
+- model: Dentist.patient
+  pk: 31
+  fields:
+    first_name: Piotr 
+    last_name: Paluch 
+    birth_date: 1966-05-20.
+    address: Lazurowa 5/9, 54-044 Wrocław
+    PESEL: 66052095728
+    insurance_type: członek rodziny ubezp. KRUS
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 52
+    diseases: [6]
+- model: Dentist.patient
+  pk: 32
+  fields:
+    first_name: Dariusz 
+    last_name: Niedzielski
+    birth_date: 1944-04-16
+    address: Oboźna 54, 52-244 Wrocław
+    PESEL: 44041643455
+    insurance_type: członek rodziny ubezp. legitymacja
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 53
+    diseases: [3]
+- model: Dentist.patient
+  pk: 33
+  fields:
+    first_name: Tomasz 
+    last_name: Zatoński
+    birth_date: 1940-12-19
+    address: Kiełczowska 55/54, 51-316 Wrocław
+    PESEL: 40121987172
+    insurance_type: członek rodziny ubezp. emeryt
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 54
+    diseases: [5]
+- model: Dentist.patient
+  pk: 34
+  fields:
+    first_name: Grzegorz 
+    last_name: Dobaczewski
+    birth_date: 1963-06-18
+    address: Hodowlana 23/54, 54-109 Wrocław
+    PESEL: 63061866956
+    insurance_type: członek rodziny ubezp. rencista
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 55
+    diseases: [3]
+- model: Dentist.patient
+  pk: 35
+  fields:
+    first_name: Maciej 
+    last_name: Krzeszewski  
+    birth_date: 1961-12-22
+    address:  Imbirowa 3/6, 54-066 Wrocław
+    PESEL: 61122293923
+    insurance_type: członek rodziny ubezp. dzieci
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 56
+    diseases: [2, 6] 
+- model: Dentist.patient
+  pk: 36
+  fields:
+    first_name: Marcin 
+    last_name: Jędryka 
+    birth_date: 1956-09-07
+    address: Mazepy 76, 51-347 Wrocław
+    PESEL: 56090722331
+    insurance_type: student po 26
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 57
+    diseases: [5]
+- model: Dentist.patient
+  pk: 37
+  fields:
+    first_name: Jarosław 
+    last_name: Bukwald 
+    birth_date: 1940-06-20
+    address: Paryska 34/54, 51-215 Wrocław
+    PESEL: 40062055253
+    insurance_type: nieubezp. spełn. kryt. dochodowe
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 58
+    diseases: [2]
+- model: Dentist.patient
+  pk: 38
+  fields:
+    first_name: Joanna 
+    last_name: Michniewicz 
+    birth_date: 1991-03-26
+    address: Sołtysia 23/6, 53-652 Wrocław
+    PESEL: 91032643389
+    insurance_type: ubezpieczony w UE EFTA2
+    insurance_number: 
+    phone: 534234876
+    comment:
+    user: 59
+    diseases: [1]

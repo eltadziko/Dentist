@@ -19,8 +19,8 @@ class DentistAdmin(admin.ModelAdmin):
     show_user_url.allow_tags = True
     show_user_url.short_description = u"Użytkownik"
     
-    list_display = ('user_first_name', 'user_last_name', 'title', 'description', 'phone', 'show_user_url')   
-    list_display_links = ('user_first_name', 'user_last_name', 'title')
+    list_display = ('first_name', 'last_name', 'title', 'description', 'phone', 'show_user_url')   
+    list_display_links = ('first_name', 'last_name', 'title')
     
 
 class PatientAdmin(admin.ModelAdmin):
@@ -37,17 +37,40 @@ class PatientAdmin(admin.ModelAdmin):
     show_user_url.allow_tags = True
     show_user_url.short_description = u"Użytkownik"
     
-    list_display = ('user_first_name', 'user_last_name', 'PESEL', 'birth_date', 'address',
+    list_display = ('first_name', 'last_name', 'PESEL', 'birth_date', 'address',
                      'insurance_number', 'phone', 'comment', 'show_user_url')
-    list_display_links = ('user_first_name', 'user_last_name', 'PESEL',)
+    list_display_links = ('first_name', 'last_name', 'PESEL',)
    
 class DiseaseAdmin(admin.ModelAdmin):
     def show_disease_name(self, obj):
         return '%s' % (obj.disease_name)
     
     list_display = ('show_disease_name',)
+    
+class DentalOfficeAdmin(admin.ModelAdmin):
+    list_display = ('address', 'name', 'description')
+     
+class HoursAdmin(admin.ModelAdmin):    
+    list_display = ('week_day', 'begin', 'end', 'dentist', 'dental_office', 'room')
+    #list_display_links = ('week_day', 'dentist', 'dental_office',)
+
+class AppointmentTypeAdmin(admin.ModelAdmin):    
+    list_display = ('type', 'length')
+    
+class DatesAdmin(admin.ModelAdmin):    
+    list_display = ('date', 'begin', 'end', 'dentist', 'dental_office', 'room')
+    #list_display_links = ('date', 'dentist', 'dental_office',)
+
+class AppointmentAdmin(admin.ModelAdmin):    
+    list_display = ('date', 'hour', 'description', 'dentist', 'patient', 'dental_office', 'appointment_type')
+    #list_display_links = ('date', 'dentist', 'patient', 'dental_office', 'appointment_type')
        
 # admin.site.register(User, UsAdmin)
 admin.site.register(dentist, DentistAdmin)
 admin.site.register(patient, PatientAdmin)
 admin.site.register(disease, DiseaseAdmin)
+admin.site.register(dental_office, DentalOfficeAdmin)
+admin.site.register(hours, HoursAdmin)
+admin.site.register(appointment_type, AppointmentTypeAdmin)
+admin.site.register(dates, DatesAdmin)
+admin.site.register(appointment, AppointmentAdmin)

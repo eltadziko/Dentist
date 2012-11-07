@@ -1,17 +1,120 @@
-<html>
+{% load url from future %}
+{% load group_filter %}
+
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-{% block css %}
-{% endblock %}
-
-{% block js %}
-{% endblock %}
-
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>
 {% block title %}
+	Stomatologia Coldix
 {% endblock %}
+</title>
+
+{% block css %}
+	<link href="{{ MEDIA_URL }}/css/style.css" rel="stylesheet" media="all" type="text/css" />
+{% endblock %}
+{% block javascript %}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+{%endblock %}
+<link rel="shortcut icon" href="{{ MEDIA_URL }}/img/favicon.ico" type="image/x-icon" />
+
 </head>
 
-<body>
-{% block content %}
-{% endblock %}
+<body> 
+
+<div id="content">
+	{% block content %}
+  <div id="belka_lewa">
+  </div>
+  <div id="column_content">
+    <div id="belka_gora">
+      <div id="log_box">
+      {% if user.is_authenticated %}
+      	<div id="tekst_log">Witaj <a href="{% url 'views.update_profile' %}">{{ user.username }}</a>.</div>
+      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
+      	<div id="tekst_log"><a href="{% url 'views.logout_view' %}">Wyloguj</a>.</div>
+      {% else %}
+      	<div id="tekst_log">Witaj <a href="#">Gość</a>.</div>
+      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
+     	<div id="tekst_log"><a href="{% url 'django.contrib.auth.views.login' %}">Zaloguj się </a>lub <a href="{% url 'views.register' %}">Zarejestruj</a>, jeśli nie posiadasz konta.</div>
+      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
+      	<div id="tekst_log"><a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałem hasła</a>.</div>
+      {% endif %}
+      </div>
+    </div>
+    
+    <div id="baner">
+      <img src="{{ MEDIA_URL }}/img/logo.png"/>
+      {% if not user.is_authenticated %}
+	      <div id="form_log">
+		  	<form action="{% url 'django.contrib.auth.views.login' %}" method="POST">
+		    	{% csrf_token %}
+		      	<input name="username" value="Login" onfocus="if(this.value=='' || this.value == 'Login') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="text">
+		        <input name="password" value="Hasło" onfocus="if(this.value=='' || this.value == 'Hasło') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="password">
+		        <input id="send_log" name="send_log" value=">>" type="submit"/>
+		    </form>
+	      </div>
+      {% endif %}
+    </div>
+    
+    <div id=menu_wrap>
+      <div id="menu">
+        <ul>
+           <li><a href="{% url 'views.index' %}">HOME</a></li>
+           <li><a href="onas.html">O NAS</a></li>
+           <li><a href="oferta.html">OFERTA</a></li>
+           <li><a href="{% url 'views.dentist_register' %}">REJESTRACJA</a></li>
+           <li><a href="kontakt.html">KONTAKT</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="cien_menu">
+    </div>
+    <div style="clear:both;"></div>
+    <div id="body_page">
+      <div id="left_column">
+      {% block left_column %}
+      {% if user.is_authenticated %}
+      <div id="submenu">
+        <ul>
+        	
+        	{% if user|in_group:'pacjent' %}
+	           	<li><a href="{% url 'views.update_profile' %}">Profil</a></li>
+	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+	           	<li><a href="{% url 'views.diseases' %}">Choroby</a></li>
+	           	<li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
+           	{% elif user|in_group:'rejestrator' %}
+	           	<li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
+	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+	           	<li><a href="{% url 'views.patient_list' %}">Aktualizacja pacj.</a></li>
+	           	<li><a href="{% url 'views.patient_user' %}">Połączenie konta</a></li>
+	           	<li><a href="{% url 'views.dentist_register2' %}">Rejestracja do dentysty</a></li>
+	           	<li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
+	        {% elif user|in_group:'dentysta' %}
+	        	<li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
+           	{% endif %}
+           
+        </ul>
+      </div>
+      {% endif %}
+      {% endblock %}
+      </div>
+      <div id="right_column">
+      {% block right_column %}
+      {% endblock %}
+      </div>
+    </div>
+    
+    <div id="footer">
+    <p>Copyright © 2012 ZPI. Wszystkie prawa zastrzeżone.</p>
+    </div>
+  </div>
+  <div id="belka_prawa">    
+  </div>
+  	{% endblock %}
+</div>
+
 </body>
 </html>
