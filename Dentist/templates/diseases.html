@@ -2,11 +2,13 @@
 {% url load form future %}
 
 {% block right_column %}
+<div id="forms">
 Moje choroby:
 <form action="{% url views.diseases %}" method="post"> {% csrf_token %}
 	{% for field in form %}
 		{{ field }}
 	{% endfor %}
-	<p><input type="submit" value="Zapisz" /></p>
+	<p><input id="send_log_big" type="submit" value="Zapisz" /></p>
 </form>
+</div>
 {% endblock %}

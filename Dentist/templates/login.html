@@ -4,6 +4,7 @@
 {% block right_column %}
 
 {% if form.errors %}
+<div id="forms">
 <p>Podałeś błędny login i/lub hasło.</p>
 {% endif %}
 
@@ -20,8 +21,9 @@
 </tr>
 </table>
 
-<input type="submit" value="Zaloguj" />
+<input id="send_log_big" type="submit" value="Zaloguj" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
 <a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałeś hasła?</a>
+</div>
 {% endblock %}

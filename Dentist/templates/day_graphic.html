@@ -4,7 +4,7 @@
 	{{ block.super }}
 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-	<script src="http://jquery-ui.googlecode.com/svn/trunk/ui/i18n/jquery.ui.datepicker-pl.js"></script>
+	<script src="{{ MEDIA_URL }}/js/datepicker.js" ></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
@@ -48,6 +48,7 @@
 {% endblock %}
 
 {% block right_column %}
+<div id="forms">
 <form id="today">
 Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
 Gabinet: <select id="office" name="office">
@@ -81,4 +82,5 @@ Gabinet: <select id="office" name="office">
 		</tr>
 	{% endfor %} 
 </table>
+</div>
 {% endblock %}

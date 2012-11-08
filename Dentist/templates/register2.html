@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block right_column %}
+<div id="forms">
 <form action="{% url views.register2 %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
@@ -24,6 +25,7 @@
 	    </div>
     {% endfor %}
     
-	<p><input type="submit" value="Zarejestruj" /></p>
+	<p><input id="send_log_big" type="submit" value="Zarejestruj" /></p>
 </form>
+</div>
 {% endblock %}
