@@ -46,7 +46,7 @@
     </div>
     
     <div id="baner">
-      <img src="{{ MEDIA_URL }}/img/logo.png"/>
+      <a href="{% url 'views.index' %}"><img src="{{ MEDIA_URL }}/img/logo.png"/></a>
       {% if not user.is_authenticated %}
 	      <div id="form_log">
 		  	<form action="{% url 'django.contrib.auth.views.login' %}" method="POST">
@@ -82,25 +82,37 @@
         	
         	{% if user|in_group:'pacjent' %}
 	           	<li><a href="{% url 'views.update_profile' %}">Profil</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.diseases' %}">Choroby</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
            	{% elif user|in_group:'rejestrator' %}
 	           	<li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.patient_list' %}">Aktualizacja pacj.</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.patient_user' %}">Połączenie konta</a></li>
-	           	<li><a href="{% url 'views.dentist_register2' %}">Rejestracja do dentysty</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+	           	<li><a href="{% url 'views.dentist_register2' %}">Rejestr do dentysty</a></li>
+	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
 	        {% elif user|in_group:'dentysta' %}
 	        	<li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
+	        	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
            	{% endif %}
            
         </ul>
       </div>
+      {% else %}
+      	<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStomatolog-Coldix%2F323848351055930&amp;width=200&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color=9e9e9e&amp;stream=true&amp;header=false&amp;appId=279481798728744" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:395px;" allowTransparency="true"></iframe>
       {% endif %}
       {% endblock %}
       </div>
+      <!--<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStomatolog-Coldix%2F323848351055930&amp;width=200&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color=3e3e3e&amp;stream=true&amp;header=false&amp;appId=279481798728744" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:395px;" allowTransparency="true"></iframe>-->
       <div id="right_column">
       {% block right_column %}
       {% endblock %}

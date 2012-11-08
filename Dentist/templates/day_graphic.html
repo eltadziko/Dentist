@@ -48,6 +48,7 @@
 {% endblock %}
 
 {% block right_column %}
+<div id="forms">
 <form id="today">
 Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
 Gabinet: <select id="office" name="office">
@@ -81,4 +82,5 @@ Gabinet: <select id="office" name="office">
 		</tr>
 	{% endfor %} 
 </table>
+</div>
 {% endblock %}
