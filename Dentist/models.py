@@ -90,7 +90,7 @@ class dental_office(models.Model):
     def __unicode__(self):
         return u'%s' % (self.address)
     
-class hours(models.Model):
+class hours(models.Model): 
     week_day = models.IntegerField("Dzień tygodnia", max_length=1)
     begin = models.TimeField("Przyjmuje od")
     end = models.TimeField("Przyjmuje do")
