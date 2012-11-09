@@ -35,14 +35,14 @@ class disease(models.Model):
 class insurance(models.Model):
     short_name = models.CharField("Krótka nazwa", max_length=30)
     name = models.CharField("Nazwa", max_length=100)
-    description = models.CharField("Opis", max_length=300, blank=True, null=True)
+    description = models.CharField("Opis", max_length=250, blank=True, null=True)
     
     class Meta:
         verbose_name = "Ubezpieczenie"
         verbose_name_plural = "Ubezpieczenia"
 
     def __unicode__(self):
-        return u'%s' % (self.short_name)
+        return u'%s' % (self.name)
     
 class patient(models.Model):
     first_name = models.CharField("Imię", max_length=30)
@@ -90,7 +90,7 @@ class dental_office(models.Model):
     def __unicode__(self):
         return u'%s' % (self.address)
     
-class hours(models.Model):
+class hours(models.Model): 
     week_day = models.IntegerField("Dzień tygodnia", max_length=1)
     begin = models.TimeField("Przyjmuje od")
     end = models.TimeField("Przyjmuje do")
