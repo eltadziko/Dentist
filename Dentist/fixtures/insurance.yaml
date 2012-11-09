@@ -61,7 +61,7 @@
 - model: Dentist.insurance
   pk: 11
   fields:
-    short_name: członek rodz. ubezp. pracodawca 
+    short_name: członek rodz. ubezp. praca
     name: członek rodziny ubezpieczonego pracodawca
     description:
 - model: Dentist.insurance
