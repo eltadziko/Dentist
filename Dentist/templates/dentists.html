@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block right_column %}
+
+	{% for d in dentists %}
+		<a name="{{ d.dentist.id }}"><strong>{{ d.dentist.last_name }} {{ d.dentist.first_name }}</a>
+		{% if d.dentist.title %}
+			, {{ d.dentist.title }}
+		{% endif %}</strong><br />
+		{% if d.dentist.phone %}Kontakt: {{ d.dentist.phone }}<br />{% endif %}
+		{% if d.dentist.description %}{{ d.dentist.description }}<br /><br />{% endif %}
+		Pracuje w:<br />
+		{% for o in d.offices %}
+			<a href="{% url views.offices %}#{{ o.office.id }}">{% if o.office.name %}{{ o.office.name }}, {% endif %}{{ o.office.address }}:</a><br>
+			{% for h in o.hours %}
+				{{ h.week_day }} {{ h.begin|time:'H:i' }}-{{ h.end|time:'H:i' }}<br />
+			{% endfor %}
+		{% endfor %}
+		<br />
+	{% endfor %}
+
+{% endblock %}

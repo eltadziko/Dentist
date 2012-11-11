@@ -453,3 +453,25 @@ def day_graphic(request):
         date = date.strftime("%Y-%m-%d")
 
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office})
+
+def offices(request):
+    offs = dental_office.objects.all()
+    offices =[]
+    for o in offs:
+        hour = hours.objects.values_list('dentist').filter(dental_office=o.id)
+        dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
+        offices.append({'office':o, 'dentists':dentists})
+    return render(request, 'offices.html',{'offices': offices})
+
+def dentists(request):
+    dents = dentist.objects.all().order_by('last_name')
+    dentists = []
+    for d in dents:
+        hour = hours.objects.values_list('dental_office', flat=True).filter(dentist = d.id)
+        offs = dental_office.objects.filter(id__in=hour)
+        offices = []
+        for o in offs:
+            hour2 = hours.objects.filter(dentist=d.id).filter(dental_office=o.id).order_by('week_day')
+            offices.append({'office':o, 'hours': hour2})
+        dentists.append({'dentist': d, 'offices': offices})
+    return render(request, 'dentists.html',{'dentists': dentists})
