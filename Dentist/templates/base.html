@@ -101,6 +101,7 @@
 	           	<li><a href="{% url 'views.dentist_register2' %}">Rejestr do dentysty</a></li>
 	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
+	           	<li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
 	        {% elif user|in_group:'dentysta' %}
 	        	<li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
 	        	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>

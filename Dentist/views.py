@@ -477,23 +477,20 @@ def dentists(request):
     return render(request, 'dentists.html',{'dentists': dentists})
 
 @login_required
-@user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(in_group, login_url='/access_denied/')
 def reservations(request):
     if request.POST:
         if 'appointment' in request.POST.keys():
             app = request.POST['appointment']
             appointment.objects.get(id=app).delete()
-        else:
-            print request.POST.keys()
+        elif 'appointment2' in request.POST.keys():
             app = appointment.objects.get(id=request.POST['appointment2'])
+            print request.POST.keys()
             if 'date' in request.POST.keys():
                 if 'appoint' in request.POST.keys():
                     day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
-                    print day
                     app.date = day.date()
-                    print app.date
                     app.hour = day.time()
-                    print app.hour
                     app.save()
                 else:
                     apps = []
@@ -538,9 +535,17 @@ def reservations(request):
                     return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
             else:
                 form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
+                print form
                 return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
     
-    pat = patient.objects.get(user = request.user)
-    reservations = appointment.objects.filter(patient=pat.id).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+    if in_patient_group(request.user):
+        pat = patient.objects.get(user = request.user)
+        reservations = appointment.objects.filter(patient=pat.id).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+    elif in_receptionist_group(request.user):
+        if request.POST and 'patient' in request.POST.keys():
+            reservations = appointment.objects.filter(patient=request.POST['patient']).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+        else:
+            patients = patient.objects.all().order_by('last_name')
+            return render(request, 'patients2.html', {'patients': patients})
     return render(request, 'reservations.html', {'reservations': reservations})
     
