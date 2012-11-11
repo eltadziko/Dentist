@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+	$(document).ready(function() {
+		$('.delete').click(function() {
+			$.post('/reservations/',
+			{ appointment: $(this).attr('id'),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+				alert('Odwołano wizytę.');
+			});
+		 	return false;
+		});
+		
+		$('.change').click(function() {
+			$.post('/reservations/',
+			{ appointment2: $(this).attr('id'),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data); 
+			}
+			 );
+		 	return true;
+		});
+	});
+</script>
+{% endblock %}
+
+{% block right_column %}
+	<table>
+	<tr><th>Data</th><th>Godzina</th><th>Dentysta</th><th>Gabinet</th><th></th><th></th></tr>
+	{% for r in reservations %}
+		<tr>
+			<td>{{ r.date|date:'d-m-Y' }}</td>
+			<td>{{ r.hour|time:'H:i' }}</td>
+			<td>{{ r.dentist.last_name }} {{ r.dentist.first_name }}</td>
+			<td>{{ r.dental_office.address }}</td>
+			<td class="delete" id="{{ r.id }}">Odwołaj</td>
+			<td class="change" id="{{ r.id }}">Zmień</td>
+		</tr>
+	{% endfor %}
+	</table>
+{% endblock %}

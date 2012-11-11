@@ -475,3 +475,72 @@ def dentists(request):
             offices.append({'office':o, 'hours': hour2})
         dentists.append({'dentist': d, 'offices': offices})
     return render(request, 'dentists.html',{'dentists': dentists})
+
+@login_required
+@user_passes_test(in_patient_group, login_url='/access_denied/')
+def reservations(request):
+    if request.POST:
+        if 'appointment' in request.POST.keys():
+            app = request.POST['appointment']
+            appointment.objects.get(id=app).delete()
+        else:
+            print request.POST.keys()
+            app = appointment.objects.get(id=request.POST['appointment2'])
+            if 'date' in request.POST.keys():
+                if 'appoint' in request.POST.keys():
+                    day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
+                    print day
+                    app.date = day.date()
+                    print app.date
+                    app.hour = day.time()
+                    print app.hour
+                    app.save()
+                else:
+                    apps = []
+                    day = dates.objects.get(id=request.POST['date'])
+                    dayend = datetime.datetime.combine(day.date, day.end)
+                    if day.date == datetime.datetime.now().date():
+                        hour = datetime.datetime.now()
+                        minute = hour.time().minute
+                        h = datetime.datetime.combine(day.date, hour.time())
+                        typ2 = appointment_type.objects.get(id = typ).length
+                        if minute < 15 and typ2 == 15:
+                            h = h + datetime.timedelta(minutes=(15 - minute))
+                        elif minute < 30 and typ2 < 60:
+                            h = h + datetime.timedelta(minutes=(30 - minute))
+                        elif minute < 45 and typ2 == 15:
+                            h = h + datetime.timedelta(minutes=(45 - minute))
+                        else:
+                            h = h + datetime.timedelta(minutes=(60 - minute))
+                        h = h - datetime.timedelta(seconds = hour.time().second, microseconds = hour.time().microsecond)
+                        hour = h
+                    else:
+                        hour = datetime.datetime.combine(day.date, day.begin)
+                    minutes = app.appointment_type.length
+                    while hour + datetime.timedelta(minutes=minutes)<=dayend:
+                        apps.append(hour)
+                        hour = hour + datetime.timedelta(minutes=minutes)
+                    
+                    deleted_apps = []
+                    for h in apps:
+                        for ap in appointment.objects.filter(date = day).filter(dentist = app.dentist.id).filter(dental_office = app.dental_office.id):
+                            ap_date = datetime.datetime.combine(ap.date, ap.hour)
+                            length = ap.appointment_type.length
+                            ap_end = datetime.datetime.combine(ap.date, ap.hour) + datetime.timedelta(minutes=length)
+                            h_end = h + datetime.timedelta(minutes=app.appointment_type.length)
+                            if h >= ap_date and h.time() < ap_end.time() or h <= ap_date and h_end > ap_date:
+                                if not h in deleted_apps:
+                                    deleted_apps.append(h)
+                                
+                    for h in deleted_apps:            
+                        apps.remove(h)
+                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id)
+                    return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
+            else:
+                form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
+                return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
+    
+    pat = patient.objects.get(user = request.user)
+    reservations = appointment.objects.filter(patient=pat.id).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+    return render(request, 'reservations.html', {'reservations': reservations})
+    

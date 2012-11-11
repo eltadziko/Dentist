@@ -8,7 +8,7 @@
 			, {{ d.dentist.title }}
 		{% endif %}</strong><br />
 		{% if d.dentist.phone %}Kontakt: {{ d.dentist.phone }}<br />{% endif %}
-		{% if d.dentist.description %}{{ d.dentist.description }}<br /><br />{% endif %}
+		{% if d.dentist.description %}{{ d.dentist.description }}<br />{% endif %}
 		Pracuje w:<br />
 		{% for o in d.offices %}
 			<a href="{% url views.offices %}#{{ o.office.id }}">{% if o.office.name %}{{ o.office.name }}, {% endif %}{{ o.office.address }}:</a><br>

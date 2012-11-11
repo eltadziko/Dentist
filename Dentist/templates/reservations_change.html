@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block javascript %}
+	{{ block.super }}
+	
+	<script>
+	$(document).ready(function() {
+		 
+		 $("input[name=date]").change(function() {
+			$.post('/reservations/',
+			{ date: $(this).val(),
+			  appointment2: $('#appointment2').val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
+		 
+		 $("form").submit(function() {
+			$.post('/reservations/',
+			{ date: $('input[name=date]:checked').val(),
+			  appoint: $('input[name=appoint]:checked').val(),
+			  appointment2: $('#appointment2').val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			 function() {
+			 	window.location = '/reservations/';
+			 }
+			);
+		 	return false;
+		 });		 
+		 
+	});
+	</script>
+{% endblock %}
+
+{% block right_column %}
+<div id="forms">
+<form action="{% url views.reservations %}" method="post"> {% csrf_token %}
+	{% if form.non_field_errors %}
+       	<div class="error">
+		    {% for error in form.non_field_errors %}
+		        <strong>{{ error|escape }} </strong>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	{% for field in form %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }}: 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    <input type="hidden" value="{{ app_id }}" id="appointment2"/>
+	<p><input id="send_log_big" type="submit" value="Zarejestruj" /></p>
+</form>
+</div>
+{% endblock %}

@@ -105,3 +105,22 @@ class RegisterReceptionistForm(forms.Form):
                                 widget=MyRadioSelect,
                                 label="Terminy",
                                 empty_label=None)	
+    
+class RegisterChangeForm(forms.Form):
+    
+    def __init__(self, office, dent, date, apps, typ, *args, **kwargs):
+        super(RegisterChangeForm, self).__init__(*args, **kwargs)
+        dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
+        self.fields['date'].queryset = dats
+        if apps!=-1:
+            self.fields['appoint'].choices = [(h, h.strftime('%H:%M')) for h in apps]
+            self.fields['date'].initial = date 
+    
+    date = forms.ModelChoiceField(queryset=dates.objects.none(), 
+                                    widget=MyRadioSelect, 
+                                    label="Daty",
+                                    empty_label=None)
+    appoint = forms.ModelChoiceField(queryset=appointment.objects.none(),
+                                widget=MyRadioSelect,
+                                label="Terminy",
+                                empty_label=None)

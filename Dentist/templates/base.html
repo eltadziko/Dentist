@@ -88,6 +88,7 @@
 	           	<li><a href="{% url 'views.diseases' %}">Choroby</a></li>
 	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 	           	<li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
+	           	<li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
            	{% elif user|in_group:'rejestrator' %}
 	           	<li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
 	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
