@@ -1,0 +1,16 @@
+- model: auth.Group
+  pk: 1
+  fields:
+    name: pacjent
+- model: auth.Group
+  pk: 2
+  fields:
+    name: rejestrator
+- model: auth.Group
+  pk: 3
+  fields:
+    name: dentysta
+- model: auth.Group
+  pk: 4
+  fields:
+    name: administrator    

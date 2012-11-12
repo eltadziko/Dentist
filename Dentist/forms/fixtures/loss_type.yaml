@@ -1,0 +1,276 @@
+- model: Dentist.loss_type
+  pk: 1
+  fields:
+    type: braki zębowe kl. I(wg Galasińskiej Landsbergerowej)
+- model: Dentist.loss_type
+  pk: 2
+  fields:
+    type: braki zębowe kl. II(wg Galasińskiej Landsbergerowej)
+- model: Dentist.loss_type
+  pk: 3
+  fields:
+    type: braki zębowe kl. III(wg Galasińskiej Landsbergerowej)
+- model: Dentist.loss_type
+  pk: 4
+  fields:
+    type: braki zębowe kl. IV (wg Galasińskiej Landsbergerowej)
+- model: Dentist.loss_type
+  pk: 5
+  fields:
+    type: braki zębowe kl. V (wg Galasińskiej Landsbergerowej)
+- model: Dentist.loss_type
+  pk: 6
+  fields:
+    type: kieszeń dziąsłowa
+- model: Dentist.loss_type
+  pk: 7
+  fields:
+    type: kieszeń kostna
+- model: Dentist.loss_type
+  pk: 8
+  fields:
+    type: martwica przy komorze otwartej
+- model: Dentist.loss_type
+  pk: 9
+  fields:
+    type: martwica przy komorze zamkniętej
+- model: Dentist.loss_type
+  pk: 10
+  fields:
+    type: odcementowanie korony
+- model: Dentist.loss_type
+  pk: 11
+  fields:
+    type: odłamanie korony
+- model: Dentist.loss_type
+  pk: 12
+  fields:
+    type: osad nazębny
+- model: Dentist.loss_type
+  pk: 13
+  fields:
+    type: ostre początkowe zapalenie tkanek okołowierzchołowych
+- model: Dentist.loss_type
+  pk: 14
+  fields:
+    type: ostre ropne zapalenie tkanek okołowierzchołowych
+- model: Dentist.loss_type
+  pk: 15
+  fields:
+    type: perforacja korony zęba
+- model: Dentist.loss_type
+  pk: 16
+  fields:
+    type: perforacja korzenia zęba
+- model: Dentist.loss_type
+  pk: 17
+  fields:
+    type: próchnica głęboka kl. I
+- model: Dentist.loss_type
+  pk: 18
+  fields:
+    type: próchnica głęboka kl. II 
+- model: Dentist.loss_type
+  pk: 19
+  fields:
+    type: próchnica głęboka kl. III 
+- model: Dentist.loss_type
+  pk: 20
+  fields:
+    type: próchnica głęboka kl. IV
+- model: Dentist.loss_type
+  pk: 21
+  fields:
+    type: próchnica głęboka kl. V
+- model: Dentist.loss_type
+  pk: 22
+  fields:
+    type: Próchnica okrężna
+- model: Dentist.loss_type
+  pk: 23
+  fields:
+    type: Próchnica powierzchniowa kl. I
+- model: Dentist.loss_type
+  pk: 24
+  fields:
+    type: Próchnica powierzchniowa kl. II
+- model: Dentist.loss_type
+  pk: 25
+  fields:
+    type: Próchnica powierzchniowa kl. III
+- model: Dentist.loss_type
+  pk: 26
+  fields:
+    type: Próchnica powierzchniowa kl. IV
+- model: Dentist.loss_type
+  pk: 27
+  fields:
+    type: Próchnica powierzchniowa kl. V
+- model: Dentist.loss_type
+  pk: 28
+  fields:
+    type: Próchnica średnia kl. I
+- model: Dentist.loss_type
+  pk: 29
+  fields:
+    type: Próchnica średnia kl. II
+- model: Dentist.loss_type
+  pk: 30
+  fields:
+    type: Próchnica średnia kl. III
+- model: Dentist.loss_type
+  pk: 31
+  fields:
+    type: Próchnica średnia kl. IV
+- model: Dentist.loss_type
+  pk: 32
+  fields:
+    type: Próchnica średnia kl. V
+- model: Dentist.loss_type
+  pk: 33
+  fields:
+    type: Próchnica wtórna kl. I
+- model: Dentist.loss_type
+  pk: 34
+  fields:
+    type: Próchnica wtórna kl. II
+- model: Dentist.loss_type
+  pk: 35
+  fields:
+    type: Próchnica wtórna kl. III
+- model: Dentist.loss_type
+  pk: 36
+  fields:
+    type: Próchnica wtórna kl. IV
+- model: Dentist.loss_type
+  pk: 37
+  fields:
+    type: Próchnica wtórna kl. V
+- model: Dentist.loss_type
+  pk: 38
+  fields:
+    type: Próchnicowe zniszczenie korony
+- model: Dentist.loss_type
+  pk: 39
+  fields:
+    type: Przebarnienie zęba
+- model: Dentist.loss_type
+  pk: 40
+  fields:
+    type: Przewlekłe ropne zapalenia tkanek okołowierzchołowych
+- model: Dentist.loss_type
+  pk: 41
+  fields:
+    type: Przewlekłe włókniste zapalenia tkanek okołowierzchołowych
+- model: Dentist.loss_type
+  pk: 42
+  fields:
+    type: Przewlekłe zaostrzone zapalenia tkanek okołowierzchołowych
+- model: Dentist.loss_type
+  pk: 43
+  fields:
+    type: Przewlekłe ziarninowe zapalenia tkanek okołowierzchołowych
+- model: Dentist.loss_type
+  pk: 44
+  fields:
+    type: Ropień okołowierzchołkowy
+- model: Dentist.loss_type
+  pk: 45
+  fields:
+    type: Ropień podokostnowy
+- model: Dentist.loss_type
+  pk: 46
+  fields:
+    type: Ropień podślizówkowy
+- model: Dentist.loss_type
+  pk: 47
+  fields:
+    type: Rozchwianie zęba I st.
+- model: Dentist.loss_type
+  pk: 48
+  fields:
+    type: 
+- model: Dentist.loss_type
+  pk: 49
+  fields:
+    type: Rozchwianie zęba II st.
+- model: Dentist.loss_type
+  pk: 50
+  fields:
+    type: Rozchwianie zęba III st.
+- model: Dentist.loss_type
+  pk: 51
+  fields:
+    type: Stłoczenie zębów pierwotne
+- model: Dentist.loss_type
+  pk: 52
+  fields:
+    type: Stłoczenie zębów wtórne
+- model: Dentist.loss_type
+  pk: 53
+  fields:
+    type: Torbiel okołowierzchołkowy
+- model: Dentist.loss_type
+  pk: 54
+  fields:
+    type: Ubytek klinowy
+- model: Dentist.loss_type
+  pk: 55
+  fields:
+    type: Ubytek niepróchnicowy
+- model: Dentist.loss_type
+  pk: 56
+  fields:
+    type: Uszkodzenie tkanki kostnej
+- model: Dentist.loss_type
+  pk: 57
+  fields:
+    type: Wybicie zęba
+- model: Dentist.loss_type
+  pk: 58
+  fields:
+    type: Zapalnie nieodwraclene przy komorze otwartej
+- model: Dentist.loss_type
+  pk: 59
+  fields:
+    type: Zapalnie nieodwraclene przy komorze zamkniętej
+- model: Dentist.loss_type
+  pk: 60
+  fields:
+    type: Zapalnie nieodwraclene przy komorze z próchnicowym obnażeniem miazgi
+- model: Dentist.loss_type
+  pk: 61
+  fields:
+    type: Zapalnie nieodwraclene przy komorze z przypadkowym obnażeniem miazgi
+- model: Dentist.loss_type
+  pk: 62
+  fields:
+    type: Zapalenie odwracalne miazgi
+- model: Dentist.loss_type
+  pk: 63
+  fields:
+    type: Zapalenie przyzębia
+- model: Dentist.loss_type
+  pk: 64
+  fields:
+    type: Zwichnięcie zęba
+- model: Dentist.loss_type
+  pk: 65
+  fields:
+    type: Złamanie poprzeczne korzenia
+- model: Dentist.loss_type
+  pk: 66
+  fields:
+    type: Złamanie podłużne korzenia
+- model: Dentist.loss_type
+  pk: 67
+  fields:
+    type: Złamanie zębe w obrębie szkliwa i zębiny
+- model: Dentist.loss_type
+  pk: 68
+  fields:
+    type: Złamanie zębe w obrębie szkliwa
+- model: Dentist.loss_type
+  pk: 69
+  fields:
+    type: Złamanie zęba z obnażeniem miazgi
