@@ -535,7 +535,6 @@ def reservations(request):
                     return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
             else:
                 form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
-                print form
                 return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
     
     if in_patient_group(request.user):
