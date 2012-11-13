@@ -1,0 +1,40 @@
+- model: Dentist.disease
+  pk: 1
+  fields:
+    disease_name: alergia
+- model: Dentist.disease
+  pk: 2
+  fields:
+    disease_name: nadciśnienie
+- model: Dentist.disease
+  pk: 3
+  fields:
+    disease_name: cukrzyca
+- model: Dentist.disease
+  pk: 4
+  fields:
+    disease_name: choroby tarczycy
+- model: Dentist.disease
+  pk: 5
+  fields:
+    disease_name: epilepsja
+- model: Dentist.disease
+  pk: 6
+  fields:
+    disease_name: ciąża
+- model: Dentist.disease
+  pk: 7
+  fields:
+    disease_name: żółtaczka
+- model: Dentist.disease
+  pk: 8
+  fields:
+    disease_name: gruźlica
+- model: Dentist.disease
+  pk: 9
+  fields:
+    disease_name: AIDS
+- model: Dentist.disease
+  pk: 10
+  fields:
+    disease_name: choroby serca

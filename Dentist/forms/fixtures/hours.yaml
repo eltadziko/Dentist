@@ -166,6 +166,7 @@
     week_day: 5
     begin: 8:00
     end: 16:00
+
     dentist: 19
     dental_office: 3
     room: 3.1
