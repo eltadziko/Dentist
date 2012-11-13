@@ -34,7 +34,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [3]
- - model: auth.User
+- model: auth.User
   pk: 4
   fields:
     username: maciej_kawala
@@ -265,7 +265,7 @@
 - model: auth.User
   pk: 23
   fields:
-    username: michal_iwanicki 
+    username: eltadziko 
     email: michal_iwanicki@patient.pl
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
@@ -394,7 +394,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 34
   fields:
     username: maciej_baglaj
@@ -514,10 +514,10 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 44
   fields:
-    username: radoslaw_jadach
+    username: radoslaw_jadach2
     email: radoslaw_jadach@patient.pl
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
@@ -634,7 +634,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 54
   fields:
     username: tomasz_zatonski
@@ -754,7 +754,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 64
   fields:
     username: WiktoriaMajewska
@@ -874,10 +874,10 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 74
   fields:
-    username: ZuzannaTomaszewska
+    username: ZuzannaTomaszewska2
     email: KajaWozniak@pookmail.com
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
@@ -994,7 +994,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 84
   fields:
     username: JustynWysocki 
@@ -1114,7 +1114,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 94
   fields:
     username: BertaJablonska
@@ -1234,7 +1234,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 104
   fields:
     username: HajnrichChmielewski
@@ -1354,7 +1354,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 114
   fields:
     username: EgidiuszBorkowski
@@ -1474,7 +1474,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 124
   fields:
     username: KatarzynaAdamczyk
@@ -1594,7 +1594,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 134
   fields:
     username: KazimieraJablonska
@@ -1714,7 +1714,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 144
   fields:
     username: FranciszkaGorska
@@ -1834,7 +1834,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 154
   fields:
     username: BeataWysocka
@@ -1954,7 +1954,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 164
   fields:
     username: KarinaBorkowska
@@ -2074,7 +2074,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 174
   fields:
     username: PatrykDabrowski
@@ -2194,7 +2194,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 184
   fields:
     username: MikolajSawicki
@@ -2314,7 +2314,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 194
   fields:
     username: LucjuszKowalczyk
@@ -2434,7 +2434,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 204
   fields:
     username: KlimekCzerwinski
@@ -2554,7 +2554,7 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
- - model: auth.User
+- model: auth.User
   pk: 214
   fields:
     username: AnnaPawlowska
@@ -2650,3 +2650,27 @@
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
     groups: [1]
+- model: auth.User
+  pk: 222
+  fields:
+    username: tadeusz
+    email: FrydrychMaciejewski@trashymail.com
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 1
+    is_active: 1
+    is_superuser: 1
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [4]
+- model: auth.User
+  pk: 223
+  fields:
+    username: rejestrator
+    email: FrydrychMaciejewski@trashymail.com
+    password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
+    is_staff: 0
+    is_active: 1
+    is_superuser: 0
+    last_login: 2012-10-24 12:12:12
+    date_joined: 2012-10-20 11:57:02
+    groups: [2]

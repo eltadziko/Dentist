@@ -11,7 +11,7 @@
     phone: 665238987
     comment: 
     user: 22
-    diseases: 
+     
 - model: Dentist.patient
   pk: 2
   fields:
@@ -25,7 +25,7 @@
     phone: 667548988
     comment:
     user: 23
-    diseases:  
+      
 - model: Dentist.patient
   pk: 3
   fields:
@@ -39,7 +39,7 @@
     comment:
     phone: 534234876 
     user: 24
-    diseases: 
+     
 - model: Dentist.patient
   pk: 4
   fields:
@@ -53,7 +53,7 @@
     phone: 788345234
     comment:
     user: 25
-    diseases: 
+     
 - model: Dentist.patient
   pk: 5
   fields:
@@ -67,7 +67,7 @@
     phone: 567342802 
     comment:
     user: 26 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 6
   fields:
@@ -81,7 +81,7 @@
     phone: 765987234
     comment:
     user: 27
-    diseases: 
+     
 - model: Dentist.patient
   pk: 7
   fields:
@@ -95,7 +95,7 @@
     phone: 534876091
     comment:
     user: 28
-    diseases: 
+     
 - model: Dentist.patient
   pk: 8
   fields:
@@ -109,7 +109,7 @@
     phone: 543290001 
     comment:
     user: 29
-    diseases: 
+     
 - model: Dentist.patient
   pk: 9
   fields:
@@ -117,13 +117,13 @@
     last_name: Nojek
     birth_date: 1990-01-25
     address: Zamojska 34/7, 54-102 Wrocław
-	PESEL: 90012542856
+    PESEL: 90012542856
     insurance_type: 9
     insurance_number: aktualny 
     phone: 537899001
     comment:
     user: 30
-    diseases: 
+     
 - model: Dentist.patient
   pk: 10
   fields:
@@ -137,8 +137,8 @@
     phone: 654876564
     comment:
     user: 31
-    diseases: 
-﻿- model: Dentist.patient
+     
+- model: Dentist.patient
   pk: 11
   fields:
     first_name: Łukasz 
@@ -151,7 +151,7 @@
     phone: 665238987 
     comment:
     user: 32
-    diseases: 
+     
 - model: Dentist.patient
   pk: 12
   fields:
@@ -165,7 +165,7 @@
     phone: 534234876 
     comment:
     user: 33
-    diseases: 
+     
 - model: Dentist.patient
   pk: 13
   fields:
@@ -179,7 +179,7 @@
     phone: 534234876
     comment:
     user: 34
-    diseases: 
+     
 - model: Dentist.patient
   pk: 14
   fields:
@@ -193,7 +193,7 @@
     phone: 534234876
     comment:
     user: 35
-    diseases: 
+     
 - model: Dentist.patient
   pk: 15
   fields:
@@ -207,7 +207,7 @@
     phone: 534234876 
     comment:
     user: 36
-    diseases: 
+     
 - model: Dentist.patient
   pk: 16
   fields:
@@ -221,7 +221,7 @@
     phone: 534234876
     comment:
     user: 37
-    diseases: 
+     
 - model: Dentist.patient
   pk: 17
   fields:
@@ -235,7 +235,7 @@
     phone: 674234876
     comment:
     user: 38
-    diseases: 
+     
 - model: Dentist.patient
   pk: 18
   fields:
@@ -249,7 +249,7 @@
     phone: 534234876
     comment:
     user: 39
-    diseases: 
+     
 - model: Dentist.patient
   pk: 19
   fields:
@@ -263,7 +263,7 @@
     phone: 534234876
     comment:
     user: 40
-    diseases: 
+     
 - model: Dentist.patient
   pk: 20
   fields:
@@ -277,7 +277,7 @@
     phone: 534234876
     comment:
     user: 41
-    diseases: 
+     
 - model: Dentist.patient
   pk: 21
   fields:
@@ -291,7 +291,7 @@
     phone: 534234876
     comment:
     user: 42
-    diseases: 
+     
 - model: Dentist.patient
   pk: 22
   fields:
@@ -305,7 +305,7 @@
     phone: 534234876 
     comment:
     user: 43
-    diseases: 
+     
 - model: Dentist.patient
   pk: 23
   fields:
@@ -319,7 +319,7 @@
     phone: 534234876
     comment:
     user: 44
-    diseases: 
+     
 - model: Dentist.patient
   pk: 24
   fields:
@@ -333,7 +333,7 @@
     phone: 534234876
     comment:
     user: 45
-    diseases: 
+     
 - model: Dentist.patient
   pk: 25
   fields:
@@ -347,7 +347,7 @@
     phone: 534234876 
     comment:
     user: 46
-    diseases: 
+     
 - model: Dentist.patient
   pk: 26
   fields:
@@ -361,7 +361,7 @@
     phone: 534234876 
     comment:
     user: 47
-    diseases: 
+     
 - model: Dentist.patient
   pk: 27
   fields:
@@ -375,7 +375,7 @@
     phone: 534234876
     comment:
     user: 48
-    diseases: 
+     
 - model: Dentist.patient
   pk: 28
   fields:
@@ -389,7 +389,7 @@
     phone: 534234876 
     comment:
     user: 49
-    diseases: 
+     
 - model: Dentist.patient
   pk: 29
   fields:
@@ -403,7 +403,7 @@
     phone: 534234876 
     comment:
     user: 50
-    diseases: 
+     
 - model: Dentist.patient
   pk: 30
   fields:
@@ -417,21 +417,21 @@
     comment:
     phone: 534234876
     user: 51
-    diseases: 
+     
 - model: Dentist.patient
   pk: 31
   fields:
     first_name: Piotr 
     last_name: Paluch 
-    birth_date: 1966-05-20.
+    birth_date: 1966-05-20
     address: Lazurowa 5/9, 54-044 Wrocław
     PESEL: 66052095728
-    insurance_type: 14 5
+    insurance_type: 14
     insurance_number: aktualny 
     phone: 534234876
     comment:
     user: 52
-    diseases: 
+     
 - model: Dentist.patient
   pk: 32
   fields:
@@ -445,7 +445,7 @@
     phone: 534234876
     comment:
     user: 53
-    diseases: 
+     
 - model: Dentist.patient
   pk: 33
   fields:
@@ -459,7 +459,7 @@
     phone: 534234876
     comment:
     user: 54
-    diseases: 
+     
 - model: Dentist.patient
   pk: 34
   fields:
@@ -473,7 +473,7 @@
     phone: 534234876
     comment:
     user: 55
-    diseases: 
+     
 - model: Dentist.patient
   pk: 35
   fields:
@@ -487,7 +487,6 @@
     phone: 534234876
     comment:
     user: 56
-    diseases: [2, 6] 
 - model: Dentist.patient
   pk: 36
   fields:
@@ -501,7 +500,7 @@
     phone: 534234876
     comment:
     user: 57
-    diseases: 
+     
 - model: Dentist.patient
   pk: 37
   fields:
@@ -515,7 +514,7 @@
     phone: 534234876
     comment:
     user: 58
-    diseases: 
+     
 - model: Dentist.patient
   pk: 38
   fields:
@@ -529,8 +528,8 @@
     phone: 534234876
     comment:
     user: 59
-    diseases: 
-    - model: Dentist.patient
+     
+- model: Dentist.patient
   pk: 39
   fields:
     first_name: Seweryn 
@@ -543,7 +542,7 @@
     phone: 534234876
     comment:
     user: 60
-    diseases: 
+     
 - model: Dentist.patient
   pk: 40
   fields:
@@ -557,7 +556,7 @@
     phone: 601449493
     comment:
     user: 61
-    diseases: 
+     
 - model: Dentist.patient
   pk: 41
   fields:
@@ -571,7 +570,7 @@
     phone: 789041652
     comment: 
     user: 62
-    diseases: 
+     
 - model: Dentist.patient
   pk: 42
   fields:
@@ -585,7 +584,7 @@
     phone: 694067247
     comment:
     user: 63
-    diseases:  
+      
 - model: Dentist.patient
   pk: 43
   fields:
@@ -599,7 +598,7 @@
     comment:
     phone: 662475245
     user: 64
-    diseases: 
+     
 - model: Dentist.patient
   pk: 44
   fields:
@@ -613,7 +612,7 @@
     phone: 516724978
     comment:
     user: 65
-    diseases: 
+     
 - model: Dentist.patient
   pk: 45
   fields:
@@ -627,7 +626,7 @@
     phone: 666634317
     comment:
     user: 66 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 46
   fields:
@@ -641,7 +640,7 @@
     phone: 799289273
     comment:
     user: 67
-    diseases: 
+     
 - model: Dentist.patient
   pk: 47
   fields:
@@ -655,7 +654,7 @@
     phone: 729240164
     comment:
     user: 68
-    diseases: 
+     
 - model: Dentist.patient
   pk: 48
   fields:
@@ -669,7 +668,7 @@
     phone: 679494271
     comment:
     user: 69
-    diseases: 
+     
 - model: Dentist.patient
   pk: 49
   fields:
@@ -677,13 +676,13 @@
     last_name: Szczepański
     birth_date: 1978-06-11
     address: Lawendowa 140, 54-102 Wrocław
-	PESEL: 78061188812
+    PESEL: 78061188812
     insurance_type: 9
     insurance_number: aktualny 
     phone: 679382975
     comment:
     user: 70
-    diseases: 
+     
 - model: Dentist.patient
   pk: 50
   fields:
@@ -697,7 +696,7 @@
     phone: 795320834
     comment:
     user: 71
-    diseases: 
+     
 - model: Dentist.patient
   pk: 51
   fields:
@@ -711,7 +710,7 @@
     phone: 533524736
     comment: 
     user: 72
-    diseases: 
+     
 - model: Dentist.patient
   pk: 52
   fields:
@@ -725,7 +724,7 @@
     phone: 539395135
     comment:
     user: 73
-    diseases:  
+      
 - model: Dentist.patient
   pk: 53
   fields:
@@ -739,7 +738,7 @@
     comment:
     phone: 797294162
     user: 74
-    diseases: 
+     
 - model: Dentist.patient
   pk: 54
   fields:
@@ -753,7 +752,7 @@
     phone: 718345234
     comment:
     user: 75
-    diseases: 
+     
 - model: Dentist.patient
   pk: 55
   fields:
@@ -767,7 +766,7 @@
     phone: 607935135
     comment:
     user: 76 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 56
   fields:
@@ -781,7 +780,7 @@
     phone: 884110167
     comment:
     user: 77
-    diseases: 
+     
 - model: Dentist.patient
   pk: 57
   fields:
@@ -795,7 +794,7 @@
     phone: 676559866
     comment:
     user: 78
-    diseases: 
+     
 - model: Dentist.patient
   pk: 58
   fields:
@@ -809,7 +808,7 @@
     phone: 888101646
     comment:
     user: 79
-    diseases: 
+     
 - model: Dentist.patient
   pk: 59
   fields:
@@ -817,13 +816,13 @@
     last_name: Czarnecki
     birth_date: 1954-04-25
     address: Arsenał 58, 54-102 Wrocław
-	PESEL: 54042516894
+    PESEL: 54042516894
     insurance_type: 9
     insurance_number: aktualny 
     phone: 603093677
     comment:
     user: 80
-    diseases: 
+     
 - model: Dentist.patient
   pk: 60
   fields:
@@ -831,13 +830,13 @@
     last_name: Czerwiński
     birth_date: 1948-08-23
     address: Kielecka 49, 50-456 Wrocław
-    PESEL: 40051030948
+    PESEL: 40051030148
     insurance_type: 10
     insurance_number: aktualny 
-    phone: 884110167
+    phone: 884110067
     comment:
     user: 81
-    diseases: 
+     
 - model: Dentist.patient
   pk: 61
   fields:
@@ -845,13 +844,13 @@
     last_name: Szymańska
     birth_date: 1945-12-06
     address: Młoda 11, 54-129 Wrocław
-    PESEL: 45120685793
+    PESEL: 45120685763
     insurance_type: 1
     insurance_number: aktualny 
     phone: 676559866
     comment: 
     user: 82
-    diseases: 
+     
 - model: Dentist.patient
   pk: 62
   fields:
@@ -859,13 +858,13 @@
     last_name: Chmielewska
     birth_date: 1957-12-14
     address: Chudowska 16, 53-633 Wrocław
-    PESEL: 57121481193
+    PESEL: 17121481193
     insurance_type: 2
     insurance_number: aktualny 
     phone: 888101646
     comment:
     user: 83
-    diseases:  
+      
 - model: Dentist.patient
   pk: 63
   fields:
@@ -873,13 +872,13 @@
     last_name: Wysocki
     birth_date: 1954-04-25
     address: Arsenał 58, 50-532 Wrocław
-    PESEL: 54042516894
+    PESEL: 14042516894
     insurance_type: 3
     insurance_number: aktualny 
     comment:
     phone: 603093677 
     user: 84
-    diseases: 
+     
 - model: Dentist.patient
   pk: 64
   fields:
@@ -893,7 +892,7 @@
     phone: 607578204
     comment:
     user: 85
-    diseases: 
+     
 - model: Dentist.patient
   pk: 65
   fields:
@@ -907,7 +906,7 @@
     phone: 666181698
     comment:
     user: 86
-    diseases: 
+     
 - model: Dentist.patient
   pk: 66
   fields:
@@ -921,7 +920,7 @@
     phone: 671221464
     comment:
     user: 87
-    diseases: 
+     
 - model: Dentist.patient
   pk: 67
   fields:
@@ -935,7 +934,7 @@
     phone: 788444773
     comment:
     user: 88
-    diseases: 
+     
 - model: Dentist.patient
   pk: 68
   fields:
@@ -949,7 +948,7 @@
     phone: 889415688 
     comment:
     user: 89
-    diseases: 
+     
 - model: Dentist.patient
   pk: 69
   fields:
@@ -957,13 +956,13 @@
     last_name: Kozłowski
     birth_date: 1936-11-14
     address: Kołobrzeska 105, 54-102 Wrocław
-	PESEL: 36111423597
+    PESEL: 36111423597
     insurance_type: 9
     insurance_number: aktualny 
     phone: 603716761
     comment:
     user: 90
-    diseases: 
+     
 - model: Dentist.patient
   pk: 70
   fields:
@@ -977,7 +976,7 @@
     phone: 604571468
     comment:
     user: 91
-    diseases: 
+     
 - model: Dentist.patient
   pk: 71
   fields:
@@ -985,13 +984,13 @@
     last_name: Kowalczyk
     birth_date: 1935-06-14
     address: Sanocka 40, 54-129 Wrocław
-    PESEL: 35061462005
+    PESEL: 25061462005
     insurance_type: 1
     insurance_number: aktualny 
     phone: 674649608
     comment: 
-    user: 88
-    diseases: 
+    user: 92
+     
 - model: Dentist.patient
   pk: 72
   fields:
@@ -1004,8 +1003,8 @@
     insurance_number: aktualny 
     phone: 661394158
     comment:
-    user: 89
-    diseases:  
+    user: 93
+      
 - model: Dentist.patient
   pk: 73
   fields:
@@ -1019,7 +1018,7 @@
     comment:
     phone: 511769453
     user: 94
-    diseases: 
+     
 - model: Dentist.patient
   pk: 74
   fields:
@@ -1033,7 +1032,7 @@
     phone: 886227343
     comment:
     user: 95
-    diseases: 
+     
 - model: Dentist.patient
   pk: 75
   fields:
@@ -1047,7 +1046,7 @@
     phone: 795316532 
     comment:
     user: 96 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 76
   fields:
@@ -1061,7 +1060,7 @@
     phone: 531671840
     comment:
     user: 97
-    diseases: 
+     
 - model: Dentist.patient
   pk: 77
   fields:
@@ -1075,7 +1074,7 @@
     phone: 791104890
     comment:
     user: 98
-    diseases: 
+     
 - model: Dentist.patient
   pk: 78
   fields:
@@ -1089,7 +1088,7 @@
     phone: 785828816 
     comment:
     user: 99
-    diseases: 
+     
 - model: Dentist.patient
   pk: 79
   fields:
@@ -1097,13 +1096,13 @@
     last_name: Dąbrowski
     birth_date: 1939-03-18
     address: Bitwy pod Lenino 54, 54-102 Wrocław
-	PESEL: 39031844769
+    PESEL: 39031844769
     insurance_type: 9
     insurance_number: aktualny 
     phone: 725692555
     comment:
     user: 100
-    diseases: 
+     
 - model: Dentist.patient
   pk: 80
   fields:
@@ -1117,7 +1116,7 @@
     phone: 519663077
     comment:
     user: 101
-    diseases: 
+     
 - model: Dentist.patient
   pk: 81
   fields:
@@ -1131,7 +1130,7 @@
     phone: 536725825
     comment: 
     user: 102
-    diseases: 
+     
 - model: Dentist.patient
   pk: 82
   fields:
@@ -1145,7 +1144,7 @@
     phone: 604614467
     comment:
     user: 103
-    diseases:  
+      
 - model: Dentist.patient
   pk: 83
   fields:
@@ -1159,7 +1158,7 @@
     comment:
     phone: 699819556 
     user: 104
-    diseases: 
+     
 - model: Dentist.patient
   pk: 84
   fields:
@@ -1173,7 +1172,7 @@
     phone: 699216914
     comment:
     user: 105
-    diseases: 
+     
 - model: Dentist.patient
   pk: 85
   fields:
@@ -1187,7 +1186,7 @@
     phone: 721114531 
     comment:
     user: 106 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 86
   fields:
@@ -1201,7 +1200,7 @@
     phone: 677850806
     comment:
     user: 107
-    diseases: 
+     
 - model: Dentist.patient
   pk: 87
   fields:
@@ -1215,7 +1214,7 @@
     phone: 538353817
     comment:
     user: 108
-    diseases: 
+     
 - model: Dentist.patient
   pk: 88
   fields:
@@ -1229,7 +1228,7 @@
     phone: 884016481 
     comment:
     user: 109
-    diseases: 
+     
 - model: Dentist.patient
   pk: 89
   fields:
@@ -1237,13 +1236,13 @@
     last_name: Nowakowska
     birth_date: 1968-12-03
     address: Gazdy 119, 54-102 Wrocław
-	PESEL: 68120366932
+    PESEL: 68120366932
     insurance_type: 9
     insurance_number: aktualny 
     phone: 678376592
     comment:
     user: 110
-    diseases: 
+     
 - model: Dentist.patient
   pk: 90
   fields:
@@ -1257,7 +1256,7 @@
     phone: 722410301
     comment:
     user: 111
-    diseases: 
+     
 - model: Dentist.patient
   pk: 91
   fields:
@@ -1271,11 +1270,11 @@
     phone: 798403956 
     comment: 
     user: 112
-    diseases: 
+     
 - model: Dentist.patient
   pk: 92
   fields:
-     first_name: Cibor
+    first_name: Cibor
     last_name: Majewski
     birth_date: 1981-06-11
     address: Dąbrowskiego Jarosława 3, 53-633 Wrocław
@@ -1285,7 +1284,7 @@
     phone: 602773559
     comment:
     user: 113
-    diseases:  
+      
 - model: Dentist.patient
   pk: 93
   fields:
@@ -1299,7 +1298,7 @@
     comment:
     phone: 664530862 
     user: 114
-    diseases: 
+     
 - model: Dentist.patient
   pk: 94
   fields:
@@ -1313,7 +1312,7 @@
     phone: 786622647
     comment:
     user: 115
-    diseases: 
+     
 - model: Dentist.patient
   pk: 95
   fields:
@@ -1327,7 +1326,7 @@
     phone: 666530862 
     comment:
     user: 116 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 96
   fields:
@@ -1341,7 +1340,7 @@
     phone: 512513584
     comment:
     user: 117
-    diseases: 
+     
 - model: Dentist.patient
   pk: 97
   fields:
@@ -1355,7 +1354,7 @@
     phone: 604256345
     comment:
     user: 118
-    diseases: 
+     
 - model: Dentist.patient
   pk: 98
   fields:
@@ -1369,7 +1368,7 @@
     phone: 881419408 
     comment:
     user: 119
-    diseases: 
+     
 - model: Dentist.patient
   pk: 99
   fields:
@@ -1377,13 +1376,13 @@
     last_name: Kaczmarek
     birth_date: 1946-01-01
     address: Łośnicka 138, 54-102 Wrocław
-	PESEL: 46010121249
+    PESEL: 46010121249
     insurance_type: 9
     insurance_number: aktualny 
     phone: 884354568
     comment:
     user: 120
-    diseases: 
+     
 - model: Dentist.patient
   pk: 100
   fields:
@@ -1397,7 +1396,7 @@
     phone: 538514908
     comment:
     user: 121
-    diseases: 
+     
 - model: Dentist.patient
   pk: 101
   fields:
@@ -1411,7 +1410,7 @@
     phone: 538914859
     comment: 
     user: 122
-    diseases: 
+     
 - model: Dentist.patient
   pk: 102
   fields:
@@ -1425,7 +1424,7 @@
     phone: 782625156
     comment:
     user: 123
-    diseases:  
+      
 - model: Dentist.patient
   pk: 103
   fields:
@@ -1439,7 +1438,7 @@
     comment:
     phone: 722281179 
     user: 124
-    diseases: 
+     
 - model: Dentist.patient
   pk: 104
   fields:
@@ -1453,7 +1452,7 @@
     phone: 534247012
     comment:
     user: 125
-    diseases: 
+     
 - model: Dentist.patient
   pk: 105
   fields:
@@ -1467,7 +1466,7 @@
     phone: 789673981 
     comment:
     user: 126 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 106
   fields:
@@ -1481,7 +1480,7 @@
     phone: 692916518
     comment:
     user: 127
-    diseases: 
+     
 - model: Dentist.patient
   pk: 107
   fields:
@@ -1495,7 +1494,7 @@
     phone: 677353699
     comment:
     user: 128
-    diseases: 
+     
 - model: Dentist.patient
   pk: 108
   fields:
@@ -1509,7 +1508,7 @@
     phone: 886533376 
     comment:
     user: 129
-    diseases: 
+     
 - model: Dentist.patient
   pk: 109
   fields:
@@ -1517,13 +1516,13 @@
     last_name: Walczak
     birth_date: 1953-10-20
     address: Świętokrzyska 140, 54-102 Wrocław
-	PESEL: 53102080919
+    PESEL: 53102080919
     insurance_type: 9
     insurance_number: aktualny 
     phone: 602011722
     comment:
     user: 130
-    diseases: 
+     
 - model: Dentist.patient
   pk: 110
   fields:
@@ -1537,7 +1536,7 @@
     phone: 794683972
     comment:
     user: 131
-    diseases: 
+     
 - model: Dentist.patient
   pk: 111
   fields:
@@ -1551,7 +1550,7 @@
     phone: 781289897
     comment: 
     user: 132
-    diseases: 
+     
 - model: Dentist.patient
   pk: 112
   fields:
@@ -1565,7 +1564,7 @@
     phone: 608304709
     comment:
     user: 133
-    diseases:  
+      
 - model: Dentist.patient
   pk: 113
   fields:
@@ -1579,7 +1578,7 @@
     comment:
     phone: 674692327 
     user: 134
-    diseases: 
+     
 - model: Dentist.patient
   pk: 114
   fields:
@@ -1593,7 +1592,7 @@
     phone: 661486953
     comment:
     user: 135
-    diseases: 
+     
 - model: Dentist.patient
   pk: 115
   fields:
@@ -1607,7 +1606,7 @@
     phone: 513792488 
     comment:
     user: 136 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 116
   fields:
@@ -1621,7 +1620,7 @@
     phone: 534838317 
     comment:
     user: 137
-    diseases: 
+     
 - model: Dentist.patient
   pk: 117
   fields:
@@ -1635,7 +1634,7 @@
     phone: 886476362
     comment:
     user: 138
-    diseases: 
+     
 - model: Dentist.patient
   pk: 118
   fields:
@@ -1649,7 +1648,7 @@
     phone: 536739842
     comment:
     user: 139
-    diseases: 
+     
 - model: Dentist.patient
   pk: 119
   fields:
@@ -1657,13 +1656,13 @@
     last_name: Wysocki
     birth_date: 1945-03-12
     address: Jutrzenki 133, 54-102 Wrocław
-	PESEL: 45031218732
+    PESEL: 45031218732
     insurance_type: 9
     insurance_number: aktualny 
     phone: 518254827
     comment:
     user: 140
-    diseases: 
+     
 - model: Dentist.patient
   pk: 120
   fields:
@@ -1677,7 +1676,7 @@
     phone: 537133694
     comment:
     user: 141
-    diseases: 
+     
 - model: Dentist.patient
   pk: 121
   fields:
@@ -1691,7 +1690,7 @@
     phone: 798805725
     comment: 
     user: 142
-    diseases: 
+     
 - model: Dentist.patient
   pk: 122
   fields:
@@ -1705,7 +1704,7 @@
     phone: 788333388
     comment:
     user: 143
-    diseases:  
+      
 - model: Dentist.patient
   pk: 123
   fields:
@@ -1719,7 +1718,7 @@
     comment:
     phone: 537250412
     user: 144
-    diseases: 
+     
 - model: Dentist.patient
   pk: 124
   fields:
@@ -1733,7 +1732,7 @@
     phone: 793865056
     comment:
     user: 145
-    diseases: 
+     
 - model: Dentist.patient
   pk: 125
   fields:
@@ -1747,7 +1746,7 @@
     phone: 539526117
     comment:
     user: 146 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 126
   fields:
@@ -1761,7 +1760,7 @@
     phone: 785086473
     comment:
     user: 147
-    diseases: 
+     
 - model: Dentist.patient
   pk: 127
   fields:
@@ -1775,7 +1774,7 @@
     phone: 883352440 
     comment:
     user: 148
-    diseases: 
+     
 - model: Dentist.patient
   pk: 128
   fields:
@@ -1789,7 +1788,7 @@
     phone: 799504711
     comment:
     user: 149
-    diseases: 
+     
 - model: Dentist.patient
   pk: 129
   fields:
@@ -1797,13 +1796,13 @@
     last_name: Pawlowski
     birth_date: 1974-01-05
     address: Reduta Miejska 119, 54-102 Wrocław
-	PESEL: 74010598699
+    PESEL: 74010598699
     insurance_type: 9
     insurance_number: aktualny 
     phone: 721957032
     comment:
     user: 150
-    diseases: 
+     
 - model: Dentist.patient
   pk: 130
   fields:
@@ -1817,7 +1816,7 @@
     phone: 512934935
     comment:
     user: 151
-    diseases: 
+     
 - model: Dentist.patient
   pk: 131
   fields:
@@ -1831,7 +1830,7 @@
     phone: 671451688
     comment: 
     user: 152
-    diseases: 
+     
 - model: Dentist.patient
   pk: 132
   fields:
@@ -1845,7 +1844,7 @@
     phone: 727030652
     comment:
     user: 153
-    diseases:  
+      
 - model: Dentist.patient
   pk: 133
   fields:
@@ -1859,7 +1858,7 @@
     comment:
     phone: 694190052
     user: 154
-    diseases: 
+     
 - model: Dentist.patient
   pk: 134
   fields:
@@ -1873,7 +1872,7 @@
     phone: 607038093 
     comment:
     user: 155
-    diseases: 
+     
 - model: Dentist.patient
   pk: 135
   fields:
@@ -1887,7 +1886,7 @@
     phone: 888015555
     comment:
     user: 156 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 136
   fields:
@@ -1901,7 +1900,7 @@
     phone: 532623814
     comment:
     user: 157
-    diseases: 
+     
 - model: Dentist.patient
   pk: 137
   fields:
@@ -1915,7 +1914,7 @@
     phone: 668947171
     comment:
     user: 158
-    diseases: 
+     
 - model: Dentist.patient
   pk: 138
   fields:
@@ -1929,7 +1928,7 @@
     phone: 602847689
     comment:
     user: 159
-    diseases: 
+     
 - model: Dentist.patient
   pk: 139
   fields:
@@ -1937,13 +1936,13 @@
     last_name: Chmielewski
     birth_date: 1942-11-30
     address: Czaki Hanki 54, 54-102 Wrocław
-	PESEL: 42113013786
+    PESEL: 42113013786
     insurance_type: 9
     insurance_number: aktualny 
     phone: 669913137
     comment:
     user: 160
-    diseases: 
+     
 - model: Dentist.patient
   pk: 140
   fields:
@@ -1957,7 +1956,7 @@
     phone: 607117604
     comment:
     user: 161
-    diseases: 
+     
 - model: Dentist.patient
   pk: 141
   fields:
@@ -1971,7 +1970,7 @@
     phone: 666024952
     comment: 
     user: 162
-    diseases: 
+     
 - model: Dentist.patient
   pk: 142
   fields:
@@ -1985,7 +1984,7 @@
     phone: 678244856
     comment:
     user: 163
-    diseases:  
+      
 - model: Dentist.patient
   pk: 143
   fields:
@@ -1999,7 +1998,7 @@
     comment:
     phone: 785841842
     user: 164
-    diseases: 
+     
 - model: Dentist.patient
   pk: 144
   fields:
@@ -2013,7 +2012,7 @@
     phone: 538228486
     comment:
     user: 165
-    diseases: 
+     
 - model: Dentist.patient
   pk: 145
   fields:
@@ -2027,7 +2026,7 @@
     phone: 518010976
     comment:
     user: 166 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 146
   fields:
@@ -2041,7 +2040,7 @@
     phone: 796089858 
     comment:
     user: 167
-    diseases: 
+     
 - model: Dentist.patient
   pk: 147
   fields:
@@ -2055,7 +2054,7 @@
     phone: 516308836
     comment:
     user: 168
-    diseases: 
+     
 - model: Dentist.patient
   pk: 148
   fields:
@@ -2069,7 +2068,7 @@
     phone: 671858632
     comment:
     user: 169
-    diseases: 
+     
 - model: Dentist.patient
   pk: 149
   fields:
@@ -2077,13 +2076,13 @@
     last_name: Ostrowska
     birth_date: 1936-04-17
     address: Rozdroże 141, 54-102 Wrocław
-	PESEL: 36041788867
+    PESEL: 36041788867
     insurance_type: 9
     insurance_number: aktualny 
     phone: 667412257
     comment:
     user: 170
-    diseases: 
+     
 - model: Dentist.patient
   pk: 150
   fields:
@@ -2097,7 +2096,7 @@
     phone: 885555287
     comment:
     user: 171
-    diseases: 
+     
 - model: Dentist.patient
   pk: 151
   fields:
@@ -2111,7 +2110,7 @@
     phone: 795840922
     comment: 
     user: 172
-    diseases: 
+     
 - model: Dentist.patient
   pk: 152
   fields:
@@ -2125,7 +2124,7 @@
     phone: 787469382
     comment:
     user: 173
-    diseases:  
+      
 - model: Dentist.patient
   pk: 153
   fields:
@@ -2139,7 +2138,7 @@
     comment:
     phone: 666778135 
     user: 174
-    diseases: 
+     
 - model: Dentist.patient
   pk: 154
   fields:
@@ -2153,7 +2152,7 @@
     phone: 602948009
     comment:
     user: 175
-    diseases: 
+     
 - model: Dentist.patient
   pk: 155
   fields:
@@ -2167,7 +2166,7 @@
     phone: 661959717
     comment:
     user: 176 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 156
   fields:
@@ -2181,7 +2180,7 @@
     phone: 787856606
     comment:
     user: 177
-    diseases: 
+     
 - model: Dentist.patient
   pk: 157
   fields:
@@ -2189,13 +2188,13 @@
     last_name: Pawlak
     birth_date: 1987-03-06
     address: Fordońska 71, 50-357 Wrocław
-    PESEL: 87030620385
+    PESEL: 47030620385
     insurance_type: 7
     insurance_number: aktualny 
     phone: 516308836
     comment:
     user: 178
-    diseases: 
+     
 - model: Dentist.patient
   pk: 158
   fields:
@@ -2203,13 +2202,13 @@
     last_name: Borkowski
     birth_date: 1975-02-10
     address: Opolska 108, 51-116 Wrocław
-    PESEL: 75021043288
+    PESEL: 55021043288
     insurance_type: 8
     insurance_number: aktualny 
     phone: 671858632
     comment:
     user: 179
-    diseases: 
+     
 - model: Dentist.patient
   pk: 159
   fields:
@@ -2217,13 +2216,13 @@
     last_name: Szczepański
     birth_date: 1936-04-17
     address: Rozdroże 141, 54-102 Wrocław
-	PESEL: 36041788867
+    PESEL: 36041488867
     insurance_type: 9
     insurance_number: aktualny 
     phone: 667412257
     comment:
     user: 180
-    diseases: 
+     
 - model: Dentist.patient
   pk: 160
   fields:
@@ -2231,13 +2230,13 @@
     last_name: Dudek
     birth_date: 1981-04-20
     address: Mieszka I 50, 50-456 Wrocław
-    PESEL: 81042076473
+    PESEL: 81042016473
     insurance_type: 10
     insurance_number: aktualny 
     phone: 885555287
     comment:
     user: 181
-    diseases: 
+     
 - model: Dentist.patient
   pk: 161
   fields:
@@ -2245,13 +2244,13 @@
     last_name: Walczak
     birth_date: 1953-07-20
     address: Toruńska 148, 54-129 Wrocław
-    PESEL: 53072004982
+    PESEL: 53072014982
     insurance_type: 1
     insurance_number: aktualny 
     phone: 795840922
     comment: 
     user: 182
-    diseases: 
+     
 - model: Dentist.patient
   pk: 162
   fields:
@@ -2259,13 +2258,13 @@
     last_name: Grabowski
     birth_date: 1959-09-20
     address: Ustrzycka 105, 53-633 Wrocław
-    PESEL: 59092051940
+    PESEL: 59092053940
     insurance_type: 2
     insurance_number: aktualny 
     phone: 787469382
     comment:
     user: 183
-    diseases:  
+      
 - model: Dentist.patient
   pk: 163
   fields:
@@ -2273,13 +2272,13 @@
     last_name: Sawicki
     birth_date: 1928-07-08
     address: Cedyńska 139, 50-532 Wrocław
-    PESEL: 28070869684
+    PESEL: 28070869664
     insurance_type: 3
     insurance_number: aktualny 
     comment:
     phone: 666778135 
     user: 184
-    diseases: 
+     
 - model: Dentist.patient
   pk: 164
   fields:
@@ -2287,13 +2286,13 @@
     last_name: Wieczorek
     birth_date: 1943-02-24
     address: Jeździecka 130, 50-505 Wrocław
-    PESEL: 43022400715
+    PESEL: 43022400705
     insurance_type: 4
     insurance_number: aktualny 
     phone: 602948009
     comment:
     user: 185
-    diseases: 
+     
 - model: Dentist.patient
   pk: 165
   fields:
@@ -2301,13 +2300,13 @@
     last_name: Kwiatkowski
     birth_date: 1960-08-30
     address: Czołgistów 42, 53-519 Wrocław
-    PESEL: 60083061237
+    PESEL: 60083061257
     insurance_type: 5
     insurance_number: aktualny 
     phone: 661959717
     comment:
     user: 186 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 166
   fields:
@@ -2315,13 +2314,13 @@
     last_name: Górska
     birth_date: 1938-02-09
     address: Sosnowa 101, 51-628 Wrocław;
-    PESEL: 38020989100
+    PESEL: 38020989130
     insurance_type: 6
     insurance_number: aktualny 
     phone: 787856606
     comment:
     user: 187
-    diseases: 
+     
 - model: Dentist.patient
   pk: 167
   fields:
@@ -2329,13 +2328,13 @@
     last_name: Dąbrowska
     birth_date: 1955-07-22
     address: Świętego Leonarda 106, 50-357 Wrocław
-    PESEL: 55072205479
+    PESEL: 55072205439
     insurance_type: 7
     insurance_number: aktualny 
     phone: 723679233
     comment:
     user: 188
-    diseases: 
+     
 - model: Dentist.patient
   pk: 168
   fields:
@@ -2343,13 +2342,13 @@
     last_name: Szczepański
     birth_date: 1929-05-10
     address: Tarnowska 143, 51-116 Wrocław
-    PESEL: 29051042429
+    PESEL: 29051042459
     insurance_type: 8
     insurance_number: aktualny 
     phone: 785288428 
     comment:
     user: 189
-    diseases: 
+     
 - model: Dentist.patient
   pk: 169
   fields:
@@ -2357,13 +2356,13 @@
     last_name: Adamska
     birth_date: 1932-01-10
     address: Migdałowa 131, 54-102 Wrocław
-	PESEL: 32011081099
+    PESEL: 32011081079
     insurance_type: 9
     insurance_number: aktualny 
     phone: 887899072
     comment:
     user: 190
-    diseases: 
+     
 - model: Dentist.patient
   pk: 170
   fields:
@@ -2371,14 +2370,14 @@
     last_name: Ostrowska
     birth_date: 1946-02-09
     address: Międzyborska 40, 50-456 Wrocław
-    PESEL: 46020980915
+    PESEL: 46020980965
     insurance_type: 10
     insurance_number: aktualny 
     phone: 602228754
     comment:
     user: 191
-    diseases: 
-    - model: Dentist.patient
+     
+- model: Dentist.patient
   pk: 171
   fields:
     first_name: Augustyn
@@ -2391,7 +2390,7 @@
     phone: 605167580
     comment: 
     user: 192
-    diseases: 
+     
 - model: Dentist.patient
   pk: 172
   fields:
@@ -2405,7 +2404,7 @@
     phone: 661590524
     comment:
     user: 193
-    diseases:  
+      
 - model: Dentist.patient
   pk: 173
   fields:
@@ -2419,7 +2418,7 @@
     comment:
     phone: 798945392 
     user: 194
-    diseases: 
+     
 - model: Dentist.patient
   pk: 174
   fields:
@@ -2433,7 +2432,7 @@
     phone: 883156406
     comment:
     user: 195
-    diseases: 
+     
 - model: Dentist.patient
   pk: 175
   fields:
@@ -2447,7 +2446,7 @@
     phone: 698981547
     comment:
     user: 196 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 176
   fields:
@@ -2461,7 +2460,7 @@
     phone: 798499535
     comment:
     user: 197
-    diseases: 
+     
 - model: Dentist.patient
   pk: 177
   fields:
@@ -2475,7 +2474,7 @@
     phone: 518377511
     comment:
     user: 198
-    diseases: 
+     
 - model: Dentist.patient
   pk: 178
   fields:
@@ -2489,7 +2488,7 @@
     phone: 673423531
     comment:
     user: 199
-    diseases: 
+     
 - model: Dentist.patient
   pk: 179
   fields:
@@ -2497,13 +2496,13 @@
     last_name: Dąbrowski
     birth_date: 1970-08-12
     address: Czajkowskiego Piotra 107, 54-102 Wrocław
-	PESEL: 70081213697
+    PESEL: 70081213697
     insurance_type: 9
     insurance_number: aktualny 
     phone: 519259508 
     comment:
     user: 200
-    diseases: 
+     
 - model: Dentist.patient
   pk: 180
   fields:
@@ -2517,7 +2516,7 @@
     phone: 882818614
     comment:
     user: 201
-    diseases: 
+     
 - model: Dentist.patient
   pk: 181
   fields:
@@ -2531,7 +2530,7 @@
     phone: 787655571
     comment: 
     user: 202
-    diseases: 
+     
 - model: Dentist.patient
   pk: 182
   fields:
@@ -2545,7 +2544,7 @@
     phone: 886400709
     comment:
     user: 203
-    diseases:  
+      
 - model: Dentist.patient
   pk: 183
   fields:
@@ -2559,7 +2558,7 @@
     comment:
     phone: 698271869 
     user: 204
-    diseases: 
+     
 - model: Dentist.patient
   pk: 184
   fields:
@@ -2573,7 +2572,7 @@
     phone: 782387606
     comment:
     user: 205
-    diseases: 
+     
 - model: Dentist.patient
   pk: 185
   fields:
@@ -2587,7 +2586,7 @@
     phone: 512745988 
     comment:
     user: 206 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 186
   fields:
@@ -2601,7 +2600,7 @@
     phone: 667908441
     comment:
     user: 207
-    diseases: 
+     
 - model: Dentist.patient
   pk: 187
   fields:
@@ -2615,7 +2614,7 @@
     phone: 606791109
     comment:
     user: 208
-    diseases: 
+     
 - model: Dentist.patient
   pk: 188
   fields:
@@ -2629,7 +2628,7 @@
     phone: 728598006
     comment:
     user: 209
-    diseases: 
+     
 - model: Dentist.patient
   pk: 189
   fields:
@@ -2637,13 +2636,13 @@
     last_name: Olszewska
     birth_date: 1937-07-23
     address: Dobka z Oleśnicy 37, 54-102 Wrocław
-	PESEL: 37072365999
+    PESEL: 37072365999
     insurance_type: 9
     insurance_number: aktualny 
     phone: 514102985
     comment:
     user: 210
-    diseases: 
+     
 - model: Dentist.patient
   pk: 190
   fields:
@@ -2657,7 +2656,7 @@
     phone: 789377363
     comment:
     user: 211
-    diseases: 
+     
 - model: Dentist.patient
   pk: 191
   fields:
@@ -2671,7 +2670,7 @@
     phone: 531292168
     comment: 
     user: 212
-    diseases: 
+     
 - model: Dentist.patient
   pk: 192
   fields:
@@ -2685,7 +2684,7 @@
     phone: 532426479
     comment:
     user: 213
-    diseases:  
+      
 - model: Dentist.patient
   pk: 193
   fields:
@@ -2699,7 +2698,7 @@
     comment:
     phone: 793410412
     user: 214
-    diseases: 
+     
 - model: Dentist.patient
   pk: 194
   fields:
@@ -2713,7 +2712,7 @@
     phone: 723819635
     comment:
     user: 215
-    diseases: 
+     
 - model: Dentist.patient
   pk: 195
   fields:
@@ -2727,7 +2726,7 @@
     phone: 512444758
     comment:
     user: 216 
-    diseases: 
+     
 - model: Dentist.patient
   pk: 196
   fields:
@@ -2741,7 +2740,7 @@
     phone: 795883234
     comment:
     user: 217
-    diseases: 
+     
 - model: Dentist.patient
   pk: 197
   fields:
@@ -2755,7 +2754,7 @@
     phone: 662282957
     comment:
     user: 218
-    diseases: 
+     
 - model: Dentist.patient
   pk: 198
   fields:
@@ -2769,7 +2768,7 @@
     phone: 693052095
     comment:
     user: 219
-    diseases: 
+     
 - model: Dentist.patient
   pk: 199
   fields:
@@ -2777,13 +2776,13 @@
     last_name: Nowakowska
     birth_date: 1985-10-24
     address: Mickiewicza Adama 34, 54-102 Wrocław
-	PESEL: 85102478838
+    PESEL: 85102478838
     insurance_type: 9
     insurance_number: aktualny 
     phone: 537105804
     comment:
     user: 220
-    diseases: 
+     
 - model: Dentist.patient
   pk: 200
   fields:
@@ -2797,4 +2796,4 @@
     phone: 677652459
     comment:
     user: 221
-    diseases: 
+     
