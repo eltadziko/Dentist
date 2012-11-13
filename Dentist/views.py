@@ -12,6 +12,7 @@ from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
 from forms.patient_user_form import PatientUserForm
+from forms.generate_dates_form import GenerateDatesForm
 from forms.register_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
@@ -453,3 +454,61 @@ def day_graphic(request):
         date = date.strftime("%Y-%m-%d")
 
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office})
+
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+def dates_addition(request):
+    if request.POST:
+        if 'generate_submit' in request.POST.keys():
+            office = request.POST['office']
+            dentist_man = request.POST['dentist_man']
+            begin = request.POST['begin']
+            end = request.POST['end']
+            exclude = request.POST['exclude']
+            exclude_string_list = []
+            exclude_date_list = []
+            if exclude != "":
+                exclude_string_list = exclude.split(',')
+                for el in exclude_string_list:
+                    element = datetime.datetime.fromtimestamp(time.mktime(time.strptime(el, "%Y-%m-%d")))
+                    exclude_date_list.append(element)
+            if office!="" and dentist_man!="" and begin!="" and end!="":
+                begin = datetime.datetime.fromtimestamp(time.mktime(time.strptime(begin, "%Y-%m-%d")))
+                end = datetime.datetime.fromtimestamp(time.mktime(time.strptime(end, "%Y-%m-%d")))
+                hh = hours.objects.filter(dentist__id=dentist_man, dental_office__id=office)
+                for h in hh:
+                    date_start = begin
+                    while date_start.weekday()+1 != h.week_day and date_start<=end:
+                        date_start += datetime.timedelta(days=1) 
+                    while date_start <= end:
+                        if exclude_date_list.count(date_start) == 0:
+                            time_start = h.begin
+                            while time_start < h.end:
+                                end_time = datetime.datetime(1,1,1,time_start.hour,time_start.minute,time_start.second)
+                                end_time += datetime.timedelta(minutes=15)
+                                end_time = end_time.time()
+                                date_dentist = dates(date = date_start,
+                                                     begin = time_start,
+                                                     end = end_time,
+                                                     dentist = dentist.objects.get(id=request.POST['dentist_man']),
+                                                     dental_office = dental_office.objects.get(id=request.POST['office']),
+                                                     room = h.room)
+                                date_dentist.save()
+                                time_start = end_time
+                            date_start += datetime.timedelta(days=7)
+                        else:
+                            date_start += datetime.timedelta(days=7)
+                form = GenerateDatesForm(3, -1) #pic na wode, fotomontaz
+            elif dentist_man!="":
+                form = GenerateDatesForm(request.POST['office'], dentist_man)
+            else:
+                form = GenerateDatesForm(request.POST['office'], -1) 
+        elif 'office' in request.POST.keys():
+            if 'dentist_man' in request.POST.keys():
+                form = GenerateDatesForm(request.POST['office'], request.POST['dentist_man'])
+            else:
+                form = GenerateDatesForm(request.POST['office'], -1)        
+    else:
+        offices = dental_office.objects.all()
+        form = GenerateDatesForm(offices[0].id, -1)
+    return render(request, 'dates_addition.html', {'form': form})

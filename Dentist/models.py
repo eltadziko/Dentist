@@ -81,6 +81,8 @@ class patient_diseases(models.Model):
 class dental_office(models.Model):
     name = models.CharField("Nazwa", max_length=30, blank=True, null=True)
     address = models.CharField("Adres", max_length=100)
+    phone = models.CharField("Telefon", max_length=9)
+    email = models.EmailField("Email")
     description = models.TextField("O gabinecie", blank=True, null=True)
 
     class Meta:
@@ -119,6 +121,7 @@ class dates(models.Model):
     class Meta:
         verbose_name = "Termin"
         verbose_name_plural = "Terminy"
+        unique_together = (("date", "begin", "end", "dentist"),)
 
     def __unicode__(self):
         return u'%s' % (self.date)
