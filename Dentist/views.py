@@ -482,19 +482,15 @@ def dates_addition(request):
                         date_start += datetime.timedelta(days=1) 
                     while date_start <= end:
                         if exclude_date_list.count(date_start) == 0:
-                            time_start = h.begin
-                            while time_start < h.end:
-                                end_time = datetime.datetime(1,1,1,time_start.hour,time_start.minute,time_start.second)
-                                end_time += datetime.timedelta(minutes=15)
-                                end_time = end_time.time()
-                                date_dentist = dates(date = date_start,
-                                                     begin = time_start,
-                                                     end = end_time,
-                                                     dentist = dentist.objects.get(id=request.POST['dentist_man']),
-                                                     dental_office = dental_office.objects.get(id=request.POST['office']),
-                                                     room = h.room)
-                                date_dentist.save()
-                                time_start = end_time
+                            
+                            date_dentist = dates(date = date_start,
+                                                 begin = h.begin,
+                                                 end = h.end,
+                                                 dentist = dentist.objects.get(id=request.POST['dentist_man']),
+                                                 dental_office = dental_office.objects.get(id=request.POST['office']),
+                                                 room = h.room)
+                            date_dentist.save()
+
                             date_start += datetime.timedelta(days=7)
                         else:
                             date_start += datetime.timedelta(days=7)
