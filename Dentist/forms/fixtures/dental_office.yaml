@@ -1,0 +1,18 @@
+- model: Dentist.dental_office
+  pk: 1
+  fields:
+    name: Centrum Stomatologii  
+    address: ul. Bolesława Krzywoustego 19b, Wrocław
+    description: Prywatna Praktyka Stomatologiczna, specjalizacja - chirurgia, zachowawcza, protetyka.
+- model: Dentist.dental_office
+  pk: 2
+  fields:
+    name: ALL-DENT
+    address: ul. Partynicka 32E, Wrocław
+    description: Lekarze dentyści oferują pełny zakres usług w dziedzinie stomatologii.
+- model: Dentist.dental_office
+  pk: 3
+  fields:
+    name: AMF Gabinet Stomatologiczny
+    address:  ul. Widok 1 /13, Wrocław
+    description: Gabinet stomatologiczny.

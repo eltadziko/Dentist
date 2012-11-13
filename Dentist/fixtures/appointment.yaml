@@ -7,22 +7,22 @@
     dentist: 1
     patient: 1
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 2
   fields:
     date: 2012-11-05
-    hour: 8:30
+    hour: 9:00
     description: 
     dentist: 1
     patient: 2
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 3
   fields:
     date: 2012-11-05
-    hour: 9:00
+    hour: 11:00
     description: 
     dentist: 1
     patient: 3
@@ -32,7 +32,7 @@
   pk: 4
   fields:
     date: 2012-11-05
-    hour: 10:00
+    hour: 12:00
     description: 
     dentist: 1
     patient: 4
@@ -42,7 +42,7 @@
   pk: 5
   fields:
     date: 2012-11-05
-    hour: 11:00
+    hour: 13:00
     description: 
     dentist: 1
     patient: 5
@@ -52,7 +52,7 @@
   pk: 6
   fields:
     date: 2012-11-05
-    hour: 12:00
+    hour: 14:00
     description: 
     dentist: 1
     patient: 6
@@ -62,7 +62,7 @@
   pk: 7
   fields:
     date: 2012-11-05
-    hour: 13:00
+    hour: 15:00
     description: 
     dentist: 1
     patient: 7
@@ -72,9 +72,9 @@
   pk: 8
   fields:
     date: 2012-11-05
-    hour: 14:00
+    hour: 12:00
     description: 
-    dentist: 1
+    dentist: 2
     patient: 8
     dental_office: 1
     appointment_type: 3
@@ -82,27 +82,27 @@
   pk: 9
   fields:
     date: 2012-11-05 
-    hour: 15:00
+    hour: 13:00
     description: 
-    dentist: 1
+    dentist: 2
     patient: 9
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 10
   fields:
     date: 2012-11-05
-    hour: 15:30
+    hour: 14:00
     description: 
-    dentist: 1
+    dentist: 2
     patient: 10
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 11
   fields:
     date: 2012-11-05
-    hour: 12:00
+    hour: 15:00
     description: 
     dentist: 2
     patient: 11
@@ -112,29 +112,29 @@
   pk: 12
   fields:
     date: 2012-11-05
-    hour: 13:00
+    hour: 16:00
     description: 
     dentist: 2
     patient: 12
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 13
   fields:
     date: 2012-11-05
-    hour: 13:30
+    hour: 17:00
     description: 
     dentist: 2
     patient: 13
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 14
   fields:
     date: 2012-11-05
-    hour: 14:00
+    hour: 8:00
     description: 
-    dentist: 2
+    dentist: 3
     patient: 14
     dental_office: 1
     appointment_type: 3
@@ -142,9 +142,9 @@
   pk: 15
   fields:
     date: 2012-11-05
-    hour: 15:00
+    hour: 9:00
     description: 
-    dentist: 2
+    dentist: 3
     patient: 15
     dental_office: 1
     appointment_type: 3
@@ -152,39 +152,39 @@
   pk: 16
   fields:
     date: 2012-11-05
-    hour: 16:00
+    hour: 10:00
     description: 
-    dentist: 2
+    dentist: 3
     patient: 16
     dental_office: 3
-    appointment_type: 1
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 17
   fields:
     date: 2012-11-05
-    hour: 16:15
+    hour: 11:00
     description: 
-    dentist: 2
+    dentist: 3
     patient: 17
     dental_office: 1
-    appointment_type: 2 
+    appointment_type: 3 
 - model: Dentist.appointment
   pk: 18
   fields:
     date: 2012-11-05
-    hour: 16:45
+    hour: 12:00
     description: 
-    dentist: 2
+    dentist: 3
     patient: 18
     dental_office: 1
-    appointment_type: 1
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 19
   fields:
     date: 2012-11-05
-    hour: 17:00
+    hour: 13:00
     description: 
-    dentist: 7
+    dentist: 3
     patient: 19
     dental_office: 1
     appointment_type: 3
@@ -192,7 +192,7 @@
   pk: 20
   fields:
     date: 2012-11-05
-    hour: 8:00
+    hour: 14:00
     description: 
     dentist: 3
     patient: 20
@@ -202,19 +202,19 @@
   pk: 21
   fields:
     date: 2012-11-05
-    hour: 9:00
+    hour: 15:00
     description: 
     dentist: 3
     patient: 21
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 22
   fields:
     date: 2012-11-05
-    hour: 10:00
+    hour: 7:30
     description: 
-    dentist: 3
+    dentist: 4
     patient: 22
     dental_office: 1
     appointment_type: 3
@@ -222,9 +222,9 @@
   pk: 23
   fields:
     date: 2012-11-05
-    hour: 11:00
+    hour: 8:30
     description: 
-    dentist: 3
+    dentist: 4
     patient: 23
     dental_office: 1
     appointment_type: 3 
@@ -232,9 +232,9 @@
   pk: 24
   fields:
     date: 2012-11-05
-    hour: 12:00
+    hour: 9:30
     description: 
-    dentist: 3
+    dentist: 4
     patient: 24
     dental_office: 1
     appointment_type: 3
@@ -242,9 +242,9 @@
   pk: 25
   fields:
     date: 2012-11-05
-    hour: 13:00
+    hour: 10:30
     description: 
-    dentist: 3
+    dentist: 4
     patient: 25
     dental_office: 1
     appointment_type: 3
@@ -252,99 +252,99 @@
   pk: 26
   fields:
     date: 2012-11-05
-    hour: 14:00
+    hour: 11:30
     description: 
-    dentist: 3
+    dentist: 4
     patient: 26
     dental_office: 1
-    appointment_type: 3
+    appointment_type: 2
 - model: Dentist.appointment
   pk: 27
   fields:
     date: 2012-11-05
-    hour: 15:00
+    hour: 12:00
     description: 
-    dentist: 3
+    dentist: 4
     patient: 27
     dental_office: 1
-    appointment_type: 3
+    appointment_type: 2
 - model: Dentist.appointment
   pk: 28
   fields:
-    date: 2012-11-05
-    hour: 7:30
+    date: 2012-11-06
+    hour: 8:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 28
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 29
   fields:
-    date: 2012-11-05
-    hour: 8:00
+    date: 2012-11-06
+    hour: 9:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 29
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 30
   fields:
-    date: 2012-11-05
-    hour: 8:30
+    date: 2012-11-06
+    hour: 10:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 30
     dental_office: 1
-    appointment_type: 2 
+    appointment_type: 3 
 - model: Dentist.appointment
   pk: 31
   fields:
-    date: 2012-11-05
-    hour: 9:00
+    date: 2012-11-06
+    hour: 11:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 31
     dental_office: 1
     appointment_type: 3
 - model: Dentist.appointment
   pk: 32
   fields:
-    date: 2012-11-05
-    hour: 10:00
+    date: 2012-11-06
+    hour: 13:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 32
     dental_office: 1
     appointment_type: 3
 - model: Dentist.appointment
   pk: 33
   fields:
-    date: 2012-11-05
-    hour: 11:00
+    date: 2012-11-06
+    hour: 14:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 33
     dental_office: 1
     appointment_type: 3
 - model: Dentist.appointment
   pk: 34
   fields:
-    date: 2012-11-05
-    hour: 12:00
+    date: 2012-11-06
+    hour: 15:00
     description: 
-    dentist: 4
+    dentist: 5
     patient: 34
     dental_office: 1
-    appointment_type: 2
+    appointment_type: 3
 - model: Dentist.appointment
   pk: 35
   fields:
     date: 2012-11-06
-    hour: 8:00
+    hour: 12:00
     description: 
-    dentist: 5
+    dentist: 6
     patient: 35
     dental_office: 1
     appointment_type: 3
@@ -352,9 +352,9 @@
   pk: 36
   fields:
     date: 2012-11-06
-    hour: 9:00
+    hour: 13:00
     description: 
-    dentist: 5
+    dentist: 6
     patient: 36
     dental_office: 1
     appointment_type: 3
@@ -362,9 +362,9 @@
   pk: 37
   fields:
     date: 2012-11-06
-    hour: 10:00
+    hour: 14:00
     description: 
-    dentist: 5
+    dentist: 6
     patient: 37
     dental_office: 1
     appointment_type: 3
@@ -372,9 +372,4759 @@
   pk: 38
   fields:
     date: 2012-11-06
-    hour: 11:00
+    hour: 15:00
     description: 
-    dentist: 5
+    dentist: 6
     patient: 38
     dental_office: 1
     appointment_type: 3
+- model: Dentist.appointment
+  pk: 39
+  fields:
+    date: 2012-11-06
+    hour: 16:00
+    description: 
+    dentist: 6
+    patient: 39
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 40
+  fields:
+    date: 2012-11-06
+    hour: 17:00
+    description: 
+    dentist: 6
+    patient: 40
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 41
+  fields:
+    date: 2012-11-06
+    hour: 8:00
+    description: 
+    dentist: 7
+    patient: 41
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 42
+  fields:
+    date: 2012-11-06
+    hour: 9:00
+    description: 
+    dentist: 7
+    patient: 42
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 43
+  fields:
+    date: 2012-11-06
+    hour: 10:00
+    description: 
+    dentist: 7
+    patient: 43
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 44
+  fields:
+    date: 2012-11-06
+    hour: 11:00
+    description: 
+    dentist: 7
+    patient: 44
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 45
+  fields:
+    date: 2012-11-06
+    hour: 12:00
+    description: 
+    dentist: 7 
+    patient: 45
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 46
+  fields:
+    date: 2012-11-06
+    hour: 13:00
+    description: 
+    dentist: 7 
+    patient: 46
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 47
+  fields:
+    date: 2012-11-06
+    hour: 14:00
+    description: 
+    dentist: 8 
+    patient: 47
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 48
+  fields:
+    date: 2012-11-06
+    hour: 15:00
+    description: 
+    dentist: 8 
+    patient: 48
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 49
+  fields:
+    date: 2012-11-07
+    hour: 8:00
+    description: 
+    dentist: 9
+    patient: 49
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 50
+  fields:
+    date: 2012-11-07
+    hour: 9:00
+    description: 
+    dentist: 9
+    patient: 50
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 51
+  fields:
+    date: 2012-11-07
+    hour: 11:00
+    description: 
+    dentist: 9
+    patient: 51
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 52
+  fields:
+    date: 2012-11-07
+    hour: 12:00
+    description: 
+    dentist: 9
+    patient: 52
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 53
+  fields:
+    date: 2012-11-07
+    hour: 13:00
+    description: 
+    dentist: 9
+    patient: 53
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 54
+  fields:
+    date: 2012-11-07
+    hour: 14:00
+    description: 
+    dentist: 9 
+    patient: 54
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 55
+  fields:
+    date: 2012-11-07
+    hour: 15:00
+    description: 
+    dentist: 9 
+    patient: 55
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 56
+  fields:
+    date: 2012-11-07
+    hour: 12:00
+    description: 
+    dentist: 10 
+    patient: 56
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 57
+  fields:
+    date: 2012-11-07
+    hour: 13:00
+    description: 
+    dentist: 10 
+    patient: 57
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 58
+  fields:
+    date: 2012-11-07
+    hour: 14:00
+    description: 
+    dentist: 10
+    patient: 58
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 59
+  fields:
+    date: 2012-11-07
+    hour: 15:00
+    description: 
+    dentist: 10
+    patient: 59
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 60
+  fields:
+    date: 2012-11-07
+    hour: 16:00
+    description: 
+    dentist: 10
+    patient: 60
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 61
+  fields:
+    date: 2012-11-07
+    hour: 17:00
+    description: 
+    dentist: 10 
+    patient: 61
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 62
+  fields:
+    date: 2012-11-07
+    hour: 8:00
+    description: 
+    dentist: 11
+    patient: 62
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 63
+  fields:
+    date: 2012-11-07
+    hour: 9:00
+    description: 
+    dentist: 11
+    patient: 63
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 64
+  fields:
+    date: 2012-11-07
+    hour: 10:00
+    description: 
+    dentist: 11
+    patient: 64
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 65
+  fields:
+    date: 2012-11-07
+    hour: 11:00
+    description: 
+    dentist: 11
+    patient: 65
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 66
+  fields:
+    date: 2012-11-07
+    hour: 12:00
+    description: 
+    dentist: 11 
+    patient: 66
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 67
+  fields:
+    date: 2012-11-07
+    hour: 13:00
+    description: 
+    dentist: 11 
+    patient: 67
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 68
+  fields:
+    date: 2012-11-07
+    hour: 14:00
+    description: 
+    dentist: 11 
+    patient: 68
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 69
+  fields:
+    date: 2012-11-07
+    hour: 15:00
+    description: 
+    dentist: 11 
+    patient: 69
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 70
+  fields:
+    date: 2012-11-07
+    hour: 7:30
+    description: 
+    dentist: 12
+    patient: 70
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 71
+  fields:
+    date: 2012-11-07
+    hour: 8:30
+    description: 
+    dentist: 12 
+    patient: 71
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 72
+  fields:
+    date: 2012-11-07
+    hour: 9:30
+    description: 
+    dentist: 12
+    patient: 72
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 73
+  fields:
+    date: 2012-11-07
+    hour: 10:30
+    description: 
+    dentist: 12
+    patient: 73
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 74
+  fields:
+    date: 2012-11-07
+    hour: 11:30
+    description: 
+    dentist: 12
+    patient: 74
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 75
+  fields:
+    date: 2012-11-07
+    hour: 12:00
+    description: 
+    dentist: 12
+    patient: 75
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 76
+  fields:
+    date: 2012-11-08
+    hour: 8:00
+    description: 
+    dentist: 13 
+    patient: 76
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 77
+  fields:
+    date: 2012-11-08
+    hour: 9:00
+    description: 
+    dentist: 13 
+    patient: 77
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 78
+  fields:
+    date: 2012-11-08
+    hour: 11:00
+    description: 
+    dentist: 13 
+    patient: 78
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 79
+  fields:
+    date: 2012-11-08
+    hour: 12:00
+    description: 
+    dentist: 13 
+    patient: 79
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 80
+  fields:
+    date: 2012-11-08
+    hour: 13:00
+    description: 
+    dentist: 13
+    patient: 80
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 81
+  fields:
+    date: 2012-11-08
+    hour: 14:00
+    description: 
+    dentist: 13 
+    patient: 81
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 82
+  fields:
+    date: 2012-11-08
+    hour: 15:00
+    description: 
+    dentist: 13
+    patient: 82
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 83
+  fields:
+    date: 2012-11-08
+    hour: 12:00
+    description: 
+    dentist: 14 
+    patient: 83
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 84
+  fields:
+    date: 2012-11-08
+    hour: 13:00
+    description: 
+    dentist: 14
+    patient: 84
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 85
+  fields:
+    date: 2012-11-08
+    hour: 14:00
+    description: 
+    dentist: 14
+    patient: 85
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 86
+  fields:
+    date: 2012-11-08
+    hour: 15:00
+    description: 
+    dentist: 14
+    patient: 86
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 87
+  fields:
+    date: 2012-11-08
+    hour: 16:00
+    description: 
+    dentist: 14
+    patient: 87
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 88
+  fields:
+    date: 2012-11-08
+    hour: 17:00
+    description: 
+    dentist: 14
+    patient: 88
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 89
+  fields:
+    date: 2012-11-08
+    hour: 8:00
+    description: 
+    dentist: 15 
+    patient: 89
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 90
+  fields:
+    date: 2012-11-08
+    hour: 9:00
+    description: 
+    dentist: 15
+    patient: 90
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 91
+  fields:
+    date: 2012-11-08
+    hour: 10:00
+    description: 
+    dentist: 15 
+    patient: 91
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 92
+  fields:
+    date: 2012-11-08
+    hour: 11:00
+    description: 
+    dentist: 15
+    patient: 92
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 93
+  fields:
+    date: 2012-11-08
+    hour: 12:00
+    description: 
+    dentist: 15 
+    patient: 93 
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 94
+  fields:
+    date: 2012-11-08
+    hour: 13:00
+    description: 
+    dentist: 15 
+    patient: 94
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 95
+  fields:
+    date: 2012-11-08
+    hour: 14:00
+    description: 
+    dentist: 15 
+    patient: 95
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 96
+  fields:
+    date: 2012-11-08
+    hour: 15:00
+    description: 
+    dentist: 15
+    patient: 96
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 97
+  fields:
+    date: 2012-11-08
+    hour: 7:30
+    description: 
+    dentist: 16
+    patient: 97
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 98
+  fields:
+    date: 2012-11-08
+    hour: 8:30
+    description: 
+    dentist: 16
+    patient: 98
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 99
+  fields:
+    date: 2012-11-08
+    hour: 9:30
+    description: 
+    dentist: 16
+    patient: 99
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 100
+  fields:
+    date: 2012-11-08
+    hour: 10:30
+    description: 
+    dentist: 16
+    patient: 100
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 101
+  fields:
+    date: 2012-11-08
+    hour: 11:30
+    description: 
+    dentist: 16
+    patient: 101
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 102
+  fields:
+    date: 2012-11-08
+    hour: 12:00
+    description: 
+    dentist: 16
+    patient: 102
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 103
+  fields:
+    date: 2012-11-09
+    hour: 8:00
+    description: 
+    dentist: 17 
+    patient: 103
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 104
+  fields:
+    date: 2012-11-09
+    hour: 9:00
+    description: 
+    dentist: 17 
+    patient: 104
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 105
+  fields:
+    date: 2012-11-09
+    hour: 11:00
+    description: 
+    dentist: 17
+    patient: 105
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 106
+  fields:
+    date: 2012-11-09
+    hour: 12:00
+    description: 
+    dentist: 17
+    patient: 106
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 107
+  fields:
+    date: 2012-11-09
+    hour: 13:00
+    description: 
+    dentist: 17
+    patient: 107
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 108
+  fields:
+    date: 2012-11-09
+    hour: 14:00
+    description: 
+    dentist: 17
+    patient: 108
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 109
+  fields:
+    date: 2012-11-09
+    hour: 15:00
+    description: 
+    dentist: 17
+    patient: 109
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 110
+  fields:
+    date: 2012-11-09
+    hour: 12:00
+    description: 
+    dentist: 18
+    patient: 110
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 111
+  fields:
+    date: 2012-11-09
+    hour: 13:00
+    description: 
+    dentist: 18
+    patient: 111
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 112
+  fields:
+    date: 2012-11-09
+    hour: 14:00
+    description: 
+    dentist: 18
+    patient: 112
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 113
+  fields:
+    date: 2012-11-09
+    hour: 15:00
+    description: 
+    dentist: 18
+    patient: 113
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 114
+  fields:
+    date: 2012-11-09
+    hour: 16:00
+    description: 
+    dentist: 18
+    patient: 114
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 115
+  fields:
+    date: 2012-11-09
+    hour: 17:00
+    description: 
+    dentist: 18 
+    patient: 115
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 116
+  fields:
+    date: 2012-11-09
+    hour: 8:00
+    description: 
+    dentist: 19 
+    patient: 116
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 117
+  fields:
+    date: 2012-11-09
+    hour: 9:00
+    description: 
+    dentist: 19
+    patient: 117
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 118
+  fields:
+    date: 2012-11-09
+    hour: 10:00
+    description: 
+    dentist: 19 
+    patient: 118
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 119
+  fields:
+    date: 2012-11-09
+    hour: 11:00
+    description: 
+    dentist: 19 
+    patient: 119
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 120
+  fields:
+    date: 2012-11-09
+    hour: 12:00
+    description: 
+    dentist: 19
+    patient: 120
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 121
+  fields:
+    date: 2012-11-09
+    hour: 13:00
+    description: 
+    dentist: 19 
+    patient: 121
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 122
+  fields:
+    date: 2012-11-09
+    hour: 15:00
+    description: 
+    dentist: 19
+    patient: 122
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 123
+  fields:
+    date: 2012-11-09
+    hour: 7:30
+    description: 
+    dentist: 20 
+    patient: 123
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 124
+  fields:
+    date: 2012-11-09
+    hour: 8:30
+    description: 
+    dentist: 20
+    patient: 124
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 125
+  fields:
+    date: 2012-11-09
+    hour: 9:30
+    description: 
+    dentist: 20
+    patient: 125
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 126
+  fields:
+    date: 2012-11-09
+    hour: 10:30
+    description: 
+    dentist: 20
+    patient: 126
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 127
+  fields:
+    date: 2012-11-09
+    hour: 11:30
+    description: 
+    dentist: 20
+    patient: 127
+    dental_office: 1 
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 128
+  fields:
+    date: 2012-11-09
+    hour: 12:00
+    description: 
+    dentist: 20
+    patient: 128
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 129
+  fields:
+    date: 2012-11-12
+    hour: 8:00
+    description: 
+    dentist: 1
+    patient: 129
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 130
+  fields:
+    date: 2012-11-12
+    hour: 9:00
+    description: 
+    dentist: 1
+    patient: 130
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 131
+  fields:
+    date: 2012-11-12
+    hour: 11:00
+    description: 
+    dentist: 1
+    patient: 131
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 132
+  fields:
+    date: 2012-11-12
+    hour: 12:00
+    description: 
+    dentist: 1
+    patient: 132
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 133
+  fields:
+    date: 2012-11-12
+    hour: 13:00
+    description: 
+    dentist: 1
+    patient: 133
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 134
+  fields:
+    date: 2012-11-12
+    hour: 14:00
+    description: 
+    dentist: 1
+    patient: 134
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 135
+  fields:
+    date: 2012-11-12
+    hour: 15:00
+    description: 
+    dentist: 1
+    patient: 135
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 136
+  fields:
+    date: 2012-11-12
+    hour: 12:00
+    description: 
+    dentist: 2
+    patient: 136
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 137
+  fields:
+    date: 2012-11-12 
+    hour: 13:00
+    description: 
+    dentist: 2
+    patient: 137
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 138
+  fields:
+    date: 2012-11-12
+    hour: 14:00
+    description: 
+    dentist: 2
+    patient: 138
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 139
+  fields:
+    date: 2012-11-12
+    hour: 15:00
+    description: 
+    dentist: 2
+    patient: 139
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 140
+  fields:
+    date: 2012-11-12
+    hour: 16:00
+    description: 
+    dentist: 2
+    patient: 140
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 141
+  fields:
+    date: 2012-11-12
+    hour: 17:00
+    description: 
+    dentist: 2
+    patient: 141
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 142
+  fields:
+    date: 2012-11-12
+    hour: 8:00
+    description: 
+    dentist: 3
+    patient: 142
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 143
+  fields:
+    date: 2012-11-12
+    hour: 9:00
+    description: 
+    dentist: 3
+    patient: 143
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 144
+  fields:
+    date: 2012-11-12
+    hour: 10:00
+    description: 
+    dentist: 3
+    patient: 144
+    dental_office: 3
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 145
+  fields:
+    date: 2012-11-12
+    hour: 11:00
+    description: 
+    dentist: 3
+    patient: 145
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 146
+  fields:
+    date: 2012-11-12
+    hour: 12:00
+    description: 
+    dentist: 3
+    patient: 146
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 147
+  fields:
+    date: 2012-11-12
+    hour: 13:00
+    description: 
+    dentist: 3
+    patient: 147
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 148
+  fields:
+    date: 2012-11-12
+    hour: 14:00
+    description: 
+    dentist: 3
+    patient: 148
+    dental_office: 1
+    appointment_type: 3  
+- model: Dentist.appointment
+  pk: 149
+  fields:
+    date: 2012-11-12
+    hour: 15:00
+    description: 
+    dentist: 3
+    patient: 149
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 150
+  fields:
+    date: 2012-11-12
+    hour: 7:30
+    description: 
+    dentist: 150
+    patient: 22
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 151
+  fields:
+    date: 2012-11-12
+    hour: 8:30
+    description: 
+    dentist: 4
+    patient: 151
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 152
+  fields:
+    date: 2012-11-12
+    hour: 9:30
+    description: 
+    dentist: 4
+    patient: 152
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 153
+  fields:
+    date: 2012-11-12
+    hour: 10:30
+    description: 
+    dentist: 4
+    patient: 153
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 154
+  fields:
+    date: 2012-11-12
+    hour: 11:30
+    description: 
+    dentist: 4
+    patient: 154
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 155
+  fields:
+    date: 2012-11-12
+    hour: 12:00
+    description: 
+    dentist: 4
+    patient: 155
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 156
+  fields:
+    date: 2012-11-13
+    hour: 8:00
+    description: 
+    dentist: 5
+    patient: 156
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 157
+  fields:
+    date: 2012-11-13
+    hour: 9:00
+    description: 
+    dentist: 5
+    patient: 157
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 158
+  fields:
+    date: 2012-11-13
+    hour: 10:00
+    description: 
+    dentist: 5
+    patient: 158
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 159
+  fields:
+    date: 2012-11-13
+    hour: 11:00
+    description: 
+    dentist: 5
+    patient: 159
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 160
+  fields:
+    date: 2012-11-13
+    hour: 13:00
+    description: 
+    dentist: 5
+    patient: 160
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 161
+  fields:
+    date: 2012-11-13
+    hour: 14:00
+    description: 
+    dentist: 5
+    patient: 161
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 162
+  fields:
+    date: 2012-11-13
+    hour: 15:00
+    description: 
+    dentist: 5
+    patient: 162
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 163
+  fields:
+    date: 2012-11-13
+    hour: 12:00
+    description: 
+    dentist: 6
+    patient: 163
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 164
+  fields:
+    date: 2012-11-13
+    hour: 13:00
+    description: 
+    dentist: 6
+    patient: 164
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 165
+  fields:
+    date: 2012-11-13
+    hour: 14:00
+    description: 
+    dentist: 6
+    patient: 165
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 166
+  fields:
+    date: 2012-11-13
+    hour: 15:00
+    description: 
+    dentist: 6
+    patient: 166
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 167
+  fields:
+    date: 2012-11-13
+    hour: 16:00
+    description: 
+    dentist: 6
+    patient: 167
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 168
+  fields:
+    date: 2012-11-13
+    hour: 17:00
+    description: 
+    dentist: 6
+    patient: 168
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 169
+  fields:
+    date: 2012-11-13
+    hour: 8:00
+    description: 
+    dentist: 7
+    patient: 169
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 170
+  fields:
+    date: 2012-11-13
+    hour: 9:00
+    description: 
+    dentist: 7
+    patient: 170
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 171
+  fields:
+    date: 2012-11-13
+    hour: 10:00
+    description: 
+    dentist: 7
+    patient: 171
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 172
+  fields:
+    date: 2012-11-13
+    hour: 11:00
+    description: 
+    dentist: 7
+    patient: 172
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 173
+  fields:
+    date: 2012-11-13
+    hour: 12:00
+    description: 
+    dentist: 7 
+    patient: 173
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 174
+  fields:
+    date: 2012-11-13
+    hour: 13:00
+    description: 
+    dentist: 7 
+    patient: 174
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 175
+  fields:
+    date: 2012-11-13
+    hour: 14:00
+    description: 
+    dentist: 8 
+    patient: 175
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 176
+  fields:
+    date: 2012-11-13
+    hour: 15:00
+    description: 
+    dentist: 8 
+    patient: 176
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 177
+  fields:
+    date: 2012-11-14
+    hour: 8:00
+    description: 
+    dentist: 9
+    patient: 177
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 178
+  fields:
+    date: 2012-11-14
+    hour: 9:00
+    description: 
+    dentist: 9
+    patient: 178
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 179
+  fields:
+    date: 2012-11-14
+    hour: 11:00
+    description: 
+    dentist: 9
+    patient: 179
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 180
+  fields:
+    date: 2012-11-14
+    hour: 12:00
+    description: 
+    dentist: 9
+    patient: 180
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 181
+  fields:
+    date: 2012-11-14
+    hour: 13:00
+    description: 
+    dentist: 9
+    patient: 181
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 182
+  fields:
+    date: 2012-11-14
+    hour: 14:00
+    description: 
+    dentist: 9 
+    patient: 182
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 183
+  fields:
+    date: 2012-11-14
+    hour: 15:00
+    description: 
+    dentist: 9 
+    patient: 183
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 184
+  fields:
+    date: 2012-11-14
+    hour: 12:00
+    description: 
+    dentist: 10 
+    patient: 184
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 185
+  fields:
+    date: 2012-11-14
+    hour: 13:00
+    description: 
+    dentist: 10 
+    patient: 185
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 186
+  fields:
+    date: 2012-11-14
+    hour: 14:00
+    description: 
+    dentist: 10
+    patient: 186
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 187
+  fields:
+    date: 2012-11-14
+    hour: 15:00
+    description: 
+    dentist: 10
+    patient: 187
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 188
+  fields:
+    date: 2012-11-14
+    hour: 16:00
+    description: 
+    dentist: 10
+    patient: 188
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 189
+  fields:
+    date: 2012-11-14
+    hour: 17:00
+    description: 
+    dentist: 10 
+    patient: 189
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 190
+  fields:
+    date: 2012-11-14
+    hour: 8:00
+    description: 
+    dentist: 11
+    patient: 190
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 191
+  fields:
+    date: 2012-11-14
+    hour: 9:00
+    description: 
+    dentist: 11
+    patient: 191
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 192
+  fields:
+    date: 2012-11-14
+    hour: 10:00
+    description: 
+    dentist: 11
+    patient: 192
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 193
+  fields:
+    date: 2012-11-14
+    hour: 11:00
+    description: 
+    dentist: 11
+    patient: 193
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 194
+  fields:
+    date: 2012-11-14
+    hour: 12:00
+    description: 
+    dentist: 11 
+    patient: 194
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 195
+  fields:
+    date: 2012-11-14
+    hour: 13:00
+    description: 
+    dentist: 11 
+    patient: 195
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 196
+  fields:
+    date: 2012-11-14
+    hour: 14:00
+    description: 
+    dentist: 11 
+    patient: 196
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 197
+  fields:
+    date: 2012-11-14
+    hour: 15:00
+    description: 
+    dentist: 11 
+    patient: 197
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 198
+  fields:
+    date: 2012-11-14
+    hour: 7:30
+    description: 
+    dentist: 12
+    patient: 198
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 199
+  fields:
+    date: 2012-11-14
+    hour: 8:30
+    description: 
+    dentist: 12 
+    patient: 199
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 200
+  fields:
+    date: 2012-11-14
+    hour: 9:30
+    description: 
+    dentist: 12
+    patient: 200
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 201
+  fields:
+    date: 2012-11-14
+    hour: 10:30
+    description: 
+    dentist: 12
+    patient: 1
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 202
+  fields:
+    date: 2012-11-14
+    hour: 11:30
+    description: 
+    dentist: 2
+    patient: 74
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 203
+  fields:
+    date: 2012-11-14
+    hour: 12:00
+    description: 
+    dentist: 12
+    patient: 3
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 204
+  fields:
+    date: 2012-11-15
+    hour: 8:00
+    description: 
+    dentist: 13 
+    patient: 4
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 205
+  fields:
+    date: 2012-11-15
+    hour: 9:00
+    description: 
+    dentist: 13 
+    patient: 5
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 206
+  fields:
+    date: 2012-11-15
+    hour: 11:00
+    description: 
+    dentist: 13 
+    patient: 6
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 207
+  fields:
+    date: 2012-11-15
+    hour: 12:00
+    description: 
+    dentist: 13 
+    patient: 7
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 208
+  fields:
+    date: 2012-11-15
+    hour: 13:00
+    description: 
+    dentist: 13
+    patient: 8
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 209
+  fields:
+    date: 2012-11-15
+    hour: 14:00
+    description: 
+    dentist: 13 
+    patient: 9
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 210
+  fields:
+    date: 2012-11-15
+    hour: 15:00
+    description: 
+    dentist: 13
+    patient: 10
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 211
+  fields:
+    date: 2012-11-15
+    hour: 12:00
+    description: 
+    dentist: 14 
+    patient: 11
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 212
+  fields:
+    date: 2012-11-15
+    hour: 13:00
+    description: 
+    dentist: 14
+    patient: 12
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 213
+  fields:
+    date: 2012-11-15
+    hour: 14:00
+    description: 
+    dentist: 14
+    patient: 13
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 214
+  fields:
+    date: 2012-11-15
+    hour: 15:00
+    description: 
+    dentist: 14
+    patient: 14
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 215
+  fields:
+    date: 2012-11-15
+    hour: 16:00
+    description: 
+    dentist: 14
+    patient: 15
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 216
+  fields:
+    date: 2012-11-15
+    hour: 17:00
+    description: 
+    dentist: 14
+    patient: 16
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 217
+  fields:
+    date: 2012-11-15
+    hour: 8:00
+    description: 
+    dentist: 15 
+    patient: 17
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 218
+  fields:
+    date: 2012-11-15
+    hour: 9:00
+    description: 
+    dentist: 15
+    patient: 18
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 219
+  fields:
+    date: 2012-11-15
+    hour: 10:00
+    description: 
+    dentist: 15 
+    patient: 19
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 220
+  fields:
+    date: 2012-11-15
+    hour: 11:00
+    description: 
+    dentist: 15
+    patient: 20
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 221
+  fields:
+    date: 2012-11-15
+    hour: 12:00
+    description: 
+    dentist: 15 
+    patient: 21 
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 222
+  fields:
+    date: 2012-11-15
+    hour: 13:00
+    description: 
+    dentist: 15 
+    patient: 22
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 223
+  fields:
+    date: 2012-11-15
+    hour: 14:00
+    description: 
+    dentist: 15 
+    patient: 23
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 224
+  fields:
+    date: 2012-11-15
+    hour: 15:00
+    description: 
+    dentist: 15
+    patient: 24
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 225
+  fields:
+    date: 2012-11-15
+    hour: 7:30
+    description: 
+    dentist: 16
+    patient: 25
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 226
+  fields:
+    date: 2012-11-15
+    hour: 8:30
+    description: 
+    dentist: 16
+    patient: 26
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 227
+  fields:
+    date: 2012-11-15
+    hour: 9:30
+    description: 
+    dentist: 16
+    patient: 27
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 228
+  fields:
+    date: 2012-11-15
+    hour: 10:30
+    description: 
+    dentist: 16
+    patient: 28
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 229
+  fields:
+    date: 2012-11-15
+    hour: 11:30
+    description: 
+    dentist: 29
+    patient: 101
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 230
+  fields:
+    date: 2012-11-15
+    hour: 12:00
+    description: 
+    dentist: 16
+    patient: 30
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 231
+  fields:
+    date: 2012-11-16
+    hour: 8:00
+    description: 
+    dentist: 17 
+    patient: 31
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 232
+  fields:
+    date: 2012-11-16
+    hour: 9:00
+    description: 
+    dentist: 17 
+    patient: 32
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 233
+  fields:
+    date: 2012-11-16
+    hour: 11:00
+    description: 
+    dentist: 17
+    patient: 33
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 234
+  fields:
+    date: 2012-11-16
+    hour: 12:00
+    description: 
+    dentist: 17
+    patient: 34
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 235
+  fields:
+    date: 2012-11-16
+    hour: 13:00
+    description: 
+    dentist: 17
+    patient: 35
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 236
+  fields:
+    date: 2012-11-16
+    hour: 14:00
+    description: 
+    dentist: 36
+    patient: 108
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 237
+  fields:
+    date: 2012-11-16
+    hour: 15:00
+    description: 
+    dentist: 17
+    patient: 37
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 238
+  fields:
+    date: 2012-11-16
+    hour: 12:00
+    description: 
+    dentist: 18
+    patient: 38
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 239
+  fields:
+    date: 2012-11-16
+    hour: 13:00
+    description: 
+    dentist: 18
+    patient: 39
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 240
+  fields:
+    date: 2012-11-16
+    hour: 14:00
+    description: 
+    dentist: 18
+    patient: 40
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 241
+  fields:
+    date: 2012-11-16
+    hour: 15:00
+    description: 
+    dentist: 18
+    patient: 41
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 242
+  fields:
+    date: 2012-11-16
+    hour: 16:00
+    description: 
+    dentist: 18
+    patient: 42
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 243
+  fields:
+    date: 2012-11-16
+    hour: 17:00
+    description: 
+    dentist: 18 
+    patient: 43
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 244
+  fields:
+    date: 2012-11-16
+    hour: 8:00
+    description: 
+    dentist: 19 
+    patient: 44
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 245
+  fields:
+    date: 2012-11-16
+    hour: 9:00
+    description: 
+    dentist: 19
+    patient: 45
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 246
+  fields:
+    date: 2012-11-16
+    hour: 10:00
+    description: 
+    dentist: 19 
+    patient: 46
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 247
+  fields:
+    date: 2012-11-16
+    hour: 11:00
+    description: 
+    dentist: 19 
+    patient: 47
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 248
+  fields:
+    date: 2012-11-16
+    hour: 12:00
+    description: 
+    dentist: 19
+    patient: 48
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 249
+  fields:
+    date: 2012-11-16
+    hour: 13:00
+    description: 
+    dentist: 19 
+    patient: 49
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 250
+  fields:
+    date: 2012-11-16
+    hour: 15:00
+    description: 
+    dentist: 19
+    patient: 50
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 251
+  fields:
+    date: 2012-11-16
+    hour: 7:30
+    description: 
+    dentist: 20 
+    patient: 51
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 252
+  fields:
+    date: 2012-11-16
+    hour: 8:30
+    description: 
+    dentist: 20
+    patient: 124
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 253
+  fields:
+    date: 2012-11-16
+    hour: 9:30
+    description: 
+    dentist: 20
+    patient: 125
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 254
+  fields:
+    date: 2012-11-16
+    hour: 10:30
+    description: 
+    dentist: 20
+    patient: 126
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 255
+  fields:
+    date: 2012-11-16
+    hour: 11:30
+    description: 
+    dentist: 20
+    patient: 127
+    dental_office: 1 
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 256
+  fields:
+    date: 2012-11-16
+    hour: 12:00
+    description: 
+    dentist: 20
+    patient: 128
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 257
+  fields:
+    date: 2012-11-19
+    hour: 8:00
+    description: 
+    dentist: 1
+    patient: 1
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 258
+  fields:
+    date: 2012-11-19
+    hour: 9:00
+    description: 
+    dentist: 1
+    patient: 2
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 259
+  fields:
+    date: 2012-11-19
+    hour: 11:00
+    description: 
+    dentist: 1
+    patient: 3
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 260
+  fields:
+    date: 2012-11-19
+    hour: 12:00
+    description: 
+    dentist: 1
+    patient: 4
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 261
+  fields:
+    date: 2012-11-19
+    hour: 13:00
+    description: 
+    dentist: 1
+    patient: 5
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 262
+  fields:
+    date: 2012-11-19
+    hour: 14:00
+    description: 
+    dentist: 1
+    patient: 6
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 263
+  fields:
+    date: 2012-11-19
+    hour: 15:00
+    description: 
+    dentist: 1
+    patient: 7
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 264
+  fields:
+    date: 2012-11-19
+    hour: 12:00
+    description: 
+    dentist: 2
+    patient: 8
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 265
+  fields:
+    date: 2012-11-19 
+    hour: 13:00
+    description: 
+    dentist: 2
+    patient: 9
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 266
+  fields:
+    date: 2012-11-19
+    hour: 14:00
+    description: 
+    dentist: 2
+    patient: 10
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 267
+  fields:
+    date: 2012-11-19
+    hour: 15:00
+    description: 
+    dentist: 2
+    patient: 11
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 268
+  fields:
+    date: 2012-11-19
+    hour: 16:00
+    description: 
+    dentist: 2
+    patient: 12
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 269
+  fields:
+    date: 2012-11-19
+    hour: 17:00
+    description: 
+    dentist: 2
+    patient: 13
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 270
+  fields:
+    date: 2012-11-19
+    hour: 8:00
+    description: 
+    dentist: 3
+    patient: 14
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 271
+  fields:
+    date: 2012-11-19
+    hour: 9:00
+    description: 
+    dentist: 3
+    patient: 15
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 272
+  fields:
+    date: 2012-11-19
+    hour: 10:00
+    description: 
+    dentist: 3
+    patient: 16
+    dental_office: 3
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 273
+  fields:
+    date: 2012-11-19
+    hour: 11:00
+    description: 
+    dentist: 3
+    patient: 17
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 274
+  fields:
+    date: 2012-11-19
+    hour: 12:00
+    description: 
+    dentist: 3
+    patient: 18
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 275
+  fields:
+    date: 2012-11-19
+    hour: 13:00
+    description: 
+    dentist: 3
+    patient: 19
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 276
+  fields:
+    date: 2012-11-19
+    hour: 14:00
+    description: 
+    dentist: 3
+    patient: 20
+    dental_office: 1
+    appointment_type: 3  
+- model: Dentist.appointment
+  pk: 277
+  fields:
+    date: 2012-11-19
+    hour: 15:00
+    description: 
+    dentist: 3
+    patient: 21
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 278
+  fields:
+    date: 2012-11-19
+    hour: 7:30
+    description: 
+    dentist: 4
+    patient: 22
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 279
+  fields:
+    date: 2012-11-19
+    hour: 8:30
+    description: 
+    dentist: 4
+    patient: 23
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 280
+  fields:
+    date: 2012-11-19
+    hour: 9:30
+    description: 
+    dentist: 4
+    patient: 24
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 281
+  fields:
+    date: 2012-11-19
+    hour: 10:30
+    description: 
+    dentist: 4
+    patient: 25
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 282
+  fields:
+    date: 2012-11-19
+    hour: 11:30
+    description: 
+    dentist: 4
+    patient: 26
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 283
+  fields:
+    date: 2012-11-19
+    hour: 12:00
+    description: 
+    dentist: 4
+    patient: 27
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 284
+  fields:
+    date: 2012-11-20
+    hour: 8:00
+    description: 
+    dentist: 5
+    patient: 28
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 285
+  fields:
+    date: 2012-11-20
+    hour: 9:00
+    description: 
+    dentist: 5
+    patient: 29
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 286
+  fields:
+    date: 2012-11-20
+    hour: 10:00
+    description: 
+    dentist: 5
+    patient: 30
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 287
+  fields:
+    date: 2012-11-20
+    hour: 11:00
+    description: 
+    dentist: 5
+    patient: 31
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 288
+  fields:
+    date: 2012-11-20
+    hour: 13:00
+    description: 
+    dentist: 5
+    patient: 32
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 289
+  fields:
+    date: 2012-11-20
+    hour: 14:00
+    description: 
+    dentist: 5
+    patient: 33
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 290
+  fields:
+    date: 2012-11-20
+    hour: 15:00
+    description: 
+    dentist: 5
+    patient: 34
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 291
+  fields:
+    date: 2012-11-20
+    hour: 12:00
+    description: 
+    dentist: 6
+    patient: 35
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 292
+  fields:
+    date: 2012-11-20
+    hour: 13:00
+    description: 
+    dentist: 6
+    patient: 36
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 293
+  fields:
+    date: 2012-11-20
+    hour: 14:00
+    description: 
+    dentist: 6
+    patient: 37
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 294
+  fields:
+    date: 2012-11-20
+    hour: 15:00
+    description: 
+    dentist: 6
+    patient: 38
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 295
+  fields:
+    date: 2012-11-20
+    hour: 16:00
+    description: 
+    dentist: 6
+    patient: 39
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 296
+  fields:
+    date: 2012-11-20
+    hour: 17:00
+    description: 
+    dentist: 6
+    patient: 40
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 297
+  fields:
+    date: 2012-11-20
+    hour: 8:00
+    description: 
+    dentist: 7
+    patient: 41
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 298
+  fields:
+    date: 2012-11-20
+    hour: 9:00
+    description: 
+    dentist: 7
+    patient: 42
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 299
+  fields:
+    date: 2012-11-20
+    hour: 10:00
+    description: 
+    dentist: 7
+    patient: 43
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 300
+  fields:
+    date: 2012-11-20
+    hour: 11:00
+    description: 
+    dentist: 7
+    patient: 44
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 301
+  fields:
+    date: 2012-11-20
+    hour: 12:00
+    description: 
+    dentist: 7 
+    patient: 45
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 302
+  fields:
+    date: 2012-11-20
+    hour: 13:00
+    description: 
+    dentist: 7 
+    patient: 46
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 303
+  fields:
+    date: 2012-11-20
+    hour: 14:00
+    description: 
+    dentist: 8 
+    patient: 47
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 304
+  fields:
+    date: 2012-11-20
+    hour: 15:00
+    description: 
+    dentist: 8 
+    patient: 48
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 305
+  fields:
+    date: 2012-11-21
+    hour: 8:00
+    description: 
+    dentist: 9
+    patient: 49
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 306
+  fields:
+    date: 2012-11-21
+    hour: 9:00
+    description: 
+    dentist: 9
+    patient: 50
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 307
+  fields:
+    date: 2012-11-21
+    hour: 11:00
+    description: 
+    dentist: 9
+    patient: 51
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 308
+  fields:
+    date: 2012-11-21
+    hour: 12:00
+    description: 
+    dentist: 9
+    patient: 52
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 309
+  fields:
+    date: 2012-11-21
+    hour: 13:00
+    description: 
+    dentist: 9
+    patient: 53
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 310
+  fields:
+    date: 2012-11-21
+    hour: 14:00
+    description: 
+    dentist: 9 
+    patient: 54
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 311
+  fields:
+    date: 2012-11-21
+    hour: 15:00
+    description: 
+    dentist: 9 
+    patient: 55
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 312
+  fields:
+    date: 2012-11-21
+    hour: 12:00
+    description: 
+    dentist: 10 
+    patient: 56
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 313
+  fields:
+    date: 2012-11-21
+    hour: 13:00
+    description: 
+    dentist: 10 
+    patient: 57
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 314
+  fields:
+    date: 2012-11-21
+    hour: 14:00
+    description: 
+    dentist: 10
+    patient: 58
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 315
+  fields:
+    date: 2012-11-21
+    hour: 15:00
+    description: 
+    dentist: 10
+    patient: 59
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 316
+  fields:
+    date: 2012-11-21
+    hour: 16:00
+    description: 
+    dentist: 10
+    patient: 60
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 317
+  fields:
+    date: 2012-11-21
+    hour: 17:00
+    description: 
+    dentist: 10 
+    patient: 61
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 318
+  fields:
+    date: 2012-11-21
+    hour: 8:00
+    description: 
+    dentist: 11
+    patient: 62
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 319
+  fields:
+    date: 2012-11-21
+    hour: 9:00
+    description: 
+    dentist: 11
+    patient: 63
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 320
+  fields:
+    date: 2012-11-21
+    hour: 10:00
+    description: 
+    dentist: 11
+    patient: 64
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 321
+  fields:
+    date: 2012-11-21
+    hour: 11:00
+    description: 
+    dentist: 11
+    patient: 65
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 322
+  fields:
+    date: 2012-11-21
+    hour: 12:00
+    description: 
+    dentist: 11 
+    patient: 66
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 323
+  fields:
+    date: 2012-11-21
+    hour: 13:00
+    description: 
+    dentist: 11 
+    patient: 67
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 324
+  fields:
+    date: 2012-11-21
+    hour: 14:00
+    description: 
+    dentist: 11 
+    patient: 68
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 325
+  fields:
+    date: 2012-11-21
+    hour: 15:00
+    description: 
+    dentist: 11 
+    patient: 69
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 326
+  fields:
+    date: 2012-11-21
+    hour: 7:30
+    description: 
+    dentist: 12
+    patient: 70
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 327
+  fields:
+    date: 2012-11-21
+    hour: 8:30
+    description: 
+    dentist: 12 
+    patient: 71
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 328
+  fields:
+    date: 2012-11-21
+    hour: 9:30
+    description: 
+    dentist: 12
+    patient: 72
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 329
+  fields:
+    date: 2012-11-21
+    hour: 10:30
+    description: 
+    dentist: 12
+    patient: 73
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 330
+  fields:
+    date: 2012-11-21
+    hour: 11:30
+    description: 
+    dentist: 12
+    patient: 74
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 331
+  fields:
+    date: 2012-11-21
+    hour: 12:00
+    description: 
+    dentist: 12
+    patient: 75
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 332
+  fields:
+    date: 2012-11-22
+    hour: 8:00
+    description: 
+    dentist: 13 
+    patient: 76
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 333
+  fields:
+    date: 2012-11-22
+    hour: 9:00
+    description: 
+    dentist: 13 
+    patient: 77
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 334
+  fields:
+    date: 2012-11-22
+    hour: 11:00
+    description: 
+    dentist: 13 
+    patient: 78
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 335
+  fields:
+    date: 2012-11-22
+    hour: 12:00
+    description: 
+    dentist: 13 
+    patient: 79
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 336
+  fields:
+    date: 2012-11-22
+    hour: 13:00
+    description: 
+    dentist: 13
+    patient: 80
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 337
+  fields:
+    date: 2012-11-22
+    hour: 14:00
+    description: 
+    dentist: 13 
+    patient: 81
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 338
+  fields:
+    date: 2012-11-22
+    hour: 15:00
+    description: 
+    dentist: 13
+    patient: 82
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 339
+  fields:
+    date: 2012-11-22
+    hour: 12:00
+    description: 
+    dentist: 14 
+    patient: 83
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 340
+  fields:
+    date: 2012-11-22
+    hour: 13:00
+    description: 
+    dentist: 14
+    patient: 84
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 341
+  fields:
+    date: 2012-11-22
+    hour: 14:00
+    description: 
+    dentist: 14
+    patient: 85
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 342
+  fields:
+    date: 2012-11-22
+    hour: 15:00
+    description: 
+    dentist: 14
+    patient: 86
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 343
+  fields:
+    date: 2012-11-22
+    hour: 16:00
+    description: 
+    dentist: 14
+    patient: 87
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 344
+  fields:
+    date: 2012-11-22
+    hour: 17:00
+    description: 
+    dentist: 14
+    patient: 88
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 345
+  fields:
+    date: 2012-11-22
+    hour: 8:00
+    description: 
+    dentist: 15 
+    patient: 89
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 346
+  fields:
+    date: 2012-11-22
+    hour: 9:00
+    description: 
+    dentist: 15
+    patient: 90
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 347
+  fields:
+    date: 2012-11-22
+    hour: 10:00
+    description: 
+    dentist: 15 
+    patient: 91
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 348
+  fields:
+    date: 2012-11-22
+    hour: 11:00
+    description: 
+    dentist: 15
+    patient: 92
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 349
+  fields:
+    date: 2012-11-22
+    hour: 12:00
+    description: 
+    dentist: 15 
+    patient: 93 
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 350
+  fields:
+    date: 2012-11-22
+    hour: 13:00
+    description: 
+    dentist: 15 
+    patient: 94
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 351
+  fields:
+    date: 2012-11-22
+    hour: 14:00
+    description: 
+    dentist: 15 
+    patient: 95
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 352
+  fields:
+    date: 2012-11-22
+    hour: 15:00
+    description: 
+    dentist: 15
+    patient: 96
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 353
+  fields:
+    date: 2012-11-22
+    hour: 7:30
+    description: 
+    dentist: 16
+    patient: 97
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 354
+  fields:
+    date: 2012-11-22
+    hour: 8:30
+    description: 
+    dentist: 16
+    patient: 98
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 355
+  fields:
+    date: 2012-11-22
+    hour: 9:30
+    description: 
+    dentist: 16
+    patient: 99
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 356
+  fields:
+    date: 2012-11-22
+    hour: 10:30
+    description: 
+    dentist: 16
+    patient: 100
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 357
+  fields:
+    date: 2012-11-22
+    hour: 11:30
+    description: 
+    dentist: 16
+    patient: 101
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 358
+  fields:
+    date: 2012-11-22
+    hour: 12:00
+    description: 
+    dentist: 16
+    patient: 102
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 359
+  fields:
+    date: 2012-11-23
+    hour: 8:00
+    description: 
+    dentist: 17 
+    patient: 103
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 360
+  fields:
+    date: 2012-11-23
+    hour: 9:00
+    description: 
+    dentist: 17 
+    patient: 104
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 361
+  fields:
+    date: 2012-11-23
+    hour: 11:00
+    description: 
+    dentist: 17
+    patient: 105
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 362
+  fields:
+    date: 2012-11-23
+    hour: 12:00
+    description: 
+    dentist: 17
+    patient: 106
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 363
+  fields:
+    date: 2012-11-23
+    hour: 13:00
+    description: 
+    dentist: 17
+    patient: 107
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 364
+  fields:
+    date: 2012-11-23
+    hour: 14:00
+    description: 
+    dentist: 17
+    patient: 108
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 365
+  fields:
+    date: 2012-11-23
+    hour: 15:00
+    description: 
+    dentist: 17
+    patient: 109
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 366
+  fields:
+    date: 2012-11-23
+    hour: 12:00
+    description: 
+    dentist: 18
+    patient: 110
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 367
+  fields:
+    date: 2012-11-23
+    hour: 13:00
+    description: 
+    dentist: 18
+    patient: 111
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 368
+  fields:
+    date: 2012-11-23
+    hour: 14:00
+    description: 
+    dentist: 18
+    patient: 112
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 369
+  fields:
+    date: 2012-11-23
+    hour: 15:00
+    description: 
+    dentist: 18
+    patient: 113
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 370
+  fields:
+    date: 2012-11-23
+    hour: 16:00
+    description: 
+    dentist: 18
+    patient: 114
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 371
+  fields:
+    date: 2012-11-23
+    hour: 17:00
+    description: 
+    dentist: 18 
+    patient: 115
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 372
+  fields:
+    date: 2012-11-23
+    hour: 8:00
+    description: 
+    dentist: 19 
+    patient: 116
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 373
+  fields:
+    date: 2012-11-23
+    hour: 9:00
+    description: 
+    dentist: 19
+    patient: 117
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 374
+  fields:
+    date: 2012-11-23
+    hour: 10:00
+    description: 
+    dentist: 19 
+    patient: 118
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 375
+  fields:
+    date: 2012-11-23
+    hour: 11:00
+    description: 
+    dentist: 19 
+    patient: 119
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 376
+  fields:
+    date: 2012-11-23
+    hour: 12:00
+    description: 
+    dentist: 19
+    patient: 120
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 378
+  fields:
+    date: 2012-11-23
+    hour: 13:00
+    description: 
+    dentist: 19 
+    patient: 121
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 379
+  fields:
+    date: 2012-11-23
+    hour: 15:00
+    description: 
+    dentist: 19
+    patient: 122
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 380
+  fields:
+    date: 2012-11-23
+    hour: 7:30
+    description: 
+    dentist: 20 
+    patient: 123
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 381
+  fields:
+    date: 2012-11-23
+    hour: 8:30
+    description: 
+    dentist: 20
+    patient: 124
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 382
+  fields:
+    date: 2012-11-23
+    hour: 9:30
+    description: 
+    dentist: 20
+    patient: 125
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 383
+  fields:
+    date: 2012-11-23
+    hour: 10:30
+    description: 
+    dentist: 20
+    patient: 126
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 384
+  fields:
+    date: 2012-11-23
+    hour: 11:30
+    description: 
+    dentist: 20
+    patient: 127
+    dental_office: 1 
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 385
+  fields:
+    date: 2012-11-23
+    hour: 12:00
+    description: 
+    dentist: 20
+    patient: 128
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 386
+  fields:
+    date: 2012-11-26
+    hour: 8:00
+    description: 
+    dentist: 1
+    patient: 1
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 387
+  fields:
+    date: 2012-11-26
+    hour: 9:00
+    description: 
+    dentist: 1
+    patient: 2
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 388
+  fields:
+    date: 2012-11-26
+    hour: 11:00
+    description: 
+    dentist: 1
+    patient: 3
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 389
+  fields:
+    date: 2012-11-26
+    hour: 12:00
+    description: 
+    dentist: 1
+    patient: 4
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 390
+  fields:
+    date: 2012-11-26
+    hour: 13:00
+    description: 
+    dentist: 1
+    patient: 5
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 391
+  fields:
+    date: 2012-11-26
+    hour: 14:00
+    description: 
+    dentist: 1
+    patient: 6
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 392
+  fields:
+    date: 2012-11-26
+    hour: 15:00
+    description: 
+    dentist: 1
+    patient: 7
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 393
+  fields:
+    date: 2012-11-26
+    hour: 12:00
+    description: 
+    dentist: 2
+    patient: 8
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 394
+  fields:
+    date: 2012-11-26 
+    hour: 13:00
+    description: 
+    dentist: 2
+    patient: 9
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 395
+  fields:
+    date: 2012-11-26
+    hour: 14:00
+    description: 
+    dentist: 2
+    patient: 10
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 396
+  fields:
+    date: 2012-11-26
+    hour: 15:00
+    description: 
+    dentist: 2
+    patient: 11
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 397
+  fields:
+    date: 2012-11-26
+    hour: 16:00
+    description: 
+    dentist: 2
+    patient: 12
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 398
+  fields:
+    date: 2012-11-26
+    hour: 17:00
+    description: 
+    dentist: 2
+    patient: 13
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 399
+  fields:
+    date: 2012-11-26
+    hour: 8:00
+    description: 
+    dentist: 3
+    patient: 14
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 400
+  fields:
+    date: 2012-11-26
+    hour: 9:00
+    description: 
+    dentist: 3
+    patient: 15
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 401
+  fields:
+    date: 2012-11-26
+    hour: 10:00
+    description: 
+    dentist: 3
+    patient: 16
+    dental_office: 3
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 402
+  fields:
+    date: 2012-11-26
+    hour: 11:00
+    description: 
+    dentist: 3
+    patient: 17
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 403
+  fields:
+    date: 2012-11-26
+    hour: 12:00
+    description: 
+    dentist: 3
+    patient: 18
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 404
+  fields:
+    date: 2012-11-26
+    hour: 13:00
+    description: 
+    dentist: 3
+    patient: 19
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 405
+  fields:
+    date: 2012-11-26
+    hour: 14:00
+    description: 
+    dentist: 3
+    patient: 20
+    dental_office: 1
+    appointment_type: 3  
+- model: Dentist.appointment
+  pk: 406
+  fields:
+    date: 2012-11-26
+    hour: 15:00
+    description: 
+    dentist: 3
+    patient: 21
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 407
+  fields:
+    date: 2012-11-26
+    hour: 7:30
+    description: 
+    dentist: 4
+    patient: 22
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 408
+  fields:
+    date: 2012-11-26
+    hour: 8:30
+    description: 
+    dentist: 4
+    patient: 23
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 409
+  fields:
+    date: 2012-11-26
+    hour: 9:30
+    description: 
+    dentist: 4
+    patient: 24
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 410
+  fields:
+    date: 2012-11-26
+    hour: 10:30
+    description: 
+    dentist: 4
+    patient: 25
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 411
+  fields:
+    date: 2012-11-26
+    hour: 11:30
+    description: 
+    dentist: 4
+    patient: 26
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 412
+  fields:
+    date: 2012-11-26
+    hour: 12:00
+    description: 
+    dentist: 4
+    patient: 27
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 413
+  fields:
+    date: 2012-11-27
+    hour: 8:00
+    description: 
+    dentist: 5
+    patient: 28
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 414
+  fields:
+    date: 2012-11-27
+    hour: 9:00
+    description: 
+    dentist: 5
+    patient: 29
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 415
+  fields:
+    date: 2012-11-27
+    hour: 10:00
+    description: 
+    dentist: 5
+    patient: 30
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 416
+  fields:
+    date: 2012-11-27
+    hour: 11:00
+    description: 
+    dentist: 5
+    patient: 31
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 417
+  fields:
+    date: 2012-11-27
+    hour: 13:00
+    description: 
+    dentist: 5
+    patient: 32
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 418
+  fields:
+    date: 2012-11-27
+    hour: 14:00
+    description: 
+    dentist: 5
+    patient: 33
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 419
+  fields:
+    date: 2012-11-27
+    hour: 15:00
+    description: 
+    dentist: 5
+    patient: 34
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 420
+  fields:
+    date: 2012-11-27
+    hour: 12:00
+    description: 
+    dentist: 6
+    patient: 35
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 421
+  fields:
+    date: 2012-11-27
+    hour: 13:00
+    description: 
+    dentist: 6
+    patient: 36
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 422
+  fields:
+    date: 2012-11-27
+    hour: 14:00
+    description: 
+    dentist: 6
+    patient: 37
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 423
+  fields:
+    date: 2012-11-27
+    hour: 15:00
+    description: 
+    dentist: 6
+    patient: 38
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 424
+  fields:
+    date: 2012-11-27
+    hour: 16:00
+    description: 
+    dentist: 6
+    patient: 39
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 425
+  fields:
+    date: 2012-11-27
+    hour: 17:00
+    description: 
+    dentist: 6
+    patient: 40
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 426
+  fields:
+    date: 2012-11-27
+    hour: 8:00
+    description: 
+    dentist: 7
+    patient: 41
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 427
+  fields:
+    date: 2012-11-27
+    hour: 9:00
+    description: 
+    dentist: 7
+    patient: 42
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 428
+  fields:
+    date: 2012-11-27
+    hour: 10:00
+    description: 
+    dentist: 7
+    patient: 43
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 429
+  fields:
+    date: 2012-11-27
+    hour: 11:00
+    description: 
+    dentist: 7
+    patient: 44
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 430
+  fields:
+    date: 2012-11-27
+    hour: 12:00
+    description: 
+    dentist: 7 
+    patient: 45
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 431
+  fields:
+    date: 2012-11-27
+    hour: 13:00
+    description: 
+    dentist: 7 
+    patient: 46
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 432
+  fields:
+    date: 2012-11-27
+    hour: 14:00
+    description: 
+    dentist: 8 
+    patient: 47
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 433
+  fields:
+    date: 2012-11-27
+    hour: 15:00
+    description: 
+    dentist: 8 
+    patient: 48
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 434
+  fields:
+    date: 2012-11-28
+    hour: 8:00
+    description: 
+    dentist: 9
+    patient: 49
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 435
+  fields:
+    date: 2012-11-28
+    hour: 9:00
+    description: 
+    dentist: 9
+    patient: 50
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 436
+  fields:
+    date: 2012-11-28
+    hour: 11:00
+    description: 
+    dentist: 9
+    patient: 51
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 437
+  fields:
+    date: 2012-11-28
+    hour: 12:00
+    description: 
+    dentist: 9
+    patient: 52
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 438
+  fields:
+    date: 2012-11-28
+    hour: 13:00
+    description: 
+    dentist: 9
+    patient: 53
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 439
+  fields:
+    date: 2012-11-28
+    hour: 14:00
+    description: 
+    dentist: 9 
+    patient: 54
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 440
+  fields:
+    date: 2012-11-28
+    hour: 15:00
+    description: 
+    dentist: 9 
+    patient: 55
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 441
+  fields:
+    date: 2012-11-28
+    hour: 12:00
+    description: 
+    dentist: 10 
+    patient: 56
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 442
+  fields:
+    date: 2012-11-28
+    hour: 13:00
+    description: 
+    dentist: 10 
+    patient: 57
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 443
+  fields:
+    date: 2012-11-28
+    hour: 14:00
+    description: 
+    dentist: 10
+    patient: 58
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 444
+  fields:
+    date: 2012-11-28
+    hour: 15:00
+    description: 
+    dentist: 10
+    patient: 59
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 445
+  fields:
+    date: 2012-11-28
+    hour: 16:00
+    description: 
+    dentist: 10
+    patient: 60
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 446
+  fields:
+    date: 2012-11-28
+    hour: 17:00
+    description: 
+    dentist: 10 
+    patient: 61
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 447
+  fields:
+    date: 2012-11-28
+    hour: 8:00
+    description: 
+    dentist: 11
+    patient: 62
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 448
+  fields:
+    date: 2012-11-28
+    hour: 9:00
+    description: 
+    dentist: 11
+    patient: 63
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 449
+  fields:
+    date: 2012-11-28
+    hour: 10:00
+    description: 
+    dentist: 11
+    patient: 64
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 450
+  fields:
+    date: 2012-11-28
+    hour: 11:00
+    description: 
+    dentist: 11
+    patient: 65
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 451
+  fields:
+    date: 2012-11-28
+    hour: 12:00
+    description: 
+    dentist: 11 
+    patient: 66
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 452
+  fields:
+    date: 2012-11-28
+    hour: 13:00
+    description: 
+    dentist: 11 
+    patient: 67
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 453
+  fields:
+    date: 2012-11-28
+    hour: 14:00
+    description: 
+    dentist: 11 
+    patient: 68
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 454
+  fields:
+    date: 2012-11-28
+    hour: 15:00
+    description: 
+    dentist: 11 
+    patient: 69
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 455
+  fields:
+    date: 2012-11-28
+    hour: 7:30
+    description: 
+    dentist: 12
+    patient: 70
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 456
+  fields:
+    date: 2012-11-28
+    hour: 8:30
+    description: 
+    dentist: 12 
+    patient: 71
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 457
+  fields:
+    date: 2012-11-28
+    hour: 9:30
+    description: 
+    dentist: 12
+    patient: 72
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 458
+  fields:
+    date: 2012-11-28
+    hour: 10:30
+    description: 
+    dentist: 12
+    patient: 73
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 459
+  fields:
+    date: 2012-11-28
+    hour: 11:30
+    description: 
+    dentist: 12
+    patient: 74
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 460
+  fields:
+    date: 2012-11-28
+    hour: 12:00
+    description: 
+    dentist: 12
+    patient: 75
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 461
+  fields:
+    date: 2012-11-29
+    hour: 8:00
+    description: 
+    dentist: 13 
+    patient: 76
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 462
+  fields:
+    date: 2012-11-29
+    hour: 9:00
+    description: 
+    dentist: 13 
+    patient: 77
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 463
+  fields:
+    date: 2012-11-29
+    hour: 11:00
+    description: 
+    dentist: 13 
+    patient: 78
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 464
+  fields:
+    date: 2012-11-29
+    hour: 12:00
+    description: 
+    dentist: 13 
+    patient: 79
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 465
+  fields:
+    date: 2012-11-29
+    hour: 13:00
+    description: 
+    dentist: 13
+    patient: 80
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 466
+  fields:
+    date: 2012-11-29
+    hour: 14:00
+    description: 
+    dentist: 13 
+    patient: 81
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 467
+  fields:
+    date: 2012-11-29
+    hour: 15:00
+    description: 
+    dentist: 13
+    patient: 82
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 468
+  fields:
+    date: 2012-11-29
+    hour: 12:00
+    description: 
+    dentist: 14 
+    patient: 83
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 469
+  fields:
+    date: 2012-11-29
+    hour: 13:00
+    description: 
+    dentist: 14
+    patient: 84
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 470
+  fields:
+    date: 2012-11-29
+    hour: 14:00
+    description: 
+    dentist: 14
+    patient: 85
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 471
+  fields:
+    date: 2012-11-29
+    hour: 15:00
+    description: 
+    dentist: 14
+    patient: 86
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 472
+  fields:
+    date: 2012-11-29
+    hour: 16:00
+    description: 
+    dentist: 14
+    patient: 87
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 473
+  fields:
+    date: 2012-11-29
+    hour: 17:00
+    description: 
+    dentist: 14
+    patient: 88
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 474
+  fields:
+    date: 2012-11-29
+    hour: 8:00
+    description: 
+    dentist: 15 
+    patient: 89
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 475
+  fields:
+    date: 2012-11-29
+    hour: 9:00
+    description: 
+    dentist: 15
+    patient: 90
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 476
+  fields:
+    date: 2012-11-29
+    hour: 10:00
+    description: 
+    dentist: 15 
+    patient: 91
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 477
+  fields:
+    date: 2012-11-29
+    hour: 11:00
+    description: 
+    dentist: 15
+    patient: 92
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 478
+  fields:
+    date: 2012-11-29
+    hour: 12:00
+    description: 
+    dentist: 15 
+    patient: 93 
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 479
+  fields:
+    date: 2012-11-29
+    hour: 13:00
+    description: 
+    dentist: 15 
+    patient: 94
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 480
+  fields:
+    date: 2012-11-29
+    hour: 14:00
+    description: 
+    dentist: 15 
+    patient: 95
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 481
+  fields:
+    date: 2012-11-29
+    hour: 15:00
+    description: 
+    dentist: 15
+    patient: 96
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 482
+  fields:
+    date: 2012-11-29
+    hour: 7:30
+    description: 
+    dentist: 16
+    patient: 97
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 483
+  fields:
+    date: 2012-11-29
+    hour: 8:30
+    description: 
+    dentist: 16
+    patient: 98
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 484
+  fields:
+    date: 2012-11-29
+    hour: 9:30
+    description: 
+    dentist: 16
+    patient: 99
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 485
+  fields:
+    date: 2012-11-29
+    hour: 10:30
+    description: 
+    dentist: 16
+    patient: 100
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 486
+  fields:
+    date: 2012-11-29
+    hour: 11:30
+    description: 
+    dentist: 16
+    patient: 101
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 487
+  fields:
+    date: 2012-11-29
+    hour: 12:00
+    description: 
+    dentist: 16
+    patient: 102
+    dental_office: 1
+    appointment_type: 2 
+- model: Dentist.appointment
+  pk: 488
+  fields:
+    date: 2012-11-30
+    hour: 8:00
+    description: 
+    dentist: 17
+    patient: 103
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 489
+  fields:
+    date: 2012-11-30
+    hour: 9:00
+    description: 
+    dentist: 17 
+    patient: 104
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 490
+  fields:
+    date: 2012-11-30
+    hour: 11:00
+    description: 
+    dentist: 17
+    patient: 105
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 491
+  fields:
+    date: 2012-11-30
+    hour: 12:00
+    description: 
+    dentist: 17
+    patient: 106
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 492
+  fields:
+    date: 2012-11-30
+    hour: 13:00
+    description: 
+    dentist: 17
+    patient: 107
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 493
+  fields:
+    date: 2012-11-30
+    hour: 14:00
+    description: 
+    dentist: 17
+    patient: 108
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 494
+  fields:
+    date: 2012-11-30
+    hour: 15:00
+    description: 
+    dentist: 17
+    patient: 109
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 495
+  fields:
+    date: 2012-11-30
+    hour: 12:00
+    description: 
+    dentist: 18
+    patient: 110
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 496
+  fields:
+    date: 2012-11-30
+    hour: 13:00
+    description: 
+    dentist: 18
+    patient: 111
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 497
+  fields:
+    date: 2012-11-30
+    hour: 14:00
+    description: 
+    dentist: 18
+    patient: 112
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 498
+  fields:
+    date: 2012-11-30
+    hour: 15:00
+    description: 
+    dentist: 18
+    patient: 113
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 499
+  fields:
+    date: 2012-11-30
+    hour: 16:00
+    description: 
+    dentist: 18
+    patient: 114
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 500
+  fields:
+    date: 2012-11-30
+    hour: 17:00
+    description: 
+    dentist: 18 
+    patient: 115
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 501
+  fields:
+    date: 2012-11-30
+    hour: 8:00
+    description: 
+    dentist: 19 
+    patient: 116
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 502
+  fields:
+    date: 2012-11-30
+    hour: 9:00
+    description: 
+    dentist: 19
+    patient: 117
+    dental_office: 1 
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 503
+  fields:
+    date: 2012-11-30
+    hour: 10:00
+    description: 
+    dentist: 19 
+    patient: 118
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 504
+  fields:
+    date: 2012-11-30
+    hour: 11:00
+    description: 
+    dentist: 19 
+    patient: 119
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 505
+  fields:
+    date: 2012-11-30
+    hour: 12:00
+    description: 
+    dentist: 19
+    patient: 120
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 506
+  fields:
+    date: 2012-11-30
+    hour: 13:00
+    description: 
+    dentist: 19 
+    patient: 121
+    dental_office: 1
+    appointment_type: 3 
+- model: Dentist.appointment
+  pk: 507
+  fields:
+    date: 2012-11-30
+    hour: 14:00
+    description: 
+    dentist: 19
+    patient: 122
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 508
+  fields:
+    date: 2012-11-30
+    hour: 15:00
+    description: 
+    dentist: 19 
+    patient: 123
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 509
+  fields:
+    date: 2012-11-30
+    hour: 7:30
+    description: 
+    dentist: 20
+    patient: 124
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 510
+  fields:
+    date: 2012-11-30
+    hour: 8:30
+    description: 
+    dentist: 20
+    patient: 125
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 511
+  fields:
+    date: 2012-11-30
+    hour: 9:30
+    description: 
+    dentist: 20
+    patient: 126
+    dental_office: 1
+    appointment_type: 3
+- model: Dentist.appointment
+  pk: 512
+  fields:
+    date: 2012-11-30
+    hour: 10:30
+    description: 
+    dentist: 20
+    patient: 127
+    dental_office: 1 
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 513
+  fields:
+    date: 2012-11-30
+    hour: 11:30
+    description: 
+    dentist: 20
+    patient: 128
+    dental_office: 1
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 514
+  fields:
+    date: 2012-11-30
+    hour: 12:00
+    description: 
+    dentist: 20
+    patient: 128
+    dental_office: 1
+    appointment_type: 2              
