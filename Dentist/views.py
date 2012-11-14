@@ -157,9 +157,7 @@ def logout_view(request):
 @user_passes_test(new_password, login_url="/password/")
 def patient_list(request):
     if request.POST:
-        print request.POST['pat']
         patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
-        print patients.count()
     else:
         patients = patient.objects.all().order_by('last_name')
     paginator = Paginator(patients, 25)
@@ -638,7 +636,19 @@ def reservations(request):
     elif in_receptionist_group(request.user):
         if request.POST and 'patient' in request.POST.keys():
             reservations = appointment.objects.filter(patient=request.POST['patient']).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+            pat = patient.objects.get(id=request.POST['patient'])
         else:
-            patients = patient.objects.all().order_by('last_name')
-            return render(request, 'patients2.html', {'patients': patients})
-    return render(request, 'reservations.html', {'reservations': reservations})
+            if request.POST and 'pat' in request.POST.keys():
+                patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
+            else:
+                patients = patient.objects.all().order_by('last_name')
+            paginator = Paginator(patients, 25)
+            page = request.GET.get('page')
+            try:
+                patients2 = paginator.page(page)
+            except PageNotAnInteger:
+                patients2 = paginator.page(1)
+            except EmptyPage:
+                patients2 = paginator.page(1)
+            return render(request, 'patients2.html', {'patients': patients2})
+    return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat})
