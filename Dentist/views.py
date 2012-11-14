@@ -70,6 +70,7 @@ def register2(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def register_by_receptionist(request):
     if request.method == 'POST':
         form_patient = PatientForm(request.POST)
@@ -88,6 +89,7 @@ def register_by_receptionist(request):
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def diseases(request):
     if request.POST:
         form = DiseasesForm(request.user, request.POST)
@@ -105,6 +107,7 @@ def diseases(request):
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def update_profile(request, patient_id = -1):
     if request.user.groups.filter(name='pacjent').count() == 1:
         user = User.objects.get(id = request.user.id)
@@ -135,7 +138,8 @@ def change_password(request):
             request.user.set_password(request.POST['password'])
             request.user.save()
             
-            password = password_creation(user = request.user, last_change = datetime.datetime.now().date())
+            password = password_creation.objects.get(user = request.user)
+            password.last_change = datetime.datetime.now().date()
             password.save()
             return HttpResponseRedirect('/index/')
     else:
@@ -149,12 +153,14 @@ def logout_view(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def patient_list(request):
     patients = patient.objects.all()
     return render(request, 'patients.html', {'patients': patients}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def patient_user(request):
     if request.is_ajax:
         if request.POST:
@@ -173,6 +179,7 @@ def patient_user(request):
             form = PatientUserForm('')
     return render(request, 'patient_user.html', {'form': form}) 
 
+@user_passes_test(new_password, login_url="/password/")
 def index(request):
     return render(request, 'base.html')
 
@@ -181,6 +188,7 @@ def confirm_register(request):
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dentist_register(request):
     if request.POST:
         if 'type' in request.POST.keys():
@@ -250,6 +258,7 @@ def dentist_register(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dentist_register2(request):
     if request.POST:
         if 'type' in request.POST.keys():
@@ -330,6 +339,7 @@ def dentist_register2(request):
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def appointment_list(request):
     if request.POST:
         if request.POST['date']!='0':
@@ -351,6 +361,7 @@ def appointment_list(request):
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def appointment_list2(request):
     if request.POST:
         if request.POST['date']!='0':
@@ -394,6 +405,7 @@ def appointment_list2(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def day_graphic(request):
     offices = dental_office.objects.all()
     
@@ -457,6 +469,7 @@ def day_graphic(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dates_addition(request):
     if request.POST:
         if 'generate_submit' in request.POST.keys():
@@ -509,6 +522,7 @@ def dates_addition(request):
         form = GenerateDatesForm(offices[0].id, -1)
     return render(request, 'dates_addition.html', {'form': form})
 
+@user_passes_test(new_password, login_url="/password/")
 def offices(request):
     offs = dental_office.objects.all()
     offices =[]
@@ -518,6 +532,7 @@ def offices(request):
         offices.append({'office':o, 'dentists':dentists})
     return render(request, 'offices.html',{'offices': offices})
 
+@user_passes_test(new_password, login_url="/password/")
 def dentists(request):
     dents = dentist.objects.all().order_by('last_name')
     dentists = []
@@ -533,6 +548,7 @@ def dentists(request):
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def reservations(request):
     if request.POST:
         if 'appointment' in request.POST.keys():

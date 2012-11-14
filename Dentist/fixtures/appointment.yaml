@@ -1494,8 +1494,8 @@
     date: 2012-11-12
     hour: "7:30"
     description: 
-    dentist: 150
-    patient: 22
+    dentist: 4
+    patient: 150
     dental_office: 1
     appointment_type: 3
 - model: Dentist.appointment
@@ -2284,7 +2284,7 @@
     date: 2012-11-15
     hour: "11:30"
     description: 
-    dentist: 29
+    dentist: 16
     patient: 101
     dental_office: 1
     appointment_type: 2 
@@ -2354,7 +2354,7 @@
     date: 2012-11-16
     hour: "14:00"
     description: 
-    dentist: 36
+    dentist: 17
     patient: 108
     dental_office: 1
     appointment_type: 3

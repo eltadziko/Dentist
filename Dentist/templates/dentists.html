@@ -13,7 +13,14 @@
 		{% for o in d.offices %}
 			<a href="{% url views.offices %}#{{ o.office.id }}">{% if o.office.name %}{{ o.office.name }}, {% endif %}{{ o.office.address }}:</a><br>
 			{% for h in o.hours %}
-				{{ h.week_day }} {{ h.begin|time:'H:i' }}-{{ h.end|time:'H:i' }}<br />
+				{% if h.week_day == 1 %}pon
+				{% elif h.week_day == 2 %}wt
+				{% elif h.week_day == 3 %}śr
+				{% elif h.week_day == 4 %}czw
+				{% elif h.week_day == 5 %}pt
+				{% elif h.week_day == 6 %}so
+				{% elif h.week_day == 7 %}nd
+				{% endif %} {{ h.begin|time:'H:i' }}-{{ h.end|time:'H:i' }}<br />
 			{% endfor %}
 		{% endfor %}
 		<br />
