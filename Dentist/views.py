@@ -539,10 +539,19 @@ def offices(request):
     offs = dental_office.objects.all()
     offices =[]
     dents = dentist.objects.all().order_by('last_name')
+    pages = {}
+    i = 0;
+    for d in dents:
+        page = i/5 + 1
+        pages[d.last_name] = page
+        i = i + 1
     for o in offs:
         hour = hours.objects.values_list('dentist').filter(dental_office=o.id)
         dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
-        offices.append({'office':o, 'dentists':dentists})
+        dentists2 = []
+        for d in dentists:
+            dentists2.append({'d': d, 'page': pages[d.last_name]})
+        offices.append({'office':o, 'dentists':dentists2})
     return render(request, 'offices.html',{'offices': offices})
 
 @user_passes_test(new_password, login_url="/password/")
@@ -558,7 +567,7 @@ def dentists(request):
             offices.append({'office':o, 'hours': hour2})
         dentists.append({'dentist': d, 'offices': offices})
     
-    paginator = Paginator(dentists, 8)
+    paginator = Paginator(dentists, 5)
     page = request.GET.get('page')
     try:
         dentists2 = paginator.page(page)
