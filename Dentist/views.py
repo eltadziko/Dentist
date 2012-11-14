@@ -16,6 +16,7 @@ from forms.generate_dates_form import GenerateDatesForm
 from forms.register_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -70,6 +71,7 @@ def register2(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def register_by_receptionist(request):
     if request.method == 'POST':
         form_patient = PatientForm(request.POST)
@@ -88,6 +90,7 @@ def register_by_receptionist(request):
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def diseases(request):
     if request.POST:
         form = DiseasesForm(request.user, request.POST)
@@ -105,6 +108,7 @@ def diseases(request):
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def update_profile(request, patient_id = -1):
     if request.user.groups.filter(name='pacjent').count() == 1:
         user = User.objects.get(id = request.user.id)
@@ -135,7 +139,8 @@ def change_password(request):
             request.user.set_password(request.POST['password'])
             request.user.save()
             
-            password = password_creation(user = request.user, last_change = datetime.datetime.now().date())
+            password = password_creation.objects.get(user = request.user)
+            password.last_change = datetime.datetime.now().date()
             password.save()
             return HttpResponseRedirect('/index/')
     else:
@@ -149,12 +154,25 @@ def logout_view(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def patient_list(request):
-    patients = patient.objects.all()
-    return render(request, 'patients.html', {'patients': patients}) 
+    if request.POST:
+        patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
+    else:
+        patients = patient.objects.all().order_by('last_name')
+    paginator = Paginator(patients, 25)
+    page = request.GET.get('page')
+    try:
+        patients2 = paginator.page(page)
+    except PageNotAnInteger:
+        patients2 = paginator.page(1)
+    except EmptyPage:
+        patients2 = paginator.page(1)
+    return render(request, 'patients.html', {'patients': patients2}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def patient_user(request):
     if request.is_ajax:
         if request.POST:
@@ -173,6 +191,7 @@ def patient_user(request):
             form = PatientUserForm('')
     return render(request, 'patient_user.html', {'form': form}) 
 
+@user_passes_test(new_password, login_url="/password/")
 def index(request):
     return render(request, 'base.html')
 
@@ -181,6 +200,7 @@ def confirm_register(request):
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dentist_register(request):
     if request.POST:
         if 'type' in request.POST.keys():
@@ -250,6 +270,7 @@ def dentist_register(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dentist_register2(request):
     if request.POST:
         if 'type' in request.POST.keys():
@@ -330,6 +351,7 @@ def dentist_register2(request):
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def appointment_list(request):
     if request.POST:
         if request.POST['date']!='0':
@@ -351,6 +373,7 @@ def appointment_list(request):
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def appointment_list2(request):
     if request.POST:
         if request.POST['date']!='0':
@@ -394,6 +417,7 @@ def appointment_list2(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def day_graphic(request):
     offices = dental_office.objects.all()
     
@@ -457,6 +481,7 @@ def day_graphic(request):
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dates_addition(request):
     if request.POST:
         if 'generate_submit' in request.POST.keys():
@@ -509,15 +534,27 @@ def dates_addition(request):
         form = GenerateDatesForm(offices[0].id, -1)
     return render(request, 'dates_addition.html', {'form': form})
 
+@user_passes_test(new_password, login_url="/password/")
 def offices(request):
     offs = dental_office.objects.all()
     offices =[]
+    dents = dentist.objects.all().order_by('last_name')
+    pages = {}
+    i = 0;
+    for d in dents:
+        page = i/5 + 1
+        pages[d.last_name] = page
+        i = i + 1
     for o in offs:
         hour = hours.objects.values_list('dentist').filter(dental_office=o.id)
         dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
-        offices.append({'office':o, 'dentists':dentists})
+        dentists2 = []
+        for d in dentists:
+            dentists2.append({'d': d, 'page': pages[d.last_name]})
+        offices.append({'office':o, 'dentists':dentists2})
     return render(request, 'offices.html',{'offices': offices})
 
+@user_passes_test(new_password, login_url="/password/")
 def dentists(request):
     dents = dentist.objects.all().order_by('last_name')
     dentists = []
@@ -529,10 +566,20 @@ def dentists(request):
             hour2 = hours.objects.filter(dentist=d.id).filter(dental_office=o.id).order_by('week_day')
             offices.append({'office':o, 'hours': hour2})
         dentists.append({'dentist': d, 'offices': offices})
-    return render(request, 'dentists.html',{'dentists': dentists})
+    
+    paginator = Paginator(dentists, 5)
+    page = request.GET.get('page')
+    try:
+        dentists2 = paginator.page(page)
+    except PageNotAnInteger:
+        dentists2 = paginator.page(1)
+    except EmptyPage:
+        dentists2 = paginator.page(1)
+    return render(request, 'dentists.html',{'dentists': dentists2})
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def reservations(request):
     if request.POST:
         if 'appointment' in request.POST.keys():
@@ -598,7 +645,19 @@ def reservations(request):
     elif in_receptionist_group(request.user):
         if request.POST and 'patient' in request.POST.keys():
             reservations = appointment.objects.filter(patient=request.POST['patient']).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+            pat = patient.objects.get(id=request.POST['patient'])
         else:
-            patients = patient.objects.all().order_by('last_name')
-            return render(request, 'patients2.html', {'patients': patients})
-    return render(request, 'reservations.html', {'reservations': reservations})
+            if request.POST and 'pat' in request.POST.keys():
+                patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
+            else:
+                patients = patient.objects.all().order_by('last_name')
+            paginator = Paginator(patients, 25)
+            page = request.GET.get('page')
+            try:
+                patients2 = paginator.page(page)
+            except PageNotAnInteger:
+                patients2 = paginator.page(1)
+            except EmptyPage:
+                patients2 = paginator.page(1)
+            return render(request, 'patients2.html', {'patients': patients2})
+    return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat})

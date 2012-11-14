@@ -4,21 +4,29 @@
     name: Centrum Stomatologii  
     address: ul. Bolesława Krzywoustego 19b, Wrocław
     description: Prywatna Praktyka Stomatologiczna, specjalizacja - chirurgia, zachowawcza, protetyka.
+    email: gabinet1@coldix.pl
+    phone: 714452384
 - model: Dentist.dental_office
   pk: 2
   fields:
     name: ALL-DENT
     address: ul. Partynicka 32E, Wrocław
     description: Lekarze dentyści oferują pełny zakres usług w dziedzinie stomatologii.
+    email: gabinet2@coldix.pl
+    phone: 718253684
 - model: Dentist.dental_office
   pk: 3
   fields:
     name: AMF Gabinet Stomatologiczny
     address:  ul. Widok 1 /13, Wrocław
     description: Gabinet stomatologiczny.
+    email: gabinet3@coldix.pl
+    phone: 714237698
 - model: Dentist.dental_office
   pk: 4
   fields:
     name: Gabinet COLDIX
     address:  ul. Kasprowicza 1 /13, Wrocław
     description: Gabinet stomatologiczny.
+    email: gabinet4@coldix.pl
+    phone: 713137582

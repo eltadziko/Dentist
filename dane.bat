@@ -10,3 +10,4 @@ manage.py loaddata patient_diseases.yaml
 manage.py loaddata dentist.yaml
 manage.py loaddata password_creation.yaml
 manage.py loaddata hours.yaml
+manage.py loaddata appointment.yaml

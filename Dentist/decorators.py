@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from models import password_creation
+import datetime
 
 def anonymous_required( view_function, redirect_to = None ):
     return AnonymousRequired( view_function, redirect_to )
@@ -36,3 +38,13 @@ def in_dentist_group(user):
     if user:
         return user.groups.filter(name='dentysta').count() == 1
     return False
+
+def new_password(user):
+    if user.id:
+        password = password_creation.objects.get(user = user)
+        date = datetime.datetime.now().date()
+        days = date - password.last_change
+        if days.days >= 29:
+            return False
+        return True
+    return True
