@@ -26,4 +26,19 @@
 		<br />
 	{% endfor %}
 
+<div class="pagination">
+    <span class="step-links">
+        {% if dentists.has_previous %}
+            <a href="?page={{ dentists.previous_page_number }}">Poprzednia</a>
+        {% endif %}
+
+        <span class="current">
+            Strona {{ dentists.number }} z {{ dentists.paginator.num_pages }}
+        </span>
+
+        {% if dentists.has_next %}
+            <a href="?page={{ dentists.next_page_number }}">Następna</a>
+        {% endif %}
+    </span>
+</div>
 {% endblock %}

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load group_filter %}
 
 {% block right_column %}
 
@@ -9,7 +10,7 @@
 		Kontakt: <a href="mailto:{{ o.office.email }}">{{ o.office.email }}</a>, tel.: {{ o.office.phone }}<br />
 		Dentyści:<br />
 		{% for d in o.dentists %}
-			<a href="{% url views.dentists %}#{{ d.id }}">{{ d.last_name }} {{ d.first_name }}</a><br />
+			<a href="{% url views.dentists %}?page={{ d.id|div:9 }}#{{ d.id }}">{{ d.last_name }} {{ d.first_name }}</a><br />
 		{% endfor %}
 		<br />
 	{% endfor %}

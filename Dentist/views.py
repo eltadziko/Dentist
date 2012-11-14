@@ -16,6 +16,7 @@ from forms.generate_dates_form import GenerateDatesForm
 from forms.register_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -155,8 +156,21 @@ def logout_view(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def patient_list(request):
-    patients = patient.objects.all()
-    return render(request, 'patients.html', {'patients': patients}) 
+    if request.POST:
+        print request.POST['pat']
+        patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
+        print patients.count()
+    else:
+        patients = patient.objects.all().order_by('last_name')
+    paginator = Paginator(patients, 25)
+    page = request.GET.get('page')
+    try:
+        patients2 = paginator.page(page)
+    except PageNotAnInteger:
+        patients2 = paginator.page(1)
+    except EmptyPage:
+        patients2 = paginator.page(1)
+    return render(request, 'patients.html', {'patients': patients2}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -526,6 +540,7 @@ def dates_addition(request):
 def offices(request):
     offs = dental_office.objects.all()
     offices =[]
+    dents = dentist.objects.all().order_by('last_name')
     for o in offs:
         hour = hours.objects.values_list('dentist').filter(dental_office=o.id)
         dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
@@ -544,7 +559,16 @@ def dentists(request):
             hour2 = hours.objects.filter(dentist=d.id).filter(dental_office=o.id).order_by('week_day')
             offices.append({'office':o, 'hours': hour2})
         dentists.append({'dentist': d, 'offices': offices})
-    return render(request, 'dentists.html',{'dentists': dentists})
+    
+    paginator = Paginator(dentists, 8)
+    page = request.GET.get('page')
+    try:
+        dentists2 = paginator.page(page)
+    except PageNotAnInteger:
+        dentists2 = paginator.page(1)
+    except EmptyPage:
+        dentists2 = paginator.page(1)
+    return render(request, 'dentists.html',{'dentists': dentists2})
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
