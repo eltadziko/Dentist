@@ -2,8 +2,8 @@
   pk: 1
   fields:
     date: 2012-11-05
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -11,8 +11,8 @@
   pk: 2
   fields:
     date: 2012-11-05
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -20,8 +20,8 @@
   pk: 3
   fields:
     date: 2012-11-05
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -29,8 +29,8 @@
   pk: 4
   fields:
     date: 2012-11-05
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -38,8 +38,8 @@
   pk: 5
   fields:
     date: 2012-11-05
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -47,8 +47,8 @@
   pk: 6
   fields:
     date: 2012-11-05
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -56,8 +56,8 @@
   pk: 7
   fields:
     date: 2012-11-05
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -65,8 +65,8 @@
   pk: 8
   fields:
     date: 2012-11-05
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -74,8 +74,8 @@
   pk: 9
   fields:
     date: 2012-11-05
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -83,8 +83,8 @@
   pk: 10
   fields:
     date: 2012-11-05
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -92,8 +92,8 @@
   pk: 11
   fields:
     date: 2012-11-05
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -101,8 +101,8 @@
   pk: 12
   fields:
     date: 2012-11-05
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -110,8 +110,8 @@
   pk: 13
   fields:
     date: 2012-11-05
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -119,8 +119,8 @@
   pk: 14
   fields:
     date: 2012-11-05
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -128,8 +128,8 @@
   pk: 15
   fields:
     date: 2012-11-05
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -137,8 +137,8 @@
   pk: 16
   fields:
     date: 2012-11-05
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -146,8 +146,8 @@
   pk: 17
   fields:
     date: 2012-11-05
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -155,8 +155,8 @@
   pk: 18
   fields:
     date: 2012-11-05
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -164,8 +164,8 @@
   pk: 19
   fields:
     date: 2012-11-05
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -173,8 +173,8 @@
   pk: 20
   fields:
     date: 2012-11-05
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -182,8 +182,8 @@
   pk: 21
   fields:
     date: 2012-11-05
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -191,8 +191,8 @@
   pk: 22
   fields:
     date: 2012-11-05
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -200,8 +200,8 @@
   pk: 23
   fields:
     date: 2012-11-05
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -209,8 +209,8 @@
   pk: 24
   fields:
     date: 2012-11-05
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -218,8 +218,8 @@
   pk: 25
   fields:
     date: 2012-11-05
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 4
     dental_office: 4 
     room: 4.0
@@ -227,8 +227,8 @@
   pk: 26
   fields:
     date: 2012-11-05
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -236,8 +236,8 @@
   pk: 27
   fields:
     date: 2012-11-05
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 4
     dental_office: 4 
     room: 4
@@ -245,8 +245,8 @@
   pk: 28
   fields:
     date: 2012-11-06
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -254,8 +254,8 @@
   pk: 29
   fields:
     date: 2012-11-06
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -263,8 +263,8 @@
   pk: 30
   fields:
     date: 2012-11-06
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -272,8 +272,8 @@
   pk: 31
   fields:
     date: 2012-11-06
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -281,8 +281,8 @@
   pk: 32
   fields:
     date: 2012-11-06
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -290,8 +290,8 @@
   pk: 33
   fields:
     date: 2012-11-06
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -299,8 +299,8 @@
   pk: 34
   fields:
     date: 2012-11-06
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -308,8 +308,8 @@
   pk: 35
   fields:
     date: 2012-11-06
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -317,8 +317,8 @@
   pk: 36
   fields:
     date: 2012-11-06
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -326,8 +326,8 @@
   pk: 37
   fields:
     date: 2012-11-06
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -335,8 +335,8 @@
   pk: 38
   fields:
     date: 2012-11-06
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 6
     dental_office: 2 
     room: 2.0
@@ -344,8 +344,8 @@
   pk: 39
   fields:
     date: 2012-11-06
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -353,8 +353,8 @@
   pk: 40
   fields:
     date: 2012-11-06
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 6
     dental_office: 1 
     room: 1
@@ -362,8 +362,8 @@
   pk: 41
   fields:
     date: 2012-11-06
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -371,8 +371,8 @@
   pk: 42
   fields:
     date: 2012-11-06
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -380,8 +380,8 @@
   pk: 43
   fields:
     date: 2012-11-06
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -389,8 +389,8 @@
   pk: 44
   fields:
     date: 2012-11-06
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -398,8 +398,8 @@
   pk: 45
   fields:
     date: 2012-11-06
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 7
     dental_office: 3 
     room: 3.0
@@ -407,8 +407,8 @@
   pk: 46
   fields:
     date: 2012-11-06
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 8
     dental_office: 3
     room: 3.0
@@ -416,8 +416,8 @@
   pk: 47
   fields:
     date: 2012-11-06
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 8
     dental_office: 3 
     room: 3.0
@@ -425,8 +425,8 @@
   pk: 48
   fields:
     date: 2012-11-06
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 8
     dental_office: 3 
     room: 3.0   
@@ -434,8 +434,8 @@
   pk: 49
   fields:
     date: 2012-11-07
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -443,8 +443,8 @@
   pk: 50
   fields:
     date: 2012-11-07
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -452,8 +452,8 @@
   pk: 51
   fields:
     date: 2012-11-07
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -461,8 +461,8 @@
   pk: 52
   fields:
     date: 2012-11-07
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -470,8 +470,8 @@
   pk: 53
   fields:
     date: 2012-11-07
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -479,8 +479,8 @@
   pk: 54
   fields:
     date: 2012-11-07
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -488,8 +488,8 @@
   pk: 55
   fields:
     date: 2012-11-07
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -497,8 +497,8 @@
   pk: 56
   fields:
     date: 2012-11-07
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -506,8 +506,8 @@
   pk: 57
   fields:
     date: 2012-11-07
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -515,8 +515,8 @@
   pk: 58
   fields:
     date: 2012-11-07
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -524,8 +524,8 @@
   pk: 59
   fields:
     date: 2012-11-07
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 10
     dental_office: 2 
     room: 2.0
@@ -533,8 +533,8 @@
   pk: 60
   fields:
     date: 2012-11-07
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -542,8 +542,8 @@
   pk: 61
   fields:
     date: 2012-11-07
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 10
     dental_office: 1 
     room: 1
@@ -551,8 +551,8 @@
   pk: 62
   fields:
     date: 2012-11-07
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -560,8 +560,8 @@
   pk: 63
   fields:
     date: 2012-11-07
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -569,8 +569,8 @@
   pk: 64
   fields:
     date: 2012-11-07
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -578,8 +578,8 @@
   pk: 65
   fields:
     date: 2012-11-07
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -587,8 +587,8 @@
   pk: 66
   fields:
     date: 2012-11-07
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -596,8 +596,8 @@
   pk: 67
   fields:
     date: 2012-11-07
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -605,8 +605,8 @@
   pk: 68
   fields:
     date: 2012-11-07
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -614,8 +614,8 @@
   pk: 69
   fields:
     date: 2012-11-07
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -623,8 +623,8 @@
   pk: 70
   fields:
     date: 2012-11-07
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -632,8 +632,8 @@
   pk: 71
   fields:
     date: 2012-11-07
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -641,8 +641,8 @@
   pk: 72
   fields:
     date: 2012-11-07
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -650,8 +650,8 @@
   pk: 73
   fields:
     date: 2012-11-07
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -659,8 +659,8 @@
   pk: 74
   fields:
     date: 2012-11-07
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -668,8 +668,8 @@
   pk: 75
   fields:
     date: 2012-11-07
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -677,8 +677,8 @@
   pk: 76
   fields:
     date: 2012-11-08
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -686,8 +686,8 @@
   pk: 77
   fields:
     date: 2012-11-08
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -695,8 +695,8 @@
   pk: 78
   fields:
     date: 2012-11-08
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -704,8 +704,8 @@
   pk: 79
   fields:
     date: 2012-11-08
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -713,8 +713,8 @@
   pk: 80
   fields:
     date: 2012-11-08
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -722,8 +722,8 @@
   pk: 81
   fields:
     date: 2012-11-08
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -731,8 +731,8 @@
   pk: 82
   fields:
     date: 2012-11-08
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -740,8 +740,8 @@
   pk: 83
   fields:
     date: 2012-11-08
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -749,8 +749,8 @@
   pk: 84
   fields:
     date: 2012-11-08
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -758,8 +758,8 @@
   pk: 85
   fields:
     date: 2012-11-08
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -767,8 +767,8 @@
   pk: 86
   fields:
     date: 2012-11-08
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 14
     dental_office: 2 
     room: 2.0
@@ -776,8 +776,8 @@
   pk: 87
   fields:
     date: 2012-11-08
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -785,8 +785,8 @@
   pk: 88
   fields:
     date: 2012-11-08
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 14
     dental_office: 1 
     room: 1
@@ -794,8 +794,8 @@
   pk: 89
   fields:
     date: 2012-11-08
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -803,8 +803,8 @@
   pk: 90
   fields:
     date: 2012-11-08
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -812,8 +812,8 @@
   pk: 91
   fields:
     date: 2012-11-08
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -821,8 +821,8 @@
   pk: 92
   fields:
     date: 2012-11-08
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -830,8 +830,8 @@
   pk: 93
   fields:
     date: 2012-11-08
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -839,8 +839,8 @@
   pk: 94
   fields:
     date: 2012-11-08
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -848,8 +848,8 @@
   pk: 95
   fields:
     date: 2012-11-08
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -857,8 +857,8 @@
   pk: 96
   fields:
     date: 2012-11-08
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -866,8 +866,8 @@
   pk: 97
   fields:
     date: 2012-11-08
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -875,8 +875,8 @@
   pk: 98
   fields:
     date: 2012-11-08
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -884,8 +884,8 @@
   pk: 99
   fields:
     date: 2012-11-08
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -893,8 +893,8 @@
   pk: 100
   fields:
     date: 2012-11-08
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -902,8 +902,8 @@
   pk: 101
   fields:
     date: 2012-11-08
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -911,8 +911,8 @@
   pk: 102
   fields:
     date: 2012-11-08
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -920,8 +920,8 @@
   pk: 103
   fields:
     date: 2012-11-09
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -929,8 +929,8 @@
   pk: 104
   fields:
     date: 2012-11-09
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -938,8 +938,8 @@
   pk: 105
   fields:
     date: 2012-11-09
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -947,8 +947,8 @@
   pk: 106
   fields:
     date: 2012-11-09
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -956,8 +956,8 @@
   pk: 107
   fields:
     date: 2012-11-09
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -965,8 +965,8 @@
   pk: 108
   fields:
     date: 2012-11-09
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -974,8 +974,8 @@
   pk: 109
   fields:
     date: 2012-11-09
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -983,8 +983,8 @@
   pk: 110
   fields:
     date: 2012-11-09
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -992,8 +992,8 @@
   pk: 111
   fields:
     date: 2012-11-09
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -1001,8 +1001,8 @@
   pk: 112
   fields:
     date: 2012-11-09
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -1010,8 +1010,8 @@
   pk: 113
   fields:
     date: 2012-11-09
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -1019,8 +1019,8 @@
   pk: 114
   fields:
     date: 2012-11-09
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -1028,8 +1028,8 @@
   pk: 115
   fields:
     date: 2012-11-09
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: 1"8:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -1037,8 +1037,8 @@
   pk: 116
   fields:
     date: 2012-11-09
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -1046,8 +1046,8 @@
   pk: 117
   fields:
     date: 2012-11-09
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -1055,8 +1055,8 @@
   pk: 118
   fields:
     date: 2012-11-09
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -1064,8 +1064,8 @@
   pk: 119
   fields:
     date: 2012-11-09
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -1073,8 +1073,8 @@
   pk: 120
   fields:
     date: 2012-11-09
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -1082,8 +1082,8 @@
   pk: 121
   fields:
     date: 2012-11-09
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -1091,8 +1091,8 @@
   pk: 122
   fields:
     date: 2012-11-09
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -1100,8 +1100,8 @@
   pk: 123
   fields:
     date: 2012-11-09
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -1109,8 +1109,8 @@
   pk: 124
   fields:
     date: 2012-11-09
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -1118,8 +1118,8 @@
   pk: 125
   fields:
     date: 2012-11-09
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -1127,8 +1127,8 @@
   pk: 126
   fields:
     date: 2012-11-09
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 20
     dental_office: 4 
     room: 4.0
@@ -1136,8 +1136,8 @@
   pk: 127
   fields:
     date: 2012-11-09
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -1145,8 +1145,8 @@
   pk: 128
   fields:
     date: 2012-11-09
-    begin: 12:30
-    end: 12:30
+    begin: "12:30"
+    end: "12:30"
     dentist: 20
     dental_office: 4 
     room: 4
@@ -1154,8 +1154,8 @@
   pk: 129
   fields:
     date: 2012-11-12
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -1163,8 +1163,8 @@
   pk: 130
   fields:
     date: 2012-11-12
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -1172,8 +1172,8 @@
   pk: 131
   fields:
     date: 2012-11-12
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -1181,8 +1181,8 @@
   pk: 132
   fields:
     date: 2012-11-12
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -1190,8 +1190,8 @@
   pk: 133
   fields:
     date: 2012-11-12
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -1199,8 +1199,8 @@
   pk: 134
   fields:
     date: 2012-11-12
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -1208,8 +1208,8 @@
   pk: 135
   fields:
     date: 2012-11-12
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -1217,8 +1217,8 @@
   pk: 136
   fields:
     date: 2012-11-12
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -1226,8 +1226,8 @@
   pk: 137
   fields:
     date: 2012-11-12
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -1235,8 +1235,8 @@
   pk: 138
   fields:
     date: 2012-11-12
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -1244,8 +1244,8 @@
   pk: 139
   fields:
     date: 2012-11-12
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -1253,8 +1253,8 @@
   pk: 140
   fields:
     date: 2012-11-12
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -1262,8 +1262,8 @@
   pk: 141
   fields:
     date: 2012-11-12
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -1271,8 +1271,8 @@
   pk: 142
   fields:
     date: 2012-11-12
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -1280,8 +1280,8 @@
   pk: 143
   fields:
     date: 2012-11-12
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -1289,8 +1289,8 @@
   pk: 144
   fields:
     date: 2012-11-12
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -1298,8 +1298,8 @@
   pk: 145
   fields:
     date: 2012-11-12
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -1307,8 +1307,8 @@
   pk: 146
   fields:
     date: 2012-11-12
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -1316,8 +1316,8 @@
   pk: 147
   fields:
     date: 2012-11-12
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -1325,8 +1325,8 @@
   pk: 148
   fields:
     date: 2012-11-12
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -1334,8 +1334,8 @@
   pk: 149
   fields:
     date: 2012-11-12
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -1343,8 +1343,8 @@
   pk: 150
   fields:
     date: 2012-11-12
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -1352,8 +1352,8 @@
   pk: 151
   fields:
     date: 2012-11-12
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -1361,8 +1361,8 @@
   pk: 152
   fields:
     date: 2012-11-12
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -1370,8 +1370,8 @@
   pk: 153
   fields:
     date: 2012-11-12
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 4
     dental_office: 4 
     room: 4.0
@@ -1379,8 +1379,8 @@
   pk: 154
   fields:
     date: 2012-11-12
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -1388,8 +1388,8 @@
   pk: 155
   fields:
     date: 2012-11-12
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 4
     dental_office: 4 
     room: 4
@@ -1397,8 +1397,8 @@
   pk: 156
   fields:
     date: 2012-11-13
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -1406,8 +1406,8 @@
   pk: 157
   fields:
     date: 2012-11-13
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -1415,8 +1415,8 @@
   pk: 158
   fields:
     date: 2012-11-13
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -1424,8 +1424,8 @@
   pk: 159
   fields:
     date: 2012-11-13
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -1433,8 +1433,8 @@
   pk: 160
   fields:
     date: 2012-11-13
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -1442,8 +1442,8 @@
   pk: 161
   fields:
     date: 2012-11-13
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -1451,8 +1451,8 @@
   pk: 162
   fields:
     date: 2012-11-13
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -1460,8 +1460,8 @@
   pk: 163
   fields:
     date: 2012-11-13
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -1469,8 +1469,8 @@
   pk: 164
   fields:
     date: 2012-11-13
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -1478,8 +1478,8 @@
   pk: 165
   fields:
     date: 2012-11-13
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -1487,8 +1487,8 @@
   pk: 166
   fields:
     date: 2012-11-13
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 6
     dental_office: 2 
     room: 2.0
@@ -1496,8 +1496,8 @@
   pk: 167
   fields:
     date: 2012-11-13
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -1505,8 +1505,8 @@
   pk: 168
   fields:
     date: 2012-11-13
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: 1"8:00"
     dentist: 6
     dental_office: 1 
     room: 1
@@ -1514,8 +1514,8 @@
   pk: 169
   fields:
     date: 2012-11-13
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -1523,8 +1523,8 @@
   pk: 170
   fields:
     date: 2012-11-13
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -1532,8 +1532,8 @@
   pk: 171
   fields:
     date: 2012-11-13
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -1541,8 +1541,8 @@
   pk: 172
   fields:
     date: 2012-11-13
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -1550,8 +1550,8 @@
   pk: 173
   fields:
     date: 2012-11-13
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 7
     dental_office: 3 
     room: 3.0
@@ -1559,8 +1559,8 @@
   pk: 174
   fields:
     date: 2012-11-13
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 8
     dental_office: 3
     room: 3.0
@@ -1568,8 +1568,8 @@
   pk: 175
   fields:
     date: 2012-11-13
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 8
     dental_office: 3 
     room: 3.0
@@ -1577,8 +1577,8 @@
   pk: 176
   fields:
     date: 2012-11-13
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 8
     dental_office: 3 
     room: 3.0   
@@ -1586,8 +1586,8 @@
   pk: 177
   fields:
     date: 2012-11-14
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -1595,8 +1595,8 @@
   pk: 178
   fields:
     date: 2012-11-14
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -1604,8 +1604,8 @@
   pk: 179
   fields:
     date: 2012-11-14
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -1613,8 +1613,8 @@
   pk: 180
   fields:
     date: 2012-11-14
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -1622,8 +1622,8 @@
   pk: 181
   fields:
     date: 2012-11-14
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -1631,8 +1631,8 @@
   pk: 182
   fields:
     date: 2012-11-14
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -1640,8 +1640,8 @@
   pk: 183
   fields:
     date: 2012-11-14
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -1649,8 +1649,8 @@
   pk: 184
   fields:
     date: 2012-11-14
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -1658,8 +1658,8 @@
   pk: 185
   fields:
     date: 2012-11-14
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -1667,8 +1667,8 @@
   pk: 186
   fields:
     date: 2012-11-14
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -1676,8 +1676,8 @@
   pk: 187
   fields:
     date: 2012-11-14
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 10
     dental_office: 2 
     room: 2.0
@@ -1685,8 +1685,8 @@
   pk: 188
   fields:
     date: 2012-11-14
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -1694,8 +1694,8 @@
   pk: 189
   fields:
     date: 2012-11-14
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 10
     dental_office: 1 
     room: 1
@@ -1703,8 +1703,8 @@
   pk: 190
   fields:
     date: 2012-11-14
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -1712,8 +1712,8 @@
   pk: 191
   fields:
     date: 2012-11-14
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -1721,8 +1721,8 @@
   pk: 192
   fields:
     date: 2012-11-14
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -1730,8 +1730,8 @@
   pk: 193
   fields:
     date: 2012-11-14
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -1739,8 +1739,8 @@
   pk: 194
   fields:
     date: 2012-11-14
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -1748,8 +1748,8 @@
   pk: 195
   fields:
     date: 2012-11-14
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -1757,8 +1757,8 @@
   pk: 196
   fields:
     date: 2012-11-14
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -1766,8 +1766,8 @@
   pk: 197
   fields:
     date: 2012-11-14
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -1775,8 +1775,8 @@
   pk: 198
   fields:
     date: 2012-11-14
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -1784,8 +1784,8 @@
   pk: 199
   fields:
     date: 2012-11-14
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -1793,8 +1793,8 @@
   pk: 200
   fields:
     date: 2012-11-14
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -1802,8 +1802,8 @@
   pk: 201
   fields:
     date: 2012-11-14
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -1811,8 +1811,8 @@
   pk: 202
   fields:
     date: 2012-11-14
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -1820,8 +1820,8 @@
   pk: 203
   fields:
     date: 2012-11-14
-    begin: 12:30
-    end: 12:30
+    begin: "12:30"
+    end: "12:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -1829,8 +1829,8 @@
   pk: 204
   fields:
     date: 2012-11-15
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -1838,8 +1838,8 @@
   pk: 205
   fields:
     date: 2012-11-15
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -1847,8 +1847,8 @@
   pk: 206
   fields:
     date: 2012-11-15
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -1856,8 +1856,8 @@
   pk: 207
   fields:
     date: 2012-11-15
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -1865,8 +1865,8 @@
   pk: 208
   fields:
     date: 2012-11-15
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -1874,8 +1874,8 @@
   pk: 209
   fields:
     date: 2012-11-15
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -1883,8 +1883,8 @@
   pk: 210
   fields:
     date: 2012-11-15
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -1892,8 +1892,8 @@
   pk: 211
   fields:
     date: 2012-11-15
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -1901,8 +1901,8 @@
   pk: 212
   fields:
     date: 2012-11-15
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -1910,8 +1910,8 @@
   pk: 213
   fields:
     date: 2012-11-15
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -1919,8 +1919,8 @@
   pk: 214
   fields:
     date: 2012-11-15
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 14
     dental_office: 2 
     room: 2.0
@@ -1928,8 +1928,8 @@
   pk: 215
   fields:
     date: 2012-11-15
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -1937,8 +1937,8 @@
   pk: 216
   fields:
     date: 2012-11-15
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 14
     dental_office: 1 
     room: 1
@@ -1946,8 +1946,8 @@
   pk: 217
   fields:
     date: 2012-11-15
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -1955,8 +1955,8 @@
   pk: 218
   fields:
     date: 2012-11-15
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -1964,8 +1964,8 @@
   pk: 219
   fields:
     date: 2012-11-15
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -1973,8 +1973,8 @@
   pk: 220
   fields:
     date: 2012-11-15
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -1982,8 +1982,8 @@
   pk: 221
   fields:
     date: 2012-11-15
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -1991,8 +1991,8 @@
   pk: 222
   fields:
     date: 2012-11-15
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -2000,8 +2000,8 @@
   pk: 223
   fields:
     date: 2012-11-15
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -2009,8 +2009,8 @@
   pk: 224
   fields:
     date: 2012-11-15
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -2018,8 +2018,8 @@
   pk: 225
   fields:
     date: 2012-11-15
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -2027,8 +2027,8 @@
   pk: 226
   fields:
     date: 2012-11-15
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -2036,8 +2036,8 @@
   pk: 227
   fields:
     date: 2012-11-15
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -2045,8 +2045,8 @@
   pk: 228
   fields:
     date: 2012-11-15
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -2054,8 +2054,8 @@
   pk: 229
   fields:
     date: 2012-11-15
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -2063,8 +2063,8 @@
   pk: 230
   fields:
     date: 2012-11-15
-    begin: 12:30
-    end: 12:30
+    begin: "12:30"
+    end: "12:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -2072,8 +2072,8 @@
   pk: 231
   fields:
     date: 2012-11-16
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -2081,8 +2081,8 @@
   pk: 232
   fields:
     date: 2012-11-16
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -2090,8 +2090,8 @@
   pk: 233
   fields:
     date: 2012-11-16
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -2099,8 +2099,8 @@
   pk: 234
   fields:
     date: 2012-11-16
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -2108,8 +2108,8 @@
   pk: 235
   fields:
     date: 2012-11-16
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -2117,8 +2117,8 @@
   pk: 236
   fields:
     date: 2012-11-16
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -2126,8 +2126,8 @@
   pk: 237
   fields:
     date: 2012-11-16
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -2135,8 +2135,8 @@
   pk: 238
   fields:
     date: 2012-11-16
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -2144,8 +2144,8 @@
   pk: 239
   fields:
     date: 2012-11-16
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -2153,8 +2153,8 @@
   pk: 240
   fields:
     date: 2012-11-16
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -2162,8 +2162,8 @@
   pk: 241
   fields:
     date: 2012-11-16
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -2171,8 +2171,8 @@
   pk: 242
   fields:
     date: 2012-11-16
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -2180,8 +2180,8 @@
   pk: 243
   fields:
     date: 2012-11-16
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -2189,8 +2189,8 @@
   pk: 244
   fields:
     date: 2012-11-16
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -2198,8 +2198,8 @@
   pk: 245
   fields:
     date: 2012-11-16
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -2207,8 +2207,8 @@
   pk: 246
   fields:
     date: 2012-11-16
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -2216,8 +2216,8 @@
   pk: 247
   fields:
     date: 2012-11-16
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -2225,8 +2225,8 @@
   pk: 248
   fields:
     date: 2012-11-16
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -2234,8 +2234,8 @@
   pk: 248
   fields:
     date: 2012-11-16
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -2243,8 +2243,8 @@
   pk: 249
   fields:
     date: 2012-11-16
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -2252,8 +2252,8 @@
   pk: 250
   fields:
     date: 2012-11-16
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -2261,8 +2261,8 @@
   pk: 251
   fields:
     date: 2012-11-16
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -2270,8 +2270,8 @@
   pk: 252
   fields:
     date: 2012-11-16
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -2279,8 +2279,8 @@
   pk: 253
   fields:
     date: 2012-11-16
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -2288,8 +2288,8 @@
   pk: 254
   fields:
     date: 2012-11-16
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 20
     dental_office: 4 
     room: 4.0
@@ -2297,8 +2297,8 @@
   pk: 255
   fields:
     date: 2012-11-16
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -2306,8 +2306,8 @@
   pk: 256
   fields:
     date: 2012-11-16
-    begin: 12:30
-    end: 12:30
+    begin: "12:30"
+    end: "12:30"
     dentist: 20
     dental_office: 4 
     room: 4
@@ -2315,8 +2315,8 @@
   pk: 257
   fields:
     date: 2012-11-19
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -2324,8 +2324,8 @@
   pk: 258
   fields:
     date: 2012-11-19
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -2333,8 +2333,8 @@
   pk: 259
   fields:
     date: 2012-11-19
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -2342,8 +2342,8 @@
   pk: 260
   fields:
     date: 2012-11-19
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -2351,8 +2351,8 @@
   pk: 261
   fields:
     date: 2012-11-19
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -2360,8 +2360,8 @@
   pk: 262
   fields:
     date: 2012-11-19
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -2369,8 +2369,8 @@
   pk: 263
   fields:
     date: 2012-11-19
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -2378,8 +2378,8 @@
   pk: 264
   fields:
     date: 2012-11-19
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -2387,8 +2387,8 @@
   pk: 265
   fields:
     date: 2012-11-19
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -2396,8 +2396,8 @@
   pk: 266
   fields:
     date: 2012-11-19
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -2405,8 +2405,8 @@
   pk: 267
   fields:
     date: 2012-11-19
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -2414,8 +2414,8 @@
   pk: 268
   fields:
     date: 2012-11-19
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -2423,8 +2423,8 @@
   pk: 269
   fields:
     date: 2012-11-19
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -2432,8 +2432,8 @@
   pk: 270
   fields:
     date: 2012-11-19
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -2441,8 +2441,8 @@
   pk: 271
   fields:
     date: 2012-11-19
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -2450,8 +2450,8 @@
   pk: 272
   fields:
     date: 2012-11-19
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -2459,8 +2459,8 @@
   pk: 273
   fields:
     date: 2012-11-19
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -2468,8 +2468,8 @@
   pk: 274
   fields:
     date: 2012-11-19
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -2477,8 +2477,8 @@
   pk: 275
   fields:
     date: 2012-11-19
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -2486,8 +2486,8 @@
   pk: 276
   fields:
     date: 2012-11-19
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -2495,8 +2495,8 @@
   pk: 277
   fields:
     date: 2012-11-19
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -2504,8 +2504,8 @@
   pk: 278
   fields:
     date: 2012-11-19
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -2513,8 +2513,8 @@
   pk: 279
   fields:
     date: 2012-11-19
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -2522,8 +2522,8 @@
   pk: 280
   fields:
     date: 2012-11-19
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -2531,8 +2531,8 @@
   pk: 281
   fields:
     date: 2012-11-19
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 4
     dental_office: 4 
     room: 4.0
@@ -2540,8 +2540,8 @@
   pk: 282
   fields:
     date: 2012-11-19
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -2549,8 +2549,8 @@
   pk: 283
   fields:
     date: 2012-11-19
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 4
     dental_office: 4 
     room: 4
@@ -2558,8 +2558,8 @@
   pk: 284
   fields:
     date: 2012-11-20
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -2567,8 +2567,8 @@
   pk: 285
   fields:
     date: 2012-11-20
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -2576,8 +2576,8 @@
   pk: 286
   fields:
     date: 2012-11-20
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -2585,8 +2585,8 @@
   pk: 287
   fields:
     date: 2012-11-20
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -2594,8 +2594,8 @@
   pk: 288
   fields:
     date: 2012-11-20
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -2603,8 +2603,8 @@
   pk: 289
   fields:
     date: 2012-11-20
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -2612,8 +2612,8 @@
   pk: 290
   fields:
     date: 2012-11-20
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -2621,8 +2621,8 @@
   pk: 291
   fields:
     date: 2012-11-20
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -2630,8 +2630,8 @@
   pk: 292
   fields:
     date: 2012-11-20
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -2639,8 +2639,8 @@
   pk: 293
   fields:
     date: 2012-11-20
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -2648,8 +2648,8 @@
   pk: 294
   fields:
     date: 2012-11-20
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 6
     dental_office: 2 
     room: 2.0
@@ -2657,8 +2657,8 @@
   pk: 295
   fields:
     date: 2012-11-20
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -2666,8 +2666,8 @@
   pk: 296
   fields:
     date: 2012-11-20
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 6
     dental_office: 1 
     room: 1
@@ -2675,8 +2675,8 @@
   pk: 297
   fields:
     date: 2012-11-20
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -2684,8 +2684,8 @@
   pk: 298
   fields:
     date: 2012-11-20
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -2693,8 +2693,8 @@
   pk: 299
   fields:
     date: 2012-11-20
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -2702,8 +2702,8 @@
   pk: 300
   fields:
     date: 2012-11-20
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -2711,8 +2711,8 @@
   pk: 301
   fields:
     date: 2012-11-20
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 7
     dental_office: 3 
     room: 3.0
@@ -2720,8 +2720,8 @@
   pk: 302
   fields:
     date: 2012-11-20
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 8
     dental_office: 3
     room: 3.0
@@ -2729,8 +2729,8 @@
   pk: 303
   fields:
     date: 2012-11-20
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 8
     dental_office: 3 
     room: 3.0
@@ -2738,8 +2738,8 @@
   pk: 304
   fields:
     date: 2012-11-20
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 8
     dental_office: 3 
     room: 3.0   
@@ -2747,8 +2747,8 @@
   pk: 305
   fields:
     date: 2012-11-21
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -2756,8 +2756,8 @@
   pk: 306
   fields:
     date: 2012-11-21
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -2765,8 +2765,8 @@
   pk: 307
   fields:
     date: 2012-11-21
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -2774,8 +2774,8 @@
   pk: 308
   fields:
     date: 2012-11-21
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -2783,8 +2783,8 @@
   pk: 309
   fields:
     date: 2012-11-21
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -2792,8 +2792,8 @@
   pk: 310
   fields:
     date: 2012-11-21
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -2801,8 +2801,8 @@
   pk: 311
   fields:
     date: 2012-11-21
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -2810,8 +2810,8 @@
   pk: 312
   fields:
     date: 2012-11-21
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -2819,8 +2819,8 @@
   pk: 313
   fields:
     date: 2012-11-21
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -2828,8 +2828,8 @@
   pk: 314
   fields:
     date: 2012-11-21
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -2837,8 +2837,8 @@
   pk: 315
   fields:
     date: 2012-11-21
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 10
     dental_office: 2 
     room: 2.0
@@ -2846,8 +2846,8 @@
   pk: 316
   fields:
     date: 2012-11-21
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -2855,8 +2855,8 @@
   pk: 317
   fields:
     date: 2012-11-21
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 10
     dental_office: 1 
     room: 1
@@ -2864,8 +2864,8 @@
   pk: 318
   fields:
     date: 2012-11-21
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -2873,8 +2873,8 @@
   pk: 319
   fields:
     date: 2012-11-21
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -2882,8 +2882,8 @@
   pk: 320
   fields:
     date: 2012-11-21
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -2891,8 +2891,8 @@
   pk: 321
   fields:
     date: 2012-11-21
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -2900,8 +2900,8 @@
   pk: 322
   fields:
     date: 2012-11-21
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -2909,8 +2909,8 @@
   pk: 323
   fields:
     date: 2012-11-21
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -2918,8 +2918,8 @@
   pk: 324
   fields:
     date: 2012-11-21
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -2927,8 +2927,8 @@
   pk: 325
   fields:
     date: 2012-11-21
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -2936,8 +2936,8 @@
   pk: 326
   fields:
     date: 2012-11-21
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -2945,8 +2945,8 @@
   pk: 327
   fields:
     date: 2012-11-21
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -2954,8 +2954,8 @@
   pk: 328
   fields:
     date: 2012-11-21
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -2963,8 +2963,8 @@
   pk: 329
   fields:
     date: 2012-11-21
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -2972,8 +2972,8 @@
   pk: 330
   fields:
     date: 2012-11-21
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:00"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -2981,8 +2981,8 @@
   pk: 331
   fields:
     date: 2012-11-21
-    begin: 12:30
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -2990,8 +2990,8 @@
   pk: 332
   fields:
     date: 2012-11-22
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -2999,8 +2999,8 @@
   pk: 333
   fields:
     date: 2012-11-22
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -3008,8 +3008,8 @@
   pk: 334
   fields:
     date: 2012-11-22
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -3017,8 +3017,8 @@
   pk: 335
   fields:
     date: 2012-11-22
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -3026,8 +3026,8 @@
   pk: 336
   fields:
     date: 2012-11-22
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -3035,8 +3035,8 @@
   pk: 337
   fields:
     date: 2012-11-22
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -3044,8 +3044,8 @@
   pk: 338
   fields:
     date: 2012-11-22
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -3053,8 +3053,8 @@
   pk: 339
   fields:
     date: 2012-11-22
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -3062,8 +3062,8 @@
   pk: 340
   fields:
     date: 2012-11-22
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -3071,8 +3071,8 @@
   pk: 341
   fields:
     date: 2012-11-22
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -3080,8 +3080,8 @@
   pk: 342
   fields:
     date: 2012-11-22
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 14
     dental_office: 2 
     room: 2.0
@@ -3089,8 +3089,8 @@
   pk: 343
   fields:
     date: 2012-11-22
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -3098,8 +3098,8 @@
   pk: 344
   fields:
     date: 2012-11-22
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 14
     dental_office: 1 
     room: 1
@@ -3107,8 +3107,8 @@
   pk: 345
   fields:
     date: 2012-11-22
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -3116,8 +3116,8 @@
   pk: 346
   fields:
     date: 2012-11-22
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -3125,8 +3125,8 @@
   pk: 347
   fields:
     date: 2012-11-22
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -3134,8 +3134,8 @@
   pk: 348
   fields:
     date: 2012-11-22
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -3143,8 +3143,8 @@
   pk: 349
   fields:
     date: 2012-11-22
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -3152,8 +3152,8 @@
   pk: 350
   fields:
     date: 2012-11-22
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -3161,8 +3161,8 @@
   pk: 351
   fields:
     date: 2012-11-22
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -3170,8 +3170,8 @@
   pk: 352
   fields:
     date: 2012-11-22
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -3179,8 +3179,8 @@
   pk: 353
   fields:
     date: 2012-11-22
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -3188,8 +3188,8 @@
   pk: 354
   fields:
     date: 2012-11-22
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -3197,8 +3197,8 @@
   pk: 355
   fields:
     date: 2012-11-22
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -3206,8 +3206,8 @@
   pk: 356
   fields:
     date: 2012-11-22
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -3215,8 +3215,8 @@
   pk: 357
   fields:
     date: 2012-11-22
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -3224,8 +3224,8 @@
   pk: 358
   fields:
     date: 2012-11-22
-    begin: 12:30
-    end: 12:30
+    begin: "12:30"
+    end: "12:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -3233,8 +3233,8 @@
   pk: 359
   fields:
     date: 2012-11-23
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -3242,8 +3242,8 @@
   pk: 360
   fields:
     date: 2012-11-23
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -3251,8 +3251,8 @@
   pk: 361
   fields:
     date: 2012-11-23
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -3260,8 +3260,8 @@
   pk: 362
   fields:
     date: 2012-11-23
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -3269,8 +3269,8 @@
   pk: 363
   fields:
     date: 2012-11-23
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -3278,8 +3278,8 @@
   pk: 364
   fields:
     date: 2012-11-23
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -3287,8 +3287,8 @@
   pk: 365
   fields:
     date: 2012-11-23
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -3296,8 +3296,8 @@
   pk: 366
   fields:
     date: 2012-11-23
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -3305,8 +3305,8 @@
   pk: 367
   fields:
     date: 2012-11-23
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -3314,8 +3314,8 @@
   pk: 368
   fields:
     date: 2012-11-23
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -3323,8 +3323,8 @@
   pk: 369
   fields:
     date: 2012-11-23
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -3332,8 +3332,8 @@
   pk: 370
   fields:
     date: 2012-11-23
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -3341,8 +3341,8 @@
   pk: 371
   fields:
     date: 2012-11-23
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: 1"8:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -3350,8 +3350,8 @@
   pk: 372
   fields:
     date: 2012-11-23
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -3359,8 +3359,8 @@
   pk: 373
   fields:
     date: 2012-11-23
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -3368,8 +3368,8 @@
   pk: 374
   fields:
     date: 2012-11-23
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -3377,8 +3377,8 @@
   pk: 375
   fields:
     date: 2012-11-23
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -3386,8 +3386,8 @@
   pk: 376
   fields:
     date: 2012-11-23
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -3395,8 +3395,8 @@
   pk: 377
   fields:
     date: 2012-11-23
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -3404,8 +3404,8 @@
   pk: 378
   fields:
     date: 2012-11-23
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -3413,8 +3413,8 @@
   pk: 379
   fields:
     date: 2012-11-23
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -3422,8 +3422,8 @@
   pk: 380
   fields:
     date: 2012-11-23
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -3431,8 +3431,8 @@
   pk: 381
   fields:
     date: 2012-11-23
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -3440,8 +3440,8 @@
   pk: 382
   fields:
     date: 2012-11-23
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -3449,8 +3449,8 @@
   pk: 383
   fields:
     date: 2012-11-23
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 20
     dental_office: 4 
     room: 4.0
@@ -3458,8 +3458,8 @@
   pk: 384
   fields:
     date: 2012-11-23
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:00"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -3467,8 +3467,8 @@
   pk: 385
   fields:
     date: 2012-11-23
-    begin: 12:30
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 20
     dental_office: 4 
     room: 4
@@ -3476,8 +3476,8 @@
   pk: 386
   fields:
     date: 2012-11-26
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -3485,8 +3485,8 @@
   pk: 387
   fields:
     date: 2012-11-26
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -3494,8 +3494,8 @@
   pk: 388
   fields:
     date: 2012-11-26
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -3503,8 +3503,8 @@
   pk: 389
   fields:
     date: 2012-11-26
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -3512,8 +3512,8 @@
   pk: 390
   fields:
     date: 2012-11-26
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 1
     dental_office: 1
     room: 1.0
@@ -3521,8 +3521,8 @@
   pk: 391
   fields:
     date: 2012-11-26
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -3530,8 +3530,8 @@
   pk: 392
   fields:
     date: 2012-11-26
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 1
     dental_office: 1 
     room: 1.0
@@ -3539,8 +3539,8 @@
   pk: 393
   fields:
     date: 2012-11-26
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -3548,8 +3548,8 @@
   pk: 394
   fields:
     date: 2012-11-26
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -3557,8 +3557,8 @@
   pk: 395
   fields:
     date: 2012-11-26
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -3566,8 +3566,8 @@
   pk: 396
   fields:
     date: 2012-11-26
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -3575,8 +3575,8 @@
   pk: 397
   fields:
     date: 2012-11-26
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 2
     dental_office: 2
     room: 2.0
@@ -3584,8 +3584,8 @@
   pk: 398
   fields:
     date: 2012-11-26
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 2
     dental_office: 2 
     room: 2.0
@@ -3593,8 +3593,8 @@
   pk: 399
   fields:
     date: 2012-11-26
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -3602,8 +3602,8 @@
   pk: 400
   fields:
     date: 2012-11-26
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -3611,8 +3611,8 @@
   pk: 401
   fields:
     date: 2012-11-26
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -3620,8 +3620,8 @@
   pk: 402
   fields:
     date: 2012-11-26
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -3629,8 +3629,8 @@
   pk: 403
   fields:
     date: 2012-11-26
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -3638,8 +3638,8 @@
   pk: 404
   fields:
     date: 2012-11-26
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 3
     dental_office: 3
     room: 3.0
@@ -3647,8 +3647,8 @@
   pk: 405
   fields:
     date: 2012-11-26
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -3656,8 +3656,8 @@
   pk: 406
   fields:
     date: 2012-11-26
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 3
     dental_office: 3 
     room: 3.0
@@ -3665,8 +3665,8 @@
   pk: 407
   fields:
     date: 2012-11-26
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -3674,8 +3674,8 @@
   pk: 408
   fields:
     date: 2012-11-26
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -3683,8 +3683,8 @@
   pk: 409
   fields:
     date: 2012-11-26
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -3692,8 +3692,8 @@
   pk: 410
   fields:
     date: 2012-11-26
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 4
     dental_office: 4 
     room: 4.0
@@ -3701,8 +3701,8 @@
   pk: 411
   fields:
     date: 2012-11-26
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 4
     dental_office: 4
     room: 4.0
@@ -3710,8 +3710,8 @@
   pk: 412
   fields:
     date: 2012-11-26
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 4
     dental_office: 4 
     room: 4
@@ -3719,8 +3719,8 @@
   pk: 413
   fields:
     date: 2012-11-27
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -3728,8 +3728,8 @@
   pk: 414
   fields:
     date: 2012-11-27
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -3737,8 +3737,8 @@
   pk: 415
   fields:
     date: 2012-11-27
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -3746,8 +3746,8 @@
   pk: 416
   fields:
     date: 2012-11-27
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -3755,8 +3755,8 @@
   pk: 417
   fields:
     date: 2012-11-27
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 5
     dental_office: 1
     room: 1.0
@@ -3764,8 +3764,8 @@
   pk: 418
   fields:
     date: 2012-11-27
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -3773,8 +3773,8 @@
   pk: 419
   fields:
     date: 2012-11-27
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 5
     dental_office: 1 
     room: 1.0
@@ -3782,8 +3782,8 @@
   pk: 420
   fields:
     date: 2012-11-27
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -3791,8 +3791,8 @@
   pk: 421
   fields:
     date: 2012-11-27
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -3800,8 +3800,8 @@
   pk: 422
   fields:
     date: 2012-11-27
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -3809,8 +3809,8 @@
   pk: 423
   fields:
     date: 2012-11-27
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 6
     dental_office: 2 
     room: 2.0
@@ -3818,8 +3818,8 @@
   pk: 424
   fields:
     date: 2012-11-27
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 6
     dental_office: 2
     room: 2.0
@@ -3827,8 +3827,8 @@
   pk: 425
   fields:
     date: 2012-11-27
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 6
     dental_office: 1 
     room: 1
@@ -3836,8 +3836,8 @@
   pk: 426
   fields:
     date: 2012-11-27
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -3845,8 +3845,8 @@
   pk: 427
   fields:
     date: 2012-11-27
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -3854,8 +3854,8 @@
   pk: 428
   fields:
     date: 2012-11-27
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -3863,8 +3863,8 @@
   pk: 429
   fields:
     date: 2012-11-27
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 7
     dental_office: 3
     room: 3.0
@@ -3872,8 +3872,8 @@
   pk: 430
   fields:
     date: 2012-11-27
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 7
     dental_office: 3 
     room: 3.0
@@ -3881,8 +3881,8 @@
   pk: 431
   fields:
     date: 2012-11-27
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 8
     dental_office: 3
     room: 3.0
@@ -3890,8 +3890,8 @@
   pk: 432
   fields:
     date: 2012-11-27
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 8
     dental_office: 3 
     room: 3.0
@@ -3899,8 +3899,8 @@
   pk: 433
   fields:
     date: 2012-11-27
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 8
     dental_office: 3 
     room: 3.0   
@@ -3908,8 +3908,8 @@
   pk: 434
   fields:
     date: 2012-11-28
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -3917,8 +3917,8 @@
   pk: 435
   fields:
     date: 2012-11-28
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -3926,8 +3926,8 @@
   pk: 436
   fields:
     date: 2012-11-28
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -3935,8 +3935,8 @@
   pk: 437
   fields:
     date: 2012-11-28
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -3944,8 +3944,8 @@
   pk: 438
   fields:
     date: 2012-11-28
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 9
     dental_office: 1
     room: 1.0
@@ -3953,8 +3953,8 @@
   pk: 439
   fields:
     date: 2012-11-28
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -3962,8 +3962,8 @@
   pk: 440
   fields:
     date: 2012-11-28
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 9
     dental_office: 1 
     room: 1.0
@@ -3971,8 +3971,8 @@
   pk: 441
   fields:
     date: 2012-11-28
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -3980,8 +3980,8 @@
   pk: 442
   fields:
     date: 2012-11-28
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -3989,8 +3989,8 @@
   pk: 443
   fields:
     date: 2012-11-28
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -3998,8 +3998,8 @@
   pk: 444
   fields:
     date: 2012-11-28
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 10
     dental_office: 2 
     room: 2.0
@@ -4007,8 +4007,8 @@
   pk: 445
   fields:
     date: 2012-11-28
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 10
     dental_office: 2
     room: 2.0
@@ -4016,8 +4016,8 @@
   pk: 446
   fields:
     date: 2012-11-28
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: "18:00"
     dentist: 10
     dental_office: 1 
     room: 1
@@ -4025,8 +4025,8 @@
   pk: 447
   fields:
     date: 2012-11-28
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -4034,8 +4034,8 @@
   pk: 448
   fields:
     date: 2012-11-28
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -4043,8 +4043,8 @@
   pk: 449
   fields:
     date: 2012-11-28
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -4052,8 +4052,8 @@
   pk: 450
   fields:
     date: 2012-11-28
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -4061,8 +4061,8 @@
   pk: 451
   fields:
     date: 2012-11-28
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -4070,8 +4070,8 @@
   pk: 452
   fields:
     date: 2012-11-28
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 11
     dental_office: 3
     room: 3.0
@@ -4079,8 +4079,8 @@
   pk: 453
   fields:
     date: 2012-11-28
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -4088,8 +4088,8 @@
   pk: 454
   fields:
     date: 2012-11-28
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 11
     dental_office: 3 
     room: 3.0
@@ -4097,8 +4097,8 @@
   pk: 455
   fields:
     date: 2012-11-28
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -4106,8 +4106,8 @@
   pk: 456
   fields:
     date: 2012-11-28
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -4115,8 +4115,8 @@
   pk: 457
   fields:
     date: 2012-11-28
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -4124,8 +4124,8 @@
   pk: 458
   fields:
     date: 2012-11-28
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -4133,8 +4133,8 @@
   pk: 459
   fields:
     date: 2012-11-28
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:00"
     dentist: 12
     dental_office: 4
     room: 4.0
@@ -4142,8 +4142,8 @@
   pk: 460
   fields:
     date: 2012-11-28
-    begin: 12:30
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 12
     dental_office: 4 
     room: 4.0
@@ -4151,8 +4151,8 @@
   pk: 461
   fields:
     date: 2012-11-29
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -4160,8 +4160,8 @@
   pk: 462
   fields:
     date: 2012-11-29
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -4169,8 +4169,8 @@
   pk: 463
   fields:
     date: 2012-11-29
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -4178,8 +4178,8 @@
   pk: 464
   fields:
     date: 2012-11-29
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -4187,8 +4187,8 @@
   pk: 465
   fields:
     date: 2012-11-29
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 13
     dental_office: 1
     room: 1.0
@@ -4196,8 +4196,8 @@
   pk: 466
   fields:
     date: 2012-11-29
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -4205,8 +4205,8 @@
   pk: 467
   fields:
     date: 2012-11-29
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 13
     dental_office: 1 
     room: 1.0
@@ -4214,8 +4214,8 @@
   pk: 468
   fields:
     date: 2012-11-29
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -4223,8 +4223,8 @@
   pk: 469
   fields:
     date: 2012-11-29
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -4232,8 +4232,8 @@
   pk: 470
   fields:
     date: 2012-11-29
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -4241,8 +4241,8 @@
   pk: 471
   fields:
     date: 2012-11-29
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 14
     dental_office: 2 
     room: 2.0
@@ -4250,8 +4250,8 @@
   pk: 472
   fields:
     date: 2012-11-29
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 14
     dental_office: 2
     room: 2.0
@@ -4259,8 +4259,8 @@
   pk: 473
   fields:
     date: 2012-11-29
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: 1"8:00"
     dentist: 14
     dental_office: 1 
     room: 1
@@ -4268,8 +4268,8 @@
   pk: 474
   fields:
     date: 2012-11-29
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -4277,8 +4277,8 @@
   pk: 475
   fields:
     date: 2012-11-29
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -4286,8 +4286,8 @@
   pk: 476
   fields:
     date: 2012-11-29
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -4295,8 +4295,8 @@
   pk: 477
   fields:
     date: 2012-11-29
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -4304,8 +4304,8 @@
   pk: 478
   fields:
     date: 2012-11-29
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -4313,8 +4313,8 @@
   pk: 479
   fields:
     date: 2012-11-29
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 15
     dental_office: 3
     room: 3.0
@@ -4322,8 +4322,8 @@
   pk: 480
   fields:
     date: 2012-11-29
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -4331,8 +4331,8 @@
   pk: 481
   fields:
     date: 2012-11-29
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 15
     dental_office: 3 
     room: 3.0
@@ -4340,8 +4340,8 @@
   pk: 482
   fields:
     date: 2012-11-29
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -4349,8 +4349,8 @@
   pk: 483
   fields:
     date: 2012-11-29
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -4358,8 +4358,8 @@
   pk: 484
   fields:
     date: 2012-11-29
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -4367,8 +4367,8 @@
   pk: 485
   fields:
     date: 2012-11-29
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -4376,8 +4376,8 @@
   pk: 486
   fields:
     date: 2012-11-29
-    begin: 11:30
-    end: 12:30
+    begin: "11:30"
+    end: "12:00"
     dentist: 16
     dental_office: 4
     room: 4.0
@@ -4385,8 +4385,8 @@
   pk: 487
   fields:
     date: 2012-11-29
-    begin: 12:30
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 16
     dental_office: 4 
     room: 4.0
@@ -4394,8 +4394,8 @@
   pk: 488
   fields:
     date: 2012-11-30
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -4403,8 +4403,8 @@
   pk: 489
   fields:
     date: 2012-11-30
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -4412,8 +4412,8 @@
   pk: 490
   fields:
     date: 2012-11-30
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -4421,8 +4421,8 @@
   pk: 491
   fields:
     date: 2012-11-30
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -4430,8 +4430,8 @@
   pk: 492
   fields:
     date: 2012-11-30
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 17
     dental_office: 1
     room: 1.0
@@ -4439,8 +4439,8 @@
   pk: 493
   fields:
     date: 2012-11-30
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -4448,8 +4448,8 @@
   pk: 494
   fields:
     date: 2012-11-30
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 17
     dental_office: 1 
     room: 1.0
@@ -4457,8 +4457,8 @@
   pk: 495
   fields:
     date: 2012-11-30
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -4466,8 +4466,8 @@
   pk: 496
   fields:
     date: 2012-11-30
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -4475,8 +4475,8 @@
   pk: 497
   fields:
     date: 2012-11-30
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -4484,8 +4484,8 @@
   pk: 498
   fields:
     date: 2012-11-30
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -4493,8 +4493,8 @@
   pk: 499
   fields:
     date: 2012-11-30
-    begin: 16:00
-    end: 17:00
+    begin: "16:00"
+    end: "17:00"
     dentist: 18
     dental_office: 2
     room: 2.0
@@ -4502,8 +4502,8 @@
   pk: 500
   fields:
     date: 2012-11-30
-    begin: 17:00
-    end: 18:00
+    begin: "17:00"
+    end: 1"8:00"
     dentist: 18
     dental_office: 2 
     room: 2.0
@@ -4511,8 +4511,8 @@
   pk: 501
   fields:
     date: 2012-11-30
-    begin: 8:00
-    end: 9:00
+    begin: "8:00"
+    end: "9:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -4520,8 +4520,8 @@
   pk: 502
   fields:
     date: 2012-11-30
-    begin: 9:00
-    end: 10:00
+    begin: "9:00"
+    end: "10:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -4529,8 +4529,8 @@
   pk: 503
   fields:
     date: 2012-11-30
-    begin: 10:00
-    end: 11:00
+    begin: "10:00"
+    end: "11:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -4538,8 +4538,8 @@
   pk: 504
   fields:
     date: 2012-11-30
-    begin: 11:00
-    end: 12:00
+    begin: "11:00"
+    end: "12:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -4547,8 +4547,8 @@
   pk: 505
   fields:
     date: 2012-11-30
-    begin: 12:00
-    end: 13:00
+    begin: "12:00"
+    end: "13:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -4556,8 +4556,8 @@
   pk: 506
   fields:
     date: 2012-11-30
-    begin: 13:00
-    end: 14:00
+    begin: "13:00"
+    end: "14:00"
     dentist: 19
     dental_office: 3
     room: 3.0
@@ -4565,8 +4565,8 @@
   pk: 507
   fields:
     date: 2012-11-30
-    begin: 14:00
-    end: 15:00
+    begin: "14:00"
+    end: "15:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -4574,8 +4574,8 @@
   pk: 508
   fields:
     date: 2012-11-30
-    begin: 15:00
-    end: 16:00
+    begin: "15:00"
+    end: "16:00"
     dentist: 19
     dental_office: 3 
     room: 3.0
@@ -4583,8 +4583,8 @@
   pk: 509
   fields:
     date: 2012-11-30
-    begin: 7:30
-    end: 8:30
+    begin: "7:30"
+    end: "8:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -4592,8 +4592,8 @@
   pk: 510
   fields:
     date: 2012-11-30
-    begin: 8:30
-    end: 9:30
+    begin: "8:30"
+    end: "9:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -4601,8 +4601,8 @@
   pk: 511
   fields:
     date: 2012-11-30
-    begin: 9:30
-    end: 10:30
+    begin: "9:30"
+    end: "10:30"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -4610,8 +4610,8 @@
   pk: 512
   fields:
     date: 2012-11-30
-    begin: 10:30
-    end: 11:30
+    begin: "10:30"
+    end: "11:30"
     dentist: 20
     dental_office: 4 
     room: 4.0
@@ -4619,8 +4619,8 @@
   pk: 513
   fields:
     date: 2012-11-30
-    begin: 11:30
-    end: 12:00
+    begin: "11:30"
+    end: "12:00"
     dentist: 20
     dental_office: 4
     room: 4.0
@@ -4628,8 +4628,8 @@
   pk: 514
   fields:
     date: 2012-11-30
-    begin: 12:00
-    end: 12:30
+    begin: "12:00"
+    end: "12:30"
     dentist: 20
     dental_office: 4 
     room: 4                           
