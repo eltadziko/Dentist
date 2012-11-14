@@ -25,113 +25,6 @@ Stomatologia Coldix
 <body>
 
 <div id="content" class="napraw">
-<<<<<<< HEAD
-	{% block content %}
-  <div id="belka_lewa">
-  </div>
-  <div id="column_content">
-    <div id="belka_gora">
-      <div id="log_box">
-      {% if user.is_authenticated %}
-      	<div id="tekst_log">Witaj <a href="{% url 'views.update_profile' %}">{{ user.username }}</a>.</div>
-      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
-      	<div id="tekst_log"><a href="{% url 'views.logout_view' %}">Wyloguj</a>.</div>
-      {% else %}
-      	<div id="tekst_log">Witaj <a href="#">Gość</a>.</div>
-      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
-     	<div id="tekst_log"><a href="{% url 'django.contrib.auth.views.login' %}">Zaloguj się </a>lub <a href="{% url 'views.register' %}">Zarejestruj</a>, jeśli nie posiadasz konta.</div>
-      	<img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
-      	<div id="tekst_log"><a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałem hasła</a>.</div>
-      {% endif %}
-      </div>
-    </div>
-    
-    <div id="baner">
-      <a href="{% url 'views.index' %}"><img src="{{ MEDIA_URL }}/img/logo.png"/></a>
-      {% if not user.is_authenticated %}
-	      <div id="form_log">
-		  	<form action="{% url 'django.contrib.auth.views.login' %}" method="POST">
-		    	{% csrf_token %}
-		      	<input name="username" value="Login" onfocus="if(this.value=='' || this.value == 'Login') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="text">
-		        <input name="password" value="Hasło" onfocus="if(this.value=='' || this.value == 'Hasło') this.value=''" onblur="if(this.value == '') {this.value=this.defaultValue}" onkeyup="keyUp();" type="password">
-		        <input id="send_log" name="send_log" value=">>" type="submit"/>
-		    </form>
-	      </div>
-      {% endif %}
-    </div>
-    
-    <div id=menu_wrap>
-      <div id="menu">
-        <ul>
-           <li><a href="{% url 'views.index' %}">HOME</a></li>
-           <li><a href="{% url 'views.offices' %}">GABINETY</a></li>
-           <li><a href="{% url 'views.dentists' %}">DENTYŚCI</a></li>
-           <li><a href="{% url 'views.dentist_register' %}">REJESTRACJA</a></li>
-           <li><a href="kontakt.html">KONTAKT</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="cien_menu">
-    </div>
-    <div style="clear:both;"></div>
-    <div id="body_page">
-      <div id="left_column">
-      {% block left_column %}
-      {% if user.is_authenticated %}
-      <div id="submenu">
-        <ul>
-        	
-        	{% if user|in_group:'pacjent' %}
-	           	<li><a href="{% url 'views.update_profile' %}">Profil</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.diseases' %}">Choroby</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
-	           	<li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
-           	{% elif user|in_group:'rejestrator' %}
-	           	<li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.patient_list' %}">Aktualizacja pacj.</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.patient_user' %}">Połączenie konta</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.dentist_register2' %}">Rejestr do dentysty</a></li>
-	           	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-	           	<li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
-	           	<li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
-	           	<li><a href="{% url 'views.dates_addition' %}">Terminy</a></li>
-	        {% elif user|in_group:'dentysta' %}
-	        	<li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
-	        	<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-           	{% endif %}
-           
-        </ul>
-      </div>
-      {% else %}
-      	<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStomatolog-Coldix%2F323848351055930&amp;width=200&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color=9e9e9e&amp;stream=true&amp;header=false&amp;appId=279481798728744" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:395px;" allowTransparency="true"></iframe>
-      {% endif %}
-      {% endblock %}
-      </div>
-      <!--<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStomatolog-Coldix%2F323848351055930&amp;width=200&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color=3e3e3e&amp;stream=true&amp;header=false&amp;appId=279481798728744" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:395px;" allowTransparency="true"></iframe>-->
-      <div id="right_column">
-      {% block right_column %}
-      <p> Witamy na naszej stronie :)asdjasjd jj</p>
-      {% endblock %}
-      </div>
-    </div>
-    
-    <div id="footer">
-    <p>Copyright © 2012 ZPI. Wszystkie prawa zastrzeżone.</p>
-    </div>
-  </div>
-  <div id="belka_prawa">
-  </div>
-  	{% endblock %}
-=======
 {% block content %}
 <div id="belka_lewa">
 </div>
@@ -237,7 +130,6 @@ Stomatologia Coldix
 <div id="belka_prawa">
 </div>
 {% endblock %}
->>>>>>> aeae4178c91c0f4852636c364eacb4c2e823b3f0
 </div>
 
 
