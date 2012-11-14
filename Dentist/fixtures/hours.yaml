@@ -2,26 +2,26 @@
   pk: 1
   fields:
     week_day: 1
-    begin: 8:00 
-    end: 16:00
+    begin: "08:00" 
+    end: "16:00"
     dentist: 1
     dental_office: 1 
-    room: 1.1   
+    room: 1.1
 - model: Dentist.hours
   pk: 2
   fields:
     week_day: 1
-    begin: 12:00
-    end: 18:00
+    begin: "12:00"
+    end: "18:00"
     dentist: 2
     dental_office: 2
     room: 2.1
-- model: Dentist.hours
+- model: Dentist.hours 
   pk: 3
   fields:
     week_day: 1
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 3
     dental_office: 3
     room: 3.1
@@ -29,8 +29,8 @@
   pk: 4
   fields:
     week_day: 1
-    begin: 7:30
-    end: 12:30
+    begin: "07:30"
+    end: "12:30"
     dentist: 4
     dental_office: 4 
     room: 4.1
@@ -38,8 +38,8 @@
   pk: 5
   fields:
     week_day: 2
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 5
     dental_office: 1
     room: 1.1
@@ -47,8 +47,8 @@
   pk: 6
   fields:
     week_day: 2
-    begin: 12:00
-    end: 18:00
+    begin: "12:00"
+    end: "18:00"
     dentist: 6
     dental_office: 2
     room: 2.1
@@ -56,8 +56,8 @@
   pk: 7
   fields:
     week_day: 2
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 7
     dental_office: 3
     room: 3.1
@@ -65,8 +65,8 @@
   pk: 8
   fields:
     week_day: 2
-    begin: 7:30
-    end: 12:30
+    begin: "07:30"
+    end: "12:30"
     dentist: 8
     dental_office: 4
     room: 4.1
@@ -74,8 +74,8 @@
   pk: 9
   fields:
     week_day: 3
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 9
     dental_office: 1 
     room: 1.1
@@ -83,8 +83,8 @@
   pk: 10
   fields:
     week_day: 3
-    begin: 12:00
-    end: 18:00
+    begin: "12:00"
+    end: "18:00"
     dentist: 10
     dental_office: 2
     room: 2.1
@@ -92,8 +92,8 @@
   pk: 11
   fields:
     week_day: 3
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 11
     dental_office: 3
     room: 3.1
@@ -101,8 +101,8 @@
   pk: 12
   fields:
     week_day: 3
-    begin: 7:30
-    end: 12:30 
+    begin: "07:30"
+    end: "12:30" 
     dentist: 12
     dental_office: 4 
     room: 4.1
@@ -110,8 +110,8 @@
   pk: 13
   fields:
     week_day: 4
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 13
     dental_office: 1
     room: 1.1
@@ -119,8 +119,8 @@
   pk: 14
   fields:
     week_day: 4
-    begin: 12:00
-    end: 18:00
+    begin: "12:00"
+    end: "18:00"
     dentist: 14
     dental_office: 2
     room: 2.1
@@ -128,8 +128,8 @@
   pk: 15
   fields:
     week_day: 4
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 15
     dental_office: 3
     room: 3.1
@@ -137,8 +137,8 @@
   pk: 16
   fields:
     week_day: 4
-    begin: 7:30
-    end: 12:30
+    begin: "07:30"
+    end: "12:30"
     dentist: 16
     dental_office: 4
     room: 4.1
@@ -146,8 +146,8 @@
   pk: 17
   fields:
     week_day: 5
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 17
     dental_office: 1
     room: 1.1
@@ -155,8 +155,8 @@
   pk: 18
   fields:
     week_day: 5
-    begin: 12:00
-    end: 18:00
+    begin: "12:00"
+    end: "18:00"
     dentist: 18
     dental_office: 2
     room: 2.1
@@ -164,8 +164,8 @@
   pk: 19
   fields:
     week_day: 5
-    begin: 8:00
-    end: 16:00
+    begin: "08:00"
+    end: "16:00"
     dentist: 19
     dental_office: 3
     room: 3.1
@@ -173,8 +173,8 @@
   pk: 20
   fields:
     week_day: 5
-    begin: 7:30
-    end: 12:30
+    begin: "07:30"
+    end: "12:30"
     dentist: 20
     dental_office: 4
-    room: 4.1
+    room: 4.1  

@@ -16,3 +16,9 @@
     name: AMF Gabinet Stomatologiczny
     address:  ul. Widok 1 /13, Wrocław
     description: Gabinet stomatologiczny.
+- model: Dentist.dental_office
+  pk: 4
+  fields:
+    name: Gabinet COLDIX
+    address:  ul. Kasprowicza 1 /13, Wrocław
+    description: Gabinet stomatologiczny.

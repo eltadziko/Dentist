@@ -35,14 +35,14 @@ class disease(models.Model):
 class insurance(models.Model):
     short_name = models.CharField("Krótka nazwa", max_length=30)
     name = models.CharField("Nazwa", max_length=100)
-    description = models.CharField("Opis", max_length=300, blank=True, null=True)
+    description = models.CharField("Opis", max_length=250, blank=True, null=True)
     
     class Meta:
         verbose_name = "Ubezpieczenie"
         verbose_name_plural = "Ubezpieczenia"
 
     def __unicode__(self):
-        return u'%s' % (self.short_name)
+        return u'%s' % (self.name)
     
 class patient(models.Model):
     first_name = models.CharField("Imię", max_length=30)
@@ -50,7 +50,7 @@ class patient(models.Model):
     birth_date = models.DateField("Data ur.")
     address = models.CharField("Adres", max_length=100)
     PESEL = models.CharField("PESEL", max_length=11, unique=True)
-    insurance_type = models.OneToOneField(insurance, verbose_name="Typ ubezpieczenia")
+    insurance_type = models.ForeignKey(insurance, verbose_name="Typ ubezpieczenia")
     insurance_number = models.CharField("Nr ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
     comment = models.TextField("Uwagi", blank=True, null=True)
@@ -81,6 +81,8 @@ class patient_diseases(models.Model):
 class dental_office(models.Model):
     name = models.CharField("Nazwa", max_length=30, blank=True, null=True)
     address = models.CharField("Adres", max_length=100)
+    phone = models.CharField("Telefon", max_length=9)
+    email = models.EmailField("Email")
     description = models.TextField("O gabinecie", blank=True, null=True)
 
     class Meta:
@@ -90,7 +92,7 @@ class dental_office(models.Model):
     def __unicode__(self):
         return u'%s' % (self.address)
     
-class hours(models.Model):
+class hours(models.Model): 
     week_day = models.IntegerField("Dzień tygodnia", max_length=1)
     begin = models.TimeField("Przyjmuje od")
     end = models.TimeField("Przyjmuje do")
@@ -119,6 +121,7 @@ class dates(models.Model):
     class Meta:
         verbose_name = "Termin"
         verbose_name_plural = "Terminy"
+        unique_together = (("date", "begin", "end", "dentist"),)
 
     def __unicode__(self):
         return u'%s' % (self.date)

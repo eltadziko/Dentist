@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block javascript %}
+{{ block.super }}
+<script>
+	$(document).ready(function() {		
+		$('.patient').click(function() {
+			$.post('/reservations/',
+			{ patient: $(this).attr('id'),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data); 
+			  }
+			 );
+			return false;
+		});
+	});
+</script>
+{% endblock %}
+
+{% block right_column %}
+<div id="forms">
+	{% for row in patients %}
+		<div class="patient" id="{{ row.id }}">
+	        {{ row.last_name }} {{ row.first_name }}, {{ row.address }}
+	    </div>
+    {% endfor %}
+</div>
+{% endblock %}

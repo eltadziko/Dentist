@@ -137,7 +137,7 @@
 - model: Dentist.tooth_loss
   pk: 18
   fields:
-    appointment: 28
+    appointment: 18
     tooth: 30
     loss_type: 63
     tooth_part: 4
@@ -397,4 +397,1204 @@
     tooth: 5
     loss_type: 55
     tooth_part: 1
+    comment: Leczenie ze znieczuleniem.
+- model: Dentist.tooth_loss
+  pk: 51
+  fields:
+    appointment: 51
+    tooth: 32
+    loss_type: 23
+    tooth_part: 6
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 52
+  fields:
+    appointment: 52
+    tooth: 7
+    loss_type: 55 
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 53
+  fields:
+    appointment: 53
+    tooth: 1
+    loss_type: 1
+    tooth_part: 1
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 54
+  fields:
+    appointment: 54
+    tooth: 5
+    loss_type: 55
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 55
+  fields:
+    appointment: 55
+    tooth: 16
+    loss_type: 56
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 56
+  fields:
+    appointment: 56
+    tooth: 11
+    loss_type: 67
+    tooth_part: 4
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 57
+  fields:
+    appointment: 57
+    tooth: 30
+    loss_type: 7
+    tooth_part: 1   
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 58
+  fields:
+    appointment: 58
+    tooth: 17
+    loss_type: 45
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 59
+  fields:
+    appointment: 59
+    tooth: 7
+    loss_type: 50
+    tooth_part: 5
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 60
+  fields:
+    appointment: 60
+    tooth: 1
+    loss_type: 4
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 61
+  fields:
+    appointment: 61
+    tooth: 30
+    loss_type: 61
+    tooth_part: 5
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 62
+  fields:
+    appointment: 62
+    tooth: 12
+    loss_type: 12
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 63
+  fields:
+    appointment: 63
+    tooth: 4
+    loss_type: 31
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 64
+  fields:
+    appointment: 64
+    tooth: 19
+    loss_type: 44
+    tooth_part: 4
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 65
+  fields:
+    appointment: 65
+    tooth: 13
+    loss_type: 19
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 66
+  fields:
+    appointment: 66
+    tooth: 5
+    loss_type: 41
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 67
+  fields:
+    appointment: 67
+    tooth: 4
+    loss_type: 62
+    tooth_part: 5
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 68
+  fields:
+    appointment: 68
+    tooth: 30
+    loss_type: 63
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 69
+  fields:
+    appointment: 69
+    tooth: 30
+    loss_type: 44 
+    tooth_part: 2 
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 70
+  fields:
+    appointment: 70
+    tooth: 12
+    loss_type: 45
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 71
+  fields: 
+    appointment: 71
+    tooth: 3
+    loss_type: 56
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 72
+  fields:
+    appointment: 72
+    tooth: 32
+    loss_type: 45
+    tooth_part: 3
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 73
+  fields:
+    appointment: 73
+    tooth: 12
+    loss_type: 48
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 74
+  fields:
+    appointment: 74
+    tooth: 30
+    loss_type: 64
+    tooth_part: 4
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 75
+  fields:
+    appointment: 75
+    tooth: 15
+    loss_type: 44
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 76
+  fields:
+    appointment: 76
+    tooth: 6
+    loss_type: 10
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 77
+  fields:
+    appointment: 77
+    tooth: 15
+    loss_type: 34
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 78
+  fields:
+    appointment: 78
+    tooth: 32
+    loss_type: 27
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 79
+  fields:
+    appointment: 79
+    tooth: 4
+    loss_type: 7
+    tooth_part: 2
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 80
+  fields:
+    appointment: 80
+    tooth: 5
+    loss_type: 62
+    tooth_part: 5
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 81
+  fields:
+    appointment: 81
+    tooth: 3
+    loss_type: 55 
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 82
+  fields:
+    appointment: 82
+    tooth: 23
+    loss_type: 56
+    tooth_part: 3
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 83
+  fields:
+    appointment: 83
+    tooth: 7
+    loss_type: 34
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 84
+  fields:
+    appointment: 84
+    tooth: 31
+    loss_type: 23
+    tooth_part: 5
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 85
+  fields:
+    appointment: 85
+    tooth: 2
+    loss_type: 37
+    tooth_part: 1
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 86
+  fields:
+    appointment: 86
+    tooth: 16
+    loss_type: 32
+    tooth_part: 3
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 87
+  fields:
+    appointment: 87
+    tooth: 6
+    loss_type: 30 
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 88
+  fields:
+    appointment: 88
+    tooth: 1
+    loss_type: 1
+    tooth_part: 1 
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 89
+  fields:
+    appointment: 89
+    tooth: 2
+    loss_type: 6
+    tooth_part: 7
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 90
+  fields:
+    appointment: 90
+    tooth: 4
+    loss_type: 7 
+    tooth_part: 1
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 91
+  fields:
+    appointment: 91
+    tooth: 22
+    loss_type: 8
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 92
+  fields:
+    appointment: 92
+    tooth: 2
+    loss_type: 44
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 93
+  fields:
+    appointment: 93
+    tooth: 56
+    loss_type: 9
+    tooth_part: 2
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 94
+  fields:
+    appointment: 94
+    tooth: 22
+    loss_type: 7 
+    tooth_part: 2
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 95
+  fields:
+    appointment: 95
+    tooth: 7
+    loss_type: 43 
+    tooth_part: 2
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 96
+  fields:
+    appointment: 96
+    tooth: 13
+    loss_type: 13
+    tooth_part: 3
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 97
+  fields:
+    appointment: 97
+    tooth: 32
+    loss_type: 20
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 98
+  fields:
+    appointment: 98
+    tooth: 12
+    loss_type: 57
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 99
+  fields:
+    appointment: 99
+    tooth: 3
+    loss_type: 42
+    tooth_part: 2
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 100
+  fields:
+    appointment: 100
+    tooth: 5
+    loss_type: 55
+    tooth_part: 1
     comment: Leczenie ze znieczuleniem.       
+- model: Dentist.tooth_loss
+  pk: 101
+  fields:
+    appointment: 101
+    tooth: 32
+    loss_type: 23
+    tooth_part: 6
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 102
+  fields:
+    appointment: 102
+    tooth: 7
+    loss_type: 55 
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 103
+  fields:
+    appointment: 103
+    tooth: 1
+    loss_type: 1
+    tooth_part: 1
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 104
+  fields:
+    appointment: 104
+    tooth: 5
+    loss_type: 55
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 105
+  fields:
+    appointment: 105
+    tooth: 16
+    loss_type: 56
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 106
+  fields:
+    appointment: 106
+    tooth: 11
+    loss_type: 67
+    tooth_part: 4
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 107
+  fields:
+    appointment: 107
+    tooth: 30
+    loss_type: 7
+    tooth_part: 1   
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 108
+  fields:
+    appointment: 108
+    tooth: 17
+    loss_type: 45
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 109
+  fields:
+    appointment: 109
+    tooth: 7
+    loss_type: 50
+    tooth_part: 5
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 110
+  fields:
+    appointment: 110
+    tooth: 1
+    loss_type: 4
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 111
+  fields:
+    appointment: 111
+    tooth: 30
+    loss_type: 61
+    tooth_part: 5
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 112
+  fields:
+    appointment: 112
+    tooth: 12
+    loss_type: 12
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 113
+  fields:
+    appointment: 113
+    tooth: 4
+    loss_type: 31
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 114
+  fields:
+    appointment: 114
+    tooth: 19
+    loss_type: 44
+    tooth_part: 4
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 115
+  fields:
+    appointment: 115
+    tooth: 13
+    loss_type: 19
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 116
+  fields:
+    appointment: 116
+    tooth: 5
+    loss_type: 41
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 117
+  fields:
+    appointment: 117
+    tooth: 4
+    loss_type: 62
+    tooth_part: 5
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 118
+  fields:
+    appointment: 118
+    tooth: 30
+    loss_type: 63
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 119
+  fields:
+    appointment: 119
+    tooth: 30
+    loss_type: 44 
+    tooth_part: 2 
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 120
+  fields:
+    appointment: 120
+    tooth: 12
+    loss_type: 45
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 121
+  fields: 
+    appointment: 121
+    tooth: 3
+    loss_type: 56
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 122
+  fields:
+    appointment: 122
+    tooth: 32
+    loss_type: 45
+    tooth_part: 3
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 123
+  fields:
+    appointment: 123
+    tooth: 12
+    loss_type: 48
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 124
+  fields:
+    appointment: 124
+    tooth: 30
+    loss_type: 64
+    tooth_part: 4
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 125
+  fields:
+    appointment: 125
+    tooth: 15
+    loss_type: 44
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 126
+  fields:
+    appointment: 126
+    tooth: 6
+    loss_type: 10
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 127
+  fields:
+    appointment: 127
+    tooth: 15
+    loss_type: 34
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 128
+  fields:
+    appointment: 128
+    tooth: 32
+    loss_type: 27
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 129
+  fields:
+    appointment: 129
+    tooth: 4
+    loss_type: 7
+    tooth_part: 2
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 130
+  fields:
+    appointment: 130
+    tooth: 5
+    loss_type: 62
+    tooth_part: 5
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 131
+  fields:
+    appointment: 131
+    tooth: 3
+    loss_type: 55 
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 132
+  fields:
+    appointment: 132
+    tooth: 23
+    loss_type: 56
+    tooth_part: 3
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 133
+  fields:
+    appointment: 133
+    tooth: 7
+    loss_type: 34
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 134
+  fields:
+    appointment: 134
+    tooth: 31
+    loss_type: 23
+    tooth_part: 5
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 135
+  fields:
+    appointment: 135
+    tooth: 2
+    loss_type: 37
+    tooth_part: 1
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 136
+  fields:
+    appointment: 136
+    tooth: 16
+    loss_type: 32
+    tooth_part: 3
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 137
+  fields:
+    appointment: 137
+    tooth: 6
+    loss_type: 30 
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 138
+  fields:
+    appointment: 138
+    tooth: 1
+    loss_type: 1
+    tooth_part: 1 
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 139
+  fields:
+    appointment: 139
+    tooth: 2
+    loss_type: 6
+    tooth_part: 7
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 140
+  fields:
+    appointment: 140
+    tooth: 4
+    loss_type: 7 
+    tooth_part: 1
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 141
+  fields:
+    appointment: 141
+    tooth: 22
+    loss_type: 8
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 142
+  fields:
+    appointment: 142
+    tooth: 2
+    loss_type: 44
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 143
+  fields:
+    appointment: 143
+    tooth: 56
+    loss_type: 9
+    tooth_part: 2
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 144
+  fields:
+    appointment: 144
+    tooth: 22
+    loss_type: 7 
+    tooth_part: 2
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 145
+  fields:
+    appointment: 145
+    tooth: 7
+    loss_type: 43 
+    tooth_part: 2
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 146
+  fields:
+    appointment: 146
+    tooth: 13
+    loss_type: 13
+    tooth_part: 3
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 147
+  fields:
+    appointment: 147
+    tooth: 32
+    loss_type: 20
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 148
+  fields:
+    appointment: 148
+    tooth: 12
+    loss_type: 57
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 149
+  fields:
+    appointment: 149
+    tooth: 3
+    loss_type: 42
+    tooth_part: 2
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 150
+  fields:
+    appointment: 150
+    tooth: 5
+    loss_type: 55
+    tooth_part: 1
+    comment: Leczenie ze znieczuleniem.       
+- model: Dentist.tooth_loss
+  pk: 151
+  fields:
+    appointment: 151
+    tooth: 32
+    loss_type: 23
+    tooth_part: 6
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 152
+  fields:
+    appointment: 152
+    tooth: 7
+    loss_type: 55 
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 153
+  fields:
+    appointment: 153
+    tooth: 1
+    loss_type: 1
+    tooth_part: 1
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 154
+  fields:
+    appointment: 154
+    tooth: 5
+    loss_type: 55
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 155
+  fields:
+    appointment: 155
+    tooth: 16
+    loss_type: 56
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 156
+  fields:
+    appointment: 156
+    tooth: 11
+    loss_type: 67
+    tooth_part: 4
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 157
+  fields:
+    appointment: 157
+    tooth: 30
+    loss_type: 7
+    tooth_part: 1   
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 158
+  fields:
+    appointment: 158
+    tooth: 17
+    loss_type: 45
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 159
+  fields:
+    appointment: 159
+    tooth: 7
+    loss_type: 50
+    tooth_part: 5
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 160
+  fields:
+    appointment: 160
+    tooth: 1
+    loss_type: 4
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 161
+  fields:
+    appointment: 161
+    tooth: 30
+    loss_type: 61
+    tooth_part: 5
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 162
+  fields:
+    appointment: 162
+    tooth: 12
+    loss_type: 12
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 163
+  fields:
+    appointment: 163
+    tooth: 4
+    loss_type: 31
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 164
+  fields:
+    appointment: 164
+    tooth: 19
+    loss_type: 44
+    tooth_part: 4
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 165
+  fields:
+    appointment: 165
+    tooth: 13
+    loss_type: 19
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 166
+  fields:
+    appointment: 166
+    tooth: 5
+    loss_type: 41
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 167
+  fields:
+    appointment: 167
+    tooth: 4
+    loss_type: 62
+    tooth_part: 5
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 168
+  fields:
+    appointment: 168
+    tooth: 30
+    loss_type: 63
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 169
+  fields:
+    appointment: 169
+    tooth: 30
+    loss_type: 44 
+    tooth_part: 2 
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 170
+  fields:
+    appointment: 170
+    tooth: 12
+    loss_type: 45
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 171
+  fields: 
+    appointment: 171
+    tooth: 3
+    loss_type: 56
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 172
+  fields:
+    appointment: 172
+    tooth: 32
+    loss_type: 45
+    tooth_part: 3
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 173
+  fields:
+    appointment: 173
+    tooth: 12
+    loss_type: 48
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 174
+  fields:
+    appointment: 174
+    tooth: 30
+    loss_type: 64
+    tooth_part: 4
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 175
+  fields:
+    appointment: 175
+    tooth: 15
+    loss_type: 44
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 176
+  fields:
+    appointment: 176
+    tooth: 6
+    loss_type: 10
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 177
+  fields:
+    appointment: 177
+    tooth: 15
+    loss_type: 34
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 178
+  fields:
+    appointment: 178
+    tooth: 32
+    loss_type: 27
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 179
+  fields:
+    appointment: 179
+    tooth: 4
+    loss_type: 7
+    tooth_part: 2
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 180
+  fields:
+    appointment: 180
+    tooth: 5
+    loss_type: 62
+    tooth_part: 5
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 181
+  fields:
+    appointment: 181
+    tooth: 3
+    loss_type: 55 
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 182
+  fields:
+    appointment: 182
+    tooth: 23
+    loss_type: 56
+    tooth_part: 3
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 183
+  fields:
+    appointment: 183
+    tooth: 7
+    loss_type: 34
+    tooth_part: 6
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 184
+  fields:
+    appointment: 184
+    tooth: 31
+    loss_type: 23
+    tooth_part: 5
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 185
+  fields:
+    appointment: 185
+    tooth: 2
+    loss_type: 37
+    tooth_part: 1
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 186
+  fields:
+    appointment: 186
+    tooth: 16
+    loss_type: 32
+    tooth_part: 3
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 187
+  fields:
+    appointment: 187
+    tooth: 6
+    loss_type: 30 
+    tooth_part: 3
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 188
+  fields:
+    appointment: 188
+    tooth: 1
+    loss_type: 1
+    tooth_part: 1 
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 189
+  fields:
+    appointment: 189
+    tooth: 2
+    loss_type: 6
+    tooth_part: 7
+    comment: Leczenie bez znieczulania.
+- model: Dentist.tooth_loss
+  pk: 190
+  fields:
+    appointment: 190
+    tooth: 4
+    loss_type: 7 
+    tooth_part: 1
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 191
+  fields:
+    appointment: 191
+    tooth: 22
+    loss_type: 8
+    tooth_part: 2
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 192
+  fields:
+    appointment: 192
+    tooth: 2
+    loss_type: 44
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 193
+  fields:
+    appointment: 193
+    tooth: 56
+    loss_type: 9
+    tooth_part: 2
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 194
+  fields:
+    appointment: 194
+    tooth: 22
+    loss_type: 7 
+    tooth_part: 2
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 195
+  fields:
+    appointment: 195
+    tooth: 7
+    loss_type: 43 
+    tooth_part: 2
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 196
+  fields:
+    appointment: 196
+    tooth: 13
+    loss_type: 13
+    tooth_part: 3
+    comment: Potrzebne zdjęcie rtg.
+- model: Dentist.tooth_loss
+  pk: 197
+  fields:
+    appointment: 197
+    tooth: 32
+    loss_type: 20
+    tooth_part: 3
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 198
+  fields:
+    appointment: 198
+    tooth: 12
+    loss_type: 57
+    tooth_part: 4
+    comment: Leczenie ze znieczuleniem.    
+- model: Dentist.tooth_loss
+  pk: 199
+  fields:
+    appointment: 199
+    tooth: 3
+    loss_type: 42
+    tooth_part: 2
+    comment: Pacjent wymaga natychmiatowego leczenia.
+- model: Dentist.tooth_loss
+  pk: 200
+  fields:
+    appointment: 200
+    tooth: 5
+    loss_type: 55
+    tooth_part: 1
+    comment: Leczenie ze znieczuleniem.              

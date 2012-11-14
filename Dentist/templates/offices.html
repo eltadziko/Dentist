@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block right_column %}
+
+	{% for o in offices %}
+		<a name="{{ o.office.id }}">{% if o.office.name %}<strong>{{ o.office.name }}</strong><br />{% endif %}
+		{{ o.office.address }}</a><br />
+		{% if o.office.description %}{{ o.office.description }}{% endif %}<br />
+		Dentyści:<br />
+		{% for d in o.dentists %}
+			<a href="{% url views.dentists %}#{{ d.id }}">{{ d.last_name }} {{ d.first_name }}</a><br />
+		{% endfor %}
+		<br />
+	{% endfor %}
+
+{% endblock %}

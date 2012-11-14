@@ -48,7 +48,7 @@ class DiseaseAdmin(admin.ModelAdmin):
     list_display = ('show_disease_name',)
     
 class DentalOfficeAdmin(admin.ModelAdmin):
-    list_display = ('address', 'name', 'description')
+    list_display = ('address', 'name','phone', 'email', 'description')
      
 class HoursAdmin(admin.ModelAdmin):    
     list_display = ('week_day', 'begin', 'end', 'dentist', 'dental_office', 'room')
