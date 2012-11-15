@@ -34,6 +34,7 @@
 {% if user|in_group:"rejestrator" %}
 	Pacjent: {{ patient.last_name }} {{patient.first_name }}
 {% endif %}
+<div id="rezerwacje">
 	<table>
 	<tr><th>Data</th><th>Godzina</th><th>Dentysta</th><th>Gabinet</th><th></th><th></th></tr>
 	{% for r in reservations %}
@@ -47,4 +48,5 @@
 		</tr>
 	{% endfor %}
 	</table>
+</div>
 {% endblock %}

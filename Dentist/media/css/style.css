@@ -320,3 +320,34 @@ visibility:hidden;
 .pagination{
   text-align:center;
 }
+
+#rezerwacje{
+margin:30px 0px 0px 40px;
+width:900px;
+line-height:34px;
+margin:0 auto;
+}
+#rezerwacje table{
+  width:900px;
+  border: 1px solid black;border-collapse: collapse;
+}
+#rezerwacje th{
+  border: 1px solid black;  
+}
+#rezerwacje td{
+  border: 1px solid black;
+  text-align:center;
+}
+
+.delete{
+  color: white;
+  cursor: pointer;
+  text-align:center;
+  background: url(../img/BG_submenu.jpg) repeat-x;
+}
+.change{
+  color: white;
+  cursor: pointer;
+  text-align:center;
+  background: url(../img/BG_submenu.jpg) repeat-x; 
+}
