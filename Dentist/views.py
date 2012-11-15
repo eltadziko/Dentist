@@ -193,7 +193,7 @@ def patient_user(request):
 
 @user_passes_test(new_password, login_url="/password/")
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 def confirm_register(request):
     return render(request, 'confirm_register.html')

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block css %}
+	{{ block.super }}
+{% endblock %}
+
+{% block javascript %}
+	{{ block.super }}
+{% endblock %}
+
+{% block right_column %}
+<div id="index_content">
+	<img src="{{ MEDIA_URL }}/img/dentists.jpg" style="float: left; margin: 5px" />
+	<h3>Centrum stomatologii Coldix</h3>
+	
+	<p>Witamy na stronie internetowej Centrum Implantologii i Stomatologii Estetycznej Coldix. Nasz gabinet dentystyczny istnieje od 1901 roku.
+	Od tego czasu zdobyliśmy renomę i zaufanie ponad 11000000 naszych zadowolonych pacjentów. Mimo wieloletniej tradycji nasi lekarze stomatolodzy
+	 nie spoczywają na laurach. Poprzez ustawiczne kształcenie naszych  lekarzy oferujemy Pacjentom dostęp do pełnego zakresu najnowszych usług 
+	 stomatologicznych. Dzięki zastosowaniu skutecznych znieczuleń najnowszej generacji całkowicie wyeliminowaliśmy pojęcie bólu w gabinecie 
+	 u dentysty. Wizyty u nas są naprawdę bezbolesne i bezstresowe.
+	 </p><br />
+	<p>Szanując Państwa czas proponujemy możliwie krótkie terminy wizyt, a podczas pierwszego spotkania w naszej klinice przedstawiamy dokładny 
+	harmonogram planowanego leczenia stomatologicznego oraz jego kosztorys. Idąc z duchem czasu proponujemy naszym pacjentom pełen wachlarz 
+	zabiegów medycyny estetycznej oraz kompleksowego leczenia implantologicznego.
+	</p><br />
+	<p>W celu zwiększenia dostępności do nowoczesnego leczenia stomatologicznego oferujemy możliwość płatności ratalnej.
+	</p>
+	<img src="{{ MEDIA_URL }}/img/mapka.jpg" />
+</div>
+{% endblock %}
