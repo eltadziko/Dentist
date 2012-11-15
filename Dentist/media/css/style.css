@@ -312,3 +312,7 @@ clear:both;
 visibility:hidden;
 height:0;
 }
+.akapit:after {
+content:"-";
+visibility:hidden;
+}
