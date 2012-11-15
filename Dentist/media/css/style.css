@@ -232,7 +232,7 @@ margin:0 auto;
 #forms input[type="text"], #forms input[type="password"]{
 width:400px;
 height:30px;
-padding:-2px 0px 0px 5px;
+padding:0px 0px 0px 5px;
 margin:0px 0px 2px 5px;
 border-top:solid 1px #40b8dc;
 border-left:solid 1px #40b8dc;
@@ -281,10 +281,10 @@ border-bottom:solid 1px #cccccc;
 
 
 #send_log_big{
-margin:5px 225px 0px 0px;
+margin:5px 200px 0px 0px;
 float:right;
 height:35px;
-width:150px;
+width:200px;
 cursor: pointer;
 text-align:center;
 background: url(../img/BG_submenu.jpg) repeat-x;
@@ -328,7 +328,7 @@ line-height:34px;
 margin:0 auto;
 }
 #rezerwacje table{
-  width:900px;
+  width:100%;
   border: 1px solid black;border-collapse: collapse;
 }
 #rezerwacje th{
@@ -349,5 +349,90 @@ margin:0 auto;
   color: white;
   cursor: pointer;
   text-align:center;
-  background: url(../img/BG_submenu.jpg) repeat-x; 
+  background: url(../img/BG_submenu.jpg) repeat-x;
+  margin:0px; 
+}
+#rejestracja{
+  width:100%;
+}
+#rejestracja .typ_1{
+  float:left;
+  width:200px;
+  height:400px;
+  margin:2px;
+  border:solid 1px #9e9e9e;
+}
+#rejestracja select{
+  width:200px;
+  height:30px;
+  margin-top:20px;
+  padding:5px;
+}
+#rejestracja input[type="text"]{
+  height:30px;  
+  margin-top:20px;
+  width:180px;
+  padding:5px; 
+}
+#rejestracja .typ_2{
+  float:left;
+  width:160px;
+  height:400px;
+  margin:2px;
+  border:solid 1px #9e9e9e;
+}
+.rej_tytul label{
+  background: url(../img/BG_submenu.jpg) repeat-x;
+  text-align:center;
+  color:white; 
+  display:block;
+  width:100%;
+  height:30px;
+}
+.opcje{
+  overflow:auto;
+  height:370px;
+  /*background:url(../img/BG_opcje.png) repeat-x bottom;*/
+}
+.opcje label{
+  background-color:#40b8dc;
+  display:block;
+  text-align:center;
+  height:25px;
+  width:100%;
+  margin:0; 
+  padding:0;
+}
+.fieldWrapper{
+  margin-left:5px;    
+}
+#send_log_rejestracja{
+  margin:0px 0px 0px 20px;
+  float:right;
+  height:35px;
+  width:100%;
+  cursor: pointer;
+  text-align:center;
+  background: url(../img/BG_submenu.jpg) repeat-x;
+  border: 1px solid #cccccc;
+  color:white;
+  font-size:16px;
+}
+#send_graphic{
+  margin:0px 0px 0px 20px;
+  float:right;
+  height:35px;
+  width:100px;
+  cursor: pointer;
+  text-align:center;
+  background: url(../img/BG_submenu.jpg) repeat-x;
+  border: 1px solid #cccccc;
+  color:white;
+  font-size:16px;
+}
+#send_data{
+  height:25px;
+  width:50px;
+  color:white;
+  background: url(../img/BG_submenu.jpg) repeat-x;
 }
