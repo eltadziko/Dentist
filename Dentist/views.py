@@ -383,10 +383,11 @@ def appointment_list2(request):
     else:
         date = datetime.datetime.today().date()
     dent = dentist.objects.get(user = request.user.id)
+    print dent.id
     appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
 
     hours = []
-    hour = dates.objects.filter(date=date) 
+    hour = dates.objects.filter(date=date).filter(dentist = dent) 
 
     if appoints.count()!=0:
         begin = datetime.datetime.combine(appoints[0].date, hour[0].begin)
@@ -457,20 +458,23 @@ def day_graphic(request):
     for d in dent:
         appoints.append(appointment.objects.filter(date = date).filter(dentist = d).order_by('hour'))
     
-    graphics = []    
+    graphics = []   
+    i = [] 
     for h in hours2:
         appoint = []
+        j = 0
         for d in appoints:
-            i = 0
+            i.append(0)
             dodano = False
             for a in d:
                 if a.hour == h:
                     appoint.append({'appoint': a, 'length': a.appointment_type.length/15})
                     dodano = True
-                    i = a.appointment_type.length/15
+                    i[j] = a.appointment_type.length/15
             if not dodano:
-                i = i-1
-                appoint.append({'appoint': None, 'length': i})  
+                i[j] = i[j]-1
+                appoint.append({'appoint': None, 'length': i[j]})  
+            j = j+1
         graphics.append({'hour': h, 'appoint': appoint})  
             
     
