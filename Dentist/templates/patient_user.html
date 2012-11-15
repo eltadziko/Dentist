@@ -30,9 +30,10 @@
 		    {% endfor %}
 		    </div>
 		{% endif %}
-		<p>{{ field.label }}: {{ field }}</p>
+		{{ field.label_tag }}{{ field }}
 	{% endfor %}
-	<p><input id="send_log_big" type="submit" value="Zapisz" /></p>
+	<div class="napraw"></div>
+	<input id="send_log_big" type="submit" value="Zapisz" />
 </form>
 </div>
 {% endblock %}
