@@ -56,9 +56,21 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 <tr><th>Godzina</th><th>Pacjent</th></tr>
 	{% for a in appoints %}
 		<tr>
-			<td>{{ a.hour|time:"H:i" }}</td>
+			{% if a.now_time %}
+				<td class="now_time">
+			{% else %}
+				<td>
+			{% endif %}
+			{{ a.hour|time:"H:i" }}</td>
 			{% if a.length > 0 and a.appoint %}
-			<td rowspan="{{a.length}}">{{ a.appoint.patient.last_name }}</td>
+				{% if a.appoint.is_now == 1 %}
+					<td class="appoint_now" 
+				{% elif a.appoint.is_now == -1 %}
+					<td class="appoint_past" 
+				{% else %}
+					<td class="appoint_future" 
+				{% endif %}
+			<td rowspan="{{a.length}}">{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
 			{% elif a.length > 0 %}
 			{% else %}
 			<td></td>

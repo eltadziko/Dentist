@@ -70,10 +70,22 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 </tr>
 	{% for a in appoints %}
 		<tr>
-			<td>{{ a.hour|time:"H:i" }}</td>
+			{% if a.now_time %}
+				<td class="now_time">
+			{% else %}
+				<td>
+			{% endif %}
+			{{ a.hour|time:"H:i" }}</td>
 			{% for p in a.appoint %}
 				{% if p.appoint %}
-					<td rowspan="{{ p.length }}">{{ p.appoint.patient.last_name }} {{ p.appoint.patient.first_name }}</td>
+					{% if p.appoint.is_now == 1 %}
+						<td class="appoint_now" 
+					{% elif p.appoint.is_now == -1 %}
+						<td class="appoint_past" 
+					{% else %}
+						<td class="appoint_future" 
+					{% endif %}
+					rowspan="{{ p.length }}">{{ p.appoint.patient.last_name }} {{ p.appoint.patient.first_name }}</td>
 				{% elif p.length > 0 %}
 				{% else %}
 					<td></td>

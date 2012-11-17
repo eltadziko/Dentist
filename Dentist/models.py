@@ -145,6 +145,7 @@ class appointment(models.Model):
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
     dental_office = models.ForeignKey(dental_office, verbose_name="Gabinet")
     appointment_type = models.ForeignKey(appointment_type, verbose_name="Typ wizyty")
+    is_now = models.IntegerField("Trwa", blank=True, null=True)
     
     class Meta:
         verbose_name = "Wizyta"

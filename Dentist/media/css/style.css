@@ -436,3 +436,20 @@ margin:0 auto;
   color:white;
   background: url(../img/BG_submenu.jpg) repeat-x;
 }
+
+.now_time {
+	background-color: gray;	
+}
+
+.appoint_now {
+	background-color: red;
+}
+
+.appoint_past{
+	background-color: silver;
+}
+
+.appoint_future {
+	background-color: blue;
+}
+
