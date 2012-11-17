@@ -48,5 +48,6 @@ urlpatterns = patterns('',
     url(r'^reservations/$', views.reservations),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     url(r'^dates_addition/', views.dates_addition),
+    url(r'^patient_card/', views.patient_card),
     
 )

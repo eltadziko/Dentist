@@ -88,7 +88,9 @@ Stomatologia Coldix
 <li><a href="{% url 'views.diseases' %}">Choroby</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'rejestrator' %}
 <li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
@@ -101,8 +103,11 @@ Stomatologia Coldix
 <li><a href="{% url 'views.dentist_register2' %}">Rejestracja wizyty</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.dates_addition' %}">Terminy</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'dentysta' %}
 <li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>

@@ -190,7 +190,7 @@ class tooth_part(models.Model):
 class tooth_loss(models.Model):
     appointment = models.ForeignKey(appointment, verbose_name="Wizyta")
     tooth = models.ForeignKey(tooth, verbose_name="Ząb")
-    loss_type = models.ForeignKey(loss_type, verbose_name="Typ ubytku")
+    loss_type = models.ForeignKey(loss_type, blank=True, null=True, verbose_name="Typ ubytku")
     tooth_part = models.ForeignKey(tooth_part, verbose_name="Część zęba")
     comment = models.TextField("Komentarz", blank=True, null=True)
     

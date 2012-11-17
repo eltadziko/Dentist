@@ -560,7 +560,8 @@ def offices(request):
         dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
         dentists2 = []
         for d in dentists:
-            dentists2.append({'d': d, 'page': pages[d.last_name]})
+            hour = hours.objects.filter(dentist = d).filter(dental_office = o.id).order_by('week_day')
+            dentists2.append({'d': d, 'page': pages[d.last_name], 'hours': hour})
         offices.append({'office':o, 'dentists':dentists2})
     return render(request, 'offices.html',{'offices': offices})
 
@@ -671,3 +672,11 @@ def reservations(request):
                 patients2 = paginator.page(1)
             return render(request, 'patients2.html', {'patients': patients2})
     return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat})
+
+@login_required
+@user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/") 
+def patient_card(request):
+    pat = patient.objects.get(user = request.user)
+    appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
+    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints })
