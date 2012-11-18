@@ -43,6 +43,9 @@
 			 	return false;
 			 }); 
 			 
+			 var refreshId = setInterval(function() {
+			 	location.reload();
+			 }, 60000);
 		});
 	</script>
 {% endblock %}

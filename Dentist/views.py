@@ -358,15 +358,23 @@ def appointment_list(request):
     if request.POST:
         if 'appoint' in request.POST.keys():
             request.session['appoint'] = request.POST['appoint']
-            request.session['date'] = request.POST['date']
-            request.session['graphic'] = '/appointment_list/'
             return HttpResponseRedirect('/patient_card_dentist/')
         if request.POST['date']!='0':
             date = request.POST['date']
+            request.session['date'] = date
         else:
             date = datetime.datetime.today().date()
+            request.session['date'] = date.strftime("%Y-%m-%d")
+        
     else:
-        date = datetime.datetime.today().date()
+        if 'date' in request.session:
+            date = request.session['date']
+        else:
+            date = datetime.datetime.today().date()
+        if 'graphic' in request.session and request.session['graphic'] != '/appointment_list/':
+            return HttpResponseRedirect(request.session['graphic'])
+    
+    request.session['graphic'] = '/appointment_list/'
     dent = dentist.objects.get(user = request.user.id)
     appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
     ends = []
@@ -376,9 +384,9 @@ def appointment_list(request):
         ends.append((datetime.datetime.combine(a.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time())
         nows.append(time>=datetime.datetime.combine(a.date, a.hour) and time<datetime.datetime.combine(a.date, ends[-1]))
     app = [{'appoint': t[0], 'end': t[1], 'now_time': t[2]} for t in zip(appoints, ends, nows)]
-    if not request.POST or request.POST and request.POST['date']=='0':
+    if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
-
+    
     return render(request, 'appointment_list.html', {'appoints': app, 'date': date})
 
 @login_required
@@ -388,15 +396,23 @@ def appointment_list2(request):
     if request.POST:
         if 'appoint' in request.POST.keys():
             request.session['appoint'] = request.POST['appoint']
-            request.session['date'] = request.POST['date']
-            request.session['graphic'] = '/appointment_list2/'
             return HttpResponseRedirect('/patient_card_dentist/')
         if request.POST['date']!='0':
             date = request.POST['date']
+            request.session['date'] = date
         else:
             date = datetime.datetime.today().date()
+            request.session['date'] = date.strftime("%Y-%m-%d")
+        
     else:
-        date = datetime.datetime.today().date()
+        if 'date' in request.session:
+            date = request.session['date']
+        else:
+            date = datetime.datetime.today().date()
+        if 'graphic' in request.session and request.session['graphic'] != '/appointment_list2/':
+            return HttpResponseRedirect(request.session['graphic'])
+    
+    request.session['graphic'] = '/appointment_list2/'
     dent = dentist.objects.get(user = request.user.id)
     appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
     hours = []
@@ -427,7 +443,7 @@ def appointment_list2(request):
             i = i-1
             app.append({'appoint':None, 'hour':h, 'length':i, 'now_time': now})
         
-    if not request.POST or request.POST and request.POST['date']=='0':
+    if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")  
         
     return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours})
@@ -441,12 +457,22 @@ def day_graphic(request):
     if request.POST:
         if request.POST['date']!='0':
             date = request.POST['date']
+            request.session['graphic_date'] = date
         else:
             date = datetime.datetime.today().date()
+            request.session['graphic_date'] = date.strftime("%Y-%m-%d")
         office = int(request.POST['office'])
     else:
-        date = datetime.datetime.today().date()
-        office = offices[0].id
+        if 'graphic_date' in request.session:
+            date = request.session['graphic_date']
+            office = request.session['graphic_office']
+        else:
+            date = datetime.datetime.today().date()
+            office = offices[0].id
+            request.session['graphic_date'] = date.strftime("%Y-%m-%d")
+        
+    
+    request.session['graphic_office'] = office
         
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents)
@@ -497,7 +523,7 @@ def day_graphic(request):
         graphics.append({'hour': h, 'appoint': appoint, 'now_time': now})  
             
     
-    if not request.POST or request.POST and request.POST['date']=='0':
+    if not request.POST and not 'graphic_date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
 
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office})
