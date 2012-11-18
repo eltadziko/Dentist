@@ -121,7 +121,7 @@
 	{% if patient.comment %}{{ patient.comment }}<br />{% endif %}
 	Choroby:<br />
 	{% for d in patient.patient_diseases_set.all %}
-		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}) |
+		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
 	{% endfor %}
 	
 	<br />
