@@ -31,6 +31,7 @@
 		<div class="appointment" id="{{ a.id }}">
 			{{ a.date }}<br />
 			Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />
+			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}
 		</div>
 			{% if a.description %}a.description<br /> {% endif %}
 			<div id="appoint_{{ a.id }}" class="tooth_loss">

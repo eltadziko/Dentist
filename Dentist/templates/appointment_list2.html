@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load url from future %}
 
 {% block javascript %}
 	{{ block.super }}
@@ -40,6 +41,17 @@
 			 	return false;
 			 });
 			 
+			 $('.appoint_future, .appoint_past, .appoint_now').click(function() {
+			 	$.post('/appointment_list2/',
+					{ date: $('#date').val(),
+					  appoint: $(this).attr('id'),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) {
+						window.location = '/patient_card_dentist/';
+					}	  
+				);
+			 	return false;
+			 });
 		});
 	</script>
 {% endblock %}
@@ -63,6 +75,7 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 			{% endif %}
 			{{ a.hour|time:"H:i" }}</td>
 			{% if a.length > 0 and a.appoint %}
+			
 				{% if a.appoint.is_now == 1 %}
 					<td class="appoint_now" 
 				{% elif a.appoint.is_now == -1 %}
@@ -70,7 +83,8 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 				{% else %}
 					<td class="appoint_future" 
 				{% endif %}
-			<td rowspan="{{a.length}}">{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
+				rowspan="{{a.length}}" id="{{ a.appoint.id }}">{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
+			
 			{% elif a.length > 0 %}
 			{% else %}
 			<td></td>

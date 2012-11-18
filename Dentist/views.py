@@ -113,11 +113,13 @@ def update_profile(request, patient_id = -1):
     if request.user.groups.filter(name='pacjent').count() == 1:
         user = User.objects.get(id = request.user.id)
         pat = patient.objects.get(user = user.id)
+        url = ''
     else:
         if patient_id == -1:
             return HttpResponseRedirect('/access_denied/')
         pat = patient.objects.get(id = patient_id)
         user = User.objects.get(id = pat.user_id)
+        url = str(pat.id)+'/'
     
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance = user)
@@ -129,7 +131,7 @@ def update_profile(request, patient_id = -1):
     else:
         form = ProfileForm(instance = user)
         form_patient = PatientProfileForm(instance = pat)
-    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient})
+    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient, 'patient': url})
 
 @login_required
 def change_password(request):
@@ -354,6 +356,11 @@ def dentist_register2(request):
 @user_passes_test(new_password, login_url="/password/")
 def appointment_list(request):
     if request.POST:
+        if 'appoint' in request.POST.keys():
+            request.session['appoint'] = request.POST['appoint']
+            request.session['date'] = request.POST['date']
+            request.session['graphic'] = '/appointment_list/'
+            return HttpResponseRedirect('/patient_card_dentist/')
         if request.POST['date']!='0':
             date = request.POST['date']
         else:
@@ -379,6 +386,11 @@ def appointment_list(request):
 @user_passes_test(new_password, login_url="/password/")
 def appointment_list2(request):
     if request.POST:
+        if 'appoint' in request.POST.keys():
+            request.session['appoint'] = request.POST['appoint']
+            request.session['date'] = request.POST['date']
+            request.session['graphic'] = '/appointment_list2/'
+            return HttpResponseRedirect('/patient_card_dentist/')
         if request.POST['date']!='0':
             date = request.POST['date']
         else:
@@ -404,8 +416,8 @@ def appointment_list2(request):
     for h in hours:
         dodano = False
         time = datetime.datetime.now()
-        time_end = datetime.datetime.combine(time.date(), h) + datetime.timedelta(minutes=15)
-        now = (time<time_end and time>datetime.datetime.combine(time.date(), h))
+        time_end = datetime.datetime.combine(appoints[0].date, h) + datetime.timedelta(minutes=15)
+        now = (time<time_end and time>datetime.datetime.combine(appoints[0].date, h))
         for a in appoints:
             if h == a.hour:
                 app.append({'appoint':a, 'hour':h, 'length':a.appointment_type.length/15, 'now_time': now})
@@ -417,6 +429,7 @@ def appointment_list2(request):
         
     if not request.POST or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")  
+        
     return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours})
 
 @login_required
@@ -479,8 +492,8 @@ def day_graphic(request):
                 appoint.append({'appoint': None, 'length': i[j]})  
             j = j+1
         time = datetime.datetime.now()
-        time_end = datetime.datetime.combine(time.date(), h) + datetime.timedelta(minutes=15)
-        now = (time<time_end and time>datetime.datetime.combine(time.date(), h))
+        time_end = datetime.datetime.combine(hours[0].date, h) + datetime.timedelta(minutes=15)
+        now = (time<time_end and time>datetime.datetime.combine(hours[0].date, h))
         graphics.append({'hour': h, 'appoint': appoint, 'now_time': now})  
             
     
@@ -680,3 +693,23 @@ def patient_card(request):
     pat = patient.objects.get(user = request.user)
     appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
     return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints })
+
+@login_required
+@user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/") 
+def patient_card_dentist(request):
+    appoint = appointment.objects.get(id = request.session['appoint'])
+    pat = appoint.patient
+    appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
+    
+    if request.POST:
+        if 'patient_comment' in request.POST.keys():
+            pat.comment = request.POST['patient_comment'].strip()
+            pat.save()
+        if 'is_now' in request.POST.keys():
+            appoint.is_now = request.POST['is_now']
+            appoint.save()
+        if 'appointment_description' in request.POST.keys():
+            appoint.description = request.POST['appointment_description'].strip()
+            appoint.save()
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint })

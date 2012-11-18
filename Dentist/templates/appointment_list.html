@@ -40,6 +40,18 @@
 			 	return false;
 			 });
 			 
+			 $('.appoint_future, .appoint_past, .appoint_now').click(function() {
+			 	$.post('/appointment_list/',
+					{ date: $('#date').val(),
+					  appoint: $(this).attr('id'),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) {
+						window.location = '/patient_card_dentist/';
+					}	  
+				);
+			 	return false;
+			 });
+			 
 		});
 	</script>
 {% endblock %}
@@ -69,11 +81,11 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 			{% endif %}
 			{{ a.end|time:"H:i" }}</td>
 			{% if a.appoint.is_now == 1 %}
-				<td class="appoint_now"> 
+				<td class="appoint_now" id="{{ a.appoint.id }}"> 
 			{% elif a.appoint.is_now == -1 %}
-				<td class="appoint_past"> 
+				<td class="appoint_past" id="{{ a.appoint.id }}"> 
 			{% else %}
-				<td class="appoint_future"> 
+				<td class="appoint_future" id="{{ a.appoint.id }}"> 
 			{% endif %}
 			{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
 		</tr>
