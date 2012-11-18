@@ -62,6 +62,10 @@
 
 {% block right_column %}
 <div id="rejestracja">
+{% if too_much %}
+	Posiadasz zbyt dużo rezerwacji. Nie możesz się już zarejestrowac online, dopóki
+	nie odwołasz którejś wizyty lub jej nie odbędziesz.
+{% endif %}
 <form action="{% url views.dentist_register %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">

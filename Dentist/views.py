@@ -204,6 +204,10 @@ def confirm_register(request):
 @user_passes_test(in_patient_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register(request):
+    offices = dental_office.objects.all()
+    if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
+        form = RegisterForm(offices[0].id, -1, -1, -1, -1)
+        return render(request, 'dentist_register.html', {'form': form, 'too_much': True})
     if request.POST:
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -266,7 +270,6 @@ def dentist_register(request):
         else:
             form = RegisterForm(request.POST['office'], -1, -1, -1, typ)        
     else:
-        offices = dental_office.objects.all()
         form = RegisterForm(offices[0].id, -1, -1, -1, -1)
     return render(request, 'dentist_register.html', {'form': form})
 
