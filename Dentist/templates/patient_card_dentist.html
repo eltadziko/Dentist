@@ -11,6 +11,7 @@
 			$('#form_patient_edit').hide();
 			$('#ok_description').hide();
 			$("#cancel_description").hide();
+			$(".app_form_edit").hide();
 			
 			$('.appointment').click(function() {
 				id = '#appoint_' + $(this).attr('id');
@@ -87,6 +88,28 @@
 				$("#cancel_description").hide();
 				$('#form_appointment_edit').val('{{ appointment.description }}');
 			 });
+			 
+			 $('.app_edit').click(function() {
+			 	id = $(this).attr('id');
+			 	$('#app_form_edit_'+id).show();
+			 });
+			 
+			 $('.cancel_app').click(function() {
+			 	id = $(this).attr('name');
+				$('#app_form_edit_'+id).hide();
+			});
+			
+			$(".ok_app").click(function() {
+				id = $(this).attr('name');
+				$.post('/patient_card_dentist/',
+					{ app_desc: $('#app_desc_'+id).val(),
+					  app: id,
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
 		});
 	</script>
 {% endblock %}
@@ -121,8 +144,14 @@
 			{{ a.date }}<br />
 			Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />
 			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}
-		</div>
-			{% if a.description %}a.description<br /> {% endif %}
+			{% if a.description %}{{ a.description }}<br /> {% endif %}
+			</div>
+			<div id="{{ a.id }}" class="app_edit">Edytuj</div>
+			<div id="app_form_edit_{{ a.id }}" class="app_form_edit">
+				Opis: <textarea id="app_desc_{{ a.id }}" cols="80" rows="4">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
+				<input type="submit" class="cancel_app" value="Anuluj" name="{{ a.id }}"/>
+				<input type="submit" class="ok_app" value="Zapisz" name="{{ a.id }}"/>
+			</div>
 			<div id="appoint_{{ a.id }}" class="tooth_loss">
 			{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
 				{{ t.tooth.tooth_number }} ({{ t.tooth.type }}, szczęka {{ t.tooth.jaw }}, strona {{ t.tooth.side }}) - {{ t.tooth_part.name }}<br />

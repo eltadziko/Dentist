@@ -712,4 +712,8 @@ def patient_card_dentist(request):
         if 'appointment_description' in request.POST.keys():
             appoint.description = request.POST['appointment_description'].strip()
             appoint.save()
+        if 'app' in request.POST.keys():
+            app = appointment.objects.get(id=request.POST['app'])
+            app.description = request.POST['app_desc'].strip()
+            app.save()
     return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint })
