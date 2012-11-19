@@ -236,11 +236,11 @@ def dentist_register(request):
                         minute = hour.time().minute
                         h = datetime.datetime.combine(day.date, hour.time())
                         typ2 = appointment_type.objects.get(id = typ).length
-                        if minute < 15 and typ2 == 15:
+                        if minute < 15:
                             h = h + datetime.timedelta(minutes=(15 - minute))
-                        elif minute < 30 and typ2 < 60:
+                        elif minute < 30:
                             h = h + datetime.timedelta(minutes=(30 - minute))
-                        elif minute < 45 and typ2 == 15:
+                        elif minute < 45:
                             h = h + datetime.timedelta(minutes=(45 - minute))
                         else:
                             h = h + datetime.timedelta(minutes=(60 - minute))
@@ -248,7 +248,7 @@ def dentist_register(request):
                         hour = h
                     else:
                         hour = datetime.datetime.combine(day.date, day.begin)
-                    minutes = appointment_type.objects.get(id=typ).length
+                    minutes = 15#appointment_type.objects.get(id=typ).length
                     while hour + datetime.timedelta(minutes=minutes)<=dayend:
                         apps.append(hour)
                         hour = hour + datetime.timedelta(minutes=minutes)
@@ -317,11 +317,11 @@ def dentist_register2(request):
                         minute = hour.time().minute
                         h = datetime.datetime.combine(day.date, hour.time())
                         typ2 = appointment_type.objects.get(id = typ).length
-                        if minute < 15 and typ2 == 15:
+                        if minute < 15:
                             h = h + datetime.timedelta(minutes=(15 - minute))
-                        elif minute < 30 and typ2 < 60:
+                        elif minute < 30:
                             h = h + datetime.timedelta(minutes=(30 - minute))
-                        elif minute < 45 and typ2 == 15:
+                        elif minute < 45:
                             h = h + datetime.timedelta(minutes=(45 - minute))
                         else:
                             h = h + datetime.timedelta(minutes=(60 - minute))
@@ -329,7 +329,7 @@ def dentist_register2(request):
                         hour = h
                     else:
                         hour = datetime.datetime.combine(day.date, day.begin)
-                    minutes = appointment_type.objects.get(id=typ).length
+                    minutes = 15#appointment_type.objects.get(id=typ).length
                     while hour + datetime.timedelta(minutes=minutes)<=dayend:
                         apps.append(hour)
                         hour = hour + datetime.timedelta(minutes=minutes)
