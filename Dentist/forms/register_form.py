@@ -76,7 +76,7 @@ class RegisterReceptionistForm(forms.Form):
             self.fields['type'].initial = typ
         if patient_id != -1:
             self.fields['patients'].initial = patient_id
-        pat2 = patient.objects.filter(last_name=last_name)
+        pat2 = patient.objects.filter(last_name__startswith=last_name.title()).order_by('last_name')
         self.fields['patients'].queryset = pat2 
         self.fields['pat'].initial = last_name
     
