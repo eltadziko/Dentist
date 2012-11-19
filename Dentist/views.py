@@ -114,11 +114,13 @@ def update_profile(request, patient_id = -1):
     if request.user.groups.filter(name='pacjent').count() == 1:
         user = User.objects.get(id = request.user.id)
         pat = patient.objects.get(user = user.id)
+        url = ''
     else:
         if patient_id == -1:
             return HttpResponseRedirect('/access_denied/')
         pat = patient.objects.get(id = patient_id)
         user = User.objects.get(id = pat.user_id)
+        url = str(pat.id)+'/'
     
     if request.method == 'POST':
         form = ProfileForm(request.POST, instance = user)
@@ -130,7 +132,7 @@ def update_profile(request, patient_id = -1):
     else:
         form = ProfileForm(instance = user)
         form_patient = PatientProfileForm(instance = pat)
-    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient})
+    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient, 'patient': url})
 
 @login_required
 def change_password(request):
@@ -203,6 +205,10 @@ def confirm_register(request):
 @user_passes_test(in_patient_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register(request):
+    offices = dental_office.objects.all()
+    if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
+        form = RegisterForm(offices[0].id, -1, -1, -1, -1)
+        return render(request, 'dentist_register.html', {'form': form, 'too_much': True})
     if request.POST:
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -223,8 +229,9 @@ def dentist_register(request):
                 else:
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
+                    daybegin = datetime.datetime.combine(day.date, day.begin)
                     dayend = datetime.datetime.combine(day.date, day.end)
-                    if day.date == datetime.datetime.now().date():
+                    if day.date == datetime.datetime.now().date() and daybegin < datetime.datetime.now():
                         hour = datetime.datetime.now()
                         minute = hour.time().minute
                         h = datetime.datetime.combine(day.date, hour.time())
@@ -265,7 +272,6 @@ def dentist_register(request):
         else:
             form = RegisterForm(request.POST['office'], -1, -1, -1, typ)        
     else:
-        offices = dental_office.objects.all()
         form = RegisterForm(offices[0].id, -1, -1, -1, -1)
     return render(request, 'dentist_register.html', {'form': form})
 
@@ -304,8 +310,9 @@ def dentist_register2(request):
                 else:
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
+                    daybegin = datetime.datetime.combine(day.date, day.begin)
                     dayend = datetime.datetime.combine(day.date, day.end)
-                    if day.date == datetime.datetime.now().date():
+                    if day.date == datetime.datetime.now().date() and daybegin < datetime.datetime.now():
                         hour = datetime.datetime.now()
                         minute = hour.time().minute
                         h = datetime.datetime.combine(day.date, hour.time())
@@ -355,21 +362,37 @@ def dentist_register2(request):
 @user_passes_test(new_password, login_url="/password/")
 def appointment_list(request):
     if request.POST:
+        if 'appoint' in request.POST.keys():
+            request.session['appoint'] = request.POST['appoint']
+            return HttpResponseRedirect('/patient_card_dentist/')
         if request.POST['date']!='0':
             date = request.POST['date']
+            request.session['date'] = date
         else:
             date = datetime.datetime.today().date()
+            request.session['date'] = date.strftime("%Y-%m-%d")
+        
     else:
-        date = datetime.datetime.today().date()
+        if 'date' in request.session:
+            date = request.session['date']
+        else:
+            date = datetime.datetime.today().date()
+        if 'graphic' in request.session and request.session['graphic'] != '/appointment_list/':
+            return HttpResponseRedirect(request.session['graphic'])
+    
+    request.session['graphic'] = '/appointment_list/'
     dent = dentist.objects.get(user = request.user.id)
     appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
     ends = []
+    nows = []
+    time = datetime.datetime.now()
     for a in appoints:
         ends.append((datetime.datetime.combine(a.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time())
-    app = [{'appoint': t[0], 'end': t[1]} for t in zip(appoints, ends)]
-    if not request.POST or request.POST and request.POST['date']=='0':
+        nows.append(time>=datetime.datetime.combine(a.date, a.hour) and time<datetime.datetime.combine(a.date, ends[-1]))
+    app = [{'appoint': t[0], 'end': t[1], 'now_time': t[2]} for t in zip(appoints, ends, nows)]
+    if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
-
+    
     return render(request, 'appointment_list.html', {'appoints': app, 'date': date})
 
 @login_required
@@ -377,21 +400,34 @@ def appointment_list(request):
 @user_passes_test(new_password, login_url="/password/")
 def appointment_list2(request):
     if request.POST:
+        if 'appoint' in request.POST.keys():
+            request.session['appoint'] = request.POST['appoint']
+            return HttpResponseRedirect('/patient_card_dentist/')
         if request.POST['date']!='0':
             date = request.POST['date']
+            request.session['date'] = date
         else:
             date = datetime.datetime.today().date()
+            request.session['date'] = date.strftime("%Y-%m-%d")
+        
     else:
-        date = datetime.datetime.today().date()
+        if 'date' in request.session:
+            date = request.session['date']
+        else:
+            date = datetime.datetime.today().date()
+        if 'graphic' in request.session and request.session['graphic'] != '/appointment_list2/':
+            return HttpResponseRedirect(request.session['graphic'])
+    
+    request.session['graphic'] = '/appointment_list2/'
     dent = dentist.objects.get(user = request.user.id)
     appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
-
     hours = []
-    hour = dates.objects.filter(date=date) 
+    hour = dates.objects.filter(date=date).filter(dentist = dent) 
 
     if appoints.count()!=0:
         begin = datetime.datetime.combine(appoints[0].date, hour[0].begin)
         end = datetime.datetime.combine(appoints[0].date, hour[0].end)
+
         while begin<end:
             hours.append(begin.time())
             begin = begin + datetime.timedelta(minutes=15)
@@ -401,18 +437,20 @@ def appointment_list2(request):
     i = 0
     for h in hours:
         dodano = False
+        time = datetime.datetime.now()
+        time_end = datetime.datetime.combine(appoints[0].date, h) + datetime.timedelta(minutes=15)
+        now = (time<time_end and time>datetime.datetime.combine(appoints[0].date, h))
         for a in appoints:
             if h == a.hour:
-                app.append({'appoint':a, 'hour':h, 'length':a.appointment_type.length/15})
+                app.append({'appoint':a, 'hour':h, 'length':a.appointment_type.length/15, 'now_time': now})
                 dodano = True
                 i = a.appointment_type.length/15
         if not dodano:
             i = i-1
-            app.append({'appoint':None, 'hour':h, 'length':i})
-    
-
-    if not request.POST or request.POST and request.POST['date']=='0':
-        date = date.strftime("%Y-%m-%d")
+            app.append({'appoint':None, 'hour':h, 'length':i, 'now_time': now})
+        
+    if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
+        date = date.strftime("%Y-%m-%d")  
         
     return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours})
 
@@ -425,12 +463,22 @@ def day_graphic(request):
     if request.POST:
         if request.POST['date']!='0':
             date = request.POST['date']
+            request.session['graphic_date'] = date
         else:
             date = datetime.datetime.today().date()
+            request.session['graphic_date'] = date.strftime("%Y-%m-%d")
         office = int(request.POST['office'])
     else:
-        date = datetime.datetime.today().date()
-        office = offices[0].id
+        if 'graphic_date' in request.session:
+            date = request.session['graphic_date']
+            office = request.session['graphic_office']
+        else:
+            date = datetime.datetime.today().date()
+            office = offices[0].id
+            request.session['graphic_date'] = date.strftime("%Y-%m-%d")
+        
+    
+    request.session['graphic_office'] = office
         
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents)
@@ -458,24 +506,30 @@ def day_graphic(request):
     for d in dent:
         appoints.append(appointment.objects.filter(date = date).filter(dentist = d).order_by('hour'))
     
-    graphics = []    
+    graphics = []   
+    i = [] 
     for h in hours2:
         appoint = []
+        j = 0
         for d in appoints:
-            i = 0
+            i.append(0)
             dodano = False
             for a in d:
                 if a.hour == h:
                     appoint.append({'appoint': a, 'length': a.appointment_type.length/15})
                     dodano = True
-                    i = a.appointment_type.length/15
+                    i[j] = a.appointment_type.length/15
             if not dodano:
-                i = i-1
-                appoint.append({'appoint': None, 'length': i})  
-        graphics.append({'hour': h, 'appoint': appoint})  
+                i[j] = i[j]-1
+                appoint.append({'appoint': None, 'length': i[j]})  
+            j = j+1
+        time = datetime.datetime.now()
+        time_end = datetime.datetime.combine(hours[0].date, h) + datetime.timedelta(minutes=15)
+        now = (time<time_end and time>datetime.datetime.combine(hours[0].date, h))
+        graphics.append({'hour': h, 'appoint': appoint, 'now_time': now})  
             
     
-    if not request.POST or request.POST and request.POST['date']=='0':
+    if not request.POST and not 'graphic_date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
 
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office})
@@ -554,7 +608,8 @@ def offices(request):
         dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
         dentists2 = []
         for d in dentists:
-            dentists2.append({'d': d, 'page': pages[d.last_name]})
+            hour = hours.objects.filter(dentist = d).filter(dental_office = o.id).order_by('week_day')
+            dentists2.append({'d': d, 'page': pages[d.last_name], 'hours': hour})
         offices.append({'office':o, 'dentists':dentists2})
     return render(request, 'offices.html',{'offices': offices})
 
@@ -665,3 +720,35 @@ def reservations(request):
                 patients2 = paginator.page(1)
             return render(request, 'patients2.html', {'patients': patients2})
     return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat})
+
+@login_required
+@user_passes_test(in_patient_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/") 
+def patient_card(request):
+    pat = patient.objects.get(user = request.user)
+    appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
+    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints })
+
+@login_required
+@user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/") 
+def patient_card_dentist(request):
+    appoint = appointment.objects.get(id = request.session['appoint'])
+    pat = appoint.patient
+    appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
+    
+    if request.POST:
+        if 'patient_comment' in request.POST.keys():
+            pat.comment = request.POST['patient_comment'].strip()
+            pat.save()
+        if 'is_now' in request.POST.keys():
+            appoint.is_now = request.POST['is_now']
+            appoint.save()
+        if 'appointment_description' in request.POST.keys():
+            appoint.description = request.POST['appointment_description'].strip()
+            appoint.save()
+        if 'app' in request.POST.keys():
+            app = appointment.objects.get(id=request.POST['app'])
+            app.description = request.POST['app_desc'].strip()
+            app.save()
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint })

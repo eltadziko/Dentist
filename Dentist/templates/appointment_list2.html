@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load url from future %}
 
 {% block javascript %}
 	{{ block.super }}
@@ -40,25 +41,54 @@
 			 	return false;
 			 });
 			 
+			 $('.appoint_future, .appoint_past, .appoint_now').click(function() {
+			 	$.post('/appointment_list2/',
+					{ date: $('#date').val(),
+					  appoint: $(this).attr('id'),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) {
+						window.location = '/patient_card_dentist/';
+					}	  
+				);
+			 	return false;
+			 });
+			 
+			 var refreshId = setInterval(function() {
+			 	location.reload();
+			 }, 60000);
 		});
 	</script>
 {% endblock %}
 
 {% block right_column %}
-<div id="forms">
+<div id="rezerwacje">
 <form id="today">
-Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
+Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" id="send_data"/>
 </form>
 <form id="graphic">
-<input type="submit" value="Tekstowy" />
+<input type="submit" value="Tekstowy" id="send_graphic"/>
 </form>
 <table>
 <tr><th>Godzina</th><th>Pacjent</th></tr>
 	{% for a in appoints %}
 		<tr>
-			<td>{{ a.hour|time:"H:i" }}</td>
+			{% if a.now_time %}
+				<td class="now_time">
+			{% else %}
+				<td>
+			{% endif %}
+			{{ a.hour|time:"H:i" }}</td>
 			{% if a.length > 0 and a.appoint %}
-			<td rowspan="{{a.length}}">{{ a.appoint.patient.last_name }}</td>
+			
+				{% if a.appoint.is_now == 1 %}
+					<td class="appoint_now" 
+				{% elif a.appoint.is_now == -1 %}
+					<td class="appoint_past" 
+				{% else %}
+					<td class="appoint_future" 
+				{% endif %}
+				rowspan="{{a.length}}" id="{{ a.appoint.id }}">{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
+			
 			{% elif a.length > 0 %}
 			{% else %}
 			<td></td>

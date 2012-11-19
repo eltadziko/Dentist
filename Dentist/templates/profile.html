@@ -2,7 +2,7 @@
 
 {% block right_column %}
 <div id="forms">
-<form action="{% url views.update_profile %}" method="post"> {% csrf_token %}
+<form action="{% url views.update_profile %}{{ patient }}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
 		    {% for error in form.non_field_errors %}
