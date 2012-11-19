@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block right_column %}
+<div id="forms">
+<form action="{% url views.dates_addition %}" method="post"> {% csrf_token %}
+	{% if form.non_field_errors %}
+       	<div class="error">
+		    {% for error in form.non_field_errors %}
+		        <strong>{{ error|escape }} </strong>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	{% for field in form %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+	<p><input id="id_generate_submit_edit" name="generate_submit_edit" type="submit" value="Aktualizuj" /></p>
+</form>
+</div>
+{% endblock %}

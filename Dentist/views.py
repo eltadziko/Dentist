@@ -12,11 +12,12 @@ from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
 from forms.patient_user_form import PatientUserForm
-from forms.generate_dates_form import GenerateDatesForm
+from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm
 from forms.register_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib import messages
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -501,6 +502,7 @@ def dates_addition(request):
                 begin = datetime.datetime.fromtimestamp(time.mktime(time.strptime(begin, "%Y-%m-%d")))
                 end = datetime.datetime.fromtimestamp(time.mktime(time.strptime(end, "%Y-%m-%d")))
                 hh = hours.objects.filter(dentist__id=dentist_man, dental_office__id=office)
+                added_date_list = []
                 for h in hh:
                     date_start = begin
                     while date_start.weekday()+1 != h.week_day and date_start<=end:
@@ -515,11 +517,13 @@ def dates_addition(request):
                                                  dental_office = dental_office.objects.get(id=request.POST['office']),
                                                  room = h.room)
                             date_dentist.save()
-
+                            added_date_list.append(date_dentist)
                             date_start += datetime.timedelta(days=7)
                         else:
                             date_start += datetime.timedelta(days=7)
-                form = GenerateDatesForm(3, -1) #pic na wode, fotomontaz
+                form = EditAddedDatesForm(added_date_list) #pic na wode, fotomontaz
+                messages.add_message(request, messages.INFO, 'Pomyślnie dodano terminy.')
+                return render(request, 'edit_added_dates.html', {'form': form})
             elif dentist_man!="":
                 form = GenerateDatesForm(request.POST['office'], dentist_man)
             else:
