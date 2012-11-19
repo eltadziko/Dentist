@@ -179,7 +179,7 @@ class loss_type(models.Model):
         return self.type
     
 class tooth_part(models.Model):
-    name = models.CharField("Nazwa", max_length=30)
+    name = models.CharField("Nazwa", max_length=40)
     
     class Meta:
         verbose_name = "Część zęba"

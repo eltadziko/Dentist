@@ -20,7 +20,7 @@ class PatientProfileForm(forms.ModelForm):
     years = []
     for i in range(1920, 2010):
         years.append(i)
-    
+
     birth_date = forms.DateField(widget=SelectDateWidget(years=years), label="Data ur.")
     class Meta:
         model = patient

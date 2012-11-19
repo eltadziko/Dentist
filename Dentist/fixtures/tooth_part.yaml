@@ -1,28 +1,80 @@
 - model: Dentist.tooth_part
   pk: 1
   fields:
-    name: korzeń
+    name: korona
 - model: Dentist.tooth_part
   pk: 2
   fields:
-    name: korona
+    name: korzeń policzkowy dystalny
 - model: Dentist.tooth_part
   pk: 3
   fields:
-    name: szyjka
+    name: korzeń policzkowy mezjalny
 - model: Dentist.tooth_part
   pk: 4
   fields:
-    name: szkliwo
+    name: korzeń podniebienny
 - model: Dentist.tooth_part
   pk: 5
   fields:
-    name: zębina
+    name: przyzębie podniebienne
 - model: Dentist.tooth_part
   pk: 6
   fields:
-    name: miazga
+    name: przyzębie mezjalne
 - model: Dentist.tooth_part
   pk: 7
   fields:
-    name: kanał
+    name: przyzębie przedsionkowe
+- model: Dentist.tooth_part
+  pk: 8
+  fields:
+    name: przyzębie dystalne
+- model: Dentist.tooth_part
+  pk: 9
+  fields:
+    name: powierzchnia okluzyjna (dystalnie)
+- model: Dentist.tooth_part
+  pk: 10
+  fields:
+    name: powierzchnia okluzyjna (mezjalnie)
+- model: Dentist.tooth_part
+  pk: 11
+  fields:
+    name: powierzchnia podniebienna
+- model: Dentist.tooth_part
+  pk: 12
+  fields:
+    name: powierzchnia dystalna
+- model: Dentist.tooth_part
+  pk: 13
+  fields:
+    name: powierzchnia mezjalna
+- model: Dentist.tooth_part
+  pk: 14
+  fields:
+    name: powierzchnia przedsionkowa
+- model: Dentist.tooth_part
+  pk: 15
+  fields:
+    name: korzeń
+- model: Dentist.tooth_part
+  pk: 16
+  fields:
+    name: korzeń policzkowy
+- model: Dentist.tooth_part
+  pk: 17
+  fields:
+    name: powierzchnia okluzyjna
+- model: Dentist.tooth_part
+  pk: 18
+  fields:
+    name: powierzchnia językowa
+- model: Dentist.tooth_part
+  pk: 19
+  fields:
+    name: przyzębie językowe
+- model: Dentist.tooth_part
+  pk: 20
+  fields:
+    name: korzeń językowy

@@ -14,6 +14,7 @@ from forms.password_form import PasswordForm
 from forms.patient_user_form import PatientUserForm
 from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm
 from forms.register_form import *
+from forms.dentist_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -248,8 +249,9 @@ def dentist_register(request):
                         hour = h
                     else:
                         hour = datetime.datetime.combine(day.date, day.begin)
-                    minutes = 15#appointment_type.objects.get(id=typ).length
-                    while hour + datetime.timedelta(minutes=minutes)<=dayend:
+                    minutes = 15
+                    minutes2 = appointment_type.objects.get(id=typ).length
+                    while hour + datetime.timedelta(minutes=minutes2)<=dayend:
                         apps.append(hour)
                         hour = hour + datetime.timedelta(minutes=minutes)
                     
@@ -329,8 +331,9 @@ def dentist_register2(request):
                         hour = h
                     else:
                         hour = datetime.datetime.combine(day.date, day.begin)
-                    minutes = 15#appointment_type.objects.get(id=typ).length
-                    while hour + datetime.timedelta(minutes=minutes)<=dayend:
+                    minutes = 15
+                    minutes2 = appointment_type.objects.get(id=typ).length
+                    while hour + datetime.timedelta(minutes=minutes2)<=dayend:
                         apps.append(hour)
                         hour = hour + datetime.timedelta(minutes=minutes)
                     
@@ -752,3 +755,20 @@ def patient_card_dentist(request):
             app.description = request.POST['app_desc'].strip()
             app.save()
     return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint })
+
+@login_required
+@user_passes_test(in_dentist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/") 
+def dentist_profile(request):
+    dent = dentist.objects.get(user = request.user)
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, instance = request.user)
+        form_dentist = DentistForm(request.POST, instance = dent)
+        if form.is_valid() and form_dentist.is_valid(): 
+            form.save()            
+            form_dentist.save()
+            return HttpResponseRedirect('/index/')
+    else:
+        form = ProfileForm(instance = request.user)
+        form_dentist = DentistForm(instance = dent)
+    return render(request, 'dentist_profile.html', {'form': form, 'form_dentist': form_dentist})
