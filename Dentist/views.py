@@ -228,8 +228,9 @@ def dentist_register(request):
                 else:
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
+                    daybegin = datetime.datetime.combine(day.date, day.begin)
                     dayend = datetime.datetime.combine(day.date, day.end)
-                    if day.date == datetime.datetime.now().date():
+                    if day.date == datetime.datetime.now().date() and daybegin < datetime.datetime.now():
                         hour = datetime.datetime.now()
                         minute = hour.time().minute
                         h = datetime.datetime.combine(day.date, hour.time())
@@ -308,8 +309,9 @@ def dentist_register2(request):
                 else:
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
+                    daybegin = datetime.datetime.combine(day.date, day.begin)
                     dayend = datetime.datetime.combine(day.date, day.end)
-                    if day.date == datetime.datetime.now().date():
+                    if day.date == datetime.datetime.now().date() and daybegin < datetime.datetime.now():
                         hour = datetime.datetime.now()
                         minute = hour.time().minute
                         h = datetime.datetime.combine(day.date, hour.time())
