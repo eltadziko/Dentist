@@ -290,7 +290,7 @@ def dentist_register(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register2(request):
-    
+       
     if request.POST:
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -361,14 +361,24 @@ def dentist_register2(request):
                                 
                     for h in deleted_apps:            
                         apps.remove(h)
-                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients)
+                    if request.GET.get('type', None) == 'ajax':  
+                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients)
+                    else:
+                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.POST)
             else:
-                form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients)
+                if request.GET.get('type', None) == 'ajax':  
+                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients)
+                else:
+                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.POST)
         else:
-            form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients)        
+            if request.GET.get('type', None) == 'ajax':  
+                form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients)
+            else:
+                form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.POST)         
     else:
         offices = dental_office.objects.all()
         form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1)
+    
     return render(request, 'dentist_register2.html', {'form': form})
 
 @login_required
@@ -709,10 +719,16 @@ def reservations(request):
                                 
                     for h in deleted_apps:            
                         apps.remove(h)
-                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id)
+                    if request.GET.get('type', None) == 'ajax':
+                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id)
+                    else:
+                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id, request.POST)
                     return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
             else:
-                form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
+                if request.GET.get('type', None) == 'ajax':
+                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
+                else:
+                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id, request.POST)
                 return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
     
     if in_patient_group(request.user):

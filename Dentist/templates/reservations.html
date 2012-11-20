@@ -16,7 +16,7 @@
 		});
 		
 		$('.change').click(function() {
-			$.post('/reservations/',
+			$.post('/reservations/?type=ajax',
 			{ appointment2: $(this).attr('id'),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			  function(data) { 

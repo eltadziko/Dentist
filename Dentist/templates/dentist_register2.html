@@ -7,7 +7,7 @@
 	$(document).ready(function() {
 					
 		 $("#id_office").change(function() {
-			$.post('/dentist_register2/',
+			$.post('/dentist_register2/?type=ajax',
 			{ office: $(this).val(),
 			  pat: $("#id_pat").val(),
 			  patients: $("input[name=patients]:checked").val(),
@@ -20,7 +20,7 @@
 		 });
 		 
 		 $("input[name=dentist]").change(function() {
-			$.post('/dentist_register2/',
+			$.post('/dentist_register2/?type=ajax',
 			{ office: $('#id_office').val(),
 			  dentist: $(this).val(),
 			  type: $('#id_type').val(),
@@ -34,7 +34,7 @@
 		 });
 		 
 		 $("input[name=date]").change(function() {
-			$.post('/dentist_register2/',
+			$.post('/dentist_register2/?type=ajax',
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
 			  date: $(this).val(),
@@ -49,7 +49,7 @@
 		 });
 		 
 		 $("#id_type").change(function() {
-			$.post('/dentist_register2/',
+			$.post('/dentist_register2/?type=ajax',
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
 			  date: $('input[name=date]:checked').val(),
@@ -89,12 +89,36 @@
 			    </div>
 			{% endif %}
 			<div class="typ_1"><div class="rej_tytul">{{form.pat.label_tag}} </div><div class="opcje">{{form.pat}}</div></div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje"><div id="pat">{{form.patients}}</div></div></div>
+	        <div class="typ_1">
+	         	<div class="error">
+					{% for error in form.patients.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				</div>
+	         	<div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje"><div id="pat">{{form.patients}}</div></div></div>
 			<div class="typ_1"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje">{{form.office}}</div></div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje">{{form.dentist}}</div></div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
+	         <div class="typ_1">
+	         	<div class="error">
+					{% for error in form.dentist.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				</div>
+	         	<div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje">{{form.dentist}}</div></div>
+	         <div class="typ_1">
+	         	<div class="error">
+					{% for error in form.date.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				</div>
+	         	<div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
 	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag}} </div><div class="opcje">{{form.type}}</div></div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
+	         <div class="typ_1">
+	         	<div class="error">
+					{% for error in form.appoint.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				</div>
+	         	<div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
 	    </div>
     
     
@@ -109,7 +133,7 @@
 			var date = $('input[name=date]:checked').val();
 			
 			if (dent == undefined) {
-				$.post('/dentist_register2/',
+				$.post('/dentist_register2/?type=ajax',
 				{ pat: $(this).val(),
 				  office: $('#id_office').val(),
 				  type: $('#id_type').val(),
@@ -121,7 +145,7 @@
 					$('#pat').html(html);
 				});
 			} else if(date == undefined) {
-				$.post('/dentist_register2/',
+				$.post('/dentist_register2/?type=ajax',
 				{ pat: $(this).val(),
 				  office: $('#id_office').val(),
 				  type: $('#id_type').val(),
@@ -134,7 +158,7 @@
 					$('#pat').html(html);
 				});
 			} else {
-				$.post('/dentist_register2/',
+				$.post('/dentist_register2/?type=ajax',
 				{ pat: $(this).val(),
 				  office: $('#id_office').val(),
 				  type: $('#id_type').val(),
