@@ -79,12 +79,11 @@
 	
 	
 	
-	        	<div class="error">
-			    {% for error in form.date.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			    </div>
-
+        	<div class="error">
+		    {% for error in form.date.errors %}
+		        <strong>{{ error|escape }} </strong>
+		    {% endfor %}
+		    </div>
 			<div class="typ_1"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
 	       
 	       <div class="error">

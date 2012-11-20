@@ -60,7 +60,7 @@
             }*/
 		});
 		 $("#id_office").change(function() {
-			$.post('/dates_addition/',
+			$.post('/dates_addition/?type=ajax',
 			{ office: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
@@ -70,7 +70,7 @@
 		 });
 		 
 		 $("select[name=dentist_man]").change(function() {
-			$.post('/dates_addition/',
+			$.post('/dates_addition/?type=ajax',
 			{ office: $('#id_office').val(),
 			  dentist_man: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -95,17 +95,13 @@
 	{% endif %}
 	
 	{% for field in form %}
-		<div class="fieldWrapper">
-	        {% if field.errors %}
-	        	<div class="error">
-			    {% for error in field.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			    </div>
-			{% endif %}
-	        {{ field.label_tag }} 
-	        {{ field }}
-	    </div>
+        <div class="error">
+		    {% for error in field.errors %}
+		        <strong>{{ error|escape }} </strong>
+		    {% endfor %}
+		</div>
+        {{ field.label_tag }} 
+        {{ field }}
     {% endfor %}
     
 	<p><input id="id_generate_submit" name="generate_submit" type="submit" value="Generuj" /></p>

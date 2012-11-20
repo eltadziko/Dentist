@@ -54,7 +54,7 @@ class GenerateDatesForm(forms.Form):
                                       widget=forms.Textarea(attrs={'readonly':'True'}))
     begin = forms.CharField(label="Od")
     end = forms.CharField(label="Do")
-    exclude = forms.CharField(label="Wyłączając")
+    exclude = forms.CharField(label="Wyłączając", required=False)
     
 class EditAddedDatesForm(forms.Form):
     def __init__(self, last_added, *args, **kwargs):

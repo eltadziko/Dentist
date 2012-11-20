@@ -213,7 +213,6 @@ def index(request):
 @user_passes_test(in_patient_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register(request):
-    print request.POST.keys();
     offices = dental_office.objects.all()
     if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
         form = RegisterForm(offices[0].id, -1, -1, -1, -1)
@@ -277,11 +276,20 @@ def dentist_register(request):
                                 
                     for h in deleted_apps:            
                         apps.remove(h)
-                    form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ)
+                    if request.GET.get('type', None) == 'ajax': 
+                        form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ)
+                    else:
+                        form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, request.POST)
             else:
-                form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ)
+                if request.GET.get('type', None) == 'ajax': 
+                    form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ)
+                else:
+                    form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, request.POST)
         else:
-            form = RegisterForm(request.POST['office'], -1, -1, -1, typ)        
+            if request.GET.get('type', None) == 'ajax': 
+                form = RegisterForm(request.POST['office'], -1, -1, -1, typ)   
+            else:
+                form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.POST)           
     else:
         form = RegisterForm(offices[0].id, -1, -1, -1, -1)
     return render(request, 'dentist_register.html', {'form': form})
@@ -603,14 +611,26 @@ def dates_addition(request):
                 messages.add_message(request, messages.INFO, 'Pomyślnie dodano terminy.')
                 return render(request, 'edit_added_dates.html', {'form': form})
             elif dentist_man!="":
-                form = GenerateDatesForm(request.POST['office'], dentist_man)
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDatesForm(request.POST['office'], dentist_man)
+                else:
+                    form = GenerateDatesForm(request.POST['office'], dentist_man, request.POST)
             else:
-                form = GenerateDatesForm(request.POST['office'], -1) 
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDatesForm(request.POST['office'], -1) 
+                else:
+                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)
         elif 'office' in request.POST.keys():
             if 'dentist_man' in request.POST.keys():
-                form = GenerateDatesForm(request.POST['office'], request.POST['dentist_man'])
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDatesForm(request.POST['office'], request.POST['dentist_man'])
+                else:
+                    form = GenerateDatesForm(request.POST['office'], request.POST['dentist_man'], request.POST)
             else:
-                form = GenerateDatesForm(request.POST['office'], -1)        
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDatesForm(request.POST['office'], -1)    
+                else:
+                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)        
     else:
         offices = dental_office.objects.all()
         form = GenerateDatesForm(offices[0].id, -1)

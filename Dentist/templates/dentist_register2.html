@@ -79,47 +79,38 @@
 		</div>
 	{% endif %}
 	
-	
-		<div class="fieldWrapper">
-	        {% if field.errors %}
-	        	<div class="error">
-			    {% for error in field.errors %}
+			<div class="typ_1"><div class="rej_tytul">{{form.pat.label_tag}} </div><div class="opcje">{{form.pat}}</div></div>
+	        
+	        <div class="error">
+				{% for error in form.patients.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
-			    </div>
-			{% endif %}
-			<div class="typ_1"><div class="rej_tytul">{{form.pat.label_tag}} </div><div class="opcje">{{form.pat}}</div></div>
-	        <div class="typ_1">
-	         	<div class="error">
-					{% for error in form.patients.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				</div>
-	         	<div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje"><div id="pat">{{form.patients}}</div></div></div>
+			</div>
+	        <div class="typ_1"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje"><div id="pat">{{form.patients}}</div></div></div>
 			<div class="typ_1"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje">{{form.office}}</div></div>
-	         <div class="typ_1">
-	         	<div class="error">
-					{% for error in form.dentist.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				</div>
-	         	<div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje">{{form.dentist}}</div></div>
-	         <div class="typ_1">
-	         	<div class="error">
-					{% for error in form.date.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				</div>
-	         	<div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
+	         
+	         <div class="error">
+				{% for error in form.dentist.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			</div>
+	         <div class="typ_1"><div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje">{{form.dentist}}</div></div>
+	         
+	         <div class="error">
+				{% for error in form.date.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			</div>
+	         <div class="typ_1"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
+	         
 	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag}} </div><div class="opcje">{{form.type}}</div></div>
-	         <div class="typ_1">
-	         	<div class="error">
-					{% for error in form.appoint.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				</div>
-	         	<div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
-	    </div>
+	         
+	         <div class="error">
+				{% for error in form.appoint.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			</div>
+	         <div class="typ_1"><div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
     
     
 	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
