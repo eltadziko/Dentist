@@ -48,6 +48,7 @@ def register(request):
             user2 = authenticate(username = user.username, password = request.POST['password'])
             login(request, user2)
             
+            messages.add_message(request, messages.INFO, 'Pomyślnie się zarejestrowałeś. Zaznacz teraz choroby, na które chorujesz.')
             return HttpResponseRedirect('/diseases/')
     else:
         form = UserForm
@@ -66,7 +67,8 @@ def register2(request):
             password = password_creation(user = user, last_change = datetime.datetime.now().date())
             password.save()
             
-            return HttpResponseRedirect('/confirm_register/')
+            messages.add_message(request, messages.INFO, 'Poprawnie założyłeś konto. Skontaktuj się z recepcjonistą w dowolnym gabinecie, aby powiązać założone konto ze swoją kartą pacjenta.')
+            return HttpResponseRedirect('/index/')
     else:
         form = UserForm
     return render(request, 'register2.html', {'form': form})
@@ -84,6 +86,7 @@ def register_by_receptionist(request):
                 dis = disease.objects.get(id=disease2)
                 pat_dis = patient_diseases(patient=patient.id, disease=dis, date=datetime.datetime.now().date())
                 pat_dis.save()
+            messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano pacjenta.')
             return HttpResponseRedirect('/index/')
     else:
         form_patient = PatientForm
@@ -103,6 +106,7 @@ def diseases(request):
                 dis = disease.objects.get(id=disease2)
                 pat_dis = patient_diseases(patient=pat,disease=dis, date=datetime.datetime.now().date())
                 pat_dis.save()
+            messages.add_message(request, messages.INFO, 'Pomyślnie dodano choroby.')
             return HttpResponseRedirect('/index/')
     else:
         form = DiseasesForm(request.user)
@@ -129,6 +133,7 @@ def update_profile(request, patient_id = -1):
         if form.is_valid() and form_patient.is_valid(): 
             form.save()            
             form_patient.save()
+            messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano profil.')
             return HttpResponseRedirect('/index/')
     else:
         form = ProfileForm(instance = user)
@@ -146,6 +151,8 @@ def change_password(request):
             password = password_creation.objects.get(user = request.user)
             password.last_change = datetime.datetime.now().date()
             password.save()
+            
+            messages.add_message(request, messages.INFO, 'Pomyślnie zmieniono hasło.')
             return HttpResponseRedirect('/index/')
     else:
         form = PasswordForm(request.user)
@@ -153,7 +160,8 @@ def change_password(request):
         
 @login_required
 def logout_view(request):
-    logout(request) 
+    logout(request)
+    messages.add_message(request, messages.INFO, 'Nastąpiło pomyślne wylogowanie.')
     return HttpResponseRedirect('/index/')  
 
 @login_required
@@ -190,6 +198,7 @@ def patient_user(request):
                     
                     g = Group.objects.get(name='pacjent')
                     g.user_set.add(user)
+                    messages.add_message(request, messages.INFO, 'Pomyślnie przypisano konto do pacjenta.')
                     return HttpResponseRedirect('/index/')
         else:
             form = PatientUserForm('')
@@ -198,9 +207,6 @@ def patient_user(request):
 @user_passes_test(new_password, login_url="/password/")
 def index(request):
     return render(request, 'index.html')
-
-def confirm_register(request):
-    return render(request, 'confirm_register.html')
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
@@ -226,6 +232,7 @@ def dentist_register(request):
                                           appointment_type = appointment_type.objects.get(id=request.POST['type']),
                                           patient = patient.objects.get(user=request.user.id))
                     appoint.save()
+                    messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano do dentysty.')
                     return HttpResponseRedirect('/index/')
                 else:
                     apps = []
@@ -308,6 +315,7 @@ def dentist_register2(request):
                                           appointment_type = appointment_type.objects.get(id=request.POST['type']),
                                           patient = patient.objects.get(id=request.POST['patients']))
                     appoint.save()
+                    messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano pacjenta do dentysty.')
                     return HttpResponseRedirect('/index/')
                 else:
                     apps = []
@@ -767,6 +775,7 @@ def dentist_profile(request):
         if form.is_valid() and form_dentist.is_valid(): 
             form.save()            
             form_dentist.save()
+            messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano profil.')
             return HttpResponseRedirect('/index/')
     else:
         form = ProfileForm(instance = request.user)
