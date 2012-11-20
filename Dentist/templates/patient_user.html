@@ -1,39 +1,43 @@
 {% extends 'base.html' %}
 
-{% block javascript %}
-	{{ block.super }}
+{% block right_column %}
+<div id="forms">
+<form action="/patient_user/" method="post"> {% csrf_token %}
+	{{ form.pat.label_tag }} {{ form.pat }}
 	
-	<script>
+	<div class="error">
+		{% for error in form.login.errors %}
+	        <strong>{{ error|escape }} </strong>
+	    {% endfor %}
+	</div>
+	{{ form.login.label_tag }} {{ form.login }}
+	
+	<div class="error">
+		{% for error in form.patients.errors %}
+	        <strong>{{ error|escape }} </strong>
+	    {% endfor %}
+	</div>
+	<div id="patient_list">{{ form.patients.label_tag }} {{ form.patients }}</div><div class="napraw"></div>
+	
+	<input id="send_log_big" type="submit" value="Zapisz" />
+</form>
+</div>
+
+<script>
 	$(document).ready(function() {
-		 $("input[name=pat]").blur(function() {
+		 $("input[name=pat]").keyup(function() {
 			$.post('/patient_user/',
 			{ pat: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
-				$('#content').html(data); 
+				var start = data.indexOf('patient_list')+14;
+				var end = data.indexOf('</div><div class=');
+				var html = data.slice(start, end);
+				$('#patient_list').html(html);
 			});
 		 	
 		 	return false;
 		 });
 	});
-	</script>
-{% endblock %}
-
-{% block right_column %}
-<div id="forms">
-<form action="/patient_user/" method="post"> {% csrf_token %}
-	{% for field in form %}
-		{% if field.errors %}
-	       	<div class="error">
-		    {% for error in field.errors %}
-		        <strong>{{ error|escape }} </strong>
-		    {% endfor %}
-		    </div>
-		{% endif %}
-		{{ field.label_tag }}{{ field }}
-	{% endfor %}
-	<div class="napraw"></div>
-	<input id="send_log_big" type="submit" value="Zapisz" />
-</form>
-</div>
+</script>
 {% endblock %}

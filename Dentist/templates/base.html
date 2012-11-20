@@ -116,6 +116,10 @@ Stomatologia Coldix
 <li><a href="{% url 'views.dentist_profile' %}">Profil</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% endif %}
+{% if user|in_group:'administrator' %}
+<li><a href="/admin/">Panel admina</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+{% endif %}
 
 </ul>
 </div>

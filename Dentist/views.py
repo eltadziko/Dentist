@@ -189,6 +189,7 @@ def patient_user(request):
     if request.is_ajax:
         if request.POST:
             form = PatientUserForm(request.POST['pat'], request.POST)
+            
             if form.is_valid():
                 if 'patients' in request.POST.keys():
                     pat = patient.objects.get(id = request.POST['patients'])
@@ -212,6 +213,7 @@ def index(request):
 @user_passes_test(in_patient_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register(request):
+    print request.POST.keys();
     offices = dental_office.objects.all()
     if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
         form = RegisterForm(offices[0].id, -1, -1, -1, -1)
@@ -288,6 +290,7 @@ def dentist_register(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register2(request):
+    
     if request.POST:
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -655,15 +658,18 @@ def reservations(request):
         if 'appointment' in request.POST.keys():
             app = request.POST['appointment']
             appointment.objects.get(id=app).delete()
+            messages.add_message(request, messages.INFO, 'Pomyślnie usunięto termin wizyty.')
+            return HttpResponseRedirect('/reservations/')
         elif 'appointment2' in request.POST.keys():
             app = appointment.objects.get(id=request.POST['appointment2'])
-            print request.POST.keys()
             if 'date' in request.POST.keys():
                 if 'appoint' in request.POST.keys():
                     day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
                     app.date = day.date()
                     app.hour = day.time()
                     app.save()
+                    messages.add_message(request, messages.INFO, 'Pomyślnie zmieniono termin wizyty.')
+                    return HttpResponseRedirect('/reservations/')
                 else:
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
