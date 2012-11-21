@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 
+{% block javascript %}
+{{ block.super }}
+
+<script>
+	$(document).ready(function() {
+		 $("input[name=pat]").keyup(function() {
+			$.post('/patient_user/',
+			{ pat: $(this).val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#patient_list').html($(data).find('#patient_list').html());
+			});
+		 	
+		 	return false;
+		 });
+	});
+</script>
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 <form action="/patient_user/" method="post"> {% csrf_token %}
@@ -17,27 +36,11 @@
 	        <strong>{{ error|escape }} </strong>
 	    {% endfor %}
 	</div>
-	<div id="patient_list">{{ form.patients.label_tag }} {{ form.patients }}</div><div class="napraw"></div>
+	<div id="patient_list">{{ form.patients.label_tag }} {{ form.patients }}</div>
+	
+	<div class="napraw"></div>
 	
 	<input id="send_log_big" type="submit" value="Zapisz" />
 </form>
 </div>
-
-<script>
-	$(document).ready(function() {
-		 $("input[name=pat]").keyup(function() {
-			$.post('/patient_user/',
-			{ pat: $(this).val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				var start = data.indexOf('patient_list')+14;
-				var end = data.indexOf('</div><div class=');
-				var html = data.slice(start, end);
-				$('#patient_list').html(html);
-			});
-		 	
-		 	return false;
-		 });
-	});
-</script>
 {% endblock %}

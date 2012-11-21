@@ -5,7 +5,46 @@
 	
 	<script>
 	$(document).ready(function() {
-					
+		
+		$("#id_pat").keyup(function() {
+			var dent = $('input[name=dentist]:checked').val();
+			var date = $('input[name=date]:checked').val();
+			
+			if (dent == undefined) {
+				$.post('/dentist_register2/?type=ajax',
+				{ pat: $(this).val(),
+				  office: $('#id_office').val(),
+				  type: $('#id_type').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#pat').html($(data).find('#pat').html());
+				});
+			} else if(date == undefined) {
+				$.post('/dentist_register2/?type=ajax',
+				{ pat: $(this).val(),
+				  office: $('#id_office').val(),
+				  type: $('#id_type').val(),
+				  dentist: $('input[name=dentist]:checked').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#pat').html($(data).find('#pat').html());
+				});
+			} else {
+				$.post('/dentist_register2/?type=ajax',
+				{ pat: $(this).val(),
+				  office: $('#id_office').val(),
+				  type: $('#id_type').val(),
+				  dentist: $('input[name=dentist]:checked').val(),
+				  date: $('input[name=date]:checked').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#pat').html($(data).find('#pat').html()); 
+				});
+			}
+		 	
+		 	return false;
+		 });
+		 			
 		 $("#id_office").change(function() {
 			$.post('/dentist_register2/?type=ajax',
 			{ office: $(this).val(),
@@ -86,7 +125,7 @@
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			</div>
-	        <div class="typ_1"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje"><div id="pat">{{form.patients}}</div></div></div>
+	        <div class="typ_1"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje">{{form.patients}}</div></div>
 			<div class="typ_1"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje">{{form.office}}</div></div>
 	         
 	         <div class="error">
@@ -116,56 +155,4 @@
 	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
 </form>
 </div>
-
-<script>
-	$(document).ready(function() {
-		$("#id_pat").keyup(function() {
-			var dent = $('input[name=dentist]:checked').val();
-			var date = $('input[name=date]:checked').val();
-			
-			if (dent == undefined) {
-				$.post('/dentist_register2/?type=ajax',
-				{ pat: $(this).val(),
-				  office: $('#id_office').val(),
-				  type: $('#id_type').val(),
-				  csrfmiddlewaretoken: '{{ csrf_token }}' },
-				function(data) { 
-					var start = data.indexOf('id="pat"')+9;
-					var end = data.indexOf('</div></div></div>');
-					var html = data.slice(start, end);
-					$('#pat').html(html);
-				});
-			} else if(date == undefined) {
-				$.post('/dentist_register2/?type=ajax',
-				{ pat: $(this).val(),
-				  office: $('#id_office').val(),
-				  type: $('#id_type').val(),
-				  dentist: $('input[name=dentist]:checked').val(),
-				  csrfmiddlewaretoken: '{{ csrf_token }}' },
-				function(data) { 
-					var start = data.indexOf('id="pat"')+9;
-					var end = data.indexOf('</div></div></div>');
-					var html = data.slice(start, end);
-					$('#pat').html(html);
-				});
-			} else {
-				$.post('/dentist_register2/?type=ajax',
-				{ pat: $(this).val(),
-				  office: $('#id_office').val(),
-				  type: $('#id_type').val(),
-				  dentist: $('input[name=dentist]:checked').val(),
-				  date: $('input[name=date]:checked').val(),
-				  csrfmiddlewaretoken: '{{ csrf_token }}' },
-				function(data) { 
-					var start = data.indexOf('id="pat"')+9;
-					var end = data.indexOf('</div></div></div>');
-					var html = data.slice(start, end);
-					$('#pat').html(html); 
-				});
-			}
-		 	
-		 	return false;
-		 });
-	});
-</script>
 {% endblock %}

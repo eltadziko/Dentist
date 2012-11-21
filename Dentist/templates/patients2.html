@@ -1,5 +1,37 @@
 {% extends 'base.html' %}
 
+{% block javascript %}
+{{ block.super }}
+
+<script>
+	$(document).ready(function() {
+		 $("input[name=pat]").keyup(function() {
+			$.post('/reservations/',
+			{ pat: $(this).val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#forms').html($(data).find('#forms').html());
+				$('.pagination').html($(data).find('.pagination').html()); 
+			});
+		 	
+		 	return false;
+		 });
+		 
+		 $('.patient').live('click',function() {
+			$.post('/reservations/',
+			{ patient: $(this).attr('id'),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data); 
+			  }
+			 );
+			return false;
+		});
+		 
+	});
+</script>
+{% endblock %}
+
 {% block right_column %}
 Nazwisko pacjenta: <input type="text" name="pat" />
 <div id="forms">
@@ -24,38 +56,4 @@ Nazwisko pacjenta: <input type="text" name="pat" />
         {% endif %}
     </span>
 </div>
-
-<script>
-	$(document).ready(function() {
-		 $("input[name=pat]").keyup(function() {
-			$.post('/reservations/',
-			{ pat: $(this).val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				var start = data.indexOf('forms')+7;
-				var end = data.indexOf('<div class="pagination">')-7;
-				var html = data.slice(start, end);
-				$('#forms').html(html);
-				var start = data.indexOf('pagination')+12;
-				var end = data.indexOf('<script>')-8;
-				var html = data.slice(start, end);
-				$('.pagination').html(html); 
-			});
-		 	
-		 	return false;
-		 });
-		 
-		 $('.patient').live('click',function() {
-			$.post('/reservations/',
-			{ patient: $(this).attr('id'),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			  function(data) { 
-				$('#content').html(data); 
-			  }
-			 );
-			return false;
-		});
-		 
-	});
-</script>
 {% endblock %}
