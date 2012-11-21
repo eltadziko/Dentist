@@ -24,7 +24,19 @@
 	<script src="{{ MEDIA_URL }}/js/datepicker.js" ></script>
 	<script src="{{ MEDIA_URL }}/js/jquery-ui.multidatespicker.js" ></script>
 	<script>
+	
 	$(document).ready(function() {
+	
+	jQuery.fn.update_disable = function() {
+	 	var temp = $("#id_hidden").val();
+		alert("Wybierz daty, które chcesz wyłączyć.");
+		table = temp.split(" ");
+		$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
+		/*setTimeout(function() {}, 1000);*/
+	}
+	
+		 var table = ""; 
+		 
 		 $.datepicker.setDefaults($.datepicker.regional['PL']);
 		 $( "#id_begin" ).datepicker( {
             defaultDate: "+1w",
@@ -35,7 +47,7 @@
                 $( "#id_end" ).datepicker( "option", "minDate", selectedDate );
                 /*$( "#id_exclude" ).datepicker( "option", "minDate", selectedDate );*/
             }
-        });      
+         });      
 		 $( "#id_end" ).datepicker( {
             defaultDate: "+1w",
             changeMonth: true,
@@ -45,20 +57,17 @@
                 $( "#id_begin" ).datepicker( "option", "maxDate", selectedDate );
                 /*$( "#id_exclude" ).datepicker( "option", "maxDate", selectedDate );*/
             }
-        });
-        $( "#id_exclude" ).multiDatesPicker({
+         });
+         today = new Date();
+         $( "#id_exclude" ).multiDatesPicker({
         	defaultDate: "+1w",
             changeMonth: true,
             numberOfMonths: 3,
-			minDate: "0",
-			/* onClose: function( selectedDate ) {
-				var ble = $( "#id_begin" ).val();
-				var ble2 = $( "#id_end" ).val();
-			alert(ble+" "+ble2);
-                $( this ).datepicker( "option", "minDate", ble);
-                $( this ).datepicker( "option", "maxDate", ble2 );
-            }*/
-		});
+            beforeShow: function() {
+            	$(this).update_disable();
+            }
+		 });
+		
 		 $("#id_office").change(function() {
 			$.post('/dates_addition/',
 			{ office: $(this).val(),
@@ -75,7 +84,7 @@
 			  dentist_man: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
-				$('#content').html(data); 
+				$('#content').html(data);
 			});
 		 	return false;
 		 });		 

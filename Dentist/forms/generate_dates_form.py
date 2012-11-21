@@ -28,7 +28,13 @@ class GenerateDatesForm(forms.Form):
                 if string=="":
                     string = "Brak informacji o terminach przyjęć dla wybranego gabinetu."
                 self.fields['information'].initial = string
-            if dentista==-1 and dents.count()!=0:
+                
+                dd = dates.objects.filter(dentist__id=dentista, dental_office__id=office)
+                string = ""
+                for d in dd:
+                    string += d.date.strftime("%Y-%m-%d") + " " 
+                self.fields['hidden'].initial = string
+            elif dentista==-1 and dents.count()!=0:
                 self.is_worker = True
                 self.fields['dentist_man'].initial = dents[0].id
                 self.fields['office'].initial = office
@@ -39,6 +45,12 @@ class GenerateDatesForm(forms.Form):
                 if string=="":
                     string = "Brak informacji o terminach przyjęć dla wybranego gabinetu."
                 self.fields['information'].initial = string
+                
+                dd = dates.objects.filter(dentist__id=dents[0].id, dental_office__id=office)
+                string = ""
+                for d in dd:
+                    string += d.date.strftime("%Y-%m-%d") + " " 
+                self.fields['hidden'].initial = string
     
     office = forms.ModelChoiceField(queryset=dental_office.objects.all(),
                                                     widget=forms.Select(),
@@ -55,6 +67,8 @@ class GenerateDatesForm(forms.Form):
     begin = forms.CharField(label="Od")
     end = forms.CharField(label="Do")
     exclude = forms.CharField(label="Wyłączając")
+    hidden = forms.CharField(label='Wpisane daty',
+                                      widget=forms.Textarea(attrs={'readonly':'True'}))
     
 class EditAddedDatesForm(forms.Form):
     def __init__(self, last_added, *args, **kwargs):
