@@ -32,7 +32,7 @@ Stomatologia Coldix
 <div id="belka_gora">
 <div id="log_box">
 {% if user.is_authenticated %}
-<div id="tekst_log">Witaj <a href="{% url 'views.update_profile' %}">{{ user.username }}</a>.</div>
+<div id="tekst_log">Witaj {% if user|in_group:'dentysta' %}<a href="{% url 'views.dentist_profile' %}">{% else %}<a href="{% url 'views.update_profile' %}">{% endif %}{{ user.username }}</a>.</div>
 <img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
 <div id="tekst_log"><a href="{% url 'views.logout_view' %}">Wyloguj</a>.</div>
 {% else %}
@@ -65,7 +65,7 @@ Stomatologia Coldix
 <li><a href="{% url 'views.index' %}">HOME</a></li>
 <li><a href="{% url 'views.offices' %}">GABINETY</a></li>
 <li><a href="{% url 'views.dentists' %}">DENTYŚCI</a></li>
-<li><a href="{% url 'views.dentist_register' %}">REJESTRACJA</a></li>
+<li>{% if user|in_group:'rejestrator' %}<a href="{% url 'views.dentist_register2' %}">{% else %}<a href="{% url 'views.dentist_register' %}">{% endif %}REJESTRACJA</a></li>
 <li><a href="kontakt.html">KONTAKT</a></li>
 </ul>
 </div>
@@ -91,6 +91,8 @@ Stomatologia Coldix
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.patient_card' %}">Karta</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'rejestrator' %}
 <li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
@@ -110,6 +112,14 @@ Stomatologia Coldix
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'dentysta' %}
 <li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.dentist_profile' %}">Profil</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+{% endif %}
+{% if user|in_group:'administrator' %}
+<li><a href="/admin/">Panel admina</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% endif %}
 

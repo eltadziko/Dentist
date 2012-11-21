@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block right_column %}
+<div id="forms">
+<form action="{% url views.dentist_profile %}{{ patient }}" method="post"> {% csrf_token %}
+	{% if form.non_field_errors %}
+       	<div class="error">
+		    {% for error in form.non_field_errors %}
+		        <strong>{{ error|escape }} </strong>
+			{% endfor %}
+		</div>
+	{% endif %}
+	
+	{% for field in form %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }} 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+   {% for field in form_dentist %}
+		<div class="fieldWrapper">
+	        {% if field.errors %}
+	        	<div class="error">
+			    {% for error in field.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			    </div>
+			{% endif %}
+	        {{ field.label_tag }} 
+	        {{ field }}
+	    </div>
+    {% endfor %}
+    
+	<p><input id="send_log_big" type="submit" value="Zapisz" /></p>
+</form>
+</div>
+{% endblock %}

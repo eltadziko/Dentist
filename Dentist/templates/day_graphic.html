@@ -10,13 +10,13 @@
 		$(document).ready(function() {
 			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
 			
-			$("#date").live('change', function() {
+			$("#date").change(function() {
 				$.post('/day_graphic/',
 					{ date: $(this).val(),
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data); 
+						$('#graphic').html($(data).find('#graphic').html()); 
 				});
 			 	return false;
 			 });
@@ -27,7 +27,7 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data); 
+						$('#graphic').html($(data).find('#graphic').html()); 
 				});
 			 	return false;
 			 });
@@ -38,7 +38,7 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data);
+						$('#graphic').html($(data).find('#graphic').html());
 				});
 			 	return false;
 			 }); 
@@ -64,7 +64,7 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 	{% endfor %}
 </select>
 </form>
-<table>
+<table id="graphic">
 <tr>
 	<th>Godzina</th>
 	{% for d in dents %}

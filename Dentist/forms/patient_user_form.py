@@ -19,7 +19,7 @@ class PatientUserForm(forms.Form):
     
     def __init__(self, last_name, *args, **kwargs):
         super(PatientUserForm, self).__init__(*args, **kwargs)
-        pat2 = patient.objects.filter(last_name=last_name).filter(user=None)
+        pat2 = patient.objects.filter(last_name__startswith=last_name.title()).filter(user=None)
         self.fields['patients'].queryset = pat2 
         
     error_messages = {

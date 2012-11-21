@@ -20,7 +20,7 @@ class dentist(models.Model):
 
     def __unicode__(self):
         user = User.objects.get(id=self.user_id)
-        return u'%s %s' % (self.first_name, self.last_name)
+        return u'%s %s' % (self.last_name, self.first_name)
 
 class disease(models.Model):
     disease_name = models.CharField("Nazwa choroby", max_length=30)
@@ -62,7 +62,7 @@ class patient(models.Model):
         verbose_name_plural = "Pacjenci"
 
     def __unicode__(self):
-        return u'%s %s' % (self.first_name, self.last_name)
+        return u'%s %s' % (self.last_name, self.first_name)
     
 class patient_diseases(models.Model):
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
@@ -179,7 +179,7 @@ class loss_type(models.Model):
         return self.type
     
 class tooth_part(models.Model):
-    name = models.CharField("Nazwa", max_length=30)
+    name = models.CharField("Nazwa", max_length=40)
     
     class Meta:
         verbose_name = "Część zęba"

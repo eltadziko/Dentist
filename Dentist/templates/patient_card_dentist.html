@@ -13,6 +13,10 @@
 			$("#cancel_description").hide();
 			$(".app_form_edit").hide();
 			
+			{% if not appointment.is_now %}
+				$('#is_in').text('Wszedł');
+			{% endif %}
+			
 			$('.appointment').click(function() {
 				id = '#appoint_' + $(this).attr('id');
 				$(id).toggle();
@@ -43,6 +47,8 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
+						$('#is_in').text('Wyszedł');
+						$('#is_in').attr('id', 'is_out');
 				});
 			 	return false;
 			 });
@@ -53,6 +59,7 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
+						$('#is_out').hide();
 				});
 			 	return false;
 			 });
@@ -125,11 +132,8 @@
 	{% endfor %}
 	
 	<br />
-	{% if not appointment.is_now %}
-		<div id="is_in">Wszedł</div>
-	{% elif appointment.is_now == 1 %}
-		<div id="is_out">Wyszedł</div>
-	{% endif %}
+		
+	<div id="is_in"></div>
 	
 	<div id="patient_edit">Edytuj</div>
 	<div id="form_patient_edit">
