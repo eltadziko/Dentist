@@ -28,6 +28,7 @@ Nazwisko pacjenta: <input type="text" name="pat" />
 		<a href = "{% url views.update_profile %}{{ row.id }}">
         	{{ row.last_name }} {{ row.first_name }}, {{ row.address }}
         </a>
+        <br />
     {% endfor %}
 </div>
 <div class="pagination">
