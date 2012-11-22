@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
+{% block javascript %}
+	{{ block.super }}
+	
+	
+{% endblock %}
+
 {% block right_column %}
+Nazwisko pacjenta: <input type="text" name="pat" />
 <div id="forms">
 	{% for row in patients %}
 		<div class="patient">
@@ -10,4 +17,41 @@
 	    </div>
     {% endfor %}
 </div>
+<div class="pagination">
+    <span class="step-links">
+        {% if patients.has_previous %}
+            <a href="?page={{ patients.previous_page_number }}">Poprzednia</a>
+        {% endif %}
+
+        <span class="current">
+            Strona {{ patients.number }} z {{ patients.paginator.num_pages }}
+        </span>
+
+        {% if patients.has_next %}
+            <a href="?page={{ patients.next_page_number }}">Następna</a>
+        {% endif %}
+    </span>
+</div>
+
+<script>
+	$(document).ready(function() {
+		 $("input[name=pat]").keyup(function() {
+			$.post('/patients/',
+			{ pat: $(this).val(),
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				var start = data.indexOf('forms')+7;
+				var end = data.indexOf('<div class="pagination">');
+				var html = data.slice(start, end);
+				$('#forms').html(html);
+				var start = data.indexOf('pagination')+12;
+				var end = data.indexOf('</div></div><div id="footer">');
+				var html = data.slice(start, end);
+				$('.pagination').html(html); 
+			});
+		 	
+		 	return false;
+		 });
+	});
+	</script>
 {% endblock %}

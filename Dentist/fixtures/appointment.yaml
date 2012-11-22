@@ -2567,7 +2567,17 @@
     dentist: 1
     patient: 1
     dental_office: 1
-    appointment_type: 3
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 516
+  fields:
+    date: 2012-11-19
+    hour: "8:30"
+    description: 
+    dentist: 1
+    patient: 3
+    dental_office: 1
+    appointment_type: 2
 - model: Dentist.appointment
   pk: 258
   fields:
@@ -2587,7 +2597,17 @@
     dentist: 1
     patient: 3
     dental_office: 1
-    appointment_type: 3
+    appointment_type: 2
+- model: Dentist.appointment
+  pk: 515
+  fields:
+    date: 2012-11-19
+    hour: "11:45"
+    description: 
+    dentist: 1
+    patient: 3
+    dental_office: 1
+    appointment_type: 1
 - model: Dentist.appointment
   pk: 260
   fields:

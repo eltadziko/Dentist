@@ -48,10 +48,10 @@
 {% endblock %}
 
 {% block right_column %}
-<div id="forms">
+<div id="rezerwacje">
 <form id="today">
-Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
-Gabinet: <select id="office" name="office">
+Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" id="send_data"/>
+</br>Gabinet: <select id="office" name="office">
 	{% for o in offices %}
 		{% if o.id == office %}
 			<option value="{{ o.id }}" selected="selected">{{ o }}</option>

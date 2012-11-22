@@ -4,6 +4,11 @@ from django.utils.encoding import force_unicode
 register = template.Library()
 
 @register.filter
+def div(value, arg):
+    "Divides the value by the arg"
+    return int(value) / int(arg) + 1
+
+@register.filter
 def in_group(user, groups):
     """Returns a boolean if the user is in the given group, or comma-separated
     list of groups.

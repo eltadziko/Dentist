@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load group_filter %}
 
 {% block javascript %}
 {{ block.super }}
@@ -30,8 +31,12 @@
 {% endblock %}
 
 {% block right_column %}
+{% if user|in_group:"rejestrator" %}
+	Pacjent: {{ patient.last_name }} {{patient.first_name }}
+{% endif %}
+<div id="rezerwacje">
 	<table>
-	<tr><th>Data</th><th>Godzina</th><th>Dentysta</th><th>Gabinet</th><th></th><th></th></tr>
+	<tr><th>Data</th><th>Godzina</th><th>Dentysta</th><th>Gabinet</th></tr>
 	{% for r in reservations %}
 		<tr>
 			<td>{{ r.date|date:'d-m-Y' }}</td>
@@ -43,4 +48,5 @@
 		</tr>
 	{% endfor %}
 	</table>
+</div>
 {% endblock %}

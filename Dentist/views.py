@@ -16,6 +16,7 @@ from forms.generate_dates_form import GenerateDatesForm
 from forms.register_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -155,8 +156,19 @@ def logout_view(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def patient_list(request):
-    patients = patient.objects.all()
-    return render(request, 'patients.html', {'patients': patients}) 
+    if request.POST:
+        patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
+    else:
+        patients = patient.objects.all().order_by('last_name')
+    paginator = Paginator(patients, 25)
+    page = request.GET.get('page')
+    try:
+        patients2 = paginator.page(page)
+    except PageNotAnInteger:
+        patients2 = paginator.page(1)
+    except EmptyPage:
+        patients2 = paginator.page(1)
+    return render(request, 'patients.html', {'patients': patients2}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -181,7 +193,7 @@ def patient_user(request):
 
 @user_passes_test(new_password, login_url="/password/")
 def index(request):
-    return render(request, 'base.html')
+    return render(request, 'index.html')
 
 def confirm_register(request):
     return render(request, 'confirm_register.html')
@@ -371,10 +383,11 @@ def appointment_list2(request):
     else:
         date = datetime.datetime.today().date()
     dent = dentist.objects.get(user = request.user.id)
+    print dent.id
     appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
 
     hours = []
-    hour = dates.objects.filter(date=date) 
+    hour = dates.objects.filter(date=date).filter(dentist = dent) 
 
     if appoints.count()!=0:
         begin = datetime.datetime.combine(appoints[0].date, hour[0].begin)
@@ -445,20 +458,23 @@ def day_graphic(request):
     for d in dent:
         appoints.append(appointment.objects.filter(date = date).filter(dentist = d).order_by('hour'))
     
-    graphics = []    
+    graphics = []   
+    i = [] 
     for h in hours2:
         appoint = []
+        j = 0
         for d in appoints:
-            i = 0
+            i.append(0)
             dodano = False
             for a in d:
                 if a.hour == h:
                     appoint.append({'appoint': a, 'length': a.appointment_type.length/15})
                     dodano = True
-                    i = a.appointment_type.length/15
+                    i[j] = a.appointment_type.length/15
             if not dodano:
-                i = i-1
-                appoint.append({'appoint': None, 'length': i})  
+                i[j] = i[j]-1
+                appoint.append({'appoint': None, 'length': i[j]})  
+            j = j+1
         graphics.append({'hour': h, 'appoint': appoint})  
             
     
@@ -526,10 +542,20 @@ def dates_addition(request):
 def offices(request):
     offs = dental_office.objects.all()
     offices =[]
+    dents = dentist.objects.all().order_by('last_name')
+    pages = {}
+    i = 0;
+    for d in dents:
+        page = i/5 + 1
+        pages[d.last_name] = page
+        i = i + 1
     for o in offs:
         hour = hours.objects.values_list('dentist').filter(dental_office=o.id)
         dentists = dentist.objects.filter(id__in=hour).order_by('last_name')
-        offices.append({'office':o, 'dentists':dentists})
+        dentists2 = []
+        for d in dentists:
+            dentists2.append({'d': d, 'page': pages[d.last_name]})
+        offices.append({'office':o, 'dentists':dentists2})
     return render(request, 'offices.html',{'offices': offices})
 
 @user_passes_test(new_password, login_url="/password/")
@@ -544,7 +570,16 @@ def dentists(request):
             hour2 = hours.objects.filter(dentist=d.id).filter(dental_office=o.id).order_by('week_day')
             offices.append({'office':o, 'hours': hour2})
         dentists.append({'dentist': d, 'offices': offices})
-    return render(request, 'dentists.html',{'dentists': dentists})
+    
+    paginator = Paginator(dentists, 5)
+    page = request.GET.get('page')
+    try:
+        dentists2 = paginator.page(page)
+    except PageNotAnInteger:
+        dentists2 = paginator.page(1)
+    except EmptyPage:
+        dentists2 = paginator.page(1)
+    return render(request, 'dentists.html',{'dentists': dentists2})
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
@@ -614,7 +649,19 @@ def reservations(request):
     elif in_receptionist_group(request.user):
         if request.POST and 'patient' in request.POST.keys():
             reservations = appointment.objects.filter(patient=request.POST['patient']).filter(date__gte=datetime.datetime.now().date()).order_by('date')
+            pat = patient.objects.get(id=request.POST['patient'])
         else:
-            patients = patient.objects.all().order_by('last_name')
-            return render(request, 'patients2.html', {'patients': patients})
-    return render(request, 'reservations.html', {'reservations': reservations})
+            if request.POST and 'pat' in request.POST.keys():
+                patients = patient.objects.filter(last_name__startswith=request.POST['pat'].title()).order_by('first_name')
+            else:
+                patients = patient.objects.all().order_by('last_name')
+            paginator = Paginator(patients, 25)
+            page = request.GET.get('page')
+            try:
+                patients2 = paginator.page(page)
+            except PageNotAnInteger:
+                patients2 = paginator.page(1)
+            except EmptyPage:
+                patients2 = paginator.page(1)
+            return render(request, 'patients2.html', {'patients': patients2})
+    return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat})

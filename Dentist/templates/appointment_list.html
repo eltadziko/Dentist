@@ -45,12 +45,12 @@
 {% endblock %}
 
 {% block right_column %}
-<div id="forms">
+<div id="rezerwacje">
 <form id="today">
-Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" />
+Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" id="send_data"/>
 </form>
 <form id="graphic">
-<input type="submit" value="Graficzny" />
+<input type="submit" value="Graficzny" id="send_graphic"/>
 </form>
 <table>
 <tr><th>Początek</th><th>Koniec</th><th>Pacjent</th></tr>
