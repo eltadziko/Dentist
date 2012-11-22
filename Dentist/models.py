@@ -20,7 +20,7 @@ class dentist(models.Model):
 
     def __unicode__(self):
         user = User.objects.get(id=self.user_id)
-        return u'%s %s' % (self.first_name, self.last_name)
+        return u'%s %s' % (self.last_name, self.first_name)
 
 class disease(models.Model):
     disease_name = models.CharField("Nazwa choroby", max_length=30)
@@ -62,7 +62,7 @@ class patient(models.Model):
         verbose_name_plural = "Pacjenci"
 
     def __unicode__(self):
-        return u'%s %s' % (self.first_name, self.last_name)
+        return u'%s %s' % (self.last_name, self.first_name)
     
 class patient_diseases(models.Model):
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
@@ -145,6 +145,7 @@ class appointment(models.Model):
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
     dental_office = models.ForeignKey(dental_office, verbose_name="Gabinet")
     appointment_type = models.ForeignKey(appointment_type, verbose_name="Typ wizyty")
+    is_now = models.IntegerField("Trwa", blank=True, null=True)
     
     class Meta:
         verbose_name = "Wizyta"
@@ -178,7 +179,7 @@ class loss_type(models.Model):
         return self.type
     
 class tooth_part(models.Model):
-    name = models.CharField("Nazwa", max_length=30)
+    name = models.CharField("Nazwa", max_length=40)
     
     class Meta:
         verbose_name = "Część zęba"
@@ -189,7 +190,7 @@ class tooth_part(models.Model):
 class tooth_loss(models.Model):
     appointment = models.ForeignKey(appointment, verbose_name="Wizyta")
     tooth = models.ForeignKey(tooth, verbose_name="Ząb")
-    loss_type = models.ForeignKey(loss_type, verbose_name="Typ ubytku")
+    loss_type = models.ForeignKey(loss_type, blank=True, null=True, verbose_name="Typ ubytku")
     tooth_part = models.ForeignKey(tooth_part, verbose_name="Część zęba")
     comment = models.TextField("Komentarz", blank=True, null=True)
     

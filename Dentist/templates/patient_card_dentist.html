@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% load group_filter %}
+
+{% block javascript %}
+	{{ block.super }}
+	
+	<script>
+		$(document).ready(function() {
+			$('.tooth_loss').hide();
+			
+			$('#form_patient_edit').hide();
+			$('#ok_description').hide();
+			$("#cancel_description").hide();
+			$(".app_form_edit").hide();
+			
+			{% if not appointment.is_now %}
+				$('#is_in').text('Wszedł');
+			{% endif %}
+			
+			$('.appointment').click(function() {
+				id = '#appoint_' + $(this).attr('id');
+				$(id).toggle();
+			});
+			
+			$('#patient_edit').click(function() {
+				$('#form_patient_edit').show();
+				$('#patient_comment').val('{{ patient.comment }}');
+			});
+			
+			$('#cancel_patient').click(function() {
+				$('#form_patient_edit').hide();
+			});
+			
+			$("#ok_patient").click(function() {
+				$.post('/patient_card_dentist/',
+					{ patient_comment: $('#patient_comment').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
+			 
+			 $("#is_in").click(function() {
+				$.post('/patient_card_dentist/',
+					{ is_now: 1,
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+						$('#is_in').text('Wyszedł');
+						$('#is_in').attr('id', 'is_out');
+				});
+			 	return false;
+			 });
+			 
+			 $("#is_out").click(function() {
+				$.post('/patient_card_dentist/',
+					{ is_now: -1,
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+						$('#is_out').hide();
+				});
+			 	return false;
+			 });
+			 
+			 $("#back").click(function() {
+			 
+				$.post('{{ graphic }}',
+					{ date: '{{ date }}',
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						window.location = '{{ graphic }}'; 
+				});
+			 	return false;
+			 });
+			 
+			 $("#form_appointment_edit").keyup(function() {
+			 	$("#ok_description").show();
+			 	$("#cancel_description").show();
+			 });
+			 
+			 $("#ok_description").click(function() {
+				$.post('/patient_card_dentist/',
+					{ appointment_description: $('#form_appointment_edit').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
+			 
+			 $('#cancel_description').click(function() {
+			 	$('#ok_description').hide();
+				$("#cancel_description").hide();
+				$('#form_appointment_edit').val('{{ appointment.description }}');
+			 });
+			 
+			 $('.app_edit').click(function() {
+			 	id = $(this).attr('id');
+			 	$('#app_form_edit_'+id).show();
+			 });
+			 
+			 $('.cancel_app').click(function() {
+			 	id = $(this).attr('name');
+				$('#app_form_edit_'+id).hide();
+			});
+			
+			$(".ok_app").click(function() {
+				id = $(this).attr('name');
+				$.post('/patient_card_dentist/',
+					{ app_desc: $('#app_desc_'+id).val(),
+					  app: id,
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
+		});
+	</script>
+{% endblock %}
+
+{% block right_column %}
+	<div id="back">Powrót do grafiku</div>
+	{{ patient.last_name }} {{ patient.first_name }}, PESEL: {{ patient.PESEL }}<br />
+	{{ patient.address }}</br>
+	{% if patient.comment %}{{ patient.comment }}<br />{% endif %}
+	Choroby:<br />
+	{% for d in patient.patient_diseases_set.all %}
+		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
+	{% endfor %}
+	
+	<br />
+		
+	<div id="is_in"></div>
+	
+	<div id="patient_edit">Edytuj</div>
+	<div id="form_patient_edit">
+		Komentarz: <textarea id="patient_comment" cols="80" rows="4"></textarea>
+		<input type="submit" id="cancel_patient" value="Anuluj"/>
+		<input type="submit" id="ok_patient" value="Zapisz"/>
+	</div>
+	
+	Aktualna wizyta:<br />
+	{{ appointment.date|date:'Y-m-d' }} {{ appointment.hour|time:'H:i' }}, {{ appointment.appointment_type.length }} minut<br />
+	Opis: <textarea id="form_appointment_edit" cols="80" rows="4">{% if appointment.description %}{{ appointment.description }}{% endif %}
+	</textarea>
+	<input type="submit" id="ok_description" value="Zapisz"/>
+	<input type="submit" id="cancel_description" value="Cofnij"/><br />
+	
+	Wizyty:<br />
+	{% for a in appoints %}
+	<div class="appoint">
+		<div class="appointment" id="{{ a.id }}">
+			{{ a.date }}<br />
+			Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />
+			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}<br />
+			{% if a.description %}{{ a.description }}<br /> {% endif %}
+			</div>
+			<div id="{{ a.id }}" class="app_edit">Edytuj</div>
+			<div id="app_form_edit_{{ a.id }}" class="app_form_edit">
+				Opis: <textarea id="app_desc_{{ a.id }}" cols="80" rows="4">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
+				<input type="submit" class="cancel_app" value="Anuluj" name="{{ a.id }}"/>
+				<input type="submit" class="ok_app" value="Zapisz" name="{{ a.id }}"/>
+			</div>
+			
+			<div id="appoint_{{ a.id }}" class="tooth_loss">
+			{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+				{{ t.tooth.tooth_number }} ({{ t.tooth.type }}, szczęka {{ t.tooth.jaw }}, strona {{ t.tooth.side }}) - {{ t.tooth_part.name }}<br />
+				{% if t.loss_type %}Rozpoznanie: {{ t.loss_type.type }}<br />{% endif %}
+				{% if t.comment %}{{ t.comment }}<br />{% endif %}
+			{% endfor %}
+			</div>
+	</div>
+	{% endfor %}
+{% endblock %}

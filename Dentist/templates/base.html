@@ -16,7 +16,7 @@ Stomatologia Coldix
 <link href="{{ MEDIA_URL }}/css/style.css" rel="stylesheet" media="all" type="text/css" />
 {% endblock %}
 {% block javascript %}
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.js"></script>
 {%endblock %}
 <link rel="shortcut icon" href="{{ MEDIA_URL }}/img/favicon.ico" type="image/x-icon" />
 
@@ -32,7 +32,7 @@ Stomatologia Coldix
 <div id="belka_gora">
 <div id="log_box">
 {% if user.is_authenticated %}
-<div id="tekst_log">Witaj <a href="{% url 'views.update_profile' %}">{{ user.username }}</a>.</div>
+<div id="tekst_log">Witaj {% if user|in_group:'dentysta' %}<a href="{% url 'views.dentist_profile' %}">{% else %}<a href="{% url 'views.update_profile' %}">{% endif %}{{ user.username }}</a>.</div>
 <img src="{{ MEDIA_URL }}/img/malabelka.jpg"/>
 <div id="tekst_log"><a href="{% url 'views.logout_view' %}">Wyloguj</a>.</div>
 {% else %}
@@ -65,7 +65,7 @@ Stomatologia Coldix
 <li><a href="{% url 'views.index' %}">HOME</a></li>
 <li><a href="{% url 'views.offices' %}">GABINETY</a></li>
 <li><a href="{% url 'views.dentists' %}">DENTYŚCI</a></li>
-<li><a href="{% url 'views.dentist_register' %}">REJESTRACJA</a></li>
+<li>{% if user|in_group:'rejestrator' %}<a href="{% url 'views.dentist_register2' %}">{% else %}<a href="{% url 'views.dentist_register' %}">{% endif %}REJESTRACJA</a></li>
 <li><a href="kontakt.html">KONTAKT</a></li>
 </ul>
 </div>
@@ -88,23 +88,38 @@ Stomatologia Coldix
 <li><a href="{% url 'views.diseases' %}">Choroby</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.dentist_register' %}">Rejestracja</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.patient_card' %}">Karta</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'rejestrator' %}
 <li><a href="{% url 'views.register_by_receptionist' %}">Rejestracja</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.change_password' %}">Hasło</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-<li><a href="{% url 'views.patient_list' %}">Aktualizacja pacj.</a></li>
+<li><a href="{% url 'views.patient_list' %}">Pacjenci</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.patient_user' %}">Połączenie konta</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-<li><a href="{% url 'views.dentist_register2' %}">Rejestr do dentysty</a></li>
+<li><a href="{% url 'views.dentist_register2' %}">Rejestracja wizyty</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.day_graphic' %}">Grafik</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.dates_addition' %}">Terminy</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'dentysta' %}
 <li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.change_password' %}">Hasło</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.dentist_profile' %}">Profil</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+{% endif %}
+{% if user|in_group:'administrator' %}
+<li><a href="/admin/">Panel admina</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% endif %}
 
@@ -117,6 +132,15 @@ Stomatologia Coldix
 </div>
 <!--<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStomatolog-Coldix%2F323848351055930&amp;width=200&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color=3e3e3e&amp;stream=true&amp;header=false&amp;appId=279481798728744" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:395px;" allowTransparency="true"></iframe>-->
 <div id="right_column">
+	{% if messages %}
+		<div class="flash_messages">
+		    {% for message in messages %}
+		    	{% if forloop.last %}
+		    		<div{% if message.tags %} class="{{ 'flash_'|add:message.tags }}"{% endif %}>{{ message }}</div>
+		    	{% endif %}
+		    {% endfor %}
+		</div>	
+	{% endif %}
 {% block right_column %}
 {% endblock %}
 </div>

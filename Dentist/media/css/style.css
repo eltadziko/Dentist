@@ -317,6 +317,35 @@ height:0;
 content:"-";
 visibility:hidden;
 }
+
+.flash_messages {
+    text-align: center;
+    padding:	.3em .4em;
+    margin:		0 auto .5em;
+    clear:		both;
+    max-width:	46.923em; /* 610/13 */  
+    *max-width:	45.750em; /* 610/13.3333 - for IE */
+}
+.flash_error {
+    border: thin solid #8b0000;
+    background: #ffc0cb;
+}
+.flash_debug, .flash_info {
+    border: thin solid #ff0;
+    background: #ffe;
+}
+.flash_warning {
+    border: thin solid #b8860b;
+    background: #ff0;
+}
+.flash .close {
+    float:	right;
+}
+.flash .close a {
+    color:				#f00;
+    text-decoration:	none;
+}
+
 .pagination{
   text-align:center;
 }
@@ -436,3 +465,20 @@ margin:0 auto;
   color:white;
   background: url(../img/BG_submenu.jpg) repeat-x;
 }
+
+.now_time {
+	background-color: gray;	
+}
+
+.appoint_now {
+	background-color: red;
+}
+
+.appoint_past{
+	background-color: silver;
+}
+
+.appoint_future {
+	background-color: blue;
+}
+

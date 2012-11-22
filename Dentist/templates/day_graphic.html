@@ -10,13 +10,13 @@
 		$(document).ready(function() {
 			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
 			
-			$("#date").live('change', function() {
+			$("#date").change(function() {
 				$.post('/day_graphic/',
 					{ date: $(this).val(),
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data); 
+						$('#graphic').html($(data).find('#graphic').html()); 
 				});
 			 	return false;
 			 });
@@ -27,7 +27,7 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data); 
+						$('#graphic').html($(data).find('#graphic').html()); 
 				});
 			 	return false;
 			 });
@@ -38,11 +38,14 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data);
+						$('#graphic').html($(data).find('#graphic').html());
 				});
 			 	return false;
 			 }); 
 			 
+			 var refreshId = setInterval(function() {
+			 	location.reload();
+			 }, 60000);
 		});
 	</script>
 {% endblock %}
@@ -61,7 +64,7 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 	{% endfor %}
 </select>
 </form>
-<table>
+<table id="graphic">
 <tr>
 	<th>Godzina</th>
 	{% for d in dents %}
@@ -70,10 +73,25 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 </tr>
 	{% for a in appoints %}
 		<tr>
-			<td>{{ a.hour|time:"H:i" }}</td>
+			{% if a.now_time %}
+				<td class="now_time">
+			{% else %}
+				<td>
+			{% endif %}
+			{{ a.hour|time:"H:i" }}</td>
 			{% for p in a.appoint %}
 				{% if p.appoint %}
-					<td rowspan="{{ p.length }}">{{ p.appoint.patient.last_name }} {{ p.appoint.patient.first_name }}</td>
+					{% if p.appoint.is_now == 1 %}
+						<td class="appoint_now" 
+					{% elif p.appoint.is_now == -1 %}
+						<td class="appoint_past" 
+					{% else %}
+						<td class="appoint_future" 
+					{% endif %}
+					rowspan="{{ p.length }}">
+					<a href = "{% url views.update_profile %}{{ p.appoint.patient.id }}">
+						{{ p.appoint.patient.last_name }} {{ p.appoint.patient.first_name }}
+					</a></td>
 				{% elif p.length > 0 %}
 				{% else %}
 					<td></td>

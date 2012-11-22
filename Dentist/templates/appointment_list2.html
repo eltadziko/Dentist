@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load url from future %}
 
 {% block javascript %}
 	{{ block.super }}
@@ -10,12 +11,12 @@
 		$(document).ready(function() {
 			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
 			
-			$("#date").live('change', function() {
+			$("#date").change(function() {
 				$.post('/appointment_list2/',
 					{ date: $(this).val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data); 
+						$('#graphic').html($(data).find('#graphic').html()); 
 				});
 			 	return false;
 			 });
@@ -25,12 +26,12 @@
 					{ date: '0',
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#content').html(data); 
+						$('#graphic').html($(data).find('#graphic').html()); 
 				});
 			 	return false;
 			 }); 
 			 
-			 $("#graphic").submit(function() {
+			 $("#graphic2").submit(function() {
 				$.post('/appointment_list/',
 					{ date: $('#date').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -40,6 +41,21 @@
 			 	return false;
 			 });
 			 
+			 $('.appoint_future, .appoint_past, .appoint_now').click(function() {
+			 	$.post('/appointment_list2/',
+					{ date: $('#date').val(),
+					  appoint: $(this).attr('id'),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) {
+						window.location = '/patient_card_dentist/';
+					}	  
+				);
+			 	return false;
+			 });
+			 
+			 var refreshId = setInterval(function() {
+			 	location.reload();
+			 }, 60000);
 		});
 	</script>
 {% endblock %}
@@ -49,16 +65,30 @@
 <form id="today">
 Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" id="send_data"/>
 </form>
-<form id="graphic">
+<form id="graphic2">
 <input type="submit" value="Tekstowy" id="send_graphic"/>
 </form>
-<table>
+<table id="graphic">
 <tr><th>Godzina</th><th>Pacjent</th></tr>
 	{% for a in appoints %}
 		<tr>
-			<td>{{ a.hour|time:"H:i" }}</td>
+			{% if a.now_time %}
+				<td class="now_time">
+			{% else %}
+				<td>
+			{% endif %}
+			{{ a.hour|time:"H:i" }}</td>
 			{% if a.length > 0 and a.appoint %}
-			<td rowspan="{{a.length}}">{{ a.appoint.patient.last_name }}</td>
+			
+				{% if a.appoint.is_now == 1 %}
+					<td class="appoint_now" 
+				{% elif a.appoint.is_now == -1 %}
+					<td class="appoint_past" 
+				{% else %}
+					<td class="appoint_future" 
+				{% endif %}
+				rowspan="{{a.length}}" id="{{ a.appoint.id }}">{{ a.appoint.patient.last_name }} {{ a.appoint.patient.first_name }}</td>
+			
 			{% elif a.length > 0 %}
 			{% else %}
 			<td></td>

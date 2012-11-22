@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load group_filter %}
+
+{% block javascript %}
+	{{ block.super }}
+	
+	<script>
+		$(document).ready(function() {
+			$('.tooth_loss').hide();
+			
+			$('.appointment').click(function() {
+				id = '#appoint_' + $(this).attr('id');
+				$(id).toggle();
+			});
+		});
+	</script>
+{% endblock %}
+
+{% block right_column %}
+	{{ patient.last_name }} {{ patient.first_name }}, PESEL: {{ patient.PESEL }}<br />
+	{{ patient.address }}</br>
+	{% if patient.comment %}{{ patient.comment }}<br />{% endif %}
+	Choroby:<br />
+	{% for d in patient.patient_diseases_set.all %}
+		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
+	{% endfor %}
+	
+	<br />Wizyty:<br />
+	{% for a in appoints %}
+	<div class="appoint">
+		<div class="appointment" id="{{ a.id }}">
+			{{ a.date }}<br />
+			Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />
+			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}
+		</div>
+			{% if a.description %}a.description<br /> {% endif %}
+			<div id="appoint_{{ a.id }}" class="tooth_loss">
+			{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+				{{ t.tooth.tooth_number }} ({{ t.tooth.type }}, szczęka {{ t.tooth.jaw }}, strona {{ t.tooth.side }}) - {{ t.tooth_part.name }}<br />
+				{% if t.loss_type %}Rozpoznanie: {{ t.loss_type.type }}<br />{% endif %}
+				{% if t.comment %}{{ t.comment }}<br />{% endif %}
+			{% endfor %}
+			</div>
+	</div>
+	{% endfor %}
+{% endblock %}

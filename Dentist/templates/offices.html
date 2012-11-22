@@ -10,7 +10,10 @@
 		Kontakt: <a href="mailto:{{ o.office.email }}">{{ o.office.email }}</a>, tel.: {{ o.office.phone }}<br />
 		Dentyści:<br />
 		{% for d in o.dentists %}
-			<a href="{% url views.dentists %}?page={{ d.page }}#{{ d.d.id }}">{{ d.d.last_name }} {{ d.d.first_name }}</a><br />
+			<a href="{% url views.dentists %}?page={{ d.page }}#{{ d.d.id }}">{{ d.d.last_name }} {{ d.d.first_name }}</a>
+			({% for h in d.hours %} 
+				{{ h.week_day|day }} {{ h.begin|time:'H:i' }} - {{ h.end|time:'H:i' }}{% if forloop.counter != d.hours.count %}, {% endif %}
+			{% endfor %})<br />
 		{% endfor %}
 		<br />
 	{% endfor %}

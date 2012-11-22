@@ -8,7 +8,7 @@
 	$(document).ready(function() {
 		 
 		 $("input[name=date]").change(function() {
-			$.post('/reservations/',
+			$.post('/reservations/?type=ajax',
 			{ date: $(this).val(),
 			  appointment2: $('#appointment2').val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -19,20 +19,47 @@
 		 });
 		 
 		 $("form").submit(function() {
-			$.post('/reservations/',
-			{ date: $('input[name=date]:checked').val(),
-			  appoint: $('input[name=appoint]:checked').val(),
-			  appointment2: $('#appointment2').val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			 function() {
-			 	window.location = '/reservations/';
-			 }
-			);
-			{% if user|in_group:"pacjent" %} 
-		 	return false;
-		 	{% else %}
-		 	return true;
-		 	{% endif %}
+		 	var date = $('input[name=date]:checked').val();
+		 	var appoint = $('input[name=appoint]:checked').val();
+		 	
+		 	if (date == undefined && appoint == undefined) {
+				$.post('/reservations/',
+				{ appointment2: $('#appointment2').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				  function(data) { 
+					$('#content').html(data); 
+				}
+				);
+			} else if (date == undefined) {
+				$.post('/reservations/',
+				{ appoint: appoint,
+				  appointment2: $('#appointment2').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				  function(data) { 
+					$('#content').html(data); 
+				}
+				);
+			} else if (appoint == undefined) {
+				$.post('/reservations/',
+				{ date: date,
+				  appointment2: $('#appointment2').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				  function(data) { 
+					$('#content').html(data); 
+				}
+				);
+			} else {
+				$.post('/reservations/',
+				{ appoint: appoint,
+				  date: date,
+				  appointment2: $('#appointment2').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					  function(data) { 
+					$('#content').html(data); 
+				}
+				);
+			}
+			return false;
 		 });		 
 		 
 	});
@@ -51,19 +78,22 @@
 	{% endif %}
 	
 	
-		<div class="fieldWrapper">
-	        {% if field.errors %}
-	        	<div class="error">
-			    {% for error in field.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			    </div>
-			{% endif %}
+	
+        	<div class="error">
+		    {% for error in form.date.errors %}
+		        <strong>{{ error|escape }} </strong>
+		    {% endfor %}
+		    </div>
 			<div class="typ_1"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
 	       
+	       <div class="error">
+			    {% for error in form.appoint.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			</div>
 	         <div class="typ_1"><div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
 	       
-	    </div>
+	
   
     <input type="hidden" value="{{ app_id }}" id="appointment2"/>
 	<p><input id="send_log_big" type="submit" value="Zarejestruj" /></p>

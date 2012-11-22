@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django import template
 from django.utils.encoding import force_unicode
 
@@ -31,3 +32,20 @@ def in_group(user, groups):
         return bool(user.groups.filter(name__in=group_list).values('name'))
     else:
         return False
+    
+@register.filter
+def order_by(queryset, args):
+    args = [x.strip() for x in args.split(',')]
+    return queryset.order_by(*args)
+
+@register.filter
+def day(int):
+    return {
+        1: 'pon',
+        2: 'wt',
+        3: 'śr',
+        4: 'czw',
+        5: 'pt',
+        6: 'so',
+        7: 'nd'
+    }[int]

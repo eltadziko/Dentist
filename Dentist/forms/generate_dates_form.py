@@ -28,7 +28,13 @@ class GenerateDatesForm(forms.Form):
                 if string=="":
                     string = "Brak informacji o terminach przyjęć dla wybranego gabinetu."
                 self.fields['information'].initial = string
-            if dentista==-1 and dents.count()!=0:
+                
+                dd = dates.objects.filter(dentist__id=dentista, dental_office__id=office)
+                string = ""
+                for d in dd:
+                    string += d.date.strftime("%Y-%m-%d") + " " 
+                self.fields['hidden'].initial = string
+            elif dentista==-1 and dents.count()!=0:
                 self.is_worker = True
                 self.fields['dentist_man'].initial = dents[0].id
                 self.fields['office'].initial = office
@@ -39,6 +45,12 @@ class GenerateDatesForm(forms.Form):
                 if string=="":
                     string = "Brak informacji o terminach przyjęć dla wybranego gabinetu."
                 self.fields['information'].initial = string
+                
+                dd = dates.objects.filter(dentist__id=dents[0].id, dental_office__id=office)
+                string = ""
+                for d in dd:
+                    string += d.date.strftime("%Y-%m-%d") + " " 
+                self.fields['hidden'].initial = string
     
     office = forms.ModelChoiceField(queryset=dental_office.objects.all(),
                                                     widget=forms.Select(),
@@ -54,4 +66,32 @@ class GenerateDatesForm(forms.Form):
                                       widget=forms.Textarea(attrs={'readonly':'True'}))
     begin = forms.CharField(label="Od")
     end = forms.CharField(label="Do")
-    exclude = forms.CharField(label="Wyłączając")
+    exclude = forms.CharField(label="Wyłączając", required=False)
+    hidden = forms.CharField(label='Wpisane daty',
+                                    required=False,
+                                      widget=forms.Textarea(attrs={'readonly':'True'}))
+    
+class EditAddedDatesForm(forms.Form):
+    def __init__(self, last_added, *args, **kwargs):
+        super(EditAddedDatesForm, self).__init__(*args, **kwargs)   
+        i=1
+        for date in last_added:
+            self.fields['id_%s' % i] = forms.CharField(label="Gabinet",
+                                                       initial=date.id,
+                                                       widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_id'}))
+            self.fields['date_%s' % i] = forms.DateField(initial=date.date,
+                                                         input_formats='%Y-%m-%d',
+                                                         widget=forms.DateInput(attrs={'readonly':'True', 'class':'edit_dates_field_date'}))
+            self.fields['begin_%s' % i] = forms.TimeField(initial=date.begin,
+                                                          input_formats='%H:%M:%S',
+                                                         widget=forms.TextInput(attrs={'class':'edit_dates_field_begin'}))
+            self.fields['end_%s' % i] = forms.TimeField(initial=date.end,
+                                                        input_formats='%H:%M:%S',
+                                                         widget=forms.TextInput(attrs={'class':'edit_dates_field_end'}))
+            self.fields['dentist_%s' % i] = forms.CharField(initial=date.dentist,
+                                                         widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_dentist'}))
+            self.fields['dental_office_%s' % i] = forms.CharField(initial=date.dental_office,
+                                                         widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_dental_office'}))
+            self.fields['room_%s' % i] = forms.CharField(initial=date.room,
+                                                         widget=forms.TextInput(attrs={'class':'edit_dates_field_room'}))
+            i += 1    
