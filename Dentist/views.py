@@ -602,8 +602,11 @@ def dates_addition(request):
                                                  dentist = dentist.objects.get(id=request.POST['dentist_man']),
                                                  dental_office = dental_office.objects.get(id=request.POST['office']),
                                                  room = h.room)
-                            date_dentist.save()
-                            added_date_list.append(date_dentist)
+                            duplicate = dates.objects.filter(dentist__id=request.POST['dentist_man'], dental_office__id=request.POST['office'], date=date_dentist.date)
+                            print duplicate
+                            if not duplicate:
+                                date_dentist.save()
+                                added_date_list.append(date_dentist)
                             date_start += datetime.timedelta(days=7)
                         else:
                             date_start += datetime.timedelta(days=7)

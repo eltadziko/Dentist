@@ -29,7 +29,6 @@
 	
 	jQuery.fn.update_disable = function() {
 	 	var temp = $("#id_hidden").val();
-		alert("Wybierz daty, które chcesz wyłączyć.");
 		table = temp.split(" ");
 		$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
 		/*setTimeout(function() {}, 1000);*/
@@ -84,19 +83,19 @@
 					function(data) { 
 						var content = $(data).find('#dynamic_content2').html();
 						$('#dynamic_content2').html(content);
+						
+						var temp = $(data).find("#id_hidden").val();
+						table = temp.split(" ");
+						$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
+						$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
 					});
 				 	return false;
 				 });
 				 
-				 jQuery.fn.update_disable = function() {
-				 	var temp = $("#id_hidden").val();
-					alert("Wybierz daty, które chcesz wyłączyć.");
-					table = temp.split(" ");
-					$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
-				 }
-				 
-				 today = new Date();
-				 $( "#id_exclude" ).multiDatesPicker("destroy");
+				 var temp = $(data).find("#id_hidden").val();
+				 table = temp.split(" ");
+				 $( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
+				 $( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
 		         
 				 
 			});
@@ -111,15 +110,7 @@
 			function(data) { 
 				var content = $(data).find('#dynamic_content2').html();
 				$('#dynamic_content2').html(content);
-				
-				jQuery.fn.update_disable = function() {
-				 	var temp = $("#id_hidden").val();
-					alert("Wybierz daty, które chcesz wyłączyć.");
-					table = temp.split(" ");
-					$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
-				 }
 				 
-				 today = new Date();
 				 var temp = $(data).find("#id_hidden").val();
 				 table = temp.split(" ");
 				 $( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
@@ -174,7 +165,6 @@
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			</div>
-			{{ form.hidden.label_tag }}
 			{{ form.hidden }}
 		</div>
 	</div>
