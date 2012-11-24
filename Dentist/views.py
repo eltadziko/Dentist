@@ -796,7 +796,7 @@ def reservations(request):
                     
                     deleted_apps = []
                     for h in apps:
-                        for ap in appointment.objects.filter(date = day).filter(dentist = app.dentist.id).filter(dental_office = app.dental_office.id):
+                        for ap in appointment.objects.filter(date = day).filter(dentist = app.dentist.id).filter(dental_office = app.dental_office.id).filter(untimely=False):
                             ap_date = datetime.datetime.combine(ap.date, ap.hour)
                             length = ap.appointment_type.length
                             ap_end = datetime.datetime.combine(ap.date, ap.hour) + datetime.timedelta(minutes=length)
