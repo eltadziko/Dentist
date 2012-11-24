@@ -106,6 +106,43 @@ class RegisterReceptionistForm(forms.Form):
                                 label="Terminy",
                                 empty_label=None)	
     
+class RegisterReceptionistForm2(forms.Form):
+    
+    def __init__(self, office, dent, date, last_name, patient_id, *args, **kwargs):
+        super(RegisterReceptionistForm2, self).__init__(*args, **kwargs)
+        if office!=-1:
+            self.fields['office'].initial = office
+            dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
+            dents = dentist.objects.filter(id__in=dats)
+            self.fields['dentist'].queryset = dents
+            if dent!=-1:
+                dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
+                self.fields['date'].choices = [(d, d) for d in dats]
+                self.fields['dentist'].initial = dent
+        if patient_id != -1:
+            self.fields['patients'].initial = patient_id
+        pat2 = patient.objects.filter(last_name__startswith=last_name.title()).order_by('last_name')
+        self.fields['patients'].queryset = pat2 
+        self.fields['pat'].initial = last_name
+    
+    pat = forms.CharField(label="Nazwisko pacjenta")
+    patients = forms.ModelChoiceField(queryset=patient.objects.none(),
+                                      widget=MyRadioSelect,
+                                      label="Pacjenci",
+                                      empty_label=None)
+    office = forms.ModelChoiceField(queryset=dental_office.objects.all(),
+                                                    widget=forms.Select(),
+                                                    label="Gabinet",
+                                                    empty_label=None)
+    dentist = forms.ModelChoiceField(queryset=dentist.objects.none(), 
+                                    widget=MyRadioSelect, 
+                                    label="Dentyści",
+                                    empty_label=None)
+    date = forms.ModelChoiceField(queryset=dates.objects.none(), 
+                                    widget=MyRadioSelect, 
+                                    label="Daty",
+                                    empty_label=None)   
+    
 class RegisterChangeForm(forms.Form):
     
     def __init__(self, office, dent, date, apps, typ, *args, **kwargs):

@@ -390,6 +390,50 @@ def dentist_register2(request):
     return render(request, 'dentist_register2.html', {'form': form})
 
 @login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
+def dentist_register3(request):
+       
+    if request.POST:
+            
+        if 'pat' in request.POST.keys():
+            pat = request.POST['pat']
+        else:
+            pat = ''
+          
+        if 'patients' in request.POST.keys():
+            patients = request.POST['patients']
+        else:
+            patients = -1
+             
+        if 'dentist' in request.POST.keys():
+            if 'date' in request.POST.keys() and 'patients' in request.POST.keys():
+                day = datetime.datetime.strptime(request.POST['date'], '%Y-%m-%d')
+                appoint = appointment(date = day.date(),
+                                      dentist = dentist.objects.get(id=request.POST['dentist']),
+                                      dental_office = dental_office.objects.get(id=request.POST['office']),
+                                      patient = patient.objects.get(id=request.POST['patients']),
+                                      untimely = True)
+                appoint.save()
+                messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano pacjenta do dentysty.')
+                return HttpResponseRedirect('/index/')
+            else:
+                if request.GET.get('type', None) == 'ajax':  
+                    form = RegisterReceptionistForm2(request.POST['office'], request.POST['dentist'], -1, pat, patients)
+                else:
+                    form = RegisterReceptionistForm2(request.POST['office'], request.POST['dentist'], -1, pat, patients, request.POST)
+        else:
+            if request.GET.get('type', None) == 'ajax':  
+                form = RegisterReceptionistForm2(request.POST['office'], -1, -1, pat, patients)
+            else:
+                form = RegisterReceptionistForm2(request.POST['office'], -1, -1, pat, patients, request.POST)         
+    else:
+        offices = dental_office.objects.all()
+        form = RegisterReceptionistForm2(offices[0].id, -1, -1, '', -1)
+    
+    return render(request, 'dentist_register3.html', {'form': form})
+
+@login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def appointment_list(request):
@@ -573,9 +617,9 @@ def day_graphic(request):
         appoints_untimely.append(pom)
         if max_appoint < pom.count():
             max_appoint = pom.count()
-        appoints_untimely2.append([])
     
     for i in range(0, max_appoint):
+        appoints_untimely2.append([])
         for a in appoints_untimely:
             if i<a.count():
                 appoints_untimely2[i].append(a[i])
