@@ -265,7 +265,7 @@ def dentist_register(request):
                     
                     deleted_apps = []
                     for h in apps:
-                        for ap in appointment.objects.filter(date = day).filter(dentist = request.POST['dentist']).filter(dental_office = request.POST['office']):
+                        for ap in appointment.objects.filter(date = day).filter(dentist = request.POST['dentist']).filter(dental_office = request.POST['office']).filter(untimely=False):
                             ap_date = datetime.datetime.combine(ap.date, ap.hour)
                             length = ap.appointment_type.length
                             ap_end = datetime.datetime.combine(ap.date, ap.hour) + datetime.timedelta(minutes=length)
@@ -355,10 +355,10 @@ def dentist_register2(request):
                     while hour + datetime.timedelta(minutes=minutes2)<=dayend:
                         apps.append(hour)
                         hour = hour + datetime.timedelta(minutes=minutes)
-                    
+
                     deleted_apps = []
                     for h in apps:
-                        for ap in appointment.objects.filter(date = day).filter(dentist = request.POST['dentist']).filter(dental_office = request.POST['office']):
+                        for ap in appointment.objects.filter(date = day).filter(dentist = request.POST['dentist']).filter(dental_office = request.POST['office']).filter(untimely=False):
                             ap_date = datetime.datetime.combine(ap.date, ap.hour)
                             length = ap.appointment_type.length
                             ap_end = datetime.datetime.combine(ap.date, ap.hour) + datetime.timedelta(minutes=length)
@@ -366,7 +366,7 @@ def dentist_register2(request):
                             if h >= ap_date and h.time() < ap_end.time() or h <= ap_date and h_end > ap_date:
                                 if not h in deleted_apps:
                                     deleted_apps.append(h)
-                                
+           
                     for h in deleted_apps:            
                         apps.remove(h)
                     if request.GET.get('type', None) == 'ajax':  
