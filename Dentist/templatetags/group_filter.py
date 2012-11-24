@@ -49,3 +49,7 @@ def day(int):
         6: 'so',
         7: 'nd'
     }[int]
+    
+@register.filter
+def is_false(arg): 
+    return arg is False

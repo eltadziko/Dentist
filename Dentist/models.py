@@ -139,13 +139,14 @@ class appointment_type(models.Model):
     
 class appointment(models.Model):
     date = models.DateField("Data")
-    hour = models.TimeField("Godzina")
+    hour = models.TimeField("Godzina", blank=True, null=True)
     description = models.TextField("Opis", blank=True, null=True)
     dentist = models.ForeignKey(dentist, verbose_name="Dentysta")
     patient = models.ForeignKey(patient, verbose_name="Pacjent")
     dental_office = models.ForeignKey(dental_office, verbose_name="Gabinet")
-    appointment_type = models.ForeignKey(appointment_type, verbose_name="Typ wizyty")
+    appointment_type = models.ForeignKey(appointment_type, verbose_name="Typ wizyty", blank=True, null=True)
     is_now = models.IntegerField("Trwa", blank=True, null=True)
+    untimely = models.BooleanField("Nieterminowa", default=False)
     
     class Meta:
         verbose_name = "Wizyta"

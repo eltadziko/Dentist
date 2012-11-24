@@ -414,7 +414,7 @@ def appointment_list(request):
     
     request.session['graphic'] = '/appointment_list/'
     dent = dentist.objects.get(user = request.user.id)
-    appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
+    appoints = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=False).order_by('hour')
     ends = []
     nows = []
     time = datetime.datetime.now()
@@ -422,10 +422,12 @@ def appointment_list(request):
         ends.append((datetime.datetime.combine(a.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time())
         nows.append(time>=datetime.datetime.combine(a.date, a.hour) and time<datetime.datetime.combine(a.date, ends[-1]))
     app = [{'appoint': t[0], 'end': t[1], 'now_time': t[2]} for t in zip(appoints, ends, nows)]
+    
+    appoints_untimely = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=True).order_by('patient')
     if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
     
-    return render(request, 'appointment_list.html', {'appoints': app, 'date': date})
+    return render(request, 'appointment_list.html', {'appoints': app, 'date': date, 'appoints_untimely': appoints_untimely})
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
@@ -452,7 +454,7 @@ def appointment_list2(request):
     
     request.session['graphic'] = '/appointment_list2/'
     dent = dentist.objects.get(user = request.user.id)
-    appoints = appointment.objects.filter(date = date).filter(dentist = dent).order_by('hour')
+    appoints = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=False).order_by('hour')
     hours = []
     hour = dates.objects.filter(date=date).filter(dentist = dent) 
 
@@ -480,11 +482,13 @@ def appointment_list2(request):
         if not dodano:
             i = i-1
             app.append({'appoint':None, 'hour':h, 'length':i, 'now_time': now})
-        
+    
+    appoints_untimely = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=True).order_by('patient')
+       
     if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")  
         
-    return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours})
+    return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours, 'appoints_untimely': appoints_untimely})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -513,7 +517,7 @@ def day_graphic(request):
     request.session['graphic_office'] = office
         
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
-    dent = dentist.objects.filter(id__in = dents)
+    dent = dentist.objects.filter(id__in = dents).order_by('last_name')
     
     hours2 = []
     hours = dates.objects.filter(date = date).filter(dental_office = office)
@@ -536,7 +540,7 @@ def day_graphic(request):
     
     appoints = []
     for d in dent:
-        appoints.append(appointment.objects.filter(date = date).filter(dentist = d).order_by('hour'))
+        appoints.append(appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour'))
     
     graphics = []   
     i = [] 
@@ -560,11 +564,28 @@ def day_graphic(request):
         now = (time<time_end and time>datetime.datetime.combine(hours[0].date, h))
         graphics.append({'hour': h, 'appoint': appoint, 'now_time': now})  
             
+    appoints_untimely = []
+    appoints_untimely2 = []
+    i = 0
+    max_appoint = 0
+    for d in dent:
+        pom = appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=True).order_by('patient')
+        appoints_untimely.append(pom)
+        if max_appoint < pom.count():
+            max_appoint = pom.count()
+        appoints_untimely2.append([])
     
+    for i in range(0, max_appoint):
+        for a in appoints_untimely:
+            if i<a.count():
+                appoints_untimely2[i].append(a[i])
+            else:
+                appoints_untimely2[i].append(None)
+        
     if not request.POST and not 'graphic_date' in request.session or request.POST and request.POST['date']=='0':
         date = date.strftime("%Y-%m-%d")
 
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office})
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
