@@ -29,7 +29,6 @@
 	
 	jQuery.fn.update_disable = function() {
 	 	var temp = $("#id_hidden").val();
-		alert("Wybierz daty, które chcesz wyłączyć.");
 		table = temp.split(" ");
 		$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
 		/*setTimeout(function() {}, 1000);*/
@@ -73,7 +72,32 @@
 			{ office: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
-				$('#content').html(data); 
+				var content = $(data).find('#dynamic_content').html();
+				$('#dynamic_content').html(content);
+				
+				$("select[name=dentist_man]").change(function() {
+					$.post('/dates_addition/?type=ajax',
+					{ office: $('#id_office').val(),
+					  dentist_man: $(this).val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						var content = $(data).find('#dynamic_content2').html();
+						$('#dynamic_content2').html(content);
+						
+						var temp = $(data).find("#id_hidden").val();
+						table = temp.split(" ");
+						$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
+						$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
+					});
+				 	return false;
+				 });
+				 
+				 var temp = $(data).find("#id_hidden").val();
+				 table = temp.split(" ");
+				 $( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
+				 $( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
+		         
+				 
 			});
 		 	return false;
 		 });
@@ -84,7 +108,14 @@
 			  dentist_man: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
-				$('#content').html(data);
+				var content = $(data).find('#dynamic_content2').html();
+				$('#dynamic_content2').html(content);
+				 
+				 var temp = $(data).find("#id_hidden").val();
+				 table = temp.split(" ");
+				 $( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
+				 $( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});		         
+				
 			});
 		 	return false;
 		 });		 
@@ -103,15 +134,66 @@
 		</div>
 	{% endif %}
 	
-	{% for field in form %}
-        <div class="error">
-		    {% for error in field.errors %}
+	<div class="error">
+	    {% for error in form.office.errors %}
+	        <strong>{{ error|escape }} </strong>
+	    {% endfor %}
+	</div>
+	{{ form.office.label_tag }}
+	{{ form.office }}
+	
+	<div id="dynamic_content">	
+		<div class="error">
+		    {% for error in form.dentist_man.errors %}
 		        <strong>{{ error|escape }} </strong>
 		    {% endfor %}
 		</div>
-        {{ field.label_tag }} 
-        {{ field }}
-    {% endfor %}
+		{{ form.dentist_man.label_tag }}
+		{{ form.dentist_man }}
+		
+		<div id="dynamic_content2">
+			<div class="error">
+			    {% for error in form.information.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			</div>
+			{{ form.information.label_tag }}
+			{{ form.information }}
+			
+			<div class="error">
+			    {% for error in form.hidden.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			</div>
+			{{ form.hidden }}
+		</div>
+	</div>
+	
+	<div class="error">
+	    {% for error in form.begin.errors %}
+	        <strong>{{ error|escape }} </strong>
+	    {% endfor %}
+	</div>
+	{{ form.begin.label_tag }}
+	{{ form.begin }}
+	
+	<div class="error">
+	    {% for error in form.end.errors %}
+	        <strong>{{ error|escape }} </strong>
+	    {% endfor %}
+	</div>
+	{{ form.end.label_tag }}
+	{{ form.end }}
+	
+	<div id="dynamic_exclude">
+		<div class="error">
+		    {% for error in form.exclue.errors %}
+		        <strong>{{ error|escape }} </strong>
+		    {% endfor %}
+		</div>
+		{{ form.exclude.label_tag }}
+		{{ form.exclude }}
+    </div>
     
 	<p><input id="id_generate_submit" name="generate_submit" type="submit" value="Generuj" /></p>
 </form>

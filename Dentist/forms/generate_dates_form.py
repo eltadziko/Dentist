@@ -63,13 +63,13 @@ class GenerateDatesForm(forms.Form):
                                                     label="Dentyści",
                                                     empty_label=None)
     information = forms.CharField(label='Terminy przyjęć',
-                                      widget=forms.Textarea(attrs={'readonly':'True'}))
+                                      widget=forms.Textarea(attrs={'readonly':'True', 'rows':'5'}))
     begin = forms.CharField(label="Od")
     end = forms.CharField(label="Do")
     exclude = forms.CharField(label="Wyłączając", required=False)
     hidden = forms.CharField(label='Wpisane daty',
                                     required=False,
-                                      widget=forms.Textarea(attrs={'readonly':'True'}))
+                                      widget=forms.Textarea(attrs={'readonly':'True', 'hidden':'hidden'}))
     
 class EditAddedDatesForm(forms.Form):
     def __init__(self, last_added, *args, **kwargs):
