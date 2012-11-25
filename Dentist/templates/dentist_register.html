@@ -5,6 +5,14 @@
 	
 	<script>
 	$(document).ready(function() {
+	
+		{% if request.session.sort2 == '1' %}
+			$('#date_lab label').css("background", "none");
+			$('#date_lab label').css("background-color", "blue");
+		{% else %}
+			$('#dentist_lab label').css("background", "none");
+			$('#dentist_lab label').css("background-color", "blue");
+		{% endif %}
 			
 		 $("#id_office").change(function() {
 			$.post('/dentist_register/?type=ajax',
@@ -122,12 +130,14 @@
 
 	         <div class="typ_1"><div class="rej_tytul">{{form.office.label_tag }}</div><div class="opcje">{{form.office}}</div></div>
 	         
+	         {% if request.session.sort2 == '0' %}
 	         <div class="error">
 			    {% for error in form.dentist.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
 	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje">{{form.dentist}}</div></div>
+	         {% endif %}
 	         
 	         <div class="error">
 			    {% for error in form.date.errors %}
@@ -135,6 +145,15 @@
 			    {% endfor %}
 			 </div>
 	         <div class="typ_2"><div id="date_lab" class="rej_tytul">{{form.date.label_tag }}</div><div class="opcje">{{form.date}}</div></div>
+	         
+	         {% if request.session.sort2 == '1' %}
+	         <div class="error">
+			    {% for error in form.dentist.errors %}
+			        <strong>{{ error|escape }} </strong>
+			    {% endfor %}
+			 </div>
+	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje">{{form.dentist}}</div></div>
+	         {% endif %}
 	         
 	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag }}</div><div class="opcje">{{form.type}}</div></div>
 	         
