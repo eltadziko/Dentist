@@ -10,33 +10,17 @@
 			{% endfor %}
 		</div>
 	{% endif %}
-	
+	<h2>Daty dla: {{ form.dentist_1.value }} z gabinetu: {{ form.dental_office_1.value }}</h2>
 	<table>
 	<tr>
-		<th>{{ form.id_1.label_tag }}</th>
 		<th>{{ form.date_1.label_tag }}</th>
 		<th>{{ form.begin_1.label_tag }}</th>
 		<th>{{ form.end_1.label_tag }}</th>
-		<th>{{ form.dentist_1.label_tag }}</th>
-		<th>{{ form.dental_office_1.label_tag }}</th>
 		<th>{{ form.room_1.label_tag }}</th>
 	</tr>
 	     
 	{% for id, date, begin, end, dentist, dental_office, room in new_form %}
-		<tr>
-			<td>
-				<div class="fieldWrapper">
-			        {% if id.errors %}
-			        	<div class="error">
-					    {% for error in id.errors %}
-					        <strong>{{ error|escape }} </strong>
-					    {% endfor %}
-					    </div>
-					{% endif %}
-					{{ id }}
-		    	</div>
-		    </td>
-			
+		<tr>			
 			<td>
 				<div class="fieldWrapper">
 			        {% if date.errors %}
@@ -46,6 +30,7 @@
 					    {% endfor %}
 					    </div>
 					{% endif %}
+					{{ id }}
 					{{ date }}
 		    	</div>
 		    </td>
@@ -73,32 +58,6 @@
 					    </div>
 					{% endif %}
 					{{ end }}
-			    </div>
-		    </td>
-		    
-		    <td>
-			    <div class="fieldWrapper">
-			        {% if dentist.errors %}
-			        	<div class="error">
-					    {% for error in dentist.errors %}
-					        <strong>{{ error|escape }} </strong>
-					    {% endfor %}
-					    </div>
-					{% endif %}
-					{{ dentist}}
-			    </div>
-		    </td>
-		    
-		    <td>
-			    <div class="fieldWrapper">
-			        {% if dental_office.errors %}
-			        	<div class="error">
-					    {% for error in dental_office.errors %}
-					        <strong>{{ error|escape }} </strong>
-					    {% endfor %}
-					    </div>
-					{% endif %}
-					{{ dental_office }}
 			    </div>
 		    </td>
 		    

@@ -78,7 +78,7 @@ class EditAddedDatesForm(forms.Form):
         for date in last_added:
             self.fields['id_%s' % i] = forms.CharField(label="Id",
                                                        initial=date.id,
-                                                       widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_id'}))
+                                                       widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_id'}))
             self.fields['date_%s' % i] = forms.DateField(label="Data",
                                                          initial=date.date,
                                                          input_formats='%Y-%m-%d',
