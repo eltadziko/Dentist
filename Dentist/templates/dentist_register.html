@@ -7,7 +7,7 @@
 	$(document).ready(function() {
 			
 		 $("#id_office").change(function() {
-			$.post('/dentist_register/type=ajax',
+			$.post('/dentist_register/?type=ajax',
 			{ office: $(this).val(),
 			  type: $('#id_type').val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -18,27 +18,51 @@
 		 });
 		 
 		 $("input[name=dentist]").change(function() {
-			$.post('/dentist_register/?type=ajax',
-			{ office: $('#id_office').val(),
-			  dentist: $(this).val(),
-			  type: $('#id_type').val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				$('#content').html(data); 
-			});
+		 	if ($('input[name=date]:checked').val() == undefined) {
+		 		$.post('/dentist_register/?type=ajax',
+				{ office: $('#id_office').val(),
+				  dentist: $("input[name=dentist]:checked").val(),
+				  type: $('#id_type').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#content').html(data); 
+				});
+		 	} else {
+		 		$.post('/dentist_register/?type=ajax',
+				{ office: $('#id_office').val(),
+				  dentist: $("input[name=dentist]:checked").val(),
+				  date: $('input[name=date]:checked').val(),
+				  type: $('#id_type').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#content').html(data); 
+				});
+		 	}
+			
 		 	return false;
 		 });
 		 
 		 $("input[name=date]").change(function() {
-			$.post('/dentist_register/?type=ajax',
-			{ office: $('#id_office').val(),
-			  dentist: $('input[name=dentist]:checked').val(),
-			  date: $(this).val(),
-			  type: $('#id_type').val(),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				$('#content').html(data); 
-			});
+		 	{% if request.session.sort2 == '1' %}
+		 		$.post('/dentist_register/?type=ajax',
+				{ office: $('#id_office').val(),
+				  date: $('input[name=date]:checked').val(),
+				  type: $('#id_type').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#content').html(data); 
+				});
+		 	{% else %}
+		 		$.post('/dentist_register/?type=ajax',
+				{ office: $('#id_office').val(),
+				  dentist: $('input[name=dentist]:checked').val(),
+				  date: $('input[name=date]:checked').val(),
+				  type: $('#id_type').val(),
+				  csrfmiddlewaretoken: '{{ csrf_token }}' },
+				function(data) { 
+					$('#content').html(data); 
+				});
+		 	{% endif %}
 		 	return false;
 		 });
 		 
@@ -55,7 +79,27 @@
 		 	return false;
 		 });
 		 
+		 $('#dentist_lab').click(function() {
+		 	$.post('/dentist_register/?type=ajax',
+			{ office: $('#id_office').val(),
+			  sort: 0,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
 		 
+		 $('#date_lab').click(function() {
+		 	$.post('/dentist_register/?type=ajax',
+			{ office: $('#id_office').val(),
+			  sort: 1,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			function(data) { 
+				$('#content').html(data); 
+			});
+		 	return false;
+		 });
 	});
 	</script>
 {% endblock %}
@@ -76,30 +120,30 @@
 	{% endif %}
 	
 
-	         <div class="typ_1"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje">{{form.office}}</div></div>
+	         <div class="typ_1"><div class="rej_tytul">{{form.office.label_tag }}</div><div class="opcje">{{form.office}}</div></div>
 	         
 	         <div class="error">
 			    {% for error in form.dentist.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje">{{form.dentist}}</div></div>
+	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje">{{form.dentist}}</div></div>
 	         
 	         <div class="error">
 			    {% for error in form.date.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_2"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
+	         <div class="typ_2"><div id="date_lab" class="rej_tytul">{{form.date.label_tag }}</div><div class="opcje">{{form.date}}</div></div>
 	         
-	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag}} </div><div class="opcje">{{form.type}}</div></div>
+	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag }}</div><div class="opcje">{{form.type}}</div></div>
 	         
 	         <div class="error">
 			    {% for error in form.appoint.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_2"><div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
+	         <div class="typ_2"><div class="rej_tytul">{{form.appoint.label_tag }}</div><div class="opcje">{{form.appoint}}</div></div>
     
     
 	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
