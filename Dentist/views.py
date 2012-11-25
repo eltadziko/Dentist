@@ -230,7 +230,6 @@ def dentist_register(request):
             typ = -1
         if 'dentist' in request.POST.keys():
             if 'date' in request.POST.keys():
-                print 'is dentist, is date'
                 if 'appoint' in request.POST.keys():
                     day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
                     appoint = appointment(date = day.date(),
@@ -312,7 +311,12 @@ def dentist_register(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register2(request):
-       
+    
+    if 'sort' in request.POST.keys():
+        request.session['sort2'] = request.POST['sort']
+    if not 'sort2' in request.session:
+        request.session['sort2'] = '0'
+          
     if request.POST:
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -344,7 +348,7 @@ def dentist_register2(request):
                     return HttpResponseRedirect('/index/')
                 else:
                     apps = []
-                    day = dates.objects.get(id=request.POST['date'])
+                    day = dates.objects.filter(dentist = request.POST['dentist']).get(date=request.POST['date'])
                     daybegin = datetime.datetime.combine(day.date, day.begin)
                     dayend = datetime.datetime.combine(day.date, day.end)
                     if day.date == datetime.datetime.now().date() and daybegin < datetime.datetime.now():
@@ -384,22 +388,28 @@ def dentist_register2(request):
                     for h in deleted_apps:            
                         apps.remove(h)
                     if request.GET.get('type', None) == 'ajax':  
-                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients)
+                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.session['sort2'])
                     else:
-                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.POST)
+                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.session['sort2'], request.POST)
             else:
                 if request.GET.get('type', None) == 'ajax':  
-                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients)
+                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.session['sort2'])
                 else:
-                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.POST)
+                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.session['sort2'], request.POST)
         else:
-            if request.GET.get('type', None) == 'ajax':  
-                form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients)
+            if 'date' in request.POST.keys():
+                if request.GET.get('type', None) == 'ajax':  
+                    form = RegisterReceptionistForm(request.POST['office'], -1, request.POST['date'], -1, typ, pat, patients, request.session['sort2'])
+                else:
+                    form = RegisterReceptionistForm(request.POST['office'], -1, request.POST['date'], -1, typ, pat, patients, request.session['sort2'], request.POST)
             else:
-                form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.POST)         
+                if request.GET.get('type', None) == 'ajax':  
+                    form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.session['sort2'])
+                else:
+                    form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.session['sort2'], request.POST)         
     else:
         offices = dental_office.objects.all()
-        form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1)
+        form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1, request.session['sort2'])
     
     return render(request, 'dentist_register2.html', {'form': form})
 

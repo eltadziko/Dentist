@@ -20,7 +20,7 @@
 		 });
 		 
 		 $("input[name=dentist]").change(function() {
-		 	if ($('input[name=date]:checked').val() == undefined) {
+		 	{% if request.session.sort2 == '0' %}
 		 		$.post('/dentist_register/?type=ajax',
 				{ office: $('#id_office').val(),
 				  dentist: $("input[name=dentist]:checked").val(),
@@ -29,7 +29,7 @@
 				function(data) { 
 					$('#content').html(data); 
 				});
-		 	} else {
+		 	{% else %}
 		 		$.post('/dentist_register/?type=ajax',
 				{ office: $('#id_office').val(),
 				  dentist: $("input[name=dentist]:checked").val(),
@@ -39,7 +39,7 @@
 				function(data) { 
 					$('#content').html(data); 
 				});
-		 	}
+		 	{% endif %}
 			
 		 	return false;
 		 });
