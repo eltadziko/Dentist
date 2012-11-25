@@ -10,7 +10,7 @@
 			{% endfor %}
 		</div>
 	{% endif %}
-	<h2>Daty dla: {{ form.dentist_1.value }} z gabinetu: {{ form.dental_office_1.value }}</h2>
+	<h2>Dentysta: {{ form.dentist_1.value }} <br/>Gebinet: {{ form.dental_office_1.value }}</h2>
 	<table>
 	<tr>
 		<th>{{ form.date_1.label_tag }}</th>
@@ -20,7 +20,7 @@
 	</tr>
 	     
 	{% for id, date, begin, end, dentist, dental_office, room in new_form %}
-		<tr>			
+		<tr>						
 			<td>
 				<div class="fieldWrapper">
 			        {% if date.errors %}

@@ -681,7 +681,7 @@ def dates_addition(request):
                 for h in hh:
                     date_start = begin
                     while date_start.weekday()+1 != h.week_day and date_start<=end:
-                        date_start += datetime.timedelta(days=1) 
+                        date_start += datetime.timedelta(days=1)
                     while date_start <= end:
                         if exclude_date_list.count(date_start) == 0:
                             
@@ -701,7 +701,33 @@ def dates_addition(request):
                             date_start += datetime.timedelta(days=7)
                 form = EditAddedDatesForm(added_date_list) #pic na wode, fotomontaz
                 messages.add_message(request, messages.INFO, 'Pomyślnie dodano terminy.')
-                return render(request, 'edit_added_dates.html', {'form': form})
+                
+                f_ids = []
+                f_dates = []
+                f_begins = []
+                f_ends = []
+                f_dentists = []
+                f_dental_offices = []
+                f_rooms = []
+                i = 0
+                for f in form:
+                   if i%7 == 0:
+                       f_ids.append(f)
+                   if i%7 == 1:
+                       f_dates.append(f)
+                   if i%7 == 2:
+                       f_begins.append(f)
+                   if i%7 == 3:
+                       f_ends.append(f)
+                   if i%7 == 4:
+                       f_dentists.append(f)
+                   if i%7 == 5:
+                       f_dental_offices.append(f)
+                   if i%7 == 6:
+                       f_rooms.append(f)
+                   i = i + 1
+                new_form = zip(f_ids, f_dates, f_begins, f_ends, f_dentists, f_dental_offices, f_rooms)
+                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form})
             elif dentist_man!="":
                 if request.GET.get('type', None) == 'ajax':
                     form = GenerateDatesForm(request.POST['office'], dentist_man)
@@ -709,7 +735,7 @@ def dates_addition(request):
                     form = GenerateDatesForm(request.POST['office'], dentist_man, request.POST)
             else:
                 if request.GET.get('type', None) == 'ajax':
-                    form = GenerateDatesForm(request.POST['office'], -1) 
+                    form = GenerateDatesForm(request.POST['office'], -1)
                 else:
                     form = GenerateDatesForm(request.POST['office'], -1, request.POST)
         elif 'office' in request.POST.keys():
@@ -720,9 +746,21 @@ def dates_addition(request):
                     form = GenerateDatesForm(request.POST['office'], request.POST['dentist_man'], request.POST)
             else:
                 if request.GET.get('type', None) == 'ajax':
-                    form = GenerateDatesForm(request.POST['office'], -1)    
+                    form = GenerateDatesForm(request.POST['office'], -1)
                 else:
-                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)        
+                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)
+        elif 'generate_submit_edit' in request.POST.keys():
+            i = 1
+            while i <= int(request.POST['number_of_fields']):
+                d = dates.objects.get(id=request.POST['id_%s' % i])
+                d.begin = request.POST['begin_%s' % i]
+                d.end = request.POST['end_%s' % i]
+                d.room = request.POST['room_%s' % i]
+                d.save()
+                i += 1 
+            offices = dental_office.objects.all()
+            form = GenerateDatesForm(offices[0].id, -1) 
+            messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano dodane terminy.')
     else:
         offices = dental_office.objects.all()
         form = GenerateDatesForm(offices[0].id, -1)
