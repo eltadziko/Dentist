@@ -34,7 +34,6 @@ class RegisterForm(forms.Form):
                 if sort == '0':
                     dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
                     self.fields['date'].choices = [(d, d) for d in dats]
-                print 'date sort 1'
                 self.fields['dentist'].initial = dent
                 if apps!=-1:
                     self.fields['appoint'].choices = [(h, h.strftime('%H:%M')) for h in apps]
@@ -66,16 +65,24 @@ class RegisterForm(forms.Form):
     
 class RegisterReceptionistForm(forms.Form):
     
-    def __init__(self, office, dent, date, apps, typ, last_name, patient_id, *args, **kwargs):
+    def __init__(self, office, dent, date, apps, typ, last_name, patient_id, sort, *args, **kwargs):
         super(RegisterReceptionistForm, self).__init__(*args, **kwargs)
         if office!=-1:
             self.fields['office'].initial = office
-            dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
-            dents = dentist.objects.filter(id__in=dats)
-            self.fields['dentist'].queryset = dents
+            if sort == '0':
+                dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
+                dents = dentist.objects.filter(id__in=dats)
+                self.fields['dentist'].queryset = dents
+            else:
+                dats = dates.objects.filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date')
+                self.fields['date'].choices = [(d, d) for d in dats]
+                if date != -1:
+                    self.fields['date'].initial = date
+                    self.fields['dentist'].queryset = dentist.objects.filter(id__in = dates.objects.values_list('dentist', flat=True).filter(dental_office=office).filter(date=date))
             if dent!=-1:
-                dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
-                self.fields['date'].queryset = dats
+                if sort == '0':
+                    dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
+                    self.fields['date'].choices = [(d, d) for d in dats]
                 self.fields['dentist'].initial = dent
                 if apps!=-1:
                     self.fields['appoint'].choices = [(h, h.strftime('%H:%M')) for h in apps]

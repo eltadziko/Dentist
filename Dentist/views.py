@@ -215,14 +215,13 @@ def index(request):
 def dentist_register(request):
     
     if 'sort' in request.POST.keys():
-            request.session['sort2'] = request.POST['sort']
-    else:
-        if not 'sort2' in request.session:
-            request.session['sort2'] = 0
+        request.session['sort2'] = request.POST['sort']
+    if not 'sort2' in request.session:
+        request.session['sort2'] = '0'
 
     offices = dental_office.objects.all()
     if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
-        form = RegisterForm(offices[0].id, -1, -1, -1, -1)
+        form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'])
         return render(request, 'dentist_register.html', {'form': form, 'too_much': True})
     if request.POST:  
         if 'type' in request.POST.keys():
@@ -231,7 +230,6 @@ def dentist_register(request):
             typ = -1
         if 'dentist' in request.POST.keys():
             if 'date' in request.POST.keys():
-                print 'is dentist, is date'
                 if 'appoint' in request.POST.keys():
                     day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
                     appoint = appointment(date = day.date(),
@@ -306,7 +304,6 @@ def dentist_register(request):
                 else:
                     form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'], request.POST)           
     else:
-        print 'a'
         form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'])
     return render(request, 'dentist_register.html', {'form': form})
 
@@ -314,7 +311,12 @@ def dentist_register(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register2(request):
-       
+    
+    if 'sort' in request.POST.keys():
+        request.session['sort2'] = request.POST['sort']
+    if not 'sort2' in request.session:
+        request.session['sort2'] = '0'
+          
     if request.POST:
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -346,7 +348,7 @@ def dentist_register2(request):
                     return HttpResponseRedirect('/index/')
                 else:
                     apps = []
-                    day = dates.objects.get(id=request.POST['date'])
+                    day = dates.objects.filter(dentist = request.POST['dentist']).get(date=request.POST['date'])
                     daybegin = datetime.datetime.combine(day.date, day.begin)
                     dayend = datetime.datetime.combine(day.date, day.end)
                     if day.date == datetime.datetime.now().date() and daybegin < datetime.datetime.now():
@@ -386,22 +388,28 @@ def dentist_register2(request):
                     for h in deleted_apps:            
                         apps.remove(h)
                     if request.GET.get('type', None) == 'ajax':  
-                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients)
+                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.session['sort2'])
                     else:
-                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.POST)
+                        form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, pat, patients, request.session['sort2'], request.POST)
             else:
                 if request.GET.get('type', None) == 'ajax':  
-                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients)
+                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.session['sort2'])
                 else:
-                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.POST)
+                    form = RegisterReceptionistForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, pat, patients, request.session['sort2'], request.POST)
         else:
-            if request.GET.get('type', None) == 'ajax':  
-                form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients)
+            if 'date' in request.POST.keys():
+                if request.GET.get('type', None) == 'ajax':  
+                    form = RegisterReceptionistForm(request.POST['office'], -1, request.POST['date'], -1, typ, pat, patients, request.session['sort2'])
+                else:
+                    form = RegisterReceptionistForm(request.POST['office'], -1, request.POST['date'], -1, typ, pat, patients, request.session['sort2'], request.POST)
             else:
-                form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.POST)         
+                if request.GET.get('type', None) == 'ajax':  
+                    form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.session['sort2'])
+                else:
+                    form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.session['sort2'], request.POST)         
     else:
         offices = dental_office.objects.all()
-        form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1)
+        form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1, request.session['sort2'])
     
     return render(request, 'dentist_register2.html', {'form': form})
 
@@ -693,36 +701,7 @@ def dates_addition(request):
                             date_start += datetime.timedelta(days=7)
                 form = EditAddedDatesForm(added_date_list) #pic na wode, fotomontaz
                 messages.add_message(request, messages.INFO, 'Pomyślnie dodano terminy.')
-                
-                f_ids = []
-                f_dates = []
-                f_begins = []
-                f_ends = []
-                f_dentists = []
-                f_dental_offices = []
-                f_rooms = []
-                i = 0
-                
-                for f in form:
-                   if i%7 == 0:
-                       f_ids.append(f)
-                   if i%7 == 1:
-                       f_dates.append(f)
-                   if i%7 == 2:
-                       f_begins.append(f)
-                   if i%7 == 3:
-                       f_ends.append(f)
-                   if i%7 == 4:
-                       f_dentists.append(f)
-                   if i%7 == 5:
-                       f_dental_offices.append(f)
-                   if i%7 == 6:
-                       f_rooms.append(f)
-                   i = i + 1
-
-                new_form = zip(f_ids, f_dates, f_begins, f_ends, f_dentists, f_dental_offices, f_rooms)
-                
-                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form})
+                return render(request, 'edit_added_dates.html', {'form': form})
             elif dentist_man!="":
                 if request.GET.get('type', None) == 'ajax':
                     form = GenerateDatesForm(request.POST['office'], dentist_man)
@@ -743,20 +722,7 @@ def dates_addition(request):
                 if request.GET.get('type', None) == 'ajax':
                     form = GenerateDatesForm(request.POST['office'], -1)    
                 else:
-                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)
-        elif 'generate_submit_edit' in request.POST.keys():
-            i = 1
-            while i <= int(request.POST['number_of_fields']):
-                print request.POST['id_%s' % i]
-                d = dates.objects.get(id=request.POST['id_%s' % i])
-                d.begin = request.POST['begin_%s' % i]
-                d.end = request.POST['end_%s' % i]
-                d.room = request.POST['room_%s' % i]
-                d.save()
-                i += 1 
-            offices = dental_office.objects.all()
-            form = GenerateDatesForm(offices[0].id, -1) 
-            messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano dodane terminy.')    
+                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)        
     else:
         offices = dental_office.objects.all()
         form = GenerateDatesForm(offices[0].id, -1)
