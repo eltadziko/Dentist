@@ -4,16 +4,10 @@
 	{{ block.super }}
 	
 	<script>
-	$(document).ready(function() {
-	
-		{% if request.session.sort2 == '1' %}
-			$('#date_lab label').css("background", "none");
-			$('#date_lab label').css("background-color", "blue");
-		{% else %}
-			$('#dentist_lab label').css("background", "none");
-			$('#dentist_lab label').css("background-color", "blue");
-		{% endif %}
-			
+	$(document).ready(function() {	
+		
+		$('#{{ request.session.sort2 }}').attr('checked', 'checked');
+		
 		 $("#id_office").change(function() {
 			$.post('/dentist_register/?type=ajax',
 			{ office: $(this).val(),
@@ -87,21 +81,10 @@
 		 	return false;
 		 });
 		 
-		 $('#dentist_lab').click(function() {
+		 $('input[name=sort]').change(function() {
 		 	$.post('/dentist_register/?type=ajax',
 			{ office: $('#id_office').val(),
-			  sort: 0,
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				$('#content').html(data); 
-			});
-		 	return false;
-		 });
-		 
-		 $('#date_lab').click(function() {
-		 	$.post('/dentist_register/?type=ajax',
-			{ office: $('#id_office').val(),
-			  sort: 1,
+			  sort: $('input[name=sort]:checked').val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
 				$('#content').html(data); 
@@ -116,8 +99,10 @@
 <div id="rejestracja">
 {% if too_much %}
 	Posiadasz zbyt dużo rezerwacji. Nie możesz się już zarejestrowac online, dopóki
-	nie odwołasz którejś wizyty lub jej nie odbędziesz.
+	nie odwołasz którejś wizyty lub jej nie odbędziesz.<br />
 {% endif %}
+Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
+<input type="radio" name="sort" value="1" id="1">datach
 <form action="{% url views.dentist_register %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
@@ -144,7 +129,7 @@
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_2"><div id="date_lab" class="rej_tytul">{{form.date.label_tag }}</div><div class="opcje">{{form.date}}</div></div>
+	         <div class="typ_2"><div class="rej_tytul">{{form.date.label_tag }}</div><div class="opcje">{{form.date}}</div></div>
 	         
 	         {% if request.session.sort2 == '1' %}
 	         <div class="error">
@@ -152,7 +137,7 @@
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje">{{form.dentist}}</div></div>
+	         <div class="typ_1"><div class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje">{{form.dentist}}</div></div>
 	         {% endif %}
 	         
 	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag }}</div><div class="opcje">{{form.type}}</div></div>
