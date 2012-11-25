@@ -11,18 +11,114 @@
 		</div>
 	{% endif %}
 	
-	{% for field in form %}
-		<div class="fieldWrapper">
-	        {% if field.errors %}
-	        	<div class="error">
-			    {% for error in field.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
+	<table>
+	<tr>
+		<th>{{ form.id_1.label_tag }}</th>
+		<th>{{ form.date_1.label_tag }}</th>
+		<th>{{ form.begin_1.label_tag }}</th>
+		<th>{{ form.end_1.label_tag }}</th>
+		<th>{{ form.dentist_1.label_tag }}</th>
+		<th>{{ form.dental_office_1.label_tag }}</th>
+		<th>{{ form.room_1.label_tag }}</th>
+	</tr>
+	     
+	{% for id, date, begin, end, dentist, dental_office, room in new_form %}
+		<tr>
+			<td>
+				<div class="fieldWrapper">
+			        {% if id.errors %}
+			        	<div class="error">
+					    {% for error in id.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ id }}
+		    	</div>
+		    </td>
+			
+			<td>
+				<div class="fieldWrapper">
+			        {% if date.errors %}
+			        	<div class="error">
+					    {% for error in date.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ date }}
+		    	</div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if begin.errors %}
+			        	<div class="error">
+					    {% for error in begin.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ begin }}
 			    </div>
-			{% endif %}
-	        {{ field }}
-	    </div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if end.errors %}
+			        	<div class="error">
+					    {% for error in end.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ end }}
+			    </div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if dentist.errors %}
+			        	<div class="error">
+					    {% for error in dentist.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ dentist}}
+			    </div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if dental_office.errors %}
+			        	<div class="error">
+					    {% for error in dental_office.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ dental_office }}
+			    </div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if room.errors %}
+			        	<div class="error">
+					    {% for error in room.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ room }}
+			    </div>
+		    </td>	    
+	    </tr>
+	    
     {% endfor %}
+    </table>
+    <p>{{ form.number_of_fields }}</p>
     
 	<p><input id="id_generate_submit_edit" name="generate_submit_edit" type="submit" value="Aktualizuj" /></p>
 </form>

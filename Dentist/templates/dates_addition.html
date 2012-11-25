@@ -2,6 +2,7 @@
 
 {% block css %}
 	{{ block.super }}
+	<link href="{{ MEDIA_URL }}/css/jquery_ui.css" rel="stylesheet" media="all" type="text/css" />
 	<style type="text/css">
 		/* begin: jQuery UI Datepicker moving pixels fix */
 		table.ui-datepicker-calendar {border-collapse: separate;}
@@ -19,8 +20,7 @@
 
 {% block javascript %}
 	{{ block.super }}
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="{{ MEDIA_URL }}/js/jquery_ui_min.js"></script>
 	<script src="{{ MEDIA_URL }}/js/datepicker.js" ></script>
 	<script src="{{ MEDIA_URL }}/js/jquery-ui.multidatespicker.js" ></script>
 	<script>

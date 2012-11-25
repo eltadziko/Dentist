@@ -76,22 +76,32 @@ class EditAddedDatesForm(forms.Form):
         super(EditAddedDatesForm, self).__init__(*args, **kwargs)   
         i=1
         for date in last_added:
-            self.fields['id_%s' % i] = forms.CharField(label="Gabinet",
+            self.fields['id_%s' % i] = forms.CharField(label="Id",
                                                        initial=date.id,
-                                                       widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_id'}))
-            self.fields['date_%s' % i] = forms.DateField(initial=date.date,
+                                                       widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_id'}))
+            self.fields['date_%s' % i] = forms.DateField(label="Data",
+                                                         initial=date.date,
                                                          input_formats='%Y-%m-%d',
                                                          widget=forms.DateInput(attrs={'readonly':'True', 'class':'edit_dates_field_date'}))
-            self.fields['begin_%s' % i] = forms.TimeField(initial=date.begin,
+            self.fields['begin_%s' % i] = forms.TimeField(label="Od",
+                                                          initial=date.begin,
                                                           input_formats='%H:%M:%S',
                                                          widget=forms.TextInput(attrs={'class':'edit_dates_field_begin'}))
-            self.fields['end_%s' % i] = forms.TimeField(initial=date.end,
+            self.fields['end_%s' % i] = forms.TimeField(label="Do",
+                                                        initial=date.end,
                                                         input_formats='%H:%M:%S',
                                                          widget=forms.TextInput(attrs={'class':'edit_dates_field_end'}))
-            self.fields['dentist_%s' % i] = forms.CharField(initial=date.dentist,
+            self.fields['dentist_%s' % i] = forms.CharField(label="Dentysta",
+                                                            initial=date.dentist,
                                                          widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_dentist'}))
-            self.fields['dental_office_%s' % i] = forms.CharField(initial=date.dental_office,
+            self.fields['dental_office_%s' % i] = forms.CharField(label="Gabinet",
+                                                                  initial=date.dental_office,
                                                          widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_dental_office'}))
-            self.fields['room_%s' % i] = forms.CharField(initial=date.room,
-                                                         widget=forms.TextInput(attrs={'class':'edit_dates_field_room'}))
-            i += 1    
+            self.fields['room_%s' % i] = forms.CharField(label="Pokój",
+                                                         initial=date.room,
+                                                         widget=forms.TextInput(attrs={'class':'edit_dates_field_room', 'maxlength': '5'}))
+            i += 1
+        
+        self.fields['number_of_fields'] = forms.CharField(label="Liczba dat",
+                                                       initial=i-1,
+                                                       widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_number'}))    
