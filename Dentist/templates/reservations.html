@@ -12,12 +12,12 @@
 	
 	function ConfirmDialog(message, app){
 	    $('<div></div>').appendTo('body')
-	                    .html('<div><h4>'+message+'?</h4></div>')
+	                    .html('<div><h4>'+message+'</h4></div>')
 	                    .dialog({
 	                        modal: true, title: 'Usuwanie rezerwacji', zIndex: 10000, autoOpen: true,
 	                        width: 'auto', resizable: false,
 	                        buttons: {
-	                            Yes: function () {	
+	                            Tak: function () {	
 	                            	$.post('/reservations/',
 										{ appointment: $(app).attr('id'),
 										  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -27,7 +27,7 @@
 									);
 	                                $(this).dialog("close");
 	                            },
-	                            No: function () {
+	                            Nie: function () {
 	                                $(this).dialog("close");
 	                            }
 	                        },
