@@ -1,17 +1,44 @@
 {% extends 'base.html' %}
 {% load group_filter %}
-
+{% block css %}
+	{{ block.super }}
+	<link href="{{ MEDIA_URL }}/css/jquery_ui.css" rel="stylesheet" media="all" type="text/css" />
+{% endblock %}
 {% block javascript %}
 {{ block.super }}
+<script src="{{ MEDIA_URL }}/js/jquery_ui_min.js"></script>
 <script>
 	$(document).ready(function() {
-		$('.delete').click(function() {
-			$.post('/reservations/',
-			{ appointment: $(this).attr('id'),
-			  csrfmiddlewaretoken: '{{ csrf_token }}' },
-			function(data) { 
-				$('#content').html(data); 
-			});
+	
+	function ConfirmDialog(message, app){
+	    $('<div></div>').appendTo('body')
+	                    .html('<div><h4>'+message+'?</h4></div>')
+	                    .dialog({
+	                        modal: true, title: 'Usuwanie rezerwacji', zIndex: 10000, autoOpen: true,
+	                        width: 'auto', resizable: false,
+	                        buttons: {
+	                            Yes: function () {	
+	                            	$.post('/reservations/',
+										{ appointment: $(app).attr('id'),
+										  csrfmiddlewaretoken: '{{ csrf_token }}' },
+										function(data) { 
+											$('#content').html(data); 
+										}
+									);
+	                                $(this).dialog("close");
+	                            },
+	                            No: function () {
+	                                $(this).dialog("close");
+	                            }
+	                        },
+	                        close: function (event, ui) {
+	                            $(this).remove();
+	                        }
+	                    });
+    }
+
+    	$('.delete').click(function() {
+			ConfirmDialog("Na pewno chcesz usunąć tą wizytę?", this);
 		 	return false;
 		});
 		

@@ -27,43 +27,44 @@
 	
 	$(document).ready(function() {
 	
-	jQuery.fn.update_disable = function() {
-	 	var temp = $("#id_hidden").val();
-		table = temp.split(" ");
-		$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
-		/*setTimeout(function() {}, 1000);*/
+	jQuery.fn.update_disable = function(target, target2) {
+	 	var temp = $(target2).val();
+	 	temp_table = temp.split(" ");
+		table = temp_table.slice(0, temp_table.length-1);
+		$( target ).multiDatesPicker({addDisabledDates: table});
 	}
 	
 		 var table = ""; 
 		 
 		 $.datepicker.setDefaults($.datepicker.regional['PL']);
-		 $( "#id_begin" ).datepicker( {
-            defaultDate: "+1w",
+		 $( "#id_begin" ).multiDatesPicker({
+        	defaultDate: "+1w",
+        	minDate: "0",
             changeMonth: true,
             numberOfMonths: 3,
-            minDate: "0",
-            onClose: function( selectedDate ) {
-                $( "#id_end" ).datepicker( "option", "minDate", selectedDate );
-                /*$( "#id_exclude" ).datepicker( "option", "minDate", selectedDate );*/
+            maxPicks: 1,
+            beforeShow: function() {
+            	$(this).update_disable("#id_begin", "#id_hidden");
             }
          });      
-		 $( "#id_end" ).datepicker( {
-            defaultDate: "+1w",
+		 $( "#id_end" ).multiDatesPicker({
+        	defaultDate: "+1w",
+        	minDate: "0",
             changeMonth: true,
             numberOfMonths: 3,
-            minDate: "0",
-            onClose: function( selectedDate ) {
-                $( "#id_begin" ).datepicker( "option", "maxDate", selectedDate );
-                /*$( "#id_exclude" ).datepicker( "option", "maxDate", selectedDate );*/
+            maxPicks: 1,
+            beforeShow: function() {
+            	$(this).update_disable("#id_end", "#id_hidden");
             }
          });
          today = new Date();
          $( "#id_exclude" ).multiDatesPicker({
         	defaultDate: "+1w",
+        	minDate: "0",
             changeMonth: true,
             numberOfMonths: 3,
             beforeShow: function() {
-            	$(this).update_disable();
+            	$(this).update_disable("#id_exclude", "#id_hidden");
             }
 		 });
 		
@@ -84,18 +85,22 @@
 						var content = $(data).find('#dynamic_content2').html();
 						$('#dynamic_content2').html(content);
 						
-						var temp = $(data).find("#id_hidden").val();
-						table = temp.split(" ");
-						$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
-						$( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
+						$( "#id_begin" ).multiDatesPicker('resetDates', 'disabled');
+						$( "#id_end" ).multiDatesPicker('resetDates', 'disabled');	
+						$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');
+						$( "#id_begin" ).update_disable("#id_begin", "#id_hidden");
+						$( "#id_end" ).update_disable("#id_end", "#id_hidden");
+						$( "#id_exclude" ).update_disable("#id_exclude", "#id_hidden");
 					});
 				 	return false;
 				 });
 				 
-				 var temp = $(data).find("#id_hidden").val();
-				 table = temp.split(" ");
-				 $( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
-				 $( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});
+				$( "#id_begin" ).multiDatesPicker('resetDates', 'disabled');
+				$( "#id_end" ).multiDatesPicker('resetDates', 'disabled');	
+				$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');
+				$( "#id_begin" ).update_disable("#id_begin", "#id_hidden");
+				$( "#id_end" ).update_disable("#id_end", "#id_hidden");
+				$( "#id_exclude" ).update_disable("#id_exclude", "#id_hidden");
 		         
 				 
 			});
@@ -110,12 +115,13 @@
 			function(data) { 
 				var content = $(data).find('#dynamic_content2').html();
 				$('#dynamic_content2').html(content);
-				 
-				 var temp = $(data).find("#id_hidden").val();
-				 table = temp.split(" ");
-				 $( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');	
-				 $( "#id_exclude" ).multiDatesPicker({addDisabledDates: table});		         
-				
+
+				$( "#id_begin" ).multiDatesPicker('resetDates', 'disabled');
+				$( "#id_end" ).multiDatesPicker('resetDates', 'disabled');	
+				$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');
+				$( "#id_begin" ).update_disable("#id_begin", "#id_hidden");
+				$( "#id_end" ).update_disable("#id_end", "#id_hidden");
+				$( "#id_exclude" ).update_disable("#id_exclude", "#id_hidden");		         				
 			});
 		 	return false;
 		 });		 

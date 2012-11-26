@@ -19,6 +19,7 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
+from django.core.exceptions import ValidationError
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -699,7 +700,7 @@ def dates_addition(request):
                             date_start += datetime.timedelta(days=7)
                         else:
                             date_start += datetime.timedelta(days=7)
-                form = EditAddedDatesForm(added_date_list) #pic na wode, fotomontaz
+                form = EditAddedDatesForm(added_date_list) 
                 messages.add_message(request, messages.INFO, 'Pomyślnie dodano terminy.')
                 
                 f_ids = []
@@ -750,17 +751,58 @@ def dates_addition(request):
                 else:
                     form = GenerateDatesForm(request.POST['office'], -1, request.POST)
         elif 'generate_submit_edit' in request.POST.keys():
-            i = 1
-            while i <= int(request.POST['number_of_fields']):
-                d = dates.objects.get(id=request.POST['id_%s' % i])
-                d.begin = request.POST['begin_%s' % i]
-                d.end = request.POST['end_%s' % i]
-                d.room = request.POST['room_%s' % i]
-                d.save()
-                i += 1 
-            offices = dental_office.objects.all()
-            form = GenerateDatesForm(offices[0].id, -1) 
-            messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano dodane terminy.')
+            try:
+                i = 1
+                while i <= int(request.POST['number_of_fields']):
+                    d = dates.objects.get(id=request.POST['id_%s' % i])
+                    d.begin = request.POST['begin_%s' % i]
+                    d.end = request.POST['end_%s' % i]
+                    d.room = request.POST['room_%s' % i]
+                    d.save()
+                    i += 1 
+            except ValidationError:
+                added_date_list = []
+                i = 1
+                while i <= int(request.POST['number_of_fields']):
+                    d = dates.objects.get(id=request.POST['id_%s' % i])
+                    d.begin = request.POST['begin_%s' % i]
+                    d.end = request.POST['end_%s' % i]
+                    d.room = request.POST['room_%s' % i]
+                    added_date_list.append(d)
+                    i += 1 
+                form = EditAddedDatesForm(added_date_list) 
+                messages.add_message(request, messages.ERROR, 'Błędny format danych dla pola/pól "Od"/"Do". Użyj formatu "HH:mm"')
+                
+                f_ids = []
+                f_dates = []
+                f_begins = []
+                f_ends = []
+                f_dentists = []
+                f_dental_offices = []
+                f_rooms = []
+                i = 0
+                for f in form:
+                   if i%7 == 0:
+                       f_ids.append(f)
+                   if i%7 == 1:
+                       f_dates.append(f)
+                   if i%7 == 2:
+                       f_begins.append(f)
+                   if i%7 == 3:
+                       f_ends.append(f)
+                   if i%7 == 4:
+                       f_dentists.append(f)
+                   if i%7 == 5:
+                       f_dental_offices.append(f)
+                   if i%7 == 6:
+                       f_rooms.append(f)
+                   i = i + 1
+                new_form = zip(f_ids, f_dates, f_begins, f_ends, f_dentists, f_dental_offices, f_rooms)
+                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form})
+            else:
+                offices = dental_office.objects.all()
+                form = GenerateDatesForm(offices[0].id, -1) 
+                messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano dodane terminy.')
     else:
         offices = dental_office.objects.all()
         form = GenerateDatesForm(offices[0].id, -1)
