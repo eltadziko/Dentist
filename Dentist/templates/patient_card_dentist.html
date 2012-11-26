@@ -143,7 +143,7 @@
 	</div>
 	
 	Aktualna wizyta:<br />
-	{{ appointment.date|date:'Y-m-d' }} {{ appointment.hour|time:'H:i' }}, {{ appointment.appointment_type.length }} minut<br />
+	{{ appointment.date|date:'Y-m-d' }} {% if a.untimely|is_false %}{{ appointment.hour|time:'H:i' }}, {{ appointment.appointment_type.length }} minut{% endif %}<br />
 	Opis: <textarea id="form_appointment_edit" cols="80" rows="4">{% if appointment.description %}{{ appointment.description }}{% endif %}
 	</textarea>
 	<input type="submit" id="ok_description" value="Zapisz"/>
@@ -154,7 +154,7 @@
 	<div class="appoint">
 		<div class="appointment" id="{{ a.id }}">
 			{{ a.date }}<br />
-			Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />
+			{% if a.untimely|is_false %}Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}
 			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}<br />
 			{% if a.description %}{{ a.description }}<br /> {% endif %}
 			</div>

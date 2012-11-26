@@ -99,6 +99,28 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 			{% endfor %}
 		</tr>
 	{% endfor %} 
+	
+	{% for a in appoints_untimely %}
+		<tr>
+			<td>Nieterminowa</td>
+			{% for p in a %}
+				{% if p %}
+					{% if p.is_now == 1 %}
+						<td class="appoint_now"> 
+					{% elif p.is_now == -1 %}
+						<td class="appoint_past"> 
+					{% else %}
+						<td class="appoint_future"> 
+					{% endif %}
+					<a href = "{% url views.update_profile %}{{ p.patient.id }}">
+						{{ p.patient.last_name }} {{ p.patient.first_name }}
+					</a></td>
+				{% else %}
+					<td></td>
+				{% endif %}
+			{% endfor %}
+		</tr>
+	{% endfor %}
 </table>
 </div>
 {% endblock %}
