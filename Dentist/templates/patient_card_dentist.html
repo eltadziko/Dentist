@@ -24,7 +24,9 @@
 			
 			$('#patient_edit').click(function() {
 				$('#form_patient_edit').show();
+				{% if patient.comment %}
 				$('#patient_comment').val('{{ patient.comment }}');
+				{% endif %}
 			});
 			
 			$('#cancel_patient').click(function() {
@@ -117,6 +119,42 @@
 				});
 			 	return false;
 			 });
+			 
+			 $('#id_tooth').live('change', function() {
+			 	$.post('/patient_card_dentist/',
+					{ tooth: $('#id_tooth').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#tooth_loss').html($(data).find('#tooth_loss').html()); 
+				});
+			 	return false;
+			 });
+			 
+			 $('#id_tooth_part').live('change', function() {
+			 	$.post('/patient_card_dentist/',
+					{ tooth: $('#id_tooth').val(),
+					  tooth_part: $('#id_tooth_part').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#tooth_loss').html($(data).find('#tooth_loss').html());  
+				});
+			 	return false;
+			 });
+			 
+			 $('#tooth_ok').live('change', function() {
+			 	$.post('/patient_card_dentist/',
+					{ tooth: $('#id_tooth').val(),
+					  tooth_part: $('#id_tooth_part').val(),
+					  loss_type: $('#id_loss_type').val(),
+					  comment: $('#id_description').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#tooth_loss').html($(data).find('#tooth_loss').html());  
+				});
+			 	return false;
+			 });
+			 
+			 
 		});
 	</script>
 {% endblock %}
@@ -148,6 +186,14 @@
 	</textarea>
 	<input type="submit" id="ok_description" value="Zapisz"/>
 	<input type="submit" id="cancel_description" value="Cofnij"/><br />
+	<div id="appoint_losses">
+		Zmiany na diagramie uzębienia:<br />
+		{% for t in appointment.tooth_loss_set.all|order_by:'tooth' %}
+			{{ t.tooth }} - {{ t.tooth_part.name }}<br />
+			{% if t.loss_type %}Rozpoznanie: {{ t.loss_type.type }}<br />{% endif %}
+			{% if t.comment %}{{ t.comment }}<br />{% endif %}
+		{% endfor %}
+	</div>
 	
 	Wizyty:<br />
 	{% for a in appoints %}
@@ -167,11 +213,17 @@
 			
 			<div id="appoint_{{ a.id }}" class="tooth_loss">
 			{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
-				{{ t.tooth.tooth_number }} ({{ t.tooth.type }}, szczęka {{ t.tooth.jaw }}, strona {{ t.tooth.side }}) - {{ t.tooth_part.name }}<br />
+				{{ t.tooth }} - {{ t.tooth_part.name }}<br />
 				{% if t.loss_type %}Rozpoznanie: {{ t.loss_type.type }}<br />{% endif %}
 				{% if t.comment %}{{ t.comment }}<br />{% endif %}
 			{% endfor %}
 			</div>
 	</div>
 	{% endfor %}
+	
+	<table id="tooth_loss">
+		{{ form }}
+		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" /></td>
+		<td><input type="submit" value="Zapisz" id="tooth_ok" /></td></tr>
+	</table>
 {% endblock %}

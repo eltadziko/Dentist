@@ -188,7 +188,7 @@ class tooth(models.Model):
         verbose_name = "Ząb"
 
     def __unicode__(self):
-        return self.type
+        return u'%s (%s)' % (self.tooth_number, self.type)
     
 class tooth_loss(models.Model):
     appointment = models.ForeignKey(appointment, verbose_name="Wizyta")

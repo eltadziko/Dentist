@@ -28,6 +28,7 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#graphic').html($(data).find('#graphic').html()); 
+						$('#date').attr('value', '{{ date }}');
 				});
 			 	return false;
 			 });
