@@ -5660,7 +5660,7 @@
     patient: 128
     dental_office: 1
     appointment_type: 2
-	is_now: -1
+    is_now: -1
 - model: Dentist.appointment
   pk: 515
   fields:
@@ -5878,6 +5878,5 @@
     description: 
     dentist: 18
     patient: 20
-    dental_office: 7
+    dental_office: 4
     appointment_type: 2
-    is_now: 1      	

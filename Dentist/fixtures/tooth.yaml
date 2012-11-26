@@ -5,6 +5,7 @@
     jaw: górna
     side: prawa
     tooth_number: 11
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
 - model: Dentist.tooth
   pk: 2
   fields:
@@ -12,6 +13,7 @@
     jaw: górna
     side: prawa
     tooth_number: 12
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
 - model: Dentist.tooth
   pk: 3
   fields:
@@ -19,6 +21,7 @@
     jaw: górna
     side: prawa
     tooth_number: 13
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
 - model: Dentist.tooth
   pk: 4
   fields:
@@ -26,6 +29,7 @@
     jaw: górna
     side: prawa
     tooth_number: 14
+    parts: [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]
 - model: Dentist.tooth
   pk: 5
   fields:
@@ -33,6 +37,7 @@
     jaw: górna
     side: prawa
     tooth_number: 15
+    parts: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 - model: Dentist.tooth
   pk: 6
   fields:
@@ -40,6 +45,7 @@
     jaw: górna
     side: prawa
     tooth_number: 16
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 - model: Dentist.tooth
   pk: 7
   fields:
@@ -47,6 +53,7 @@
     jaw: górna
     side: prawa
     tooth_number: 17
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 - model: Dentist.tooth
   pk: 8
   fields:
@@ -54,6 +61,7 @@
     jaw: górna
     side: prawa
     tooth_number: 18
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
     
 - model: Dentist.tooth
   pk: 9
@@ -62,6 +70,7 @@
     jaw: górna
     side: lewa
     tooth_number: 21
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
 - model: Dentist.tooth
   pk: 10
   fields:
@@ -69,6 +78,7 @@
     jaw: górna
     side: lewa
     tooth_number: 22
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
 - model: Dentist.tooth
   pk: 11
   fields:
@@ -76,6 +86,7 @@
     jaw: górna
     side: lewa
     tooth_number: 23
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
 - model: Dentist.tooth
   pk: 12
   fields:
@@ -83,6 +94,7 @@
     jaw: górna
     side: lewa
     tooth_number: 24
+    parts: [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]
 - model: Dentist.tooth
   pk: 13
   fields:
@@ -90,6 +102,7 @@
     jaw: górna
     side: lewa
     tooth_number: 25
+    parts: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 - model: Dentist.tooth
   pk: 14
   fields:
@@ -97,6 +110,7 @@
     jaw: górna
     side: lewa
     tooth_number: 26
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 - model: Dentist.tooth
   pk: 15
   fields:
@@ -104,6 +118,7 @@
     jaw: górna
     side: lewa
     tooth_number: 27
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 - model: Dentist.tooth
   pk: 16
   fields:
@@ -111,6 +126,8 @@
     jaw: górna
     side: lewa
     tooth_number: 28
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+
 - model: Dentist.tooth
   pk: 17
   fields:
@@ -118,6 +135,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 31
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
 - model: Dentist.tooth
   pk: 18
   fields:
@@ -125,6 +143,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 32
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
 - model: Dentist.tooth
   pk: 19
   fields:
@@ -132,6 +151,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 33
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
 - model: Dentist.tooth
   pk: 20
   fields:
@@ -139,6 +159,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 34
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 19, 20]
 - model: Dentist.tooth
   pk: 21
   fields:
@@ -146,6 +167,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 35
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 15, 18, 19]
 - model: Dentist.tooth
   pk: 22
   fields:
@@ -153,6 +175,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 36
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
 - model: Dentist.tooth
   pk: 23
   fields:
@@ -160,6 +183,7 @@
     jaw: dolna
     side: lewa
     tooth_number: 37
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
 - model: Dentist.tooth
   pk: 24
   fields:
@@ -167,6 +191,8 @@
     jaw: dolna
     side: lewa
     tooth_number: 38
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+
 - model: Dentist.tooth
   pk: 25
   fields:
@@ -174,6 +200,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 41
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
 - model: Dentist.tooth
   pk: 26
   fields:
@@ -181,6 +208,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 42
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
 - model: Dentist.tooth
   pk: 27
   fields:
@@ -188,6 +216,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 43
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
 - model: Dentist.tooth
   pk: 28
   fields:
@@ -195,6 +224,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 44
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 19, 20]
 - model: Dentist.tooth
   pk: 29
   fields:
@@ -202,6 +232,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 45
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 15, 18, 19]
 - model: Dentist.tooth
   pk: 30
   fields:
@@ -209,6 +240,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 46
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
 - model: Dentist.tooth
   pk: 31
   fields:
@@ -216,6 +248,7 @@
     jaw: dolna
     side: prawa
     tooth_number: 47
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
 - model: Dentist.tooth
   pk: 32
   fields:
@@ -223,3 +256,4 @@
     jaw: dolna
     side: prawa
     tooth_number: 48
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
