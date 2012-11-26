@@ -15,6 +15,7 @@ from forms.patient_user_form import PatientUserForm
 from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm
 from forms.register_form import *
 from forms.dentist_form import *
+from forms.tooth_edit_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -241,7 +242,7 @@ def dentist_register(request):
                                           patient = patient.objects.get(user=request.user.id))
                     appoint.save()
                     messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano do dentysty.')
-                    return HttpResponseRedirect('/index/')
+                    return HttpResponseRedirect('/reservations/')
                 else:
                     apps = []
                     day = dates.objects.filter(dentist = request.POST['dentist']).get(date=request.POST['date'])
@@ -965,7 +966,7 @@ def patient_card_dentist(request):
     appoint = appointment.objects.get(id = request.session['appoint'])
     pat = appoint.patient
     appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
-    
+    form = ToothForm
     if request.POST:
         if 'patient_comment' in request.POST.keys():
             pat.comment = request.POST['patient_comment'].strip()
@@ -980,7 +981,7 @@ def patient_card_dentist(request):
             app = appointment.objects.get(id=request.POST['app'])
             app.description = request.POST['app_desc'].strip()
             app.save()
-    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint })
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
