@@ -154,6 +154,25 @@ class appointment(models.Model):
 
     def __unicode__(self):
         return u'%s' % (self.date)
+
+class loss_type(models.Model):
+    type = models.CharField("Typ", max_length=30)
+    
+    class Meta:
+        verbose_name = "Typ ubytku"
+    
+    def __unicode__(self):
+        return self.type
+          
+class tooth_part(models.Model):
+    name = models.CharField("Nazwa", max_length=40)
+    losses = models.ManyToManyField(loss_type)
+    
+    class Meta:
+        verbose_name = "Część zęba"
+    
+    def __unicode__(self):
+        return self.name
     
 class tooth(models.Model):
     TYPE_CHOICES = (('siekacz', 'siekacz'),('kieł', 'kieł'),('przedtrzonowiec', 'przedtrzonowiec'),('trzonowiec', 'trzonowiec'))
@@ -163,30 +182,13 @@ class tooth(models.Model):
     SIDE_CHOICES = (('lewa', 'lewa'), ('prawa', 'prawa'))
     side = models.CharField("Strona", max_length=5, choices=SIDE_CHOICES)
     tooth_number = models.IntegerField("Nr zęba")
+    parts = models.ManyToManyField(tooth_part)
     
     class Meta:
         verbose_name = "Ząb"
 
     def __unicode__(self):
         return self.type
-    
-class loss_type(models.Model):
-    type = models.CharField("Typ", max_length=30)
-    
-    class Meta:
-        verbose_name = "Typ ubytku"
-    
-    def __unicode__(self):
-        return self.type
-    
-class tooth_part(models.Model):
-    name = models.CharField("Nazwa", max_length=40)
-    
-    class Meta:
-        verbose_name = "Część zęba"
-    
-    def __unicode__(self):
-        return self.name
     
 class tooth_loss(models.Model):
     appointment = models.ForeignKey(appointment, verbose_name="Wizyta")

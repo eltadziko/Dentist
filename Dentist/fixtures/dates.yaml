@@ -721,9 +721,288 @@
 - model: Dentist.dates
   pk: 81
   fields:
-    date: 2012-11-19
+    date: 2012-11-30
     begin: "8:00"
     end: "16:00"
     dentist: 1
     dental_office: 1
-    room: 4.0                               
+    room: 4.0
+- model: Dentist.dates
+  pk: 82
+  fields:
+    date: 2012-12-10
+    begin: "8:00"
+    end: "16:00"
+    dentist: 1
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 83
+  fields:
+    date: 2012-12-10
+    begin: "12:00"
+    end: "16:00"
+    dentist: 2
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 84
+  fields:
+    date: 2012-12-10
+    begin: "8:00"
+    end: "16:00"
+    dentist: 3
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 85
+  fields:
+    date: 2012-12-10
+    begin: "7:30"
+    end: "12:30"
+    dentist: 4
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 86
+  fields:
+    date: 2012-12-11
+    begin: "8:00"
+    end: "16:00"
+    dentist: 5
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 87
+  fields:
+    date: 2012-12-11
+    begin: "12:00"
+    end: "16:00"
+    dentist: 6
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 88
+  fields:
+    date: 2012-12-11
+    begin: "8:00"
+    end: "16:00"
+    dentist: 7
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 89
+  fields:
+    date: 2012-12-11
+    begin: "7:30"
+    end: "12:30"
+    dentist: 8
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 90
+  fields:
+    date: 2012-12-12
+    begin: "8:00"
+    end: "16:00"
+    dentist: 9
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 91
+  fields:
+    date: 2012-12-12
+    begin: "12:00"
+    end: "16:00"
+    dentist: 10
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 92
+  fields:
+    date: 2012-12-12
+    begin: "8:00"
+    end: "16:00"
+    dentist: 11
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 93
+  fields:
+    date: 2012-12-12
+    begin: "7:30"
+    end: "12:30"
+    dentist: 12
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 94
+  fields:
+    date: 2012-12-13
+    begin: "8:00"
+    end: "16:00"
+    dentist: 13
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 95
+  fields:
+    date: 2012-12-13
+    begin: "12:00"
+    end: "16:00"
+    dentist: 14
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 96
+  fields:
+    date: 2012-12-13
+    begin: "8:00"
+    end: "16:00"
+    dentist: 15
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 97
+  fields:
+    date: 2012-12-13
+    begin: "7:30"
+    end: "12:30"
+    dentist: 16
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 98
+  fields:
+    date: 2012-12-14
+    begin: "8:00"
+    end: "16:00"
+    dentist: 17
+    dental_office: 1
+    room: 1.0
+- model: Dentist.dates
+  pk: 99
+  fields:
+    date: 2012-12-14
+    begin: "12:00"
+    end: "16:00"
+    dentist: 18
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 100
+  fields:
+    date: 2012-12-14
+    begin: "8:00"
+    end: "16:00"
+    dentist: 19
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 101
+  fields:
+    date: 2012-12-14
+    begin: "7:30"
+    end: "12:30"
+    dentist: 20
+    dental_office: 4
+    room: 4.0
+- model: Dentist.dates
+  pk: 102
+  fields:
+    date: 2012-12-12
+    begin: "8:00"
+    end: "12:00"
+    dentist: 1
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 103
+  fields:
+    date: 2012-12-12
+    begin: "10:00"
+    end: "11:30"
+    dentist: 2
+    dental_office: 2
+    room: 3.0
+- model: Dentist.dates
+  pk: 104
+  fields:
+    date: 2012-12-12
+    begin: "12:00"
+    end: "16:00"
+    dentist: 2
+    dental_office: 3
+    room: 4.0
+- model: Dentist.dates
+  pk: 105
+  fields:
+    date: 2012-12-12
+    begin: "8:00"
+    end: "16:00"
+    dentist: 3
+    dental_office: 4
+    room: 1.0
+- model: Dentist.dates
+  pk: 106
+  fields:
+    date: 2012-12-12
+    begin: "12:00"
+    end: "16:00"
+    dentist: 5
+    dental_office: 2
+    room: 2.0
+- model: Dentist.dates
+  pk: 107
+  fields:
+    date: 2012-12-12
+    begin: "8:00"
+    end: "16:00"
+    dentist: 2
+    dental_office: 3
+    room: 3.0
+- model: Dentist.dates
+  pk: 108
+  fields:
+    date: 2012-12-12
+    begin: "12:30"
+    end: "18:30"
+    dentist: 6
+    dental_office: 2
+    room: 4.0
+- model: Dentist.dates
+  pk: 109
+  fields:
+    date: 2012-12-12
+    begin: "8:00"
+    end: "16:00"
+    dentist: 7
+    dental_office: 3
+    room: 1.0
+- model: Dentist.dates
+  pk: 110
+  fields:
+    date: 2012-12-12
+    begin: "12:00"
+    end: "16:00"
+    dentist: 15
+    dental_office: 3
+    room: 2.0
+- model: Dentist.dates
+  pk: 111
+  fields:
+    date: 2012-12-12
+    begin: "9:00"
+    end: "16:00"
+    dentist: 15
+    dental_office: 3
+    room: 2.0      
+- model: Dentist.dates
+  pk: 112
+  fields:
+    date: 2012-12-12
+    begin: "12:00"
+    end: "16:00"
+    dentist: 18
+    dental_office: 4
+    room: 2.0                                                 

@@ -2,79 +2,99 @@
   pk: 1
   fields:
     name: korona
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 2
   fields:
     name: korzeń policzkowy dystalny
+    losses: [10, 11, 12, 13, 14]
 - model: Dentist.tooth_part
   pk: 3
   fields:
     name: korzeń policzkowy mezjalny
+    losses: [10, 11, 12, 13, 14]
 - model: Dentist.tooth_part
   pk: 4
   fields:
     name: korzeń podniebienny
+    losses: [10, 11, 12, 13, 14]
 - model: Dentist.tooth_part
   pk: 5
   fields:
     name: przyzębie podniebienne
+    losses: [15, 16, 17, 18, 19, 20]
 - model: Dentist.tooth_part
   pk: 6
   fields:
     name: przyzębie mezjalne
+    losses: [15, 16, 17, 18, 19, 20]
 - model: Dentist.tooth_part
   pk: 7
   fields:
     name: przyzębie przedsionkowe
+    losses: [15, 16, 17, 18, 19, 20]
 - model: Dentist.tooth_part
   pk: 8
   fields:
     name: przyzębie dystalne
+    losses: [15, 16, 17, 18, 19, 20]
 - model: Dentist.tooth_part
   pk: 9
   fields:
     name: powierzchnia okluzyjna (dystalnie)
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 10
   fields:
     name: powierzchnia okluzyjna (mezjalnie)
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 11
   fields:
     name: powierzchnia podniebienna
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 12
   fields:
     name: powierzchnia dystalna
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 13
   fields:
     name: powierzchnia mezjalna
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 14
   fields:
     name: powierzchnia przedsionkowa
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 15
   fields:
     name: korzeń
+    losses: [10, 11, 12, 13, 14]
 - model: Dentist.tooth_part
   pk: 16
   fields:
     name: korzeń policzkowy
+    losses: [10, 11, 12, 13, 14]
 - model: Dentist.tooth_part
   pk: 17
   fields:
     name: powierzchnia okluzyjna
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 18
   fields:
     name: powierzchnia językowa
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 - model: Dentist.tooth_part
   pk: 19
   fields:
     name: przyzębie językowe
+    losses: [15, 16, 17, 18, 19, 20]
 - model: Dentist.tooth_part
   pk: 20
   fields:
     name: korzeń językowy
+    losses: [10, 11, 12, 13, 14]
