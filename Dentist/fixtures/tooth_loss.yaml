@@ -99,7 +99,7 @@
   fields:
     appointment: 10
     tooth: 4
-    loss_type: 31
+    loss_type: 20
     tooth_part: 6
     comment: Leczenie ze znieczuleniem.    
 - model: Dentist.tooth_loss
@@ -131,7 +131,7 @@
   fields:
     appointment: 17
     tooth: 4
-    loss_type: 62
+    loss_type: 16
     tooth_part: 5
     comment: Leczenie ze znieczuleniem.    
 - model: Dentist.tooth_loss
@@ -267,7 +267,7 @@
   fields:
     appointment: 34
     tooth: 31
-    loss_type: 23
+    loss_type: 19
     tooth_part: 5
     comment: Pacjent wymaga natychmiatowego leczenia.
 - model: Dentist.tooth_loss
@@ -338,7 +338,7 @@
   pk: 43
   fields:
     appointment: 43
-    tooth: 56
+    tooth: 6
     loss_type: 10
     tooth_part: 2
     comment: Potrzebne zdjęcie rtg.
@@ -387,7 +387,7 @@
   fields:
     appointment: 49
     tooth: 3
-    loss_type: 42
+    loss_type: 13
     tooth_part: 2
     comment: Pacjent wymaga natychmiatowego leczenia.
 - model: Dentist.tooth_loss
@@ -563,7 +563,7 @@
   fields: 
     appointment: 71
     tooth: 3
-    loss_type: 56
+    loss_type: 12
     tooth_part: 2
     comment: Leczenie ze znieczuleniem.    
 - model: Dentist.tooth_loss
@@ -738,7 +738,7 @@
   pk: 93
   fields:
     appointment: 93
-    tooth: 56
+    tooth: 6
     loss_type: 10
     tooth_part: 2
     comment: Potrzebne zdjęcie rtg.
@@ -1138,7 +1138,7 @@
   pk: 143
   fields:
     appointment: 143
-    tooth: 56
+    tooth: 6
     loss_type: 10
     tooth_part: 2
     comment: Potrzebne zdjęcie rtg.
@@ -1259,7 +1259,7 @@
   fields:
     appointment: 158
     tooth: 17
-    loss_type: 45
+    loss_type: 14
     tooth_part: 3
     comment: Leczenie ze znieczuleniem.    
 - model: Dentist.tooth_loss
@@ -1307,7 +1307,7 @@
   fields:
     appointment: 164
     tooth: 19
-    loss_type: 44
+    loss_type: 14
     tooth_part: 4
     comment: Pacjent wymaga natychmiatowego leczenia.
 - model: Dentist.tooth_loss
@@ -1371,7 +1371,7 @@
   fields:
     appointment: 172
     tooth: 32
-    loss_type: 45
+    loss_type: 14
     tooth_part: 3
     comment: Leczenie bez znieczulania.
 - model: Dentist.tooth_loss
@@ -1411,7 +1411,7 @@
   fields:
     appointment: 177
     tooth: 15
-    loss_type: 19
+    loss_type: 11
     tooth_part: 6
     comment: Leczenie ze znieczuleniem.    
 - model: Dentist.tooth_loss
@@ -1419,7 +1419,7 @@
   fields:
     appointment: 178
     tooth: 32
-    loss_type: 27
+    loss_type: 12
     tooth_part: 2
     comment: Leczenie ze znieczuleniem.    
 - model: Dentist.tooth_loss
@@ -1538,7 +1538,7 @@
   pk: 193
   fields:
     appointment: 193
-    tooth: 56
+    tooth: 6
     loss_type: 10
     tooth_part: 2
     comment: Potrzebne zdjęcie rtg.
