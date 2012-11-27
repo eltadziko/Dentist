@@ -1,5 +1,5 @@
 <div id="diagram_uzebienia">
-    <img src="{{ MEDIA_URL }}/img/zebyJPG.jpg" usemap="#diagram">
+    <img class="map" src="{{ MEDIA_URL }}/img/zebyJPG.jpg" usemap="#diagram">
     <map name ="diagram">
       <!--gora_lewa_na_obrazku-->
       <!--zab8-->
@@ -84,7 +84,7 @@
     	$(document).ready(function() {
     	
     		$('area').click(function() {
-    			$.post('/patient_card/',
+    			$.post('{{ link }}',
 					{ tooth: $(this).attr('class'),
 					  tooth_part: $(this).attr('alt'),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -95,7 +95,8 @@
 						$('#tooth_losses').show();  
 				});
     		});
-    	
+    		
+    		$('.map').maphilight();
     	});
     </script>
 </div>
