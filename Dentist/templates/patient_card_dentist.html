@@ -7,6 +7,8 @@
 	<script>
 		$(document).ready(function() {
 			$('.tooth_loss').hide();
+			$('#tooth_loss').hide();
+			$('#tooth_losses').hide();
 			
 			$('#form_patient_edit').hide();
 			$('#ok_description').hide();
@@ -123,9 +125,11 @@
 			 $('#id_tooth').live('change', function() {
 			 	$.post('/patient_card_dentist/',
 					{ tooth: $('#id_tooth').val(),
+					  tooth_part: '1',
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#tooth_loss').html($(data).find('#tooth_loss').html()); 
+						$('#tooth_losses').html($(data).find('#tooth_losses').html()); 
 				});
 			 	return false;
 			 });
@@ -136,12 +140,13 @@
 					  tooth_part: $('#id_tooth_part').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#tooth_loss').html($(data).find('#tooth_loss').html());  
+						$('#tooth_loss').html($(data).find('#tooth_loss').html()); 
+						$('#tooth_losses').html($(data).find('#tooth_losses').html());  
 				});
 			 	return false;
 			 });
 			 
-			 $('#tooth_ok').live('change', function() {
+			 $('#tooth_ok').live('click', function() {
 			 	$.post('/patient_card_dentist/',
 					{ tooth: $('#id_tooth').val(),
 					  tooth_part: $('#id_tooth_part').val(),
@@ -149,11 +154,17 @@
 					  comment: $('#id_description').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#tooth_loss').html($(data).find('#tooth_loss').html());  
+						$('#tooth_loss').hide();
+						$('#tooth_losses').hide();
+						$('#appoint_losses').html($(data).find('#appoint_losses').html()); 
 				});
 			 	return false;
 			 });
 			 
+			 $('#tooth_cancel').live('click', function() {
+			 	$('#tooth_loss').hide();
+			 	$('#tooth_losses').hide();
+			 });
 			 
 		});
 	</script>
@@ -178,6 +189,29 @@
 		Komentarz: <textarea id="patient_comment" cols="80" rows="4"></textarea>
 		<input type="submit" id="cancel_patient" value="Anuluj"/>
 		<input type="submit" id="ok_patient" value="Zapisz"/>
+	</div>
+	
+	{% include 'teeth.html' %}
+	
+	<table id="tooth_loss">
+		{{ form }}
+		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" /></td>
+		<td><input type="submit" value="Zapisz" id="tooth_ok" /></td></tr>
+	</table>
+	
+	<div id="tooth_losses">
+		{% if losses %}
+			<table>
+			<tr><th>Data</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
+			{% for l in losses %}
+				<tr>
+		 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
+		 			<td>{{ l.loss_type }}</td>
+		 			<td>{{ l.comment }}</td>
+		 		</tr>
+			{% endfor %}
+			</table>
+		{% endif %}
 	</div>
 	
 	Aktualna wizyta:<br />
@@ -220,10 +254,4 @@
 			</div>
 	</div>
 	{% endfor %}
-	
-	<table id="tooth_loss">
-		{{ form }}
-		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" /></td>
-		<td><input type="submit" value="Zapisz" id="tooth_ok" /></td></tr>
-	</table>
 {% endblock %}

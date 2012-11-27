@@ -7,6 +7,7 @@
 	<script>
 		$(document).ready(function() {
 			$('.tooth_loss').hide();
+			$('#tooth_losses').hide();
 			
 			$('.appointment').click(function() {
 				id = '#appoint_' + $(this).attr('id');
@@ -24,6 +25,24 @@
 	{% for d in patient.patient_diseases_set.all %}
 		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
 	{% endfor %}
+	
+	{% include 'teeth.html' %}
+	
+	<div id="tooth_losses">
+		{% if losses %}
+			<table>
+			<tr><th>Ząb</th><th>Data</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
+			{% for l in losses %}
+				<tr>
+					{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
+		 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
+		 			<td>{{ l.loss_type }}</td>
+		 			<td>{{ l.comment }}</td>
+		 		</tr>
+			{% endfor %}
+			</table>
+		{% endif %}
+	</div>
 	
 	<br />Wizyty:<br />
 	{% for a in appoints %}

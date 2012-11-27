@@ -532,7 +532,7 @@ def appointment_list2(request):
     hours = []
     hour = dates.objects.filter(date=date).filter(dentist = dent) 
 
-    if appoints.count()!=0:
+    if appoints.count()!=0 and hour.count()!=0:
         begin = datetime.datetime.combine(appoints[0].date, hour[0].begin)
         end = datetime.datetime.combine(appoints[0].date, hour[0].end)
 
@@ -957,7 +957,11 @@ def reservations(request):
 def patient_card(request):
     pat = patient.objects.get(user = request.user)
     appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
-    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints })
+    
+    losses = tooth_loss.objects.filter(appointment__in = appointment.objects.filter(patient = pat))
+    if 'tooth' in request.POST.keys():
+        losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
+    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints, 'losses': losses })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
@@ -967,6 +971,7 @@ def patient_card_dentist(request):
     pat = appoint.patient
     appoints = appointment.objects.filter(patient = pat).filter(date__lt = datetime.datetime.now().date()).order_by('-date')
     form = ToothForm
+    losses = tooth_loss.objects.filter(appointment__in = appointment.objects.filter(patient = pat))
     if request.POST:
         if 'patient_comment' in request.POST.keys():
             pat.comment = request.POST['patient_comment'].strip()
@@ -991,11 +996,12 @@ def patient_card_dentist(request):
                                       comment = request.POST['comment'])
                     loss.save()
                 else:
+                    losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
                     form = ToothForm(request.POST['tooth'], request.POST['tooth_part'])
             else:
                 form = ToothForm(request.POST['tooth'])
 
-    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form })
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
