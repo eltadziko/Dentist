@@ -56,6 +56,7 @@
 		</div>
 			{% if a.description %}a.description<br /> {% endif %}
 			<div id="appoint_{{ a.id }}" class="tooth_loss">
+			{% if a.tooth_loss_set.all %}
 				<table>
 					<tr><th>Ząb</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
 					{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
@@ -66,6 +67,7 @@
 						</tr>
 					{% endfor %}
 				</table>
+			{% endif %}
 			</div>
 	</div>
 	{% endfor %}
