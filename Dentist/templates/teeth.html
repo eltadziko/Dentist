@@ -74,7 +74,13 @@
     
     <script>
     	$(document).ready(function() {
-    	
+    		
+    		$('area').attr('color', 'ffffff');
+    		
+    		{% for l in losses_all %}
+    			$(this).find('area[alt={{ l.tooth_part.id }}].{{ l.tooth.id }}').attr('color', '{{ l.loss_type.color }}');
+    		{% endfor %}
+    		
     		$('area').click(function() {
     			$.post('{{ link }}',
 					{ tooth: $(this).attr('class'),

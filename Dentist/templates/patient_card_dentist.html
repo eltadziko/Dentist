@@ -157,7 +157,7 @@
 					function(data) { 
 						$('#tooth_loss').hide();
 						$('#tooth_losses').hide();
-						$('#appoint_losses').html($(data).find('#appoint_losses').html()); 
+						$('#appoint_losses').html($(data).find('#appoint_losses').html()); 						
 				});
 			 	return false;
 			 });
@@ -191,9 +191,9 @@
 		<input type="submit" id="cancel_patient" value="Anuluj"/>
 		<input type="submit" id="ok_patient" value="Zapisz"/>
 	</div>
-	
-	{% include 'teeth.html' with link="/patient_card_dentist/" %}
-	
+
+	{% include 'teeth.html' with link="/patient_card_dentist/" losses_all=losses_all %}
+
 	<table id="tooth_loss">
 		{{ form }}
 		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" /></td>

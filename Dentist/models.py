@@ -157,6 +157,7 @@ class appointment(models.Model):
 
 class loss_type(models.Model):
     type = models.CharField("Typ", max_length=30)
+    color = models.CharField("Kolor", max_length=6)
     
     class Meta:
         verbose_name = "Typ ubytku"

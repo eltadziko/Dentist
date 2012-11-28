@@ -28,7 +28,7 @@
 		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
 	{% endfor %}
 	
-	{% include 'teeth.html' with link="/patient_card/" %}
+	{% include 'teeth.html' with link="/patient_card/" losses_all=losses_all %}
 	
 	<div id="tooth_losses">
 		{% if losses %}
