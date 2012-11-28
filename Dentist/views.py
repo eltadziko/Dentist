@@ -15,6 +15,7 @@ from forms.patient_user_form import PatientUserForm
 from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm, DatesAdditionEditForm, EditAddedDates2Form
 from forms.register_form import *
 from forms.dentist_form import *
+from forms.tooth_edit_form import *
 from django.contrib.auth.decorators import login_required, user_passes_test
 from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -241,7 +242,7 @@ def dentist_register(request):
                                           patient = patient.objects.get(user=request.user.id))
                     appoint.save()
                     messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano do dentysty.')
-                    return HttpResponseRedirect('/index/')
+                    return HttpResponseRedirect('/reservations/')
                 else:
                     apps = []
                     day = dates.objects.filter(dentist = request.POST['dentist']).get(date=request.POST['date'])
@@ -471,13 +472,16 @@ def appointment_list(request):
             request.session['date'] = date
         else:
             date = datetime.datetime.today().date()
-            request.session['date'] = date.strftime("%Y-%m-%d")
+            date = date.strftime("%Y-%m-%d")
+            request.session['date'] = date
         
     else:
         if 'date' in request.session:
             date = request.session['date']
         else:
             date = datetime.datetime.today().date()
+            date = date.strftime("%Y-%m-%d")
+            request.session['date'] = date
         if 'graphic' in request.session and request.session['graphic'] != '/appointment_list/':
             return HttpResponseRedirect(request.session['graphic'])
     
@@ -493,8 +497,6 @@ def appointment_list(request):
     app = [{'appoint': t[0], 'end': t[1], 'now_time': t[2]} for t in zip(appoints, ends, nows)]
     
     appoints_untimely = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=True).order_by('patient')
-    if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
-        date = date.strftime("%Y-%m-%d")
     
     return render(request, 'appointment_list.html', {'appoints': app, 'date': date, 'appoints_untimely': appoints_untimely})
 
@@ -511,13 +513,16 @@ def appointment_list2(request):
             request.session['date'] = date
         else:
             date = datetime.datetime.today().date()
-            request.session['date'] = date.strftime("%Y-%m-%d")
+            date = date.strftime("%Y-%m-%d")
+            request.session['date'] = date
         
     else:
         if 'date' in request.session:
             date = request.session['date']
         else:
             date = datetime.datetime.today().date()
+            date = date.strftime("%Y-%m-%d")
+            request.session['date'] = date
         if 'graphic' in request.session and request.session['graphic'] != '/appointment_list2/':
             return HttpResponseRedirect(request.session['graphic'])
     
@@ -527,7 +532,7 @@ def appointment_list2(request):
     hours = []
     hour = dates.objects.filter(date=date).filter(dentist = dent) 
 
-    if appoints.count()!=0:
+    if appoints.count()!=0 and hour.count()!=0:
         begin = datetime.datetime.combine(appoints[0].date, hour[0].begin)
         end = datetime.datetime.combine(appoints[0].date, hour[0].end)
 
@@ -553,10 +558,7 @@ def appointment_list2(request):
             app.append({'appoint':None, 'hour':h, 'length':i, 'now_time': now})
     
     appoints_untimely = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=True).order_by('patient')
-       
-    if not request.POST and not 'date' in request.session or request.POST and request.POST['date']=='0':
-        date = date.strftime("%Y-%m-%d")  
-        
+            
     return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours, 'appoints_untimely': appoints_untimely})
 
 @login_required
@@ -571,7 +573,8 @@ def day_graphic(request):
             request.session['graphic_date'] = date
         else:
             date = datetime.datetime.today().date()
-            request.session['graphic_date'] = date.strftime("%Y-%m-%d")
+            date = date.strftime("%Y-%m-%d")
+            request.session['graphic_date'] = date
         office = int(request.POST['office'])
     else:
         if 'graphic_date' in request.session:
@@ -579,15 +582,16 @@ def day_graphic(request):
             office = request.session['graphic_office']
         else:
             date = datetime.datetime.today().date()
+            date = date.strftime("%Y-%m-%d")
             office = offices[0].id
-            request.session['graphic_date'] = date.strftime("%Y-%m-%d")
+            request.session['graphic_date'] = date
         
     
     request.session['graphic_office'] = office
         
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
-    
+
     hours2 = []
     hours = dates.objects.filter(date = date).filter(dental_office = office)
     if hours.count() > 0:
@@ -650,9 +654,6 @@ def day_graphic(request):
                 appoints_untimely2[i].append(a[i])
             else:
                 appoints_untimely2[i].append(None)
-        
-    if not request.POST and not 'graphic_date' in request.session or request.POST and request.POST['date']=='0':
-        date = date.strftime("%Y-%m-%d")
 
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2})
 
@@ -1044,7 +1045,13 @@ def reservations(request):
 def patient_card(request):
     pat = patient.objects.get(user = request.user)
     appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
-    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints })
+    
+    losses = tooth_loss.objects.filter(appointment__in = appointment.objects.filter(patient = pat))
+    losses_all = losses.order_by("id")
+    
+    if 'tooth' in request.POST.keys():
+        losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
+    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints, 'losses': losses, 'losses_all': losses_all })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
@@ -1052,7 +1059,11 @@ def patient_card(request):
 def patient_card_dentist(request):
     appoint = appointment.objects.get(id = request.session['appoint'])
     pat = appoint.patient
-    appoints = appointment.objects.filter(patient = pat).filter(date__lte = datetime.datetime.now().date()).order_by('-date')
+    appoints = appointment.objects.filter(patient = pat).filter(date__lt = datetime.datetime.now().date()).order_by('-date')
+    form = ToothForm
+    losses = tooth_loss.objects.filter(appointment__in = appointment.objects.filter(patient = pat))
+    
+    losses_all = losses.order_by("id")
     
     if request.POST:
         if 'patient_comment' in request.POST.keys():
@@ -1068,7 +1079,22 @@ def patient_card_dentist(request):
             app = appointment.objects.get(id=request.POST['app'])
             app.description = request.POST['app_desc'].strip()
             app.save()
-    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint })
+        if 'tooth' in request.POST.keys():
+            if 'tooth_part' in request.POST.keys():
+                if 'comment' in request.POST.keys():
+                    loss = tooth_loss(appointment = appoint, 
+                                      tooth = tooth.objects.get(id=request.POST['tooth']), 
+                                      tooth_part = tooth_part.objects.get(id=request.POST['tooth_part']),
+                                      loss_type = loss_type.objects.get(id=request.POST['loss_type']),
+                                      comment = request.POST['comment'])
+                    loss.save()
+                else:
+                    losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
+                    form = ToothForm(request.POST['tooth'], request.POST['tooth_part'])
+            else:
+                form = ToothForm(request.POST['tooth'])
+
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')

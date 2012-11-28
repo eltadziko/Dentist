@@ -14,3 +14,4 @@ manage.py loaddata dates.yaml
 manage.py loaddata appointment.yaml
 manage.py loaddata tooth_part.yaml
 manage.py loaddata loss_type.yaml
+manage.py loaddata tooth_loss.yaml

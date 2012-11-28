@@ -3,10 +3,13 @@
 
 {% block javascript %}
 	{{ block.super }}
-	
+
+	<script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.maphilight.min.js"></script>
+
 	<script>
 		$(document).ready(function() {
 			$('.tooth_loss').hide();
+			$('#tooth_losses').hide();
 			
 			$('.appointment').click(function() {
 				id = '#appoint_' + $(this).attr('id');
@@ -25,6 +28,24 @@
 		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
 	{% endfor %}
 	
+	{% include 'teeth.html' with link="/patient_card/" losses_all=losses_all %}
+	
+	<div id="tooth_losses">
+		{% if losses %}
+			<table>
+			<tr><th>Ząb</th><th>Data</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
+			{% for l in losses %}
+				<tr>
+					{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
+		 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
+		 			<td>{{ l.loss_type }}</td>
+		 			<td>{{ l.comment }}</td>
+		 		</tr>
+			{% endfor %}
+			</table>
+		{% endif %}
+	</div>
+	
 	<br />Wizyty:<br />
 	{% for a in appoints %}
 	<div class="appoint">
@@ -35,11 +56,18 @@
 		</div>
 			{% if a.description %}a.description<br /> {% endif %}
 			<div id="appoint_{{ a.id }}" class="tooth_loss">
-			{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
-				{{ t.tooth.tooth_number }} ({{ t.tooth.type }}, szczęka {{ t.tooth.jaw }}, strona {{ t.tooth.side }}) - {{ t.tooth_part.name }}<br />
-				{% if t.loss_type %}Rozpoznanie: {{ t.loss_type.type }}<br />{% endif %}
-				{% if t.comment %}{{ t.comment }}<br />{% endif %}
-			{% endfor %}
+			{% if a.tooth_loss_set.all %}
+				<table>
+					<tr><th>Ząb</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
+					{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+						<tr>
+						<td>{{ t.tooth }} - {{ t.tooth_part.name }}</td>
+						<td>{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
+						<td>{% if t.comment %}{{ t.comment }}{% endif %}</td>
+						</tr>
+					{% endfor %}
+				</table>
+			{% endif %}
 			</div>
 	</div>
 	{% endfor %}

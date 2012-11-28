@@ -17,6 +17,18 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#graphic').html($(data).find('#graphic').html()); 
+						
+						$('.appoint_future, .appoint_past, .appoint_now').click(function() {
+						 	$.post('/appointment_list2/',
+								{ date: $('#date').val(),
+								  appoint: $(this).attr('id'),
+								  csrfmiddlewaretoken: '{{ csrf_token }}' },
+								function(data) {
+									window.location = '/patient_card_dentist/';
+								}	  
+							);
+						 	return false;
+						 });
 				});
 			 	return false;
 			 });
@@ -27,6 +39,7 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#graphic').html($(data).find('#graphic').html()); 
+						$('#date').attr('value', $(data).find('#date').val());
 				});
 			 	return false;
 			 }); 

@@ -155,6 +155,7 @@ class appointment(models.Model):
 
 class loss_type(models.Model):
     type = models.CharField("Typ", max_length=30)
+    color = models.CharField("Kolor", max_length=6)
     
     class Meta:
         verbose_name = "Typ ubytku"
@@ -189,7 +190,7 @@ class tooth(models.Model):
         verbose_name_plural = "Zęby"
 
     def __unicode__(self):
-        return self.type
+        return u'%s (%s)' % (self.tooth_number, self.type)
     
 class tooth_loss(models.Model):
     appointment = models.ForeignKey(appointment, verbose_name="Wizyta")
