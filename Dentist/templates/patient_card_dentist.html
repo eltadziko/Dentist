@@ -191,7 +191,7 @@
 		
 	<div id="is_in"></div>
 	
-	<div id="patient_edit">Edytuj</div>
+	<input type="submit" class="button2" id="patient_edit" value="Edytuj" />
 	<div id="form_patient_edit">
 		Komentarz: <textarea id="patient_comment" cols="80" rows="4"></textarea>
 		<input type="submit" id="cancel_patient" value="Anuluj"/>
@@ -252,7 +252,7 @@
 			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}<br />
 			{% if a.description %}{{ a.description }}<br /> {% endif %}
 			</div>
-			<div id="{{ a.id }}" class="app_edit">Edytuj</div>
+			<div id="{{ a.id }}" class="app_edit"><input type="submit" class="button2" value="Edytuj" /></div>
 			<div id="app_form_edit_{{ a.id }}" class="app_form_edit">
 				Opis: <textarea id="app_desc_{{ a.id }}" cols="80" rows="4">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
 				<input type="submit" class="cancel_app" value="Anuluj" name="{{ a.id }}"/>

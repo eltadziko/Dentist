@@ -484,6 +484,7 @@ margin:0 auto;
 
 .button2 {
 	color:white;
-	height:25px;
+	height:35px;
+	font-size:16px;
   	background: url(../img/BG_submenu.jpg) repeat-x;	
 }
