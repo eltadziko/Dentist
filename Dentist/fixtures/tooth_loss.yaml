@@ -1475,7 +1475,7 @@
   fields:
     appointment: 517
     tooth: 2
-    loss_type: 7
+    loss_type: 11
     tooth_part: 17
     comment: Leczenie bez znieczulania.
 - model: Dentist.tooth_loss
