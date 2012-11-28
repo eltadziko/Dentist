@@ -20,6 +20,11 @@
 				$('#is_in').text('Wszedł');
 			{% endif %}
 			
+			{% if appointment.is_now == 1 %}
+				$('#is_in').text('Wyszedł');
+				$('#is_in').attr('id', 'is_out');
+			{% endif %}
+			
 			$('.appointment').click(function() {
 				id = '#appoint_' + $(this).attr('id');
 				$(id).toggle();
