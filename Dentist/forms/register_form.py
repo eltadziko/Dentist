@@ -22,14 +22,15 @@ class RegisterForm(forms.Form):
             self.fields['office'].initial = office
             if sort == '0':
                 dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
-                dents = dentist.objects.filter(id__in=dats)
+                dents = dentist.objects.filter(id__in=dats).order_by('last_name')
                 self.fields['dentist'].queryset = dents
             else:
-                dats = dates.objects.filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date')
+                dats = dates.objects.values_list('date', flat=True).filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date').distinct()
+                print dats
                 self.fields['date'].choices = [(d, d) for d in dats]
                 if date != -1:
                     self.fields['date'].initial = date
-                    self.fields['dentist'].queryset = dentist.objects.filter(id__in = dates.objects.values_list('dentist', flat=True).filter(dental_office=office).filter(date=date))
+                    self.fields['dentist'].queryset = dentist.objects.filter(id__in = dates.objects.values_list('dentist', flat=True).filter(dental_office=office).filter(date=date)).order_by('last_name')
             if dent!=-1:
                 if sort == '0':
                     dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
@@ -71,14 +72,14 @@ class RegisterReceptionistForm(forms.Form):
             self.fields['office'].initial = office
             if sort == '0':
                 dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
-                dents = dentist.objects.filter(id__in=dats)
+                dents = dentist.objects.filter(id__in=dats).order_by('last_name')
                 self.fields['dentist'].queryset = dents
             else:
-                dats = dates.objects.filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date')
+                dats = dates.objects.values_list('date', flat=True).filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date').distinct()
                 self.fields['date'].choices = [(d, d) for d in dats]
                 if date != -1:
                     self.fields['date'].initial = date
-                    self.fields['dentist'].queryset = dentist.objects.filter(id__in = dates.objects.values_list('dentist', flat=True).filter(dental_office=office).filter(date=date))
+                    self.fields['dentist'].queryset = dentist.objects.filter(id__in = dates.objects.values_list('dentist', flat=True).filter(dental_office=office).filter(date=date)).order_by('last_name')
             if dent!=-1:
                 if sort == '0':
                     dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
@@ -128,7 +129,7 @@ class RegisterReceptionistForm2(forms.Form):
         if office!=-1:
             self.fields['office'].initial = office
             dats = dates.objects.values_list('dentist', flat = True).filter(dental_office=office).filter(date__gte=datetime.date.today)
-            dents = dentist.objects.filter(id__in=dats)
+            dents = dentist.objects.filter(id__in=dats).order_by('last_name')
             self.fields['dentist'].queryset = dents
             if dent!=-1:
                 dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
