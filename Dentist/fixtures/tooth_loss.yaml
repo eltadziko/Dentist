@@ -97,7 +97,7 @@
 - model: Dentist.tooth_loss
   pk: 13
   fields:
-    appointment: 10
+    appointment: 13
     tooth: 4
     loss_type: 20
     tooth_part: 6
@@ -105,7 +105,7 @@
 - model: Dentist.tooth_loss
   pk: 14
   fields:
-    appointment: 10
+    appointment: 14
     tooth: 19
     loss_type: 14
     tooth_part: 4
@@ -113,7 +113,7 @@
 - model: Dentist.tooth_loss
   pk: 15
   fields:
-    appointment: 13
+    appointment: 15
     tooth: 13
     loss_type: 19
     tooth_part: 2
@@ -793,7 +793,7 @@
 - model: Dentist.tooth_loss
   pk: 100
   fields:
-    appointment: 100
+    appointment: 434
     tooth: 5
     loss_type: 5
     tooth_part: 1
@@ -801,7 +801,7 @@
 - model: Dentist.tooth_loss
   pk: 101
   fields:
-    appointment: 101
+    appointment: 435
     tooth: 32
     loss_type: 15
     tooth_part: 6
@@ -809,7 +809,7 @@
 - model: Dentist.tooth_loss
   pk: 102
   fields:
-    appointment: 102
+    appointment: 436
     tooth: 7
     loss_type: 13 
     tooth_part: 3
@@ -817,7 +817,7 @@
 - model: Dentist.tooth_loss
   pk: 103
   fields:
-    appointment: 103
+    appointment: 534
     tooth: 1
     loss_type: 1
     tooth_part: 1
@@ -825,7 +825,7 @@
 - model: Dentist.tooth_loss
   pk: 104
   fields:
-    appointment: 104
+    appointment: 437
     tooth: 5
     loss_type: 13
     tooth_part: 3
@@ -833,7 +833,7 @@
 - model: Dentist.tooth_loss
   pk: 105
   fields:
-    appointment: 105
+    appointment: 438
     tooth: 16
     loss_type: 12
     tooth_part: 3
@@ -841,7 +841,7 @@
 - model: Dentist.tooth_loss
   pk: 106
   fields:
-    appointment: 106
+    appointment: 439
     tooth: 11
     loss_type: 10
     tooth_part: 4
@@ -849,7 +849,7 @@
 - model: Dentist.tooth_loss
   pk: 107
   fields:
-    appointment: 107
+    appointment: 440
     tooth: 30
     loss_type: 7
     tooth_part: 1   
@@ -857,7 +857,7 @@
 - model: Dentist.tooth_loss
   pk: 108
   fields:
-    appointment: 108
+    appointment: 441
     tooth: 17
     loss_type: 14
     tooth_part: 3
@@ -865,7 +865,7 @@
 - model: Dentist.tooth_loss
   pk: 109
   fields:
-    appointment: 109
+    appointment: 442
     tooth: 7
     loss_type: 15
     tooth_part: 5
@@ -873,7 +873,7 @@
 - model: Dentist.tooth_loss
   pk: 110
   fields:
-    appointment: 110
+    appointment: 443
     tooth: 1
     loss_type: 16
     tooth_part: 6
@@ -881,7 +881,7 @@
 - model: Dentist.tooth_loss
   pk: 111
   fields:
-    appointment: 111
+    appointment: 444
     tooth: 30
     loss_type: 19
     tooth_part: 5
@@ -889,7 +889,7 @@
 - model: Dentist.tooth_loss
   pk: 112
   fields:
-    appointment: 112
+    appointment: 445
     tooth: 12
     loss_type: 12
     tooth_part: 2
@@ -897,7 +897,7 @@
 - model: Dentist.tooth_loss
   pk: 113
   fields:
-    appointment: 113
+    appointment: 446
     tooth: 4
     loss_type: 19
     tooth_part: 6
@@ -905,7 +905,7 @@
 - model: Dentist.tooth_loss
   pk: 114
   fields:
-    appointment: 114
+    appointment: 447
     tooth: 19
     loss_type: 14
     tooth_part: 4
@@ -913,7 +913,7 @@
 - model: Dentist.tooth_loss
   pk: 115
   fields:
-    appointment: 115
+    appointment: 448
     tooth: 13
     loss_type: 12
     tooth_part: 2
@@ -921,7 +921,7 @@
 - model: Dentist.tooth_loss
   pk: 116
   fields:
-    appointment: 116
+    appointment: 449
     tooth: 5
     loss_type: 14
     tooth_part: 3
@@ -929,7 +929,7 @@
 - model: Dentist.tooth_loss
   pk: 117
   fields:
-    appointment: 117
+    appointment: 450
     tooth: 4
     loss_type: 15
     tooth_part: 5
@@ -937,7 +937,7 @@
 - model: Dentist.tooth_loss
   pk: 118
   fields:
-    appointment: 118
+    appointment: 451
     tooth: 30
     loss_type: 13
     tooth_part: 4
@@ -945,7 +945,7 @@
 - model: Dentist.tooth_loss
   pk: 119
   fields:
-    appointment: 119
+    appointment: 452
     tooth: 30
     loss_type: 14
     tooth_part: 2 
@@ -953,7 +953,7 @@
 - model: Dentist.tooth_loss
   pk: 120
   fields:
-    appointment: 120
+    appointment: 453
     tooth: 12
     loss_type: 13
     tooth_part: 2
@@ -961,7 +961,7 @@
 - model: Dentist.tooth_loss
   pk: 121
   fields: 
-    appointment: 121
+    appointment: 454
     tooth: 3
     loss_type: 10
     tooth_part: 2
@@ -969,7 +969,7 @@
 - model: Dentist.tooth_loss
   pk: 122
   fields:
-    appointment: 122
+    appointment: 455
     tooth: 32
     loss_type: 10
     tooth_part: 3
@@ -977,7 +977,7 @@
 - model: Dentist.tooth_loss
   pk: 123
   fields:
-    appointment: 123
+    appointment: 456
     tooth: 12
     loss_type: 11
     tooth_part: 3
@@ -985,7 +985,7 @@
 - model: Dentist.tooth_loss
   pk: 124
   fields:
-    appointment: 124
+    appointment: 457
     tooth: 30
     loss_type: 10
     tooth_part: 4
@@ -993,7 +993,7 @@
 - model: Dentist.tooth_loss
   pk: 125
   fields:
-    appointment: 125
+    appointment: 458
     tooth: 15
     loss_type: 10
     tooth_part: 4
@@ -1001,7 +1001,7 @@
 - model: Dentist.tooth_loss
   pk: 126
   fields:
-    appointment: 126
+    appointment: 459
     tooth: 6
     loss_type: 11
     tooth_part: 3
@@ -1009,7 +1009,7 @@
 - model: Dentist.tooth_loss
   pk: 127
   fields:
-    appointment: 127
+    appointment: 460
     tooth: 15
     loss_type: 15
     tooth_part: 6
@@ -1017,7 +1017,7 @@
 - model: Dentist.tooth_loss
   pk: 128
   fields:
-    appointment: 128
+    appointment: 461
     tooth: 32
     loss_type: 13
     tooth_part: 2
@@ -1025,7 +1025,7 @@
 - model: Dentist.tooth_loss
   pk: 129
   fields:
-    appointment: 129
+    appointment: 462
     tooth: 4
     loss_type: 12
     tooth_part: 2
@@ -1033,7 +1033,7 @@
 - model: Dentist.tooth_loss
   pk: 130
   fields:
-    appointment: 130
+    appointment: 463
     tooth: 5
     loss_type: 17
     tooth_part: 5
@@ -1041,7 +1041,7 @@
 - model: Dentist.tooth_loss
   pk: 131
   fields:
-    appointment: 131
+    appointment: 464
     tooth: 3
     loss_type: 10
     tooth_part: 3
@@ -1049,7 +1049,7 @@
 - model: Dentist.tooth_loss
   pk: 132
   fields:
-    appointment: 132
+    appointment: 465
     tooth: 23
     loss_type: 11
     tooth_part: 3
@@ -1057,7 +1057,7 @@
 - model: Dentist.tooth_loss
   pk: 133
   fields:
-    appointment: 133
+    appointment: 466
     tooth: 7
     loss_type: 17
     tooth_part: 6
@@ -1065,7 +1065,7 @@
 - model: Dentist.tooth_loss
   pk: 134
   fields:
-    appointment: 134
+    appointment: 467
     tooth: 31
     loss_type: 18
     tooth_part: 5
@@ -1073,7 +1073,7 @@
 - model: Dentist.tooth_loss
   pk: 135
   fields:
-    appointment: 135
+    appointment: 468
     tooth: 2
     loss_type: 1
     tooth_part: 1
@@ -1081,7 +1081,7 @@
 - model: Dentist.tooth_loss
   pk: 136
   fields:
-    appointment: 136
+    appointment: 469
     tooth: 16
     loss_type: 10
     tooth_part: 3
@@ -1089,7 +1089,7 @@
 - model: Dentist.tooth_loss
   pk: 137
   fields:
-    appointment: 137
+    appointment: 470
     tooth: 6
     loss_type: 12
     tooth_part: 3
@@ -1097,7 +1097,7 @@
 - model: Dentist.tooth_loss
   pk: 138
   fields:
-    appointment: 138
+    appointment: 471
     tooth: 1
     loss_type: 3
     tooth_part: 1 
@@ -1105,7 +1105,7 @@
 - model: Dentist.tooth_loss
   pk: 139
   fields:
-    appointment: 139
+    appointment: 472
     tooth: 2
     loss_type: 17
     tooth_part: 7
@@ -1113,7 +1113,7 @@
 - model: Dentist.tooth_loss
   pk: 140
   fields:
-    appointment: 140
+    appointment: 473
     tooth: 4
     loss_type: 7 
     tooth_part: 1
@@ -1121,7 +1121,7 @@
 - model: Dentist.tooth_loss
   pk: 141
   fields:
-    appointment: 141
+    appointment: 474
     tooth: 22
     loss_type: 12
     tooth_part: 2
@@ -1129,7 +1129,7 @@
 - model: Dentist.tooth_loss
   pk: 142
   fields:
-    appointment: 142
+    appointment: 475
     tooth: 2
     loss_type: 14
     tooth_part: 4
@@ -1145,7 +1145,7 @@
 - model: Dentist.tooth_loss
   pk: 144
   fields:
-    appointment: 144
+    appointment: 476
     tooth: 22
     loss_type: 11
     tooth_part: 2
@@ -1153,7 +1153,7 @@
 - model: Dentist.tooth_loss
   pk: 145
   fields:
-    appointment: 145
+    appointment: 477
     tooth: 7
     loss_type: 10
     tooth_part: 2
@@ -1161,7 +1161,7 @@
 - model: Dentist.tooth_loss
   pk: 146
   fields:
-    appointment: 146
+    appointment: 478
     tooth: 13
     loss_type: 10
     tooth_part: 3
@@ -1169,7 +1169,7 @@
 - model: Dentist.tooth_loss
   pk: 147
   fields:
-    appointment: 147
+    appointment: 479
     tooth: 32
     loss_type: 10
     tooth_part: 3
@@ -1177,7 +1177,7 @@
 - model: Dentist.tooth_loss
   pk: 148
   fields:
-    appointment: 148
+    appointment: 480
     tooth: 12
     loss_type: 11
     tooth_part: 4
@@ -1185,7 +1185,7 @@
 - model: Dentist.tooth_loss
   pk: 149
   fields:
-    appointment: 149
+    appointment: 481
     tooth: 3
     loss_type: 11
     tooth_part: 2
@@ -1193,7 +1193,7 @@
 - model: Dentist.tooth_loss
   pk: 150
   fields:
-    appointment: 150
+    appointment: 482
     tooth: 5
     loss_type: 5
     tooth_part: 1
@@ -1201,7 +1201,7 @@
 - model: Dentist.tooth_loss
   pk: 151
   fields:
-    appointment: 151
+    appointment: 483
     tooth: 32
     loss_type: 18
     tooth_part: 6
@@ -1209,7 +1209,7 @@
 - model: Dentist.tooth_loss
   pk: 152
   fields:
-    appointment: 152
+    appointment: 484
     tooth: 7
     loss_type: 14
     tooth_part: 3
@@ -1217,7 +1217,7 @@
 - model: Dentist.tooth_loss
   pk: 153
   fields:
-    appointment: 153
+    appointment: 485
     tooth: 1
     loss_type: 9
     tooth_part: 1
@@ -1225,7 +1225,7 @@
 - model: Dentist.tooth_loss
   pk: 154
   fields:
-    appointment: 154
+    appointment: 486
     tooth: 5
     loss_type: 13
     tooth_part: 3
@@ -1233,7 +1233,7 @@
 - model: Dentist.tooth_loss
   pk: 155
   fields:
-    appointment: 155
+    appointment: 487
     tooth: 16
     loss_type: 12
     tooth_part: 3
@@ -1241,7 +1241,7 @@
 - model: Dentist.tooth_loss
   pk: 156
   fields:
-    appointment: 156
+    appointment: 488
     tooth: 11
     loss_type: 10
     tooth_part: 4
@@ -1249,7 +1249,7 @@
 - model: Dentist.tooth_loss
   pk: 157
   fields:
-    appointment: 157
+    appointment: 489
     tooth: 30
     loss_type: 7
     tooth_part: 1   
@@ -1257,7 +1257,7 @@
 - model: Dentist.tooth_loss
   pk: 158
   fields:
-    appointment: 158
+    appointment: 490
     tooth: 17
     loss_type: 14
     tooth_part: 3
@@ -1265,7 +1265,7 @@
 - model: Dentist.tooth_loss
   pk: 159
   fields:
-    appointment: 159
+    appointment: 491
     tooth: 7
     loss_type: 16
     tooth_part: 5
@@ -1273,7 +1273,7 @@
 - model: Dentist.tooth_loss
   pk: 160
   fields:
-    appointment: 160
+    appointment: 492
     tooth: 1
     loss_type: 19
     tooth_part: 6
@@ -1281,7 +1281,7 @@
 - model: Dentist.tooth_loss
   pk: 161
   fields:
-    appointment: 161
+    appointment: 493
     tooth: 30
     loss_type: 18
     tooth_part: 5
@@ -1289,7 +1289,7 @@
 - model: Dentist.tooth_loss
   pk: 162
   fields:
-    appointment: 162
+    appointment: 494
     tooth: 12
     loss_type: 12
     tooth_part: 2
@@ -1297,7 +1297,7 @@
 - model: Dentist.tooth_loss
   pk: 163
   fields:
-    appointment: 163
+    appointment: 495
     tooth: 4
     loss_type: 18
     tooth_part: 6
@@ -1305,7 +1305,7 @@
 - model: Dentist.tooth_loss
   pk: 164
   fields:
-    appointment: 164
+    appointment: 496
     tooth: 19
     loss_type: 14
     tooth_part: 4
@@ -1313,7 +1313,7 @@
 - model: Dentist.tooth_loss
   pk: 165
   fields:
-    appointment: 165
+    appointment: 497
     tooth: 13
     loss_type: 13
     tooth_part: 2
@@ -1321,7 +1321,7 @@
 - model: Dentist.tooth_loss
   pk: 166
   fields:
-    appointment: 166
+    appointment: 498
     tooth: 5
     loss_type: 13
     tooth_part: 3
@@ -1329,7 +1329,7 @@
 - model: Dentist.tooth_loss
   pk: 167
   fields:
-    appointment: 167
+    appointment: 499
     tooth: 4
     loss_type: 17
     tooth_part: 5
@@ -1337,7 +1337,7 @@
 - model: Dentist.tooth_loss
   pk: 168
   fields:
-    appointment: 168
+    appointment: 500
     tooth: 30
     loss_type: 14
     tooth_part: 4
@@ -1345,7 +1345,7 @@
 - model: Dentist.tooth_loss
   pk: 169
   fields:
-    appointment: 169
+    appointment: 501
     tooth: 30
     loss_type: 10
     tooth_part: 2 
@@ -1353,7 +1353,7 @@
 - model: Dentist.tooth_loss
   pk: 170
   fields:
-    appointment: 170
+    appointment: 502
     tooth: 12
     loss_type: 11
     tooth_part: 2
@@ -1361,7 +1361,7 @@
 - model: Dentist.tooth_loss
   pk: 171
   fields: 
-    appointment: 171
+    appointment: 503
     tooth: 3
     loss_type: 12
     tooth_part: 2
@@ -1369,7 +1369,7 @@
 - model: Dentist.tooth_loss
   pk: 172
   fields:
-    appointment: 172
+    appointment: 504
     tooth: 32
     loss_type: 14
     tooth_part: 3
@@ -1377,7 +1377,7 @@
 - model: Dentist.tooth_loss
   pk: 173
   fields:
-    appointment: 173
+    appointment: 505
     tooth: 12
     loss_type: 12
     tooth_part: 3
@@ -1385,7 +1385,7 @@
 - model: Dentist.tooth_loss
   pk: 174
   fields:
-    appointment: 174
+    appointment: 506
     tooth: 30
     loss_type: 14
     tooth_part: 4
@@ -1393,7 +1393,7 @@
 - model: Dentist.tooth_loss
   pk: 175
   fields:
-    appointment: 175
+    appointment: 507
     tooth: 15
     loss_type: 14
     tooth_part: 4
@@ -1401,7 +1401,7 @@
 - model: Dentist.tooth_loss
   pk: 176
   fields:
-    appointment: 176
+    appointment: 508
     tooth: 6
     loss_type: 10
     tooth_part: 3
@@ -1409,7 +1409,7 @@
 - model: Dentist.tooth_loss
   pk: 177
   fields:
-    appointment: 177
+    appointment: 509
     tooth: 15
     loss_type: 11
     tooth_part: 6
@@ -1417,7 +1417,7 @@
 - model: Dentist.tooth_loss
   pk: 178
   fields:
-    appointment: 178
+    appointment: 510
     tooth: 32
     loss_type: 12
     tooth_part: 2
@@ -1425,7 +1425,7 @@
 - model: Dentist.tooth_loss
   pk: 179
   fields:
-    appointment: 179
+    appointment: 511
     tooth: 4
     loss_type: 11
     tooth_part: 2
@@ -1433,7 +1433,7 @@
 - model: Dentist.tooth_loss
   pk: 180
   fields:
-    appointment: 180
+    appointment: 512
     tooth: 5
     loss_type: 15
     tooth_part: 5
@@ -1441,7 +1441,7 @@
 - model: Dentist.tooth_loss
   pk: 181
   fields:
-    appointment: 181
+    appointment: 513
     tooth: 3
     loss_type: 10
     tooth_part: 15
@@ -1449,7 +1449,7 @@
 - model: Dentist.tooth_loss
   pk: 182
   fields:
-    appointment: 182
+    appointment: 514
     tooth: 23
     loss_type: 14
     tooth_part: 20
@@ -1457,7 +1457,7 @@
 - model: Dentist.tooth_loss
   pk: 183
   fields:
-    appointment: 183
+    appointment: 515
     tooth: 7
     loss_type: 14
     tooth_part: 16
@@ -1465,7 +1465,7 @@
 - model: Dentist.tooth_loss
   pk: 184
   fields:
-    appointment: 184
+    appointment: 516
     tooth: 31
     loss_type: 10
     tooth_part: 15
@@ -1473,15 +1473,15 @@
 - model: Dentist.tooth_loss
   pk: 185
   fields:
-    appointment: 185
+    appointment: 517
     tooth: 2
-    loss_type: 7
+    loss_type: 11
     tooth_part: 17
     comment: Leczenie bez znieczulania.
 - model: Dentist.tooth_loss
   pk: 186
   fields:
-    appointment: 186
+    appointment: 518
     tooth: 16
     loss_type: 15
     tooth_part: 19
@@ -1489,7 +1489,7 @@
 - model: Dentist.tooth_loss
   pk: 187
   fields:
-    appointment: 187
+    appointment: 519
     tooth: 6
     loss_type: 1 
     tooth_part: 13
@@ -1497,7 +1497,7 @@
 - model: Dentist.tooth_loss
   pk: 188
   fields:
-    appointment: 188
+    appointment: 520
     tooth: 1
     loss_type: 15
     tooth_part: 19 
@@ -1505,7 +1505,7 @@
 - model: Dentist.tooth_loss
   pk: 189
   fields:
-    appointment: 189
+    appointment: 521
     tooth: 2
     loss_type: 16
     tooth_part: 7
@@ -1513,7 +1513,7 @@
 - model: Dentist.tooth_loss
   pk: 190
   fields:
-    appointment: 190
+    appointment: 522
     tooth: 4
     loss_type: 7 
     tooth_part: 14
@@ -1521,7 +1521,7 @@
 - model: Dentist.tooth_loss
   pk: 191
   fields:
-    appointment: 191
+    appointment: 523
     tooth: 22
     loss_type: 8
     tooth_part: 12
@@ -1529,7 +1529,7 @@
 - model: Dentist.tooth_loss
   pk: 192
   fields:
-    appointment: 192
+    appointment: 524
     tooth: 2
     loss_type: 4
     tooth_part: 14
@@ -1537,7 +1537,7 @@
 - model: Dentist.tooth_loss
   pk: 193
   fields:
-    appointment: 193
+    appointment: 525
     tooth: 6
     loss_type: 10
     tooth_part: 2
@@ -1545,7 +1545,7 @@
 - model: Dentist.tooth_loss
   pk: 194
   fields:
-    appointment: 194
+    appointment: 526
     tooth: 22
     loss_type: 7 
     tooth_part: 12
@@ -1553,7 +1553,7 @@
 - model: Dentist.tooth_loss
   pk: 195
   fields:
-    appointment: 195
+    appointment: 527
     tooth: 7
     loss_type: 3 
     tooth_part: 12
@@ -1561,7 +1561,7 @@
 - model: Dentist.tooth_loss
   pk: 196
   fields:
-    appointment: 196
+    appointment: 528
     tooth: 13
     loss_type: 13
     tooth_part: 3
@@ -1569,7 +1569,7 @@
 - model: Dentist.tooth_loss
   pk: 197
   fields:
-    appointment: 197
+    appointment: 529
     tooth: 32
     loss_type: 2
     tooth_part: 13
@@ -1577,7 +1577,7 @@
 - model: Dentist.tooth_loss
   pk: 198
   fields:
-    appointment: 198
+    appointment: 530
     tooth: 12
     loss_type: 7
     tooth_part: 14
@@ -1585,7 +1585,7 @@
 - model: Dentist.tooth_loss
   pk: 199
   fields:
-    appointment: 199
+    appointment: 531
     tooth: 3
     loss_type: 11
     tooth_part: 12
@@ -1593,7 +1593,7 @@
 - model: Dentist.tooth_loss
   pk: 200
   fields:
-    appointment: 200
+    appointment: 532
     tooth: 5
     loss_type: 11
     tooth_part: 11

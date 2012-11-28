@@ -8,7 +8,7 @@
     patient: 1
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 2
   fields:
@@ -30,7 +30,7 @@
     patient: 3
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 4
   fields:
@@ -41,7 +41,7 @@
     patient: 4
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 5
   fields:
@@ -52,7 +52,7 @@
     patient: 5
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 6
   fields:
@@ -63,7 +63,7 @@
     patient: 6
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 7
   fields:
@@ -74,7 +74,7 @@
     patient: 7
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 8
   fields:
@@ -85,7 +85,7 @@
     patient: 8
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 9
   fields:
@@ -96,7 +96,7 @@
     patient: 9
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 10
   fields:
@@ -107,7 +107,7 @@
     patient: 10
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 11
   fields:
@@ -118,7 +118,7 @@
     patient: 11
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 12
   fields:
@@ -129,7 +129,7 @@
     patient: 12
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 13
   fields:
@@ -140,7 +140,7 @@
     patient: 13
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 14
   fields:
@@ -162,7 +162,7 @@
     patient: 15
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 16
   fields:
@@ -171,9 +171,9 @@
     description: 
     dentist: 3
     patient: 16
-    dental_office: 3
+    dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 17
   fields:
@@ -184,7 +184,7 @@
     patient: 17
     dental_office: 1
     appointment_type: 3 
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 18
   fields:
@@ -195,7 +195,7 @@
     patient: 18
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 19
   fields:
@@ -206,7 +206,7 @@
     patient: 19
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 20
   fields:
@@ -217,7 +217,7 @@
     patient: 20
     dental_office: 1
     appointment_type: 3
-    is_now: 1  
+    is_now:  
 - model: Dentist.appointment
   pk: 21
   fields:
@@ -228,7 +228,7 @@
     patient: 21
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 22
   fields:
@@ -239,7 +239,7 @@
     patient: 22
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 23
   fields:
@@ -250,7 +250,7 @@
     patient: 23
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now: -1 
 - model: Dentist.appointment
   pk: 24
   fields:
@@ -272,7 +272,7 @@
     patient: 25
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 26
   fields:
@@ -283,7 +283,7 @@
     patient: 26
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 27
   fields:
@@ -294,7 +294,7 @@
     patient: 27
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 28
   fields:
@@ -305,7 +305,7 @@
     patient: 28
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 29
   fields:
@@ -316,7 +316,7 @@
     patient: 29
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 30
   fields:
@@ -327,7 +327,7 @@
     patient: 30
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now:  
 - model: Dentist.appointment
   pk: 31
   fields:
@@ -338,7 +338,7 @@
     patient: 31
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 32
   fields:
@@ -349,7 +349,7 @@
     patient: 32
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 33
   fields:
@@ -360,7 +360,7 @@
     patient: 33
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 34
   fields:
@@ -371,7 +371,7 @@
     patient: 34
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 35
   fields:
@@ -382,7 +382,7 @@
     patient: 35
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 36
   fields:
@@ -393,7 +393,7 @@
     patient: 36
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 37
   fields:
@@ -404,7 +404,7 @@
     patient: 37
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 38
   fields:
@@ -415,7 +415,7 @@
     patient: 38
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 39
   fields:
@@ -426,7 +426,7 @@
     patient: 39
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 40
   fields:
@@ -437,7 +437,7 @@
     patient: 40
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 41
   fields:
@@ -448,7 +448,7 @@
     patient: 41
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 42
   fields:
@@ -459,7 +459,7 @@
     patient: 42
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 43
   fields:
@@ -470,7 +470,7 @@
     patient: 43
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 44
   fields:
@@ -481,7 +481,7 @@
     patient: 44
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 45
   fields:
@@ -492,7 +492,7 @@
     patient: 45
     dental_office: 1
     appointment_type: 1 
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 46
   fields:
@@ -503,7 +503,7 @@
     patient: 46
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 47
   fields:
@@ -514,7 +514,7 @@
     patient: 47
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 48
   fields:
@@ -525,7 +525,7 @@
     patient: 48
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 49
   fields:
@@ -536,7 +536,7 @@
     patient: 49
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 50
   fields:
@@ -558,7 +558,7 @@
     patient: 51
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 52
   fields:
@@ -569,7 +569,7 @@
     patient: 52
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 53
   fields:
@@ -580,7 +580,7 @@
     patient: 53
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 54
   fields:
@@ -591,7 +591,7 @@
     patient: 54
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 55
   fields:
@@ -602,7 +602,7 @@
     patient: 55
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: -1 
 - model: Dentist.appointment
   pk: 56
   fields:
@@ -613,7 +613,7 @@
     patient: 56
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 57
   fields:
@@ -624,7 +624,7 @@
     patient: 57
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 58
   fields:
@@ -635,7 +635,7 @@
     patient: 58
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 59
   fields:
@@ -646,7 +646,7 @@
     patient: 59
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 60
   fields:
@@ -657,7 +657,7 @@
     patient: 60
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 61
   fields:
@@ -668,7 +668,7 @@
     patient: 61
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 62
   fields:
@@ -679,7 +679,7 @@
     patient: 62
     dental_office: 1
     appointment_type: 2 
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 63
   fields:
@@ -701,7 +701,7 @@
     patient: 64
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 65
   fields:
@@ -712,7 +712,7 @@
     patient: 65
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now: -1 
 - model: Dentist.appointment
   pk: 66
   fields:
@@ -723,7 +723,7 @@
     patient: 66
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 67
   fields:
@@ -734,7 +734,7 @@
     patient: 67
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 68
   fields:
@@ -745,7 +745,7 @@
     patient: 68
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 69
   fields:
@@ -756,7 +756,7 @@
     patient: 69
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 70
   fields:
@@ -767,7 +767,7 @@
     patient: 70
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 71
   fields:
@@ -789,7 +789,7 @@
     patient: 72
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 73
   fields:
@@ -800,7 +800,7 @@
     patient: 73
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 74
   fields:
@@ -811,7 +811,7 @@
     patient: 74
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 75
   fields:
@@ -822,7 +822,7 @@
     patient: 75
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 76
   fields:
@@ -833,7 +833,7 @@
     patient: 76
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 77
   fields:
@@ -844,7 +844,7 @@
     patient: 77
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 78
   fields:
@@ -855,7 +855,7 @@
     patient: 78
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 79
   fields:
@@ -866,7 +866,7 @@
     patient: 79
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 80
   fields:
@@ -877,7 +877,7 @@
     patient: 80
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 81
   fields:
@@ -888,7 +888,7 @@
     patient: 81
     dental_office: 1
     appointment_type: 3 
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 82
   fields:
@@ -899,40 +899,40 @@
     patient: 82
     dental_office: 1
     appointment_type: 3 
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 83
   fields:
-    date: 2012-11-08
+    date: 2012-12-13
     hour: "12:00"
     description: 
     dentist: 14 
     patient: 83
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 84
   fields:
-    date: 2012-11-08
+    date: 2012-12-13
     hour: "13:00"
     description: 
     dentist: 14
     patient: 84
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 85
   fields:
-    date: 2012-11-08
+    date: 2012-12-13
     hour: "14:00"
     description: 
     dentist: 14
     patient: 85
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 86
   fields:
@@ -943,7 +943,7 @@
     patient: 86
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 87
   fields:
@@ -954,7 +954,7 @@
     patient: 87
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 88
   fields:
@@ -965,7 +965,7 @@
     patient: 88
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 89
   fields:
@@ -976,7 +976,7 @@
     patient: 89
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 90
   fields:
@@ -998,7 +998,7 @@
     patient: 91
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 92
   fields:
@@ -1009,7 +1009,7 @@
     patient: 92
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 93
   fields:
@@ -1086,7 +1086,7 @@
     patient: 99
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 100
   fields:
@@ -1097,7 +1097,7 @@
     patient: 100
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 101
   fields:
@@ -1108,7 +1108,7 @@
     patient: 101
     dental_office: 1
     appointment_type: 2 
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 102
   fields:
@@ -1119,7 +1119,7 @@
     patient: 102
     dental_office: 1
     appointment_type: 2 
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 103
   fields:
@@ -1130,7 +1130,7 @@
     patient: 103
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 104
   fields:
@@ -1141,7 +1141,7 @@
     patient: 104
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 105
   fields:
@@ -1152,7 +1152,7 @@
     patient: 105
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 106
   fields:
@@ -1163,7 +1163,7 @@
     patient: 106
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 107
   fields:
@@ -1174,7 +1174,7 @@
     patient: 107
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 108
   fields:
@@ -1185,7 +1185,7 @@
     patient: 108
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 109
   fields:
@@ -1196,7 +1196,7 @@
     patient: 109
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 110
   fields:
@@ -1207,7 +1207,7 @@
     patient: 110
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 111
   fields:
@@ -1218,7 +1218,7 @@
     patient: 111
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 112
   fields:
@@ -1229,7 +1229,7 @@
     patient: 112
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 113
   fields:
@@ -1240,7 +1240,7 @@
     patient: 113
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 114
   fields:
@@ -1251,7 +1251,7 @@
     patient: 114
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 115
   fields:
@@ -1262,7 +1262,7 @@
     patient: 115
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 116
   fields:
@@ -1273,7 +1273,7 @@
     patient: 116
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 117
   fields:
@@ -1284,7 +1284,7 @@
     patient: 117
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 118
   fields:
@@ -1295,7 +1295,7 @@
     patient: 118
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 119
   fields:
@@ -1306,7 +1306,7 @@
     patient: 119
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 120
   fields:
@@ -1317,7 +1317,7 @@
     patient: 120
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 121
   fields:
@@ -1328,7 +1328,7 @@
     patient: 121
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: -1 
 - model: Dentist.appointment
   pk: 122
   fields:
@@ -1339,7 +1339,7 @@
     patient: 122
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 123
   fields:
@@ -1350,7 +1350,7 @@
     patient: 123
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 124
   fields:
@@ -1361,7 +1361,7 @@
     patient: 124
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 125
   fields:
@@ -1372,7 +1372,7 @@
     patient: 125
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 126
   fields:
@@ -1383,7 +1383,7 @@
     patient: 126
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 127
   fields:
@@ -1394,7 +1394,7 @@
     patient: 127
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 128
   fields:
@@ -1405,7 +1405,7 @@
     patient: 128
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 129
   fields:
@@ -1416,7 +1416,7 @@
     patient: 129
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 130
   fields:
@@ -1427,7 +1427,7 @@
     patient: 130
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 131
   fields:
@@ -1438,7 +1438,7 @@
     patient: 131
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 132
   fields:
@@ -1449,7 +1449,7 @@
     patient: 132
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 133
   fields:
@@ -1460,7 +1460,7 @@
     patient: 133
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 134
   fields:
@@ -1471,7 +1471,7 @@
     patient: 134
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 135
   fields:
@@ -1482,7 +1482,7 @@
     patient: 135
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 136
   fields:
@@ -1493,7 +1493,7 @@
     patient: 136
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 137
   fields:
@@ -1504,7 +1504,7 @@
     patient: 137
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 138
   fields:
@@ -1515,7 +1515,7 @@
     patient: 138
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 139
   fields:
@@ -1526,7 +1526,7 @@
     patient: 139
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 140
   fields:
@@ -1537,7 +1537,7 @@
     patient: 140
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 141
   fields:
@@ -1548,7 +1548,7 @@
     patient: 141
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 142
   fields:
@@ -1559,7 +1559,7 @@
     patient: 142
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 143
   fields:
@@ -1570,7 +1570,7 @@
     patient: 143
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 144
   fields:
@@ -1581,7 +1581,7 @@
     patient: 144
     dental_office: 3
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 145
   fields:
@@ -1592,7 +1592,7 @@
     patient: 145
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 146
   fields:
@@ -1603,7 +1603,7 @@
     patient: 146
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 147
   fields:
@@ -1614,7 +1614,7 @@
     patient: 147
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 148
   fields:
@@ -1647,7 +1647,7 @@
     patient: 150
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 151
   fields:
@@ -1658,7 +1658,7 @@
     patient: 151
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 152
   fields:
@@ -1669,7 +1669,7 @@
     patient: 152
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 153
   fields:
@@ -1680,7 +1680,7 @@
     patient: 153
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 154
   fields:
@@ -1691,7 +1691,7 @@
     patient: 154
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 155
   fields:
@@ -1702,7 +1702,7 @@
     patient: 155
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 156
   fields:
@@ -1713,7 +1713,7 @@
     patient: 156
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 157
   fields:
@@ -1724,7 +1724,7 @@
     patient: 157
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 158
   fields:
@@ -1735,7 +1735,7 @@
     patient: 158
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 159
   fields:
@@ -1746,7 +1746,7 @@
     patient: 159
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 160
   fields:
@@ -1757,7 +1757,7 @@
     patient: 160
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 161
   fields:
@@ -1768,7 +1768,7 @@
     patient: 161
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 162
   fields:
@@ -1779,7 +1779,7 @@
     patient: 162
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 163
   fields:
@@ -1790,7 +1790,7 @@
     patient: 163
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 164
   fields:
@@ -1801,7 +1801,7 @@
     patient: 164
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 165
   fields:
@@ -1812,7 +1812,7 @@
     patient: 165
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 166
   fields:
@@ -1823,7 +1823,7 @@
     patient: 166
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 167
   fields:
@@ -1834,7 +1834,7 @@
     patient: 167
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 168
   fields:
@@ -1845,7 +1845,7 @@
     patient: 168
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 169
   fields:
@@ -1856,7 +1856,7 @@
     patient: 169
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 170
   fields:
@@ -1867,7 +1867,7 @@
     patient: 170
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 171
   fields:
@@ -1878,7 +1878,7 @@
     patient: 171
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 172
   fields:
@@ -1889,7 +1889,7 @@
     patient: 172
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 173
   fields:
@@ -1900,7 +1900,7 @@
     patient: 173
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 174
   fields:
@@ -1911,7 +1911,7 @@
     patient: 174
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 175
   fields:
@@ -1922,7 +1922,7 @@
     patient: 175
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 176
   fields:
@@ -1933,7 +1933,7 @@
     patient: 176
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 177
   fields:
@@ -1944,7 +1944,7 @@
     patient: 177
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 178
   fields:
@@ -1955,7 +1955,7 @@
     patient: 178
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 179
   fields:
@@ -1966,7 +1966,7 @@
     patient: 179
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 180
   fields:
@@ -1977,7 +1977,7 @@
     patient: 180
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 181
   fields:
@@ -1988,7 +1988,7 @@
     patient: 181
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 182
   fields:
@@ -1999,7 +1999,7 @@
     patient: 182
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 183
   fields:
@@ -2010,7 +2010,7 @@
     patient: 183
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 184
   fields:
@@ -2021,7 +2021,7 @@
     patient: 184
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 185
   fields:
@@ -2032,7 +2032,7 @@
     patient: 185
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 186
   fields:
@@ -2043,7 +2043,7 @@
     patient: 186
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 187
   fields:
@@ -2054,7 +2054,7 @@
     patient: 187
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 188
   fields:
@@ -2065,7 +2065,7 @@
     patient: 188
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 189
   fields:
@@ -2076,7 +2076,7 @@
     patient: 189
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 190
   fields:
@@ -2087,7 +2087,7 @@
     patient: 190
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now:  
 - model: Dentist.appointment
   pk: 191
   fields:
@@ -2109,7 +2109,7 @@
     patient: 192
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 193
   fields:
@@ -2120,7 +2120,7 @@
     patient: 193
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 194
   fields:
@@ -2131,7 +2131,7 @@
     patient: 194
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 195
   fields:
@@ -2142,7 +2142,7 @@
     patient: 195
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 196
   fields:
@@ -2153,7 +2153,7 @@
     patient: 196
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 197
   fields:
@@ -2164,7 +2164,7 @@
     patient: 197
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 198
   fields:
@@ -2175,7 +2175,7 @@
     patient: 198
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 199
   fields:
@@ -2186,7 +2186,7 @@
     patient: 199
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 200
   fields:
@@ -2197,7 +2197,7 @@
     patient: 200
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 201
   fields:
@@ -2208,7 +2208,7 @@
     patient: 1
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 202
   fields:
@@ -2219,7 +2219,7 @@
     patient: 74
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 203
   fields:
@@ -2241,7 +2241,7 @@
     patient: 4
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 205
   fields:
@@ -2252,7 +2252,7 @@
     patient: 5
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 206
   fields:
@@ -2263,7 +2263,7 @@
     patient: 6
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 207
   fields:
@@ -2274,7 +2274,7 @@
     patient: 7
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 208
   fields:
@@ -2285,7 +2285,7 @@
     patient: 8
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 209
   fields:
@@ -2296,7 +2296,7 @@
     patient: 9
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 210
   fields:
@@ -2307,7 +2307,7 @@
     patient: 10
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 211
   fields:
@@ -2318,7 +2318,7 @@
     patient: 11
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 212
   fields:
@@ -2329,7 +2329,7 @@
     patient: 12
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 213
   fields:
@@ -2340,7 +2340,7 @@
     patient: 13
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 214
   fields:
@@ -2351,7 +2351,7 @@
     patient: 14
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 215
   fields:
@@ -2362,7 +2362,7 @@
     patient: 15
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 216
   fields:
@@ -2373,7 +2373,7 @@
     patient: 16
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 217
   fields:
@@ -2384,7 +2384,7 @@
     patient: 17
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 218
   fields:
@@ -2395,7 +2395,7 @@
     patient: 18
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 219
   fields:
@@ -2406,7 +2406,7 @@
     patient: 19
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 220
   fields:
@@ -2417,7 +2417,7 @@
     patient: 20
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 221
   fields:
@@ -2428,7 +2428,7 @@
     patient: 21 
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 222
   fields:
@@ -2439,7 +2439,7 @@
     patient: 22
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 223
   fields:
@@ -2450,7 +2450,7 @@
     patient: 23
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 224
   fields:
@@ -2461,7 +2461,7 @@
     patient: 24
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 225
   fields:
@@ -2472,7 +2472,7 @@
     patient: 25
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 226
   fields:
@@ -2483,7 +2483,7 @@
     patient: 26
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 227
   fields:
@@ -2494,7 +2494,7 @@
     patient: 27
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 228
   fields:
@@ -2505,7 +2505,7 @@
     patient: 28
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 229
   fields:
@@ -2516,7 +2516,7 @@
     patient: 101
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 230
   fields:
@@ -2527,7 +2527,7 @@
     patient: 30
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 231
   fields:
@@ -2538,7 +2538,7 @@
     patient: 31
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 232
   fields:
@@ -2549,7 +2549,7 @@
     patient: 32
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 233
   fields:
@@ -2560,7 +2560,7 @@
     patient: 33
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 234
   fields:
@@ -2571,7 +2571,7 @@
     patient: 34
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 235
   fields:
@@ -2582,7 +2582,7 @@
     patient: 35
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 236
   fields:
@@ -2593,7 +2593,7 @@
     patient: 108
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 237
   fields:
@@ -2604,7 +2604,7 @@
     patient: 37
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 238
   fields:
@@ -2615,7 +2615,7 @@
     patient: 38
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 239
   fields:
@@ -2626,7 +2626,7 @@
     patient: 39
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 240
   fields:
@@ -2637,7 +2637,7 @@
     patient: 40
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 241
   fields:
@@ -2648,7 +2648,7 @@
     patient: 41
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 242
   fields:
@@ -2659,7 +2659,7 @@
     patient: 42
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 243
   fields:
@@ -2670,7 +2670,7 @@
     patient: 43
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 244
   fields:
@@ -2681,7 +2681,7 @@
     patient: 44
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 245
   fields:
@@ -2692,7 +2692,7 @@
     patient: 45
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 246
   fields:
@@ -2703,7 +2703,7 @@
     patient: 46
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 247
   fields:
@@ -2714,7 +2714,7 @@
     patient: 47
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 248
   fields:
@@ -2725,7 +2725,7 @@
     patient: 48
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 249
   fields:
@@ -2736,7 +2736,7 @@
     patient: 49
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 250
   fields:
@@ -2747,7 +2747,7 @@
     patient: 50
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 251
   fields:
@@ -2758,7 +2758,7 @@
     patient: 51
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 252
   fields:
@@ -2769,7 +2769,7 @@
     patient: 124
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 253
   fields:
@@ -2780,7 +2780,7 @@
     patient: 125
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 254
   fields:
@@ -2791,7 +2791,7 @@
     patient: 126
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 255
   fields:
@@ -2802,7 +2802,7 @@
     patient: 127
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 256
   fields:
@@ -2813,7 +2813,7 @@
     patient: 128
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 257
   fields:
@@ -2824,7 +2824,7 @@
     patient: 1
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 516
   fields:
@@ -2835,7 +2835,7 @@
     patient: 3
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 258
   fields:
@@ -2846,7 +2846,7 @@
     patient: 2
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 259
   fields:
@@ -2857,7 +2857,7 @@
     patient: 3
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 515
   fields:
@@ -2868,7 +2868,7 @@
     patient: 3
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 260
   fields:
@@ -2879,7 +2879,7 @@
     patient: 4
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 261
   fields:
@@ -2890,7 +2890,7 @@
     patient: 5
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 262
   fields:
@@ -2901,7 +2901,7 @@
     patient: 6
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 263
   fields:
@@ -2912,7 +2912,7 @@
     patient: 7
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 264
   fields:
@@ -2923,7 +2923,7 @@
     patient: 8
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 265
   fields:
@@ -2945,7 +2945,7 @@
     patient: 10
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 267
   fields:
@@ -2956,7 +2956,7 @@
     patient: 11
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 268
   fields:
@@ -2967,7 +2967,7 @@
     patient: 12
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 269
   fields:
@@ -2978,7 +2978,7 @@
     patient: 13
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 270
   fields:
@@ -2989,7 +2989,7 @@
     patient: 14
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 271
   fields:
@@ -3000,7 +3000,7 @@
     patient: 15
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 272
   fields:
@@ -3011,7 +3011,7 @@
     patient: 16
     dental_office: 3
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 273
   fields:
@@ -3022,7 +3022,7 @@
     patient: 17
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 274
   fields:
@@ -3033,7 +3033,7 @@
     patient: 18
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 275
   fields:
@@ -3044,7 +3044,7 @@
     patient: 19
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 276
   fields:
@@ -3066,7 +3066,7 @@
     patient: 21
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 278
   fields:
@@ -3077,7 +3077,7 @@
     patient: 22
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 279
   fields:
@@ -3088,7 +3088,7 @@
     patient: 23
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 280
   fields:
@@ -3099,7 +3099,7 @@
     patient: 24
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 281
   fields:
@@ -3110,7 +3110,7 @@
     patient: 25
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 282
   fields:
@@ -3121,7 +3121,7 @@
     patient: 26
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 283
   fields:
@@ -3132,7 +3132,7 @@
     patient: 27
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 284
   fields:
@@ -3143,7 +3143,7 @@
     patient: 28
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 285
   fields:
@@ -3154,7 +3154,7 @@
     patient: 29
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 286
   fields:
@@ -3165,7 +3165,7 @@
     patient: 30
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now:
 - model: Dentist.appointment
   pk: 287
   fields:
@@ -3176,7 +3176,7 @@
     patient: 31
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 288
   fields:
@@ -3187,7 +3187,7 @@
     patient: 32
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 289
   fields:
@@ -3198,7 +3198,7 @@
     patient: 33
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 290
   fields:
@@ -3220,7 +3220,7 @@
     patient: 35
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 292
   fields:
@@ -3231,7 +3231,7 @@
     patient: 36
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 293
   fields:
@@ -3242,7 +3242,7 @@
     patient: 37
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 294
   fields:
@@ -3253,7 +3253,7 @@
     patient: 38
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 295
   fields:
@@ -3264,7 +3264,7 @@
     patient: 39
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 296
   fields:
@@ -3275,7 +3275,7 @@
     patient: 40
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 297
   fields:
@@ -3286,7 +3286,7 @@
     patient: 41
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 298
   fields:
@@ -3297,7 +3297,7 @@
     patient: 42
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 299
   fields:
@@ -3308,7 +3308,7 @@
     patient: 43
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 300
   fields:
@@ -3319,7 +3319,7 @@
     patient: 44
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 301
   fields:
@@ -3330,7 +3330,7 @@
     patient: 45
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 302
   fields:
@@ -3341,7 +3341,7 @@
     patient: 46
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 303
   fields:
@@ -3352,7 +3352,7 @@
     patient: 47
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 304
   fields:
@@ -3363,7 +3363,7 @@
     patient: 48
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 305
   fields:
@@ -3374,7 +3374,7 @@
     patient: 49
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 306
   fields:
@@ -3385,7 +3385,7 @@
     patient: 50
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 307
   fields:
@@ -3396,7 +3396,7 @@
     patient: 51
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 308
   fields:
@@ -3407,7 +3407,7 @@
     patient: 52
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 309
   fields:
@@ -3418,7 +3418,7 @@
     patient: 53
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 310
   fields:
@@ -3429,7 +3429,7 @@
     patient: 54
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 311
   fields:
@@ -3440,7 +3440,7 @@
     patient: 55
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now:  
 - model: Dentist.appointment
   pk: 312
   fields:
@@ -3451,7 +3451,7 @@
     patient: 56
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 313
   fields:
@@ -3473,7 +3473,7 @@
     patient: 58
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 315
   fields:
@@ -3484,7 +3484,7 @@
     patient: 59
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 316
   fields:
@@ -3495,7 +3495,7 @@
     patient: 60
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 317
   fields:
@@ -3506,7 +3506,7 @@
     patient: 61
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 318
   fields:
@@ -3517,7 +3517,7 @@
     patient: 62
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 319
   fields:
@@ -3528,7 +3528,7 @@
     patient: 63
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 320
   fields:
@@ -3539,7 +3539,7 @@
     patient: 64
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 321
   fields:
@@ -3550,7 +3550,7 @@
     patient: 65
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 322
   fields:
@@ -3561,7 +3561,7 @@
     patient: 66
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 323
   fields:
@@ -3572,7 +3572,7 @@
     patient: 67
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 324
   fields:
@@ -3583,7 +3583,7 @@
     patient: 68
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 325
   fields:
@@ -3594,7 +3594,7 @@
     patient: 69
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 326
   fields:
@@ -3605,7 +3605,7 @@
     patient: 70
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 327
   fields:
@@ -3616,7 +3616,7 @@
     patient: 71
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 328
   fields:
@@ -3627,7 +3627,7 @@
     patient: 72
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 329
   fields:
@@ -3638,7 +3638,7 @@
     patient: 73
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 330
   fields:
@@ -3649,7 +3649,7 @@
     patient: 74
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 331
   fields:
@@ -3660,7 +3660,7 @@
     patient: 75
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 332
   fields:
@@ -3671,7 +3671,7 @@
     patient: 76
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 333
   fields:
@@ -3682,7 +3682,7 @@
     patient: 77
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 334
   fields:
@@ -3693,7 +3693,7 @@
     patient: 78
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 335
   fields:
@@ -3704,7 +3704,7 @@
     patient: 79
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 336
   fields:
@@ -3715,7 +3715,7 @@
     patient: 80
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 337
   fields:
@@ -3726,7 +3726,7 @@
     patient: 81
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now:  
 - model: Dentist.appointment
   pk: 338
   fields:
@@ -3737,7 +3737,7 @@
     patient: 82
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 339
   fields:
@@ -3748,7 +3748,7 @@
     patient: 83
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 340
   fields:
@@ -3759,7 +3759,7 @@
     patient: 84
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 341
   fields:
@@ -3770,7 +3770,7 @@
     patient: 85
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 342
   fields:
@@ -3781,7 +3781,7 @@
     patient: 86
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 343
   fields:
@@ -3792,7 +3792,7 @@
     patient: 87
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 344
   fields:
@@ -3803,7 +3803,7 @@
     patient: 88
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 345
   fields:
@@ -3814,7 +3814,7 @@
     patient: 89
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 346
   fields:
@@ -3825,7 +3825,7 @@
     patient: 90
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 347
   fields:
@@ -3836,7 +3836,7 @@
     patient: 91
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 348
   fields:
@@ -3847,7 +3847,7 @@
     patient: 92
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 349
   fields:
@@ -3858,7 +3858,7 @@
     patient: 93 
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now:  
 - model: Dentist.appointment
   pk: 350
   fields:
@@ -3869,7 +3869,7 @@
     patient: 94
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 351
   fields:
@@ -3891,7 +3891,7 @@
     patient: 96
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 353
   fields:
@@ -3902,7 +3902,7 @@
     patient: 97
     dental_office: 1 
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 354
   fields:
@@ -3913,7 +3913,7 @@
     patient: 98
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 355
   fields:
@@ -3924,7 +3924,7 @@
     patient: 99
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 356
   fields:
@@ -3935,7 +3935,7 @@
     patient: 100
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 357
   fields:
@@ -3957,7 +3957,7 @@
     patient: 102
     dental_office: 1
     appointment_type: 2
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 359
   fields:
@@ -3968,7 +3968,7 @@
     patient: 103
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 360
   fields:
@@ -3979,7 +3979,7 @@
     patient: 104
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 361
   fields:
@@ -3990,7 +3990,7 @@
     patient: 105
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 362
   fields:
@@ -4001,7 +4001,7 @@
     patient: 106
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 363
   fields:
@@ -4012,7 +4012,7 @@
     patient: 107
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 364
   fields:
@@ -4023,7 +4023,7 @@
     patient: 108
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 365
   fields:
@@ -4034,7 +4034,7 @@
     patient: 109
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 366
   fields:
@@ -4045,7 +4045,7 @@
     patient: 110
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 367
   fields:
@@ -4056,7 +4056,7 @@
     patient: 111
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 368
   fields:
@@ -4067,7 +4067,7 @@
     patient: 112
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 369
   fields:
@@ -4089,7 +4089,7 @@
     patient: 114
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 371
   fields:
@@ -4100,7 +4100,7 @@
     patient: 115
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 372
   fields:
@@ -4111,7 +4111,7 @@
     patient: 116
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 373
   fields:
@@ -4122,7 +4122,7 @@
     patient: 117
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 374
   fields:
@@ -4133,7 +4133,7 @@
     patient: 118
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 375
   fields:
@@ -4144,7 +4144,7 @@
     patient: 119
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 376
   fields:
@@ -4155,7 +4155,7 @@
     patient: 120
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 378
   fields:
@@ -4166,7 +4166,7 @@
     patient: 121
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 379
   fields:
@@ -4177,7 +4177,7 @@
     patient: 122
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 380
   fields:
@@ -4188,7 +4188,7 @@
     patient: 123
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 381
   fields:
@@ -4199,7 +4199,7 @@
     patient: 124
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 382
   fields:
@@ -4210,7 +4210,7 @@
     patient: 125
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 383
   fields:
@@ -4221,7 +4221,7 @@
     patient: 126
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 384
   fields:
@@ -4243,7 +4243,7 @@
     patient: 128
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 386
   fields:
@@ -4254,7 +4254,7 @@
     patient: 1
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 387
   fields:
@@ -4265,7 +4265,7 @@
     patient: 2
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 388
   fields:
@@ -4276,7 +4276,7 @@
     patient: 3
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 389
   fields:
@@ -4287,7 +4287,7 @@
     patient: 4
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 390
   fields:
@@ -4298,7 +4298,7 @@
     patient: 5
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 391
   fields:
@@ -4309,7 +4309,7 @@
     patient: 6
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 392
   fields:
@@ -4320,7 +4320,7 @@
     patient: 7
     dental_office: 1 
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 393
   fields:
@@ -4331,7 +4331,7 @@
     patient: 8
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 394
   fields:
@@ -4342,7 +4342,7 @@
     patient: 9
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 395
   fields:
@@ -4353,7 +4353,7 @@
     patient: 10
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 396
   fields:
@@ -4364,7 +4364,7 @@
     patient: 11
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 397
   fields:
@@ -4375,7 +4375,7 @@
     patient: 12
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 398
   fields:
@@ -4386,7 +4386,7 @@
     patient: 13
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 399
   fields:
@@ -4397,7 +4397,7 @@
     patient: 14
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 400
   fields:
@@ -4408,7 +4408,7 @@
     patient: 15
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 401
   fields:
@@ -4419,7 +4419,7 @@
     patient: 16
     dental_office: 3
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 402
   fields:
@@ -4430,7 +4430,7 @@
     patient: 17
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 403
   fields:
@@ -4441,7 +4441,7 @@
     patient: 18
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 404
   fields:
@@ -4452,7 +4452,7 @@
     patient: 19
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 405
   fields:
@@ -4463,7 +4463,7 @@
     patient: 20
     dental_office: 1
     appointment_type: 3
-    is_now: 1  
+    is_now: 
 - model: Dentist.appointment
   pk: 406
   fields:
@@ -4485,7 +4485,7 @@
     patient: 22
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 408
   fields:
@@ -4496,7 +4496,7 @@
     patient: 23
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 409
   fields:
@@ -4507,7 +4507,7 @@
     patient: 24
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 410
   fields:
@@ -4518,7 +4518,7 @@
     patient: 25
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 411
   fields:
@@ -4529,7 +4529,7 @@
     patient: 26
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 412
   fields:
@@ -4540,7 +4540,7 @@
     patient: 27
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 413
   fields:
@@ -4551,7 +4551,7 @@
     patient: 28
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 414
   fields:
@@ -4562,7 +4562,7 @@
     patient: 29
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 415
   fields:
@@ -4573,7 +4573,7 @@
     patient: 30
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 416
   fields:
@@ -4584,7 +4584,7 @@
     patient: 31
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 417
   fields:
@@ -4595,7 +4595,7 @@
     patient: 32
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 418
   fields:
@@ -4606,7 +4606,7 @@
     patient: 33
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 419
   fields:
@@ -4617,7 +4617,7 @@
     patient: 34
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 420
   fields:
@@ -4628,7 +4628,7 @@
     patient: 35
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 421
   fields:
@@ -4639,7 +4639,7 @@
     patient: 36
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 422
   fields:
@@ -4650,7 +4650,7 @@
     patient: 37
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 423
   fields:
@@ -4661,7 +4661,7 @@
     patient: 38
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 424
   fields:
@@ -4672,7 +4672,7 @@
     patient: 39
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 425
   fields:
@@ -4683,7 +4683,7 @@
     patient: 40
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 426
   fields:
@@ -4694,7 +4694,7 @@
     patient: 41
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 427
   fields:
@@ -4705,7 +4705,7 @@
     patient: 42
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 428
   fields:
@@ -4727,7 +4727,7 @@
     patient: 44
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 430
   fields:
@@ -4738,7 +4738,7 @@
     patient: 45
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 431
   fields:
@@ -4749,7 +4749,7 @@
     patient: 46
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 432
   fields:
@@ -4760,7 +4760,7 @@
     patient: 47
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 433
   fields:
@@ -4771,7 +4771,7 @@
     patient: 48
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 434
   fields:
@@ -4782,7 +4782,7 @@
     patient: 49
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 435
   fields:
@@ -4793,7 +4793,7 @@
     patient: 50
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 436
   fields:
@@ -4804,7 +4804,7 @@
     patient: 51
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 437
   fields:
@@ -4815,7 +4815,7 @@
     patient: 52
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 438
   fields:
@@ -4826,7 +4826,7 @@
     patient: 53
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 439
   fields:
@@ -4837,7 +4837,7 @@
     patient: 54
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 440
   fields:
@@ -4848,7 +4848,7 @@
     patient: 55
     dental_office: 1
     appointment_type: 1
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 441
   fields:
@@ -4859,7 +4859,7 @@
     patient: 56
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 442
   fields:
@@ -4870,7 +4870,7 @@
     patient: 57
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 443
   fields:
@@ -4881,7 +4881,7 @@
     patient: 58
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 444
   fields:
@@ -4892,7 +4892,7 @@
     patient: 59
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 445
   fields:
@@ -4903,7 +4903,7 @@
     patient: 60
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 446
   fields:
@@ -4914,7 +4914,7 @@
     patient: 61
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 447
   fields:
@@ -4925,7 +4925,7 @@
     patient: 62
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 448
   fields:
@@ -4936,7 +4936,7 @@
     patient: 63
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 449
   fields:
@@ -4947,7 +4947,7 @@
     patient: 64
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 450
   fields:
@@ -4958,7 +4958,7 @@
     patient: 65
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 451
   fields:
@@ -4969,7 +4969,7 @@
     patient: 66
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 452
   fields:
@@ -4980,7 +4980,7 @@
     patient: 67
     dental_office: 1 
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 453
   fields:
@@ -4991,7 +4991,7 @@
     patient: 68
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 454
   fields:
@@ -5002,7 +5002,7 @@
     patient: 69
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 455
   fields:
@@ -5013,7 +5013,7 @@
     patient: 70
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 456
   fields:
@@ -5024,7 +5024,7 @@
     patient: 71
     dental_office: 1
     appointment_type: 3
-    is_now: 1 
+    is_now: 
 - model: Dentist.appointment
   pk: 457
   fields:
@@ -5035,7 +5035,7 @@
     patient: 72
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 458
   fields:
@@ -5046,7 +5046,7 @@
     patient: 73
     dental_office: 1
     appointment_type: 3
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 459
   fields:
@@ -5057,7 +5057,7 @@
     patient: 74
     dental_office: 1
     appointment_type: 2
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 460
   fields:
@@ -5068,7 +5068,7 @@
     patient: 75
     dental_office: 1
     appointment_type: 1
-    is_now: 1
+    is_now: 
 - model: Dentist.appointment
   pk: 461
   fields:
@@ -5090,7 +5090,7 @@
     patient: 77
     dental_office: 1 
     appointment_type: 3
-    is_now: -1
+    is_now: 1
 - model: Dentist.appointment
   pk: 463
   fields:
@@ -5101,7 +5101,7 @@
     patient: 78
     dental_office: 1
     appointment_type: 2
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 464
   fields:
@@ -5112,7 +5112,7 @@
     patient: 79
     dental_office: 1
     appointment_type: 2
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 465
   fields:
@@ -5123,7 +5123,7 @@
     patient: 80
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 466
   fields:
@@ -5134,7 +5134,7 @@
     patient: 81
     dental_office: 1
     appointment_type: 3
-    is_now: -1 
+    is_now:
 - model: Dentist.appointment
   pk: 467
   fields:
@@ -5145,7 +5145,7 @@
     patient: 82
     dental_office: 1
     appointment_type: 1
-    is_now: -1 
+    is_now:
 - model: Dentist.appointment
   pk: 468
   fields:
@@ -5156,6 +5156,7 @@
     patient: 83
     dental_office: 1
     appointment_type: 1
+    is_now:    
 - model: Dentist.appointment
   pk: 469
   fields:
@@ -5166,7 +5167,7 @@
     patient: 84
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 470
   fields:
@@ -5177,7 +5178,7 @@
     patient: 85
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 471
   fields:
@@ -5188,7 +5189,7 @@
     patient: 86
     dental_office: 1
     appointment_type: 2
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 472
   fields:
@@ -5199,7 +5200,7 @@
     patient: 87
     dental_office: 1 
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 473
   fields:
@@ -5210,7 +5211,7 @@
     patient: 88
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 474
   fields:
@@ -5232,7 +5233,7 @@
     patient: 90
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now: 1
 - model: Dentist.appointment
   pk: 476
   fields:
@@ -5243,7 +5244,7 @@
     patient: 91
     dental_office: 1
     appointment_type: 2
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 477
   fields:
@@ -5254,7 +5255,7 @@
     patient: 92
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 478
   fields:
@@ -5265,7 +5266,7 @@
     patient: 93 
     dental_office: 1
     appointment_type: 3
-    is_now: -1 
+    is_now: 
 - model: Dentist.appointment
   pk: 479
   fields:
@@ -5276,7 +5277,7 @@
     patient: 94
     dental_office: 1
     appointment_type: 1
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 480
   fields:
@@ -5287,7 +5288,7 @@
     patient: 95
     dental_office: 1
     appointment_type: 2
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 481
   fields:
@@ -5298,7 +5299,7 @@
     patient: 96
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 482
   fields:
@@ -5331,7 +5332,7 @@
     patient: 99
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now: 1
 - model: Dentist.appointment
   pk: 485
   fields:
@@ -5342,7 +5343,7 @@
     patient: 100
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now: 
 - model: Dentist.appointment
   pk: 486
   fields:
@@ -5353,7 +5354,7 @@
     patient: 101
     dental_office: 1
     appointment_type: 2 
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 487
   fields:
@@ -5364,7 +5365,7 @@
     patient: 102
     dental_office: 1
     appointment_type: 2 
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 488
   fields:
@@ -5386,7 +5387,7 @@
     patient: 104
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 490
   fields:
@@ -5397,7 +5398,7 @@
     patient: 105
     dental_office: 1
     appointment_type: 1
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 491
   fields:
@@ -5408,7 +5409,7 @@
     patient: 106
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 492
   fields:
@@ -5419,6 +5420,7 @@
     patient: 107
     dental_office: 1 
     appointment_type: 3
+    is_now:   
 - model: Dentist.appointment
   pk: 493
   fields:
@@ -5429,7 +5431,7 @@
     patient: 108
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 494
   fields:
@@ -5440,7 +5442,7 @@
     patient: 109
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 495
   fields:
@@ -5451,7 +5453,7 @@
     patient: 110
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 496
   fields:
@@ -5462,7 +5464,7 @@
     patient: 111
     dental_office: 1
     appointment_type: 3
-    is_now: -1
+    is_now:
 - model: Dentist.appointment
   pk: 497
   fields:
@@ -5671,7 +5673,7 @@
     patient: 145
     dental_office: 2
     appointment_type: 3
-    is_now: 
+    is_now: -1
 - model: Dentist.appointment
   pk: 516
   fields:
@@ -5682,7 +5684,7 @@
     patient: 21
     dental_office: 2
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 517
   fields:
@@ -5693,7 +5695,7 @@
     patient: 30
     dental_office: 2
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 518
   fields:
@@ -5704,7 +5706,7 @@
     patient: 40
     dental_office: 3
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 519
   fields:
@@ -5715,7 +5717,7 @@
     patient: 50
     dental_office: 3
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 520
   fields:
@@ -5726,7 +5728,7 @@
     patient: 60
     dental_office: 4
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 521
   fields:
@@ -5737,7 +5739,7 @@
     patient: 70
     dental_office: 2 
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 522
   fields:
@@ -5748,7 +5750,7 @@
     patient: 80
     dental_office: 2
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 523
   fields:
@@ -5759,7 +5761,7 @@
     patient: 90
     dental_office: 2
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 524
   fields:
@@ -5770,7 +5772,7 @@
     patient: 100
     dental_office: 3
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 525
   fields:
@@ -5781,7 +5783,7 @@
     patient: 111
     dental_office: 2
     appointment_type: 1
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 526
   fields:
@@ -5792,7 +5794,7 @@
     patient: 121
     dental_office: 2
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 527
   fields:
@@ -5803,7 +5805,7 @@
     patient: 130
     dental_office: 2
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 528
   fields:
@@ -5814,7 +5816,7 @@
     patient: 141
     dental_office: 3
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 529
   fields:
@@ -5825,7 +5827,7 @@
     patient: 151
     dental_office: 3
     appointment_type: 2
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 530
   fields:
@@ -5836,7 +5838,7 @@
     patient: 169
     dental_office: 3
     appointment_type: 3
-    is_now: 1
+    is_now: -1
 - model: Dentist.appointment
   pk: 531
   fields:
@@ -5847,7 +5849,7 @@
     patient: 173
     dental_office: 3
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 532
   fields:
@@ -5858,7 +5860,7 @@
     patient: 182
     dental_office: 3
     appointment_type: 2
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 533
   fields:
@@ -5869,7 +5871,7 @@
     patient: 198
     dental_office: 4
     appointment_type: 1
-    is_now: 1
+    is_now:
 - model: Dentist.appointment
   pk: 534
   fields:
