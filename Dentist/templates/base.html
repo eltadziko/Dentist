@@ -110,7 +110,9 @@ Stomatologia Coldix
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-<li><a href="{% url 'views.dates_addition' %}">Terminy</a></li>
+<li><a href="{% url 'views.dates_addition' %}">Terminy (dodawanie)</a></li>
+<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
+<li><a href="{% url 'views.dates_addition_edit' %}">Terminy (edycja)</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 {% elif user|in_group:'dentysta' %}
 <li><a href="{% url 'views.appointment_list' %}">Grafik</a></li>

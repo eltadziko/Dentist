@@ -808,6 +808,9 @@ def dates_addition(request):
         form = GenerateDatesForm(offices[0].id, -1)
     return render(request, 'dates_addition.html', {'form': form})
 
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
 def dates_addition_edit(request):
     if request.POST:
         if 'office' in request.POST.keys():
