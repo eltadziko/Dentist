@@ -482,3 +482,8 @@ margin:0 auto;
 	background-color: blue;
 }
 
+.button2 {
+	color:white;
+	height:25px;
+  	background: url(../img/BG_submenu.jpg) repeat-x;	
+}

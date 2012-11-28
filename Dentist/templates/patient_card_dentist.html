@@ -178,7 +178,7 @@
 {% endblock %}
 
 {% block right_column %}
-	<div id="back">Powrót do grafiku</div>
+	<input type="submit" value="Powrót do grafiku" id="back" class="button2" />
 	{{ patient.last_name }} {{ patient.first_name }}, PESEL: {{ patient.PESEL }}<br />
 	{{ patient.address }}</br>
 	{% if patient.comment %}{{ patient.comment }}<br />{% endif %}
