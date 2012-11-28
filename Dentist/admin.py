@@ -65,6 +65,9 @@ class AppointmentAdmin(admin.ModelAdmin):
     list_display = ('date', 'hour', 'description', 'dentist', 'patient', 'dental_office', 'appointment_type')
     #list_display_links = ('date', 'dentist', 'patient', 'dental_office', 'appointment_type')
        
+class ToothLossAdmin(admin.ModelAdmin):    
+    list_display = ('appointment', 'tooth', 'loss_type', 'tooth_part', 'comment')       
+
 # admin.site.register(User, UsAdmin)
 admin.site.register(dentist, DentistAdmin)
 admin.site.register(patient, PatientAdmin)
@@ -74,3 +77,4 @@ admin.site.register(hours, HoursAdmin)
 admin.site.register(appointment_type, AppointmentTypeAdmin)
 admin.site.register(dates, DatesAdmin)
 admin.site.register(appointment, AppointmentAdmin)
+admin.site.register(tooth_loss, ToothLossAdmin)
