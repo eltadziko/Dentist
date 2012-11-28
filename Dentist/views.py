@@ -12,7 +12,7 @@ from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
 from forms.patient_user_form import PatientUserForm
-from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm
+from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm, DatesAdditionEditForm, EditAddedDates2Form
 from forms.register_form import *
 from forms.dentist_form import *
 from forms.tooth_edit_form import *
@@ -693,8 +693,7 @@ def dates_addition(request):
                                                  dentist = dentist.objects.get(id=request.POST['dentist_man']),
                                                  dental_office = dental_office.objects.get(id=request.POST['office']),
                                                  room = h.room)
-                            duplicate = dates.objects.filter(dentist__id=request.POST['dentist_man'], dental_office__id=request.POST['office'], date=date_dentist.date)
-                            print duplicate
+                            duplicate = dates.objects.filter(dentist__id=request.POST['dentist_man'], dental_office__id=request.POST['office'], date=date_dentist.date, begin=h.begin, end=h.end)
                             if not duplicate:
                                 date_dentist.save()
                                 added_date_list.append(date_dentist)
@@ -808,6 +807,95 @@ def dates_addition(request):
         offices = dental_office.objects.all()
         form = GenerateDatesForm(offices[0].id, -1)
     return render(request, 'dates_addition.html', {'form': form})
+
+def dates_addition_edit(request):
+    if request.POST:
+        if 'office' in request.POST.keys():
+            if 'dentist_man' in request.POST.keys():
+                if request.GET.get('type', None) == 'ajax':
+                    form = DatesAdditionEditForm(request.POST['office'], request.POST['dentist_man'])
+                else:
+                    form = DatesAdditionEditForm(request.POST['office'], request.POST['dentist_man'], request.POST)
+            else:
+                if request.GET.get('type', None) == 'ajax':
+                    form = DatesAdditionEditForm(request.POST['office'], -1)
+                else:
+                    form = DatesAdditionEditForm(request.POST['office'], -1, request.POST)
+            today = datetime.datetime.today().date()    
+            dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value, date__gte=today)
+        elif 'delete' in request.POST.keys():
+            date = dates.objects.get(id=request.POST['delete'])
+            appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.begin, hour__lte=date.end)
+            for app in appointments:
+                app.delete()
+            date.delete()
+            messages.add_message(request, messages.INFO, 'Pomyślnie usunięto termin oraz zaplanowane wizyty.')
+            form = DatesAdditionEditForm(request.POST['o'], request.POST['d'])
+            today = datetime.datetime.today().date()    
+            dates_list = dates.objects.filter(dentist__id=request.POST['d'], dental_office__id=request.POST['o'], date__gte=today)
+        elif 'change' in request.POST.keys():
+            date = dates.objects.get(id=request.POST['change'])
+            form = EditAddedDates2Form(date)
+            return render(request, 'dates_addition_edit2.html', {'form': form})
+        elif 'submit_edit' in request.POST.keys():
+            try:
+                date = dates.objects.get(id=request.POST['id_1'])
+                date.room = request.POST['room_1']
+                
+                """
+                today = datetime.datetime.today().date()
+                today2 = datetime.datetime.today().date()
+                date_temp = dates(date = date.date,
+                                 begin = request.POST['begin_1'],
+                                 end = request.POST['end_1'],
+                                 dentist = date.dentist,
+                                 dental_office = date.dental_office,
+                                 room = date.room)
+                if date.date == today and (date.begin != date_temp.begin 
+                                           and date_temp.begin <= today
+                                           or date_temp.begin >= date_temp.end
+                                           or date_temp.end<today2):
+                    form = EditAddedDates2Form(date)
+                    messages.add_message(request, messages.ERROR, 'Błądz przy edycji godzin dla terminów z dnia dzisiejszego.')    
+                    return render(request, 'dates_addition_edit2.html', {'form': form})
+                """
+            
+                date.begin = request.POST['begin_1']
+                date.end = request.POST['end_1']
+                appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__lt=date.begin)
+                for app in appointments:
+                    app.delete()
+                appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.end)
+                for app in appointments:
+                    app.delete()
+                appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office)
+                for app in appointments:
+                    length = app.appointment_type.length
+                    h = datetime.datetime.combine(date.date, app.hour)
+                    end_visit = h + datetime.timedelta(minutes=length)
+                    end_visit = end_visit.strftime("%H:%M")
+                    print end_visit
+                    if end_visit > date.end:
+                        app.delete()
+                date.save()
+                messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano termin oraz usunięto zaplanowane wizyty.')
+                form = DatesAdditionEditForm(date.dental_office.id, date.dentist.pk)
+                today = datetime.datetime.today().date()    
+                dates_list = dates.objects.filter(dentist__id=date.dentist.id, dental_office__id=date.dental_office.id, date__gte=today)
+            except ValidationError:
+                date = dates.objects.get(id=request.POST['id_1'])
+                date.begin = request.POST['begin_1']
+                date.end = request.POST['end_1']
+                date.room = request.POST['room_1']
+                form = EditAddedDates2Form(date)
+                messages.add_message(request, messages.ERROR, 'Błędny format danych dla pola/pól "Od"/"Do". Użyj formatu "HH:mm"')    
+                return render(request, 'dates_addition_edit2.html', {'form': form})
+    else:
+        offices = dental_office.objects.all()
+        form = DatesAdditionEditForm(offices[0].id, -1)
+        today = datetime.datetime.today().date()
+        dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value, date__gte=today)
+    return render(request, 'dates_addition_edit.html', {'form': form, 'dates_list': dates_list})
 
 @user_passes_test(new_password, login_url="/password/")
 def offices(request):

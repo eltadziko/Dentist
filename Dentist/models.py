@@ -3,9 +3,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 # Create your models here.
-#Imie i nazwisko w dentyscie i pacjencie, user w pacjencie moze byc null. 
-#Dodac do pacjenta typ ubezpieczenia, numer ubezp zmienic na max_length=255
-#ZMienić chorobas w adminie
 class dentist(models.Model):
     first_name = models.CharField("Imię", max_length=30)
     last_name = models.CharField("Nazwisko", max_length=30)
@@ -70,7 +67,8 @@ class patient_diseases(models.Model):
     date = models.DateField("Data")
     
     class Meta:
-        verbose_name = "Choroby Pacjenta"
+        verbose_name = "Choroba Pacjenta"
+        verbose_name_plural = "Choroby Pacjenta"
 
     def __unicode__(self):
         p = patient.objects.get(id=self.patient_id)
@@ -153,7 +151,7 @@ class appointment(models.Model):
         verbose_name_plural = "Wizyty"
 
     def __unicode__(self):
-        return u'%s' % (self.date)
+        return u'%s %s Pacjent: %s, Lekarz: %s' % (self.date, self.hour, self.patient, self.dentist)
 
 class loss_type(models.Model):
     type = models.CharField("Typ", max_length=30)
@@ -161,6 +159,7 @@ class loss_type(models.Model):
     
     class Meta:
         verbose_name = "Typ ubytku"
+        verbose_name_plural = "Typy ubytków"
     
     def __unicode__(self):
         return self.type
@@ -171,6 +170,7 @@ class tooth_part(models.Model):
     
     class Meta:
         verbose_name = "Część zęba"
+        verbose_name_plural = "Części zębów"
     
     def __unicode__(self):
         return self.name
@@ -187,6 +187,7 @@ class tooth(models.Model):
     
     class Meta:
         verbose_name = "Ząb"
+        verbose_name_plural = "Zęby"
 
     def __unicode__(self):
         return u'%s (%s)' % (self.tooth_number, self.type)
@@ -200,6 +201,7 @@ class tooth_loss(models.Model):
     
     class Meta:
         verbose_name = "Ubytek zęba"
+        verbose_name_plural = "Ubytki zębów"
 
     def __unicode__(self):
         return self.comment

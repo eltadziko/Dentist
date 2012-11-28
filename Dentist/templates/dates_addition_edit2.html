@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block css %}
+	{{ block.super }}
+	<style type="text/css">
+		#termins{
+			margin:30px 0px 0px 40px;
+			width:900px;
+			line-height:34px;
+			margin:0 auto;
+		}
+		#termins table{
+		  width:100%;
+		  border: 1px solid black;border-collapse: collapse;
+		}
+		#termins th{
+		  border: 1px solid black;
+		  text-align:center;  
+		}
+		#termins td{
+		  border: 1px solid black;
+		  text-align:center;
+		}
+		#forms{
+			width:900px;
+		}
+		.center_select{
+			margin:30px 0px 0px 40px;
+			width:600px;
+			line-height:34px;
+			margin:0 auto;
+		}
+		#forms label{
+			float:center;
+			text-align:center;
+			display:block;
+			width:auto;
+			padding:0px 0px 0px 0px;
+			height:30px;
+			background:none;
+			margin-bottom:2px;
+			border:none;
+		}
+		#forms input[type="text"], #forms input[type="password"]{
+			width:auto;
+			height:30px;
+			padding:0px;
+			margin:0px;
+			border-top:solid 1px #40b8dc;
+			border-left:solid 1px #40b8dc;
+			border-right:solid 1px #cccccc;
+			border-bottom:solid 1px #cccccc;
+		}
+	</style>
+{% endblock %}
+{% block right_column %}
+<div id="forms">
+<form action="{% url views.dates_addition_edit %}" method="post"> {% csrf_token %}
+	<div class="center_select">
+		{% if form.non_field_errors %}
+	       	<div class="error">
+			    {% for error in form.non_field_errors %}
+			        <strong>{{ error|escape }} </strong>
+				{% endfor %}
+			</div>
+		{% endif %}
+		<h2>Dentysta: {{ form.dentist_1.value }} <br/>Gebinet: {{ form.dental_office_1.value }}</h2>
+	</div>
+	<div id="termins">
+		<table>
+		<tr>
+			<th>{{ form.date_1.label_tag }}</th>
+			<th>{{ form.begin_1.label_tag }}</th>
+			<th>{{ form.end_1.label_tag }}</th>
+			<th>{{ form.room_1.label_tag }}</th>
+		</tr>
+
+		<tr>						
+			<td>
+				<div class="fieldWrapper">
+			        {% if form.date_1.errors %}
+			        	<div class="error">
+					    {% for error in form.date_1.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ form.id_1 }}
+					{{ form.date_1.value }}
+		    	</div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if form.begin_1.errors %}
+			        	<div class="error">
+					    {% for error in form.begin_1.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ form.begin_1 }}
+			    </div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if form.end_1.errors %}
+			        	<div class="error">
+					    {% for error in form.end_1.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ form.end_1 }}
+			    </div>
+		    </td>
+		    
+		    <td>
+			    <div class="fieldWrapper">
+			        {% if form.room_1.errors %}
+			        	<div class="error">
+					    {% for error in form.room_1.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					    </div>
+					{% endif %}
+					{{ form.room_1 }}
+			    </div>
+		    </td>	    
+	    </tr>
+		    
+	    </table>
+	</div>
+    
+	<p><input id="id_submit_edit" name="submit_edit" type="submit" value="Aktualizuj" /></p>
+</form>
+</div>
+{% endblock %}

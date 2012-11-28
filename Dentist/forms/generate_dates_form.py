@@ -18,7 +18,6 @@ class GenerateDatesForm(forms.Form):
             self.fields['dentist_man'].queryset = dents
             week_days = [u"poniedziałek", "wtorek", u"środa", "czwartek", u"piątek", "sobota", "niedziela"]
             if dentista!=-1:
-                self.is_worker = True
                 self.fields['dentist_man'].initial = dentista
                 self.fields['office'].initial = office
                 hh = hours.objects.filter(dentist__id=dentista, dental_office__id=office)
@@ -35,7 +34,6 @@ class GenerateDatesForm(forms.Form):
                     string += d.date.strftime("%Y-%m-%d") + " " 
                 self.fields['hidden'].initial = string
             elif dentista==-1 and dents.count()!=0:
-                self.is_worker = True
                 self.fields['dentist_man'].initial = dents[0].id
                 self.fields['office'].initial = office
                 hh = hours.objects.filter(dentist__id=dents[0].id, dental_office__id=office)
@@ -104,4 +102,59 @@ class EditAddedDatesForm(forms.Form):
         
         self.fields['number_of_fields'] = forms.CharField(label="Liczba dat",
                                                        initial=i-1,
-                                                       widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_number'}))    
+                                                       widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_number'}))   
+        
+class DatesAdditionEditForm(forms.Form):
+    def __init__(self, office, dentista, *args, **kwargs):
+        super(DatesAdditionEditForm, self).__init__(*args, **kwargs)
+        if office!=-1:
+            self.fields['office'].initial = office
+            in_office = hours.objects.values_list('dentist', flat = True).filter(dental_office__id=office)
+            dents = dentist.objects.filter(id__in=in_office)
+            self.fields['dentist_man'].queryset = dents
+            week_days = [u"poniedziałek", "wtorek", u"środa", "czwartek", u"piątek", "sobota", "niedziela"]
+            if dentista!=-1:
+                self.fields['dentist_man'].initial = dentista
+                self.fields['office'].initial = office
+            elif dentista==-1 and dents.count()!=0:
+                self.fields['dentist_man'].initial = dents[0].id
+                self.fields['office'].initial = office
+    
+    office = forms.ModelChoiceField(queryset=dental_office.objects.all(),
+                                                    widget=forms.Select(),
+                                                    required=False,
+                                                    label="Gabinet",
+                                                    empty_label=None)
+    dentist_man = forms.ModelChoiceField(queryset=dentist.objects.none(), 
+                                                    widget=forms.Select(),
+                                                    required=False, 
+                                                    label="Dentyści",
+                                                    empty_label=None)
+    
+class EditAddedDates2Form(forms.Form):
+    def __init__(self, date, *args, **kwargs):
+        super(EditAddedDates2Form, self).__init__(*args, **kwargs) 
+        self.fields['id_1'] = forms.CharField(label="Id",
+                                                   initial=date.id,
+                                                   widget=forms.TextInput(attrs={'readonly':'True', 'hidden':'hidden', 'class':'edit_dates_field_id'}))
+        self.fields['date_1'] = forms.DateField(label="Data",
+                                                     initial=date.date,
+                                                     input_formats='%Y-%m-%d',
+                                                     widget=forms.DateInput(attrs={'readonly':'True', 'class':'edit_dates_field_date'}))
+        self.fields['begin_1'] = forms.TimeField(label="Od",
+                                                      initial=date.begin,
+                                                      input_formats='%H:%M:%S',
+                                                     widget=forms.TextInput(attrs={'class':'edit_dates_field_begin'}))
+        self.fields['end_1'] = forms.TimeField(label="Do",
+                                                    initial=date.end,
+                                                    input_formats='%H:%M:%S',
+                                                     widget=forms.TextInput(attrs={'class':'edit_dates_field_end'}))
+        self.fields['dentist_1'] = forms.CharField(label="Dentysta",
+                                                        initial=date.dentist,
+                                                     widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_dentist'}))
+        self.fields['dental_office_1'] = forms.CharField(label="Gabinet",
+                                                              initial=date.dental_office,
+                                                     widget=forms.TextInput(attrs={'readonly':'True', 'class':'edit_dates_field_dental_office'}))
+        self.fields['room_1'] = forms.CharField(label="Pokój",
+                                                     initial=date.room,
+                                                     widget=forms.TextInput(attrs={'class':'edit_dates_field_room', 'maxlength': '5'}))
