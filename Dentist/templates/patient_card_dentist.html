@@ -157,7 +157,8 @@
 					function(data) { 
 						$('#tooth_loss').hide();
 						$('#tooth_losses').hide();
-						$('#appoint_losses').html($(data).find('#appoint_losses').html()); 						
+						$('#appoint_losses').html($(data).find('#appoint_losses').html()); 	
+						$('#content').html(data);					
 				});
 			 	return false;
 			 });
@@ -222,6 +223,7 @@
 	<input type="submit" id="ok_description" value="Zapisz"/>
 	<input type="submit" id="cancel_description" value="Cofnij"/><br />
 	<div id="appoint_losses">
+	{% if appointment.tooth_loss_set.all %}
 		Zmiany na diagramie uzębienia:
 		<table>
 		<tr><th>Ząb</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
@@ -233,6 +235,7 @@
 		</tr>
 		{% endfor %}
 		</table>
+	{% endif %}
 	</div>
 	
 	Wizyty:<br />

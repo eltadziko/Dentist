@@ -361,7 +361,7 @@
 - model: Dentist.dates
   pk: 41
   fields:
-    date: 2012-11-16
+    date: 2012-11-19
     begin: "8:00"
     end: "16:00"
     dentist: 1
