@@ -2796,3 +2796,15 @@
     phone: 677652459
     comment:
     user: 221
+    
+- model: Dentist.patient
+  pk: 201
+  fields:
+    first_name: Jan
+    last_name: Kowalski
+    birth_date: 1945-02-19
+    address: Podmłyńska 128, 50-456 Wrocław
+    PESEL: 45021558681
+    insurance_type: 10
+    insurance_number: aktualny 
+    phone: 677652459

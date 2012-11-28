@@ -591,7 +591,7 @@ def day_graphic(request):
         
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
-    
+
     hours2 = []
     hours = dates.objects.filter(date = date).filter(dental_office = office)
     if hours.count() > 0:

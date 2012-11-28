@@ -1097,7 +1097,7 @@
     patient: 100
     dental_office: 1
     appointment_type: 2
-    is_now: -
+    is_now: -1
 - model: Dentist.appointment
   pk: 101
   fields:
