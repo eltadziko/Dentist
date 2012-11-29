@@ -398,7 +398,7 @@ margin:0 auto;
   padding:5px;
 }
 #rejestracja input[type="text"]{
-  height:30px;  
+  height:20px;  
   margin-top:15px;
   width:180px;
   padding:5px; 
@@ -410,6 +410,52 @@ margin:0 auto;
   margin:2px;
   border:solid 1px #9e9e9e;
 }
+#rejestracja .typ_3{
+  float:left;
+  width:230px;
+  height:400px;
+  margin:2px;
+  border:solid 1px #9e9e9e;
+}
+#rejestracja .typ_4{
+  float:left;
+  width:230px;
+  height:65px;
+  margin:2px;
+  border:solid 1px #9e9e9e;
+}
+#rejestracja .typ_4_2{
+  float:left;
+  width:200px;
+  height:65px;
+  margin:2px;
+  border:solid 1px #9e9e9e;
+}
+#typ1_box{
+	clear:both;	
+}
+#typ4_box{
+	width:100%;
+	height:65px;
+}
+#typ4_box input[type="text"]{
+  height:20px;  
+  margin:0px 0px 0px 2px;
+  width:215px;
+  padding:5px; 
+}
+#typ4_box select{
+  width:230px;
+  height:30px;
+  margin:0px;
+  padding:5px; 
+}
+#typ4_box .opcje5  select{
+  width:200px;
+  height:30px;
+  margin:0px;
+  padding:5px; 
+}
 .rej_tytul label{
   background: url(../img/BG_submenu.jpg) repeat-x;
   text-align:center;
@@ -419,6 +465,16 @@ margin:0 auto;
   height:30px;
 }
 .opcje{
+  overflow:auto;
+  height:370px;
+  /*background:url(../img/BG_opcje.png) repeat-x bottom;*/
+}
+.opcje2{
+  overflow:auto;
+  height:370px;
+  /*background:url(../img/BG_opcje.png) repeat-x bottom;*/
+}
+.opcje3{
   overflow:auto;
   height:370px;
   /*background:url(../img/BG_opcje.png) repeat-x bottom;*/
@@ -438,6 +494,16 @@ margin:0 auto;
   text-align:left;
   height:25px;
   width:190px;
+  margin:-10px; 
+  padding:0px 5px 0px 5px;
+  margin-left:0px;
+}
+.opcje3 label{
+  background-color:#40b8dc;
+  display:block;
+  text-align:left;
+  height:25px;
+  width:200px;
   margin:-10px; 
   padding:0px 5px 0px 5px;
   margin-left:0px;

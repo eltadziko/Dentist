@@ -7,94 +7,94 @@
   pk: 2
   fields:
     type: wypełnienie tymczasowe
-    color: ff0000
+    color: f00000
 - model: Dentist.loss_type
   pk: 3
   fields:
     type: wypełnienie ostateczne
-    color: ff0000
+    color: 0f0000
 - model: Dentist.loss_type
   pk: 4
   fields:
     type: ząb do usunięcia
-    color: ff0000
+    color: 00f000
 - model: Dentist.loss_type
   pk: 5
   fields:
     type: ząb usunięty
-    color: ff0000
+    color: 000f00
 - model: Dentist.loss_type
   pk: 6
   fields:
     type: ząb zatrzymany
-    color: ff0000
+    color: 0000f0
 - model: Dentist.loss_type
   pk: 7
   fields:
     type: trepanacja komory
-    color: ff0000
+    color: 00000f
 - model: Dentist.loss_type
   pk: 8
   fields:
     type: dewitalizacja miazgi
-    color: ff0000
+    color: 32aa66
 - model: Dentist.loss_type
   pk: 9
   fields:
     type: ekstyrpacja miazgi
-    color: ff0000
+    color: 66aa11
 - model: Dentist.loss_type
   pk: 10
   fields:
     type: usunięcie złogów nazębnych
-    color: ff0000
+    color: 9581bb
 - model: Dentist.loss_type
   pk: 11
   fields:
     type: choroba miazgi
-    color: 00ff00
+    color: 937196
 - model: Dentist.loss_type
   pk: 12
   fields:
     type: dezynfekcja kanału
-    color: 00ff00
+    color: cb48fa
 - model: Dentist.loss_type
   pk: 13
   fields:
     type: wypełnienie kanału tymczasowe
-    color: 00ff00
+    color: c893ca
 - model: Dentist.loss_type
   pk: 14
   fields:
     type: wypełnienie kanału ostateczne
-    color: 00ff00
+    color: 29bacd
 - model: Dentist.loss_type
   pk: 15
   fields:
     type: zapalenie dziąseł
-    color: 00ff00
+    color: 892061
 - model: Dentist.loss_type
   pk: 16
   fields:
     type: zapalenie przyzębia
-    color: 00ff00
+    color: 5ffabc
 - model: Dentist.loss_type
   pk: 17
   fields:
     type: recesja dziąsła
-    color: 00ff00
+    color: d446cc
 - model: Dentist.loss_type
   pk: 18
   fields:
     type: ropień przyzębny
-    color: 00ff00
+    color: 77cc33
 - model: Dentist.loss_type
   pk: 19
   fields:
     type: zespół endo-perio
-    color: 00ff00
+    color: 5544cc
 - model: Dentist.loss_type
   pk: 20
   fields:
     type: uraz przyzębia
-    color: 00ff00
+    color: dd83ca

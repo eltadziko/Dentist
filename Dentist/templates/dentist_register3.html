@@ -81,23 +81,25 @@
 			{% endfor %}
 		</div>
 	{% endif %}
-	
-			<div class="typ_1"><div class="rej_tytul">{{form.pat.label_tag}} </div><div class="opcje">{{form.pat}}</div></div>
-	        
+			<div id="typ4_box">
+				<div class="typ_4"><div class="rej_tytul">{{form.pat.label_tag}} </div><div class="opcje4">{{form.pat}}</div></div>
+		        <div class="typ_4"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje4">{{form.office}}</div></div>
+		    </div>
+		    <div id="typ1_box">
 	        <div class="error">
 				{% for error in form.patients.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			</div>
-	        <div class="typ_1"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje"><div id="pat">{{form.patients}}</div></div></div>
-			<div class="typ_1"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje">{{form.office}}</div></div>
+	        <div class="typ_3"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje3"><div id="pat">{{form.patients}}</div></div></div>
+			
 	         
 	         <div class="error">
 				{% for error in form.dentist.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			</div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje2">{{form.dentist}}</div></div>
+	         <div class="typ_3"><div class="rej_tytul">{{form.dentist.label_tag}} </div><div class="opcje3">{{form.dentist}}</div></div>
 	         
 	         <div class="error">
 				{% for error in form.date.errors %}
@@ -109,5 +111,6 @@
     
 	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
 </form>
+			</div>
 </div>
 {% endblock %}

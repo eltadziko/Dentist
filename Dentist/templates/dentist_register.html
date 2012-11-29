@@ -112,9 +112,10 @@ Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
 		</div>
 	{% endif %}
 	
-
-	         <div class="typ_1"><div class="rej_tytul">{{form.office.label_tag }}</div><div class="opcje">{{form.office}}</div></div>
-	         
+			<div id="typ4_box">
+	         <div class="typ_4"><div class="rej_tytul">{{form.office.label_tag }}</div><div class="opcje4">{{form.office}}</div></div>
+	         </div>
+	         <div id="typ1_box">
 	         {% if request.session.sort2 == '0' %}
 	         <div class="error">
 			    {% for error in form.dentist.errors %}
@@ -152,5 +153,6 @@ Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
     
 	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
 </form>
+			</div>
 </div>
 {% endblock %}

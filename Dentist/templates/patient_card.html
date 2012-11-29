@@ -24,11 +24,11 @@
 	Karta pacjenta
 	<strong>"{{ patient.last_name }} {{ patient.first_name }}"</strong>
 	<table>
-	 <tr><th>PESEL</th><th>Adres:</th><th>Choroby</th></tr>
+	 <tr><th>PESEL</th><th>Adres:</th><th>Komentarz</th><th>Choroby</th></tr>
 	<tr>
 	<td>{{ patient.PESEL }}</td><br />
 	<td>{{ patient.address }}</td></br>
-	{% if patient.comment %}<td>{{ patient.comment }}</td>{% endif %}
+	<td>{% if patient.comment %}{{ patient.comment }}{% endif %}</td>
 	<td class="left">
 	{% for d in patient.patient_diseases_set.all %}
 		- {{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %},</br> {% endif %}

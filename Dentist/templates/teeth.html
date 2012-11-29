@@ -89,6 +89,12 @@
     		{% endfor %}
     		
     		$('area').click(function() {
+    			$('area').attr('color', 'ffffff');
+    		
+	    		{% for l in losses_all %}
+	    			$(document).find('area[alt={{ l.tooth_part.id }}].{{ l.tooth.id }}').attr('color', '{{ l.loss_type.color }}');
+	    		{% endfor %}
+    			$(this).attr('color', 'ff0000');
     			$.post('{{ link }}',
 					{ tooth: $(this).attr('class'),
 					  tooth_part: $(this).attr('alt'),
