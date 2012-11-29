@@ -20,18 +20,28 @@
 {% endblock %}
 
 {% block right_column %}
-	{{ patient.last_name }} {{ patient.first_name }}, PESEL: {{ patient.PESEL }}<br />
-	{{ patient.address }}</br>
-	{% if patient.comment %}{{ patient.comment }}<br />{% endif %}
-	Choroby:<br />
+	<div id="dane_pacjenta">
+	Karta pacjenta
+	<strong>"{{ patient.last_name }} {{ patient.first_name }}"</strong>
+	<table>
+	 <tr><th>PESEL</th><th>Adres:</th><th>Choroby</th></tr>
+	<tr>
+	<td>{{ patient.PESEL }}</td><br />
+	<td>{{ patient.address }}</td></br>
+	{% if patient.comment %}<td>{{ patient.comment }}</td>{% endif %}
+	<td class="left">
 	{% for d in patient.patient_diseases_set.all %}
-		{{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %}, {% endif %}
+		- {{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %},</br> {% endif %}
 	{% endfor %}
-	
+	</td>
+	</tr>
+	</table>
+	</div>
 	{% include 'teeth.html' with link="/patient_card/" losses_all=losses_all %}
 	
 	<div id="tooth_losses">
 		{% if losses %}
+			<br /><strong>Historia zabiegu:</strong><br />
 			<table>
 			<tr><th>Ząb</th><th>Data</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
 			{% for l in losses %}
@@ -46,13 +56,18 @@
 		{% endif %}
 	</div>
 	
-	<br />Wizyty:<br />
+	<br /><strong>Wizyty:</strong><br />
 	{% for a in appoints %}
 	<div class="appoint">
 		<div class="appointment" id="{{ a.id }}">
-			{{ a.date }}<br />
-			{% if a.untimely|is_false %}Termin: {{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}
-			Dentysta: {{ a.dentist.last_name }} {{ a.dentist.first_name }}
+			<table>
+			<tr><th>Data</th><th>Termin</th><th>Dentysta</th></tr>
+			<tr>
+			<td>{{ a.date }}</td>
+			<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
+			<td>{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
+			</tr>
+			</table>
 		</div>
 			{% if a.description %}a.description<br /> {% endif %}
 			<div id="appoint_{{ a.id }}" class="tooth_loss">
