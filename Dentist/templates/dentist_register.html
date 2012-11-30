@@ -160,71 +160,105 @@
 	Posiadasz zbyt dużo rezerwacji. Nie możesz się już zarejestrowac online, dopóki
 	nie odwołasz którejś wizyty lub jej nie odbędziesz.<br />
 {% endif %}
-Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
-<input type="radio" name="sort" value="1" id="1">datach
-<form action="{% url views.dentist_register %}" method="post"> {% csrf_token %}
-	{% if form.non_field_errors %}
-       	<div class="error">
-		    {% for error in form.non_field_errors %}
-		        <strong>{{ error|escape }} </strong>
-			{% endfor %}
-		</div>
-	{% endif %}
-	
-			<div id="typ4_box">
-	         <div class="typ_4"><div class="rej_tytul">{{form.office.label_tag }}</div><div class="opcje4">{{form.office}}</div></div>
-	         </div>
-	         <div id="typ1_box">
-	         {% if request.session.sort2 == '0' %}
-	         <div class="error">
-			    {% for error in form.dentist.errors %}
+<div  id="register_form">
+	Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
+	<input type="radio" name="sort" value="1" id="1">datach
+	<form action="{% url views.dentist_register %}" method="post"> {% csrf_token %}
+		{% if form.non_field_errors %}
+	       	<div class="error">
+			    {% for error in form.non_field_errors %}
 			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			 </div>
-	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje2">{{form.dentist}}</div></div>
-	         {% endif %}
-	         
-	         <div id="month">
-	         	<div id="prev" class="button6"><</div>
-	         	<div id="month2" class="{{ month }}" style="float:left">{{ month|month_name }} {{ year }}</div>
-	         	<div id="next" class="button6" style="clear: right">></div>
+				{% endfor %}
+			</div>
+		{% endif %}
+		
+		<div class="select_box">
+	     	<div class="select_label">
+	     		{{form.office.label_tag }}
+	     	</div>
+	     	<div class="select_options">
+	     		{{form.office}}
+	     	</div>
+	    </div>
+	    
+	    <div class="select_box">
+	         <div class="select_label">
+	         	{{form.type.label_tag }}
 	         </div>
-	         
-	         <div class="error">
+	         <div class="select_options">
+	         	{{form.type}}
+	         </div>
+	     </div>
+	    
+	     <div id="typ1_box">
+		     {% if request.session.sort2 == '0' %}
+		         <div class="error">
+				    {% for error in form.dentist.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				 </div>
+		         <div class="typ_1">
+			         <div id="dentist_lab" class="rej_tytul">
+			         	{{form.dentist.label_tag }}
+			         </div>
+			         <div class="opcje2">
+			         	{{form.dentist}}
+			         </div>
+		         </div>
+		     {% endif %}
+		     
+		     <div class="error">
 			    {% for error in form.date.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div id="date" class="typ_2">
-	         	<div class="rej_tytul">
-	         		{{form.date.label_tag }}
-	         	</div>
-	         	<div class="opcje">
-	         		{{form.date}}
-	         	</div>
-	         </div>
-	         
-	         {% if request.session.sort2 == '1' %}
-	         <div class="error">
-			    {% for error in form.dentist.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			 </div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje2">{{form.dentist}}</div></div>
-	         {% endif %}
-	         
-	         <div class="typ_1"><div class="rej_tytul">{{form.type.label_tag }}</div><div class="opcje">{{form.type}}</div></div>
-	         
-	         <div class="error">
+		     <div id="date">
+		     	<div class="rej_tytul">
+		     		{{form.date.label_tag }}
+		     	</div>
+		     	<div id="month">
+		     		<div id="prev" class="button6"><</div>
+		     		<div id="month2" class="{{ month }}">{{ month|month_name }} {{ year }}</div>
+		     		<div id="next" class="button6" style="clear: right">></div>
+		     	</div>	
+		     	<div class="date_options">
+		     		{{form.date}}
+		     	</div>
+		     </div>
+		     
+		     {% if request.session.sort2 == '1' %}
+		         <div class="error">
+				    {% for error in form.dentist.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				 </div>
+		     	<div class="typ_1">
+		         	<div class="rej_tytul">
+		         		{{form.dentist.label_tag }}
+		         	</div>
+		         	<div class="opcje2">
+		         		{{form.dentist}}
+		         	</div>
+		     	</div>
+		     {% endif %}
+		     
+		     <div class="error">
 			    {% for error in form.appoint.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_2"><div class="rej_tytul">{{form.appoint.label_tag }}</div><div class="opcje">{{form.appoint}}</div></div>
-    
-    
-	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
-</form>
-			</div>
+		     <div class="typ_2">
+			     <div class="rej_tytul">
+			     	{{form.appoint.label_tag }}
+			     </div>
+			     <div class="opcje">
+			     	{{form.appoint}}
+			     </div>
+		     </div>
+		</div>
+	    
+		<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
+	</form>
+</div>			
 </div>
 {% endblock %}

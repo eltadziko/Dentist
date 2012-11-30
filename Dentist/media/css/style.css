@@ -382,21 +382,22 @@ margin:0 auto;
   margin:0px; 
 }
 #rejestracja{
-  width:100%;
+	width: 100%;
+	text-align: center;
 }
 #rejestracja .typ_1{
   float:left;
-  width:200px;
+  width:230px;
   height:400px;
   margin:2px;
   border:solid 1px #9e9e9e;
 }
-#rejestracja select{
+/*#rejestracja select{
   width:200px;
   height:30px;
   margin-top:15px;
   padding:5px;
-}
+}*/
 #rejestracja input[type="text"]{
   height:20px;  
   margin-top:15px;
@@ -479,7 +480,7 @@ margin:0 auto;
   height:370px;
   /*background:url(../img/BG_opcje.png) repeat-x bottom;*/
 }
-.opcje label{
+.opcje label, .date_options label{
   background-color:#40b8dc;
   display:block;
   text-align:center;
@@ -493,7 +494,7 @@ margin:0 auto;
   display:block;
   text-align:left;
   height:25px;
-  width:190px;
+  width:220px;
   margin:-10px; 
   padding:0px 5px 0px 5px;
   margin-left:0px;
@@ -693,5 +694,58 @@ margin-bottom:30px;
 }
 
 #month {
+	width: 100%;
+	height: 25px;
+	clear: both;
+}
 
+#month2 {
+	background: url(../img/BG_submenu.jpg) repeat-x;
+	color:white;	
+	text-align: center;
+	width: 150px;
+	float: left;
+}
+
+#next {
+	float: right;	
+}
+
+#date {
+	float:left;
+  	width:200px;
+  	height:400px;
+  	margin:2px;
+  	border:solid 1px #9e9e9e;	
+}
+
+.select_box {
+	float:left;
+  	width: 300px;
+  	margin: 1px;
+  	border:solid 1px #9e9e9e;
+}
+
+.select_options select {
+	width:300px;
+  	height:30px;
+	padding: 5px;
+}
+
+.select_label {
+  background: url(../img/BG_submenu.jpg) repeat-x;
+  text-align:center;
+  color:white; 
+  display:block;
+  width:100%;
+  height:30px;
+}
+
+.date_options{
+  overflow:auto;
+  height:345px;
+}
+
+#register_form {
+	display: inline-block;	
 }
