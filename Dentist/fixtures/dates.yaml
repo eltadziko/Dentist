@@ -40,7 +40,7 @@
     date: 2012-11-06
     begin: "8:00"
     end: "16:00"
-    dentist: 5
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -76,7 +76,7 @@
     date: 2012-11-07
     begin: "8:00"
     end: "16:00"
-    dentist: 9
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -112,7 +112,7 @@
     date: 2012-11-08
     begin: "8:00"
     end: "16:00"
-    dentist: 13
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -148,7 +148,7 @@
     date: 2012-11-09
     begin: "8:00"
     end: "16:00"
-    dentist: 17
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -220,7 +220,7 @@
     date: 2012-11-13
     begin: "8:00"
     end: "16:00"
-    dentist: 5
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -256,7 +256,7 @@
     date: 2012-11-14
     begin: "8:00"
     end: "16:00"
-    dentist: 9
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -292,7 +292,7 @@
     date: 2012-11-15
     begin: "8:00"
     end: "16:00"
-    dentist: 13
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -328,7 +328,7 @@
     date: 2012-11-15
     begin: "8:00"
     end: "16:00"
-    dentist: 17
+    dentist: 2
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -400,7 +400,7 @@
     date: 2012-11-20
     begin: "8:00"
     end: "16:00"
-    dentist: 5
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -436,7 +436,7 @@
     date: 2012-11-21
     begin: "8:00"
     end: "16:00"
-    dentist: 9
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -472,7 +472,7 @@
     date: 2012-11-22
     begin: "8:00"
     end: "16:00"
-    dentist: 13
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -508,7 +508,7 @@
     date: 2012-11-23
     begin: "8:00"
     end: "16:00"
-    dentist: 17
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -580,7 +580,7 @@
     date: 2012-11-27
     begin: "8:00"
     end: "16:00"
-    dentist: 5
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -616,7 +616,7 @@
     date: 2012-11-28
     begin: "8:00"
     end: "16:00"
-    dentist: 9
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -652,7 +652,7 @@
     date: 2012-11-29
     begin: "8:00"
     end: "16:00"
-    dentist: 13
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -661,7 +661,7 @@
     date: 2012-11-29
     begin: "12:00"
     end: "16:00"
-    dentist: 14
+    dentist: 2
     dental_office: 1
     room: 2.0
 - model: Dentist.dates
@@ -670,7 +670,7 @@
     date: 2012-11-29
     begin: "8:00"
     end: "16:00"
-    dentist: 15
+    dentist: 3
     dental_office: 1
     room: 3.0
 - model: Dentist.dates
@@ -679,7 +679,7 @@
     date: 2012-11-29
     begin: "7:30"
     end: "12:30"
-    dentist: 16
+    dentist: 4
     dental_office: 1
     room: 4.0
 - model: Dentist.dates
@@ -688,7 +688,7 @@
     date: 2012-11-30
     begin: "8:00"
     end: "16:00"
-    dentist: 17
+    dentist: 2
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -697,7 +697,7 @@
     date: 2012-11-30
     begin: "12:00"
     end: "16:00"
-    dentist: 18
+    dentist: 2
     dental_office: 2
     room: 2.0
 - model: Dentist.dates
@@ -706,7 +706,7 @@
     date: 2012-11-30
     begin: "8:00"
     end: "16:00"
-    dentist: 19
+    dentist: 3
     dental_office: 3
     room: 3.0
 - model: Dentist.dates
@@ -715,7 +715,7 @@
     date: 2012-11-30
     begin: "7:30"
     end: "12:30"
-    dentist: 20
+    dentist: 4
     dental_office: 4
     room: 4.0 
 - model: Dentist.dates
@@ -769,7 +769,7 @@
     date: 2012-12-11
     begin: "8:00"
     end: "16:00"
-    dentist: 5
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -778,7 +778,7 @@
     date: 2012-12-11
     begin: "12:00"
     end: "16:00"
-    dentist: 6
+    dentist: 2
     dental_office: 1
     room: 2.0
 - model: Dentist.dates
@@ -787,7 +787,7 @@
     date: 2012-12-11
     begin: "8:00"
     end: "16:00"
-    dentist: 7
+    dentist: 3
     dental_office: 1
     room: 3.0
 - model: Dentist.dates
@@ -796,7 +796,7 @@
     date: 2012-12-11
     begin: "7:30"
     end: "12:30"
-    dentist: 8
+    dentist: 4
     dental_office: 1
     room: 4.0
 - model: Dentist.dates
@@ -805,7 +805,7 @@
     date: 2012-12-12
     begin: "8:00"
     end: "16:00"
-    dentist: 9
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -814,7 +814,7 @@
     date: 2012-12-12
     begin: "12:00"
     end: "16:00"
-    dentist: 10
+    dentist: 2
     dental_office: 1
     room: 2.0
 - model: Dentist.dates
@@ -823,7 +823,7 @@
     date: 2012-12-12
     begin: "8:00"
     end: "16:00"
-    dentist: 11
+    dentist: 3
     dental_office: 1
     room: 3.0
 - model: Dentist.dates
@@ -832,7 +832,7 @@
     date: 2012-12-12
     begin: "7:30"
     end: "12:30"
-    dentist: 12
+    dentist: 4
     dental_office: 1
     room: 4.0
 - model: Dentist.dates
@@ -841,7 +841,7 @@
     date: 2012-12-13
     begin: "8:00"
     end: "16:00"
-    dentist: 13
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -850,7 +850,7 @@
     date: 2012-12-13
     begin: "12:00"
     end: "16:00"
-    dentist: 14
+    dentist: 2
     dental_office: 1
     room: 2.0
 - model: Dentist.dates
@@ -859,7 +859,7 @@
     date: 2012-12-13
     begin: "8:00"
     end: "16:00"
-    dentist: 15
+    dentist: 3
     dental_office: 1
     room: 3.0
 - model: Dentist.dates
@@ -868,7 +868,7 @@
     date: 2012-12-13
     begin: "7:30"
     end: "12:30"
-    dentist: 16
+    dentist: 4
     dental_office: 1
     room: 4.0
 - model: Dentist.dates
@@ -877,7 +877,7 @@
     date: 2012-12-14
     begin: "8:00"
     end: "16:00"
-    dentist: 17
+    dentist: 1
     dental_office: 1
     room: 1.0
 - model: Dentist.dates
@@ -886,7 +886,7 @@
     date: 2012-12-14
     begin: "12:00"
     end: "16:00"
-    dentist: 18
+    dentist: 2
     dental_office: 1
     room: 2.0
 - model: Dentist.dates
@@ -895,7 +895,7 @@
     date: 2012-12-14
     begin: "8:00"
     end: "16:00"
-    dentist: 19
+    dentist: 3
     dental_office: 1
     room: 3.0
 - model: Dentist.dates
@@ -904,7 +904,7 @@
     date: 2012-12-14
     begin: "7:30"
     end: "12:30"
-    dentist: 20
+    dentist: 4
     dental_office: 1
     room: 4.0
 - model: Dentist.dates
@@ -913,7 +913,7 @@
     date: 2012-12-12
     begin: "8:00"
     end: "12:00"
-    dentist: 1
+    dentist: 5
     dental_office: 2
     room: 2.0
 - model: Dentist.dates
@@ -922,7 +922,7 @@
     date: 2012-12-12
     begin: "10:00"
     end: "11:30"
-    dentist: 2
+    dentist: 6
     dental_office: 2
     room: 3.0
 - model: Dentist.dates
@@ -931,7 +931,7 @@
     date: 2012-12-12
     begin: "12:00"
     end: "16:00"
-    dentist: 2
+    dentist: 7
     dental_office: 3
     room: 4.0
 - model: Dentist.dates
@@ -940,7 +940,7 @@
     date: 2012-12-12
     begin: "8:00"
     end: "16:00"
-    dentist: 3
+    dentist: 8
     dental_office: 4
     room: 1.0
 - model: Dentist.dates
@@ -949,7 +949,7 @@
     date: 2012-12-12
     begin: "12:00"
     end: "16:00"
-    dentist: 5
+    dentist: 9
     dental_office: 2
     room: 2.0
 - model: Dentist.dates
@@ -958,7 +958,7 @@
     date: 2012-12-12
     begin: "8:00"
     end: "16:00"
-    dentist: 2
+    dentist: 10
     dental_office: 3
     room: 3.0
 - model: Dentist.dates
@@ -967,7 +967,7 @@
     date: 2012-12-12
     begin: "12:30"
     end: "18:30"
-    dentist: 6
+    dentist: 11
     dental_office: 2
     room: 4.0
 - model: Dentist.dates
@@ -976,7 +976,7 @@
     date: 2012-12-12
     begin: "8:00"
     end: "16:00"
-    dentist: 7
+    dentist: 12
     dental_office: 3
     room: 1.0
 - model: Dentist.dates

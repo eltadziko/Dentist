@@ -1007,17 +1007,17 @@ def reservations(request):
                         form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id)
                     else:
                         form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id, request.POST)
-                    return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
+                    return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app})
             else:
                 if request.GET.get('type', None) == 'ajax':
                     form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
                 else:
                     form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id, request.POST)
-                print 'a'
+ 
                 if dates.objects.filter(dental_office=app.dental_office.id).filter(dentist=app.dentist.id).filter(date__gte=datetime.date.today).count() == 0:
                     messages.add_message(request, messages.ERROR, 'Nie ma innych wolnych terminów.')
                     return HttpResponseRedirect('/reservations/')
-                return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id})
+                return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app})
     
     if in_patient_group(request.user):
         pat = patient.objects.get(user = request.user)

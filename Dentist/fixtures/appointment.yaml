@@ -301,7 +301,7 @@
     date: 2012-12-11
     hour: "8:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 28
     dental_office: 1
     appointment_type: 3
@@ -312,7 +312,7 @@
     date: 2012-12-11
     hour: "9:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 29
     dental_office: 1
     appointment_type: 3
@@ -323,7 +323,7 @@
     date: 2012-12-11
     hour: "10:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 30
     dental_office: 1
     appointment_type: 1
@@ -334,7 +334,7 @@
     date: 2012-12-11
     hour: "11:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 31
     dental_office: 1
     appointment_type: 1
@@ -345,7 +345,7 @@
     date: 2012-12-11
     hour: "13:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 32
     dental_office: 1
     appointment_type: 3
@@ -356,7 +356,7 @@
     date: 2012-12-11
     hour: "14:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 33
     dental_office: 1
     appointment_type: 3
@@ -367,7 +367,7 @@
     date: 2012-12-11
     hour: "15:00"
     description: 
-    dentist: 5
+    dentist: 1
     patient: 34
     dental_office: 1
     appointment_type: 2
@@ -378,7 +378,7 @@
     date: 2012-12-11
     hour: "12:00"
     description: 
-    dentist: 6
+    dentist: 2
     patient: 35
     dental_office: 1
     appointment_type: 3
@@ -389,7 +389,7 @@
     date: 2012-12-11
     hour: "13:00"
     description: 
-    dentist: 6
+    dentist: 2
     patient: 36
     dental_office: 1
     appointment_type: 3
@@ -400,7 +400,7 @@
     date: 2012-12-11
     hour: "14:00"
     description: 
-    dentist: 6
+    dentist: 2
     patient: 37
     dental_office: 1
     appointment_type: 1
@@ -411,7 +411,7 @@
     date: 2012-12-11
     hour: "15:00"
     description: 
-    dentist: 6
+    dentist: 2
     patient: 38
     dental_office: 1
     appointment_type: 3
@@ -422,7 +422,7 @@
     date: 2012-12-11
     hour: "16:00"
     description: 
-    dentist: 6
+    dentist: 2
     patient: 39
     dental_office: 1
     appointment_type: 1
@@ -433,7 +433,7 @@
     date: 2012-12-11
     hour: "17:00"
     description: 
-    dentist: 6
+    dentist: 2
     patient: 40
     dental_office: 1
     appointment_type: 3
@@ -444,7 +444,7 @@
     date: 2012-12-11
     hour: "8:00"
     description: 
-    dentist: 7
+    dentist: 3
     patient: 41
     dental_office: 1
     appointment_type: 3
@@ -455,7 +455,7 @@
     date: 2012-12-11
     hour: "9:00"
     description: 
-    dentist: 7
+    dentist: 3
     patient: 42
     dental_office: 1
     appointment_type: 2
@@ -466,7 +466,7 @@
     date: 2012-12-11
     hour: "10:00"
     description: 
-    dentist: 7
+    dentist: 3
     patient: 43
     dental_office: 1
     appointment_type: 3
@@ -477,7 +477,7 @@
     date: 2012-12-11
     hour: "11:00"
     description: 
-    dentist: 7
+    dentist: 3
     patient: 44
     dental_office: 1
     appointment_type: 3
@@ -488,7 +488,7 @@
     date: 2012-12-11
     hour: "12:00"
     description: 
-    dentist: 7 
+    dentist: 3 
     patient: 45
     dental_office: 1
     appointment_type: 1 
@@ -499,7 +499,7 @@
     date: 2012-12-11
     hour: "13:00"
     description: 
-    dentist: 7 
+    dentist: 3 
     patient: 46
     dental_office: 1
     appointment_type: 3
@@ -510,7 +510,7 @@
     date: 2012-12-11
     hour: "14:00"
     description: 
-    dentist: 8 
+    dentist: 4 
     patient: 47
     dental_office: 1 
     appointment_type: 3
@@ -521,7 +521,7 @@
     date: 2012-12-11
     hour: "15:00"
     description: 
-    dentist: 8 
+    dentist: 4 
     patient: 48
     dental_office: 1
     appointment_type: 3
@@ -532,7 +532,7 @@
     date: 2012-12-12
     hour: "8:00"
     description: 
-    dentist: 9
+    dentist: 1
     patient: 49
     dental_office: 1
     appointment_type: 3
@@ -543,7 +543,7 @@
     date: 2012-12-12
     hour: "9:00"
     description: 
-    dentist: 9
+    dentist: 1
     patient: 50
     dental_office: 1
     appointment_type: 3
@@ -554,7 +554,7 @@
     date: 2012-12-12
     hour: "11:00"
     description: 
-    dentist: 9
+    dentist: 1
     patient: 51
     dental_office: 1
     appointment_type: 3
@@ -565,7 +565,7 @@
     date: 2012-12-12
     hour: "12:00"
     description: 
-    dentist: 9
+    dentist: 1
     patient: 52
     dental_office: 1
     appointment_type: 3
@@ -576,7 +576,7 @@
     date: 2012-12-12
     hour: "13:00"
     description: 
-    dentist: 9
+    dentist: 1
     patient: 53
     dental_office: 1
     appointment_type: 3
@@ -587,7 +587,7 @@
     date: 2012-12-12
     hour: "14:00"
     description: 
-    dentist: 9 
+    dentist: 1 
     patient: 54
     dental_office: 1
     appointment_type: 3
@@ -598,7 +598,7 @@
     date: 2012-12-12
     hour: "15:00"
     description: 
-    dentist: 9 
+    dentist: 1 
     patient: 55
     dental_office: 1
     appointment_type: 3
@@ -609,7 +609,7 @@
     date: 2012-12-12
     hour: "12:00"
     description: 
-    dentist: 10 
+    dentist: 2 
     patient: 56
     dental_office: 1
     appointment_type: 2
@@ -620,7 +620,7 @@
     date: 2012-12-12
     hour: "13:00"
     description: 
-    dentist: 10 
+    dentist: 2 
     patient: 57
     dental_office: 1 
     appointment_type: 3
@@ -631,7 +631,7 @@
     date: 2012-12-12
     hour: "14:00"
     description: 
-    dentist: 10
+    dentist: 2
     patient: 58
     dental_office: 1
     appointment_type: 3
@@ -642,7 +642,7 @@
     date: 2012-12-12
     hour: "15:00"
     description: 
-    dentist: 10
+    dentist: 2
     patient: 59
     dental_office: 1
     appointment_type: 3
@@ -653,7 +653,7 @@
     date: 2012-12-12
     hour: "16:00"
     description: 
-    dentist: 10
+    dentist: 2
     patient: 60
     dental_office: 1
     appointment_type: 3
@@ -664,7 +664,7 @@
     date: 2012-12-12
     hour: "17:00"
     description: 
-    dentist: 10 
+    dentist: 2 
     patient: 61
     dental_office: 1
     appointment_type: 3
@@ -675,7 +675,7 @@
     date: 2012-12-12
     hour: "8:00"
     description: 
-    dentist: 11
+    dentist: 3
     patient: 62
     dental_office: 1
     appointment_type: 2 
@@ -686,7 +686,7 @@
     date: 2012-12-12
     hour: "9:00"
     description: 
-    dentist: 11
+    dentist: 3
     patient: 63
     dental_office: 1
     appointment_type: 1
@@ -697,7 +697,7 @@
     date: 2012-12-12
     hour: "10:00"
     description: 
-    dentist: 11
+    dentist: 3
     patient: 64
     dental_office: 1
     appointment_type: 1
@@ -708,7 +708,7 @@
     date: 2012-12-12
     hour: "11:00"
     description: 
-    dentist: 11
+    dentist: 3
     patient: 65
     dental_office: 1
     appointment_type: 1
@@ -719,7 +719,7 @@
     date: 2012-12-12
     hour: "12:00"
     description: 
-    dentist: 11 
+    dentist: 3 
     patient: 66
     dental_office: 1
     appointment_type: 3
@@ -730,7 +730,7 @@
     date: 2012-12-12
     hour: "13:00"
     description: 
-    dentist: 11 
+    dentist: 3 
     patient: 67
     dental_office: 1 
     appointment_type: 2
@@ -741,7 +741,7 @@
     date: 2012-12-12
     hour: "14:00"
     description: 
-    dentist: 11 
+    dentist: 3 
     patient: 68
     dental_office: 1
     appointment_type: 3
@@ -752,7 +752,7 @@
     date: 2012-12-12
     hour: "15:00"
     description: 
-    dentist: 11 
+    dentist: 3 
     patient: 69
     dental_office: 1
     appointment_type: 2
@@ -763,7 +763,7 @@
     date: 2012-12-12
     hour: "7:30"
     description: 
-    dentist: 12
+    dentist: 4
     patient: 70
     dental_office: 1
     appointment_type: 3
@@ -774,7 +774,7 @@
     date: 2012-12-12
     hour: "8:30"
     description: 
-    dentist: 12 
+    dentist: 4 
     patient: 71
     dental_office: 1
     appointment_type: 1
@@ -785,7 +785,7 @@
     date: 2012-12-12
     hour: "9:30"
     description: 
-    dentist: 12
+    dentist: 4
     patient: 72
     dental_office: 1
     appointment_type: 3
@@ -796,7 +796,7 @@
     date: 2012-12-12
     hour: "10:30"
     description: 
-    dentist: 12
+    dentist: 4
     patient: 73
     dental_office: 1
     appointment_type: 3
@@ -807,7 +807,7 @@
     date: 2012-12-12
     hour: "11:30"
     description: 
-    dentist: 12
+    dentist: 4
     patient: 74
     dental_office: 1
     appointment_type: 2
@@ -818,7 +818,7 @@
     date: 2012-12-12
     hour: "12:00"
     description: 
-    dentist: 12
+    dentist: 4
     patient: 75
     dental_office: 1
     appointment_type: 2
@@ -829,7 +829,7 @@
     date: 2012-12-13
     hour: "8:00"
     description: 
-    dentist: 13 
+    dentist: 1 
     patient: 76
     dental_office: 1
     appointment_type: 3
@@ -840,7 +840,7 @@
     date: 2012-12-13
     hour: "9:00"
     description: 
-    dentist: 13 
+    dentist: 1 
     patient: 77
     dental_office: 1 
     appointment_type: 1
@@ -851,7 +851,7 @@
     date: 2012-12-13
     hour: "11:00"
     description: 
-    dentist: 13 
+    dentist: 1 
     patient: 78
     dental_office: 1
     appointment_type: 3
@@ -862,7 +862,7 @@
     date: 2012-12-13
     hour: "12:00"
     description: 
-    dentist: 13 
+    dentist: 1 
     patient: 79
     dental_office: 1
     appointment_type: 3
@@ -873,7 +873,7 @@
     date: 2012-12-13
     hour: "13:00"
     description: 
-    dentist: 13
+    dentist: 1
     patient: 80
     dental_office: 1
     appointment_type: 3
@@ -884,7 +884,7 @@
     date: 2012-12-13
     hour: "14:00"
     description: 
-    dentist: 13 
+    dentist: 1 
     patient: 81
     dental_office: 1
     appointment_type: 3 
@@ -895,7 +895,7 @@
     date: 2012-12-13
     hour: "15:00"
     description: 
-    dentist: 13
+    dentist: 1
     patient: 82
     dental_office: 1
     appointment_type: 3 
@@ -906,7 +906,7 @@
     date: 2012-12-13
     hour: "12:00"
     description: 
-    dentist: 14 
+    dentist: 2 
     patient: 83
     dental_office: 1
     appointment_type: 1
@@ -917,7 +917,7 @@
     date: 2012-12-13
     hour: "13:00"
     description: 
-    dentist: 14
+    dentist: 2
     patient: 84
     dental_office: 1
     appointment_type: 2
@@ -928,7 +928,7 @@
     date: 2012-12-13
     hour: "14:00"
     description: 
-    dentist: 14
+    dentist: 2
     patient: 85
     dental_office: 1
     appointment_type: 3
@@ -939,7 +939,7 @@
     date: 2012-12-13
     hour: "15:00"
     description: 
-    dentist: 14
+    dentist: 2
     patient: 86
     dental_office: 1
     appointment_type: 3
@@ -950,7 +950,7 @@
     date: 2012-12-13
     hour: "16:00"
     description: 
-    dentist: 14
+    dentist: 2
     patient: 87
     dental_office: 1 
     appointment_type: 1
@@ -961,7 +961,7 @@
     date: 2012-12-13
     hour: "17:00"
     description: 
-    dentist: 14
+    dentist: 2
     patient: 88
     dental_office: 1
     appointment_type: 3
@@ -972,7 +972,7 @@
     date: 2012-12-13
     hour: "8:00"
     description: 
-    dentist: 15 
+    dentist: 3 
     patient: 89
     dental_office: 1
     appointment_type: 1
@@ -983,7 +983,7 @@
     date: 2012-12-13
     hour: "9:00"
     description: 
-    dentist: 15
+    dentist: 3
     patient: 90
     dental_office: 1
     appointment_type: 2
@@ -994,7 +994,7 @@
     date: 2012-12-13
     hour: "10:00"
     description: 
-    dentist: 15 
+    dentist: 3 
     patient: 91
     dental_office: 1
     appointment_type: 2
@@ -1005,7 +1005,7 @@
     date: 2012-12-13
     hour: "11:00"
     description: 
-    dentist: 15
+    dentist: 3
     patient: 92
     dental_office: 1
     appointment_type: 3
@@ -1016,7 +1016,7 @@
     date: 2012-12-13
     hour: "12:00"
     description: 
-    dentist: 15 
+    dentist: 3 
     patient: 93 
     dental_office: 1
     appointment_type: 3
@@ -1027,7 +1027,7 @@
     date: 2012-12-13
     hour: "13:00"
     description: 
-    dentist: 15 
+    dentist: 3 
     patient: 94
     dental_office: 1
     appointment_type: 1
@@ -1038,7 +1038,7 @@
     date: 2012-12-13
     hour: "14:00"
     description: 
-    dentist: 15 
+    dentist: 3 
     patient: 95
     dental_office: 1
     appointment_type: 2
@@ -1049,7 +1049,7 @@
     date: 2012-12-13
     hour: "15:00"
     description: 
-    dentist: 15
+    dentist: 3
     patient: 96
     dental_office: 1
     appointment_type: 1
@@ -1060,7 +1060,7 @@
     date: 2012-12-13
     hour: "7:30"
     description: 
-    dentist: 16
+    dentist: 4
     patient: 97
     dental_office: 1 
     appointment_type: 3
@@ -1071,7 +1071,7 @@
     date: 2012-12-13
     hour: "8:30"
     description: 
-    dentist: 16
+    dentist: 4
     patient: 98
     dental_office: 1
     appointment_type: 3
@@ -1082,7 +1082,7 @@
     date: 2012-12-13
     hour: "9:30"
     description: 
-    dentist: 16
+    dentist: 4
     patient: 99
     dental_office: 1
     appointment_type: 3
@@ -1093,7 +1093,7 @@
     date: 2012-12-13
     hour: "10:30"
     description: 
-    dentist: 16
+    dentist: 4
     patient: 100
     dental_office: 1
     appointment_type: 2
@@ -1104,7 +1104,7 @@
     date: 2012-12-13
     hour: "11:30"
     description: 
-    dentist: 16
+    dentist: 4
     patient: 101
     dental_office: 1
     appointment_type: 2 
@@ -1115,7 +1115,7 @@
     date: 2012-12-13
     hour: "12:00"
     description: 
-    dentist: 16
+    dentist: 4
     patient: 102
     dental_office: 1
     appointment_type: 2 
@@ -5372,7 +5372,7 @@
     date: 2012-11-30
     hour: "8:00"
     description: 
-    dentist: 17
+    dentist: 1
     patient: 103
     dental_office: 1
     appointment_type: 3
@@ -5383,7 +5383,7 @@
     date: 2012-11-30
     hour: "9:00"
     description: 
-    dentist: 17 
+    dentist: 1 
     patient: 104
     dental_office: 1
     appointment_type: 3
@@ -5394,7 +5394,7 @@
     date: 2012-11-30
     hour: "11:00"
     description: 
-    dentist: 17
+    dentist: 1
     patient: 105
     dental_office: 1
     appointment_type: 1
@@ -5405,7 +5405,7 @@
     date: 2012-11-30
     hour: "12:00"
     description: 
-    dentist: 17
+    dentist: 1
     patient: 106
     dental_office: 1
     appointment_type: 3
@@ -5416,7 +5416,7 @@
     date: 2012-11-30
     hour: "13:00"
     description: 
-    dentist: 17
+    dentist: 1
     patient: 107
     dental_office: 1 
     appointment_type: 3
@@ -5427,7 +5427,7 @@
     date: 2012-11-30
     hour: "14:00"
     description: 
-    dentist: 17
+    dentist: 1
     patient: 108
     dental_office: 1
     appointment_type: 3
@@ -5438,7 +5438,7 @@
     date: 2012-11-30
     hour: "15:00"
     description: 
-    dentist: 17
+    dentist: 1
     patient: 109
     dental_office: 1
     appointment_type: 3
@@ -5449,7 +5449,7 @@
     date: 2012-11-30
     hour: "12:00"
     description: 
-    dentist: 18
+    dentist: 2
     patient: 110
     dental_office: 1
     appointment_type: 3
@@ -5460,7 +5460,7 @@
     date: 2012-11-30
     hour: "13:00"
     description: 
-    dentist: 18
+    dentist: 2
     patient: 111
     dental_office: 1
     appointment_type: 3
@@ -5471,7 +5471,7 @@
     date: 2012-11-30
     hour: "14:00"
     description: 
-    dentist: 18
+    dentist: 2
     patient: 112
     dental_office: 1
     appointment_type: 2
@@ -5482,7 +5482,7 @@
     date: 2012-11-30
     hour: "15:00"
     description: 
-    dentist: 18
+    dentist: 2
     patient: 113
     dental_office: 1
     appointment_type: 3
@@ -5493,7 +5493,7 @@
     date: 2012-11-30
     hour: "16:00"
     description: 
-    dentist: 18
+    dentist: 2
     patient: 114
     dental_office: 1
     appointment_type: 3
@@ -5504,7 +5504,7 @@
     date: 2012-11-30
     hour: "17:00"
     description: 
-    dentist: 18 
+    dentist: 2 
     patient: 115
     dental_office: 1
     appointment_type: 1
@@ -5515,7 +5515,7 @@
     date: 2012-11-30
     hour: "8:00"
     description: 
-    dentist: 19 
+    dentist: 3 
     patient: 116
     dental_office: 1
     appointment_type: 3
@@ -5526,7 +5526,7 @@
     date: 2012-11-30
     hour: "9:00"
     description: 
-    dentist: 19
+    dentist: 3
     patient: 117
     dental_office: 1 
     appointment_type: 3
@@ -5537,7 +5537,7 @@
     date: 2012-11-30
     hour: "10:00"
     description: 
-    dentist: 19 
+    dentist: 3 
     patient: 118
     dental_office: 1
     appointment_type: 3
@@ -5548,7 +5548,7 @@
     date: 2012-11-30
     hour: "11:00"
     description: 
-    dentist: 19 
+    dentist: 3 
     patient: 119
     dental_office: 1
     appointment_type: 3
@@ -5559,7 +5559,7 @@
     date: 2012-11-30
     hour: "12:00"
     description: 
-    dentist: 19
+    dentist: 3
     patient: 120
     dental_office: 1
     appointment_type: 1
@@ -5570,7 +5570,7 @@
     date: 2012-11-30
     hour: "13:00"
     description: 
-    dentist: 19 
+    dentist: 3 
     patient: 121
     dental_office: 1
     appointment_type: 3 
@@ -5581,7 +5581,7 @@
     date: 2012-11-30
     hour: "14:00"
     description: 
-    dentist: 19
+    dentist: 3
     patient: 122
     dental_office: 1
     appointment_type: 3
@@ -5592,7 +5592,7 @@
     date: 2012-11-30
     hour: "15:00"
     description: 
-    dentist: 19 
+    dentist: 3 
     patient: 123
     dental_office: 1
     appointment_type: 3
@@ -5603,7 +5603,7 @@
     date: 2012-11-30
     hour: "7:30"
     description: 
-    dentist: 20
+    dentist: 4
     patient: 124
     dental_office: 1
     appointment_type: 3
@@ -5614,7 +5614,7 @@
     date: 2012-11-30
     hour: "8:30"
     description: 
-    dentist: 20
+    dentist: 4
     patient: 125
     dental_office: 1
     appointment_type: 3
@@ -5625,7 +5625,7 @@
     date: 2012-11-30
     hour: "9:30"
     description: 
-    dentist: 20
+    dentist: 4
     patient: 126
     dental_office: 1
     appointment_type: 3
@@ -5636,7 +5636,7 @@
     date: 2012-11-30
     hour: "10:30"
     description: 
-    dentist: 20
+    dentist: 4
     patient: 127
     dental_office: 1 
     appointment_type: 2
@@ -5647,7 +5647,7 @@
     date: 2012-11-30
     hour: "11:30"
     description: 
-    dentist: 20
+    dentist: 4
     patient: 128
     dental_office: 1
     appointment_type: 1
@@ -5658,7 +5658,7 @@
     date: 2012-11-30
     hour: "12:00"
     description: 
-    dentist: 20
+    dentist: 4
     patient: 128
     dental_office: 1
     appointment_type: 2
@@ -5669,7 +5669,7 @@
     date: 2012-12-12
     hour: "8:00"
     description: 
-    dentist: 1
+    dentist: 5
     patient: 145
     dental_office: 2
     appointment_type: 3
@@ -5680,7 +5680,7 @@
     date: 2012-12-12
     hour: "9:00"
     description: 
-    dentist: 1
+    dentist: 5
     patient: 21
     dental_office: 2
     appointment_type: 2
@@ -5691,7 +5691,7 @@
     date: 2012-12-12
     hour: "11:00"
     description: 
-    dentist: 2
+    dentist: 6
     patient: 30
     dental_office: 2
     appointment_type: 1
@@ -5702,7 +5702,7 @@
     date: 2012-12-12
     hour: "12:00"
     description: 
-    dentist: 2
+    dentist: 6
     patient: 40
     dental_office: 3
     appointment_type: 2
@@ -5713,7 +5713,7 @@
     date: 2012-12-12
     hour: "13:00"
     description: 
-    dentist: 2
+    dentist: 6
     patient: 50
     dental_office: 3
     appointment_type: 2
@@ -5724,7 +5724,7 @@
     date: 2012-12-12
     hour: "14:00"
     description: 
-    dentist: 3
+    dentist: 7
     patient: 60
     dental_office: 4
     appointment_type: 1
@@ -5735,7 +5735,7 @@
     date: 2012-12-12
     hour: "15:00"
     description: 
-    dentist: 5
+    dentist: 7
     patient: 70
     dental_office: 2 
     appointment_type: 1
@@ -5746,7 +5746,7 @@
     date: 2012-12-12
     hour: "12:00"
     description: 
-    dentist: 5
+    dentist: 8
     patient: 80
     dental_office: 2
     appointment_type: 1
@@ -5757,7 +5757,7 @@
     date: 2012-12-12
     hour: "13:00"
     description: 
-    dentist: 5
+    dentist: 8
     patient: 90
     dental_office: 2
     appointment_type: 3
@@ -5768,7 +5768,7 @@
     date: 2012-12-12
     hour: "14:00"
     description: 
-    dentist: 2
+    dentist: 6
     patient: 100
     dental_office: 3
     appointment_type: 2
@@ -5779,7 +5779,7 @@
     date: 2012-12-12
     hour: "15:00"
     description: 
-    dentist: 6
+    dentist: 8
     patient: 111
     dental_office: 2
     appointment_type: 1
@@ -5790,7 +5790,7 @@
     date: 2012-12-12
     hour: "16:00"
     description: 
-    dentist: 6
+    dentist: 8
     patient: 121
     dental_office: 2
     appointment_type: 3
@@ -5801,7 +5801,7 @@
     date: 2012-12-12
     hour: "17:00"
     description: 
-    dentist: 6
+    dentist: 8
     patient: 130
     dental_office: 2
     appointment_type: 3

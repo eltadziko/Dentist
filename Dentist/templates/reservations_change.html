@@ -68,6 +68,7 @@
 
 {% block right_column %}
 <div id="rejestracja">
+Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i' }}</strong> u dentysty <strong>{{ app.dentist }}</strong>:
 <form action="{% url views.reservations %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
