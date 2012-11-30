@@ -173,7 +173,6 @@
 			 
 			 $('#tooth_cancel').live('click', function() {
 			 	$('#tooth_loss').hide();
-			 	$('#tooth_losses').hide();
 			 });
 			 
 		});
@@ -210,14 +209,19 @@
 		<input class="button5" type="submit" id="ok_patient" value="Zapisz"/>
 	</div>
 
-	{% include 'teeth.html' with link="/patient_card_dentist/" losses_all=losses_all %}
-
+	<div id="gora">
 	<table id="tooth_loss">
 		{{ form }}
-		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" /></td>
-		<td><input type="submit" value="Zapisz" id="tooth_ok" /></td></tr>
+		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" class="button2" /></td>
+		<td><input type="submit" value="Zapisz" id="tooth_ok" class="button2" /></td></tr>
 	</table>
+	</div>
+
+	<div id="dol">
+	{% include 'teeth.html' with link="/patient_card_dentist/" losses_all=losses_all %}
+	</div>
 	
+	<div id="srodek">
 	<div id="tooth_losses">
 		{% if losses %}
 			<table>
@@ -291,4 +295,6 @@
 			</div>
 	</div>
 	{% endfor %}
+	</div>
+
 {% endblock %}

@@ -27,4 +27,4 @@ class ToothForm(forms.Form):
                                                     label="Rozpoznanie",
                                                     empty_label=None)
     description = forms.CharField(label='Komentarz',
-                                  widget=forms.Textarea(attrs={'rows':'4', 'cols':'60'}))
+                                  widget=forms.Textarea(attrs={'rows':'4', 'cols':'40'}))
