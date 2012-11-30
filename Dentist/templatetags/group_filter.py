@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from django import template
 from django.utils.encoding import force_unicode
+import calendar, locale
 
 register = template.Library()
 
@@ -53,3 +54,20 @@ def day(int):
 @register.filter
 def is_false(arg): 
     return arg is False
+
+@register.filter
+def month_name(month_number):
+    return {
+        1: 'styczeń',
+        2: 'luty',
+        3: 'marzec',
+        4: 'kwiecień',
+        5: 'maj',
+        6: 'czerwiec',
+        7: 'lipiec',
+        8: 'sierpień',
+        9: 'wrzesień',
+        10: 'październik',
+        11: 'listopad',
+        12: 'grudzień'
+    }[month_number]

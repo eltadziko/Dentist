@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load group_filter %}
+{% load i18n %}
 
 {% block javascript %}
 	{{ block.super }}
@@ -12,6 +14,8 @@
 			$.post('/dentist_register/?type=ajax',
 			{ office: $(this).val(),
 			  type: $('#id_type').val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
 				$('#content').html(data); 
@@ -25,6 +29,8 @@
 				{ office: $('#id_office').val(),
 				  dentist: $("input[name=dentist]:checked").val(),
 				  type: $('#id_type').val(),
+				  month: $('#month2').attr('class'),
+				  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -35,6 +41,8 @@
 				  dentist: $("input[name=dentist]:checked").val(),
 				  date: $('input[name=date]:checked').val(),
 				  type: $('#id_type').val(),
+				  month: $('#month2').attr('class'),
+				  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -50,6 +58,8 @@
 				{ office: $('#id_office').val(),
 				  date: $('input[name=date]:checked').val(),
 				  type: $('#id_type').val(),
+				  month: $('#month2').attr('class'),
+				  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -60,6 +70,8 @@
 				  dentist: $('input[name=dentist]:checked').val(),
 				  date: $('input[name=date]:checked').val(),
 				  type: $('#id_type').val(),
+				  month: $('#month2').attr('class'),
+				  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -73,6 +85,8 @@
 			{ office: $('#id_office').val(),
 			  dentist: $('input[name=dentist]:checked').val(),
 			  date: $('input[name=date]:checked').val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  type: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
@@ -85,12 +99,57 @@
 		 	$.post('/dentist_register/?type=ajax',
 			{ office: $('#id_office').val(),
 			  sort: $('input[name=sort]:checked').val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
 				$('#content').html(data); 
 			});
 		 	return false;
 		 });
+		 
+		 $('#prev').click(function() {
+		 	var month = $('#month2').attr('class')-1;
+		 	var year = {{ year }};
+			if(month == 0) {
+				month = 12;
+				year = year -1;
+			}
+		 	$.post('/dentist_register/?type=ajax',
+			{ office: $('#id_office').val(),
+			  type: $('#id_type').val(),
+			  dentist: $('input[name=dentist]:checked').val(),
+			  month: month,
+			  year: year,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data);
+			});
+
+		 	return false;
+		 });
+		 
+		 $('#next').click(function() {
+		 	var month = $('#month2').attr('class')-1+2;
+		 	var year = {{ year }};
+			if(month == 13) {
+				month = 1;
+				year = year - 1 + 2;
+			}
+		 	$.post('/dentist_register/?type=ajax',
+			{ office: $('#id_office').val(),
+			  type: $('#id_type').val(),
+			  dentist: $('input[name=dentist]:checked').val(),
+			  month: month,
+			  year: year,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data);
+			});
+
+		 	return false;
+		 });
+		 
 	});
 	</script>
 {% endblock %}
@@ -125,12 +184,25 @@ Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
 	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje2">{{form.dentist}}</div></div>
 	         {% endif %}
 	         
+	         <div id="month">
+	         	<div id="prev" class="button6"><</div>
+	         	<div id="month2" class="{{ month }}" style="float:left">{{ month|month_name }} {{ year }}</div>
+	         	<div id="next" class="button6" style="clear: right">></div>
+	         </div>
+	         
 	         <div class="error">
 			    {% for error in form.date.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			 </div>
-	         <div class="typ_2"><div class="rej_tytul">{{form.date.label_tag }}</div><div class="opcje">{{form.date}}</div></div>
+	         <div id="date" class="typ_2">
+	         	<div class="rej_tytul">
+	         		{{form.date.label_tag }}
+	         	</div>
+	         	<div class="opcje">
+	         		{{form.date}}
+	         	</div>
+	         </div>
 	         
 	         {% if request.session.sort2 == '1' %}
 	         <div class="error">

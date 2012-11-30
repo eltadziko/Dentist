@@ -220,11 +220,22 @@ def dentist_register(request):
         request.session['sort2'] = request.POST['sort']
     if not 'sort2' in request.session:
         request.session['sort2'] = '0'
-
+         
     offices = dental_office.objects.all()
+
+    if 'month' in request.POST.keys():
+        month = int(request.POST['month'])
+    else:
+        month = datetime.date.today().month
+    if 'year' in request.POST.keys():
+        year = int(request.POST['year'])
+    else:
+        year = datetime.date.today().year
+        
+
     if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
         form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'])
-        return render(request, 'dentist_register.html', {'form': form, 'too_much': True})
+        return render(request, 'dentist_register.html', {'form': form, 'too_much': True, 'month': month, 'year': year})
     if request.POST:  
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -285,29 +296,31 @@ def dentist_register(request):
                     for h in deleted_apps:            
                         apps.remove(h)
                     if request.GET.get('type', None) == 'ajax': 
-                        form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, request.session['sort2'])
+                        form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, request.session['sort2'], month, year)
                     else:
-                        form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, request.session['sort2'], request.POST)
+                        form = RegisterForm(request.POST['office'], request.POST['dentist'], request.POST['date'], apps, typ, request.session['sort2'], month, year, request.POST)
             else:
                 
                 if request.GET.get('type', None) == 'ajax': 
-                    form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, request.session['sort2'])
+                    form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, request.session['sort2'], month, year)
                 else:
-                    form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, request.session['sort2'], request.POST)
+                    form = RegisterForm(request.POST['office'], request.POST['dentist'], -1, -1, typ, request.session['sort2'], month, year, request.POST)
         else:
             if 'date' in request.POST.keys():
                 if request.GET.get('type', None) == 'ajax': 
-                    form = RegisterForm(request.POST['office'], -1, request.POST['date'], -1, typ, request.session['sort2'])
+                    form = RegisterForm(request.POST['office'], -1, request.POST['date'], -1, typ, request.session['sort2'], month, year)
                 else:
-                    form = RegisterForm(request.POST['office'], -1, request.POST['date'], -1, typ, request.session['sort2'], request.POST)
+                    form = RegisterForm(request.POST['office'], -1, request.POST['date'], -1, typ, request.session['sort2'], month, year, request.POST)
             else:
+                print 'a'
                 if request.GET.get('type', None) == 'ajax': 
-                    form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'])   
+                    form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'], month, year)   
                 else:
-                    form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'], request.POST)           
+                    form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'], month, year, request.POST)           
     else:
-        form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'])
-    return render(request, 'dentist_register.html', {'form': form})
+        form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'], month, year)
+    print 'b'
+    return render(request, 'dentist_register.html', {'form': form, 'month': month, 'year': year})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
