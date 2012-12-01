@@ -56,23 +56,28 @@
 </script>
 {% endblock %}
 
-{% block right_column %}
 {% if user|in_group:"rejestrator" %}
-	Pacjent: {{ patient.last_name }} {{patient.first_name }}
+	{% block header %}
+		Pacjent: {{ patient.last_name }} {{patient.first_name }}
+	{% endblock %}
 {% endif %}
+{% block right_column %}
 <div id="rezerwacje">
-	<table>
-	<tr><th>Data</th><th>Godzina</th><th>Dentysta</th><th>Gabinet</th></tr>
-	{% for r in reservations %}
+	<table id="reservations">
 		<tr>
-			<td>{{ r.date|date:'d-m-Y' }}</td>
-			<td>{{ r.hour|time:'H:i' }}</td>
-			<td>{{ r.dentist.last_name }} {{ r.dentist.first_name }}</td>
-			<td>{{ r.dental_office.address }}</td>
-			<td class="delete" id="{{ r.id }}">Odwołaj</td>
-			<td class="change" id="{{ r.id }}">Zmień</td>
+			<th>Data</th><th>Godzina</th><th>Dentysta</th><th>Gabinet</th><th colspan="2">Akcje</th>
 		</tr>
-	{% endfor %}
+		
+		{% for r in reservations %}
+			<tr>
+				<td>{{ r.date|date:'d-m-Y' }}</td>
+				<td>{{ r.hour|time:'H:i' }}</td>
+				<td>{{ r.dentist.last_name }} {{ r.dentist.first_name }}</td>
+				<td>{{ r.dental_office.address }}</td>
+				<td class="delete" id="{{ r.id }}">Odwołaj</td>
+				<td class="change" id="{{ r.id }}">Zmień</td>
+			</tr>
+		{% endfor %}
 	</table>
 </div>
 {% endblock %}
