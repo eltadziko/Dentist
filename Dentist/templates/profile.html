@@ -1,4 +1,13 @@
 {% extends 'base.html' %}
+{% load group_filter %}
+
+{% block header %}
+	{% if user|in_group:"rejestrator" %}
+		Profil pacjenta <strong>{{ form.last_name.value }} {{ form.first_name.value }}</strong>
+	{% else %}
+		Mój profil
+	{% endif %}
+{% endblock %}
 
 {% block right_column %}
 <div id="forms">

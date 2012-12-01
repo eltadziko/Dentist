@@ -140,7 +140,7 @@ def update_profile(request, patient_id = -1):
     else:
         form = ProfileForm(instance = user)
         form_patient = PatientProfileForm(instance = pat)
-    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient, 'patient': url})
+    return render(request, 'profile.html', {'form': form, 'form_patient': form_patient, 'patient': url, 'header': True})
 
 @login_required
 def change_password(request):
@@ -158,7 +158,7 @@ def change_password(request):
             return HttpResponseRedirect('/index/')
     else:
         form = PasswordForm(request.user)
-    return render(request, 'password.html', {'form': form})
+    return render(request, 'password.html', {'form': form, 'header': True})
         
 @login_required
 def logout_view(request):
@@ -1122,7 +1122,7 @@ def reservations(request):
             except EmptyPage:
                 patients2 = paginator.page(1)
             return render(request, 'patients2.html', {'patients': patients2})
-    return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat})
+    return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat, 'header': True})
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')

@@ -30,8 +30,8 @@
 				<th width="100px">PESEL</th><th width="200px">Adres</th><th>Komentarz</th><th width="200px">Choroby</th>
 			</tr>
 			<tr>
-				<td>{{ patient.PESEL }}</td><br />
-				<td>{{ patient.address }}</td></br>
+				<td>{{ patient.PESEL }}</td>
+				<td>{{ patient.address }}</td>
 				<td class="left">{% if patient.comment %}{{ patient.comment }}{% endif %}</td>
 				<td class="left">
 				{% for d in patient.patient_diseases_set.all %}

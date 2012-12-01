@@ -56,11 +56,14 @@
 </script>
 {% endblock %}
 
-{% if user|in_group:"rejestrator" %}
-	{% block header %}
-		Pacjent: {{ patient.last_name }} {{patient.first_name }}
-	{% endblock %}
-{% endif %}
+{% block header %}
+	{% if user|in_group:"rejestrator" %}
+		Umówione terminy pacjenta: {{ patient.last_name }} {{patient.first_name }}
+	{% else %}
+		Moje umówione terminy
+	{% endif %}
+{% endblock %}
+
 {% block right_column %}
 <div id="rezerwacje">
 	<table id="reservations">
