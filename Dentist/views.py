@@ -252,9 +252,16 @@ def dentist_register(request):
                                           dental_office = dental_office.objects.get(id=request.POST['office']),
                                           appointment_type = appointment_type.objects.get(id=request.POST['type']),
                                           patient = patient.objects.get(user=request.user.id))
-                    appoint.save()
-                    messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano do dentysty.')
-                    return HttpResponseRedirect('/reservations/')
+                    if appointment.objects.filter(date=appoint.date, 
+                                                  hour__gte=appoint.hour,
+                                                  hour__lte=(datetime.datetime.combine(appoint.date, appoint.hour) + datetime.timedelta(minutes=appoint.appointment_type.length)).time(), 
+                                                  dentist=appoint.dentist).count() == 0:
+                        appoint.save()
+                        messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano do dentysty.')
+                        return HttpResponseRedirect('/reservations/')
+                    else:
+                        messages.add_message(request, messages.ERROR, 'Wybrany termin został juz zajęty przez innego pacjenta. Proszę wybrać inny.')
+                        form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'], month, year)
                 else:
                     apps = []
                     day = dates.objects.filter(dentist = request.POST['dentist']).get(date=request.POST['date'])
