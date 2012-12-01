@@ -10,7 +10,7 @@ class MyCheckboxSelectMultiple(CheckboxSelectMultiple):
 		html = html.replace('<ul>', '')
 		html = html.replace('</ul>', '')
 		html = html.replace('<li>', '')
-		html = html.replace('</li>', '<br />')
+		html = html.replace('</li>', '')
 		html = html.replace('Choroba: ', '')
 		return mark_safe(html)
 

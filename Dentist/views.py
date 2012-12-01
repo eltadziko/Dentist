@@ -112,7 +112,7 @@ def diseases(request):
             return HttpResponseRedirect('/index/')
     else:
         form = DiseasesForm(request.user)
-    return render(request, 'diseases.html', {'form': form})
+    return render(request, 'diseases.html', {'form': form, 'header': True})
 
 @login_required
 @user_passes_test(in_group, login_url='/access_denied/')
