@@ -154,10 +154,10 @@
 		 	$('.date_options').css('height', '315');
 		 {% endif %}
 		 {% if form.dentist.errors %}
-		 	$('.opcje2').css('height', '315');
+		 	$('.opcje2').css('height', '345');
 		 {% endif %}
 		 {% if form.appoint.errors %}
-		 	$('.opcje').css('height', '315');
+		 	$('.opcje').css('height', '345');
 		 {% endif %}
 	});
 	</script>
@@ -204,15 +204,15 @@
 	     <div id="typ1_box">
 		     {% if request.session.sort2 == '0' %}
 		         
-		         <div class="typ_1">
+		         <div class="typ_1">	
+			         <div id="dentist_lab" class="rej_tytul">
+			         	{{form.dentist.label_tag }}
+			         </div>
 			         <div class="error">
 					    {% for error in form.dentist.errors %}
 					        <strong>{{ error|escape }} </strong>
 					    {% endfor %}
 					 </div>
-			         <div id="dentist_lab" class="rej_tytul">
-			         	{{form.dentist.label_tag }}
-			         </div>
 			         <div class="opcje2">
 			         	{{form.dentist}}
 			         </div>
@@ -220,11 +220,6 @@
 		     {% endif %}
 		     
 		     <div id="date">
-		     	<div class="error">
-				    {% for error in form.date.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				</div>
 		     	<div class="rej_tytul">
 		     		{{form.date.label_tag }}
 		     	</div>
@@ -232,7 +227,12 @@
 		     		<div id="prev" class="button6"><</div>
 		     		<div id="month2" class="{{ month }}">{{ month|month_name }} {{ year }}</div>
 		     		<div id="next" class="button6" style="clear: right">></div>
-		     	</div>	
+		     	</div>
+		     	<div class="error">
+				    {% for error in form.date.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				</div>	
 		     	<div class="date_options">
 		     		{{form.date}}
 		     	</div>
@@ -240,14 +240,14 @@
 		     
 		     {% if request.session.sort2 == '1' %}
 		     	<div class="typ_1">
-		     		<div class="error">
+		         	<div class="rej_tytul">
+		         		{{form.dentist.label_tag }}
+		         	</div>
+		         	<div class="error">
 					    {% for error in form.dentist.errors %}
 					        <strong>{{ error|escape }} </strong>
 					    {% endfor %}
 					</div>
-		         	<div class="rej_tytul">
-		         		{{form.dentist.label_tag }}
-		         	</div>
 		         	<div class="opcje2">
 		         		{{form.dentist}}
 		         	</div>
@@ -255,14 +255,14 @@
 		     {% endif %}
 		     
 		     <div class="typ_2">
-		     	<div class="error">
+			     <div class="rej_tytul">
+			     	{{form.appoint.label_tag }}
+			     </div>
+			     <div class="error">
 				    {% for error in form.appoint.errors %}
 				        <strong>{{ error|escape }} </strong>
 				    {% endfor %}
 				 </div>
-			     <div class="rej_tytul">
-			     	{{form.appoint.label_tag }}
-			     </div>
 			     <div class="opcje">
 			     	{{form.appoint}}
 			     </div>

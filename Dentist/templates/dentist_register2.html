@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load group_filter %}
 
 {% block javascript %}
 	{{ block.super }}
@@ -17,6 +18,8 @@
 				{ pat: $(this).val(),
 				  office: $('#id_office').val(),
 				  type: $('#id_type').val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#pat').html($(data).find('#pat').html());
@@ -27,6 +30,8 @@
 				  office: $('#id_office').val(),
 				  type: $('#id_type').val(),
 				  dentist: $('input[name=dentist]:checked').val(),
+				  month: $('#month2').attr('class'),
+			      year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#pat').html($(data).find('#pat').html());
@@ -38,6 +43,8 @@
 				  type: $('#id_type').val(),
 				  dentist: $('input[name=dentist]:checked').val(),
 				  date: $('input[name=date]:checked').val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#pat').html($(data).find('#pat').html()); 
@@ -53,6 +60,8 @@
 			  pat: $("#id_pat").val(),
 			  patients: $("input[name=patients]:checked").val(),
 			  type: $('#id_type').val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
 				$('#content').html(data); 
@@ -68,6 +77,8 @@
 				  type: $('#id_type').val(),
 				  pat: $("#id_pat").val(),
 				  patients: $("input[name=patients]:checked").val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -80,6 +91,8 @@
 				  date: $('input[name=date]:checked').val(),
 				  pat: $("#id_pat").val(),
 				  patients: $("input[name=patients]:checked").val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -96,6 +109,8 @@
 				  type: $('#id_type').val(),
 				  pat: $("#id_pat").val(),
 				  patients: $("input[name=patients]:checked").val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -108,6 +123,8 @@
 				  type: $('#id_type').val(),
 				  pat: $("#id_pat").val(),
 				  patients: $("input[name=patients]:checked").val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				function(data) { 
 					$('#content').html(data); 
@@ -123,6 +140,8 @@
 			  date: $('input[name=date]:checked').val(),
 			  type: $(this).val(),
 			  pat: $("#id_pat").val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  patients: $("input[name=patients]:checked").val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
@@ -136,6 +155,8 @@
 			{ office: $('#id_office').val(),
 			  sort: $('input[name=sort]:checked').val(),
 			  pat: $("#id_pat").val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  patients: $("input[name=patients]:checked").val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
@@ -144,14 +165,75 @@
 		 	return false;
 		 });
 		 
+		 $('#prev').click(function() {
+		 	var month = $('#month2').attr('class')-1;
+		 	var year = {{ year }};
+			if(month == 0) {
+				month = 12;
+				year = year -1;
+			}
+		 	$.post('/dentist_register2/?type=ajax',
+			{ office: $('#id_office').val(),
+			  type: $('#id_type').val(),
+			  dentist: $('input[name=dentist]:checked').val(),
+			  month: month,
+			  year: year,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data);
+			});
+
+		 	return false;
+		 });
+		 
+		 $('#next').click(function() {
+		 	var month = $('#month2').attr('class')-1+2;
+		 	var year = {{ year }};
+			if(month == 13) {
+				month = 1;
+				year = year - 1 + 2;
+			}
+		 	$.post('/dentist_register2/?type=ajax',
+			{ office: $('#id_office').val(),
+			  type: $('#id_type').val(),
+			  dentist: $('input[name=dentist]:checked').val(),
+			  month: month,
+			  year: year,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data);
+			});
+
+		 	return false;
+		 });
+		 
+		 {% if form.patients.errors %}
+		 	$('.opcje3').css('height', '345');
+		 {% endif %}
+		 {% if form.date.errors %}
+		 	$('.date_options').css('height', '315');
+		 {% endif %}
+		 {% if form.dentist.errors %}
+		 	$('.opcje2').css('height', '345');
+		 {% endif %}
+		 {% if form.appoint.errors %}
+		 	$('.opcje').css('height', '345');
+		 {% endif %}
 	});
 	</script>
 {% endblock %}
 
+{% block header %}
+	Rejestracja pacjenta na wizytę
+{% endblock %}
+
 {% block right_column %}
 <div id="rejestracja">
-Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
-<input type="radio" name="sort" value="1" id="1">datach
+<div id="register_form">
+	<p align="left">W pierwszej kolejności wybieraj: 
+		<input type="radio" name="sort" value="0" id="0">dentystę
+		<input type="radio" name="sort" value="1" id="1">datę
+	</p>
 <form action="{% url views.dentist_register2 %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
@@ -160,57 +242,125 @@ Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
 			{% endfor %}
 		</div>
 	{% endif %}
-			<div id="typ4_box">
-			<div class="typ_4"><div class="rej_tytul">{{form.pat.label_tag}} </div><div class="opcje4">{{form.pat}}</div></div>
-	        <div class="typ_4"><div class="rej_tytul">{{form.office.label_tag}} </div><div class="opcje4">{{form.office}}</div></div>
-	        <div class="typ_4_2"><div class="rej_tytul">{{form.type.label_tag}} </div><div class="opcje5">{{form.type}}</div></div>
-	        </div>
-	        <div id="typ1_box">
-	        <div class="error">
+	
+
+		<div class="input_box">
+			<div class="select_label">
+				{{form.pat.label_tag}}
+			</div>
+			<div class="input_options">
+				{{form.pat}}
+			</div>
+		</div>
+		
+	    <div class="select_box">
+	    	<div class="select_label">
+	    		{{form.office.label_tag}}
+	    	</div>
+	    	<div class="select_options">
+	    		{{form.office}}
+	    	</div>
+	    </div>
+	    
+	    <div class="select_box">
+	    	<div class="select_label">
+	    		{{form.type.label_tag}}
+	    	</div>
+	    	<div class="select_options">
+	    		{{form.type}}
+	    	</div>
+	    </div>
+
+	    
+	<div id="typ1_box">
+	    <div class="typ_3">
+		    <div class="rej_tytul">
+		    	{{form.patients.label_tag}}
+		    </div>
+		    <div class="error">
 				{% for error in form.patients.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
 			</div>
-	        <div class="typ_3"><div class="rej_tytul">{{form.patients.label_tag}} </div><div class="opcje3"><div id="pat">{{form.patients}}</div></div></div>
-			
-	         
-	         {% if request.session.sort2 == '0' %}
-	         <div class="error">
-			    {% for error in form.dentist.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			 </div>
-	         <div class="typ_3"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje3">{{form.dentist}}</div></div>
-	         {% endif %}
-	         
-	         <div class="error">
+		    <div class="opcje3">
+			    <div id="pat">
+			    	{{form.patients}}
+			    </div>
+			</div>
+	    </div>
+		
+	     
+	     {% if request.session.sort2 == '0' %}
+		     <div class="typ_1">
+			     <div id="dentist_lab" class="rej_tytul">
+			     	{{form.dentist.label_tag }}
+			     </div>
+			     <div class="error">
+				    {% for error in form.dentist.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				 </div>
+			     <div class="opcje2">
+			     	{{form.dentist}}
+			     </div>
+		     </div>
+	     {% endif %}
+	     
+	     <div id="date">
+		     <div class="rej_tytul">
+		     	{{form.date.label_tag}}
+		     </div>
+		     <div id="month">
+	     		<div id="prev" class="button6"><</div>
+	     		<div id="month2" class="{{ month }}">{{ month|month_name }} {{ year }}</div>
+	     		<div id="next" class="button6" style="clear: right">></div>
+	     	</div>
+	     	<div class="error">
 				{% for error in form.date.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
-			</div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
-	         
-	         {% if request.session.sort2 == '1' %}
-	         <div class="error">
-			    {% for error in form.dentist.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
 			 </div>
-	         <div class="typ_1"><div id="dentist_lab" class="rej_tytul">{{form.dentist.label_tag }}</div><div class="opcje2">{{form.dentist}}</div></div>
-	         {% endif %}
-	         
-	         
-	         
-	         <div class="error">
+		     <div class="date_options">
+		     	{{form.date}}
+		     </div>
+		 </div>
+	     
+	     {% if request.session.sort2 == '1' %}
+		     <div class="typ_1">
+			     <div id="dentist_lab" class="rej_tytul">
+			     	{{form.dentist.label_tag }}
+			     </div>
+			     <div class="error">
+				    {% for error in form.dentist.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				 </div>
+			     <div class="opcje2">
+			     	{{form.dentist}}
+			     </div>
+		     </div>
+	     {% endif %}
+	     
+	     <div class="typ_2">
+		     <div class="rej_tytul">
+		     	{{form.appoint.label_tag}}
+		     </div>
+		     <div class="error">
 				{% for error in form.appoint.errors %}
 			        <strong>{{ error|escape }} </strong>
 			    {% endfor %}
-			</div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
+			 </div>
+		     <div class="opcje">
+		     	{{form.appoint}}
+		     </div>
+	     </div>
     
+    </div>
     
-	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
+	<p>
+		<input id="send_log_rejestracja" type="submit" value="Zarejestruj" />
+	</p>
 </form>
-		</div>
+</div>	
 </div>
 {% endblock %}

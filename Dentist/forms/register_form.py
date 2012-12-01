@@ -65,7 +65,7 @@ class RegisterForm(forms.Form):
     
 class RegisterReceptionistForm(forms.Form):
     
-    def __init__(self, office, dent, date, apps, typ, last_name, patient_id, sort, *args, **kwargs):
+    def __init__(self, office, dent, date, apps, typ, last_name, patient_id, sort, month, year, *args, **kwargs):
         super(RegisterReceptionistForm, self).__init__(*args, **kwargs)
         if office!=-1:
             self.fields['office'].initial = office
@@ -74,14 +74,14 @@ class RegisterReceptionistForm(forms.Form):
                 dents = dentist.objects.filter(id__in=dats).order_by('last_name')
                 self.fields['dentist'].queryset = dents
             else:
-                dats = dates.objects.values_list('date', flat=True).filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date').distinct()
+                dats = dates.objects.values_list('date', flat=True).filter(dental_office=office).filter(date__gte=datetime.date.today).order_by('date').distinct().filter(date__month=month).filter(date__year=year)
                 self.fields['date'].choices = [(d, d) for d in dats]
                 if date != -1:
                     self.fields['date'].initial = date
                     self.fields['dentist'].queryset = dentist.objects.filter(id__in = dates.objects.values_list('dentist', flat=True).filter(dental_office=office).filter(date=date)).order_by('last_name')
             if dent!=-1:
                 if sort == '0':
-                    dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
+                    dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date').filter(date__month=month).filter(date__year=year)
                     self.fields['date'].choices = [(d, d) for d in dats]
                 self.fields['dentist'].initial = dent
                 if apps!=-1:
