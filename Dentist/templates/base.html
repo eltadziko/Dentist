@@ -17,6 +17,32 @@ Stomatologia Coldix
 {% endblock %}
 {% block javascript %}
 <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.js"></script>
+<script>
+	$(document).ready(function() {
+		var $sidebar   = $("#title"), 
+	        $window    = $(window),
+	        offset     = $sidebar.offset(),
+	        topPadding = 3;
+
+		if ($window.scrollTop() > offset.top) {
+            $sidebar.stop().animate({
+                marginTop: $window.scrollTop() - offset.top + topPadding
+            });
+        }
+	
+	    $window.scroll(function() {
+	        if ($window.scrollTop() > offset.top) {
+	            $sidebar.stop().animate({
+	                marginTop: $window.scrollTop() - offset.top + topPadding
+	            });
+	        } else {
+	            $sidebar.stop().animate({
+	                marginTop: 0
+	            });
+	        }
+	    });
+	});
+</script>
 {%endblock %}
 <link rel="shortcut icon" href="{{ MEDIA_URL }}/img/favicon.ico" type="image/x-icon" />
 
@@ -136,6 +162,12 @@ Stomatologia Coldix
 </div>
 <!--<iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FStomatolog-Coldix%2F323848351055930&amp;width=200&amp;height=395&amp;colorscheme=light&amp;show_faces=false&amp;border_color=3e3e3e&amp;stream=true&amp;header=false&amp;appId=279481798728744" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:395px;" allowTransparency="true"></iframe>-->
 <div id="right_column">
+	<div id="title">
+		{% block header %}
+		{% endblock %} 
+	</div>
+	<div style="height:25px"></div>
+
 	<div id="flash_messages">
 		{% if messages %}
 			<div class="flash_messages">

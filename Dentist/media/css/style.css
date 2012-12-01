@@ -749,3 +749,16 @@ margin-bottom:30px;
 #register_form {
 	display: inline-block;	
 }
+
+#register_form p input[type=radio] {
+	margin-left: 30px;	
+}
+
+#title {
+	background-color: #66CC66;
+	text-align: center;
+	font-size: 16px;
+	width: 70%;
+	position: absolute;
+	border-radius: 15px;
+}

@@ -154,15 +154,21 @@
 	</script>
 {% endblock %}
 
+{% block header %}
+	Rejestracja wizyty
+{% endblock %}
+
 {% block right_column %}
 <div id="rejestracja">
 {% if too_much %}
 	Posiadasz zbyt dużo rezerwacji. Nie możesz się już zarejestrowac online, dopóki
 	nie odwołasz którejś wizyty lub jej nie odbędziesz.<br />
 {% endif %}
-<div  id="register_form">
-	Wybieraj po: <input type="radio" name="sort" value="0" id="0">dentystach
-	<input type="radio" name="sort" value="1" id="1">datach
+<div id="register_form">
+	<p align="left">W pierwszej kolejności wybieraj: 
+		<input type="radio" name="sort" value="0" id="0">dentystę
+		<input type="radio" name="sort" value="1" id="1">datę
+	</p>
 	<form action="{% url views.dentist_register %}" method="post"> {% csrf_token %}
 		{% if form.non_field_errors %}
 	       	<div class="error">
