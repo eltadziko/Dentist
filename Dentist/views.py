@@ -252,10 +252,16 @@ def dentist_register(request):
                                           dental_office = dental_office.objects.get(id=request.POST['office']),
                                           appointment_type = appointment_type.objects.get(id=request.POST['type']),
                                           patient = patient.objects.get(user=request.user.id))
+                    
+                    is_taken = False
+                    for a in appointment.objects.filter(date=appoint.date, dentist=appoint.dentist):
+                        if appoint.hour>=a.hour and appoint.hour<(datetime.datetime.combine(appoint.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
+                            is_taken = True
+                    
                     if appointment.objects.filter(date=appoint.date, 
                                                   hour__gte=appoint.hour,
                                                   hour__lte=(datetime.datetime.combine(appoint.date, appoint.hour) + datetime.timedelta(minutes=appoint.appointment_type.length)).time(), 
-                                                  dentist=appoint.dentist).count() == 0:
+                                                  dentist=appoint.dentist).count() == 0 and not is_taken:
                         appoint.save()
                         messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano do dentysty.')
                         return HttpResponseRedirect('/reservations/')
