@@ -1,29 +1,30 @@
 {% extends 'base.html' %}
+{% load group_filter %}
 
 {% block right_column %}
 
 	{% for d in dentists %}
-		<a name="{{ d.dentist.id }}"><strong>{{ d.dentist.last_name }} {{ d.dentist.first_name }}</a>
-		{% if d.dentist.title %}
-			, {{ d.dentist.title }}
-		{% endif %}</strong><br />
-		{% if d.dentist.phone %}Kontakt: {{ d.dentist.phone }}<br />{% endif %}
+		<div class="office_name">
+			<a name="{{ d.dentist.id }}" style="border-bottom:none">
+				<strong>{{ d.dentist.last_name }} {{ d.dentist.first_name }}
+			</a>
+			{% if d.dentist.title %}
+				, {{ d.dentist.title }}
+			{% endif %}</strong>
+		</div>
+		{% if d.dentist.phone %}Telefon: {{ d.dentist.phone }}<br />{% endif %}
 		{% if d.dentist.description %}{{ d.dentist.description }}<br />{% endif %}
-		Pracuje w:<br />
-		{% for o in d.offices %}
-			<a href="{% url views.offices %}#{{ o.office.id }}">{% if o.office.name %}{{ o.office.name }}, {% endif %}{{ o.office.address }}:</a><br>
-			{% for h in o.hours %}
-				{% if h.week_day == 1 %}pon
-				{% elif h.week_day == 2 %}wt
-				{% elif h.week_day == 3 %}śr
-				{% elif h.week_day == 4 %}czw
-				{% elif h.week_day == 5 %}pt
-				{% elif h.week_day == 6 %}so
-				{% elif h.week_day == 7 %}nd
-				{% endif %} {{ h.begin|time:'H:i' }}-{{ h.end|time:'H:i' }}<br />
+		Pracuje w:
+		<div class="dentists">
+			{% for o in d.offices %}
+				<a href="{% url views.offices %}#{{ o.office.id }}">{% if o.office.name %}{{ o.office.name }}, {% endif %}{{ o.office.address }}</a>
+				{% for h in o.hours %}
+					{% if forloop.first %}({% endif %}{{ h.week_day|day }}
+					{{ h.begin|time:'H:i' }}-{{ h.end|time:'H:i' }}{% if forloop.counter != o.hours.count %}, {% else %}){% endif %}
+				{% endfor %}
+				<br />
 			{% endfor %}
-		{% endfor %}
-		<br />
+		</div>
 	{% endfor %}
 
 <div class="pagination">

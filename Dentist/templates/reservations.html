@@ -72,8 +72,8 @@
 			<tr>
 				<td>{{ r.date|date:'d-m-Y' }}</td>
 				<td>{{ r.hour|time:'H:i' }}</td>
-				<td>{{ r.dentist.last_name }} {{ r.dentist.first_name }}</td>
-				<td>{{ r.dental_office.address }}</td>
+				<td class="left">{{ r.dentist.last_name }} {{ r.dentist.first_name }}</td>
+				<td class="left">{{ r.dental_office.address }}</td>
 				<td class="delete" id="{{ r.id }}">Odwołaj</td>
 				<td class="change" id="{{ r.id }}">Zmień</td>
 			</tr>

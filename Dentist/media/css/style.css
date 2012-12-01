@@ -368,6 +368,11 @@ margin:0 auto;
   text-align:center;
 }
 
+#rezerwacje td.left {
+  text-align:left;
+  padding-left:15px;	
+}
+
 .delete{
   color: white;
   cursor: pointer;
@@ -839,4 +844,19 @@ area {
   	cursor: pointer;
   	text-align:center;	
   	background: url(../img/BG_submenu.jpg) repeat-x;
+}
+
+.office_name {
+	background-color: #66CC66;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #339933;	
+	width: 40%;
+	padding-left: 15px;
+}
+
+.dentists {
+	padding-left: 25px;
+	margin-bottom: 30px;	
 }

@@ -959,7 +959,7 @@ def dates_addition_edit(request):
 
 @user_passes_test(new_password, login_url="/password/")
 def offices(request):
-    offs = dental_office.objects.all()
+    offs = dental_office.objects.all().order_by('address')
     offices =[]
     dents = dentist.objects.all().order_by('last_name')
     pages = {}
