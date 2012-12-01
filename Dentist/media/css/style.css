@@ -761,6 +761,9 @@ margin-bottom:30px;
 	width: 70%;
 	position: absolute;
 	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #339933;
 }
 
 .error {
