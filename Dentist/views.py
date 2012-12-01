@@ -1136,7 +1136,7 @@ def patient_card(request):
     
     if 'tooth' in request.POST.keys():
         losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
-    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints, 'losses': losses, 'losses_all': losses_all })
+    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints, 'losses': losses, 'losses_all': losses_all, 'header': True })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')

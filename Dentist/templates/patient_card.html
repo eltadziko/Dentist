@@ -11,7 +11,7 @@
 			$('.tooth_loss').hide();
 			$('#tooth_losses').hide();
 			
-			$('.appointment').click(function() {
+			$('.app').click(function() {
 				id = '#appoint_' + $(this).attr('id');
 				$(id).toggle();
 			});
@@ -19,71 +19,89 @@
 	</script>
 {% endblock %}
 
+{% block header %}
+	Karta pacjenta <strong>{{ patient.last_name }} {{ patient.first_name }}</strong>
+{% endblock %}
+
 {% block right_column %}
 	<div id="dane_pacjenta">
-	Karta pacjenta
-	<strong>"{{ patient.last_name }} {{ patient.first_name }}"</strong>
-	<table>
-	 <tr><th>PESEL</th><th>Adres:</th><th>Komentarz</th><th>Choroby</th></tr>
-	<tr>
-	<td>{{ patient.PESEL }}</td><br />
-	<td>{{ patient.address }}</td></br>
-	<td>{% if patient.comment %}{{ patient.comment }}{% endif %}</td>
-	<td class="left">
-	{% for d in patient.patient_diseases_set.all %}
-		- {{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %},</br> {% endif %}
-	{% endfor %}
-	</td>
-	</tr>
-	</table>
+		<table>
+			<tr>
+				<th width="100px">PESEL</th><th width="200px">Adres</th><th>Komentarz</th><th width="200px">Choroby</th>
+			</tr>
+			<tr>
+				<td>{{ patient.PESEL }}</td><br />
+				<td>{{ patient.address }}</td></br>
+				<td class="left">{% if patient.comment %}{{ patient.comment }}{% endif %}</td>
+				<td class="left">
+				{% for d in patient.patient_diseases_set.all %}
+					- {{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %},</br> {% endif %}
+				{% endfor %}
+				</td>
+			</tr>
+		</table>
 	</div>
+	
 	{% include 'teeth.html' with link="/patient_card/" losses_all=losses_all %}
 	
-	<div id="tooth_losses">
-		{% if losses %}
-			<br /><strong>Historia zabiegu:</strong><br />
+	{% if losses.count > 0 %}
+		<div id="tooth_losses">
+			<strong>Historia zabiegu:</strong>
 			<table>
-			<tr><th>Ząb</th><th>Data</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
-			{% for l in losses %}
 				<tr>
-					{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
-		 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
-		 			<td>{{ l.loss_type }}</td>
-		 			<td>{{ l.comment }}</td>
-		 		</tr>
-			{% endfor %}
-			</table>
-		{% endif %}
-	</div>
-	
-	<br /><strong>Wizyty:</strong><br />
-	{% for a in appoints %}
-	<div class="appoint">
-		<div class="appointment" id="{{ a.id }}">
-			<table>
-			<tr><th>Data</th><th>Termin</th><th>Dentysta</th></tr>
-			<tr>
-			<td>{{ a.date }}</td>
-			<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
-			<td>{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
-			</tr>
+					<th width="300px">Ząb</th><th width="100px">Data</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+				</tr>
+				{% for l in losses %}
+					<tr>
+						{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
+			 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
+			 			<td class="left">{{ l.loss_type }}</td>
+			 			<td class="left">{{ l.comment }}</td>
+			 		</tr>
+				{% endfor %}
 			</table>
 		</div>
-			{% if a.description %}a.description<br /> {% endif %}
-			<div id="appoint_{{ a.id }}" class="tooth_loss">
-			{% if a.tooth_loss_set.all %}
-				<table>
-					<tr><th>Ząb</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
-					{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
-						<tr>
-						<td>{{ t.tooth }} - {{ t.tooth_part.name }}</td>
-						<td>{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
-						<td>{% if t.comment %}{{ t.comment }}{% endif %}</td>
-						</tr>
-					{% endfor %}
-				</table>
-			{% endif %}
-			</div>
+	{% endif %}
+	
+	<div class="appointment">
+		<strong>Wizyty:</strong>
 	</div>
-	{% endfor %}
+	
+	<div class="appoint">
+		<div class="appointment">
+			<table>
+				<tr>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="200px">Dentysta</th><th>Opis</th><th width="80px"></th>
+				</tr>
+				{% for a in appoints %}
+					<tr>
+						<td>{{ a.date|date:'Y-m-d' }}</td>
+						<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
+						<td class="left">{% if a.untimely|is_false %}{{ a.appointment_type.type }}{% endif %}</td>
+						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
+						<td class="left">{% if a.description %}a.description{% endif %}</td>
+						<td class="app" id="{{ a.id }}">Szczegóły</td>
+					</tr>
+					<tr id="appoint_{{ a.id }}" class="tooth_loss">
+						<td colspan="6">
+							{% if a.tooth_loss_set.all %}
+								<table>
+									<tr>
+										<th width="300px">Ząb</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+									</tr>
+									{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+										<tr>
+											<td class="left">{{ t.tooth }} - {{ t.tooth_part.name }}</td>
+											<td class="left">{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
+											<td class="left">{% if t.comment %}{{ t.comment }}{% endif %}</td>
+										</tr>
+									{% endfor %}
+								</table>
+							{% endif %}
+						</td>
+					</tr>			
+				{% endfor %}
+			</table>
+		</div>
+	</div>
 {% endblock %}

@@ -628,7 +628,7 @@ margin:20px 0px 0px 40px;
 width:900px;
 line-height:25px;
 margin:0 auto;
-margin-bottom:30px;
+margin-bottom:10px;
 }
 .appointment table,#tooth_losses table{
   width:100%;
@@ -782,6 +782,7 @@ margin-bottom:30px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #339933;
+	z-index: 200;
 }
 
 .error {
@@ -793,6 +794,9 @@ margin-bottom:30px;
 	margin: 0 auto;
 }
 
+.map {
+	margin: 0 auto;	
+}
 #diseases label{
 	float:left;
 	display:block;
@@ -823,4 +827,16 @@ margin-bottom:30px;
 
 #reservations th {
 	background-color: #cccccc;	
+}
+
+area {
+	cursor: pointer;	
+}
+
+.app {
+	cursor: pointer;
+	color: white;
+  	cursor: pointer;
+  	text-align:center;	
+  	background: url(../img/BG_submenu.jpg) repeat-x;
 }
