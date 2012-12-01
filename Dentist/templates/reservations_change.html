@@ -11,6 +11,8 @@
 			$.post('/reservations/?type=ajax',
 			{ date: $(this).val(),
 			  appointment2: $('#appointment2').val(),
+			  month: $('#month2').attr('class'),
+			  year: {{ year }},
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
 				$('#content').html(data); 
@@ -25,6 +27,8 @@
 		 	if (date == undefined && appoint == undefined) {
 				$.post('/reservations/',
 				{ appointment2: $('#appointment2').val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				  function(data) { 
 					$('#content').html(data); 
@@ -34,6 +38,8 @@
 				$.post('/reservations/',
 				{ appoint: appoint,
 				  appointment2: $('#appointment2').val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				  function(data) { 
 					$('#content').html(data); 
@@ -43,6 +49,8 @@
 				$.post('/reservations/',
 				{ date: date,
 				  appointment2: $('#appointment2').val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 				  function(data) { 
 					$('#content').html(data); 
@@ -53,6 +61,8 @@
 				{ appoint: appoint,
 				  date: date,
 				  appointment2: $('#appointment2').val(),
+				  month: $('#month2').attr('class'),
+			  	  year: {{ year }},
 				  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					  function(data) { 
 					$('#content').html(data); 
@@ -60,15 +70,64 @@
 				);
 			}
 			return false;
-		 });		 
+		 });	
+		 
+		 $('#prev').click(function() {
+		 	var month = $('#month2').attr('class')-1;
+		 	var year = {{ year }};
+			if(month == 0) {
+				month = 12;
+				year = year -1;
+			}
+		 	$.post('/reservations/?type=ajax',
+			{ appointment2: $('#appointment2').val(),
+			  month: month,
+			  year: year,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data);
+			});
+
+		 	return false;
+		 });
+		 
+		 $('#next').click(function() {
+		 	var month = $('#month2').attr('class')-1+2;
+		 	var year = {{ year }};
+			if(month == 13) {
+				month = 1;
+				year = year - 1 + 2;
+			}
+		 	$.post('/reservations/?type=ajax',
+			{ appointment2: $('#appointment2').val(),
+			  month: month,
+			  year: year,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data);
+			});
+
+		 	return false;
+		 });
+		 
+		 {% if form.date.errors %}
+		 	$('.date_options').css('height', '315');
+		 {% endif %}
+		 {% if form.appoint.errors %}
+		 	$('.opcje').css('height', '345');
+		 {% endif %}	 
 		 
 	});
 	</script>
 {% endblock %}
 
+{% block header %}
+	Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i' }}</strong> u dentysty <strong>{{ app.dentist }}</strong>
+{% endblock %}
+
 {% block right_column %}
 <div id="rejestracja">
-Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i' }}</strong> u dentysty <strong>{{ app.dentist }}</strong>:
+<div id="register_form">
 <form action="{% url views.reservations %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
@@ -78,26 +137,42 @@ Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i'
 		</div>
 	{% endif %}
 	
-	
-	
-        	<div class="error">
+	<div id="date">
+		<div class="rej_tytul">
+			{{form.date.label_tag}}
+		</div>
+		<div id="month">
+     		<div id="prev" class="button6"><</div>
+     		<div id="month2" class="{{ month }}">{{ month|month_name }} {{ year }}</div>
+     		<div id="next" class="button6" style="clear: right">></div>
+     	</div>
+		<div class="error">
 		    {% for error in form.date.errors %}
 		        <strong>{{ error|escape }} </strong>
 		    {% endfor %}
-		    </div>
-			<div class="typ_1"><div class="rej_tytul">{{form.date.label_tag}} </div><div class="opcje">{{form.date}}</div></div>
+		</div>
+		<div class="date_options">
+			{{form.date}}
+		</div>
+	</div>
+   
+     <div class="typ_2">
+	     <div class="rej_tytul">
+	     	{{form.appoint.label_tag}}
+		 </div>
+		 <div class="error">
+		    {% for error in form.appoint.errors %}
+		        <strong>{{ error|escape }} </strong>
+		    {% endfor %}
+		</div>
+		 <div class="opcje">
+		 	{{form.appoint}}
+		 </div>
+	 </div>
 	       
-	       <div class="error">
-			    {% for error in form.appoint.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			</div>
-	         <div class="typ_1"><div class="rej_tytul">{{form.appoint.label_tag}} </div><div class="opcje">{{form.appoint}}</div></div>
-	       
-	
-  
     <input type="hidden" value="{{ app_id }}" id="appointment2"/>
-	<p><input id="send_log_big" type="submit" value="Zarejestruj" /></p>
+	<p><input id="send_log_rejestracja" type="submit" value="Zarejestruj" /></p>
 </form>
+</div>
 </div>
 {% endblock %}

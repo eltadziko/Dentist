@@ -1005,6 +1005,16 @@ def dentists(request):
 @user_passes_test(in_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def reservations(request):
+    
+    if 'month' in request.POST.keys():
+        month = int(request.POST['month'])
+    else:
+        month = datetime.date.today().month
+    if 'year' in request.POST.keys():
+        year = int(request.POST['year'])
+    else:
+        year = datetime.date.today().year
+        
     if request.POST:
         if 'appointment' in request.POST.keys():
             app = request.POST['appointment']
@@ -1018,9 +1028,24 @@ def reservations(request):
                     day = datetime.datetime.strptime(request.POST['appoint'], '%Y-%m-%d %H:%M:%S')
                     app.date = day.date()
                     app.hour = day.time()
-                    app.save()
-                    messages.add_message(request, messages.INFO, 'Pomyślnie zmieniono termin wizyty.')
-                    return HttpResponseRedirect('/reservations/')
+                    
+                    is_taken = False
+                    for a in appointment.objects.filter(date=app.date, dentist=app.dentist):
+                        if app.hour>=a.hour and app.hour<(datetime.datetime.combine(app.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
+                            is_taken = True
+                    
+                    if appointment.objects.filter(date=app.date, 
+                                                  hour__gte=app.hour,
+                                                  hour__lt=(datetime.datetime.combine(app.date, app.hour) + datetime.timedelta(minutes=app.appointment_type.length)).time(), 
+                                                  dentist=app.dentist).count() == 0 and (not is_taken):
+                        app.save()
+                        messages.add_message(request, messages.INFO, 'Pomyślnie zmieniono termin wizyty.')
+                        return HttpResponseRedirect('/reservations/')
+                    else:
+                        messages.add_message(request, messages.ERROR, 'Wybrany termin został juz zajęty przez innego pacjenta. Proszę wybrać inny.')
+                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id, month, year)
+                        return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app, 'header': True, 'month': month, 'year': year})
+                        
                 else:
                     apps = []
                     day = dates.objects.get(id=request.POST['date'])
@@ -1061,20 +1086,20 @@ def reservations(request):
                     for h in deleted_apps:            
                         apps.remove(h)
                     if request.GET.get('type', None) == 'ajax':
-                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id)
+                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id, month, year)
                     else:
-                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id, request.POST)
-                    return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app})
+                        form = RegisterChangeForm(app.dental_office.id, app.dentist.id, request.POST['date'], apps, app.appointment_type.id, month, year, request.POST)
+                    return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app, 'header': True, 'month': month, 'year': year})
             else:
                 if request.GET.get('type', None) == 'ajax':
-                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id)
+                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id, month, year)
                 else:
-                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id, request.POST)
+                    form = RegisterChangeForm(app.dental_office.id, app.dentist.id, -1, -1, app.appointment_type.id, month, year, request.POST)
  
                 if dates.objects.filter(dental_office=app.dental_office.id).filter(dentist=app.dentist.id).filter(date__gte=datetime.date.today).count() == 0:
                     messages.add_message(request, messages.ERROR, 'Nie ma innych wolnych terminów.')
                     return HttpResponseRedirect('/reservations/')
-                return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app})
+                return render(request, 'reservations_change.html', {'form': form, 'app_id': app.id, 'app': app, 'header': True, 'month': month, 'year': year})
     
     if in_patient_group(request.user):
         pat = patient.objects.get(user = request.user)
