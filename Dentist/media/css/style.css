@@ -762,3 +762,7 @@ margin-bottom:30px;
 	position: absolute;
 	border-radius: 15px;
 }
+
+.error {
+	text-align: left;
+}

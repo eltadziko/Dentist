@@ -234,8 +234,9 @@ def dentist_register(request):
         
 
     if appointment.objects.filter(date__gte = datetime.datetime.now().date()).filter(patient = patient.objects.get(user = request.user)).count() >= 3:
+        messages.add_message(request, messages.ERROR, 'Posiadasz zbyt dużo rezerwacji. Nie możesz się już zarejestrowac online, dopóki nie odwołasz którejś wizyty lub jej nie odbędziesz.')
         form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'], month, year)
-        return render(request, 'dentist_register.html', {'form': form, 'too_much': True, 'month': month, 'year': year})
+        return render(request, 'dentist_register.html', {'form': form, 'month': month, 'year': year})
     if request.POST:  
         if 'type' in request.POST.keys():
             typ = int(request.POST['type'])
@@ -319,7 +320,6 @@ def dentist_register(request):
                     form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'], month, year, request.POST)           
     else:
         form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'], month, year)
-    print 'b'
     return render(request, 'dentist_register.html', {'form': form, 'month': month, 'year': year})
 
 @login_required

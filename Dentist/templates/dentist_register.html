@@ -150,6 +150,15 @@
 		 	return false;
 		 });
 		 
+		 {% if form.date.errors %}
+		 	$('.date_options').css('height', '315');
+		 {% endif %}
+		 {% if form.dentist.errors %}
+		 	$('.opcje2').css('height', '315');
+		 {% endif %}
+		 {% if form.appoint.errors %}
+		 	$('.opcje').css('height', '315');
+		 {% endif %}
 	});
 	</script>
 {% endblock %}
@@ -160,10 +169,6 @@
 
 {% block right_column %}
 <div id="rejestracja">
-{% if too_much %}
-	Posiadasz zbyt dużo rezerwacji. Nie możesz się już zarejestrowac online, dopóki
-	nie odwołasz którejś wizyty lub jej nie odbędziesz.<br />
-{% endif %}
 <div id="register_form">
 	<p align="left">W pierwszej kolejności wybieraj: 
 		<input type="radio" name="sort" value="0" id="0">dentystę
@@ -198,12 +203,13 @@
 	    
 	     <div id="typ1_box">
 		     {% if request.session.sort2 == '0' %}
-		         <div class="error">
-				    {% for error in form.dentist.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				 </div>
+		         
 		         <div class="typ_1">
+			         <div class="error">
+					    {% for error in form.dentist.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					 </div>
 			         <div id="dentist_lab" class="rej_tytul">
 			         	{{form.dentist.label_tag }}
 			         </div>
@@ -213,12 +219,12 @@
 		         </div>
 		     {% endif %}
 		     
-		     <div class="error">
-			    {% for error in form.date.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			 </div>
 		     <div id="date">
+		     	<div class="error">
+				    {% for error in form.date.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				</div>
 		     	<div class="rej_tytul">
 		     		{{form.date.label_tag }}
 		     	</div>
@@ -233,12 +239,12 @@
 		     </div>
 		     
 		     {% if request.session.sort2 == '1' %}
-		         <div class="error">
-				    {% for error in form.dentist.errors %}
-				        <strong>{{ error|escape }} </strong>
-				    {% endfor %}
-				 </div>
 		     	<div class="typ_1">
+		     		<div class="error">
+					    {% for error in form.dentist.errors %}
+					        <strong>{{ error|escape }} </strong>
+					    {% endfor %}
+					</div>
 		         	<div class="rej_tytul">
 		         		{{form.dentist.label_tag }}
 		         	</div>
@@ -248,12 +254,12 @@
 		     	</div>
 		     {% endif %}
 		     
-		     <div class="error">
-			    {% for error in form.appoint.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			 </div>
 		     <div class="typ_2">
+		     	<div class="error">
+				    {% for error in form.appoint.errors %}
+				        <strong>{{ error|escape }} </strong>
+				    {% endfor %}
+				 </div>
 			     <div class="rej_tytul">
 			     	{{form.appoint.label_tag }}
 			     </div>
