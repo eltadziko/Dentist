@@ -725,8 +725,15 @@ margin-bottom:30px;
   	border:solid 1px #9e9e9e;
 }
 
+.select2_box {
+	float:left;
+  	width: 440px;
+  	margin: 1px;
+  	border:solid 1px #9e9e9e;
+}
+
 .select_options select {
-	width:300px;
+	width:100%;
   	height:30px;
 	padding: 5px;
 }

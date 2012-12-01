@@ -123,7 +123,7 @@ class RegisterReceptionistForm(forms.Form):
     
 class RegisterReceptionistForm2(forms.Form):
     
-    def __init__(self, office, dent, date, last_name, patient_id, *args, **kwargs):
+    def __init__(self, office, dent, date, last_name, patient_id, month, year, *args, **kwargs):
         super(RegisterReceptionistForm2, self).__init__(*args, **kwargs)
         if office!=-1:
             self.fields['office'].initial = office
@@ -131,7 +131,7 @@ class RegisterReceptionistForm2(forms.Form):
             dents = dentist.objects.filter(id__in=dats).order_by('last_name')
             self.fields['dentist'].queryset = dents
             if dent!=-1:
-                dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date')
+                dats = dates.objects.filter(dental_office=office).filter(dentist=dent).filter(date__gte=datetime.date.today).order_by('date').filter(date__month=month).filter(date__year=year)
                 self.fields['date'].choices = [(d, d) for d in dats]
                 self.fields['dentist'].initial = dent
         if patient_id != -1:

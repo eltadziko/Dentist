@@ -345,6 +345,7 @@ def dentist_register2(request):
     if not 'sort2' in request.session:
         request.session['sort2'] = '0'
     
+    offices = dental_office.objects.all()
     if 'month' in request.POST.keys():
         month = int(request.POST['month'])
     else:
@@ -380,9 +381,22 @@ def dentist_register2(request):
                                           dental_office = dental_office.objects.get(id=request.POST['office']),
                                           appointment_type = appointment_type.objects.get(id=request.POST['type']),
                                           patient = patient.objects.get(id=request.POST['patients']))
-                    appoint.save()
-                    messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano pacjenta do dentysty.')
-                    return HttpResponseRedirect('/dentist_register2/')
+                    
+                    is_taken = False
+                    for a in appointment.objects.filter(date=appoint.date, dentist=appoint.dentist):
+                        if appoint.hour>=a.hour and appoint.hour<(datetime.datetime.combine(appoint.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
+                            is_taken = True
+                    
+                    if appointment.objects.filter(date=appoint.date, 
+                                                  hour__gte=appoint.hour,
+                                                  hour__lte=(datetime.datetime.combine(appoint.date, appoint.hour) + datetime.timedelta(minutes=appoint.appointment_type.length)).time(), 
+                                                  dentist=appoint.dentist).count() == 0 and not is_taken:
+                        appoint.save()
+                        messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano pacjenta do dentysty.')
+                        return HttpResponseRedirect('/dentist_register2/')
+                    else:
+                        messages.add_message(request, messages.ERROR, 'Wybrany termin został juz zajęty przez innego pacjenta. Proszę wybrać inny.')
+                        form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1, request.session['sort2'], month, year)
                 else:
                     apps = []
                     day = dates.objects.filter(dentist = request.POST['dentist']).get(date=request.POST['date'])
@@ -445,7 +459,6 @@ def dentist_register2(request):
                 else:
                     form = RegisterReceptionistForm(request.POST['office'], -1, -1, -1, typ, pat, patients, request.session['sort2'], month, year, request.POST)         
     else:
-        offices = dental_office.objects.all()
         form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1, request.session['sort2'], month, year)
     
     return render(request, 'dentist_register2.html', {'form': form, 'month': month, 'year': year, 'header': True})
@@ -454,6 +467,15 @@ def dentist_register2(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dentist_register3(request):
+    
+    if 'month' in request.POST.keys():
+        month = int(request.POST['month'])
+    else:
+        month = datetime.date.today().month
+    if 'year' in request.POST.keys():
+        year = int(request.POST['year'])
+    else:
+        year = datetime.date.today().year
        
     if request.POST:
             
@@ -480,19 +502,19 @@ def dentist_register3(request):
                 return HttpResponseRedirect('/index/')
             else:
                 if request.GET.get('type', None) == 'ajax':  
-                    form = RegisterReceptionistForm2(request.POST['office'], request.POST['dentist'], -1, pat, patients)
+                    form = RegisterReceptionistForm2(request.POST['office'], request.POST['dentist'], -1, pat, patients, month, year)
                 else:
-                    form = RegisterReceptionistForm2(request.POST['office'], request.POST['dentist'], -1, pat, patients, request.POST)
+                    form = RegisterReceptionistForm2(request.POST['office'], request.POST['dentist'], -1, pat, patients, month, year, request.POST)
         else:
             if request.GET.get('type', None) == 'ajax':  
-                form = RegisterReceptionistForm2(request.POST['office'], -1, -1, pat, patients)
+                form = RegisterReceptionistForm2(request.POST['office'], -1, -1, pat, patients, month, year)
             else:
-                form = RegisterReceptionistForm2(request.POST['office'], -1, -1, pat, patients, request.POST)         
+                form = RegisterReceptionistForm2(request.POST['office'], -1, -1, pat, patients, month, year, request.POST)         
     else:
         offices = dental_office.objects.all()
-        form = RegisterReceptionistForm2(offices[0].id, -1, -1, '', -1)
+        form = RegisterReceptionistForm2(offices[0].id, -1, -1, '', -1, month, year)
     
-    return render(request, 'dentist_register3.html', {'form': form})
+    return render(request, 'dentist_register3.html', {'form': form, 'month': month, 'year': year, 'header': True})
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
