@@ -2,7 +2,11 @@
 
 {% block right_column %}
 <div id="forms">
-<a href="{% url views.register2 %}">Jestem już pacjentem gabinetu dentystycznego</a>
+	<div id="info">
+		<a href="{% url views.register2 %}" style="border-bottom:none">
+			Kliknij tu jeśli jesteś już pacjentem gabinetu dentystycznego.
+		</a>
+	</div>
 <form action="{% url views.register %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">

@@ -2,6 +2,11 @@
 
 {% block right_column %}
 <div id="forms">
+<div id="info">
+	Wprowadź dane dotyczące swojego konta w systemie i skontaktuj się z rejestratorem
+	w jednym z gabinetów dentystycznych, by powiązać je ze swoją kartą.
+</div>
+
 <form action="{% url views.register2 %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
@@ -20,7 +25,7 @@
 			    {% endfor %}
 			    </div>
 			{% endif %}
-	        {{ field.label_tag }}: 
+	        {{ field.label_tag }} 
 	        {{ field }}
 	    </div>
     {% endfor %}
