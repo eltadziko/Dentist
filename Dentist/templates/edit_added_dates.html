@@ -11,13 +11,19 @@
 		#termins table{
 		  width:100%;
 		  border: 1px solid black;border-collapse: collapse;
+		  text-align: center;
 		}
 		#termins th{
-		  border: 1px solid black;  
+		  border: 1px solid black; 
+		  background-color: #cccccc;
+		  text-align: center; 
+		}
+		#termins th label{
+		  text-align: center; 
 		}
 		#termins td{
 		  border: 1px solid black;
-		  text-align:center;
+		  text-align: center;
 		}
 		#forms{
 			width:900px;
@@ -29,10 +35,11 @@
 			margin:0 auto;
 		}
 		#forms label{
+			text-align: center;
 			float:center;
 			display:block;
 			width:auto;
-			padding:0px 0px 0px 0px;
+			padding:auto;
 			height:30px;
 			background:none;
 			margin-bottom:2px;
@@ -50,6 +57,11 @@
 		}
 	</style>
 {% endblock %}
+
+{% block header %}
+	Dodane terminy dla dentysty: <b>{{ form.dentist_1.value }}</b> <br />z gabinetu: <b>{{ form.dental_office_1.value }}</b>
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 <form action="{% url views.dates_addition %}" method="post"> {% csrf_token %}
@@ -61,7 +73,6 @@
 				{% endfor %}
 			</div>
 		{% endif %}
-		<h2>Dentysta: {{ form.dentist_1.value }} <br/>Gebinet: {{ form.dental_office_1.value }}</h2>
 	</div>
 	<div id="termins">
 		<table>

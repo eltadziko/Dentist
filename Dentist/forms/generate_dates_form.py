@@ -158,3 +158,52 @@ class EditAddedDates2Form(forms.Form):
         self.fields['room_1'] = forms.CharField(label="Pokój",
                                                      initial=date.room,
                                                      widget=forms.TextInput(attrs={'class':'edit_dates_field_room', 'maxlength': '5'}))
+        
+class GenerateDateForm(forms.Form):
+    def __init__(self, office, dentista, *args, **kwargs):
+        super(GenerateDateForm, self).__init__(*args, **kwargs)
+        if office!=-1:
+            self.fields['office'].initial = office
+            in_office = hours.objects.values_list('dentist', flat = True).filter(dental_office__id=office)
+            dents = dentist.objects.filter(id__in=in_office)
+            self.fields['dentist_man'].queryset = dents
+            week_days = [u"poniedziałek", "wtorek", u"środa", "czwartek", u"piątek", "sobota", "niedziela"]
+            if dentista!=-1:
+                self.fields['dentist_man'].initial = dentista
+                self.fields['office'].initial = office
+                
+                dd = dates.objects.filter(dentist__id=dentista, dental_office__id=office)
+                string = ""
+                for d in dd:
+                    string += d.date.strftime("%Y-%m-%d") + " " 
+                self.fields['hidden'].initial = string
+
+            elif dentista==-1 and dents.count()!=0:
+                self.fields['dentist_man'].initial = dents[0].id
+                self.fields['office'].initial = office
+                
+                dd = dates.objects.filter(dentist__id=dents[0].id, dental_office__id=office)
+                string = ""
+                for d in dd:
+                    string += d.date.strftime("%Y-%m-%d") + " " 
+                self.fields['hidden'].initial = string
+
+    
+    office = forms.ModelChoiceField(queryset=dental_office.objects.all(),
+                                                    widget=forms.Select(),
+                                                    required=False,
+                                                    label="Gabinet",
+                                                    empty_label=None)
+    dentist_man = forms.ModelChoiceField(queryset=dentist.objects.none(), 
+                                                    widget=forms.Select(),
+                                                    required=False, 
+                                                    label="Dentyści",
+                                                    empty_label=None)
+    date = forms.CharField(label="Data")
+    begin = forms.CharField(label="Przyjmuje od [gg:mm]")
+    end = forms.CharField(label="Przyjmuje do [gg:mm]")
+    room = forms.CharField(label="Pokój",
+                           widget=forms.TextInput(attrs={'maxlength': '5'}))   
+    hidden = forms.CharField(label='Wpisane daty',
+                                    required=False,
+                                      widget=forms.Textarea(attrs={'readonly':'True', 'hidden':'hidden'}))    

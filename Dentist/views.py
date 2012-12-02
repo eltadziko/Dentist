@@ -12,7 +12,7 @@ from forms.patient_form import PatientForm, PatientProfileForm
 from forms.diseases_form import DiseasesForm, DiseasesFormReceptionist
 from forms.password_form import PasswordForm
 from forms.patient_user_form import PatientUserForm
-from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm, DatesAdditionEditForm, EditAddedDates2Form
+from forms.generate_dates_form import GenerateDatesForm, EditAddedDatesForm, DatesAdditionEditForm, EditAddedDates2Form, GenerateDateForm
 from forms.register_form import *
 from forms.dentist_form import *
 from forms.tooth_edit_form import *
@@ -785,7 +785,7 @@ def dates_addition(request):
                        f_rooms.append(f)
                    i = i + 1
                 new_form = zip(f_ids, f_dates, f_begins, f_ends, f_dentists, f_dental_offices, f_rooms)
-                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form})
+                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form, 'header': True})
             elif dentist_man!="":
                 if request.GET.get('type', None) == 'ajax':
                     form = GenerateDatesForm(request.POST['office'], dentist_man)
@@ -855,7 +855,7 @@ def dates_addition(request):
                        f_rooms.append(f)
                    i = i + 1
                 new_form = zip(f_ids, f_dates, f_begins, f_ends, f_dentists, f_dental_offices, f_rooms)
-                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form})
+                return render(request, 'edit_added_dates.html', {'form': form, 'new_form': new_form, 'header': True})
             else:
                 offices = dental_office.objects.all()
                 form = GenerateDatesForm(offices[0].id, -1) 
@@ -863,7 +863,70 @@ def dates_addition(request):
     else:
         offices = dental_office.objects.all()
         form = GenerateDatesForm(offices[0].id, -1)
-    return render(request, 'dates_addition.html', {'form': form})
+    return render(request, 'dates_addition.html', {'form': form, 'header': True})
+
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
+def date_addition(request):
+    if request.POST:
+        if 'generate_submit' in request.POST.keys():
+            office2 = request.POST['office']
+            dentist_man = request.POST['dentist_man']
+            date2 = request.POST['date']
+            begin2 = request.POST['begin']
+            end2 = request.POST['end']
+            room2 = request.POST['room']
+            if office2!="" and dentist_man!="" and date2!="" and begin2!="" and end2!="" and room2!="":
+                date2 = datetime.datetime.fromtimestamp(time.mktime(time.strptime(date2, "%Y-%m-%d")))
+                try:
+                    date_dentist = dates(date = date2,
+                                         begin = begin2,
+                                         end = end2,
+                                         dentist = dentist.objects.get(id=request.POST['dentist_man']),
+                                         dental_office = dental_office.objects.get(id=request.POST['office']),
+                                         room = room2)
+                    duplicate = dates.objects.filter(dentist__id=request.POST['dentist_man'], dental_office__id=request.POST['office'], date=date2, begin=begin2, end=end2)
+                    if not duplicate:
+                        date_dentist.save()
+                except ValidationError:
+                    messages.add_message(request, messages.ERROR, 'Błędny format danych dla pola/pól "Przyjmuje od"/"Przyjmuje do". Użyj formatu "GG:MM"')    
+                    form = GenerateDateForm(request.POST['office'], request.POST['dentist_man'], request.POST)
+                    return render(request, 'date_addition.html', {'form': form, 'header': True})
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDateForm(request.POST['office'], request.POST['dentist_man'])
+                else:
+                    form = GenerateDateForm(request.POST['office'], request.POST['dentist_man'], request.POST) 
+                
+                messages.add_message(request, messages.INFO, 'Pomyślnie dodano termin.')
+                return HttpResponseRedirect('/date_addition/')
+                
+                
+            elif dentist_man!="":
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDateForm(request.POST['office'], dentist_man)
+                else:
+                    form = GenerateDateForm(request.POST['office'], dentist_man, request.POST)
+            else:
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDateForm(request.POST['office'], -1)
+                else:
+                    form = GenerateDateForm(request.POST['office'], -1, request.POST)
+        elif 'office' in request.POST.keys():
+            if 'dentist_man' in request.POST.keys():
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDateForm(request.POST['office'], request.POST['dentist_man'])
+                else:
+                    form = GenerateDateForm(request.POST['office'], request.POST['dentist_man'], request.POST)
+            else:
+                if request.GET.get('type', None) == 'ajax':
+                    form = GenerateDateForm(request.POST['office'], -1)
+                else:
+                    form = GenerateDatesForm(request.POST['office'], -1, request.POST)
+    else:
+        offices = dental_office.objects.all()
+        form = GenerateDateForm(offices[0].id, -1)
+    return render(request, 'date_addition.html', {'form': form, 'header': True})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -896,7 +959,7 @@ def dates_addition_edit(request):
         elif 'change' in request.POST.keys():
             date = dates.objects.get(id=request.POST['change'])
             form = EditAddedDates2Form(date)
-            return render(request, 'dates_addition_edit2.html', {'form': form})
+            return render(request, 'dates_addition_edit2.html', {'form': form, 'header': True})
         elif 'submit_edit' in request.POST.keys():
             try:
                 date = dates.objects.get(id=request.POST['id_1'])
@@ -917,7 +980,7 @@ def dates_addition_edit(request):
                                            or date_temp.end<today2):
                     form = EditAddedDates2Form(date)
                     messages.add_message(request, messages.ERROR, 'Błądz przy edycji godzin dla terminów z dnia dzisiejszego.')    
-                    return render(request, 'dates_addition_edit2.html', {'form': form})
+                    return render(request, 'dates_addition_edit2.html', {'form': form, 'header': True})
                 """
             
                 date.begin = request.POST['begin_1']
@@ -938,7 +1001,7 @@ def dates_addition_edit(request):
                     if end_visit > date.end:
                         app.delete()
                 date.save()
-                messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano termin oraz usunięto zaplanowane wizyty.')
+                messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano termin oraz usunięto kolidujące wizyty.')
                 form = DatesAdditionEditForm(date.dental_office.id, date.dentist.pk)
                 today = datetime.datetime.today().date()    
                 dates_list = dates.objects.filter(dentist__id=date.dentist.id, dental_office__id=date.dental_office.id, date__gte=today)
@@ -948,14 +1011,14 @@ def dates_addition_edit(request):
                 date.end = request.POST['end_1']
                 date.room = request.POST['room_1']
                 form = EditAddedDates2Form(date)
-                messages.add_message(request, messages.ERROR, 'Błędny format danych dla pola/pól "Od"/"Do". Użyj formatu "HH:mm"')    
-                return render(request, 'dates_addition_edit2.html', {'form': form})
+                messages.add_message(request, messages.ERROR, 'Błędny format danych dla pola/pól "Od"/"Do". Użyj formatu "GG:MM"')    
+                return render(request, 'dates_addition_edit2.html', {'form': form, 'header': True})
     else:
         offices = dental_office.objects.all()
         form = DatesAdditionEditForm(offices[0].id, -1)
         today = datetime.datetime.today().date()
         dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value, date__gte=today)
-    return render(request, 'dates_addition_edit.html', {'form': form, 'dates_list': dates_list})
+    return render(request, 'dates_addition_edit.html', {'form': form, 'dates_list': dates_list, 'header': True})
 
 @user_passes_test(new_password, login_url="/password/")
 def offices(request):

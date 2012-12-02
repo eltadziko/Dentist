@@ -52,7 +52,13 @@
 		}
 	</style>
 {% endblock %}
+
+{% block header %}
+	Edycja terminu z dnia: <b>{{ form.date_1.value }}</b>, dla dentysty: <b>{{ form.dentist_1.value }}</b> <br />z gabinetu: <b>{{ form.dental_office_1.value }}</b>
+{% endblock %}
+
 {% block right_column %}
+<br />
 <div id="forms">
 <form action="{% url views.dates_addition_edit %}" method="post"> {% csrf_token %}
 	<div class="center_select">
@@ -63,7 +69,6 @@
 				{% endfor %}
 			</div>
 		{% endif %}
-		<h2>Dentysta: {{ form.dentist_1.value }} <br/>Gebinet: {{ form.dental_office_1.value }}</h2>
 	</div>
 	<div id="termins">
 		<table>
