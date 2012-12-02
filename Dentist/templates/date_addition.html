@@ -39,39 +39,19 @@
 		 var table = ""; 
 		 
 		 $.datepicker.setDefaults($.datepicker.regional['PL']);
-		 $( "#id_begin" ).multiDatesPicker({
+		 $( "#id_date" ).multiDatesPicker({
         	defaultDate: "+1w",
         	minDate: "0",
             changeMonth: true,
             numberOfMonths: 3,
             maxPicks: 1,
             beforeShow: function() {
-            	$(this).update_disable("#id_begin", "#id_hidden");
+            	$(this).update_disable("#id_date", "#id_hidden");
             }
          });      
-		 $( "#id_end" ).multiDatesPicker({
-        	defaultDate: "+1w",
-        	minDate: "0",
-            changeMonth: true,
-            numberOfMonths: 3,
-            maxPicks: 1,
-            beforeShow: function() {
-            	$(this).update_disable("#id_end", "#id_hidden");
-            }
-         });
-         today = new Date();
-         $( "#id_exclude" ).multiDatesPicker({
-        	defaultDate: "+1w",
-        	minDate: "0",
-            changeMonth: true,
-            numberOfMonths: 3,
-            beforeShow: function() {
-            	$(this).update_disable("#id_exclude", "#id_hidden");
-            }
-		 });
 		
 		 $("#id_office").change(function() {
-			$.post('/dates_addition/?type=ajax',
+			$.post('/date_addition/?type=ajax',
 			{ office: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
@@ -79,7 +59,7 @@
 				$('#dynamic_content').html(content);
 				
 				$("select[name=dentist_man]").change(function() {
-					$.post('/dates_addition/?type=ajax',
+					$.post('/date_addition/?type=ajax',
 					{ office: $('#id_office').val(),
 					  dentist_man: $(this).val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -87,22 +67,14 @@
 						var content = $(data).find('#dynamic_content2').html();
 						$('#dynamic_content2').html(content);
 						
-						$( "#id_begin" ).multiDatesPicker('resetDates', 'disabled');
-						$( "#id_end" ).multiDatesPicker('resetDates', 'disabled');	
-						$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');
-						$( "#id_begin" ).update_disable("#id_begin", "#id_hidden");
-						$( "#id_end" ).update_disable("#id_end", "#id_hidden");
-						$( "#id_exclude" ).update_disable("#id_exclude", "#id_hidden");
+						$( "#id_date" ).multiDatesPicker('resetDates', 'disabled');						
+						$( "#id_date" ).update_disable("#id_date", "#id_hidden");
 					});
 				 	return false;
 				 });
 				 
-				$( "#id_begin" ).multiDatesPicker('resetDates', 'disabled');
-				$( "#id_end" ).multiDatesPicker('resetDates', 'disabled');	
-				$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');
-				$( "#id_begin" ).update_disable("#id_begin", "#id_hidden");
-				$( "#id_end" ).update_disable("#id_end", "#id_hidden");
-				$( "#id_exclude" ).update_disable("#id_exclude", "#id_hidden");
+				$( "#id_date" ).multiDatesPicker('resetDates', 'disabled');						
+				$( "#id_date" ).update_disable("#id_date", "#id_hidden");
 		         
 				 
 			});
@@ -110,7 +82,7 @@
 		 });
 		 
 		 $("select[name=dentist_man]").change(function() {
-			$.post('/dates_addition/?type=ajax',
+			$.post('/date_addition/?type=ajax',
 			{ office: $('#id_office').val(),
 			  dentist_man: $(this).val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -118,12 +90,8 @@
 				var content = $(data).find('#dynamic_content2').html();
 				$('#dynamic_content2').html(content);
 
-				$( "#id_begin" ).multiDatesPicker('resetDates', 'disabled');
-				$( "#id_end" ).multiDatesPicker('resetDates', 'disabled');	
-				$( "#id_exclude" ).multiDatesPicker('resetDates', 'disabled');
-				$( "#id_begin" ).update_disable("#id_begin", "#id_hidden");
-				$( "#id_end" ).update_disable("#id_end", "#id_hidden");
-				$( "#id_exclude" ).update_disable("#id_exclude", "#id_hidden");		         				
+				$( "#id_date" ).multiDatesPicker('resetDates', 'disabled');						
+				$( "#id_date" ).update_disable("#id_date", "#id_hidden");	         				
 			});
 		 	return false;
 		 });		 
@@ -132,12 +100,12 @@
 {% endblock %}
 
 {% block header %}
-	Dodaj terminy lekarza na podstawie grafiku
+	Dodaj termin spoza grafiku
 {% endblock %}
 
 {% block right_column %}
 <div id="forms">
-<form action="{% url views.dates_addition %}" method="post"> {% csrf_token %}
+<form action="{% url views.date_addition %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
        	<div class="error">
 		    {% for error in form.non_field_errors %}
@@ -163,15 +131,7 @@
 		{{ form.dentist_man.label_tag }}
 		{{ form.dentist_man }}
 		
-		<div id="dynamic_content2">
-			<div class="error">
-			    {% for error in form.information.errors %}
-			        <strong>{{ error|escape }} </strong>
-			    {% endfor %}
-			</div>
-			{{ form.information.label_tag }}
-			{{ form.information }}
-			
+		<div id="dynamic_content2">			
 			<div style="display: none">
 				<div class="error">
 				    {% for error in form.hidden.errors %}
@@ -182,6 +142,13 @@
 			</div>
 		</div>
 	</div>
+	<div class="error">
+	    {% for error in form.date.errors %}
+	        <strong>{{ error|escape }} </strong>
+	    {% endfor %}
+	</div>
+	{{ form.date.label_tag }}
+	{{ form.date }}
 	
 	<div class="error">
 	    {% for error in form.begin.errors %}
@@ -201,16 +168,16 @@
 	
 	<div id="dynamic_exclude">
 		<div class="error">
-		    {% for error in form.exclue.errors %}
+		    {% for error in form.room.errors %}
 		        <strong>{{ error|escape }} </strong>
 		    {% endfor %}
 		</div>
-		{{ form.exclude.label_tag }}
-		{{ form.exclude }}
+		{{ form.room.label_tag }}
+		{{ form.room }}
     </div>
     
 	<p><input id="id_generate_submit" name="generate_submit" type="submit" value="Generuj" class="button2" /></p>
 </form>
-<p><a href="{% url views.date_addition %}">Dodaj termin poza grafikiem</a></p>
+<p><a href="{% url views.dates_addition %}">Dodaj terminy wg grafiku</a></p>
 </div>
 {% endblock %}

@@ -15,7 +15,8 @@
 		  border: 1px solid black;border-collapse: collapse;
 		}
 		#termins th{
-		  border: 1px solid black;  
+		  border: 1px solid black;
+		  background-color: #cccccc;  
 		}
 		#termins td{
 		  border: 1px solid black;
@@ -192,6 +193,10 @@
 	</script>
 {% endblock %}
 
+{% block header %}
+	Dodane terminy
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 <form action="{% url views.dates_addition_edit %}" method="post"> {% csrf_token %}
@@ -227,7 +232,7 @@
 		<div id="dynamic_content2">
 			<div id="termins">
 				<table>
-				<tr><th>Data</th><th>Od</th><th>Do</th><th>Dentysta</th><th>Gabinet</th></tr>
+				<tr><th>Data</th><th>Od</th><th>Do</th><th>Dentysta</th><th>Gabinet</th><th colspan="2"></th></tr>
 				{% for d in dates_list %}
 					<tr>
 						<td>{{ d.date|date:'d-m-Y' }}</td>
