@@ -555,7 +555,7 @@ def appointment_list(request):
     
     appoints_untimely = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=True).order_by('patient')
     
-    return render(request, 'appointment_list.html', {'appoints': app, 'date': date, 'appoints_untimely': appoints_untimely})
+    return render(request, 'appointment_list.html', {'appoints': app, 'date': date, 'appoints_untimely': appoints_untimely, 'header': True})
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
@@ -616,7 +616,7 @@ def appointment_list2(request):
     
     appoints_untimely = appointment.objects.filter(date = date).filter(dentist = dent).filter(untimely=True).order_by('patient')
             
-    return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours, 'appoints_untimely': appoints_untimely})
+    return render(request, 'appointment_list2.html', {'appoints': app, 'date': date, 'hours': hours, 'appoints_untimely': appoints_untimely, 'header': True})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -1197,4 +1197,4 @@ def dentist_profile(request):
     else:
         form = ProfileForm(instance = request.user)
         form_dentist = DentistForm(instance = dent)
-    return render(request, 'dentist_profile.html', {'form': form, 'form_dentist': form_dentist})
+    return render(request, 'dentist_profile.html', {'form': form, 'form_dentist': form_dentist, 'header': True})

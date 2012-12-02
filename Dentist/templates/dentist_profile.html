@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 
+{% block header %}
+	Mój profil
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 <form action="{% url views.dentist_profile %}{{ patient }}" method="post"> {% csrf_token %}

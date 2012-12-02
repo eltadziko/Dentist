@@ -358,7 +358,7 @@ visibility:hidden;
 	margin-top: 10px;
 }
 #rezerwacje table{
-  width:100%;
+	width: 100%;
   border: 1px solid black;border-collapse: collapse;
 }
 #rezerwacje th{
@@ -876,4 +876,28 @@ area {
     *max-width:	45.750em; /* 610/13.3333 - for IE */
     border: thin solid #ff0;
     background: #ffe;
+}
+
+#graphic {
+	width: 700px;
+	border: 1px solid black;border-collapse: collapse;	
+	margin: 0 auto;
+	margin-top: 70px;
+}
+
+#graphic th{
+  border: 1px solid black;  
+  background-color:#cccccc;
+  border: 1px solid black;
+}
+
+#graphic td {
+	padding: 0px;
+	line-height: 25px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+#today {
+	float: left;	
 }

@@ -9,18 +9,19 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
+			$( "#date2" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
 			
-			$("#date").change(function() {
+			$("#date2").change(function() {
 				$.post('/appointment_list2/',
 					{ date: $(this).val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html()); 
+						$('#graphic').html($(data).find('#graphic').html());
+						$('#title').html($(data).find('#title').html()); 
 						
 						$('.appoint_future, .appoint_past, .appoint_now').click(function() {
 						 	$.post('/appointment_list2/',
-								{ date: $('#date').val(),
+								{ date: $('#date2').val(),
 								  appoint: $(this).attr('id'),
 								  csrfmiddlewaretoken: '{{ csrf_token }}' },
 								function(data) {
@@ -39,14 +40,15 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#graphic').html($(data).find('#graphic').html()); 
-						$('#date').attr('value', $(data).find('#date').val());
+						$('#date2').attr('value', $(data).find('#date2').val());
+						$('#title').html($(data).find('#title').html());
 				});
 			 	return false;
 			 }); 
 			 
-			 $("#graphic2").submit(function() {
+			 $("#graphic2").click(function() {
 				$.post('/appointment_list/',
-					{ date: $('#date').val(),
+					{ date: $('#date2').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
@@ -56,7 +58,7 @@
 			 
 			 $('.appoint_future, .appoint_past, .appoint_now').click(function() {
 			 	$.post('/appointment_list2/',
-					{ date: $('#date').val(),
+					{ date: $('#date2').val(),
 					  appoint: $(this).attr('id'),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) {
@@ -73,16 +75,24 @@
 	</script>
 {% endblock %}
 
+{% block header %}
+	Lista pacjentów na dzień <strong>{{ date }}</strong>
+{% endblock %}
+
 {% block right_column %}
 <div id="rezerwacje">
-<form id="today">
-Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" id="send_data"/>
-</form>
-<form id="graphic2">
-<input type="submit" value="Tekstowy" id="send_graphic"/>
-</form>
-<table id="graphic">
-<tr><th>Godzina</th><th>Pacjent</th></tr>
+	<form id="today">
+		Data: <input type="text" id="date2" value="{{ date }}"/>
+		<input type="submit" value="Dziś" id="send_data"/>
+	</form>
+
+	<form id="graphic2" style="float:right">
+		Zmień wygląd: <img src="{{ MEDIA_URL }}/img/table.png" id="send_graphic"/>
+	</form>
+</div>
+	
+<table id="graphic" style="width: 550px">
+<tr><th width="150px">Godzina</th><th>Pacjent</th></tr>
 	{% for a in appoints %}
 		<tr>
 			{% if a.now_time %}
@@ -120,5 +130,5 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 			id="{{ a.id }}">{{ a.patient.last_name }} {{ a.patient.first_name }}</td></tr>
 	{% endfor %}
 </table>
-</div>
+
 {% endblock %}
