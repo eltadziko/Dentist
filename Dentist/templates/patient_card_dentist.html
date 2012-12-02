@@ -212,6 +212,59 @@
 		<input class="button5" type="submit" id="ok_patient" value="Zapisz"/></center>
 	</div>
 
+
+	<div class="appoint">
+		<div class="appointment">
+		<br />
+		<strong>Ostatnia wizyta:</strong>
+			<table>
+				<tr>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="160px">Dentysta</th><th>Opis</th><th width="150px" colspan="2"></th>
+				</tr>
+				{% with appoints|first as a %}
+					<tr>
+						<td>{{ a.date|date:'Y-m-d' }}</td>
+						<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
+						<td class="left">{% if a.untimely|is_false %}{{ a.appointment_type.type }}{% endif %}</td>
+						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
+						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
+						<td class="app" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
+						<td id="{{ a.id }}" class="app_edit" width="70px"><div class="edit_patient">Edytuj</div></td>
+					</tr>
+					<tr>
+						<td colspan="7" id="app_form_edit_{{ a.id }}" class="app_form_edit">
+							Opis wizyty:<br />
+							<textarea id="app_desc_{{ a.id }}" cols="50" rows="4" style="float:left; margin-left: 200px">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
+							<input type="submit" class="cancel_app button5" value="Anuluj" name="{{ a.id }}"/><br /><br />
+							<input type="submit" class="ok_app button5" value="Zapisz" name="{{ a.id }}"/>
+							
+						</td>
+					</tr>
+					<tr id="appoint_{{ a.id }}" class="tooth_loss">
+						<td colspan="7">
+							{% if a.tooth_loss_set.all %}
+								<table>
+									<tr>
+										<th width="300px">Ząb</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+									</tr>
+									{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+										<tr>
+											<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
+											<td class="left">{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
+											<td class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+										</tr>
+									{% endfor %}
+								</table>
+							{% endif %}
+						</td>
+					</tr>	
+				{% endwith %}
+			</table>
+		</div>
+	</div>
+	
+
+
 	<div id="gora">
 		<table id="tooth_loss">
 			<tr>
