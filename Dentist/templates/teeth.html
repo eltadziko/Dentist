@@ -102,8 +102,11 @@
 					function(data) { 
 						$('#tooth_loss').html($(data).find('#tooth_loss').html());
 						$('#tooth_losses').html($(data).find('#tooth_losses').html());
-						$('#tooth_loss').show();  
-						$('#gora').show();
+						{% if not appointment.is_now %}
+						{% else %}
+							$('#tooth_loss').show();
+							$('#gora').show();
+						{% endif %}  
 						$('#tooth_losses').show();  
 				});
     		});

@@ -42,7 +42,7 @@
 		</table>
 	</div>
 	
-	{% include 'teeth.html' with link="/patient_card/" losses_all=losses_all %}
+	{% include 'teeth.html' with link="/patient_card/" losses_all=losses_all appointment=None %}
 	
 	{% if losses.count > 0 %}
 		<div id="tooth_losses">
