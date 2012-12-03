@@ -20,6 +20,7 @@
 			{% if not appointment.is_now %}
 				$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_in.jpg');
 				$('#is_end').html('Wizyta nierozpoczęta');
+				$('#actual').hide();
 			{% endif %}
 			
 			{% if appointment.is_now == 1 %}
@@ -70,6 +71,7 @@
 						$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_out.png');
 						$('#is_in').attr('id', 'is_out');
 						$('#is_end').html('Wizyta trwa');
+						$('#actual').show();
 				});
 			 	return false;
 			 });
