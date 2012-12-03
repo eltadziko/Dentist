@@ -252,7 +252,13 @@
 						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
 						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
 						<td class="app2" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
-						<td id="{{ a.id }}" class="app_edit2" width="70px"><div class="edit_patient">Edytuj</div></td>
+						{% if a.dentist.user == request.user %}
+							<td id="{{ a.id }}" class="app_edit2" width="70px">
+								<div class="edit_patient">Edytuj</div>
+							</td>
+						{% else %}
+							<td width="70px"></td>
+						{% endif %}
 					</tr>
 					<tr>
 						<td colspan="7" id="app_form_edit2_{{ a.id }}" class="app_form_edit">
@@ -383,7 +389,13 @@
 						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
 						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
 						<td class="app" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
-						<td id="{{ a.id }}" class="app_edit" width="70px"><div class="edit_patient">Edytuj</div></td>
+						{% if a.dentist.user == request.user %}
+							<td id="{{ a.id }}" class="app_edit" width="70px">
+								<div class="edit_patient">Edytuj</div>
+							</td>
+						{% else %}
+							<td width="70px"></td>
+						{% endif %}
 					</tr>
 					<tr>
 						<td colspan="7" id="app_form_edit_{{ a.id }}" class="app_form_edit">

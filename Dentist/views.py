@@ -1242,7 +1242,9 @@ def patient_card_dentist(request):
             else:
                 form = ToothForm(request.POST['tooth'])
 
-    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True })
+    date = datetime.datetime.now().date()
+    editable = (date == appoint.date)
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True, 'editable': editable })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
