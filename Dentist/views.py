@@ -1219,7 +1219,13 @@ def patient_card_dentist(request):
             pat.save()
         if 'is_now' in request.POST.keys():
             appoint.is_now = request.POST['is_now']
-            appoint.save()
+            if appoint.is_now == '1' and appointment.objects.filter(date = appoint.date,
+                                                                  dentist = appoint.dentist,
+                                                                  is_now = 1).count() > 0:
+               messages.add_message(request, messages.ERROR, 'W gabinecie nie może znajdować się dwóch pacjentów jednocześnie.')     
+            else:    
+                appoint.save()
+            return HttpResponseRedirect('/patient_card_dentist/')
         if 'appointment_description' in request.POST.keys():
             appoint.description = request.POST['appointment_description'].strip()
             appoint.save()

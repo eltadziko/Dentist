@@ -31,6 +31,7 @@
 			
 			{% if appointment.is_now == -1 %}
 				$('#is_end').html('Wizyta zakończona');
+				$('#is_end').css('margin-right', '30px');
 				$('#is_in').hide();
 			{% endif %}
 			
@@ -68,10 +69,6 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
-						$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_out.png');
-						$('#is_in').attr('id', 'is_out');
-						$('#is_end').html('Wizyta trwa');
-						$('#actual').show();
 				});
 			 	return false;
 			 });
