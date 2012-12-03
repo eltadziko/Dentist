@@ -224,14 +224,14 @@ border: 1px solid #cccccc;
 }
 #forms{
 margin:30px 0px 0px 40px;
-width:600px;
+width:480px;
 line-height:34px;
 margin:0 auto;
 margin-top: 10px;
 }
 
 #forms input[type="text"], #forms input[type="password"]{
-width:400px;
+width:300px;
 height:30px;
 padding:0px 0px 0px 5px;
 margin:0px 0px 2px 5px;
@@ -246,6 +246,7 @@ margin-right:20px;
 }
 #forms select{
 height:30px;
+width: 305px;
 margin:0px 0px 5px 5px;
 padding:5px 0px 0px 5px;
 border-top:solid 1px #40b8dc;
@@ -258,7 +259,7 @@ color:#3e3e3e;
 border-bottom:1px dashed #3e3e3e;
 }
 #forms textarea {
-width:400px;
+width:300px;
 margin:0px 0px 2px 5px;
 padding:5px 0px 0px 5px;
 border-top:solid 1px #40b8dc;
@@ -282,7 +283,6 @@ border-bottom:solid 1px #cccccc;
 
 
 #send_log_big{
-margin:5px 200px 0px 0px;
 float:right;
 height:35px;
 width:200px;
@@ -292,6 +292,20 @@ background: url(../img/BG_submenu.jpg) repeat-x;
 border: 1px solid #cccccc;
 color:white;
 font-size:16px;
+}
+
+#send_log_log{
+
+float:right;
+height:35px;
+width:200px;
+cursor: pointer;
+text-align:center;
+background: url(../img/BG_submenu.jpg) repeat-x;
+border: 1px solid #cccccc;
+color:white;
+font-size:16px;
+margin-right: 20px;
 }
 
 #footer{
@@ -656,15 +670,25 @@ margin-bottom:10px;
 }
 #is_in{
 	margin:10px;
-	margin-left:30px;
-
+	cursor: pointer;
 }
 #is_out{
 	margin:10px;
-	margin-left:30px;
-
+	cursor: pointer;
 }
-
+#is_end {
+	width: 150px;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #003399;
+	background-color: #0099FF;
+	padding: 5px;
+	border-radius: 5px;
+	float: right;
+}
 
 
 #gora
@@ -942,6 +966,7 @@ area {
 #is_out, #is_in {
 	float: right;
 	margin-right: 30px;	
+	
 }
 
 #form_patient_edit {

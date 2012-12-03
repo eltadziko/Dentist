@@ -23,10 +23,10 @@
 	    <td>{{ form.password }}</td>
 	</tr>
 	</table>
-	
-	<input id="send_log_big" type="submit" value="Zaloguj" />
+	<a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałeś hasła?</a>
+	<input id="send_log_big" type="submit" value="Zaloguj"/>
 	<input type="hidden" name="next" value="{{ next }}" />
 	</form>
-	<a href="{% url 'django.contrib.auth.views.password_reset' %}">Zapomniałeś hasła?</a>
+	
 </div>
 {% endblock %}

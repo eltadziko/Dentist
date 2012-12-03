@@ -19,11 +19,18 @@
 			
 			{% if not appointment.is_now %}
 				$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_in.jpg');
+				$('#is_end').html('Wizyta nierozpoczęta');
 			{% endif %}
 			
 			{% if appointment.is_now == 1 %}
 				$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_out.png');
 				$('#is_in').attr('id', 'is_out');
+				$('#is_end').html('Wizyta trwa');
+			{% endif %}
+			
+			{% if appointment.is_now == -1 %}
+				$('#is_end').html('Wizyta zakończona');
+				$('#is_in').hide();
 			{% endif %}
 			
 			$('.app').click(function() {
@@ -62,6 +69,7 @@
 						$('#content').html(data); 
 						$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_out.png');
 						$('#is_in').attr('id', 'is_out');
+						$('#is_end').html('Wizyta trwa');
 				});
 			 	return false;
 			 });
@@ -73,6 +81,7 @@
 					function(data) { 
 						$('#content').html(data); 
 						$('#is_out').hide();
+						$('#is_end').html('Wizyta zakończona');
 				});
 			 	return false;
 			 });
@@ -209,7 +218,8 @@
 {% block right_column %}
 	<input type="submit" value="Powrót do grafiku" id="back" />
 
-	<div id="is_in" style="cursor: pointer"><img></div>
+	<div id="is_in"><img></div>
+	<div id="is_end"></div>
 	
 	<div id="dane_pacjenta" style="clear: both">
 		<table>
@@ -284,6 +294,8 @@
 										</tr>
 									{% endfor %}
 								</table>
+							{% else %}
+								Brak szczegółów przypisanych do wizyty.
 							{% endif %}
 						</td>
 					</tr>	
@@ -421,6 +433,8 @@
 										</tr>
 									{% endfor %}
 								</table>
+							{% else %}
+								Brak szczegółów przypisanych do wizyty.
 							{% endif %}
 						</td>
 					</tr>			
