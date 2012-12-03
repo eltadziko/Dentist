@@ -940,7 +940,7 @@ area {
 	margin-top: 30px;	
 }
 
-.cancel_app, .ok_app {
+.cancel_app, .ok_app, .ok_app2 {
 	float: right;	
 	width: 100px;
 	margin-right: 150px;
