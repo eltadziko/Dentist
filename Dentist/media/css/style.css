@@ -901,15 +901,28 @@ area {
   border: 1px solid black;
 }
 
+#graphic2 {
+	width: 700px;
+	border: 1px solid black;border-collapse: collapse;	
+	margin: 0 auto;
+	margin-top: 70px;
+	position: absolute;
+	z-index: 1;
+	margin-top: 34px;
+	margin-left: 60px;
+}
+
+#graphic2 th{
+  border: 1px solid black;  
+  background-color:#cccccc;
+  border: 1px solid black;
+}
+
 #graphic td {
 	padding: 0px;
 	line-height: 25px;
 	border: 1px solid black;
 	text-align: center;
-}
-
-#today {
-	float: left;	
 }
 
 /* Karta pacjenta u dentysty */

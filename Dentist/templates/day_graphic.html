@@ -8,15 +8,16 @@
 	
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$( "#date" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
+			$( "#date2" ).datepicker($.datepicker.regional['PL'], { changeYear: true, changeMonth: true, dateFormat: "yy-mm-dd" });
 			
-			$("#date").change(function() {
+			$("#date2").change(function() {
 				$.post('/day_graphic/',
 					{ date: $(this).val(),
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html()); 
+						$('#graphic').html($(data).find('#graphic').html());
+						$('#graphic2').html($(data).find('#graphic2').html()); 
 				});
 			 	return false;
 			 });
@@ -28,18 +29,20 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#graphic').html($(data).find('#graphic').html()); 
-						$('#date').attr('value', $(data).find('#date').val());
+						$('#graphic2').html($(data).find('#graphic2').html());
+						$('#date2').attr('value', $(data).find('#date2').val());
 				});
 			 	return false;
 			 });
 			 
 			 $('#office').change(function() {
 			 	$.post('/day_graphic/',
-					{ date: $('#date').val(),
+					{ date: $('#date2').val(),
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#graphic').html($(data).find('#graphic').html());
+						$('#graphic2').html($(data).find('#graphic2').html());
 				});
 			 	return false;
 			 }); 
@@ -49,13 +52,42 @@
 			 }, 60000);
 		});
 	</script>
+	
+	<script>
+		$(document).ready(function() {
+			var $sidebar   = $("#graphic2"), 
+		        $window    = $(window),
+		        offset     = $sidebar.offset(),
+		        topPadding = 34;
+	
+			if ($window.scrollTop() > offset.top) {
+	            $sidebar.stop().animate({
+	                marginTop: $window.scrollTop() - offset.top + topPadding
+	            });
+	        }
+		
+		    $window.scroll(function() {
+		        if ($window.scrollTop() > offset.top) {
+		            $sidebar.stop().animate({
+		                marginTop: $window.scrollTop() - offset.top + topPadding
+		            });
+		        } else {
+		            $sidebar.stop().animate({
+		                marginTop: 34
+		            });
+		        }
+		    });
+		});
+	</script>
 {% endblock %}
 
 {% block right_column %}
 <div id="rezerwacje">
-<form id="today">
-Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" value="Dziś" id="send_data"/>
-</br>Gabinet: <select id="office" name="office">
+	<form id="today">
+	<div style="float:left">Data: <input type="text" id="date2" value="{{ date }}"/>
+	<input type="submit" value="Dziś" id="send_data"/>
+	</div>
+	<div style="float:right">Gabinet: <select id="office" name="office">
 	{% for o in offices %}
 		{% if o.id == office %}
 			<option value="{{ o.id }}" selected="selected">{{ o }}</option>
@@ -63,21 +95,31 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 			<option value="{{ o.id }}">{{ o }}</option>
 		{% endif %}
 	{% endfor %}
-</select>
-</form>
-<table id="graphic">
-<tr>
-	<th>Godzina</th>
-	{% for d in dents %}
-		<th>{{ d.last_name }} {{ d.first_name }}</th>
-	{% endfor %}
-</tr>
+	</select></div>
+	</form>
+</div>
+
+<table id="graphic2" style="width: 840px">
+	<tr>
+		<th width="95px">Godzina</th>
+		{% for d in dents %}
+			<th width="185px">{{ d.last_name }} {{ d.first_name }}</th>
+		{% endfor %}
+	</tr>
+</table>
+<table id="graphic" style="margin-top:0px; width: 840px">
+	<tr>
+		<th width="100px">Godzina</th>
+		{% for d in dents %}
+			<th width="185px">{{ d.last_name }} {{ d.first_name }}</th>
+		{% endfor %}
+	</tr>
 	{% for a in appoints %}
 		<tr>
 			{% if a.now_time %}
-				<td class="now_time">
+				<td class="now_time" width="100px">
 			{% else %}
-				<td>
+				<td width="100px">
 			{% endif %}
 			{{ a.hour|time:"H:i" }}</td>
 			{% for p in a.appoint %}
@@ -89,8 +131,8 @@ Data: <input type="text" id="date" value="{{ date }}"/><input type="submit" valu
 					{% else %}
 						<td class="appoint_future" 
 					{% endif %}
-					rowspan="{{ p.length }}">
-					<a href = "{% url views.update_profile %}{{ p.appoint.patient.id }}">
+					rowspan="{{ p.length }}" width="200px">
+					<a href = "{% url views.update_profile %}{{ p.appoint.patient.id }}" style="border-bottom:none">
 						{{ p.appoint.patient.last_name }} {{ p.appoint.patient.first_name }}
 					</a></td>
 				{% elif p.length > 0 %}

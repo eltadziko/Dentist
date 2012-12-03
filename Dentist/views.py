@@ -712,7 +712,7 @@ def day_graphic(request):
             else:
                 appoints_untimely2[i].append(None)
 
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2})
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -1242,9 +1242,7 @@ def patient_card_dentist(request):
             else:
                 form = ToothForm(request.POST['tooth'])
 
-    date = datetime.datetime.now().date()
-    editable = (date == appoint.date)
-    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True, 'editable': editable })
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
