@@ -181,5 +181,6 @@ LOGGING = {
 
 CRON_CLASSES = [
     "Dentist.cron.MyCronJob",
+    "django_cron.cron2.MyCronJob",
     # ...
 ]
