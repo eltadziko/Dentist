@@ -46,7 +46,7 @@
 			 	return false;
 			 }); 
 			 
-			 $("#graphic2").click(function() {
+			 $("#graphic3").click(function() {
 				$.post('/appointment_list/',
 					{ date: $('#date2').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
@@ -86,7 +86,7 @@
 		<input type="submit" value="Dziś" id="send_data"/>
 	</form>
 
-	<form id="graphic2" style="float:right">
+	<form id="graphic3" style="float:right">
 		Zmień wygląd: <img src="{{ MEDIA_URL }}/img/table.png" id="send_graphic"/>
 	</form>
 </div>
