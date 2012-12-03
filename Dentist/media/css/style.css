@@ -603,12 +603,12 @@ visibility:hidden;
   	margin:5px;
   	margin-left:5px;
 }
+
 /*tabele_wszystkie*/
 #dane_pacjenta{
 width:900px;
 line-height:25px;
 margin:0 auto;
-margin-bottom:30px;
 margin-top: 10px;
 }
 #dane_pacjenta table{
@@ -629,27 +629,27 @@ margin-top: 10px;
   text-align:left;
   padding-left:15px;
 }
-.appointment, #tooth_losses{
+.appointment, #tooth_losses, #appoint_losses, #now_visit {
 margin:20px 0px 0px 40px;
 width:900px;
 line-height:25px;
 margin:0 auto;
 margin-bottom:10px;
 }
-.appointment table,#tooth_losses table{
+.appointment table,#tooth_losses table, #appoint_losses table, #now_visit table {
   width:100%;
   border: 1px solid black;border-collapse: collapse;
   margin-top:0px;
 }
-.appointment th,#tooth_losses th{
+.appointment th,#tooth_losses th, #appoint_losses th, #now_visit th {
   border: 1px solid black;  
   background-color:#cccccc;
 }
-.appointment td,#tooth_losses td{
+.appointment td,#tooth_losses td, #appoint_losses td, #now_visit td {
   border: 1px solid black;
   text-align:center;
 }
-.appointment td.left,#tooth_losses td.left{
+.appointment td.left,#tooth_losses td.left, #appoint_losses td.left, #now_visit td.left {
   border: 1px solid black;
   text-align:left;
   padding-left:15px;
@@ -670,11 +670,16 @@ margin-bottom:10px;
 #gora
 {
     position:absolute;
-    left: 500px;
+    margin-top: 100px;
+    left: 550px;
     z-index:101;
     background-color: #eeeeee;
     border-style: solid;
     border-width:1px;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
 }
 #dol
 {
@@ -683,7 +688,6 @@ margin-bottom:10px;
 }
 #srodek {
 	position:relative;
-	float:left;
 }
 
 .button6 {
@@ -839,10 +843,16 @@ area {
 	cursor: pointer;	
 }
 
-.app {
+.edit_patient {
 	cursor: pointer;
 	color: white;
-  	cursor: pointer;
+  	text-align:center;	
+  	background: url(../img/BG_submenu.jpg) repeat-x;
+}
+
+.edit_patient {
+	cursor: pointer;
+	color: white;
   	text-align:center;	
   	background: url(../img/BG_submenu.jpg) repeat-x;
 }
@@ -891,6 +901,24 @@ area {
   border: 1px solid black;
 }
 
+#graphic2 {
+	table-layout: fixed;
+	width: 700px;
+	border: 1px solid black;border-collapse: collapse;	
+	margin: 0 auto;
+	margin-top: 70px;
+	position: absolute;
+	z-index: 1;
+	margin-top: 34px;
+	margin-left: 60px;
+}
+
+#graphic2 th{
+  border: 1px solid black;  
+  background-color:#cccccc;
+  border: 1px solid black;
+}
+
 #graphic td {
 	padding: 0px;
 	line-height: 25px;
@@ -898,6 +926,54 @@ area {
 	text-align: center;
 }
 
-#today {
-	float: left;	
+/* Karta pacjenta u dentysty */
+#back{
+	color:white;
+	height:35px;
+	font-size:16px;
+	cursor: pointer;
+  	background: url(../img/BG_submenu.jpg) repeat-x;
+  	margin:5px;
+  	margin-left:30px;
+  	border: 1px solid #cccccc;
+  	float: left;
+}
+
+#is_out, #is_in {
+	float: right;
+	margin-right: 30px;	
+}
+
+#form_patient_edit {
+	width: 450px;
+	margin: 0 auto;	
+	margin-top: 10px;
+}
+
+#diagram_uzebienia {
+	margin-top: 30px;	
+}
+
+.cancel_app, .ok_app, .ok_app2 {
+	float: right;	
+	width: 100px;
+	margin-right: 150px;
+}
+
+#appoint_losses {
+	margin-bottom: 20px;	
+}
+
+.description_action {
+	float: right;	
+	width: 80px;
+}
+
+#actual {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #339933;
+	margin-top: 15px;	
+	margin-bottom: 15px;
+	border-radius: 15px;
 }

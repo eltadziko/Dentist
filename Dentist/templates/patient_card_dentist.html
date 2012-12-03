@@ -5,9 +5,10 @@
 	{{ block.super }}
 	<script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.maphilight.min.js"></script>
 	
-	<script>
+	<script>	
 		$(document).ready(function() {
 			$('.tooth_loss').hide();
+			$('#gora').hide();
 			$('#tooth_loss').hide();
 			$('#tooth_losses').hide();
 			
@@ -17,24 +18,26 @@
 			$(".app_form_edit").hide();
 			
 			{% if not appointment.is_now %}
-				$('#is_in').text('Pacjent: Wszedł');
+				$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_in.jpg');
 			{% endif %}
 			
 			{% if appointment.is_now == 1 %}
-				$('#is_in').text('Pacjent: Wyszedł');
+				$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_out.png');
 				$('#is_in').attr('id', 'is_out');
 			{% endif %}
 			
-			$('.appointment').click(function() {
+			$('.app').click(function() {
 				id = '#appoint_' + $(this).attr('id');
+				$(id).toggle();
+			});
+			
+			$('.app2').click(function() {
+				id = '#appoint2_' + $(this).attr('id');
 				$(id).toggle();
 			});
 			
 			$('#patient_edit').click(function() {
 				$('#form_patient_edit').show();
-				{% if patient.comment %}
-				$('#patient_comment').val('{{ patient.comment }}');
-				{% endif %}
 			});
 			
 			$('#cancel_patient').click(function() {
@@ -57,7 +60,7 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#content').html(data); 
-						$('#is_in').text('Pacjent: Wyszedł');
+						$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_out.png');
 						$('#is_in').attr('id', 'is_out');
 				});
 			 	return false;
@@ -103,7 +106,7 @@
 			 $('#cancel_description').click(function() {
 			 	$('#ok_description').hide();
 				$("#cancel_description").hide();
-				$('#form_appointment_edit').val('{{ appointment.description }}');
+				$('#form_appointment_edit').load('/patient_card_dentist/ $form_appointment_edit');
 			 });
 			 
 			 $('.app_edit').click(function() {
@@ -111,15 +114,33 @@
 			 	$('#app_form_edit_'+id).show();
 			 });
 			 
+			 $('.app_edit2').click(function() {
+			 	id = $(this).attr('id');
+			 	$('#app_form_edit2_'+id).show();
+			 });
+			 
 			 $('.cancel_app').click(function() {
 			 	id = $(this).attr('name');
 				$('#app_form_edit_'+id).hide();
+				$('#app_form_edit2_'+id).hide();
 			});
 			
 			$(".ok_app").click(function() {
 				id = $(this).attr('name');
 				$.post('/patient_card_dentist/',
 					{ app_desc: $('#app_desc_'+id).val(),
+					  app: id,
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
+			 
+			 $(".ok_app2").click(function() {
+				id = $(this).attr('name');
+				$.post('/patient_card_dentist/',
+					{ app_desc: $('#app_desc2_'+id).val(),
 					  app: id,
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
@@ -162,6 +183,7 @@
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
 						$('#tooth_loss').hide();
+						$('#gora').hide();
 						$('#tooth_losses').hide();
 						$('#appoint_losses').html($(data).find('#appoint_losses').html());
 						$('area').attr('color', 'ffffff');
@@ -173,48 +195,116 @@
 			 
 			 $('#tooth_cancel').live('click', function() {
 			 	$('#tooth_loss').hide();
+			 	$('#gora').hide();
 			 });
 			 
 		});
 	</script>
 {% endblock %}
 
-{% block right_column %}
-	<input type="submit" value="Powrót do grafiku" id="back" class="button4" />
+{% block header %}
+	Karta pacjenta <strong>{{ patient.last_name }} {{ patient.first_name }}</strong>
+{% endblock %}
 
-	<div id="dane_pacjenta">
-	Karta pacjenta
-	<strong>"{{ patient.last_name }} {{ patient.first_name }}"</strong>
-	<table>
-	 <tr><th>PESEL</th><th>Adres:</th><th>Komentarz</th><th>Choroby</th></tr>
-	<tr>
-	<td>{{ patient.PESEL }}</td><br />
-	<td>{{ patient.address }}</td></br>
-	<td>{% if patient.comment %}{{ patient.comment }}{% endif %}</td>
-	<td class="left">
-	{% for d in patient.patient_diseases_set.all %}
-		- {{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %},</br> {% endif %}
-	{% endfor %}
-	</td>
-	</tr>
-	</table>
+{% block right_column %}
+	<input type="submit" value="Powrót do grafiku" id="back" />
+
+	<div id="is_in" style="cursor: pointer"><img></div>
+	
+	<div id="dane_pacjenta" style="clear: both">
+		<table>
+			<tr><th width="100px">PESEL</th><th width="200px">Adres</th><th width="200px">Choroby</th><th colspan="2">Komentarz</th></tr>
+			<tr>
+				<td>{{ patient.PESEL }}</td>
+				<td>{{ patient.address }}</td>
+				<td class="left">
+				{% for d in patient.patient_diseases_set.all %}
+					- {{ d.disease }} ({{ d.date|date:'Y-m-d' }}){% if forloop.counter != patient.patient_diseases_set.all.count %},</br> {% endif %}
+				{% endfor %}
+				</td>
+				<td class="left">{% if patient.comment %}{{ patient.comment|linebreaksbr }}{% endif %}</td>
+				<td width="100px"><div class="edit_patient" id="patient_edit">Edytuj</div></td>
+			</tr>
+		</table>
 	</div>
 		
-	<div id="is_in"></div>
-	
-	<input type="submit" class="button4" id="patient_edit" value="Edytuj" />
 	<div id="form_patient_edit">
-		Komentarz: <textarea id="patient_comment" cols="80" rows="4"></textarea>
-		<input class="button5" type="submit" id="cancel_patient" value="Anuluj"/>
-		<input class="button5" type="submit" id="ok_patient" value="Zapisz"/>
+		Komentarz do pacjenta:<br />
+		<textarea id="patient_comment" cols="50" rows="4">{% if patient.comment %}{{ patient.comment }}{% endif %}</textarea><br />
+		<center><input class="button5" type="submit" id="cancel_patient" value="Anuluj"/>
+		<input class="button5" type="submit" id="ok_patient" value="Zapisz"/></center>
 	</div>
 
+
+	<div class="appoint">
+		<div class="appointment">
+		<br />
+		<strong>Ostatnia wizyta:</strong>
+			<table>
+				<tr>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="160px">Dentysta</th><th>Opis</th><th width="150px" colspan="2"></th>
+				</tr>
+				{% with appoints|first as a %}
+					<tr>
+						<td>{{ a.date|date:'Y-m-d' }}</td>
+						<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
+						<td class="left">{% if a.untimely|is_false %}{{ a.appointment_type.type }}{% endif %}</td>
+						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
+						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
+						<td class="app2" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
+						{% if a.dentist.user == request.user %}
+							<td id="{{ a.id }}" class="app_edit2" width="70px">
+								<div class="edit_patient">Edytuj</div>
+							</td>
+						{% else %}
+							<td width="70px"></td>
+						{% endif %}
+					</tr>
+					<tr>
+						<td colspan="7" id="app_form_edit2_{{ a.id }}" class="app_form_edit">
+							Opis wizyty:<br />
+							<textarea id="app_desc2_{{ a.id }}" cols="50" rows="4" style="float:left; margin-left: 200px">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
+							<input type="submit" class="cancel_app button5" value="Anuluj" name="{{ a.id }}"/><br /><br />
+							<input type="submit" class="ok_app2 button5" value="Zapisz" name="{{ a.id }}"/>
+							
+						</td>
+					</tr>
+					<tr id="appoint2_{{ a.id }}" class="tooth_loss">
+						<td colspan="7">
+							{% if a.tooth_loss_set.all %}
+								<table>
+									<tr>
+										<th width="300px">Ząb</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+									</tr>
+									{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+										<tr>
+											<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
+											<td class="left">{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
+											<td class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+										</tr>
+									{% endfor %}
+								</table>
+							{% endif %}
+						</td>
+					</tr>	
+				{% endwith %}
+			</table>
+		</div>
+	</div>
+	
+
+
 	<div id="gora">
-	<table id="tooth_loss">
-		{{ form }}
-		<tr><td><input type="submit" value="Anuluj" id="tooth_cancel" class="button2" /></td>
-		<td><input type="submit" value="Zapisz" id="tooth_ok" class="button2" /></td></tr>
-	</table>
+		<table id="tooth_loss">
+			<tr>
+				<th colspan="2" style="text-align:center; border-bottom: 1px solid">Edycja zęba</th>
+			</tr>
+			{{ form }}
+			<tr>
+				<td colspan="2"><center><input type="submit" value="Anuluj" id="tooth_cancel" class="button2" />
+				<input type="submit" value="Zapisz" id="tooth_ok" class="button2" /></center></td>
+			</tr>
+		</table>
 	</div>
 
 	<div id="dol">
@@ -222,79 +312,121 @@
 	</div>
 	
 	<div id="srodek">
-	<div id="tooth_losses">
-		{% if losses %}
+		{% if losses.count > 0 %}
+		<div id="tooth_losses">
+			<strong>Historia zabiegu:</strong>
 			<table>
-			<tr><th>Data</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
-			{% for l in losses %}
 				<tr>
-		 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
-		 			<td>{{ l.loss_type }}</td>
-		 			<td>{{ l.comment }}</td>
-		 		</tr>
-			{% endfor %}
-			</table>
-		{% endif %}
-	</div>
-	
-	<strong>Aktualna wizyta:</strong><br />
-	{{ appointment.date|date:'Y-m-d' }} {% if a.untimely|is_false %}{{ appointment.hour|time:'H:i' }}, {{ appointment.appointment_type.length }} minut{% endif %}<br />
-	Opis: <textarea id="form_appointment_edit" cols="80" rows="4">{% if appointment.description %}{{ appointment.description }}{% endif %}
-	</textarea>
-	<input type="submit" id="ok_description" value="Zapisz"/>
-	<input type="submit" id="cancel_description" value="Cofnij"/><br />
-	<div id="appoint_losses">
-	{% if appointment.tooth_loss_set.all %}
-		Zmiany na diagramie uzębienia:
-		<table>
-		<tr><th>Ząb</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
-		{% for t in appointment.tooth_loss_set.all|order_by:'tooth' %}
-		<tr>
-			<td>{{ t.tooth }} - {{ t.tooth_part.name }}</td>
-			<td>{% if t.loss_type %}{{ t.loss_type.type }}{% endif %}</td>
-			<td>{% if t.comment %}{{ t.comment }}{% endif %}</td>
-		</tr>
-		{% endfor %}
-		</table>
-	{% endif %}
-	</div>
-	
-	<strong>Wizyty:</strong><br />
-	{% for a in appoints %}
-	<div class="appoint">
-			<div class="appointment" id="{{ a.id }}">
-				<table>
-				<tr><th>Data</th><th>Termin</th><th>Dentysta</th></tr>
-				<tr>
-				<td>{{ a.date }}</td>
-				<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
-				<td>{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
+					<th width="300px">Ząb</th><th width="100px">Data</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
 				</tr>
-				</table>
-			</div>
-			<div id="{{ a.id }}" class="app_edit"><input type="submit" class="button3" value="Edytuj" /></div>
-			<div id="app_form_edit_{{ a.id }}" class="app_form_edit">
-				Opis: <textarea id="app_desc_{{ a.id }}" cols="80" rows="4">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
-				<input type="submit" class="cancel_app" value="Anuluj" name="{{ a.id }}"/>
-				<input type="submit" class="ok_app" value="Zapisz" name="{{ a.id }}"/>
-			</div>
-			
-			<div id="appoint_{{ a.id }}" class="tooth_loss">
-			{% if a.tooth_loss_set.all %}
+				{% for l in losses %}
+					<tr>
+						{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
+			 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
+			 			<td class="left">{{ l.loss_type }}</td>
+			 			<td class="left">{{ l.comment|linebreaksbr }}</td>
+			 		</tr>
+				{% endfor %}
+			</table>
+		</div>
+		{% endif %}
+		
+		<div id="actual">
+		<div id="now_visit">
+			<strong>Aktualna wizyta:</strong>
+			<table>
+				<tr>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th>Opis</th>
+				</tr>
+				<tr>
+					<td>{{ appointment.date|date:'Y-m-d' }}</td>
+					<td>{% if appointment.untimely|is_false %}{{ appointment.hour|time:'H:i' }}, {{ appointment.appointment_type.length }} minut{% endif %}</td>
+					<td>{% if appointment.untimely|is_false %}{{ appointment.appointment_type.type }}{% endif %}</td>
+					<td> 
+						<textarea id="form_appointment_edit" cols="50" rows="4" style="float:left">{% if appointment.description %}{{ appointment.description }}{% endif %}
+						</textarea>
+						<input type="submit" id="ok_description" class="button5 description_action" value="Zapisz"/>
+						<input type="submit" id="cancel_description" class="button5 description_action" value="Cofnij"/>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="appoint_losses">
+			{% if appointment.tooth_loss_set.all.count > 0 %}
+				<strong>Zmiany na diagramie uzębienia:</strong>
 				<table>
-					<tr><th>Ząb</th><th>Rozpoznanie</th><th>Komentarz</th></tr>
-					{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
-						<tr>
-						<td>{{ t.tooth }} - {{ t.tooth_part.name }}</td>
-						<td>{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
-						<td>{% if t.comment %}{{ t.comment }}{% endif %}</td>
-						</tr>
-					{% endfor %}
+				<tr>
+					<th width="300px">Ząb</th><th width="200px">Rozpoznanie</th><th>Komentarz</th>
+				</tr>
+				{% for t in appointment.tooth_loss_set.all|order_by:'tooth' %}
+				<tr>
+					<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
+					<td class="left">{% if t.loss_type %}{{ t.loss_type.type }}{% endif %}</td>
+					<td class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+				</tr>
+				{% endfor %}
 				</table>
 			{% endif %}
-			</div>
+		</div>
+		</div>
+		
+	<div class="appointment">
+		<strong>Wizyty:</strong>
 	</div>
-	{% endfor %}
+	
+	<div class="appoint">
+		<div class="appointment">
+			<table>
+				<tr>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="160px">Dentysta</th><th>Opis</th><th width="150px" colspan="2"></th>
+				</tr>
+				{% for a in appoints %}
+					<tr>
+						<td>{{ a.date|date:'Y-m-d' }}</td>
+						<td>{% if a.untimely|is_false %}{{ a.hour|time:'H:i' }}, {{ a.appointment_type.length }} minut<br />{% endif %}</td>
+						<td class="left">{% if a.untimely|is_false %}{{ a.appointment_type.type }}{% endif %}</td>
+						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
+						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
+						<td class="app" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
+						{% if a.dentist.user == request.user %}
+							<td id="{{ a.id }}" class="app_edit" width="70px">
+								<div class="edit_patient">Edytuj</div>
+							</td>
+						{% else %}
+							<td width="70px"></td>
+						{% endif %}
+					</tr>
+					<tr>
+						<td colspan="7" id="app_form_edit_{{ a.id }}" class="app_form_edit">
+							Opis wizyty:<br />
+							<textarea id="app_desc_{{ a.id }}" cols="50" rows="4" style="float:left; margin-left: 200px">{% if a.description %}{{ a.description }}{% endif %}</textarea>	
+							<input type="submit" class="cancel_app button5" value="Anuluj" name="{{ a.id }}"/><br /><br />
+							<input type="submit" class="ok_app button5" value="Zapisz" name="{{ a.id }}"/>
+							
+						</td>
+					</tr>
+					<tr id="appoint_{{ a.id }}" class="tooth_loss">
+						<td colspan="7">
+							{% if a.tooth_loss_set.all %}
+								<table>
+									<tr>
+										<th width="300px">Ząb</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+									</tr>
+									{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+										<tr>
+											<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
+											<td class="left">{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
+											<td class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+										</tr>
+									{% endfor %}
+								</table>
+							{% endif %}
+						</td>
+					</tr>			
+				{% endfor %}
+			</table>
+		</div>
 	</div>
 
 {% endblock %}
