@@ -101,17 +101,17 @@
 
 <table id="graphic2" style="width: 840px">
 	<tr>
-		<th width="95px">Godzina</th>
+		<th width="100px">Godzina</th>
 		{% for d in dents %}
-			<th width="185px">{{ d.last_name }} {{ d.first_name }}</th>
+			<th>{{ d.last_name }} {{ d.first_name }}</th>
 		{% endfor %}
 	</tr>
 </table>
-<table id="graphic" style="margin-top:0px; width: 840px">
+<table id="graphic" style="margin-top:0px; width: 840px; table-layout: fixed">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
-			<th width="185px">{{ d.last_name }} {{ d.first_name }}</th>
+			<th>{{ d.last_name }} {{ d.first_name }}</th>
 		{% endfor %}
 	</tr>
 	{% for a in appoints %}
