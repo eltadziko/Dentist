@@ -11,8 +11,8 @@ class MyRadioSelect(RadioSelect):
         html = super(MyRadioSelect, self).render(name, value, attrs, choices)
         html = html.replace('<ul>', '')
         html = html.replace('</ul>', '')
-        html = html.replace('<li>', '<br />')
-        html = html.replace('</li>', '')
+        html = html.replace('<li>', '')
+        html = html.replace('</li>', '<br />')
         return mark_safe(html)
     
 class PatientUserForm(forms.Form):

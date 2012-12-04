@@ -200,7 +200,7 @@
 {% block right_column %}
 <div id="forms">
 <form action="{% url views.dates_addition_edit %}" method="post"> {% csrf_token %}
-	<div class="center_select">
+	<div class="center_select" style="margin-left: 200px">
 		{% if form.non_field_errors %}
 	       	<div class="error">
 			    {% for error in form.non_field_errors %}
@@ -219,7 +219,7 @@
 	</div>
 	
 	<div id="dynamic_content">
-		<div class="center_select">	
+		<div class="center_select" style="margin-left: 200px; margin-bottom: 10px">	
 			<div class="error">
 			    {% for error in form.dentist_man.errors %}
 			        <strong>{{ error|escape }} </strong>

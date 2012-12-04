@@ -1,5 +1,27 @@
 {% extends 'base.html' %}
 
+{% block css %}
+	
+	{{ block.super }}
+
+	<style type="text/css">
+		select#id_birth_date_day {
+			width: 50px;
+		}
+		select#id_birth_date_month {
+			width: 150px;
+		}
+		select#id_birth_date_year {
+			width: 80px;
+		}
+	</style>
+
+{% endblock %}
+
+{% block header %}
+	Rejestracja nowego pacjenta w portalu
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 <form action="{% url views.register_by_receptionist %}" method="post"> {% csrf_token %}
@@ -24,7 +46,8 @@
 	        {{ field }}
 	    </div>
     {% endfor %}
-    Choroby pacjenta:
+    <label style="float:none; margin-left: 5px">Choroby pacjenta</label>
+    <div id="diseases2" style="margin-left: 50px">
     {% for field in form_diseases %}
 		<div class="fieldWrapper">
 	        {% if field.errors %}
@@ -37,7 +60,7 @@
 	        {{ field }}
 	    </div>
     {% endfor %}
-    
+    </div>
 	<p><input id="send_log_big" type="submit" value="Zarejestruj" /></p>
 </form>
 </div>

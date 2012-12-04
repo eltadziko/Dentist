@@ -850,6 +850,36 @@ margin-bottom:10px;
 	border-bottom:solid 1px #cccccc;
 }
 
+#diseases2 label{
+	float:left;
+	display:block;
+	width:180px;
+	padding:0px 0px 0px 5px;
+	height:30px;
+	background-color:white;
+	margin-bottom:2px;
+	margin-right: 5px;
+	border-top:solid 1px #40b8dc;
+	border-left:solid 1px #40b8dc;
+	border-right:solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
+}
+
+#patients_account label{
+	display:block;
+	width:300px;
+	padding:0px 0px 0px 5px;
+	height:30px;
+	background-color:white;
+	margin-bottom:2px;
+	margin-right: 5px;
+	margin-left: 5px;
+	border-top:solid 1px #40b8dc;
+	border-left:solid 1px #40b8dc;
+	border-right:solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
+}
+
 #send_diseases{
 	margin:5px 0px 0px 0px;
 	float:right;
@@ -1003,4 +1033,8 @@ area {
 	margin-top: 15px;	
 	margin-bottom: 15px;
 	border-radius: 15px;
+}
+
+#termins th label {
+	margin-left: 80px;
 }

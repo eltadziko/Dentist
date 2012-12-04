@@ -132,10 +132,16 @@
 {% endblock %}
 
 {% block header %}
-	Dodaj terminy lekarza na podstawie grafiku
+	Dodawanie terminów lekarza na podstawie grafiku
 {% endblock %}
 
 {% block right_column %}
+<div id="info">
+	<a href="{% url views.date_addition %}" style="border-bottom:none">
+		Kliknij tu, aby dodać termin spoza grafiku.
+	</a>
+</div>
+
 <div id="forms">
 <form action="{% url views.dates_addition %}" method="post"> {% csrf_token %}
 	{% if form.non_field_errors %}
@@ -209,8 +215,8 @@
 		{{ form.exclude }}
     </div>
     
-	<p><input id="id_generate_submit" name="generate_submit" type="submit" value="Generuj" class="button2" /></p>
+	<p><input id="send_log_big" name="generate_submit" type="submit" value="Generuj" class="button2" /></p>
 </form>
-<p><a href="{% url views.date_addition %}">Dodaj termin poza grafikiem</a></p>
+
 </div>
 {% endblock %}

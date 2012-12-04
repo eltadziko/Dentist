@@ -93,7 +93,7 @@ def register_by_receptionist(request):
     else:
         form_patient = PatientForm
         form_diseases = DiseasesFormReceptionist
-    return render(request, 'register_patient.html', {'form_patient': form_patient, 'form_diseases': form_diseases})
+    return render(request, 'register_patient.html', {'form_patient': form_patient, 'form_diseases': form_diseases, 'header':True})
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
@@ -205,7 +205,7 @@ def patient_user(request):
                     return HttpResponseRedirect('/index/')
         else:
             form = PatientUserForm('')
-    return render(request, 'patient_user.html', {'form': form}) 
+    return render(request, 'patient_user.html', {'form': form, 'header' : True}) 
 
 @user_passes_test(new_password, login_url="/password/")
 def index(request):

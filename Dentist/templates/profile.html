@@ -21,7 +21,7 @@
 
 {% block header %}
 	{% if user|in_group:"rejestrator" %}
-		Profil pacjenta <strong>{{ form.last_name.value }} {{ form.first_name.value }}</strong>
+		Profil pacjenta <strong>{{ form_patient.last_name.value }} {{ form_patient.first_name.value }}</strong>
 	{% else %}
 		Mój profil
 	{% endif %}
