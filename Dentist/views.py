@@ -182,7 +182,7 @@ def patient_list(request):
         patients2 = paginator.page(1)
     except EmptyPage:
         patients2 = paginator.page(1)
-    return render(request, 'patients.html', {'patients': patients2}) 
+    return render(request, 'patients.html', {'patients': patients2, 'header': True}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -1184,7 +1184,7 @@ def reservations(request):
                 patients2 = paginator.page(1)
             except EmptyPage:
                 patients2 = paginator.page(1)
-            return render(request, 'patients2.html', {'patients': patients2})
+            return render(request, 'patients.html', {'patients': patients2})
     return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat, 'header': True})
 
 @login_required
