@@ -16,8 +16,7 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html());
-						$('#graphic2').html($(data).find('#graphic2').html()); 
+						$('#content').html(data);
 				});
 			 	return false;
 			 });
@@ -28,9 +27,7 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html()); 
-						$('#graphic2').html($(data).find('#graphic2').html());
-						$('#date2').attr('value', $(data).find('#date2').val());
+						$('#content').html(data);
 				});
 			 	return false;
 			 });
@@ -41,8 +38,7 @@
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html());
-						$('#graphic2').html($(data).find('#graphic2').html());
+						$('#content').html(data);
 				});
 			 	return false;
 			 }); 
@@ -50,6 +46,14 @@
 			 var refreshId = setInterval(function() {
 			 	location.reload();
 			 }, 60000);
+			 
+			 var width = 100 + 190 * {{ dents.count }};
+			 
+			 $('#graphic').css('width', width);
+			 $('#graphic2').css('width', width);
+			 
+			 var margin = 50 + (860 - width)/2;
+			 $('#graphic2').css('margin-left', margin);
 		});
 	</script>
 	
@@ -99,7 +103,8 @@
 	</form>
 </div>
 
-<table id="graphic2" style="width: 840px">
+{% if dents.count > 0 %}
+<table id="graphic2" style="margin-left: 200px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
@@ -107,7 +112,7 @@
 		{% endfor %}
 	</tr>
 </table>
-<table id="graphic" style="margin-top:0px; width: 840px; table-layout: fixed">
+<table id="graphic" style="margin-top:44px; table-layout: fixed; width:500px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
@@ -165,5 +170,10 @@
 		</tr>
 	{% endfor %}
 </table>
+{% else %}
+<div id="info">
+Brak dentystów przyjmujących w podany dzień.
+</div>
+{% endif %}
 </div>
 {% endblock %}
