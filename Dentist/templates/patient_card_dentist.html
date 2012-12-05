@@ -16,6 +16,7 @@
 			$('#ok_description').hide();
 			$("#cancel_description").hide();
 			$(".app_form_edit").hide();
+			$(".app_loss_edit").hide();
 			
 			{% if not appointment.is_now %}
 				$('#is_in img').attr('src', '{{ MEDIA_URL }}/img/is_in.jpg');
@@ -182,7 +183,6 @@
 			 });
 			 
 			 $('#tooth_loss').delegate('#tooth_ok', 'click', function() {
-				alert('a');
 			 	$.post('/patient_card_dentist/',
 					{ tooth: $('#id_tooth').val(),
 					  tooth_part: $('#id_tooth_part').val(),
@@ -212,6 +212,28 @@
 			 	return false;
 			 });
 			 
+			 $('.loss_edit').click(function() {
+			 	var id = $(this).attr('id').substring(10);
+			 	$('#app_loss_edit_'+id).show();
+			 });
+			 
+			 $('.cancel_edit_tooth').click(function() {
+			 	var id = $(this).attr('name');
+			 	$('#app_loss_edit_'+id).hide();
+			 });
+			 
+			 $('.ok_edit_tooth').click(function() {
+			 	var id = $(this).attr('name');
+
+			 	$.post('/patient_card_dentist/',
+					{ loss_edit_id: id,
+					  loss_edit_desc: $('#loss_desc_'+id).val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
+			 });
 		});
 	</script>
 {% endblock %}
@@ -378,12 +400,25 @@
 					</tr>
 					{% for t in appointment.tooth_loss_set.all|order_by:'tooth' %}
 					<tr>
-						<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
-						<td class="left">{% if t.loss_type %}{{ t.loss_type.type }}{% endif %}</td>
-						<td class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+						<td rowspan="2" class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
+						<td rowspan="2" class="left">{% if t.loss_type %}{{ t.loss_type.type }}{% endif %}</td>
+						<td rowspan="2" class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+						<td class="loss_edit" id="loss_edit_{{ t.id }}">
+							<div class="edit_patient">Edytuj</div>
+						</td>
+					</tr>
+					<tr>
 						<td class="loss_del" id="loss_{{ t.id }}">
-							<div class="edit_patient" style="margin-bottom: 1px">Edytuj</div>
 							<div class="edit_patient">Usuń</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4" id="app_loss_edit_{{ t.id }}" class="app_loss_edit">
+							Komentarz do rozpoznania:<br />
+							<textarea id="loss_desc_{{ t.id }}" cols="50" rows="4" style="float:left; margin-left: 200px">{% if t.comment %}{{ t.comment }}{% endif %}</textarea>	
+							<input type="submit" class="cancel_edit_tooth button5" value="Anuluj" name="{{ t.id }}"/><br /><br />
+							<input type="submit" class="ok_edit_tooth button5" value="Zapisz" name="{{ t.id }}"/>
+							
 						</td>
 					</tr>
 					{% endfor %}

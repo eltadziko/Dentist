@@ -1011,7 +1011,7 @@ area {
 	margin-top: 30px;	
 }
 
-.cancel_app, .ok_app, .ok_app2 {
+.cancel_app, .ok_app, .ok_app2, .ok_edit_tooth, .cancel_edit_tooth {
 	float: right;	
 	width: 100px;
 	margin-right: 150px;

@@ -1257,7 +1257,6 @@ def patient_card_dentist(request):
                                       tooth_part = tooth_part.objects.get(id=request.POST['tooth_part']),
                                       loss_type = loss_type.objects.get(id=request.POST['loss_type']),
                                       comment = request.POST['comment'])
-                    print 'a'
                     loss.save()
                 else:
                     losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
@@ -1267,6 +1266,10 @@ def patient_card_dentist(request):
         if 'loss_del' in request.POST.keys():
             loss_del = tooth_loss.objects.get(id = request.POST['loss_del'])
             loss_del.delete()
+        if 'loss_edit_id' in request.POST.keys():
+            loss = tooth_loss.objects.get(id = request.POST['loss_edit_id'])
+            loss.comment = request.POST['loss_edit_desc'].strip()
+            loss.save()
     return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True })
 
 @login_required
