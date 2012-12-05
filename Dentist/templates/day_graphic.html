@@ -14,6 +14,7 @@
 			$("#date2").change(function() {
 				$.post('/day_graphic/',
 					{ date: $(this).val(),
+					  page: 0,
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
@@ -25,6 +26,7 @@
 			$("#today").submit(function() {
 				$.post('/day_graphic/',
 					{ date: '0',
+					  page: 0,
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
@@ -36,6 +38,7 @@
 			 $('#office').change(function() {
 			 	$.post('/day_graphic/',
 					{ date: $('#date2').val(),
+					  page: 0,
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
