@@ -1257,6 +1257,7 @@ def patient_card_dentist(request):
                                       tooth_part = tooth_part.objects.get(id=request.POST['tooth_part']),
                                       loss_type = loss_type.objects.get(id=request.POST['loss_type']),
                                       comment = request.POST['comment'])
+                    print 'a'
                     loss.save()
                 else:
                     losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
