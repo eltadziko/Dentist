@@ -623,7 +623,7 @@ def appointment_list2(request):
 @user_passes_test(new_password, login_url="/password/")
 def day_graphic(request):
     offices = dental_office.objects.all()
-    
+
     if request.POST:
         if request.POST['date']!='0':
             date = request.POST['date']
@@ -633,6 +633,8 @@ def day_graphic(request):
             date = date.strftime("%Y-%m-%d")
             request.session['graphic_date'] = date
         office = int(request.POST['office'])
+        if 'page' in request.POST.keys():
+            request.session['page'] = int(request.POST['page'])
     else:
         if 'graphic_date' in request.session:
             date = request.session['graphic_date']
@@ -643,11 +645,21 @@ def day_graphic(request):
             office = offices[0].id
             request.session['graphic_date'] = date
         
+    if 'page' not in request.session:
+        request.session['page'] = 0
+        
     
     request.session['graphic_office'] = office
-        
+    print request.session['page']    
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
+
+    dent_list = []
+    for i in range(0, dent.count()/4+1):
+        dent_list.append([])
+        for j in range(4*i, 4*i+4):
+            if j<dent.count():
+                dent_list[i].append(dent[j])
 
     hours2 = []
     hours = dates.objects.filter(date = date).filter(dental_office = office)
@@ -666,12 +678,11 @@ def day_graphic(request):
         while begin<end:
             hours2.append(begin.time())
             begin = begin + datetime.timedelta(minutes=15)
-        
-    
+     
     appoints = []
-    for d in dent:
+    for d in dent_list[request.session['page']]:
         appoints.append(appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour'))
-    
+
     graphics = []   
     i = [] 
     for h in hours2:
@@ -693,17 +704,17 @@ def day_graphic(request):
         time_end = datetime.datetime.combine(hours[0].date, h) + datetime.timedelta(minutes=15)
         now = (time<time_end and time>datetime.datetime.combine(hours[0].date, h))
         graphics.append({'hour': h, 'appoint': appoint, 'now_time': now})  
-            
+      
     appoints_untimely = []
     appoints_untimely2 = []
     i = 0
     max_appoint = 0
-    for d in dent:
+    for d in dent_list[request.session['page']]:
         pom = appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=True).order_by('patient')
         appoints_untimely.append(pom)
         if max_appoint < pom.count():
             max_appoint = pom.count()
-    
+
     for i in range(0, max_appoint):
         appoints_untimely2.append([])
         for a in appoints_untimely:
@@ -711,8 +722,7 @@ def day_graphic(request):
                 appoints_untimely2[i].append(a[i])
             else:
                 appoints_untimely2[i].append(None)
-
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False})
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent_list[request.session['page']], 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list)})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')

@@ -1038,3 +1038,17 @@ area {
 #termins th label {
 	margin-left: 80px;
 }
+
+#right {
+	position: absolute;
+	margin-top: 34px;
+	margin-left: 920px;
+	cursor: pointer;
+}
+
+#left {
+	position: absolute;	
+	margin-top: 34px;
+	cursor: pointer;
+	margin-left: -15px;
+}
