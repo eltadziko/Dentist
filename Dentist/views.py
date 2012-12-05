@@ -650,7 +650,7 @@ def day_graphic(request):
         
     
     request.session['graphic_office'] = office
-    print request.session['page']    
+   
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
 
@@ -691,14 +691,19 @@ def day_graphic(request):
         for d in appoints:
             i.append(0)
             dodano = False
+            dd = dates.objects.get(date = request.session['graphic_date'], dentist = d[0].dentist)
             for a in d:
                 if a.hour == h:
-                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15})
+                    beg = (dd.begin == h)
+                    en = (dd.end == h)
+                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15, 'begin': beg, 'end': en})
                     dodano = True
                     i[j] = a.appointment_type.length/15
             if not dodano:
                 i[j] = i[j]-1
-                appoint.append({'appoint': None, 'length': i[j]})  
+                beg = (dd.begin == h)
+                en = (dd.end == h)
+                appoint.append({'appoint': None, 'length': i[j], 'begin': beg, 'end': en})  
             j = j+1
         time = datetime.datetime.now()
         time_end = datetime.datetime.combine(hours[0].date, h) + datetime.timedelta(minutes=15)
@@ -722,6 +727,7 @@ def day_graphic(request):
                 appoints_untimely2[i].append(a[i])
             else:
                 appoints_untimely2[i].append(None)
+        
     width = 100 + 190 *  len(dent_list[request.session['page']])
     margin = 50 + (860 - width)/2;
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent_list[request.session['page']], 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list), 'margin': margin})

@@ -1052,3 +1052,11 @@ area {
 	cursor: pointer;
 	margin-left: -15px;
 }
+
+#graphic .begin_hour {
+	border-top: solid 2px #ff0000;
+}
+
+#graphic .end_hour {
+	border-bottom: solid 2px #ff0000;
+}

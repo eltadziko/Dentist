@@ -165,11 +165,11 @@
 			{% for p in a.appoint %}
 				{% if p.appoint %}
 					{% if p.appoint.is_now == 1 %}
-						<td class="appoint_now" 
+						<td class="appoint_now {% if p.begin %}begin_hour{% endif %}" 
 					{% elif p.appoint.is_now == -1 %}
-						<td class="appoint_past" 
+						<td class="appoint_past {% if p.begin %}begin_hour{% endif %}" 
 					{% else %}
-						<td class="appoint_future" 
+						<td class="appoint_future {% if p.begin %}begin_hour{% endif %}" 
 					{% endif %}
 					rowspan="{{ p.length }}" width="200px">
 					<a href = "{% url views.update_profile %}{{ p.appoint.patient.id }}" style="border-bottom:none">
@@ -177,7 +177,7 @@
 					</a></td>
 				{% elif p.length > 0 %}
 				{% else %}
-					<td></td>
+					<td {% if p.begin or p.end %}class="begin_hour"{% endif %}></td>
 				{% endif %}
 			{% endfor %}
 		</tr>
