@@ -16,7 +16,7 @@ def mul(value, arg):
     return int(value) * int(arg)
 
 @register.filter
-def add(value, arg):
+def add2(value, arg):
     "Divides the value by the arg"
     return int(value) + int(arg)
 

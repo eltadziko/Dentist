@@ -138,7 +138,7 @@
 {% if dents|length > 0 %}
 <div id="left"><img src="{{ MEDIA_URL }}/img/left.png" /></div>
 <div id="right"><img src="{{ MEDIA_URL }}/img/right.png" /></div>
-<table id="graphic2" style="margin-left: {{ margin }}px; width:{{ dents|length|mul:'190'|add:'100' }}px">
+<table id="graphic2" style="margin-left: {{ margin }}px; width:{{ dents|length|mul:'190'|add2:'100' }}px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
@@ -147,7 +147,7 @@
 	</tr>
 </table>
 
-<table id="graphic" style="margin-top:44px; table-layout: fixed; width:{{ dents|length|mul:'190'|add:'100' }}px">
+<table id="graphic" style="margin-top:44px; table-layout: fixed; width:{{ dents|length|mul:'190'|add2:'100' }}px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
