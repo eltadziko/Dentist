@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load group_filter %}
 
 {% block javascript %}
 	{{ block.super }}
@@ -75,14 +76,6 @@
 			 	location.reload();
 			 }, 60000);
 			 
-			 var width = 100 + 190 * {{ dents|length }};
-			 
-			 $('#graphic').css('width', width);
-			 $('#graphic2').css('width', width);
-			 
-			 var margin = 50 + (860 - width)/2;
-			 $('#graphic2').css('margin-left', margin);
-			 
 			 if({{ request.session.page }} == {{ size }}-1) {
 			 	$('#right').hide();
 			 }
@@ -139,10 +132,10 @@
 	</form>
 </div>
 
-{% if dents.count > 0 %}
+{% if dents|length > 0 %}
 <div id="left"><img src="{{ MEDIA_URL }}/img/left.png" /></div>
 <div id="right"><img src="{{ MEDIA_URL }}/img/right.png" /></div>
-<table id="graphic2" style="margin-left: 200px">
+<table id="graphic2" style="margin-left: {{ margin }}px; width:{{ dents|length|mul:'190'|add:'100' }}px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
@@ -150,7 +143,8 @@
 		{% endfor %}
 	</tr>
 </table>
-<table id="graphic" style="margin-top:44px; table-layout: fixed; width:500px">
+
+<table id="graphic" style="margin-top:44px; table-layout: fixed; width:{{ dents|length|mul:'190'|add:'100' }}px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}

@@ -722,7 +722,9 @@ def day_graphic(request):
                 appoints_untimely2[i].append(a[i])
             else:
                 appoints_untimely2[i].append(None)
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent_list[request.session['page']], 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list)})
+    width = 100 + 190 *  len(dent_list[request.session['page']])
+    margin = 50 + (860 - width)/2;
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent_list[request.session['page']], 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list), 'margin': margin})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
