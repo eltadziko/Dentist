@@ -190,13 +190,7 @@
 					  comment: $('#id_description').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#tooth_loss').hide();
-						$('#gora').hide();
-						$('#tooth_losses').hide();
-						$('#appoint_losses').html($(data).find('#appoint_losses').html());
-						$('area').attr('color', 'ffffff');
-    		
-    					window.location = "/patient_card_dentist/"					
+						$('#content').html(data);					
 				});
 			 	return false;
 			 });
@@ -204,6 +198,18 @@
 			 $('#tooth_cancel').live('click', function() {
 			 	$('#tooth_loss').hide();
 			 	$('#gora').hide();
+			 });
+			 
+			 $('.loss_del').click(function() {
+			 	var loss_del = $(this).attr('id').substring(5);
+
+			 	$.post('/patient_card_dentist/',
+					{ loss_del: loss_del,
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data); 
+				});
+			 	return false;
 			 });
 			 
 		});
@@ -368,13 +374,14 @@
 				<strong>Zmiany na diagramie uzębienia:</strong>
 				<table>
 				<tr>
-					<th width="300px">Ząb</th><th width="200px">Rozpoznanie</th><th>Komentarz</th>
+					<th width="300px">Ząb</th><th width="200px">Rozpoznanie</th><th>Komentarz</th><th width="100px"></th>
 				</tr>
 				{% for t in appointment.tooth_loss_set.all|order_by:'tooth' %}
 				<tr>
 					<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
 					<td class="left">{% if t.loss_type %}{{ t.loss_type.type }}{% endif %}</td>
 					<td class="left">{% if t.comment %}{{ t.comment|linebreaksbr }}{% endif %}</td>
+					<td class="loss_del" id="loss_{{ t.id }}"><div class="edit_patient">Usuń</div></td>
 				</tr>
 				{% endfor %}
 				</table>

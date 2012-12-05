@@ -1247,7 +1247,9 @@ def patient_card_dentist(request):
                     form = ToothForm(request.POST['tooth'], request.POST['tooth_part'])
             else:
                 form = ToothForm(request.POST['tooth'])
-
+        if 'loss_del' in request.POST.keys():
+            loss_del = tooth_loss.objects.get(id = request.POST['loss_del'])
+            loss_del.delete()
     return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True })
 
 @login_required

@@ -700,7 +700,7 @@ margin-bottom:10px;
     position:absolute;
     margin-top: 100px;
     left: 550px;
-    z-index:101;
+    z-index:1;
     background-color: #eeeeee;
     border-style: solid;
     border-width:1px;
@@ -820,7 +820,7 @@ margin-bottom:10px;
 	border-width: 2px;
 	border-style: solid;
 	border-color: #339933;
-	z-index: 200;
+	z-index: 1;
 }
 
 .error {
