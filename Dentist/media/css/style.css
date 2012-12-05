@@ -566,18 +566,18 @@ visibility:hidden;
 	background-color: gray;	
 }
 
-.appoint_now {
+#graphic td.appoint_now {
 	background-color: #C92020;
 	color:white;
 	cursor:pointer;
 }
 
-.appoint_past{
+#graphic td.appoint_past{
 	background-color: #CDD3E9;
 	cursor:pointer;
 }
 
-.appoint_future {
+#graphic td.appoint_future {
 	background-color: #798EE0;
 	cursor:pointer;
 }
@@ -1053,10 +1053,6 @@ area {
 	margin-left: -15px;
 }
 
-#graphic .begin_hour {
-	border-top: solid 2px #ff0000;
-}
-
-#graphic .end_hour {
-	border-bottom: solid 2px #ff0000;
+.begin_hour {
+	background-color: #DADADA;
 }

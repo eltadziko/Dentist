@@ -681,7 +681,7 @@ def day_graphic(request):
      
     appoints = []
     for d in dent_list[request.session['page']]:
-        appoints.append(appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour'))
+        appoints.append({'dent': d, 'appoint': appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour')})
 
     graphics = []   
     i = [] 
@@ -691,19 +691,17 @@ def day_graphic(request):
         for d in appoints:
             i.append(0)
             dodano = False
-            dd = dates.objects.get(date = request.session['graphic_date'], dentist = d[0].dentist)
-            for a in d:
+            dd = dates.objects.get(date = request.session['graphic_date'], dentist = d['dent'])
+            for a in d['appoint']:
                 if a.hour == h:
-                    beg = (dd.begin == h)
-                    en = (dd.end == h)
-                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15, 'begin': beg, 'end': en})
+                    is_open = (dd.begin <= h and dd.end>h)
+                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15, 'is_open': is_open})
                     dodano = True
                     i[j] = a.appointment_type.length/15
             if not dodano:
                 i[j] = i[j]-1
-                beg = (dd.begin == h)
-                en = (dd.end == h)
-                appoint.append({'appoint': None, 'length': i[j], 'begin': beg, 'end': en})  
+                is_open = (dd.begin <= h and dd.end>h)
+                appoint.append({'appoint': None, 'length': i[j], 'is_open': is_open})  
             j = j+1
         time = datetime.datetime.now()
         time_end = datetime.datetime.combine(hours[0].date, h) + datetime.timedelta(minutes=15)
