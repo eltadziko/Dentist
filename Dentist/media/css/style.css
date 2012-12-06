@@ -365,6 +365,7 @@ visibility:hidden;
   text-align:center;
 }
 
+
 #rezerwacje{
 	width:900px;
 	line-height:34px;
@@ -514,7 +515,7 @@ visibility:hidden;
   text-align:left;
   height:25px;
   width:220px;
-  margin:-10px; 
+  margin:-11px -10px -10px -10px; 
   padding:0px 5px 0px 5px;
   margin-left:0px;
 }
@@ -722,12 +723,14 @@ margin-bottom:10px;
 	display: block;
 	float: left;
 	color:white;
-	height:25px;
 	width: 25px;
-	font-size:16px;
+	font-size:18px;
 	text-align: center;
   	background: url(../img/BG_submenu.jpg) repeat-x;
-  	cursor: pointer;	
+  	cursor: pointer;
+  	margin:5px 0px 0px 0px;	
+  	height:40px;
+  	line-height:35px;
 }
 
 #month {
@@ -742,6 +745,9 @@ margin-bottom:10px;
 	text-align: center;
 	width: 150px;
 	float: left;
+	margin:5px 0px 0px 0px;
+	height:40px;
+	line-height:35px;
 }
 
 #next {
@@ -811,15 +817,14 @@ margin-bottom:10px;
 }
 
 #title {
-	background-color: #66CC66;
+	background-color: #c8c8c8;
 	text-align: center;
-	font-size: 16px;
-	width: 70%;
+	font-size: 14px;
+	width: 900px;
+	margin:0px 30px 0px 30px;
 	position: absolute;
 	border-radius: 15px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #339933;
+	border: 2px solid #aeaeae;
 	z-index: 1;
 }
 
@@ -916,13 +921,14 @@ area {
 }
 
 .office_name {
-	background-color: #66CC66;
+	background-color: #c8c8c8;
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #339933;	
-	width: 40%;
-	padding-left: 15px;
+	border-color: #aeaeae;	
+	margin:0px;
+	padding:5px;
+	width:35%;
 }
 
 .dentists {
@@ -1055,4 +1061,15 @@ area {
 
 .begin_hour {
 	background-color: #DADADA;
+}
+
+/**/
+	#dentist_block{
+	margin:0px 0px 0px 15px;
+	line-height:20px;
+}
+#dentist_block a{
+	text-decoration:none;
+	border:none;
+	color: #3299BB;
 }

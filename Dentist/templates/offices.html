@@ -10,6 +10,7 @@
 				{{ o.office.address }}
 			</a>
 		</div>
+		<div id="dentist_block">
 		{% if o.office.description %}{{ o.office.description }}{% endif %}<br />
 		Kontakt: <a href="mailto:{{ o.office.email }}">{{ o.office.email }}</a>, tel.: {{ o.office.phone }}<br />
 		Dentyści:
@@ -20,7 +21,7 @@
 					{% if forloop.first %}({% endif %}{{ h.week_day|day }} {{ h.begin|time:'H:i' }} - {{ h.end|time:'H:i' }}{% if forloop.counter != d.hours.count %}, {% else %}){% endif %}
 				{% endfor %}<br />
 			{% endfor %}
-		</div>
+		</div></div>
 	{% endfor %}
 
 {% endblock %}
