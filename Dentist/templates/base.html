@@ -91,11 +91,11 @@ Stomatologia Coldix
 <div id=menu_wrap>
 <div id="menu">
 <ul>
-<li><a href="{% url 'views.index' %}">HOME</a></li>
-<li><a href="{% url 'views.offices' %}">GABINETY</a></li>
-<li><a href="{% url 'views.dentists' %}">DENTYŚCI</a></li>
-<li>{% if user|in_group:'rejestrator' %}<a href="{% url 'views.dentist_register2' %}">{% else %}<a href="{% url 'views.dentist_register' %}">{% endif %}REJESTRACJA</a></li>
-<li><a href="kontakt.html">KONTAKT</a></li>
+<li><a href="{% url 'views.index' %}">Home</a></li>
+<li><a href="{% url 'views.offices' %}">Gabinety</a></li>
+<li><a href="{% url 'views.dentists' %}">Dentyści</a></li>
+<li>{% if user|in_group:'rejestrator' %}<a href="{% url 'views.dentist_register2' %}">{% else %}<a href="{% url 'views.dentist_register' %}">{% endif %}Rejestracja</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
 </ul>
 </div>
 </div>
