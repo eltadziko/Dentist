@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 {% load group_filter %}
 
+{% block css %}
+	{{ block.super }}
+	
+	<style>
+		#title {
+			z-index: 3;
+		}
+	</style>
+{% endblock %}
+
 {% block javascript %}
 	{{ block.super }}
 	<script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.maphilight.min.js"></script>

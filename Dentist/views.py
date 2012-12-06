@@ -655,7 +655,7 @@ def day_graphic(request):
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
 
     dent_list = []
-    for i in range(0, dent.count()/4+1):
+    for i in range(0, dent.count()/4):
         dent_list.append([])
         for j in range(4*i, 4*i+4):
             if j<dent.count():
@@ -728,6 +728,7 @@ def day_graphic(request):
         
     width = 100 + 190 *  len(dent_list[request.session['page']])
     margin = 50 + (860 - width)/2;
+
     return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent_list[request.session['page']], 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list), 'margin': margin})
 
 @login_required
