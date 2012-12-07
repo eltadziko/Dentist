@@ -724,13 +724,11 @@ margin-bottom:10px;
 	float: left;
 	color:white;
 	width: 25px;
-	font-size:18px;
+	font-size:16px;
 	text-align: center;
   	background: url(../img/BG_submenu.jpg) repeat-x;
   	cursor: pointer;
-  	margin:5px 0px 0px 0px;	
-  	height:40px;
-  	line-height:35px;
+  	height:25px;
 }
 
 #month {
@@ -745,9 +743,7 @@ margin-bottom:10px;
 	text-align: center;
 	width: 150px;
 	float: left;
-	margin:5px 0px 0px 0px;
-	height:40px;
-	line-height:35px;
+
 }
 
 #next {

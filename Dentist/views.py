@@ -333,7 +333,9 @@ def dentist_register(request):
                     form = RegisterForm(request.POST['office'], -1, -1, -1, typ, request.session['sort2'], month, year, request.POST)           
     else:
         form = RegisterForm(offices[0].id, -1, -1, -1, -1, request.session['sort2'], month, year)
-    return render(request, 'dentist_register.html', {'form': form, 'month': month, 'year': year, 'header': True})
+    now = datetime.datetime.now().date()
+    no_back = (month == now.month and year == now.year)
+    return render(request, 'dentist_register.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -461,7 +463,9 @@ def dentist_register2(request):
     else:
         form = RegisterReceptionistForm(offices[0].id, -1, -1, -1, -1, '', -1, request.session['sort2'], month, year)
     
-    return render(request, 'dentist_register2.html', {'form': form, 'month': month, 'year': year, 'header': True})
+    now = datetime.datetime.now().date()
+    no_back = (month == now.month and year == now.year)
+    return render(request, 'dentist_register2.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -513,8 +517,10 @@ def dentist_register3(request):
     else:
         offices = dental_office.objects.all()
         form = RegisterReceptionistForm2(offices[0].id, -1, -1, '', -1, month, year)
-    
-    return render(request, 'dentist_register3.html', {'form': form, 'month': month, 'year': year, 'header': True})
+
+    now = datetime.datetime.now().date()
+    no_back = (month == now.month and year == now.year)
+    return render(request, 'dentist_register3.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back})
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
