@@ -680,8 +680,9 @@ def day_graphic(request):
             begin = begin + datetime.timedelta(minutes=15)
      
     appoints = []
-    for d in dent_list[request.session['page']]:
-        appoints.append({'dent': d, 'appoint': appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour')})
+    if len(dent_list)>0:
+        for d in dent_list[request.session['page']]:
+            appoints.append({'dent': d, 'appoint': appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour')})
 
     graphics = []   
     i = [] 
@@ -712,11 +713,13 @@ def day_graphic(request):
     appoints_untimely2 = []
     i = 0
     max_appoint = 0
-    for d in dent_list[request.session['page']]:
-        pom = appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=True).order_by('patient')
-        appoints_untimely.append(pom)
-        if max_appoint < pom.count():
-            max_appoint = pom.count()
+    
+    if len(dent_list) > 0:
+        for d in dent_list[request.session['page']]:
+            pom = appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=True).order_by('patient')
+            appoints_untimely.append(pom)
+            if max_appoint < pom.count():
+                max_appoint = pom.count()
 
     for i in range(0, max_appoint):
         appoints_untimely2.append([])
@@ -725,11 +728,20 @@ def day_graphic(request):
                 appoints_untimely2[i].append(a[i])
             else:
                 appoints_untimely2[i].append(None)
+    
+    if len(dent_list)>0:
+        width = 100 + 190 *  len(dent_list[request.session['page']])
+        margin = 50 + (860 - width)/2
+    else:
+        width = 0
+        margin = 0
         
-    width = 100 + 190 *  len(dent_list[request.session['page']])
-    margin = 50 + (860 - width)/2;
+    if len(dent_list) > 0:
+        dentist_list = dent_list[request.session['page']]
+    else:
+        dentist_list = []
 
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent_list[request.session['page']], 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list), 'margin': margin})
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dentist_list, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list), 'margin': margin})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -1242,6 +1254,8 @@ def patient_card_dentist(request):
                messages.add_message(request, messages.ERROR, 'W gabinecie nie może znajdować się dwóch pacjentów jednocześnie.')     
             else:    
                 appoint.save()
+            if appoint.is_now == '-1':
+                return HttpResponseRedirect('/appointment_list/')
             return HttpResponseRedirect('/patient_card_dentist/')
         if 'appointment_description' in request.POST.keys():
             appoint.description = request.POST['appointment_description'].strip()
