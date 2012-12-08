@@ -12,6 +12,7 @@
 				, {{ d.dentist.title }}
 			{% endif %}</strong>
 		</div>
+		<div id="dentist_block">
 		{% if d.dentist.phone %}Telefon: {{ d.dentist.phone }}<br />{% endif %}
 		{% if d.dentist.description %}{{ d.dentist.description }}<br />{% endif %}
 		Pracuje w:
@@ -24,7 +25,7 @@
 				{% endfor %}
 				<br />
 			{% endfor %}
-		</div>
+		</div></div>
 	{% endfor %}
 
 <div class="pagination">

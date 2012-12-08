@@ -91,11 +91,11 @@ Stomatologia Coldix
 <div id=menu_wrap>
 <div id="menu">
 <ul>
-<li><a href="{% url 'views.index' %}">HOME</a></li>
-<li><a href="{% url 'views.offices' %}">GABINETY</a></li>
-<li><a href="{% url 'views.dentists' %}">DENTYŚCI</a></li>
-<li>{% if user|in_group:'rejestrator' %}<a href="{% url 'views.dentist_register2' %}">{% else %}<a href="{% url 'views.dentist_register' %}">{% endif %}REJESTRACJA</a></li>
-<li><a href="kontakt.html">KONTAKT</a></li>
+<li><a href="{% url 'views.index' %}">Home</a></li>
+<li><a href="{% url 'views.offices' %}">Gabinety</a></li>
+<li><a href="{% url 'views.dentists' %}">Dentyści</a></li>
+<li>{% if user|in_group:'rejestrator' %}<a href="{% url 'views.dentist_register2' %}">{% else %}<a href="{% url 'views.dentist_register' %}">{% endif %}Rejestracja</a></li>
+<li><a href="kontakt.html">Kontakt</a></li>
 </ul>
 </div>
 </div>
@@ -128,8 +128,6 @@ Stomatologia Coldix
 <li><a href="{% url 'views.dentist_register2' %}">Rejestracja wizyty</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.dentist_register3' %}">Rejestracja nad stan</a></li>
-<img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
-<li><a href="{% url 'views.reservations' %}">Rezerwacje</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
 <li><a href="{% url 'views.patient_list' %}">Pacjenci</a></li>
 <img src="{{ MEDIA_URL }}/img/pasek_submenu.jpg"/>
@@ -170,7 +168,7 @@ Stomatologia Coldix
 			{% block header %}
 			{% endblock %} 
 		</div>
-		<div style="height:35px"></div>
+		<div id="under_title" style="height:35px"></div>
 	{% endif %}
 
 	<div id="flash_messages">

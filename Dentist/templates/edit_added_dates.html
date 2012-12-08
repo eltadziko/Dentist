@@ -58,6 +58,15 @@
 	</style>
 {% endblock %}
 
+{% block javascript %}
+	{{ block.super }}
+	<script>
+		$(document).ready(function() {
+			$('#under_title').css('height', '70px');
+		});
+	</script>
+{% endblock %}
+
 {% block header %}
 	Dodane terminy dla dentysty: <b>{{ form.dentist_1.value }}</b> <br />z gabinetu: <b>{{ form.dental_office_1.value }}</b>
 {% endblock %}
@@ -144,7 +153,7 @@
 	</div>
     <p>{{ form.number_of_fields }}</p>
     
-	<p><input id="id_generate_submit_edit" name="generate_submit_edit" type="submit" value="Aktualizuj" class="button2"/></p>
+	<p><input id="send_log_big" name="generate_submit_edit" type="submit" value="Aktualizuj" class="button2"/></p>
 </form>
 </div>
 {% endblock %}

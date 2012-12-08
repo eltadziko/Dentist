@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
 
+{% block css %}
+	
+	{{ block.super }}
+
+	<style type="text/css">
+		select#id_birth_date_day {
+			width: 50px;
+		}
+		select#id_birth_date_month {
+			width: 150px;
+		}
+		select#id_birth_date_year {
+			width: 80px;
+		}
+	</style>
+
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 	<div id="info">

@@ -224,14 +224,14 @@ border: 1px solid #cccccc;
 }
 #forms{
 margin:30px 0px 0px 40px;
-width:600px;
+width:480px;
 line-height:34px;
 margin:0 auto;
 margin-top: 10px;
 }
 
 #forms input[type="text"], #forms input[type="password"]{
-width:400px;
+width:300px;
 height:30px;
 padding:0px 0px 0px 5px;
 margin:0px 0px 2px 5px;
@@ -246,6 +246,7 @@ margin-right:20px;
 }
 #forms select{
 height:30px;
+width: 305px;
 margin:0px 0px 5px 5px;
 padding:5px 0px 0px 5px;
 border-top:solid 1px #40b8dc;
@@ -258,7 +259,7 @@ color:#3e3e3e;
 border-bottom:1px dashed #3e3e3e;
 }
 #forms textarea {
-width:400px;
+width:300px;
 margin:0px 0px 2px 5px;
 padding:5px 0px 0px 5px;
 border-top:solid 1px #40b8dc;
@@ -282,7 +283,6 @@ border-bottom:solid 1px #cccccc;
 
 
 #send_log_big{
-margin:5px 200px 0px 0px;
 float:right;
 height:35px;
 width:200px;
@@ -292,6 +292,20 @@ background: url(../img/BG_submenu.jpg) repeat-x;
 border: 1px solid #cccccc;
 color:white;
 font-size:16px;
+}
+
+#send_log_log{
+
+float:right;
+height:35px;
+width:200px;
+cursor: pointer;
+text-align:center;
+background: url(../img/BG_submenu.jpg) repeat-x;
+border: 1px solid #cccccc;
+color:white;
+font-size:16px;
+margin-right: 20px;
 }
 
 #footer{
@@ -350,6 +364,7 @@ visibility:hidden;
 .pagination{
   text-align:center;
 }
+
 
 #rezerwacje{
 	width:900px;
@@ -500,7 +515,7 @@ visibility:hidden;
   text-align:left;
   height:25px;
   width:220px;
-  margin:-10px; 
+  margin:-11px -10px -10px -10px; 
   padding:0px 5px 0px 5px;
   margin-left:0px;
 }
@@ -552,18 +567,18 @@ visibility:hidden;
 	background-color: gray;	
 }
 
-.appoint_now {
+#graphic td.appoint_now {
 	background-color: #C92020;
 	color:white;
 	cursor:pointer;
 }
 
-.appoint_past{
+#graphic td.appoint_past{
 	background-color: #CDD3E9;
 	cursor:pointer;
 }
 
-.appoint_future {
+#graphic td.appoint_future {
 	background-color: #798EE0;
 	cursor:pointer;
 }
@@ -656,15 +671,29 @@ margin-bottom:10px;
 }
 #is_in{
 	margin:10px;
-	margin-left:30px;
-
+	cursor: pointer;
 }
 #is_out{
 	margin:10px;
-	margin-left:30px;
-
+	cursor: pointer;
+}
+#is_end {
+	width: 150px;
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #003399;
+	background-color: #34BEDA;
+	padding: 5px;
+	border-radius: 5px;
+	float: right;
 }
 
+#today {
+	float:left;	
+}
 
 
 #gora
@@ -672,7 +701,7 @@ margin-bottom:10px;
     position:absolute;
     margin-top: 100px;
     left: 550px;
-    z-index:101;
+    z-index:1;
     background-color: #eeeeee;
     border-style: solid;
     border-width:1px;
@@ -694,12 +723,14 @@ margin-bottom:10px;
 	display: block;
 	float: left;
 	color:white;
-	height:25px;
 	width: 25px;
-	font-size:16px;
+	font-size:18px;
 	text-align: center;
   	background: url(../img/BG_submenu.jpg) repeat-x;
-  	cursor: pointer;	
+  	cursor: pointer;
+  	margin:5px 0px 0px 0px;	
+  	height:40px;
+  	line-height:35px;
 }
 
 #month {
@@ -714,6 +745,9 @@ margin-bottom:10px;
 	text-align: center;
 	width: 150px;
 	float: left;
+	margin:5px 0px 0px 0px;
+	height:40px;
+	line-height:35px;
 }
 
 #next {
@@ -783,16 +817,15 @@ margin-bottom:10px;
 }
 
 #title {
-	background-color: #66CC66;
+	background-color: #c8c8c8;
 	text-align: center;
-	font-size: 16px;
-	width: 70%;
+	font-size: 14px;
+	width: 900px;
+	margin:0px 30px 0px 30px;
 	position: absolute;
 	border-radius: 15px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #339933;
-	z-index: 200;
+	border: 2px solid #aeaeae;
+	z-index: 1;
 }
 
 .error {
@@ -818,6 +851,36 @@ margin-bottom:10px;
 	margin-right: 5px;
 	border-top:solid 1px #b9e11e;
 	border-left:solid 1px #b9e11e;
+	border-right:solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
+}
+
+#diseases2 label{
+	float:left;
+	display:block;
+	width:180px;
+	padding:0px 0px 0px 5px;
+	height:30px;
+	background-color:white;
+	margin-bottom:2px;
+	margin-right: 5px;
+	border-top:solid 1px #40b8dc;
+	border-left:solid 1px #40b8dc;
+	border-right:solid 1px #cccccc;
+	border-bottom:solid 1px #cccccc;
+}
+
+#patients_account label{
+	display:block;
+	width:300px;
+	padding:0px 0px 0px 5px;
+	height:30px;
+	background-color:white;
+	margin-bottom:2px;
+	margin-right: 5px;
+	margin-left: 5px;
+	border-top:solid 1px #40b8dc;
+	border-left:solid 1px #40b8dc;
 	border-right:solid 1px #cccccc;
 	border-bottom:solid 1px #cccccc;
 }
@@ -858,13 +921,14 @@ area {
 }
 
 .office_name {
-	background-color: #66CC66;
+	background-color: #c8c8c8;
 	border-radius: 15px;
 	border-width: 2px;
 	border-style: solid;
-	border-color: #339933;	
-	width: 40%;
-	padding-left: 15px;
+	border-color: #aeaeae;	
+	margin:0px;
+	padding:5px;
+	width:35%;
 }
 
 .dentists {
@@ -906,11 +970,9 @@ area {
 	width: 700px;
 	border: 1px solid black;border-collapse: collapse;	
 	margin: 0 auto;
-	margin-top: 70px;
 	position: absolute;
 	z-index: 1;
 	margin-top: 34px;
-	margin-left: 60px;
 }
 
 #graphic2 th{
@@ -929,19 +991,16 @@ area {
 /* Karta pacjenta u dentysty */
 #back{
 	color:white;
-	height:35px;
-	font-size:16px;
 	cursor: pointer;
-  	background: url(../img/BG_submenu.jpg) repeat-x;
   	margin:5px;
   	margin-left:30px;
-  	border: 1px solid #cccccc;
   	float: left;
 }
 
 #is_out, #is_in {
 	float: right;
 	margin-right: 30px;	
+	
 }
 
 #form_patient_edit {
@@ -954,7 +1013,7 @@ area {
 	margin-top: 30px;	
 }
 
-.cancel_app, .ok_app, .ok_app2 {
+.cancel_app, .ok_app, .ok_app2, .ok_edit_tooth, .cancel_edit_tooth {
 	float: right;	
 	width: 100px;
 	margin-right: 150px;
@@ -976,4 +1035,37 @@ area {
 	margin-top: 15px;	
 	margin-bottom: 15px;
 	border-radius: 15px;
+}
+
+#termins th label {
+	margin-left: 80px;
+}
+
+#right {
+	position: absolute;
+	margin-top: 34px;
+	margin-left: 920px;
+	cursor: pointer;
+}
+
+#left {
+	position: absolute;	
+	margin-top: 34px;
+	cursor: pointer;
+	margin-left: -15px;
+}
+
+.begin_hour {
+	background-color: #DADADA;
+}
+
+/**/
+	#dentist_block{
+	margin:0px 0px 0px 15px;
+	line-height:20px;
+}
+#dentist_block a{
+	text-decoration:none;
+	border:none;
+	color: #3299BB;
 }

@@ -19,6 +19,10 @@
 </script>
 {% endblock %}
 
+{% block header %}
+	Połączenie karty pacjenta z kontem użytkownika
+{% endblock %}
+
 {% block right_column %}
 <div id="forms">
 <form action="/patient_user/" method="post"> {% csrf_token %}
@@ -36,7 +40,12 @@
 	        <strong>{{ error|escape }} </strong>
 	    {% endfor %}
 	</div>
-	<div id="patient_list">{{ form.patients.label_tag }} {{ form.patients }}</div>
+	<div id="patient_list">
+		{{ form.patients.label_tag }} 
+		<div id="patients_account">
+			{{ form.patients }}
+		</div>
+	</div>
 	
 	<div class="napraw"></div>
 	

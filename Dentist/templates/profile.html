@@ -1,9 +1,27 @@
 {% extends 'base.html' %}
 {% load group_filter %}
 
+{% block css %}
+	
+	{{ block.super }}
+
+	<style type="text/css">
+		select#id_birth_date_day {
+			width: 50px;
+		}
+		select#id_birth_date_month {
+			width: 150px;
+		}
+		select#id_birth_date_year {
+			width: 80px;
+		}
+	</style>
+
+{% endblock %}
+
 {% block header %}
 	{% if user|in_group:"rejestrator" %}
-		Profil pacjenta <strong>{{ form.last_name.value }} {{ form.first_name.value }}</strong>
+		Profil pacjenta <strong>{{ form_patient.last_name.value }} {{ form_patient.first_name.value }}</strong>
 	{% else %}
 		Mój profil
 	{% endif %}

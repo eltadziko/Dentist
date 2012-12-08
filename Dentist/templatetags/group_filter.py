@@ -11,6 +11,16 @@ def div(value, arg):
     return int(value) / int(arg) + 1
 
 @register.filter
+def mul(value, arg):
+    "Divides the value by the arg"
+    return int(value) * int(arg)
+
+@register.filter
+def add2(value, arg):
+    "Divides the value by the arg"
+    return int(value) + int(arg)
+
+@register.filter
 def in_group(user, groups):
     """Returns a boolean if the user is in the given group, or comma-separated
     list of groups.

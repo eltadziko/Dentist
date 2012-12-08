@@ -58,7 +58,7 @@
 
 {% block header %}
 	{% if user|in_group:"rejestrator" %}
-		Umówione terminy pacjenta: {{ patient.last_name }} {{patient.first_name }}
+		Umówione terminy pacjenta <strong>{{ patient.last_name }} {{patient.first_name }}</strong>
 	{% else %}
 		Moje umówione terminy
 	{% endif %}

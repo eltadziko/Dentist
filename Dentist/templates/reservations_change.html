@@ -122,7 +122,12 @@
 {% endblock %}
 
 {% block header %}
-	Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i' }}</strong> u dentysty <strong>{{ app.dentist }}</strong>
+	{% if user|in_group:"rejestrator" %}
+		Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i' }}</strong> u dentysty <strong>{{ app.dentist }}</strong>
+		dla pacjenta <strong>{{ app.patient }}</strong>
+	{% else %}
+		Zmiana terminu wizyty <strong>{{ app.date|date:'Y-m-d' }} {{ app.hour|time:'H:i' }}</strong> u dentysty <strong>{{ app.dentist }}</strong>
+	{% endif %}
 {% endblock %}
 
 {% block right_column %}

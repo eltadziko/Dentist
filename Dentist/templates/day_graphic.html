@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
+{% load group_filter %}
 
 {% block javascript %}
 	{{ block.super }}
-	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<link href="{{ MEDIA_URL }}/css/jquery_ui.css" rel="stylesheet" type="text/css"/>
+	<script src="{{ MEDIA_URL }}/js/jquery_ui_min.js"></script>
 	<script src="{{ MEDIA_URL }}/js/datepicker.js" ></script>
 	
 	<script type="text/javascript">
@@ -13,11 +14,11 @@
 			$("#date2").change(function() {
 				$.post('/day_graphic/',
 					{ date: $(this).val(),
+					  page: 0,
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html());
-						$('#graphic2').html($(data).find('#graphic2').html()); 
+						$('#content').html(data);
 				});
 			 	return false;
 			 });
@@ -25,12 +26,11 @@
 			$("#today").submit(function() {
 				$.post('/day_graphic/',
 					{ date: '0',
+					  page: 0,
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html()); 
-						$('#graphic2').html($(data).find('#graphic2').html());
-						$('#date2').attr('value', $(data).find('#date2').val());
+						$('#content').html(data);
 				});
 			 	return false;
 			 });
@@ -38,18 +38,54 @@
 			 $('#office').change(function() {
 			 	$.post('/day_graphic/',
 					{ date: $('#date2').val(),
+					  page: 0,
 					  office: $('#office option:selected').val(),
 					  csrfmiddlewaretoken: '{{ csrf_token }}' },
 					function(data) { 
-						$('#graphic').html($(data).find('#graphic').html());
-						$('#graphic2').html($(data).find('#graphic2').html());
+						$('#content').html(data);
 				});
 			 	return false;
 			 }); 
 			 
+			 $('#right').click(function() {
+			 	var page = {{ request.session.page }} + 1;
+
+			 	$.post('/day_graphic/',
+					{ page: page,
+					  date: $('#date2').val(),
+					  office: $('#office option:selected').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data);
+				});
+			 	return false;
+			 });
+			 
+			 $('#left').click(function() {
+			 	var page = {{ request.session.page }} - 1;
+			 	
+			 	$.post('/day_graphic/',
+					{ page: page,
+					  date: $('#date2').val(),
+					  office: $('#office option:selected').val(),
+					  csrfmiddlewaretoken: '{{ csrf_token }}' },
+					function(data) { 
+						$('#content').html(data);
+				});
+			 	return false;
+			 });
+			 
 			 var refreshId = setInterval(function() {
 			 	location.reload();
 			 }, 60000);
+			 
+			 if({{ request.session.page }} == {{ size }}-1) {
+			 	$('#right').hide();
+			 }
+			 
+			 if({{ request.session.page }} == 0) {
+			 	$('#left').hide();
+			 }
 		});
 	</script>
 	
@@ -83,7 +119,7 @@
 
 {% block right_column %}
 <div id="rezerwacje">
-	<form id="today">
+	<form id="today" style="float: none">
 	<div style="float:left">Data: <input type="text" id="date2" value="{{ date }}"/>
 	<input type="submit" value="Dziś" id="send_data"/>
 	</div>
@@ -99,7 +135,10 @@
 	</form>
 </div>
 
-<table id="graphic2" style="width: 840px">
+{% if dents|length > 0 %}
+<div id="left"><img src="{{ MEDIA_URL }}/img/left.png" /></div>
+<div id="right"><img src="{{ MEDIA_URL }}/img/right.png" /></div>
+<table id="graphic2" style="margin-left: {{ margin }}px; width:{{ dents|length|mul:'190'|add2:'100' }}px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
@@ -107,7 +146,8 @@
 		{% endfor %}
 	</tr>
 </table>
-<table id="graphic" style="margin-top:0px; width: 840px; table-layout: fixed">
+
+<table id="graphic" style="margin-top:44px; table-layout: fixed; width:{{ dents|length|mul:'190'|add2:'100' }}px">
 	<tr>
 		<th width="100px">Godzina</th>
 		{% for d in dents %}
@@ -125,11 +165,11 @@
 			{% for p in a.appoint %}
 				{% if p.appoint %}
 					{% if p.appoint.is_now == 1 %}
-						<td class="appoint_now" 
+						<td class="{% if p.is_open %}begin_hour{% endif %} appoint_now" 
 					{% elif p.appoint.is_now == -1 %}
-						<td class="appoint_past" 
+						<td class="{% if p.is_open %}begin_hour{% endif %} appoint_past" 
 					{% else %}
-						<td class="appoint_future" 
+						<td class="{% if p.is_open %}begin_hour{% endif %} appoint_future" 
 					{% endif %}
 					rowspan="{{ p.length }}" width="200px">
 					<a href = "{% url views.update_profile %}{{ p.appoint.patient.id }}" style="border-bottom:none">
@@ -137,7 +177,7 @@
 					</a></td>
 				{% elif p.length > 0 %}
 				{% else %}
-					<td></td>
+					<td {% if p.is_open %}class="begin_hour"{% endif %}></td>
 				{% endif %}
 			{% endfor %}
 		</tr>
@@ -165,5 +205,10 @@
 		</tr>
 	{% endfor %}
 </table>
+{% else %}
+<div id="info">
+Brak dentystów przyjmujących w podany dzień.
+</div>
+{% endif %}
 </div>
 {% endblock %}

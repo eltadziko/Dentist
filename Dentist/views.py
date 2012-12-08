@@ -93,7 +93,7 @@ def register_by_receptionist(request):
     else:
         form_patient = PatientForm
         form_diseases = DiseasesFormReceptionist
-    return render(request, 'register_patient.html', {'form_patient': form_patient, 'form_diseases': form_diseases})
+    return render(request, 'register_patient.html', {'form_patient': form_patient, 'form_diseases': form_diseases, 'header':True})
 
 @login_required
 @user_passes_test(in_patient_group, login_url='/access_denied/')
@@ -182,7 +182,7 @@ def patient_list(request):
         patients2 = paginator.page(1)
     except EmptyPage:
         patients2 = paginator.page(1)
-    return render(request, 'patients.html', {'patients': patients2}) 
+    return render(request, 'patients.html', {'patients': patients2, 'header': True}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -205,7 +205,7 @@ def patient_user(request):
                     return HttpResponseRedirect('/index/')
         else:
             form = PatientUserForm('')
-    return render(request, 'patient_user.html', {'form': form}) 
+    return render(request, 'patient_user.html', {'form': form, 'header' : True}) 
 
 @user_passes_test(new_password, login_url="/password/")
 def index(request):
@@ -623,7 +623,7 @@ def appointment_list2(request):
 @user_passes_test(new_password, login_url="/password/")
 def day_graphic(request):
     offices = dental_office.objects.all()
-    
+
     if request.POST:
         if request.POST['date']!='0':
             date = request.POST['date']
@@ -633,6 +633,8 @@ def day_graphic(request):
             date = date.strftime("%Y-%m-%d")
             request.session['graphic_date'] = date
         office = int(request.POST['office'])
+        if 'page' in request.POST.keys():
+            request.session['page'] = int(request.POST['page'])
     else:
         if 'graphic_date' in request.session:
             date = request.session['graphic_date']
@@ -643,11 +645,21 @@ def day_graphic(request):
             office = offices[0].id
             request.session['graphic_date'] = date
         
+    if 'page' not in request.session:
+        request.session['page'] = 0
+        
     
     request.session['graphic_office'] = office
-        
+   
     dents = dates.objects.values_list('dentist', flat = True).filter(date = date).filter(dental_office = office)    
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
+
+    dent_list = []
+    for i in range(0, dent.count()/4):
+        dent_list.append([])
+        for j in range(4*i, 4*i+4):
+            if j<dent.count():
+                dent_list[i].append(dent[j])
 
     hours2 = []
     hours = dates.objects.filter(date = date).filter(dental_office = office)
@@ -666,12 +678,12 @@ def day_graphic(request):
         while begin<end:
             hours2.append(begin.time())
             begin = begin + datetime.timedelta(minutes=15)
-        
-    
+     
     appoints = []
-    for d in dent:
-        appoints.append(appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour'))
-    
+    if len(dent_list)>0:
+        for d in dent_list[request.session['page']]:
+            appoints.append({'dent': d, 'appoint': appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=False).order_by('hour')})
+
     graphics = []   
     i = [] 
     for h in hours2:
@@ -680,30 +692,35 @@ def day_graphic(request):
         for d in appoints:
             i.append(0)
             dodano = False
-            for a in d:
+            dd = dates.objects.get(date = request.session['graphic_date'], dentist = d['dent'])
+            for a in d['appoint']:
                 if a.hour == h:
-                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15})
+                    is_open = (dd.begin <= h and dd.end>h)
+                    appoint.append({'appoint': a, 'length': a.appointment_type.length/15, 'is_open': is_open})
                     dodano = True
                     i[j] = a.appointment_type.length/15
             if not dodano:
                 i[j] = i[j]-1
-                appoint.append({'appoint': None, 'length': i[j]})  
+                is_open = (dd.begin <= h and dd.end>h)
+                appoint.append({'appoint': None, 'length': i[j], 'is_open': is_open})  
             j = j+1
         time = datetime.datetime.now()
         time_end = datetime.datetime.combine(hours[0].date, h) + datetime.timedelta(minutes=15)
         now = (time<time_end and time>datetime.datetime.combine(hours[0].date, h))
         graphics.append({'hour': h, 'appoint': appoint, 'now_time': now})  
-            
+      
     appoints_untimely = []
     appoints_untimely2 = []
     i = 0
     max_appoint = 0
-    for d in dent:
-        pom = appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=True).order_by('patient')
-        appoints_untimely.append(pom)
-        if max_appoint < pom.count():
-            max_appoint = pom.count()
     
+    if len(dent_list) > 0:
+        for d in dent_list[request.session['page']]:
+            pom = appointment.objects.filter(date = date).filter(dentist = d).filter(untimely=True).order_by('patient')
+            appoints_untimely.append(pom)
+            if max_appoint < pom.count():
+                max_appoint = pom.count()
+
     for i in range(0, max_appoint):
         appoints_untimely2.append([])
         for a in appoints_untimely:
@@ -711,8 +728,20 @@ def day_graphic(request):
                 appoints_untimely2[i].append(a[i])
             else:
                 appoints_untimely2[i].append(None)
+    
+    if len(dent_list)>0:
+        width = 100 + 190 *  len(dent_list[request.session['page']])
+        margin = 50 + (860 - width)/2
+    else:
+        width = 0
+        margin = 0
+        
+    if len(dent_list) > 0:
+        dentist_list = dent_list[request.session['page']]
+    else:
+        dentist_list = []
 
-    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dent, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False})
+    return render(request, 'day_graphic.html', {'appoints': graphics, 'date': date, 'dents': dentist_list, 'offices': offices, 'office': office, 'appoints_untimely': appoints_untimely2, 'header': False, 'size': len(dent_list), 'margin': margin})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -1184,7 +1213,7 @@ def reservations(request):
                 patients2 = paginator.page(1)
             except EmptyPage:
                 patients2 = paginator.page(1)
-            return render(request, 'patients2.html', {'patients': patients2})
+            return render(request, 'patients.html', {'patients': patients2})
     return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat, 'header': True})
 
 @login_required
@@ -1219,7 +1248,15 @@ def patient_card_dentist(request):
             pat.save()
         if 'is_now' in request.POST.keys():
             appoint.is_now = request.POST['is_now']
-            appoint.save()
+            if appoint.is_now == '1' and appointment.objects.filter(date = appoint.date,
+                                                                  dentist = appoint.dentist,
+                                                                  is_now = 1).count() > 0:
+               messages.add_message(request, messages.ERROR, 'W gabinecie nie może znajdować się dwóch pacjentów jednocześnie.')     
+            else:    
+                appoint.save()
+            if appoint.is_now == '-1':
+                return HttpResponseRedirect('/appointment_list/')
+            return HttpResponseRedirect('/patient_card_dentist/')
         if 'appointment_description' in request.POST.keys():
             appoint.description = request.POST['appointment_description'].strip()
             appoint.save()
@@ -1241,7 +1278,13 @@ def patient_card_dentist(request):
                     form = ToothForm(request.POST['tooth'], request.POST['tooth_part'])
             else:
                 form = ToothForm(request.POST['tooth'])
-
+        if 'loss_del' in request.POST.keys():
+            loss_del = tooth_loss.objects.get(id = request.POST['loss_del'])
+            loss_del.delete()
+        if 'loss_edit_id' in request.POST.keys():
+            loss = tooth_loss.objects.get(id = request.POST['loss_edit_id'])
+            loss.comment = request.POST['loss_edit_desc'].strip()
+            loss.save()
     return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True })
 
 @login_required
