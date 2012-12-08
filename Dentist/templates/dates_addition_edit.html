@@ -58,7 +58,28 @@
 											var content = $(data).find('#dynamic_content2').html();
 											var flash_messages = $(data).find('#flash_messages').html();
 											$('#dynamic_content2').html(content);
-											$('#flash_messages').html(flash_messages); 
+											$('#flash_messages').html(flash_messages);
+											
+											var del = $(data).find('.delete');
+											$(del).click(function() {
+												ConfirmDialog("Na pewno chcesz usunąć ten termin?", this);
+											 	return false;
+											 });
+											
+											 var chng = $(data).find('.change');
+											 $(chng).click(function() {
+												$.post('/dates_addition_edit/?type=ajax',
+												{ change: $(this).attr('id'),
+												  o: $('#id_office').val(),
+												  d: $('#id_dentist_man').val(),
+												  csrfmiddlewaretoken: '{{ csrf_token }}' },
+												  function(data) { 
+													$('#content').html(data); 
+												}
+												 );
+											 	return false;
+											 });
+											 
 										}
 									);
 	                                $(this).dialog("close");
@@ -122,7 +143,6 @@
 				 });
 				
 				 $('.change').click(function() {
-				 alert("wiem");
 					$.post('/dates_addition_edit/?type=ajax',
 					{ change: $(this).attr('id'),
 					  o: $('#id_office').val(),
