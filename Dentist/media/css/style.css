@@ -991,13 +991,9 @@ area {
 /* Karta pacjenta u dentysty */
 #back{
 	color:white;
-	height:35px;
-	font-size:16px;
 	cursor: pointer;
-  	background: url(../img/BG_submenu.jpg) repeat-x;
   	margin:5px;
   	margin-left:30px;
-  	border: 1px solid #cccccc;
   	float: left;
 }
 
