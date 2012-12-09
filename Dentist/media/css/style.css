@@ -943,8 +943,8 @@ area {
     clear:		both;
     max-width:	46.923em; /* 610/13 */  
     *max-width:	45.750em; /* 610/13.3333 - for IE */
-    border: thin solid #ff0;
-    background: #ffe;
+    border: thin solid #fdbf3b;
+    background: #ffebc1;
 }
 
 #graphic {
