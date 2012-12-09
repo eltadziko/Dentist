@@ -10,7 +10,6 @@ padding: 0px;
 line-height:25px;
 height: 100%;
 color:#373737;
-
 }
 a{
 text-decoration:none;
@@ -346,8 +345,8 @@ visibility:hidden;
     background: #ffc0cb;
 }
 .flash_debug, .flash_info {
-    border: thin solid #ff0;
-    background: #ffe;
+    border: thin solid #fdbf3b;
+    background: #ffebc1;
 }
 .flash_warning {
     border: thin solid #b8860b;
