@@ -38,6 +38,8 @@ class PasswordForm(forms.Form):
             else:
                 if not re.search('[0-9]+', password):
                     raise forms.ValidationError(self.error_messages['no_number'])
+        if self.cleaned_data["old_password"] == password:
+            raise forms.ValidationError(self.error_messages['no_change'])
         return password
 
     def clean_password2(self):
