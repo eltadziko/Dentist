@@ -49,11 +49,12 @@
 			<strong>Historia zabiegu:</strong>
 			<table>
 				<tr>
-					<th width="300px">Ząb</th><th width="100px">Data</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+					<th width="120px">Ząb</th><th width="180px">Część zęba</th><th width="100px">Data</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
 				</tr>
 				{% for l in losses %}
 					<tr>
-						{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
+						{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}</td>{% endif %}
+			 			<td>{{ l.tooth_part }}</td>
 			 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
 			 			<td class="left">{{ l.loss_type }}</td>
 			 			<td class="left">{{ l.comment|linebreaksbr }}</td>
