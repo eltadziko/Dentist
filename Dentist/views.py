@@ -989,10 +989,13 @@ def dates_addition_edit(request):
             appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.begin, hour__lte=date.end)
             messages_list = []
             for app in appointments:
-                print app.patient.user.email
                 subject = "Odwołana wizyta"
-                text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ lekarz "+str(app.dentist)+" nie przyjmuje pacjentów w tym dniu. Przepraszamy za niedogodności."
-                to = 'lukasizuk@gmail.com' #app.patient.user.email
+                if app.hour:
+                    hour = app.hour.strftime("%H:%M")
+                else:
+                    hour = 'bezterminowa'
+                text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+hour+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ lekarz "+str(app.dentist)+" nie przyjmuje pacjentów w tym dniu. Przepraszamy za niedogodności."
+                to = app.patient.user.email
                 message=(subject, text, 'dentistzpi@gmail.com', [to] )
                 messages_list.append(message)
                 app.delete()
@@ -1035,17 +1038,23 @@ def dates_addition_edit(request):
                 messages_list = []
                 subject = "Odwołana wizyta"
                 for app in appointments:
-                    print app.patient.user.email
-                    to = 'lukasizuk@gmail.com' #app.patient.user.email
-                    text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
+                    if app.hour:
+                        hour = app.hour.strftime("%H:%M")
+                    else:
+                        hour = 'bezterminowa'
+                    to = app.patient.user.email
+                    text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+hour+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
                     message=(subject, text, 'dentistzpi@gmail.com', [to] )
                     messages_list.append(message)
                     app.delete()
                 appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.end)
                 for app in appointments:
-                    print app.patient.user.email
-                    to = 'lukasizuk@gmail.com' #app.patient.user.email
-                    text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
+                    if app.hour:
+                        hour = app.hour.strftime("%H:%M")
+                    else:
+                        hour = 'bezterminowa'
+                    to = app.patient.user.email
+                    text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+hour+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
                     message=(subject, text, 'dentistzpi@gmail.com', [to] )
                     messages_list.append(message)
                     app.delete()
@@ -1056,9 +1065,12 @@ def dates_addition_edit(request):
                     end_visit = h + datetime.timedelta(minutes=length)
                     end_visit = end_visit.strftime("%H:%M")
                     if end_visit > date.end:
-                        print app.patient.user.email
-                        to = 'lukasizuk@gmail.com' #app.patient.user.email
-                        text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
+                        if app.hour:
+                            hour = app.hour.strftime("%H:%M")
+                        else:
+                            hour = 'bezterminowa'
+                        to = app.patient.user.email
+                        text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+hour+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
                         message=(subject, text, 'dentistzpi@gmail.com', [to] )
                         messages_list.append(message)
                         app.delete()
@@ -1094,11 +1106,13 @@ def send_reminders(request):
         if 'sended' in request.POST.keys():
             messages_list = []
             for app in appointments:
-                print app.patient.phone
-                print app.patient.user.email
                 subject = "Przypomnienie wizyty"
-                text = "Przypominamy o wizycie w dniu jutrzejszym ("+app.date.strftime("%d-%m-%Y")+") o godz: "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+". Lekarz: "+str(app.dentist)+"."
-                to = 'lukasizuk@gmail.com' #app.patient.user.email
+                if app.hour:
+                    hour = app.hour.strftime("%H:%M")
+                else:
+                    hour = 'bezterminowa'
+                text = "Przypominamy o wizycie w dniu jutrzejszym ("+app.date.strftime("%d-%m-%Y")+") o godz: "+hour+" w gabinecie "+str(app.dental_office)+". Lekarz: "+str(app.dentist)+"."
+                to = app.patient.user.email
                 message=(subject, text, 'dentistzpi@gmail.com', [to] )
                 messages_list.append(message)
             send_mass_mail(messages_list, fail_silently=False)
