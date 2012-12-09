@@ -53,6 +53,14 @@
 	</style>
 {% endblock %}
 
+{% block js %}
+	{{ block.super }}
+	
+	$(document).ready(function() {
+		$('#under_title').css('height', '70px');
+	});
+{% endblock %}
+
 {% block header %}
 	Edycja terminu z dnia: <b>{{ form.date_1.value }}</b>, dla dentysty: <b>{{ form.dentist_1.value }}</b> <br />z gabinetu: <b>{{ form.dental_office_1.value }}</b>
 {% endblock %}
