@@ -121,6 +121,8 @@ EMAIL_HOST = 'poczta.o2.pl'
 
 EMAIL_HOST_USER = 'dentist_zpi'
 
+EMAIL_PORT = 587
+
 EMAIL_HOST_PASSWORD = '123456'
 
 EMAIL_USE_TLS = True

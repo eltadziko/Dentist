@@ -21,6 +21,7 @@ from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.core.exceptions import ValidationError
+from django.core.mail import send_mail
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -747,6 +748,7 @@ def day_graphic(request):
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
 @user_passes_test(new_password, login_url="/password/")
 def dates_addition(request):
+    #send_mail('Juupi', 'A cosik tam wyślemy ąśćźżółęń.', 'dentist_zpi@o2.pl', ['lukasizuk@gmail.com'], fail_silently=False)
     if request.POST:
         if 'generate_submit' in request.POST.keys():
             office = request.POST['office']
@@ -973,12 +975,16 @@ def dates_addition_edit(request):
                     form = DatesAdditionEditForm(request.POST['office'], -1)
                 else:
                     form = DatesAdditionEditForm(request.POST['office'], -1, request.POST)
-            today = datetime.datetime.today().date()    
-            dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value, date__gte=today)
+            today = datetime.datetime.today().date() 
+            dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value)
         elif 'delete' in request.POST.keys():
             date = dates.objects.get(id=request.POST['delete'])
             appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.begin, hour__lte=date.end)
             for app in appointments:
+                print app.patient.user.email
+                subject = "Odwołana wizyta"
+                text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ lekarz "+str(app.dentist)+" nie przyjmuje pacjentów w tym dniu. Przepraszamy za niedogodności."
+                send_mail(subject, text, 'dentist_zpi@o2.pl', ['lukasizuk@gmail.com'], fail_silently=False)
                 app.delete()
             date.delete()
             messages.add_message(request, messages.INFO, 'Pomyślnie usunięto termin oraz zaplanowane wizyty.')
