@@ -330,7 +330,7 @@
 									<tr>
 										<th width="300px">Ząb</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
 									</tr>
-									{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+									{% for t in a.tooth_loss_set.all|order_by:'tooth'|order_by:'-id' %}
 										<tr>
 											<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
 											<td class="left">{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>
@@ -416,7 +416,7 @@
 					<tr>
 						<th width="300px">Ząb</th><th width="200px">Rozpoznanie</th><th>Komentarz</th><th width="100px"></th>
 					</tr>
-					{% for t in appointment.tooth_loss_set.all|order_by:'tooth' %}
+					{% for t in appointment.tooth_loss_set.all|order_by:'tooth'|order_by:'-id' %}
 					<tr>
 						<td rowspan="2" class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
 						<td rowspan="2" class="left">{% if t.loss_type %}{{ t.loss_type.type }}{% endif %}</td>
@@ -487,7 +487,7 @@
 									<tr>
 										<th width="300px">Ząb</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
 									</tr>
-									{% for t in a.tooth_loss_set.all|order_by:'tooth' %}
+									{% for t in a.tooth_loss_set.all|order_by:'tooth'|order_by:'-id' %}
 										<tr>
 											<td class="left">{{ t.tooth }}/{{ t.tooth_part.name }}</td>
 											<td class="left">{% if t.loss_type %}{{ t.loss_type }}{% endif %}</td>

@@ -195,7 +195,7 @@
 					{% else %}
 						<td class="appoint_future"> 
 					{% endif %}
-					<a href = "{% url views.update_profile %}{{ p.patient.id }}">
+					<a href = "{% url views.update_profile %}{{ p.patient.id }}"  style="border-bottom:none">
 						{{ p.patient.last_name }} {{ p.patient.first_name }}
 					</a></td>
 				{% else %}

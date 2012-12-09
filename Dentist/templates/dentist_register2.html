@@ -179,6 +179,8 @@
 			  dentist: $('input[name=dentist]:checked').val(),
 			  month: month,
 			  year: year,
+			  pat: $("#id_pat").val(),
+		      patients: $("input[name=patients]:checked").val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			  function(data) { 
 				$('#content').html(data);
@@ -201,6 +203,8 @@
 			  dentist: $('input[name=dentist]:checked').val(),
 			  month: month,
 			  year: year,
+			  pat: $("#id_pat").val(),
+			  patients: $("input[name=patients]:checked").val(),
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			  function(data) { 
 				$('#content').html(data);

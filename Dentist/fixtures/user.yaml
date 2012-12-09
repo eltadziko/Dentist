@@ -2673,11 +2673,11 @@
     is_superuser: 0
     last_login: 2012-10-24 12:12:12
     date_joined: 2012-10-20 11:57:02
-    groups: [2]
+    groups: [2, 4]
 - model: auth.User
   pk: 224
   fields:
-    username: JanKowalski
+    username: romaniuk
     email: JanKowalski@gmail.com
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0

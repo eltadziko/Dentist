@@ -120,14 +120,14 @@
 	{% endfor %} 
 	{% for a in appoints_untimely %}
 		<tr><td>Nieterminowa</td>
-		{% if a.appoint.is_now == 1 %}
-			<td class="appoint_now" 
-		{% elif a.appoint.is_now == -1 %}
-			<td class="appoint_past" 
+		{% if a.is_now == 1 %}
+			<td class="appoint_now" id="{{ a.id }}">
+		{% elif a.is_now == -1 %}
+			<td class="appoint_past" id="{{ a.id }}">
 		{% else %}
-			<td class="appoint_future" 
+			<td class="appoint_future" id="{{ a.id }}">
 		{% endif %}
-			id="{{ a.id }}">{{ a.patient.last_name }} {{ a.patient.first_name }}</td></tr>
+			{{ a.patient.last_name }} {{ a.patient.first_name }}</td></tr>
 	{% endfor %}
 </table>
 

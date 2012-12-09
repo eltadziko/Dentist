@@ -1,0 +1,3614 @@
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog implanty, stomatolog protetyk.", first_name: "Pawe\u0142",
+    last_name: Kosior, phone: '608620828', title: dr n. med., user: 1}
+  model: Dentist.dentist
+  pk: 1
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, ortodonta, stomatolog protetyk.", first_name: "Rados\u0142\
+      aw", last_name: Jadach, phone: '713446612', title: dr n. med., user: 2}
+  model: Dentist.dentist
+  pk: 2
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, chirurg, stomatolog protetyk.", first_name: Janina,
+    last_name: "T\u0119cza", phone: '713519393', title: lek. dent., user: 3}
+  model: Dentist.dentist
+  pk: 3
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog protetyk, stomatolog, implanty.", first_name: Maciej,
+    last_name: Kawala, phone: '717958063', title: lek. dent., user: 4}
+  model: Dentist.dentist
+  pk: 4
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog protetyk, ortodonta, psycholog.", first_name: Krzysztof,
+    last_name: "R\xF3\u017Cycki", phone: '606917742', title: dr n. med., user: 5}
+  model: Dentist.dentist
+  pk: 5
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog implanty, stomatolog protetyk.", first_name: Magdalena,
+    last_name: "K\u0105dziela", phone: '513420828', title: lek. dent., user: 6}
+  model: Dentist.dentist
+  pk: 6
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog implanty, stomatolog protetyk.", first_name: Lidia,
+    last_name: Kittel, phone: '233420828', title: lek. dent., user: 7}
+  model: Dentist.dentist
+  pk: 7
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, chirurg, stomatolog protetyk.", first_name: Ewa,
+    last_name: "M\u0142y\u0144czak", phone: '513519393', title: dr n. med., user: 8}
+  model: Dentist.dentist
+  pk: 8
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, ortodonta, stomatolog protetyk.", first_name: "J\xF3\
+      zef Andrzej", last_name: Komorski, phone: '513446612', title: lek. dent., user: 9}
+  model: Dentist.dentist
+  pk: 9
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog protetyk, stomatolog, implanty.", first_name: Marek,
+    last_name: "Wi\u0119znowski", phone: '787958063', title: lek. dent., user: 10}
+  model: Dentist.dentist
+  pk: 10
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog protetyk, ortodonta, psycholog.", first_name: "Jaros\u0142\
+      aw", last_name: "\u017Bochowski", phone: '526917742', title: lek. dent., user: 11}
+  model: Dentist.dentist
+  pk: 11
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog implanty, stomatolog protetyk.", first_name: Ryszard
+      Tomasz, last_name: "Ma\u0142ysa", phone: '728620828', title: dr n. med., user: 12}
+  model: Dentist.dentist
+  pk: 12
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, chirurg, stomatolog protetyk.", first_name: Izabela,
+    last_name: "Zawi\u015Blak", phone: '653519393', title: dr n. med., user: 13}
+  model: Dentist.dentist
+  pk: 13
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog protetyk, stomatolog, implanty.", first_name: Anna,
+    last_name: Michalska-Motas, phone: '797958063', title: dr n. med., user: 14}
+  model: Dentist.dentist
+  pk: 14
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog protetyk, ortodonta, psycholog.", first_name: Iwona,
+    last_name: "G\xF3rska-Ga\u0142ka", phone: '666917742', title: lek. dent., user: 15}
+  model: Dentist.dentist
+  pk: 15
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, ortodonta, stomatolog protetyk.", first_name: Eugeniusz,
+    last_name: Nosow, phone: '433446612', title: dr n. med., user: 16}
+  model: Dentist.dentist
+  pk: 16
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, ortodonta, stomatolog protetyk.", first_name: Ewa,
+    last_name: Mnich, phone: '713446612', title: dr n. med., user: 17}
+  model: Dentist.dentist
+  pk: 17
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog implanty, stomatolog protetyk.", first_name: "Ma\u0142\
+      gorzata", last_name: Bohater, phone: '658620828', title: lek. dent., user: 18}
+  model: Dentist.dentist
+  pk: 18
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 2 specjalizacji stomatolog implanty, stomatolog protetyk.", first_name: Ziemowit,
+    last_name: Sartys, phone: '712348812', title: dr n. med., user: 19}
+  model: Dentist.dentist
+  pk: 19
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, chirurg, stomatolog protetyk.", first_name: Anna,
+    last_name: Paradowska, phone: '778519393', title: lek. dent., user: 20}
+  model: Dentist.dentist
+  pk: 20
+- fields: {description: "Lekarz pracuje w gabinecie w miejscowo\u015Bci Wroc\u0142\
+      aw, w wojew\xF3dztwie dolno\u015Bl\u0105skim. Prowadzi leczenie w obr\u0119\
+      bie 3 specjalizacji stomatolog implanty, ortodonta, stomatolog protetyk.", first_name: Edyta,
+    last_name: Cygnarowska, phone: '723448812', title: dr n. med., user: 21}
+  model: Dentist.dentist
+  pk: 21
+- fields: {disease_name: alergia}
+  model: Dentist.disease
+  pk: 1
+- fields: {disease_name: "nadci\u015Bnienie"}
+  model: Dentist.disease
+  pk: 2
+- fields: {disease_name: cukrzyca}
+  model: Dentist.disease
+  pk: 3
+- fields: {disease_name: choroby tarczycy}
+  model: Dentist.disease
+  pk: 4
+- fields: {disease_name: epilepsja}
+  model: Dentist.disease
+  pk: 5
+- fields: {disease_name: "ci\u0105\u017Ca"}
+  model: Dentist.disease
+  pk: 6
+- fields: {disease_name: "\u017C\xF3\u0142taczka"}
+  model: Dentist.disease
+  pk: 7
+- fields: {disease_name: "gru\u017Alica"}
+  model: Dentist.disease
+  pk: 8
+- fields: {disease_name: AIDS}
+  model: Dentist.disease
+  pk: 9
+- fields: {disease_name: choroby serca}
+  model: Dentist.disease
+  pk: 10
+- fields: {description: "Wa\u017Cna w dniu wizyty.", name: "raport miesi\u0119czny\
+      \ ZUS RMUA", short_name: praca RMUA}
+  model: Dentist.insurance
+  pk: 1
+- fields: {description: "Wa\u017Cne w dniu wizyty.", name: "za\u015Bwiadczenie z zak\u0142\
+      adu pracy", short_name: "praca za\u015Bwiadczenie"}
+  model: Dentist.insurance
+  pk: 2
+- fields: {description: "Wa\u017Cna w dniu wizyty.", name: legitymacja ubezpieczeniowa,
+    short_name: praca legitymacja}
+  model: Dentist.insurance
+  pk: 3
+- fields: {description: null, name: "dzia\u0142alno\u015B\u0107 gospodarcza", short_name: "dzia\u0142\
+      alno\u015B\u0107 gospodarcza"}
+  model: Dentist.insurance
+  pk: 4
+- fields: {description: null, name: KRUS, short_name: KRUS}
+  model: Dentist.insurance
+  pk: 5
+- fields: {description: "Wa\u017Cna w dniu wizyty.", name: legitymacja emeryta, short_name: emeryt}
+  model: Dentist.insurance
+  pk: 6
+- fields: {description: "Wa\u017Cna w dniu wizyty.", name: legitymacja rencisty, short_name: rencista}
+  model: Dentist.insurance
+  pk: 7
+- fields: {description: "Wa\u017Cne w dniu wizyty.", name: "za\u015Bwiadczenie z urz\u0119\
+      du pracy", short_name: bezrobotny}
+  model: Dentist.insurance
+  pk: 8
+- fields: {description: null, name: ubezpieczony dobrowolnie, short_name: ubezpieczony
+      dobrowolnie}
+  model: Dentist.insurance
+  pk: 9
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego dow\xF3d",
+    short_name: "cz\u0142onek rodz. ubezp. dow\xF3d"}
+  model: Dentist.insurance
+  pk: 10
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego pracodawca",
+    short_name: "cz\u0142onek rodz. ubezp. praca"}
+  model: Dentist.insurance
+  pk: 11
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego KRUS", short_name: "cz\u0142\
+      onek rodz. ubezp. KRUS"}
+  model: Dentist.insurance
+  pk: 12
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego legitymacja",
+    short_name: "cz\u0142onek rodz. ubezp. leg."}
+  model: Dentist.insurance
+  pk: 13
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego emeryt",
+    short_name: "cz\u0142onek rodz. ubezp. emeryt"}
+  model: Dentist.insurance
+  pk: 14
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego rencista",
+    short_name: "cz\u0142onek rodz. ubezp. rencista"}
+  model: Dentist.insurance
+  pk: 15
+- fields: {description: null, name: "cz\u0142onek rodziny ubezpieczonego dzieci",
+    short_name: "cz\u0142onek rodz. ubezp. dzieci"}
+  model: Dentist.insurance
+  pk: 16
+- fields: {description: null, name: student po 26, short_name: student po 26}
+  model: Dentist.insurance
+  pk: 17
+- fields: {description: null, name: "nieubezpiecozny spe\u0142niaj\u0105cy kryterium\
+      \ dochodowe", short_name: "nieubezp. spe\u0142n. kryt. doch."}
+  model: Dentist.insurance
+  pk: 18
+- fields: {description: null, name: ubezpieczony w UE EFTA, short_name: ubezp. w UE
+      EFTA}
+  model: Dentist.insurance
+  pk: 19
+- fields: {description: null, name: ubezpieczony w UE EFTA2, short_name: ubezp. w
+      UE EFTA2}
+  model: Dentist.insurance
+  pk: 20
+- fields: {description: null, name: "zasi\u0142ek chorobowy", short_name: "zasi\u0142\
+      ek chorobowy"}
+  model: Dentist.insurance
+  pk: 21
+- fields: {PESEL: '90100302359', address: "ul. B. Chrobrego 20F/15, 55-200 O\u0142\
+      awa", birth_date: 1990-10-03, comment: Alergia na Acodin, first_name: Tadeusz,
+    insurance_number: '2013-03-30', insurance_type: 7, last_name: "Ceka\u0142a", phone: '796538761',
+    user: 22}
+  model: Dentist.patient
+  pk: 1
+- fields: {PESEL: '90031503354', address: "O\u0142awsa 24, 55-300 Proszk\xF3w", birth_date: 1990-03-15,
+    comment: null, first_name: "\u0141ukasz", insurance_number: '2013-03-30', insurance_type: 16,
+    last_name: "I\u017Cuk", phone: '662978972', user: 23}
+  model: Dentist.patient
+  pk: 2
+- fields: {PESEL: '90021365395', address: "Borowska 74/07, 50-532 Wroc\u0142aw", birth_date: 1990-02-13,
+    comment: null, first_name: Barbara, insurance_number: '2013-03-30', insurance_type: 16,
+    last_name: "Ha\u0142asa", phone: '534584148', user: 24}
+  model: Dentist.patient
+  pk: 3
+- fields: {PESEL: '89030852638', address: "Pi\u0119kna 20/68, 50-505 Wroc\u0142aw",
+    birth_date: 1989-03-08, comment: null, first_name: Bartosz, insurance_number: '2013-03-30',
+    insurance_type: 16, last_name: "Buja\u0142a", phone: '609376542', user: 25}
+  model: Dentist.patient
+  pk: 4
+- fields: {PESEL: '49062252349', address: "Zaporowska 57/19, 53-519 Wroc\u0142aw",
+    birth_date: 1949-06-22, comment: null, first_name: Grzegorz, insurance_number: aktualny,
+    insurance_type: 5, last_name: Myszczyszyn, phone: '567342802', user: 26}
+  model: Dentist.patient
+  pk: 5
+- fields: {PESEL: '55050973934', address: "Wittiga 9/1024, 51-628 Wroc\u0142aw;",
+    birth_date: 1955-05-09, comment: null, first_name: Beata, insurance_number: aktualny,
+    insurance_type: 6, last_name: "Wi\u015Bnicka", phone: '765987234', user: 27}
+  model: Dentist.patient
+  pk: 6
+- fields: {PESEL: '63102612461', address: "Grunwaldzka 73/5, 50-357 Wroc\u0142aw",
+    birth_date: 1963-10-26, comment: null, first_name: Marek, insurance_number: aktualny,
+    insurance_type: 7, last_name: "Pude\u0142ko", phone: '534876091', user: 28}
+  model: Dentist.patient
+  pk: 7
+- fields: {PESEL: '54061073231', address: "Wo\u0142owska 23, 51-116 Wroc\u0142aw",
+    birth_date: 1954-06-10, comment: null, first_name: Zbigniew, insurance_number: aktualny,
+    insurance_type: 8, last_name: "Ma\u0142achowski", phone: '543290001', user: 29}
+  model: Dentist.patient
+  pk: 8
+- fields: {PESEL: '90012542856', address: "Zamojska 34/7, 54-102 Wroc\u0142aw", birth_date: 1990-01-25,
+    comment: null, first_name: Ewa, insurance_number: aktualny, insurance_type: 9,
+    last_name: Nojek, phone: '537899001', user: 30}
+  model: Dentist.patient
+  pk: 9
+- fields: {PESEL: '96081079321', address: "Dworcowa 15/30, 50-456 Wroc\u0142aw", birth_date: 1996-08-10,
+    comment: null, first_name: Alina, insurance_number: aktualny, insurance_type: 10,
+    last_name: "Strza\u0142kowska", phone: '654876564', user: 31}
+  model: Dentist.patient
+  pk: 10
+- fields: {PESEL: '42011867988', address: "Zawiszy Czarnego 23/34, 52-241 Wroc\u0142\
+      aw", birth_date: 1942-01-18, comment: "Pacjent choruje na cukrzyc\u0119 typu\
+      \ B.", first_name: "\u0141ukasz", insurance_number: aktualny, insurance_type: 11,
+    last_name: "Garbie\u0144", phone: '665238987', user: 32}
+  model: Dentist.patient
+  pk: 11
+- fields: {PESEL: '38110145841', address: "Zau\u0142ek Rogozi\u0144ski 23/7, 51-116\
+      \ Wroc\u0142aw", birth_date: 1938-11-01, comment: null, first_name: Zbigniew,
+    insurance_number: aktualny, insurance_type: 14, last_name: "\u0141ukaszewski",
+    phone: '534234876', user: 33}
+  model: Dentist.patient
+  pk: 12
+- fields: {PESEL: '51040168115', address: "Forsycjowa 2/54, 51-253 Wroc\u0142aw",
+    birth_date: 1951-04-01, comment: "Pacjent wra\u017Cliwy na b\xF3l.", first_name: Maciej,
+    insurance_number: aktualny, insurance_type: 12, last_name: "Bag\u0142aj", phone: '534234876',
+    user: 34}
+  model: Dentist.patient
+  pk: 13
+- fields: {PESEL: '61061333917', address: "Bardzka 11/3, 50-516 Wroc\u0142aw", birth_date: 1961-06-13,
+    comment: null, first_name: Mateusz, insurance_number: aktualny, insurance_type: 14,
+    last_name: Tylko, phone: '534234876', user: 35}
+  model: Dentist.patient
+  pk: 14
+- fields: {PESEL: '60021824711', address: "Batorego Stefana 23/78, 54-007 Wroc\u0142\
+      aw", birth_date: 1960-02-18, comment: null, first_name: Ewa, insurance_number: aktualny,
+    insurance_type: 7, last_name: "Stru\u015B", phone: '534234876', user: 36}
+  model: Dentist.patient
+  pk: 15
+- fields: {PESEL: '76120329976', address: "\u0141ugowa  4, 51-180 Wroc\u0142aw", birth_date: 1976-12-03,
+    comment: Pacjent przyjmuje leki przeciwalergiczne., first_name: "\u0141ukasz",
+    insurance_number: aktualny, insurance_type: 14, last_name: Duda, phone: '534234876',
+    user: 37}
+  model: Dentist.patient
+  pk: 16
+- fields: {PESEL: '56022249873', address: "Gazowa 56/33, 50-513 Wroc\u0142aw", birth_date: 1956-02-22,
+    comment: null, first_name: "Ma\u0142gorzata", insurance_number: aktualny, insurance_type: 15,
+    last_name: Gajewczyk, phone: '674234876', user: 38}
+  model: Dentist.patient
+  pk: 17
+- fields: {PESEL: '55061252792', address: "Papiernicza 56/3, 54-134 Wroc\u0142aw",
+    birth_date: 1955-06-12, comment: null, first_name: Grzegorz, insurance_number: aktualny,
+    insurance_type: 13, last_name: Rajca, phone: '534234876', user: 39}
+  model: Dentist.patient
+  pk: 18
+- fields: {PESEL: '83120763329', address: "Pilata Stanis\u0142awa 22, 51-605 Wroc\u0142\
+      aw", birth_date: 1983-12-07, comment: null, first_name: Dariusz, insurance_number: aktualny,
+    insurance_type: 16, last_name: "Kra\u015Bnicki", phone: '534234876', user: 40}
+  model: Dentist.patient
+  pk: 19
+- fields: {PESEL: '68112087676', address: "Zapotocze 87, 51-180 Wroc\u0142aw", birth_date: 1968-11-20,
+    comment: null, first_name: Janusz, insurance_number: aktualny, insurance_type: 1,
+    last_name: "Bie\u017Cy\u0144ski", phone: '534234876', user: 41}
+  model: Dentist.patient
+  pk: 20
+- fields: {PESEL: '54091839357', address: "\u017Bo\u0142nierska  55, 53-014 Wroc\u0142\
+      aw", birth_date: 1954-09-18, comment: null, first_name: "Les\u0142aw", insurance_number: aktualny,
+    insurance_type: 2, last_name: Zub, phone: '534234876', user: 42}
+  model: Dentist.patient
+  pk: 21
+- fields: {PESEL: '41011564413', address: "Malborska 9/45, 51-351 Wroc\u0142aw", birth_date: 1941-01-15,
+    comment: null, first_name: Jacek, insurance_number: aktualny, insurance_type: 3,
+    last_name: "Jarli\u0144ski", phone: '534234876', user: 43}
+  model: Dentist.patient
+  pk: 22
+- fields: {PESEL: '78062158287', address: "Kocha Roberta 45/7, 51-112 Wroc\u0142aw",
+    birth_date: 1978-06-21, comment: null, first_name: "Rados\u0142aw", insurance_number: aktualny,
+    insurance_type: 4, last_name: Jadach, phone: '534234876', user: 44}
+  model: Dentist.patient
+  pk: 23
+- fields: {PESEL: '92120234512', address: "Karpacka 1, 54-617 Wroc\u0142aw", birth_date: 1992-12-02,
+    comment: null, first_name: Daniel, insurance_number: aktualny, insurance_type: 5,
+    last_name: "Papli\u0144ski", phone: '534234876', user: 45}
+  model: Dentist.patient
+  pk: 24
+- fields: {PESEL: '86022186339', address: "K\u0142odzka 6/10, 50-536 Wroc\u0142aw",
+    birth_date: 1986-02-21, comment: null, first_name: Marita, insurance_number: aktualny,
+    insurance_type: 6, last_name: Nittner, phone: '534234876', user: 46}
+  model: Dentist.patient
+  pk: 25
+- fields: {PESEL: '75120123597', address: "Darwina Karola 9/87, 52-415 Wroc\u0142\
+      aw", birth_date: 1975-12-01, comment: null, first_name: Adam, insurance_number: aktualny,
+    insurance_type: 7, last_name: Domanasiewicz, phone: '534234876', user: 47}
+  model: Dentist.patient
+  pk: 26
+- fields: {PESEL: '52080497481', address: "Husarska 2/34, 53-004 Wroc\u0142aw", birth_date: 1952-08-04,
+    comment: null, first_name: Bogdan, insurance_number: aktualny, insurance_type: 8,
+    last_name: Czapiga, phone: '534234876', user: 48}
+  model: Dentist.patient
+  pk: 27
+- fields: {PESEL: '68112278982', address: "Janowska 2, 54-067 Wroc\u0142aw", birth_date: 1968-11-22,
+    comment: null, first_name: Jan, insurance_number: aktualny, insurance_type: 9,
+    last_name: "Godzi\u0144ski", phone: '534234876', user: 49}
+  model: Dentist.patient
+  pk: 28
+- fields: {PESEL: '74072133982', address: "Gubi\u0144ska 34, 54-434 Wroc\u0142aw",
+    birth_date: 1974-07-21, comment: null, first_name: Marek, insurance_number: aktualny,
+    insurance_type: 10, last_name: "W\u0119grzyn", phone: '534234876', user: 50}
+  model: Dentist.patient
+  pk: 29
+- fields: {PESEL: '53122862517', address: "Komorowska 65, 54-436 Wroc\u0142aw", birth_date: 1953-12-28,
+    comment: null, first_name: "Jaros\u0142aw", insurance_number: aktualny, insurance_type: 11,
+    last_name: Gruszka, phone: '534234876', user: 51}
+  model: Dentist.patient
+  pk: 30
+- fields: {PESEL: '66052095728', address: "Lazurowa 5/9, 54-044 Wroc\u0142aw", birth_date: 1966-05-20,
+    comment: null, first_name: Piotr, insurance_number: aktualny, insurance_type: 14,
+    last_name: Paluch, phone: '534234876', user: 52}
+  model: Dentist.patient
+  pk: 31
+- fields: {PESEL: '44041643455', address: "Obo\u017Ana 54, 52-244 Wroc\u0142aw", birth_date: 1944-04-16,
+    comment: null, first_name: Dariusz, insurance_number: aktualny, insurance_type: 3,
+    last_name: Niedzielski, phone: '534234876', user: 53}
+  model: Dentist.patient
+  pk: 32
+- fields: {PESEL: '40121987172', address: "Kie\u0142czowska 55/54, 51-316 Wroc\u0142\
+      aw", birth_date: 1940-12-19, comment: null, first_name: Tomasz, insurance_number: aktualny,
+    insurance_type: 14, last_name: "Zato\u0144ski", phone: '534234876', user: 54}
+  model: Dentist.patient
+  pk: 33
+- fields: {PESEL: '63061866956', address: "Hodowlana 23/54, 54-109 Wroc\u0142aw",
+    birth_date: 1963-06-18, comment: null, first_name: Grzegorz, insurance_number: aktualny,
+    insurance_type: 7, last_name: Dobaczewski, phone: '534234876', user: 55}
+  model: Dentist.patient
+  pk: 34
+- fields: {PESEL: '61122293923', address: "Imbirowa 3/6, 54-066 Wroc\u0142aw", birth_date: 1961-12-22,
+    comment: null, first_name: Maciej, insurance_number: aktualny, insurance_type: 14,
+    last_name: Krzeszewski, phone: '534234876', user: 56}
+  model: Dentist.patient
+  pk: 35
+- fields: {PESEL: '56090722331', address: "Mazepy 76, 51-347 Wroc\u0142aw", birth_date: 1956-09-07,
+    comment: null, first_name: Marcin, insurance_number: aktualny, insurance_type: 15,
+    last_name: "J\u0119dryka", phone: '534234876', user: 57}
+  model: Dentist.patient
+  pk: 36
+- fields: {PESEL: '40062055253', address: "Paryska 34/54, 51-215 Wroc\u0142aw", birth_date: 1940-06-20,
+    comment: null, first_name: "Jaros\u0142aw", insurance_number: aktualny, insurance_type: 13,
+    last_name: Bukwald, phone: '534234876', user: 58}
+  model: Dentist.patient
+  pk: 37
+- fields: {PESEL: '91032643389', address: "So\u0142tysia 23/6, 53-652 Wroc\u0142aw",
+    birth_date: 1991-03-26, comment: null, first_name: Joanna, insurance_number: aktualny,
+    insurance_type: 16, last_name: Michniewicz, phone: '534234876', user: 59}
+  model: Dentist.patient
+  pk: 38
+- fields: {PESEL: '28060548838', address: "Pomorska 58, 51-215 Wroc\u0142aw", birth_date: 1928-06-05,
+    comment: null, first_name: Seweryn, insurance_number: aktualny, insurance_type: 16,
+    last_name: Olszewski, phone: '534234876', user: 60}
+  model: Dentist.patient
+  pk: 39
+- fields: {PESEL: '42021621598', address: "Dziwo\u017Cony 73, 51-215 Wroc\u0142aw",
+    birth_date: 1942-02-16, comment: null, first_name: Maksym, insurance_number: aktualny,
+    insurance_type: 16, last_name: Walczak, phone: '601449493', user: 61}
+  model: Dentist.patient
+  pk: 40
+- fields: {PESEL: '58100502384', address: "\u0141ososiowa 32, 54-129 Wroc\u0142aw",
+    birth_date: 1958-10-05, comment: null, first_name: Klaudia, insurance_number: aktualny,
+    insurance_type: 1, last_name: Nowakowska, phone: '789041652', user: 62}
+  model: Dentist.patient
+  pk: 41
+- fields: {PESEL: '87112634985', address: "Trawowa 72, 53-633 Wroc\u0142aw", birth_date: 1987-11-26,
+    comment: null, first_name: Dominika, insurance_number: aktualny, insurance_type: 2,
+    last_name: "Wi\u015Bniewska", phone: '694067247', user: 63}
+  model: Dentist.patient
+  pk: 42
+- fields: {PESEL: '33081618381', address: "Droga M\u0119czennik\xF3w Majdanka 108,\
+      \ 50-532 Wroc\u0142aw", birth_date: 1933-08-16, comment: null, first_name: Wiktoria,
+    insurance_number: aktualny, insurance_type: 3, last_name: Majewska, phone: '662475245',
+    user: 64}
+  model: Dentist.patient
+  pk: 43
+- fields: {PESEL: '88122401888', address: "Chromika Jerzego 67, 50-505 Wroc\u0142\
+      aw", birth_date: 1988-12-24, comment: null, first_name: "Jaros\u0142awa", insurance_number: aktualny,
+    insurance_type: 4, last_name: Kowalczyk, phone: '516724978', user: 65}
+  model: Dentist.patient
+  pk: 44
+- fields: {PESEL: '29020483299', address: "Swarzewska 133, 53-519 Wroc\u0142aw", birth_date: 1929-02-04,
+    comment: null, first_name: Borys, insurance_number: aktualny, insurance_type: 5,
+    last_name: "Kami\u0144ski", phone: '666634317', user: 66}
+  model: Dentist.patient
+  pk: 45
+- fields: {PESEL: '27082155451', address: "Tybeta\u0144ska 52, 51-628 Wroc\u0142aw;",
+    birth_date: 1927-08-21, comment: null, first_name: Jurek, insurance_number: aktualny,
+    insurance_type: 6, last_name: Majewski, phone: '799289273', user: 67}
+  model: Dentist.patient
+  pk: 46
+- fields: {PESEL: '40112418670', address: "Mortkowicza Jakuba 133, 50-357 Wroc\u0142\
+      aw", birth_date: 1940-11-24, comment: null, first_name: "Mi\u0142os\u0142aw",
+    insurance_number: aktualny, insurance_type: 7, last_name: Ostrowski, phone: '729240164',
+    user: 68}
+  model: Dentist.patient
+  pk: 47
+- fields: {PESEL: '70030348458', address: "\u0141adna 88, 51-116 Wroc\u0142aw", birth_date: 1970-03-03,
+    comment: null, first_name: Izydor, insurance_number: aktualny, insurance_type: 8,
+    last_name: Adamczyk, phone: '679494271', user: 69}
+  model: Dentist.patient
+  pk: 48
+- fields: {PESEL: '78061188812', address: "Lawendowa 140, 54-102 Wroc\u0142aw", birth_date: 1978-06-11,
+    comment: null, first_name: Narcyz, insurance_number: aktualny, insurance_type: 9,
+    last_name: "Szczepa\u0144ski", phone: '679382975', user: 70}
+  model: Dentist.patient
+  pk: 49
+- fields: {PESEL: '80010130221', address: "Bieniewicka 16, 50-456 Wroc\u0142aw", birth_date: 1980-01-01,
+    comment: null, first_name: Ewa, insurance_number: aktualny, insurance_type: 10,
+    last_name: "Wi\u015Bniewska", phone: '795320834', user: 71}
+  model: Dentist.patient
+  pk: 50
+- fields: {PESEL: '35012842889', address: "Nowa 136, 54-129 Wroc\u0142aw", birth_date: 1935-01-28,
+    comment: null, first_name: Zoja, insurance_number: aktualny, insurance_type: 1,
+    last_name: Adamska, phone: '533524736', user: 72}
+  model: Dentist.patient
+  pk: 51
+- fields: {PESEL: '73010287086', address: "Barszcza\u0144ska 57, 53-633 Wroc\u0142\
+      aw", birth_date: 1973-01-02, comment: null, first_name: Zuzanna, insurance_number: aktualny,
+    insurance_type: 2, last_name: Tomaszewska, phone: '539395135', user: 73}
+  model: Dentist.patient
+  pk: 52
+- fields: {PESEL: '74071560420', address: "Pra\u0142atowska 143, 50-532 Wroc\u0142\
+      aw", birth_date: 1974-07-15, comment: null, first_name: Kaja, insurance_number: aktualny,
+    insurance_type: 3, last_name: "Wo\u017Aniak", phone: '797294162', user: 74}
+  model: Dentist.patient
+  pk: 53
+- fields: {PESEL: '62053110369', address: "Mulinowicza 119, 50-505 Wroc\u0142aw",
+    birth_date: 1962-05-31, comment: null, first_name: Augustyna, insurance_number: aktualny,
+    insurance_type: 4, last_name: Nowicka, phone: '718345234', user: 75}
+  model: Dentist.patient
+  pk: 54
+- fields: {PESEL: '54091124121', address: "Drzewna 31, 53-519 Wroc\u0142aw", birth_date: 1954-09-11,
+    comment: null, first_name: Blanka, insurance_number: aktualny, insurance_type: 5,
+    last_name: Pawlak, phone: '607935135', user: 76}
+  model: Dentist.patient
+  pk: 55
+- fields: {PESEL: '40051030948', address: "Kielecka 49, 51-628 Wroc\u0142aw;", birth_date: 1940-05-10,
+    comment: null, first_name: "Ro\u015Bcis\u0142awa", insurance_number: aktualny,
+    insurance_type: 6, last_name: Duda, phone: '884110167', user: 77}
+  model: Dentist.patient
+  pk: 56
+- fields: {PESEL: '45120685793', address: "M\u0142oda 11, 50-357 Wroc\u0142aw", birth_date: 1945-12-06,
+    comment: null, first_name: "S\u0142awomir", insurance_number: aktualny, insurance_type: 7,
+    last_name: Jaworski, phone: '676559866', user: 78}
+  model: Dentist.patient
+  pk: 57
+- fields: {PESEL: '57121481193', address: "Chudowska 16, 51-116 Wroc\u0142aw", birth_date: 1957-12-14,
+    comment: null, first_name: Marcin, insurance_number: aktualny, insurance_type: 8,
+    last_name: Maciejewski, phone: '888101646', user: 79}
+  model: Dentist.patient
+  pk: 58
+- fields: {PESEL: '54042516894', address: "Arsena\u0142 58, 54-102 Wroc\u0142aw",
+    birth_date: 1954-04-25, comment: null, first_name: "Boles\u0142aw", insurance_number: aktualny,
+    insurance_type: 9, last_name: Czarnecki, phone: '603093677', user: 80}
+  model: Dentist.patient
+  pk: 59
+- fields: {PESEL: '40051030148', address: "Kielecka 49, 50-456 Wroc\u0142aw", birth_date: 1948-08-23,
+    comment: null, first_name: Fryderyk, insurance_number: aktualny, insurance_type: 10,
+    last_name: "Czerwi\u0144ski", phone: '884110067', user: 81}
+  model: Dentist.patient
+  pk: 60
+- fields: {PESEL: '45120685763', address: "M\u0142oda 11, 54-129 Wroc\u0142aw", birth_date: 1945-12-06,
+    comment: null, first_name: Wislawa, insurance_number: aktualny, insurance_type: 1,
+    last_name: "Szyma\u0144ska", phone: '676559866', user: 82}
+  model: Dentist.patient
+  pk: 61
+- fields: {PESEL: '17121481193', address: "Chudowska 16, 53-633 Wroc\u0142aw", birth_date: 1957-12-14,
+    comment: null, first_name: Malwina, insurance_number: aktualny, insurance_type: 2,
+    last_name: Chmielewska, phone: '888101646', user: 83}
+  model: Dentist.patient
+  pk: 62
+- fields: {PESEL: '14042516894', address: "Arsena\u0142 58, 50-532 Wroc\u0142aw",
+    birth_date: 1954-04-25, comment: null, first_name: Justyn, insurance_number: aktualny,
+    insurance_type: 3, last_name: Wysocki, phone: '603093677', user: 84}
+  model: Dentist.patient
+  pk: 63
+- fields: {PESEL: '48082371896', address: "S\u0142oneczna 113, 50-505 Wroc\u0142aw",
+    birth_date: 1948-08-23, comment: null, first_name: Weronika, insurance_number: aktualny,
+    insurance_type: 4, last_name: "Kr\xF3l", phone: '607578204', user: 85}
+  model: Dentist.patient
+  pk: 64
+- fields: {PESEL: '42110884640', address: "D\u0142ugie 92, 53-519 Wroc\u0142aw", birth_date: 1942-11-08,
+    comment: null, first_name: Marek, insurance_number: aktualny, insurance_type: 5,
+    last_name: Nowakowski, phone: '666181698', user: 86}
+  model: Dentist.patient
+  pk: 65
+- fields: {PESEL: '74052705145', address: "Rataja Macieja 148, 51-628 Wroc\u0142aw;",
+    birth_date: 1974-05-27, comment: null, first_name: Krystyn, insurance_number: aktualny,
+    insurance_type: 6, last_name: "Kr\xF3l", phone: '671221464', user: 87}
+  model: Dentist.patient
+  pk: 66
+- fields: {PESEL: '71090851193', address: "Sierpi\u0144skiego Seweryna 14, 50-357\
+      \ Wroc\u0142aw", birth_date: 1971-09-08, comment: null, first_name: Wisia, insurance_number: aktualny,
+    insurance_type: 7, last_name: Zajac, phone: '788444773', user: 88}
+  model: Dentist.patient
+  pk: 67
+- fields: {PESEL: '43071007642', address: "Grodzie\u0144ska 104, 51-116 Wroc\u0142\
+      aw", birth_date: 1943-07-10, comment: null, first_name: Iwan, insurance_number: aktualny,
+    insurance_type: 8, last_name: Adamczyk, phone: '889415688', user: 89}
+  model: Dentist.patient
+  pk: 68
+- fields: {PESEL: '36111423597', address: "Ko\u0142obrzeska 105, 54-102 Wroc\u0142\
+      aw", birth_date: 1936-11-14, comment: null, first_name: Maciej, insurance_number: aktualny,
+    insurance_type: 9, last_name: "Koz\u0142owski", phone: '603716761', user: 90}
+  model: Dentist.patient
+  pk: 69
+- fields: {PESEL: '58121351118', address: "Zakopia\u0144ska 85, 50-456 Wroc\u0142\
+      aw", birth_date: 1958-12-13, comment: null, first_name: "El\u017Cbieta", insurance_number: aktualny,
+    insurance_type: 10, last_name: Symanska, phone: '604571468', user: 91}
+  model: Dentist.patient
+  pk: 70
+- fields: {PESEL: '25061462005', address: "Sanocka 40, 54-129 Wroc\u0142aw", birth_date: 1935-06-14,
+    comment: null, first_name: Oliwia, insurance_number: aktualny, insurance_type: 1,
+    last_name: Kowalczyk, phone: '674649608', user: 92}
+  model: Dentist.patient
+  pk: 71
+- fields: {PESEL: '51011359113', address: "Dworcowa 137, 53-633 Wroc\u0142aw", birth_date: 1951-01-13,
+    comment: null, first_name: Barbara, insurance_number: aktualny, insurance_type: 2,
+    last_name: Grabowska, phone: '661394158', user: 93}
+  model: Dentist.patient
+  pk: 72
+- fields: {PESEL: '64021339835', address: "Miechowicka 110, 50-532 Wroc\u0142aw",
+    birth_date: 1964-02-13, comment: null, first_name: Berta, insurance_number: aktualny,
+    insurance_type: 3, last_name: "Jab\u0142o\u0144ska", phone: '511769453', user: 94}
+  model: Dentist.patient
+  pk: 73
+- fields: {PESEL: '87090577348', address: "Konwalii 57, 50-505 Wroc\u0142aw", birth_date: 1987-09-05,
+    comment: null, first_name: Urjasz, insurance_number: aktualny, insurance_type: 4,
+    last_name: Pawlowski, phone: '886227343', user: 95}
+  model: Dentist.patient
+  pk: 74
+- fields: {PESEL: '56052428606', address: "Karczunek 145, 53-519 Wroc\u0142aw", birth_date: 1956-05-24,
+    comment: null, first_name: Urszula, insurance_number: aktualny, insurance_type: 5,
+    last_name: Zawadzka, phone: '795316532', user: 96}
+  model: Dentist.patient
+  pk: 75
+- fields: {PESEL: '41121516407', address: "Spadowa 127, 51-628 Wroc\u0142aw;", birth_date: 1941-12-15,
+    comment: null, first_name: Joanna, insurance_number: aktualny, insurance_type: 6,
+    last_name: "Zaj\u0105c", phone: '531671840', user: 97}
+  model: Dentist.patient
+  pk: 76
+- fields: {PESEL: '40031329561', address: "Pozna\u0144ska 6, 50-357 Wroc\u0142aw",
+    birth_date: 1940-03-13, comment: null, first_name: Gabrjel, insurance_number: aktualny,
+    insurance_type: 7, last_name: Wieczorek, phone: '791104890', user: 98}
+  model: Dentist.patient
+  pk: 77
+- fields: {PESEL: '35031061850', address: "Bia\u0142oruska 11, 51-116 Wroc\u0142aw",
+    birth_date: 1935-03-10, comment: null, first_name: Lidia, insurance_number: aktualny,
+    insurance_type: 8, last_name: "Paw\u0142owska", phone: '785828816', user: 99}
+  model: Dentist.patient
+  pk: 78
+- fields: {PESEL: '39031844769', address: "Bitwy pod Lenino 54, 54-102 Wroc\u0142\
+      aw", birth_date: 1939-03-18, comment: null, first_name: Izolda, insurance_number: aktualny,
+    insurance_type: 9, last_name: "D\u0105browski", phone: '725692555', user: 100}
+  model: Dentist.patient
+  pk: 79
+- fields: {PESEL: '91052478961', address: "Chirona 122, 50-456 Wroc\u0142aw", birth_date: 1991-05-24,
+    comment: null, first_name: Wiga, insurance_number: aktualny, insurance_type: 10,
+    last_name: Kowalczyk, phone: '519663077', user: 101}
+  model: Dentist.patient
+  pk: 80
+- fields: {PESEL: '41111587538', address: "Wojska Polskiego 84, 54-129 Wroc\u0142\
+      aw", birth_date: 1941-11-15, comment: null, first_name: Slawomir, insurance_number: aktualny,
+    insurance_type: 1, last_name: Sobczak, phone: '536725825', user: 102}
+  model: Dentist.patient
+  pk: 81
+- fields: {PESEL: '69042159000', address: "Rydla Lucjana 86, 53-633 Wroc\u0142aw",
+    birth_date: 1969-04-21, comment: null, first_name: Drugi, insurance_number: aktualny,
+    insurance_type: 2, last_name: Kozlowski, phone: '604614467', user: 103}
+  model: Dentist.patient
+  pk: 82
+- fields: {PESEL: '47042125869', address: "Batorego Stefana 65, 50-532 Wroc\u0142\
+      aw", birth_date: 1947-04-21, comment: null, first_name: Hajnrich, insurance_number: aktualny,
+    insurance_type: 3, last_name: Chmielewski, phone: '699819556', user: 104}
+  model: Dentist.patient
+  pk: 83
+- fields: {PESEL: '82101025869', address: "Wieniawskiego Henryka 82, 50-505 Wroc\u0142\
+      aw", birth_date: 1982-10-10, comment: null, first_name: Ksenia, insurance_number: aktualny,
+    insurance_type: 4, last_name: Adamska, phone: '699216914', user: 105}
+  model: Dentist.patient
+  pk: 84
+- fields: {PESEL: '82101012157', address: "Jesienna 130, 53-519 Wroc\u0142aw", birth_date: 1982-04-10,
+    comment: null, first_name: Antoni, insurance_number: aktualny, insurance_type: 5,
+    last_name: "Czerwi\u0144ski", phone: '721114531', user: 106}
+  model: Dentist.patient
+  pk: 85
+- fields: {PESEL: '92040196498', address: "Mechanik\xF3w 62, 51-628 Wroc\u0142aw;",
+    birth_date: 1992-04-01, comment: null, first_name: Franciszek, insurance_number: aktualny,
+    insurance_type: 6, last_name: Zawadzki, phone: '677850806', user: 107}
+  model: Dentist.patient
+  pk: 86
+- fields: {PESEL: '82041031894', address: "Objazdowa 100, 50-357 Wroc\u0142aw", birth_date: 1982-04-10,
+    comment: null, first_name: Malwina, insurance_number: aktualny, insurance_type: 7,
+    last_name: "Syma\u0144ska", phone: '538353817', user: 108}
+  model: Dentist.patient
+  pk: 87
+- fields: {PESEL: '87092192028', address: "Krucza 11, 51-116 Wroc\u0142aw", birth_date: 1987-09-21,
+    comment: null, first_name: Kazimiera, insurance_number: aktualny, insurance_type: 8,
+    last_name: "Wi\u015Bniewska", phone: '884016481', user: 109}
+  model: Dentist.patient
+  pk: 88
+- fields: {PESEL: '68120366932', address: "Gazdy 119, 54-102 Wroc\u0142aw", birth_date: 1968-12-03,
+    comment: null, first_name: "Lechos\u0142awa", insurance_number: aktualny, insurance_type: 9,
+    last_name: Nowakowska, phone: '678376592', user: 110}
+  model: Dentist.patient
+  pk: 89
+- fields: {PESEL: '65111723697', address: "Ondraszka 94, 50-456 Wroc\u0142aw", birth_date: 1965-11-17,
+    comment: null, first_name: Krystian, insurance_number: aktualny, insurance_type: 10,
+    last_name: "D\u0105browski", phone: '722410301', user: 111}
+  model: Dentist.patient
+  pk: 90
+- fields: {PESEL: '42072845244', address: "Czy\u017Cyk\xF3w 117, 54-129 Wroc\u0142\
+      aw", birth_date: 1942-07-28, comment: null, first_name: Julitta, insurance_number: aktualny,
+    insurance_type: 1, last_name: "Kami\u0144ska", phone: '798403956', user: 112}
+  model: Dentist.patient
+  pk: 91
+- fields: {PESEL: '81061101408', address: "D\u0105browskiego Jaros\u0142awa 3, 53-633\
+      \ Wroc\u0142aw", birth_date: 1981-06-11, comment: null, first_name: Cibor, insurance_number: aktualny,
+    insurance_type: 2, last_name: Majewski, phone: '602773559', user: 113}
+  model: Dentist.patient
+  pk: 92
+- fields: {PESEL: '31020789107', address: "Filaret\xF3w 115, 50-532 Wroc\u0142aw",
+    birth_date: 1931-02-07, comment: null, first_name: Egidiusz, insurance_number: aktualny,
+    insurance_type: 3, last_name: Borkowski, phone: '664530862', user: 114}
+  model: Dentist.patient
+  pk: 93
+- fields: {PESEL: '77043023286', address: "Architekt\xF3w 86, 50-505 Wroc\u0142aw",
+    birth_date: 1977-04-30, comment: null, first_name: Dariusz, insurance_number: aktualny,
+    insurance_type: 4, last_name: Chmielewski, phone: '786622647', user: 115}
+  model: Dentist.patient
+  pk: 94
+- fields: {PESEL: '30020789107', address: "Filaret\xF3w 114, 53-519 Wroc\u0142aw",
+    birth_date: 1977-04-30, comment: null, first_name: Marzena, insurance_number: aktualny,
+    insurance_type: 5, last_name: Ostrowska, phone: '666530862', user: 116}
+  model: Dentist.patient
+  pk: 95
+- fields: {PESEL: '87042340853', address: "Stru\u017Ceckiego Jana 120, 51-628 Wroc\u0142\
+      aw;", birth_date: 1987-04-23, comment: null, first_name: Gracja, insurance_number: aktualny,
+    insurance_type: 6, last_name: Majewska, phone: '512513584', user: 117}
+  model: Dentist.patient
+  pk: 96
+- fields: {PESEL: '50120592875', address: "Jagiello\u0144ska 33, 50-357 Wroc\u0142\
+      aw", birth_date: 1950-12-05, comment: null, first_name: Zdzislawa, insurance_number: aktualny,
+    insurance_type: 7, last_name: Kaczmarek, phone: '604256345', user: 118}
+  model: Dentist.patient
+  pk: 97
+- fields: {PESEL: '61082862355', address: "Muzyczna 96, 51-116 Wroc\u0142aw", birth_date: 1961-08-28,
+    comment: null, first_name: Ludwik, insurance_number: aktualny, insurance_type: 8,
+    last_name: Kowalczyk, phone: '881419408', user: 119}
+  model: Dentist.patient
+  pk: 98
+- fields: {PESEL: '46010121249', address: "\u0141o\u015Bnicka 138, 54-102 Wroc\u0142\
+      aw", birth_date: 1946-01-01, comment: null, first_name: Serafin, insurance_number: aktualny,
+    insurance_type: 9, last_name: Kaczmarek, phone: '884354568', user: 120}
+  model: Dentist.patient
+  pk: 99
+- fields: {PESEL: '81033087727', address: "Marsza\u0142kowska 75, 50-456 Wroc\u0142\
+      aw", birth_date: 1981-03-30, comment: null, first_name: Zdzislaw, insurance_number: aktualny,
+    insurance_type: 10, last_name: "Koz\u0142owski", phone: '538514908', user: 121}
+  model: Dentist.patient
+  pk: 100
+- fields: {PESEL: '71080324740', address: "Masarska 31, 54-129 Wroc\u0142aw", birth_date: 1971-08-03,
+    comment: null, first_name: Danuta, insurance_number: aktualny, insurance_type: 1,
+    last_name: Duda, phone: '538914859', user: 122}
+  model: Dentist.patient
+  pk: 101
+- fields: {PESEL: '69051291119', address: "Tokarska 102, 53-633 Wroc\u0142aw", birth_date: 1969-05-12,
+    comment: null, first_name: Rajmund, insurance_number: aktualny, insurance_type: 2,
+    last_name: "Paw\u0142owski", phone: '782625156', user: 123}
+  model: Dentist.patient
+  pk: 102
+- fields: {PESEL: '77122779431', address: "Tkacka 21, 50-532 Wroc\u0142aw", birth_date: 1977-12-27,
+    comment: null, first_name: Katarzyna, insurance_number: aktualny, insurance_type: 3,
+    last_name: Adamczyk, phone: '722281179', user: 124}
+  model: Dentist.patient
+  pk: 103
+- fields: {PESEL: '76032351478', address: "Komandorska 85, 50-505 Wroc\u0142aw", birth_date: 1976-03-23,
+    comment: null, first_name: Natasza, insurance_number: aktualny, insurance_type: 4,
+    last_name: "Zaj\u0105c", phone: '534247012', user: 125}
+  model: Dentist.patient
+  pk: 104
+- fields: {PESEL: '42090808164', address: "Petyhorska 8, 53-519 Wroc\u0142aw", birth_date: 1942-09-08,
+    comment: null, first_name: Cyryl, insurance_number: aktualny, insurance_type: 5,
+    last_name: Rutkowski, phone: '789673981', user: 126}
+  model: Dentist.patient
+  pk: 105
+- fields: {PESEL: '80071421072', address: "Ko\u015Bciuszki Tadeusza 120, 51-628 Wroc\u0142\
+      aw;", birth_date: 1980-07-14, comment: null, first_name: Sylwia, insurance_number: aktualny,
+    insurance_type: 6, last_name: "Koz\u0142owska", phone: '692916518', user: 127}
+  model: Dentist.patient
+  pk: 106
+- fields: {PESEL: '60012803668', address: "Peszte\u0144ska 145, 50-357 Wroc\u0142\
+      aw", birth_date: 1960-01-28, comment: null, first_name: Kornelia, insurance_number: aktualny,
+    insurance_type: 7, last_name: Nowakowska, phone: '677353699', user: 128}
+  model: Dentist.patient
+  pk: 107
+- fields: {PESEL: '79011071428', address: "Baczy\u0144skiego Krzysztofa Kamila 129,\
+      \ 51-116 Wroc\u0142aw", birth_date: 1979-01-10, comment: null, first_name: Lucjan,
+    insurance_number: aktualny, insurance_type: 8, last_name: "D\u0105browski", phone: '886533376',
+    user: 129}
+  model: Dentist.patient
+  pk: 108
+- fields: {PESEL: '53102080919', address: "\u015Awi\u0119tokrzyska 140, 54-102 Wroc\u0142\
+      aw", birth_date: 1953-10-20, comment: null, first_name: Egidiusz, insurance_number: aktualny,
+    insurance_type: 9, last_name: Walczak, phone: '602011722', user: 130}
+  model: Dentist.patient
+  pk: 109
+- fields: {PESEL: '44042940186', address: "Zientary Malewskiej Marii 150, 50-456 Wroc\u0142\
+      aw", birth_date: 1944-04-29, comment: null, first_name: Krzysztof, insurance_number: aktualny,
+    insurance_type: 10, last_name: "G\xF3rski", phone: '794683972', user: 131}
+  model: Dentist.patient
+  pk: 110
+- fields: {PESEL: '38040121483', address: "\u0141\xF3dzka 72, 54-129 Wroc\u0142aw",
+    birth_date: 1938-04-01, comment: null, first_name: Wlodek, insurance_number: aktualny,
+    insurance_type: 1, last_name: "Jab\u0142o\u0144ski", phone: '781289897', user: 132}
+  model: Dentist.patient
+  pk: 111
+- fields: {PESEL: '82050311792', address: "Jana Paw\u0142a 119, 53-633 Wroc\u0142\
+      aw", birth_date: 1982-05-03, comment: null, first_name: Karol, insurance_number: aktualny,
+    insurance_type: 2, last_name: "Szczepa\u0144ski", phone: '608304709', user: 133}
+  model: Dentist.patient
+  pk: 112
+- fields: {PESEL: '49053103957', address: "Sobieszewska 88, 50-532 Wroc\u0142aw",
+    birth_date: 1949-05-31, comment: null, first_name: Kazimiera, insurance_number: aktualny,
+    insurance_type: 3, last_name: "Jab\u0142o\u0144ska", phone: '674692327', user: 134}
+  model: Dentist.patient
+  pk: 113
+- fields: {PESEL: '33061834552', address: "Przy\u0142ubska 33, 50-505 Wroc\u0142aw",
+    birth_date: 1933-06-18, comment: null, first_name: Zofia, insurance_number: aktualny,
+    insurance_type: 4, last_name: Nowicka, phone: '661486953', user: 135}
+  model: Dentist.patient
+  pk: 114
+- fields: {PESEL: '79060935016', address: "Rejtana Tadeusza 108, 53-519 Wroc\u0142\
+      aw", birth_date: 1979-06-09, comment: null, first_name: Grzegorz, insurance_number: aktualny,
+    insurance_type: 5, last_name: Zawadzki, phone: '513792488', user: 136}
+  model: Dentist.patient
+  pk: 115
+- fields: {PESEL: '27110249273', address: "Erenburga 66, 51-628 Wroc\u0142aw;", birth_date: 1927-11-02,
+    comment: null, first_name: Wisia, insurance_number: aktualny, insurance_type: 6,
+    last_name: Czarnecka, phone: '534838317', user: 137}
+  model: Dentist.patient
+  pk: 116
+- fields: {PESEL: '37020563325', address: "Gaw\u0119dziarzy 69, 50-357 Wroc\u0142\
+      aw", birth_date: 1937-02-05, comment: null, first_name: Hieronim, insurance_number: aktualny,
+    insurance_type: 7, last_name: Kalinowski, phone: '886476362', user: 138}
+  model: Dentist.patient
+  pk: 117
+- fields: {PESEL: '54081069366', address: "Mieszka I 16, 51-116 Wroc\u0142aw", birth_date: 1954-08-10,
+    comment: null, first_name: Klemens, insurance_number: aktualny, insurance_type: 8,
+    last_name: Walczak, phone: '536739842', user: 139}
+  model: Dentist.patient
+  pk: 118
+- fields: {PESEL: '45031218732', address: "Jutrzenki 133, 54-102 Wroc\u0142aw", birth_date: 1945-03-12,
+    comment: null, first_name: Felicjan, insurance_number: aktualny, insurance_type: 9,
+    last_name: Wysocki, phone: '518254827', user: 140}
+  model: Dentist.patient
+  pk: 119
+- fields: {PESEL: '78082237326', address: "P\u0142o\u0144ska 75, 50-456 Wroc\u0142\
+      aw", birth_date: 1978-08-22, comment: null, first_name: Mscislaw, insurance_number: aktualny,
+    insurance_type: 10, last_name: "Jablo\u0144ski", phone: '537133694', user: 141}
+  model: Dentist.patient
+  pk: 120
+- fields: {PESEL: '92070752015', address: "Gnie\u017Anie\u0144ska 79, 54-129 Wroc\u0142\
+      aw", birth_date: 1992-07-07, comment: null, first_name: Szczesny, insurance_number: aktualny,
+    insurance_type: 1, last_name: Kaczmarek, phone: '798805725', user: 142}
+  model: Dentist.patient
+  pk: 121
+- fields: {PESEL: '75110576158', address: "\u015Awi\u0119tego Wojciecha 134, 53-633\
+      \ Wroc\u0142aw", birth_date: 1975-11-05, comment: null, first_name: "Wis\u0142\
+      aw", insurance_number: aktualny, insurance_type: 2, last_name: "D\u0105browski",
+    phone: '788333388', user: 143}
+  model: Dentist.patient
+  pk: 122
+- fields: {PESEL: '71020208813', address: "Od\u0142ogi 73, 50-532 Wroc\u0142aw", birth_date: 1971-02-02,
+    comment: null, first_name: Franciszka, insurance_number: aktualny, insurance_type: 3,
+    last_name: "G\xF3rska", phone: '537250412', user: 144}
+  model: Dentist.patient
+  pk: 123
+- fields: {PESEL: '75060199236', address: "Rajska 86, 50-505 Wroc\u0142aw", birth_date: 1975-06-01,
+    comment: null, first_name: Halina, insurance_number: aktualny, insurance_type: 4,
+    last_name: Kucharska, phone: '793865056', user: 145}
+  model: Dentist.patient
+  pk: 124
+- fields: {PESEL: '60062747297', address: "Ma\u0142opolska 97, 53-519 Wroc\u0142aw",
+    birth_date: 1960-06-27, comment: null, first_name: Henryk, insurance_number: aktualny,
+    insurance_type: 5, last_name: "Wi\u015Bniewski", phone: '539526117', user: 146}
+  model: Dentist.patient
+  pk: 125
+- fields: {PESEL: '28032714650', address: "Arsenowa 138, 51-628 Wroc\u0142aw", birth_date: 1928-03-27,
+    comment: null, first_name: Julita, insurance_number: aktualny, insurance_type: 6,
+    last_name: Adamczyk, phone: '785086473', user: 147}
+  model: Dentist.patient
+  pk: 126
+- fields: {PESEL: '38061534068', address: "Radosna 74, 50-357 Wroc\u0142aw", birth_date: 1938-06-15,
+    comment: null, first_name: "W\u0142adys\u0142awa", insurance_number: aktualny,
+    insurance_type: 7, last_name: Adamczyk, phone: '883352440', user: 148}
+  model: Dentist.patient
+  pk: 127
+- fields: {PESEL: '73051664200', address: "Kryniczna 82, 51-116 Wroc\u0142aw", birth_date: 1973-05-16,
+    comment: null, first_name: Berta, insurance_number: aktualny, insurance_type: 8,
+    last_name: "Kr\xF3l", phone: '799504711', user: 149}
+  model: Dentist.patient
+  pk: 128
+- fields: {PESEL: '74010598699', address: "Reduta Miejska 119, 54-102 Wroc\u0142aw",
+    birth_date: 1974-01-05, comment: null, first_name: "W\u0142odek", insurance_number: aktualny,
+    insurance_type: 9, last_name: Pawlowski, phone: '721957032', user: 150}
+  model: Dentist.patient
+  pk: 129
+- fields: {PESEL: '68070483965', address: "Ja\u015Bminowa 114, 50-456 Wroc\u0142aw",
+    birth_date: 1968-07-04, comment: null, first_name: Patrycja, insurance_number: aktualny,
+    insurance_type: 10, last_name: Adamska, phone: '512934935', user: 151}
+  model: Dentist.patient
+  pk: 130
+- fields: {PESEL: '34032154347', address: "\u0141ucznicza 51, 54-129 Wroc\u0142aw",
+    birth_date: 1934-03-21, comment: null, first_name: Kazimierz, insurance_number: aktualny,
+    insurance_type: 1, last_name: Chmielewski, phone: '671451688', user: 152}
+  model: Dentist.patient
+  pk: 131
+- fields: {PESEL: '70061034629', address: "Akacjowa 132, 53-633 Wroc\u0142aw", birth_date: 1970-06-10,
+    comment: null, first_name: Emeryk, insurance_number: aktualny, insurance_type: 2,
+    last_name: "Jab\u0142o\u0144ski", phone: '727030652', user: 153}
+  model: Dentist.patient
+  pk: 132
+- fields: {PESEL: '28052664957', address: "Chlebowa 33, 50-532 Wroc\u0142aw", birth_date: 1928-05-26,
+    comment: null, first_name: Beata, insurance_number: aktualny, insurance_type: 3,
+    last_name: Wysocka, phone: '694190052', user: 154}
+  model: Dentist.patient
+  pk: 133
+- fields: {PESEL: '52070442244', address: "Zachodnia 107, 50-505 Wroc\u0142aw", birth_date: 1952-07-04,
+    comment: null, first_name: Iwo, insurance_number: aktualny, insurance_type: 4,
+    last_name: Kucharski, phone: '607038093', user: 155}
+  model: Dentist.patient
+  pk: 134
+- fields: {PESEL: '73050928976', address: "Sibeliusa Jana 139, 53-519 Wroc\u0142aw",
+    birth_date: 1973-05-09, comment: null, first_name: "Dobros\u0142awa", insurance_number: aktualny,
+    insurance_type: 5, last_name: Wysocka, phone: '888015555', user: 156}
+  model: Dentist.patient
+  pk: 135
+- fields: {PESEL: '88051230975', address: "Grunwaldzka 14, 51-628 Wroc\u0142aw;",
+    birth_date: 1988-05-12, comment: null, first_name: Lucyna, insurance_number: aktualny,
+    insurance_type: 6, last_name: Olszewska, phone: '532623814', user: 157}
+  model: Dentist.patient
+  pk: 136
+- fields: {PESEL: '69021112185', address: "Szotkowicka 27, 50-357 Wroc\u0142aw", birth_date: 1969-02-11,
+    comment: null, first_name: Krystiana, insurance_number: aktualny, insurance_type: 7,
+    last_name: Zawadzka, phone: '668947171', user: 158}
+  model: Dentist.patient
+  pk: 137
+- fields: {PESEL: '54081388454', address: "Okiennik 47, 51-116 Wroc\u0142aw", birth_date: 1954-08-13,
+    comment: null, first_name: Dawid, insurance_number: aktualny, insurance_type: 8,
+    last_name: "D\u0105browski", phone: '602847689', user: 159}
+  model: Dentist.patient
+  pk: 138
+- fields: {PESEL: '42113013786', address: "Czaki Hanki 54, 54-102 Wroc\u0142aw", birth_date: 1942-11-30,
+    comment: null, first_name: Cibor, insurance_number: aktualny, insurance_type: 9,
+    last_name: Chmielewski, phone: '669913137', user: 160}
+  model: Dentist.patient
+  pk: 139
+- fields: {PESEL: '52020776762', address: "Orla 101, 50-456 Wroc\u0142aw", birth_date: 1952-02-07,
+    comment: null, first_name: Justyn, insurance_number: aktualny, insurance_type: 10,
+    last_name: "Jasi\u0144ski", phone: '607117604', user: 161}
+  model: Dentist.patient
+  pk: 140
+- fields: {PESEL: '40072881101', address: "Pokoju 51, 54-129 Wroc\u0142aw", birth_date: 1940-07-28,
+    comment: null, first_name: "W\u0142adys\u0142awa", insurance_number: aktualny,
+    insurance_type: 1, last_name: Wysocka, phone: '666024952', user: 162}
+  model: Dentist.patient
+  pk: 141
+- fields: {PESEL: '46010624094', address: "Zau\u0142ek Podhala\u0144ski 62, 53-633\
+      \ Wroc\u0142aw", birth_date: 1946-01-06, comment: null, first_name: Anna, insurance_number: aktualny,
+    insurance_type: 2, last_name: Ostrowska, phone: '678244856', user: 163}
+  model: Dentist.patient
+  pk: 142
+- fields: {PESEL: '29052659314', address: "S\u0142owackiego Juliusza 143, 50-532 Wroc\u0142\
+      aw", birth_date: 1929-05-26, comment: '', first_name: Karina, insurance_number: aktualny,
+    insurance_type: 3, last_name: Borkowska, phone: '', user: 164}
+  model: Dentist.patient
+  pk: 143
+- fields: {PESEL: '82071206415', address: "Rynek 79, 50-505 Wroc\u0142aw", birth_date: 1982-07-12,
+    comment: null, first_name: Karina, insurance_number: aktualny, insurance_type: 4,
+    last_name: Kalinowska, phone: '538228486', user: 165}
+  model: Dentist.patient
+  pk: 144
+- fields: {PESEL: '91090215283', address: "Kaczowa 12, 53-519 Wroc\u0142aw", birth_date: 1991-09-02,
+    comment: null, first_name: "Bo\u017Cena", insurance_number: aktualny, insurance_type: 5,
+    last_name: Kucharska, phone: '518010976', user: 166}
+  model: Dentist.patient
+  pk: 145
+- fields: {PESEL: '62050598102', address: "Obiegowa 150, 51-628 Wroc\u0142aw;", birth_date: 1962-05-05,
+    comment: null, first_name: Seweryn, insurance_number: aktualny, insurance_type: 6,
+    last_name: "Jasi\u0144ski", phone: '796089858', user: 167}
+  model: Dentist.patient
+  pk: 146
+- fields: {PESEL: '87030620385', address: "Fordo\u0144ska 71, 50-357 Wroc\u0142aw",
+    birth_date: 1987-03-06, comment: null, first_name: "Bronis\u0142awa", insurance_number: aktualny,
+    insurance_type: 7, last_name: Zawadzka, phone: '516308836', user: 168}
+  model: Dentist.patient
+  pk: 147
+- fields: {PESEL: '75021043288', address: "Opolska 108, 51-116 Wroc\u0142aw", birth_date: 1975-02-10,
+    comment: null, first_name: Malwina, insurance_number: aktualny, insurance_type: 8,
+    last_name: "Czerwi\u0144ska", phone: '671858632', user: 169}
+  model: Dentist.patient
+  pk: 148
+- fields: {PESEL: '36041788867', address: "Rozdro\u017Ce 141, 54-102 Wroc\u0142aw",
+    birth_date: 1936-04-17, comment: null, first_name: Stefania, insurance_number: aktualny,
+    insurance_type: 9, last_name: Ostrowska, phone: '667412257', user: 170}
+  model: Dentist.patient
+  pk: 149
+- fields: {PESEL: '81042076473', address: "Mieszka I 50, 50-456 Wroc\u0142aw", birth_date: 1981-04-20,
+    comment: null, first_name: Janusz, insurance_number: aktualny, insurance_type: 10,
+    last_name: Olszewski, phone: '885555287', user: 171}
+  model: Dentist.patient
+  pk: 150
+- fields: {PESEL: '53072004982', address: "Toru\u0144ska 148, 54-129 Wroc\u0142aw",
+    birth_date: 1953-07-20, comment: null, first_name: Urjasz, insurance_number: aktualny,
+    insurance_type: 1, last_name: Borkowski, phone: '795840922', user: 172}
+  model: Dentist.patient
+  pk: 151
+- fields: {PESEL: '59092051940', address: "Ustrzycka 105, 53-633 Wroc\u0142aw", birth_date: 1959-09-20,
+    comment: null, first_name: Urszula, insurance_number: aktualny, insurance_type: 2,
+    last_name: "Zaj\u0105c", phone: '787469382', user: 173}
+  model: Dentist.patient
+  pk: 152
+- fields: {PESEL: '28070869684', address: "Cedy\u0144ska 139, 50-532 Wroc\u0142aw",
+    birth_date: 1928-07-08, comment: null, first_name: Patryk, insurance_number: aktualny,
+    insurance_type: 3, last_name: "D\u0105browski", phone: '666778135', user: 174}
+  model: Dentist.patient
+  pk: 153
+- fields: {PESEL: '43022400715', address: "Je\u017Adziecka 130, 50-505 Wroc\u0142\
+      aw", birth_date: 1943-02-24, comment: null, first_name: Wioletta, insurance_number: aktualny,
+    insurance_type: 4, last_name: Wieczorek, phone: '602948009', user: 175}
+  model: Dentist.patient
+  pk: 154
+- fields: {PESEL: '60083061237', address: "Czo\u0142gist\xF3w 42, 53-519 Wroc\u0142\
+      aw", birth_date: 1960-08-30, comment: null, first_name: Jaropelk, insurance_number: aktualny,
+    insurance_type: 5, last_name: Wysocki, phone: '661959717', user: 176}
+  model: Dentist.patient
+  pk: 155
+- fields: {PESEL: '38020989100', address: "Sosnowa 101, 51-628 Wroc\u0142aw;", birth_date: 1938-02-09,
+    comment: null, first_name: Krzysztof, insurance_number: aktualny, insurance_type: 6,
+    last_name: "Jab\u0142o\u0144ski", phone: '787856606', user: 177}
+  model: Dentist.patient
+  pk: 156
+- fields: {PESEL: '47030620385', address: "Fordo\u0144ska 71, 50-357 Wroc\u0142aw",
+    birth_date: 1987-03-06, comment: null, first_name: Aniela, insurance_number: aktualny,
+    insurance_type: 7, last_name: Pawlak, phone: '516308836', user: 178}
+  model: Dentist.patient
+  pk: 157
+- fields: {PESEL: '55021043288', address: "Opolska 108, 51-116 Wroc\u0142aw", birth_date: 1975-02-10,
+    comment: '', first_name: Jurek, insurance_number: aktualny, insurance_type: 8,
+    last_name: Borkowski, phone: '', user: 179}
+  model: Dentist.patient
+  pk: 158
+- fields: {PESEL: '36041488867', address: "Rozdro\u017Ce 141, 54-102 Wroc\u0142aw",
+    birth_date: 1936-04-17, comment: null, first_name: "Mi\u0142osz", insurance_number: aktualny,
+    insurance_type: 9, last_name: "Szczepa\u0144ski", phone: '667412257', user: 180}
+  model: Dentist.patient
+  pk: 159
+- fields: {PESEL: '81042016473', address: "Mieszka I 50, 50-456 Wroc\u0142aw", birth_date: 1981-04-20,
+    comment: null, first_name: Iga, insurance_number: aktualny, insurance_type: 10,
+    last_name: Dudek, phone: '885555287', user: 181}
+  model: Dentist.patient
+  pk: 160
+- fields: {PESEL: '53072014982', address: "Toru\u0144ska 148, 54-129 Wroc\u0142aw",
+    birth_date: 1953-07-20, comment: null, first_name: Alicja, insurance_number: aktualny,
+    insurance_type: 1, last_name: Walczak, phone: '795840922', user: 182}
+  model: Dentist.patient
+  pk: 161
+- fields: {PESEL: '59092053940', address: "Ustrzycka 105, 53-633 Wroc\u0142aw", birth_date: 1959-09-20,
+    comment: null, first_name: Iwo, insurance_number: aktualny, insurance_type: 2,
+    last_name: Grabowski, phone: '787469382', user: 183}
+  model: Dentist.patient
+  pk: 162
+- fields: {PESEL: '28070869664', address: "Cedy\u0144ska 139, 50-532 Wroc\u0142aw",
+    birth_date: 1928-07-08, comment: null, first_name: "Miko\u0142aj", insurance_number: aktualny,
+    insurance_type: 3, last_name: Sawicki, phone: '666778135', user: 184}
+  model: Dentist.patient
+  pk: 163
+- fields: {PESEL: '43022400705', address: "Je\u017Adziecka 130, 50-505 Wroc\u0142\
+      aw", birth_date: 1943-02-24, comment: null, first_name: Bartosz, insurance_number: aktualny,
+    insurance_type: 4, last_name: Wieczorek, phone: '602948009', user: 185}
+  model: Dentist.patient
+  pk: 164
+- fields: {PESEL: '60083061257', address: "Czo\u0142gist\xF3w 42, 53-519 Wroc\u0142\
+      aw", birth_date: 1960-08-30, comment: null, first_name: "\u015Awi\u0119tomierz",
+    insurance_number: aktualny, insurance_type: 5, last_name: Kwiatkowski, phone: '661959717',
+    user: 186}
+  model: Dentist.patient
+  pk: 165
+- fields: {PESEL: '38020989130', address: "Sosnowa 101, 51-628 Wroc\u0142aw;", birth_date: 1938-02-09,
+    comment: null, first_name: Katarzyna, insurance_number: aktualny, insurance_type: 6,
+    last_name: "G\xF3rska", phone: '787856606', user: 187}
+  model: Dentist.patient
+  pk: 166
+- fields: {PESEL: '55072205439', address: "\u015Awi\u0119tego Leonarda 106, 50-357\
+      \ Wroc\u0142aw", birth_date: 1955-07-22, comment: null, first_name: Danuta,
+    insurance_number: aktualny, insurance_type: 7, last_name: "D\u0105browska", phone: '723679233',
+    user: 188}
+  model: Dentist.patient
+  pk: 167
+- fields: {PESEL: '29051042459', address: "Tarnowska 143, 51-116 Wroc\u0142aw", birth_date: 1929-05-10,
+    comment: null, first_name: Hieronim, insurance_number: aktualny, insurance_type: 8,
+    last_name: "Szczepa\u0144ski", phone: '785288428', user: 189}
+  model: Dentist.patient
+  pk: 168
+- fields: {PESEL: '32011081079', address: "Migda\u0142owa 131, 54-102 Wroc\u0142aw",
+    birth_date: 1932-01-10, comment: null, first_name: Agnieszka, insurance_number: aktualny,
+    insurance_type: 9, last_name: Adamska, phone: '887899072', user: 190}
+  model: Dentist.patient
+  pk: 169
+- fields: {PESEL: '46020980965', address: "Mi\u0119dzyborska 40, 50-456 Wroc\u0142\
+      aw", birth_date: 1946-02-09, comment: null, first_name: Krystyna, insurance_number: aktualny,
+    insurance_type: 10, last_name: Ostrowska, phone: '602228754', user: 191}
+  model: Dentist.patient
+  pk: 170
+- fields: {PESEL: '57060410001', address: "Wr\u0119czycka 120, 54-129 Wroc\u0142aw",
+    birth_date: 1957-06-04, comment: null, first_name: Augustyn, insurance_number: aktualny,
+    insurance_type: 1, last_name: "Syma\u0144ski", phone: '605167580', user: 192}
+  model: Dentist.patient
+  pk: 171
+- fields: {PESEL: '77092418152', address: "Koszykarska 90, 53-633 Wroc\u0142aw", birth_date: 1977-09-24,
+    comment: null, first_name: Krystyn, insurance_number: aktualny, insurance_type: 2,
+    last_name: Sobczak, phone: '661590524', user: 193}
+  model: Dentist.patient
+  pk: 172
+- fields: {PESEL: '81072006154', address: "Spichrzowa 42, 50-532 Wroc\u0142aw", birth_date: 1981-07-20,
+    comment: null, first_name: Lucjusz, insurance_number: aktualny, insurance_type: 3,
+    last_name: Kowalczyk, phone: '798945392', user: 194}
+  model: Dentist.patient
+  pk: 173
+- fields: {PESEL: '60010994498', address: "Bo\u017Cka Kazimierza 126, 50-505 Wroc\u0142\
+      aw", birth_date: 1960-01-09, comment: null, first_name: Wiga, insurance_number: aktualny,
+    insurance_type: 4, last_name: "Jasi\u0144ska", phone: '883156406', user: 195}
+  model: Dentist.patient
+  pk: 174
+- fields: {PESEL: '28052645686', address: "Waleczna 70, 53-519 Wroc\u0142aw", birth_date: 1928-05-26,
+    comment: null, first_name: Benedykt, insurance_number: aktualny, insurance_type: 5,
+    last_name: Jaworski, phone: '698981547', user: 196}
+  model: Dentist.patient
+  pk: 175
+- fields: {PESEL: '34060523111', address: "Stabika Karola 11, 51-628 Wroc\u0142aw;",
+    birth_date: 1934-06-05, comment: null, first_name: Gabriela, insurance_number: aktualny,
+    insurance_type: 6, last_name: Ostrowska, phone: '798499535', user: 197}
+  model: Dentist.patient
+  pk: 176
+- fields: {PESEL: '57052032596', address: "Artylerzyst\xF3w 24, 50-357 Wroc\u0142\
+      aw", birth_date: 1957-05-20, comment: '', first_name: Nadzieja, insurance_number: aktualny,
+    insurance_type: 7, last_name: Tomaszewska, phone: '', user: 198}
+  model: Dentist.patient
+  pk: 177
+- fields: {PESEL: '76051970195', address: "Kazimierza Jagiello\u0144czyka 137, 51-116\
+      \ Wroc\u0142aw", birth_date: 1976-05-19, comment: null, first_name: Gracja,
+    insurance_number: aktualny, insurance_type: 8, last_name: "Wo\u017Aniak", phone: '673423531',
+    user: 199}
+  model: Dentist.patient
+  pk: 178
+- fields: {PESEL: '70081213697', address: "Czajkowskiego Piotra 107, 54-102 Wroc\u0142\
+      aw", birth_date: 1970-08-12, comment: null, first_name: "\u015Awi\u0119tos\u0142\
+      aw", insurance_number: aktualny, insurance_type: 9, last_name: "D\u0105browski",
+    phone: '519259508', user: 200}
+  model: Dentist.patient
+  pk: 179
+- fields: {PESEL: '64101854764', address: "Wrzesi\u0144ska 27, 50-456 Wroc\u0142aw",
+    birth_date: 1964-10-01, comment: null, first_name: "Bogus\u0142aw", insurance_number: aktualny,
+    insurance_type: 10, last_name: "D\u0105browski", phone: '882818614', user: 201}
+  model: Dentist.patient
+  pk: 180
+- fields: {PESEL: '39033055789', address: "Or\u0142owska 90, 54-129 Wroc\u0142aw",
+    birth_date: 1939-03-30, comment: null, first_name: Gerwazy, insurance_number: aktualny,
+    insurance_type: 1, last_name: Majewski, phone: '787655571', user: 202}
+  model: Dentist.patient
+  pk: 181
+- fields: {PESEL: '32011651733', address: "Opalowa 70, 53-633 Wroc\u0142aw", birth_date: 1932-01-16,
+    comment: null, first_name: Luiza, insurance_number: aktualny, insurance_type: 2,
+    last_name: Jaworska, phone: '886400709', user: 203}
+  model: Dentist.patient
+  pk: 182
+- fields: {PESEL: '68072912164', address: "Sienkiewicza Henryka 141, 50-532 Wroc\u0142\
+      aw", birth_date: 1968-07-29, comment: null, first_name: Klimek, insurance_number: aktualny,
+    insurance_type: 3, last_name: Czerwinski, phone: '698271869', user: 204}
+  model: Dentist.patient
+  pk: 183
+- fields: {PESEL: '53080405083', address: "Bartoszycka 83, 50-505 Wroc\u0142aw", birth_date: 1953-08-04,
+    comment: null, first_name: Kazimiera, insurance_number: aktualny, insurance_type: 4,
+    last_name: "Kr\xF3l", phone: '782387606', user: 205}
+  model: Dentist.patient
+  pk: 184
+- fields: {PESEL: '40071524458', address: "Polna 36, 53-519 Wroc\u0142aw", birth_date: 1940-07-15,
+    comment: null, first_name: Slawomir, insurance_number: aktualny, insurance_type: 5,
+    last_name: Kowalczyk, phone: '512745988', user: 206}
+  model: Dentist.patient
+  pk: 185
+- fields: {PESEL: '65062744817', address: "Kacze\u0144cowa 138, 51-628 Wroc\u0142\
+      aw;", birth_date: 1965-06-27, comment: null, first_name: Wiktor, insurance_number: aktualny,
+    insurance_type: 6, last_name: Pawlak, phone: '667908441', user: 207}
+  model: Dentist.patient
+  pk: 186
+- fields: {PESEL: '35010815571', address: "Sowi\u0144skiego J\xF3zefa 104, 50-357\
+      \ Wroc\u0142aw", birth_date: 1935-01-08, comment: null, first_name: Celina,
+    insurance_number: aktualny, insurance_type: 7, last_name: Olszewska, phone: '606791109',
+    user: 208}
+  model: Dentist.patient
+  pk: 187
+- fields: {PESEL: '64013150088', address: "Pionier\xF3w 30, 51-116 Wroc\u0142aw",
+    birth_date: 1964-01-13, comment: null, first_name: Longin, insurance_number: aktualny,
+    insurance_type: 8, last_name: "Zaj\u0105c", phone: '728598006', user: 209}
+  model: Dentist.patient
+  pk: 188
+- fields: {PESEL: '37072365999', address: "Dobka z Ole\u015Bnicy 37, 54-102 Wroc\u0142\
+      aw", birth_date: 1937-07-23, comment: null, first_name: Walentyna, insurance_number: aktualny,
+    insurance_type: 9, last_name: Olszewska, phone: '514102985', user: 210}
+  model: Dentist.patient
+  pk: 189
+- fields: {PESEL: '76120627784', address: "Wolska 149, 50-456 Wroc\u0142aw", birth_date: 1976-12-06,
+    comment: null, first_name: Gracja, insurance_number: aktualny, insurance_type: 10,
+    last_name: Kucharska, phone: '789377363', user: 211}
+  model: Dentist.patient
+  pk: 190
+- fields: {PESEL: '67022324608', address: "Srebrna 79, 54-129 Wroc\u0142aw", birth_date: 1967-02-23,
+    comment: null, first_name: Roman, insurance_number: aktualny, insurance_type: 1,
+    last_name: Nowicki, phone: '531292168', user: 212}
+  model: Dentist.patient
+  pk: 191
+- fields: {PESEL: '60031188760', address: "Go\u0142dapska 89, 53-633 Wroc\u0142aw",
+    birth_date: 1960-03-11, comment: null, first_name: Antoni, insurance_number: aktualny,
+    insurance_type: 2, last_name: Adamczyk, phone: '532426479', user: 213}
+  model: Dentist.patient
+  pk: 192
+- fields: {PESEL: '86121975892', address: "Gronowa 61, 50-532 Wroc\u0142aw", birth_date: 1986-12-19,
+    comment: null, first_name: Anna, insurance_number: aktualny, insurance_type: 3,
+    last_name: "Paw\u0142owska", phone: '793410412', user: 214}
+  model: Dentist.patient
+  pk: 193
+- fields: {PESEL: '37061175219', address: "Ma\u0142y Rynek 25, 50-505 Wroc\u0142aw",
+    birth_date: 1937-06-11, comment: null, first_name: Tadeusz, insurance_number: aktualny,
+    insurance_type: 4, last_name: "G\xF3rski", phone: '723819635', user: 215}
+  model: Dentist.patient
+  pk: 194
+- fields: {PESEL: '68092176674', address: "Diany 94, 53-519 Wroc\u0142aw", birth_date: 1968-09-21,
+    comment: null, first_name: "Wis\u0142awa", insurance_number: aktualny, insurance_type: 5,
+    last_name: "Koz\u0142owska", phone: '512444758', user: 216}
+  model: Dentist.patient
+  pk: 195
+- fields: {PESEL: '63052937687', address: "Jesienna 50, 51-628 Wroc\u0142aw;", birth_date: 1963-05-29,
+    comment: null, first_name: Longin, insurance_number: aktualny, insurance_type: 6,
+    last_name: Jaworski, phone: '795883234', user: 217}
+  model: Dentist.patient
+  pk: 196
+- fields: {PESEL: '76033185971', address: "Ksi\u0119dza Pietkuna Witolda 112, 50-357\
+      \ Wroc\u0142aw", birth_date: 1976-03-31, comment: null, first_name: Walerian,
+    insurance_number: aktualny, insurance_type: 7, last_name: Grabowski, phone: '662282957',
+    user: 218}
+  model: Dentist.patient
+  pk: 197
+- fields: {PESEL: '87011396722', address: "Kasprzaka Marcina 123, 51-116 Wroc\u0142\
+      aw", birth_date: 1987-01-13, comment: null, first_name: Gabriela, insurance_number: aktualny,
+    insurance_type: 8, last_name: Tomaszewska, phone: '693052095', user: 219}
+  model: Dentist.patient
+  pk: 198
+- fields: {PESEL: '85102478838', address: "Mickiewicza Adama 34, 54-102 Wroc\u0142\
+      aw", birth_date: 1985-10-24, comment: null, first_name: Zofia, insurance_number: aktualny,
+    insurance_type: 9, last_name: Nowakowska, phone: '537105804', user: 220}
+  model: Dentist.patient
+  pk: 199
+- fields: {PESEL: '45021986814', address: "Podm\u0142y\u0144ska 128, 50-456 Wroc\u0142\
+      aw", birth_date: 1945-02-19, comment: null, first_name: Frydrych, insurance_number: aktualny,
+    insurance_type: 10, last_name: Maciejewski, phone: '677652459', user: 221}
+  model: Dentist.patient
+  pk: 200
+- fields: {PESEL: '45021558681', address: "Podm\u0142y\u0144ska 128, 50-456 Wroc\u0142\
+      aw", birth_date: 1945-02-19, comment: null, first_name: Jan, insurance_number: aktualny,
+    insurance_type: 10, last_name: Kowalski, phone: '677652459', user: null}
+  model: Dentist.patient
+  pk: 201
+- fields: {PESEL: '90070735675', address: "ul. Sportowa 122/10, 55-200 O\u0142awa",
+    birth_date: 1990-07-07, comment: null, first_name: "Jaros\u0142aw", insurance_number: '2012-12-31',
+    insurance_type: 8, last_name: "Bagi\u0144ski", phone: '678345271', user: null}
+  model: Dentist.patient
+  pk: 202
+- fields: {PESEL: '90011456372', address: ul. B. Chrobrego 58/10, birth_date: 1990-01-14,
+    comment: null, first_name: Damian, insurance_number: '2013-03-30', insurance_type: 13,
+    last_name: Romaniuk, phone: '867564271', user: null}
+  model: Dentist.patient
+  pk: 203
+- fields: {date: 2001-05-16, disease: 1, patient: 1}
+  model: Dentist.patient_diseases
+  pk: 1
+- fields: {date: 2005-05-21, disease: 1, patient: 2}
+  model: Dentist.patient_diseases
+  pk: 2
+- fields: {date: 2008-08-21, disease: 2, patient: 2}
+  model: Dentist.patient_diseases
+  pk: 3
+- fields: {date: 2007-07-17, disease: 5, patient: 3}
+  model: Dentist.patient_diseases
+  pk: 4
+- fields: {date: 2011-07-15, disease: 4, patient: 4}
+  model: Dentist.patient_diseases
+  pk: 5
+- fields: {date: 2000-01-01, disease: 1, patient: 4}
+  model: Dentist.patient_diseases
+  pk: 6
+- fields: {date: 2012-07-21, disease: 6, patient: 5}
+  model: Dentist.patient_diseases
+  pk: 7
+- fields: {date: 2008-11-21, disease: 5, patient: 6}
+  model: Dentist.patient_diseases
+  pk: 8
+- fields: {date: 2012-02-12, disease: 3, patient: 7}
+  model: Dentist.patient_diseases
+  pk: 9
+- fields: {date: 2012-03-15, disease: 3, patient: 8}
+  model: Dentist.patient_diseases
+  pk: 10
+- fields: {date: 2003-07-21, disease: 1, patient: 8}
+  model: Dentist.patient_diseases
+  pk: 11
+- fields: {date: 2012-07-21, disease: 4, patient: 8}
+  model: Dentist.patient_diseases
+  pk: 12
+- fields: {date: 2012-06-07, disease: 4, patient: 9}
+  model: Dentist.patient_diseases
+  pk: 13
+- fields: {date: 2012-03-21, disease: 7, patient: 10}
+  model: Dentist.patient_diseases
+  pk: 14
+- fields: {date: 2011-07-16, disease: 3, patient: 11}
+  model: Dentist.patient_diseases
+  pk: 15
+- fields: {date: 2009-02-21, disease: 3, patient: 12}
+  model: Dentist.patient_diseases
+  pk: 16
+- fields: {date: 2009-05-12, disease: 5, patient: 13}
+  model: Dentist.patient_diseases
+  pk: 17
+- fields: {date: 2012-09-21, disease: 6, patient: 13}
+  model: Dentist.patient_diseases
+  pk: 18
+- fields: {date: 2011-07-31, disease: 2, patient: 13}
+  model: Dentist.patient_diseases
+  pk: 19
+- fields: {date: 2012-07-12, disease: 3, patient: 14}
+  model: Dentist.patient_diseases
+  pk: 20
+- fields: {date: 2002-02-21, disease: 2, patient: 15}
+  model: Dentist.patient_diseases
+  pk: 21
+- fields: {date: 2009-07-09, disease: 7, patient: 16}
+  model: Dentist.patient_diseases
+  pk: 22
+- fields: {date: 2011-08-21, disease: 1, patient: 16}
+  model: Dentist.patient_diseases
+  pk: 23
+- fields: {date: 2012-02-11, disease: 4, patient: 17}
+  model: Dentist.patient_diseases
+  pk: 24
+- fields: {date: 2012-12-06, disease: 5, patient: 17}
+  model: Dentist.patient_diseases
+  pk: 25
+- fields: {date: 2002-05-26, disease: 2, patient: 18}
+  model: Dentist.patient_diseases
+  pk: 26
+- fields: {date: 2007-07-21, disease: 5, patient: 19}
+  model: Dentist.patient_diseases
+  pk: 27
+- fields: {date: 2012-07-21, disease: 7, patient: 20}
+  model: Dentist.patient_diseases
+  pk: 28
+- fields: {date: 2012-07-21, disease: 3, patient: 21}
+  model: Dentist.patient_diseases
+  pk: 29
+- fields: {date: 2002-02-21, disease: 1, patient: 22}
+  model: Dentist.patient_diseases
+  pk: 30
+- fields: {date: 2002-02-21, disease: 6, patient: 23}
+  model: Dentist.patient_diseases
+  pk: 31
+- fields: {date: 2008-11-21, disease: 3, patient: 24}
+  model: Dentist.patient_diseases
+  pk: 32
+- fields: {date: 2012-09-21, disease: 4, patient: 25}
+  model: Dentist.patient_diseases
+  pk: 33
+- fields: {date: 2012-07-15, disease: 2, patient: 26}
+  model: Dentist.patient_diseases
+  pk: 34
+- fields: {date: 2009-07-21, disease: 6, patient: 27}
+  model: Dentist.patient_diseases
+  pk: 35
+- fields: {date: 2005-05-21, disease: 4, patient: 27}
+  model: Dentist.patient_diseases
+  pk: 36
+- fields: {date: 2012-07-21, disease: 1, patient: 28}
+  model: Dentist.patient_diseases
+  pk: 37
+- fields: {date: 2012-02-13, disease: 2, patient: 28}
+  model: Dentist.patient_diseases
+  pk: 38
+- fields: {date: 2012-02-07, disease: 3, patient: 28}
+  model: Dentist.patient_diseases
+  pk: 39
+- fields: {date: 2011-03-23, disease: 2, patient: 29}
+  model: Dentist.patient_diseases
+  pk: 40
+- fields: {date: 2011-04-14, disease: 5, patient: 30}
+  model: Dentist.patient_diseases
+  pk: 41
+- fields: {date: 2012-09-21, disease: 6, patient: 31}
+  model: Dentist.patient_diseases
+  pk: 42
+- fields: {date: 2012-07-22, disease: 3, patient: 32}
+  model: Dentist.patient_diseases
+  pk: 43
+- fields: {date: 2009-07-21, disease: 5, patient: 33}
+  model: Dentist.patient_diseases
+  pk: 44
+- fields: {date: 2012-09-27, disease: 3, patient: 34}
+  model: Dentist.patient_diseases
+  pk: 45
+- fields: {date: 2012-03-16, disease: 2, patient: 35}
+  model: Dentist.patient_diseases
+  pk: 46
+- fields: {date: 2012-07-19, disease: 6, patient: 35}
+  model: Dentist.patient_diseases
+  pk: 47
+- fields: {date: 2012-02-21, disease: 5, patient: 36}
+  model: Dentist.patient_diseases
+  pk: 48
+- fields: {date: 2012-07-29, disease: 2, patient: 37}
+  model: Dentist.patient_diseases
+  pk: 49
+- fields: {date: 2012-07-30, disease: 1, patient: 38}
+  model: Dentist.patient_diseases
+  pk: 50
+- fields: {date: 2001-05-16, disease: 1, patient: 40}
+  model: Dentist.patient_diseases
+  pk: 51
+- fields: {date: 2005-05-21, disease: 1, patient: 42}
+  model: Dentist.patient_diseases
+  pk: 52
+- fields: {date: 2008-08-21, disease: 2, patient: 42}
+  model: Dentist.patient_diseases
+  pk: 53
+- fields: {date: 2007-07-17, disease: 5, patient: 43}
+  model: Dentist.patient_diseases
+  pk: 54
+- fields: {date: 2011-07-15, disease: 4, patient: 44}
+  model: Dentist.patient_diseases
+  pk: 55
+- fields: {date: 2000-01-01, disease: 1, patient: 44}
+  model: Dentist.patient_diseases
+  pk: 56
+- fields: {date: 2012-07-21, disease: 6, patient: 50}
+  model: Dentist.patient_diseases
+  pk: 57
+- fields: {date: 2008-11-21, disease: 5, patient: 56}
+  model: Dentist.patient_diseases
+  pk: 58
+- fields: {date: 2012-02-12, disease: 3, patient: 57}
+  model: Dentist.patient_diseases
+  pk: 59
+- fields: {date: 2012-03-15, disease: 3, patient: 58}
+  model: Dentist.patient_diseases
+  pk: 60
+- fields: {date: 2003-07-21, disease: 1, patient: 58}
+  model: Dentist.patient_diseases
+  pk: 61
+- fields: {date: 2012-07-21, disease: 4, patient: 58}
+  model: Dentist.patient_diseases
+  pk: 62
+- fields: {date: 2012-06-07, disease: 4, patient: 69}
+  model: Dentist.patient_diseases
+  pk: 63
+- fields: {date: 2012-03-21, disease: 7, patient: 70}
+  model: Dentist.patient_diseases
+  pk: 64
+- fields: {date: 2011-07-16, disease: 3, patient: 71}
+  model: Dentist.patient_diseases
+  pk: 65
+- fields: {date: 2009-02-21, disease: 3, patient: 72}
+  model: Dentist.patient_diseases
+  pk: 66
+- fields: {date: 2009-05-12, disease: 5, patient: 73}
+  model: Dentist.patient_diseases
+  pk: 67
+- fields: {date: 2012-09-21, disease: 6, patient: 83}
+  model: Dentist.patient_diseases
+  pk: 68
+- fields: {date: 2011-07-31, disease: 2, patient: 83}
+  model: Dentist.patient_diseases
+  pk: 69
+- fields: {date: 2012-07-12, disease: 3, patient: 84}
+  model: Dentist.patient_diseases
+  pk: 70
+- fields: {date: 2002-02-21, disease: 2, patient: 85}
+  model: Dentist.patient_diseases
+  pk: 71
+- fields: {date: 2009-07-09, disease: 7, patient: 86}
+  model: Dentist.patient_diseases
+  pk: 72
+- fields: {date: 2011-08-21, disease: 1, patient: 96}
+  model: Dentist.patient_diseases
+  pk: 73
+- fields: {date: 2012-02-11, disease: 4, patient: 97}
+  model: Dentist.patient_diseases
+  pk: 74
+- fields: {date: 2012-12-06, disease: 5, patient: 97}
+  model: Dentist.patient_diseases
+  pk: 75
+- fields: {date: 2002-05-26, disease: 2, patient: 98}
+  model: Dentist.patient_diseases
+  pk: 76
+- fields: {date: 2007-07-21, disease: 5, patient: 109}
+  model: Dentist.patient_diseases
+  pk: 77
+- fields: {date: 2012-07-21, disease: 7, patient: 100}
+  model: Dentist.patient_diseases
+  pk: 78
+- fields: {date: 2012-07-21, disease: 3, patient: 121}
+  model: Dentist.patient_diseases
+  pk: 79
+- fields: {date: 2002-02-21, disease: 1, patient: 122}
+  model: Dentist.patient_diseases
+  pk: 80
+- fields: {date: 2002-02-21, disease: 6, patient: 123}
+  model: Dentist.patient_diseases
+  pk: 81
+- fields: {date: 2008-11-21, disease: 3, patient: 134}
+  model: Dentist.patient_diseases
+  pk: 82
+- fields: {date: 2012-09-21, disease: 4, patient: 125}
+  model: Dentist.patient_diseases
+  pk: 83
+- fields: {date: 2012-07-15, disease: 2, patient: 156}
+  model: Dentist.patient_diseases
+  pk: 84
+- fields: {date: 2009-07-21, disease: 6, patient: 167}
+  model: Dentist.patient_diseases
+  pk: 85
+- fields: {date: 2005-05-21, disease: 4, patient: 187}
+  model: Dentist.patient_diseases
+  pk: 86
+- fields: {date: 2012-07-21, disease: 1, patient: 188}
+  model: Dentist.patient_diseases
+  pk: 87
+- fields: {date: 2012-02-13, disease: 2, patient: 188}
+  model: Dentist.patient_diseases
+  pk: 88
+- fields: {date: 2012-02-07, disease: 3, patient: 188}
+  model: Dentist.patient_diseases
+  pk: 89
+- fields: {date: 2011-03-23, disease: 2, patient: 199}
+  model: Dentist.patient_diseases
+  pk: 90
+- fields: {date: 2011-04-14, disease: 5, patient: 200}
+  model: Dentist.patient_diseases
+  pk: 91
+- fields: {date: 2012-09-21, disease: 6, patient: 200}
+  model: Dentist.patient_diseases
+  pk: 92
+- fields: {date: 2012-07-22, disease: 3, patient: 186}
+  model: Dentist.patient_diseases
+  pk: 93
+- fields: {date: 2009-07-21, disease: 5, patient: 182}
+  model: Dentist.patient_diseases
+  pk: 94
+- fields: {date: 2012-09-27, disease: 3, patient: 154}
+  model: Dentist.patient_diseases
+  pk: 95
+- fields: {date: 2012-03-16, disease: 2, patient: 176}
+  model: Dentist.patient_diseases
+  pk: 96
+- fields: {date: 2012-07-19, disease: 6, patient: 129}
+  model: Dentist.patient_diseases
+  pk: 97
+- fields: {date: 2012-02-21, disease: 5, patient: 136}
+  model: Dentist.patient_diseases
+  pk: 98
+- fields: {date: 2012-07-29, disease: 2, patient: 137}
+  model: Dentist.patient_diseases
+  pk: 99
+- fields: {date: 2012-07-30, disease: 1, patient: 138}
+  model: Dentist.patient_diseases
+  pk: 100
+- fields: {date: 2012-12-09, disease: 2, patient: 203}
+  model: Dentist.patient_diseases
+  pk: 101
+- fields: {address: "ul. Boles\u0142awa Krzywoustego 19b, Wroc\u0142aw", description: 'Prywatna
+      Praktyka Stomatologiczna, specjalizacja - chirurgia, zachowawcza, protetyka.',
+    email: gabinet1@coldix.pl, name: Centrum Stomatologii, phone: '714452384'}
+  model: Dentist.dental_office
+  pk: 1
+- fields: {address: "ul. Partynicka 32E, Wroc\u0142aw", description: "Lekarze denty\u015B\
+      ci oferuj\u0105 pe\u0142ny zakres us\u0142ug w dziedzinie stomatologii.", email: gabinet2@coldix.pl,
+    name: ALL-DENT, phone: '718253684'}
+  model: Dentist.dental_office
+  pk: 2
+- fields: {address: "ul. Widok 1 /13, Wroc\u0142aw", description: Gabinet stomatologiczny.,
+    email: gabinet3@coldix.pl, name: AMF Gabinet Stomatologiczny, phone: '714237698'}
+  model: Dentist.dental_office
+  pk: 3
+- fields: {address: "ul. Kasprowicza 1 /13, Wroc\u0142aw", description: Gabinet stomatologiczny.,
+    email: gabinet4@coldix.pl, name: Gabinet COLDIX, phone: '713137582'}
+  model: Dentist.dental_office
+  pk: 4
+- fields: {begin: '08:00:00', dental_office: 1, dentist: 1, end: '16:00:00', room: '1',
+    week_day: 1}
+  model: Dentist.hours
+  pk: 1
+- fields: {begin: '08:00:00', dental_office: 1, dentist: 1, end: '16:00:00', room: '1',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 2
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 1, end: '16:00:00', room: '1',
+    week_day: 3}
+  model: Dentist.hours
+  pk: 3
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 2, end: '18:00:00', room: '2',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 4
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 2, end: '18:00:00', room: '2',
+    week_day: 4}
+  model: Dentist.hours
+  pk: 5
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 3, end: '16:00:00', room: '3',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 6
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 3, end: '16:00:00', room: '3',
+    week_day: 3}
+  model: Dentist.hours
+  pk: 7
+- fields: {begin: '09:00:00', dental_office: 1, dentist: 4, end: '15:00:00', room: '4',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 8
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 5, end: '16:00:00', room: '5',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 10
+- fields: {begin: '10:00:00', dental_office: 1, dentist: 5, end: '16:00:00', room: '5',
+    week_day: 5}
+  model: Dentist.hours
+  pk: 11
+- fields: {begin: '10:00:00', dental_office: 2, dentist: 6, end: '15:00:00', room: '1',
+    week_day: 1}
+  model: Dentist.hours
+  pk: 12
+- fields: {begin: '10:00:00', dental_office: 2, dentist: 7, end: '16:00:00', room: '2',
+    week_day: 1}
+  model: Dentist.hours
+  pk: 13
+- fields: {begin: '10:00:00', dental_office: 2, dentist: 6, end: '18:00:00', room: '1',
+    week_day: 4}
+  model: Dentist.hours
+  pk: 14
+- fields: {begin: '08:00:00', dental_office: 2, dentist: 7, end: '15:00:00', room: '2',
+    week_day: 5}
+  model: Dentist.hours
+  pk: 15
+- fields: {begin: '08:00:00', dental_office: 2, dentist: 8, end: '16:00:00', room: '3',
+    week_day: 3}
+  model: Dentist.hours
+  pk: 16
+- fields: {begin: '08:00:00', dental_office: 2, dentist: 9, end: '15:00:00', room: '3',
+    week_day: 5}
+  model: Dentist.hours
+  pk: 17
+- fields: {begin: '10:00:00', dental_office: 2, dentist: 10, end: '15:00:00', room: '4',
+    week_day: 3}
+  model: Dentist.hours
+  pk: 18
+- fields: {begin: '10:00:00', dental_office: 3, dentist: 11, end: '16:00:00', room: '1',
+    week_day: 3}
+  model: Dentist.hours
+  pk: 19
+- fields: {begin: '09:00:00', dental_office: 3, dentist: 12, end: '14:00:00', room: '2',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 20
+- fields: {begin: '08:00:00', dental_office: 3, dentist: 13, end: '15:00:00', room: '3',
+    week_day: 4}
+  model: Dentist.hours
+  pk: 21
+- fields: {begin: '10:00:00', dental_office: 3, dentist: 14, end: '18:00:00', room: '4',
+    week_day: 1}
+  model: Dentist.hours
+  pk: 22
+- fields: {begin: '10:00:00', dental_office: 3, dentist: 15, end: '15:00:00', room: '5',
+    week_day: 5}
+  model: Dentist.hours
+  pk: 23
+- fields: {begin: '10:00:00', dental_office: 4, dentist: 16, end: '18:00:00', room: '1',
+    week_day: 2}
+  model: Dentist.hours
+  pk: 24
+- fields: {begin: '10:00:00', dental_office: 4, dentist: 17, end: '18:00:00', room: '2',
+    week_day: 3}
+  model: Dentist.hours
+  pk: 25
+- fields: {begin: '10:00:00', dental_office: 4, dentist: 18, end: '16:00:00', room: '3',
+    week_day: 5}
+  model: Dentist.hours
+  pk: 26
+- fields: {begin: '10:00:00', dental_office: 4, dentist: 19, end: '18:00:00', room: '4',
+    week_day: 1}
+  model: Dentist.hours
+  pk: 27
+- fields: {begin: '10:00:00', dental_office: 4, dentist: 20, end: '18:00:00', room: '5',
+    week_day: 4}
+  model: Dentist.hours
+  pk: 28
+- fields: {begin: '08:00:00', dental_office: 4, dentist: 21, end: '15:00:00', room: '6',
+    week_day: 1}
+  model: Dentist.hours
+  pk: 29
+- fields: {begin: '08:00:00', date: 2012-11-05, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 1
+- fields: {begin: '08:00:00', date: 2012-11-12, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 2
+- fields: {begin: '08:00:00', date: 2012-11-19, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 3
+- fields: {begin: '08:00:00', date: 2012-11-26, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 4
+- fields: {begin: '08:00:00', date: 2012-12-03, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 5
+- fields: {begin: '08:00:00', date: 2012-12-10, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 6
+- fields: {begin: '08:00:00', date: 2012-12-17, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 7
+- fields: {begin: '08:00:00', date: 2013-01-07, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 8
+- fields: {begin: '08:00:00', date: 2013-01-14, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 9
+- fields: {begin: '08:00:00', date: 2013-01-21, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 10
+- fields: {begin: '08:00:00', date: 2013-01-28, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 11
+- fields: {begin: '08:00:00', date: 2012-11-06, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 12
+- fields: {begin: '08:00:00', date: 2012-11-13, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 13
+- fields: {begin: '08:00:00', date: 2012-11-20, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 14
+- fields: {begin: '08:00:00', date: 2012-11-27, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 15
+- fields: {begin: '08:00:00', date: 2012-12-04, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 16
+- fields: {begin: '08:00:00', date: 2012-12-11, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 17
+- fields: {begin: '08:00:00', date: 2012-12-18, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 18
+- fields: {begin: '08:00:00', date: 2013-01-08, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 19
+- fields: {begin: '08:00:00', date: 2013-01-15, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 20
+- fields: {begin: '08:00:00', date: 2013-01-22, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 21
+- fields: {begin: '08:00:00', date: 2013-01-29, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 22
+- fields: {begin: '10:00:00', date: 2012-11-07, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 23
+- fields: {begin: '10:00:00', date: 2012-11-14, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 24
+- fields: {begin: '10:00:00', date: 2012-11-21, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 25
+- fields: {begin: '10:00:00', date: 2012-11-28, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 26
+- fields: {begin: '10:00:00', date: 2012-12-05, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 27
+- fields: {begin: '10:00:00', date: 2012-12-12, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 28
+- fields: {begin: '10:00:00', date: 2012-12-19, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 29
+- fields: {begin: '10:00:00', date: 2013-01-02, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 30
+- fields: {begin: '10:00:00', date: 2013-01-09, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 31
+- fields: {begin: '10:00:00', date: 2013-01-16, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 32
+- fields: {begin: '10:00:00', date: 2013-01-23, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 33
+- fields: {begin: '10:00:00', date: 2013-01-30, dental_office: 1, dentist: 1, end: '16:00:00',
+    room: '1'}
+  model: Dentist.dates
+  pk: 34
+- fields: {begin: '10:00:00', date: 2012-11-06, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 35
+- fields: {begin: '10:00:00', date: 2012-11-13, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 36
+- fields: {begin: '10:00:00', date: 2012-11-20, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 37
+- fields: {begin: '10:00:00', date: 2012-11-27, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 38
+- fields: {begin: '10:00:00', date: 2012-12-04, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 39
+- fields: {begin: '10:00:00', date: 2012-12-11, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 40
+- fields: {begin: '10:00:00', date: 2012-12-18, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 41
+- fields: {begin: '10:00:00', date: 2013-01-08, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 42
+- fields: {begin: '10:00:00', date: 2013-01-15, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 43
+- fields: {begin: '10:00:00', date: 2013-01-22, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 44
+- fields: {begin: '10:00:00', date: 2013-01-29, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 45
+- fields: {begin: '10:00:00', date: 2012-11-08, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 46
+- fields: {begin: '10:00:00', date: 2012-11-15, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 47
+- fields: {begin: '10:00:00', date: 2012-11-22, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 48
+- fields: {begin: '10:00:00', date: 2012-11-29, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 49
+- fields: {begin: '10:00:00', date: 2012-12-06, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 50
+- fields: {begin: '10:00:00', date: 2012-12-13, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 51
+- fields: {begin: '10:00:00', date: 2012-12-20, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 52
+- fields: {begin: '10:00:00', date: 2012-12-27, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 53
+- fields: {begin: '10:00:00', date: 2013-01-03, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 54
+- fields: {begin: '10:00:00', date: 2013-01-10, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 55
+- fields: {begin: '10:00:00', date: 2013-01-17, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 56
+- fields: {begin: '10:00:00', date: 2013-01-24, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 57
+- fields: {begin: '10:00:00', date: 2013-01-31, dental_office: 1, dentist: 2, end: '18:00:00',
+    room: '2'}
+  model: Dentist.dates
+  pk: 58
+- fields: {begin: '10:00:00', date: 2012-11-06, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 59
+- fields: {begin: '10:00:00', date: 2012-11-13, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 60
+- fields: {begin: '10:00:00', date: 2012-11-20, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 61
+- fields: {begin: '10:00:00', date: 2012-11-27, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 62
+- fields: {begin: '10:00:00', date: 2012-12-04, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 63
+- fields: {begin: '10:00:00', date: 2012-12-11, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 64
+- fields: {begin: '10:00:00', date: 2012-12-18, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 65
+- fields: {begin: '10:00:00', date: 2013-01-08, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 66
+- fields: {begin: '10:00:00', date: 2013-01-15, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 67
+- fields: {begin: '10:00:00', date: 2013-01-22, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 68
+- fields: {begin: '10:00:00', date: 2013-01-29, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 69
+- fields: {begin: '10:00:00', date: 2012-11-07, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 70
+- fields: {begin: '10:00:00', date: 2012-11-14, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 71
+- fields: {begin: '10:00:00', date: 2012-11-21, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 72
+- fields: {begin: '10:00:00', date: 2012-11-28, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 73
+- fields: {begin: '10:00:00', date: 2012-12-05, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 74
+- fields: {begin: '10:00:00', date: 2012-12-12, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 75
+- fields: {begin: '10:00:00', date: 2012-12-19, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 76
+- fields: {begin: '10:00:00', date: 2013-01-02, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 77
+- fields: {begin: '10:00:00', date: 2013-01-09, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 78
+- fields: {begin: '10:00:00', date: 2013-01-16, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 79
+- fields: {begin: '10:00:00', date: 2013-01-23, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 80
+- fields: {begin: '10:00:00', date: 2013-01-30, dental_office: 1, dentist: 3, end: '16:00:00',
+    room: '3'}
+  model: Dentist.dates
+  pk: 81
+- fields: {begin: '09:00:00', date: 2012-11-06, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 82
+- fields: {begin: '09:00:00', date: 2012-11-13, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 83
+- fields: {begin: '09:00:00', date: 2012-11-20, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 84
+- fields: {begin: '09:00:00', date: 2012-11-27, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 85
+- fields: {begin: '09:00:00', date: 2012-12-04, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 86
+- fields: {begin: '09:00:00', date: 2012-12-11, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 87
+- fields: {begin: '09:00:00', date: 2012-12-18, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 88
+- fields: {begin: '09:00:00', date: 2013-01-08, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 89
+- fields: {begin: '09:00:00', date: 2013-01-15, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 90
+- fields: {begin: '09:00:00', date: 2013-01-22, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 91
+- fields: {begin: '09:00:00', date: 2013-01-29, dental_office: 1, dentist: 4, end: '15:00:00',
+    room: '4'}
+  model: Dentist.dates
+  pk: 92
+- fields: {begin: '10:00:00', date: 2012-11-06, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 93
+- fields: {begin: '10:00:00', date: 2012-11-13, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 94
+- fields: {begin: '10:00:00', date: 2012-11-20, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 95
+- fields: {begin: '10:00:00', date: 2012-11-27, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 96
+- fields: {begin: '10:00:00', date: 2012-12-04, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 97
+- fields: {begin: '10:00:00', date: 2012-12-11, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 98
+- fields: {begin: '10:00:00', date: 2012-12-18, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 99
+- fields: {begin: '10:00:00', date: 2013-01-08, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 100
+- fields: {begin: '10:00:00', date: 2013-01-15, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 101
+- fields: {begin: '10:00:00', date: 2013-01-22, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 102
+- fields: {begin: '10:00:00', date: 2013-01-29, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 103
+- fields: {begin: '10:00:00', date: 2012-11-09, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 104
+- fields: {begin: '10:00:00', date: 2012-11-16, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 105
+- fields: {begin: '10:00:00', date: 2012-11-23, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 106
+- fields: {begin: '10:00:00', date: 2012-11-30, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 107
+- fields: {begin: '10:00:00', date: 2012-12-07, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 108
+- fields: {begin: '10:00:00', date: 2012-12-14, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 109
+- fields: {begin: '10:00:00', date: 2012-12-21, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 110
+- fields: {begin: '10:00:00', date: 2012-12-28, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 111
+- fields: {begin: '10:00:00', date: 2013-01-04, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 112
+- fields: {begin: '10:00:00', date: 2013-01-11, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 113
+- fields: {begin: '10:00:00', date: 2013-01-18, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 114
+- fields: {begin: '10:00:00', date: 2013-01-25, dental_office: 1, dentist: 5, end: '16:00:00',
+    room: '5'}
+  model: Dentist.dates
+  pk: 115
+- fields: {length: 15, type: wizyta kontrolna}
+  model: Dentist.appointment_type
+  pk: 1
+- fields: {length: 30, type: leczenie}
+  model: Dentist.appointment_type
+  pk: 2
+- fields: {length: 60, type: zabieg}
+  model: Dentist.appointment_type
+  pk: 3
+- fields: {appointment_type: 2, date: 2012-12-12, dental_office: 1, dentist: 1, description: null,
+    hour: '10:00:00', is_now: null, patient: 1, untimely: false}
+  model: Dentist.appointment
+  pk: 1
+- fields: {appointment_type: 1, date: 2012-12-12, dental_office: 1, dentist: 1, description: null,
+    hour: '10:45:00', is_now: null, patient: 2, untimely: false}
+  model: Dentist.appointment
+  pk: 2
+- fields: {appointment_type: 3, date: 2012-12-12, dental_office: 1, dentist: 1, description: null,
+    hour: '12:00:00', is_now: null, patient: 3, untimely: false}
+  model: Dentist.appointment
+  pk: 3
+- fields: {appointment_type: 2, date: 2012-12-12, dental_office: 1, dentist: 1, description: null,
+    hour: '11:30:00', is_now: null, patient: 4, untimely: false}
+  model: Dentist.appointment
+  pk: 4
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '11:00:00', is_now: -1, patient: 18, untimely: false}
+  model: Dentist.appointment
+  pk: 5
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '11:15:00', is_now: -1, patient: 19, untimely: false}
+  model: Dentist.appointment
+  pk: 6
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '10:30:00', is_now: -1, patient: 20, untimely: false}
+  model: Dentist.appointment
+  pk: 7
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '11:45:00', is_now: 1, patient: 21, untimely: false}
+  model: Dentist.appointment
+  pk: 8
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '12:45:00', is_now: null, patient: 22, untimely: false}
+  model: Dentist.appointment
+  pk: 9
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '10:00:00', is_now: -1, patient: 14, untimely: false}
+  model: Dentist.appointment
+  pk: 10
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '11:30:00', is_now: -1, patient: 15, untimely: false}
+  model: Dentist.appointment
+  pk: 11
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '14:00:00', is_now: null, patient: 16, untimely: false}
+  model: Dentist.appointment
+  pk: 12
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '15:00:00', is_now: null, patient: 17, untimely: false}
+  model: Dentist.appointment
+  pk: 13
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '15:45:00', is_now: null, patient: 5, untimely: false}
+  model: Dentist.appointment
+  pk: 14
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 2, description: null,
+    hour: '13:45:00', is_now: null, patient: 6, untimely: false}
+  model: Dentist.appointment
+  pk: 15
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '10:30:00', is_now: -1, patient: 7, untimely: false}
+  model: Dentist.appointment
+  pk: 16
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '09:45:00', is_now: -1, patient: 8, untimely: false}
+  model: Dentist.appointment
+  pk: 17
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '12:15:00', is_now: null, patient: 9, untimely: false}
+  model: Dentist.appointment
+  pk: 18
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '13:15:00', is_now: null, patient: 10, untimely: false}
+  model: Dentist.appointment
+  pk: 19
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '10:15:00', is_now: -1, patient: 11, untimely: false}
+  model: Dentist.appointment
+  pk: 20
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '12:00:00', is_now: 1, patient: 12, untimely: false}
+  model: Dentist.appointment
+  pk: 21
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 4, description: null,
+    hour: '09:30:00', is_now: -1, patient: 13, untimely: false}
+  model: Dentist.appointment
+  pk: 22
+- fields: {appointment_type: null, date: 2012-12-11, dental_office: 1, dentist: 2,
+    description: null, hour: null, is_now: -1, patient: 48, untimely: true}
+  model: Dentist.appointment
+  pk: 23
+- fields: {appointment_type: null, date: 2012-12-11, dental_office: 1, dentist: 2,
+    description: null, hour: null, is_now: null, patient: 158, untimely: true}
+  model: Dentist.appointment
+  pk: 24
+- fields: {appointment_type: null, date: 2012-12-11, dental_office: 1, dentist: 1,
+    description: null, hour: null, is_now: null, patient: 27, untimely: true}
+  model: Dentist.appointment
+  pk: 25
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '08:30:00', is_now: -1, patient: 14, untimely: false}
+  model: Dentist.appointment
+  pk: 26
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '10:00:00', is_now: -1, patient: 22, untimely: false}
+  model: Dentist.appointment
+  pk: 27
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '08:15:00', is_now: -1, patient: 21, untimely: false}
+  model: Dentist.appointment
+  pk: 28
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '09:15:00', is_now: -1, patient: 20, untimely: false}
+  model: Dentist.appointment
+  pk: 29
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '08:45:00', is_now: -1, patient: 19, untimely: false}
+  model: Dentist.appointment
+  pk: 30
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '09:45:00', is_now: -1, patient: 18, untimely: false}
+  model: Dentist.appointment
+  pk: 31
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '12:30:00', is_now: null, patient: 16, untimely: false}
+  model: Dentist.appointment
+  pk: 32
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '11:30:00', is_now: -1, patient: 15, untimely: false}
+  model: Dentist.appointment
+  pk: 33
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '14:00:00', is_now: null, patient: 17, untimely: false}
+  model: Dentist.appointment
+  pk: 34
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '12:15:00', is_now: 1, patient: 13, untimely: false}
+  model: Dentist.appointment
+  pk: 35
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '09:00:00', is_now: -1, patient: 12, untimely: false}
+  model: Dentist.appointment
+  pk: 36
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '13:15:00', is_now: null, patient: 11, untimely: false}
+  model: Dentist.appointment
+  pk: 37
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '11:00:00', is_now: -1, patient: 10, untimely: false}
+  model: Dentist.appointment
+  pk: 38
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 1, description: null,
+    hour: '13:45:00', is_now: null, patient: 9, untimely: false}
+  model: Dentist.appointment
+  pk: 39
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '10:00:00', is_now: -1, patient: 5, untimely: false}
+  model: Dentist.appointment
+  pk: 40
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '11:30:00', is_now: 1, patient: 18, untimely: false}
+  model: Dentist.appointment
+  pk: 41
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '12:45:00', is_now: null, patient: 40, untimely: false}
+  model: Dentist.appointment
+  pk: 42
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '13:15:00', is_now: null, patient: 126, untimely: false}
+  model: Dentist.appointment
+  pk: 43
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '11:00:00', is_now: -1, patient: 79, untimely: false}
+  model: Dentist.appointment
+  pk: 44
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '13:45:00', is_now: null, patient: 143, untimely: false}
+  model: Dentist.appointment
+  pk: 45
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '13:30:00', is_now: null, patient: 25, untimely: false}
+  model: Dentist.appointment
+  pk: 46
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 5, description: null,
+    hour: '14:45:00', is_now: null, patient: 96, untimely: false}
+  model: Dentist.appointment
+  pk: 47
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 3, description: null,
+    hour: '10:30:00', is_now: -1, patient: 94, untimely: false}
+  model: Dentist.appointment
+  pk: 48
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 3, description: null,
+    hour: '11:45:00', is_now: 1, patient: 73, untimely: false}
+  model: Dentist.appointment
+  pk: 49
+- fields: {appointment_type: 1, date: 2012-12-11, dental_office: 1, dentist: 3, description: null,
+    hour: '12:45:00', is_now: null, patient: 76, untimely: false}
+  model: Dentist.appointment
+  pk: 50
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 3, description: null,
+    hour: '10:00:00', is_now: -1, patient: 99, untimely: false}
+  model: Dentist.appointment
+  pk: 51
+- fields: {appointment_type: 2, date: 2012-12-11, dental_office: 1, dentist: 3, description: null,
+    hour: '13:45:00', is_now: null, patient: 24, untimely: false}
+  model: Dentist.appointment
+  pk: 52
+- fields: {appointment_type: 3, date: 2012-12-11, dental_office: 1, dentist: 3, description: null,
+    hour: '14:15:00', is_now: null, patient: 115, untimely: false}
+  model: Dentist.appointment
+  pk: 53
+- fields: {appointment_type: 3, date: 2012-12-12, dental_office: 1, dentist: 3, description: null,
+    hour: '10:15:00', is_now: null, patient: 143, untimely: false}
+  model: Dentist.appointment
+  pk: 54
+- fields: {appointment_type: 2, date: 2012-12-12, dental_office: 1, dentist: 3, description: null,
+    hour: '12:00:00', is_now: null, patient: 158, untimely: false}
+  model: Dentist.appointment
+  pk: 55
+- fields: {appointment_type: 3, date: 2012-12-12, dental_office: 1, dentist: 3, description: null,
+    hour: '13:30:00', is_now: null, patient: 177, untimely: false}
+  model: Dentist.appointment
+  pk: 56
+- fields: {appointment_type: 3, date: 2013-01-24, dental_office: 1, dentist: 2, description: null,
+    hour: '10:00:00', is_now: null, patient: 1, untimely: false}
+  model: Dentist.appointment
+  pk: 57
+- fields: {appointment_type: 1, date: 2012-11-05, dental_office: 1, dentist: 1, description: "Brak\
+      \ zmian w uz\u0119bieniu od ostatniej wizyty.", hour: '08:00:00', is_now: -1,
+    patient: 1, untimely: false}
+  model: Dentist.appointment
+  pk: 58
+- fields: {appointment_type: 2, date: 2012-11-13, dental_office: 1, dentist: 2, description: '',
+    hour: '10:00:00', is_now: -1, patient: 1, untimely: false}
+  model: Dentist.appointment
+  pk: 59
+- fields: {appointment_type: 2, date: 2012-11-26, dental_office: 1, dentist: 1, description: '',
+    hour: '09:00:00', is_now: -1, patient: 1, untimely: false}
+  model: Dentist.appointment
+  pk: 60
+- fields: {appointment_type: 2, date: 2012-11-12, dental_office: 1, dentist: 1, description: '',
+    hour: '08:00:00', is_now: -1, patient: 13, untimely: false}
+  model: Dentist.appointment
+  pk: 61
+- fields: {appointment_type: 2, date: 2012-11-26, dental_office: 1, dentist: 1, description: '',
+    hour: '08:30:00', is_now: -1, patient: 13, untimely: false}
+  model: Dentist.appointment
+  pk: 62
+- fields: {appointment_type: 1, date: 2012-11-12, dental_office: 1, dentist: 1, description: '',
+    hour: '08:30:00', is_now: -1, patient: 13, untimely: false}
+  model: Dentist.appointment
+  pk: 63
+- fields: {appointment_type: 2, date: 2012-11-12, dental_office: 1, dentist: 1, description: '',
+    hour: '08:45:00', is_now: -1, patient: 16, untimely: false}
+  model: Dentist.appointment
+  pk: 64
+- fields: {appointment_type: 3, date: 2012-11-26, dental_office: 1, dentist: 1, description: '',
+    hour: '09:30:00', is_now: -1, patient: 16, untimely: false}
+  model: Dentist.appointment
+  pk: 65
+- fields: {appointment_type: 3, date: 2012-12-04, dental_office: 1, dentist: 2, description: "Pierwszy\
+      \ etap leczenia kana\u0142owego.", hour: '10:00:00', is_now: -1, patient: 16,
+    untimely: false}
+  model: Dentist.appointment
+  pk: 66
+- fields: {appointment_type: 2, date: 2012-11-05, dental_office: 1, dentist: 1, description: "Wype\u0142\
+      nienie ubytk\xF3w. W przysz\u0142ej wizycie usuni\u0119cie pr\xF3chnicy na z\u0119\
+      bie obok.", hour: '08:15:00', is_now: -1, patient: 11, untimely: false}
+  model: Dentist.appointment
+  pk: 67
+- fields: {appointment_type: 2, date: 2012-11-12, dental_office: 1, dentist: 1, description: '',
+    hour: '09:30:00', is_now: -1, patient: 11, untimely: false}
+  model: Dentist.appointment
+  pk: 68
+- fields: {appointment_type: 2, date: 2012-11-26, dental_office: 1, dentist: 1, description: '',
+    hour: '11:00:00', is_now: -1, patient: 11, untimely: false}
+  model: Dentist.appointment
+  pk: 69
+- fields: {color: ff0000, type: "pr\xF3chnica"}
+  model: Dentist.loss_type
+  pk: 1
+- fields: {color: f00000, type: "wype\u0142nienie tymczasowe"}
+  model: Dentist.loss_type
+  pk: 2
+- fields: {color: 0f0000, type: "wype\u0142nienie ostateczne"}
+  model: Dentist.loss_type
+  pk: 3
+- fields: {color: 00f000, type: "z\u0105b do usuni\u0119cia"}
+  model: Dentist.loss_type
+  pk: 4
+- fields: {color: 000f00, type: "z\u0105b usuni\u0119ty"}
+  model: Dentist.loss_type
+  pk: 5
+- fields: {color: 0000f0, type: "z\u0105b zatrzymany"}
+  model: Dentist.loss_type
+  pk: 6
+- fields: {color: 00000f, type: trepanacja komory}
+  model: Dentist.loss_type
+  pk: 7
+- fields: {color: 32aa66, type: dewitalizacja miazgi}
+  model: Dentist.loss_type
+  pk: 8
+- fields: {color: 66aa11, type: ekstyrpacja miazgi}
+  model: Dentist.loss_type
+  pk: 9
+- fields: {color: 9581bb, type: "usuni\u0119cie z\u0142og\xF3w naz\u0119bnych"}
+  model: Dentist.loss_type
+  pk: 10
+- fields: {color: '937196', type: choroba miazgi}
+  model: Dentist.loss_type
+  pk: 11
+- fields: {color: cb48fa, type: "dezynfekcja kana\u0142u"}
+  model: Dentist.loss_type
+  pk: 12
+- fields: {color: c893ca, type: "wype\u0142nienie kana\u0142u tymczasowe"}
+  model: Dentist.loss_type
+  pk: 13
+- fields: {color: 29bacd, type: "wype\u0142nienie kana\u0142u ostateczne"}
+  model: Dentist.loss_type
+  pk: 14
+- fields: {color: '892061', type: "zapalenie dzi\u0105se\u0142"}
+  model: Dentist.loss_type
+  pk: 15
+- fields: {color: 5ffabc, type: "zapalenie przyz\u0119bia"}
+  model: Dentist.loss_type
+  pk: 16
+- fields: {color: d446cc, type: "recesja dzi\u0105s\u0142a"}
+  model: Dentist.loss_type
+  pk: 17
+- fields: {color: 77cc33, type: "ropie\u0144 przyz\u0119bny"}
+  model: Dentist.loss_type
+  pk: 18
+- fields: {color: 5544cc, type: "zesp\xF3\u0142 endo-perio"}
+  model: Dentist.loss_type
+  pk: 19
+- fields: {color: dd83ca, type: "uraz przyz\u0119bia"}
+  model: Dentist.loss_type
+  pk: 20
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: korona
+  model: Dentist.tooth_part
+  pk: 1
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144 policzkowy dystalny"
+  model: Dentist.tooth_part
+  pk: 2
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144 policzkowy mezjalny"
+  model: Dentist.tooth_part
+  pk: 3
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144 podniebienny"
+  model: Dentist.tooth_part
+  pk: 4
+- fields:
+    losses: [15, 16, 17, 18, 19, 20]
+    name: "przyz\u0119bie podniebienne"
+  model: Dentist.tooth_part
+  pk: 5
+- fields:
+    losses: [15, 16, 17, 18, 19, 20]
+    name: "przyz\u0119bie mezjalne"
+  model: Dentist.tooth_part
+  pk: 6
+- fields:
+    losses: [15, 16, 17, 18, 19, 20]
+    name: "przyz\u0119bie przedsionkowe"
+  model: Dentist.tooth_part
+  pk: 7
+- fields:
+    losses: [15, 16, 17, 18, 19, 20]
+    name: "przyz\u0119bie dystalne"
+  model: Dentist.tooth_part
+  pk: 8
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia okluzyjna (dystalnie)
+  model: Dentist.tooth_part
+  pk: 9
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia okluzyjna (mezjalnie)
+  model: Dentist.tooth_part
+  pk: 10
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia podniebienna
+  model: Dentist.tooth_part
+  pk: 11
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia dystalna
+  model: Dentist.tooth_part
+  pk: 12
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia mezjalna
+  model: Dentist.tooth_part
+  pk: 13
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia przedsionkowa
+  model: Dentist.tooth_part
+  pk: 14
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144"
+  model: Dentist.tooth_part
+  pk: 15
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144 policzkowy"
+  model: Dentist.tooth_part
+  pk: 16
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: powierzchnia okluzyjna
+  model: Dentist.tooth_part
+  pk: 17
+- fields:
+    losses: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    name: "powierzchnia j\u0119zykowa"
+  model: Dentist.tooth_part
+  pk: 18
+- fields:
+    losses: [15, 16, 17, 18, 19, 20]
+    name: "przyz\u0119bie j\u0119zykowe"
+  model: Dentist.tooth_part
+  pk: 19
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144 j\u0119zykowy"
+  model: Dentist.tooth_part
+  pk: 20
+- fields:
+    losses: [10, 11, 12, 13, 14]
+    name: "korze\u0144 mezjalny"
+  model: Dentist.tooth_part
+  pk: 21
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
+    side: prawa
+    tooth_number: 11
+    type: siekacz
+  model: Dentist.tooth
+  pk: 1
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
+    side: prawa
+    tooth_number: 12
+    type: siekacz
+  model: Dentist.tooth
+  pk: 2
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
+    side: prawa
+    tooth_number: 13
+    type: "kie\u0142"
+  model: Dentist.tooth
+  pk: 3
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]
+    side: prawa
+    tooth_number: 14
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 4
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    side: prawa
+    tooth_number: 15
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 5
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    side: prawa
+    tooth_number: 16
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 6
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    side: prawa
+    tooth_number: 17
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 7
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    side: prawa
+    tooth_number: 18
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 8
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
+    side: lewa
+    tooth_number: 21
+    type: siekacz
+  model: Dentist.tooth
+  pk: 9
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
+    side: lewa
+    tooth_number: 22
+    type: siekacz
+  model: Dentist.tooth
+  pk: 10
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 11, 12, 13, 14, 15, 17]
+    side: lewa
+    tooth_number: 23
+    type: "kie\u0142"
+  model: Dentist.tooth
+  pk: 11
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 21]
+    side: lewa
+    tooth_number: 24
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 12
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    side: lewa
+    tooth_number: 25
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 13
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    side: lewa
+    tooth_number: 26
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 14
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    side: lewa
+    tooth_number: 27
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 15
+- fields:
+    jaw: "g\xF3rna"
+    parts: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    side: lewa
+    tooth_number: 28
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 16
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
+    side: lewa
+    tooth_number: 31
+    type: siekacz
+  model: Dentist.tooth
+  pk: 17
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
+    side: lewa
+    tooth_number: 32
+    type: siekacz
+  model: Dentist.tooth
+  pk: 18
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
+    side: lewa
+    tooth_number: 33
+    type: "kie\u0142"
+  model: Dentist.tooth
+  pk: 19
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 19, 20]
+    side: lewa
+    tooth_number: 34
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 20
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 15, 18, 19]
+    side: lewa
+    tooth_number: 35
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 21
+- fields:
+    jaw: dolna
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+    side: lewa
+    tooth_number: 36
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 22
+- fields:
+    jaw: dolna
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+    side: lewa
+    tooth_number: 37
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 23
+- fields:
+    jaw: dolna
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+    side: lewa
+    tooth_number: 38
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 24
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
+    side: prawa
+    tooth_number: 41
+    type: siekacz
+  model: Dentist.tooth
+  pk: 25
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
+    side: prawa
+    tooth_number: 42
+    type: siekacz
+  model: Dentist.tooth
+  pk: 26
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 12, 13, 14, 15, 17, 18, 19]
+    side: prawa
+    tooth_number: 43
+    type: "kie\u0142"
+  model: Dentist.tooth
+  pk: 27
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 16, 18, 19, 20]
+    side: prawa
+    tooth_number: 44
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 28
+- fields:
+    jaw: dolna
+    parts: [1, 6, 7, 8, 9, 10, 12, 13, 14, 15, 18, 19]
+    side: prawa
+    tooth_number: 45
+    type: przedtrzonowiec
+  model: Dentist.tooth
+  pk: 29
+- fields:
+    jaw: dolna
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+    side: prawa
+    tooth_number: 46
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 30
+- fields:
+    jaw: dolna
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+    side: prawa
+    tooth_number: 47
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 31
+- fields:
+    jaw: dolna
+    parts: [1, 2, 3, 6, 7, 8, 9, 10, 12, 13, 14, 18, 19, 20]
+    side: prawa
+    tooth_number: 48
+    type: trzonowiec
+  model: Dentist.tooth
+  pk: 32
+- fields: {appointment: 67, comment: "Pocz\u0105tkowe stadium pr\xF3chnicy.", loss_type: 1,
+    tooth: 6, tooth_part: 12}
+  model: Dentist.tooth_loss
+  pk: 1
+- fields: {appointment: 67, comment: '', loss_type: 1, tooth: 7, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 2
+- fields: {appointment: 67, comment: '', loss_type: 3, tooth: 7, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 3
+- fields: {appointment: 67, comment: "Dezynfekcja kana\u0142u przed wype\u0142nieniem.",
+    loss_type: 12, tooth: 2, tooth_part: 15}
+  model: Dentist.tooth_loss
+  pk: 4
+- fields: {appointment: 67, comment: '', loss_type: 11, tooth: 28, tooth_part: 1}
+  model: Dentist.tooth_loss
+  pk: 5
+- fields: {appointment: 61, comment: "Z\u0105b usuni\u0119ty przed wizyt\u0105.",
+    loss_type: 5, tooth: 11, tooth_part: 1}
+  model: Dentist.tooth_loss
+  pk: 6
+- fields: {appointment: 61, comment: '', loss_type: 1, tooth: 6, tooth_part: 9}
+  model: Dentist.tooth_loss
+  pk: 7
+- fields: {appointment: 61, comment: '', loss_type: 1, tooth: 2, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 8
+- fields: {appointment: 61, comment: "Do poprawienia na nast\u0119pnej wizycie za\
+      \ 2 tygodnie.", loss_type: 2, tooth: 2, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 9
+- fields: {appointment: 63, comment: '', loss_type: 10, tooth: 31, tooth_part: 1}
+  model: Dentist.tooth_loss
+  pk: 10
+- fields: {appointment: 64, comment: '', loss_type: 12, tooth: 8, tooth_part: 4}
+  model: Dentist.tooth_loss
+  pk: 11
+- fields: {appointment: 64, comment: "Do wype\u0142nienia ostatecznego za 2 tygodnie.",
+    loss_type: 13, tooth: 8, tooth_part: 4}
+  model: Dentist.tooth_loss
+  pk: 12
+- fields: {appointment: 64, comment: '', loss_type: 1, tooth: 6, tooth_part: 10}
+  model: Dentist.tooth_loss
+  pk: 13
+- fields: {appointment: 64, comment: '', loss_type: 1, tooth: 6, tooth_part: 9}
+  model: Dentist.tooth_loss
+  pk: 14
+- fields: {appointment: 68, comment: '', loss_type: 3, tooth: 6, tooth_part: 12}
+  model: Dentist.tooth_loss
+  pk: 15
+- fields: {appointment: 62, comment: '', loss_type: 3, tooth: 2, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 16
+- fields: {appointment: 62, comment: "Du\u017Cy poziom pr\xF3chnicy. Do zaplombowania\
+      \ na nast\u0119pnej wizycie.", loss_type: 1, tooth: 12, tooth_part: 9}
+  model: Dentist.tooth_loss
+  pk: 17
+- fields: {appointment: 60, comment: '', loss_type: 1, tooth: 8, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 18
+- fields: {appointment: 60, comment: "Pocz\u0105tek pr\xF3chnicy.", loss_type: 1,
+    tooth: 7, tooth_part: 12}
+  model: Dentist.tooth_loss
+  pk: 19
+- fields: {appointment: 60, comment: '', loss_type: 3, tooth: 8, tooth_part: 13}
+  model: Dentist.tooth_loss
+  pk: 20
+- fields: {appointment: 65, comment: '', loss_type: 14, tooth: 8, tooth_part: 4}
+  model: Dentist.tooth_loss
+  pk: 21
+- fields: {appointment: 69, comment: '', loss_type: 1, tooth: 13, tooth_part: 12}
+  model: Dentist.tooth_loss
+  pk: 22
+- fields: {appointment: 69, comment: '', loss_type: 3, tooth: 13, tooth_part: 12}
+  model: Dentist.tooth_loss
+  pk: 23
+- fields: {appointment: 59, comment: '', loss_type: 11, tooth: 19, tooth_part: 1}
+  model: Dentist.tooth_loss
+  pk: 24
+- fields: {appointment: 66, comment: "Za dwa tygodnie wype\u0142nienie kana\u0142\
+      u.", loss_type: 12, tooth: 26, tooth_part: 15}
+  model: Dentist.tooth_loss
+  pk: 25
+- fields: {last_change: 2012-12-09, user: 1}
+  model: Dentist.password_creation
+  pk: 1
+- fields: {last_change: 2012-12-09, user: 2}
+  model: Dentist.password_creation
+  pk: 2
+- fields: {last_change: 2012-12-09, user: 3}
+  model: Dentist.password_creation
+  pk: 3
+- fields: {last_change: 2012-12-09, user: 4}
+  model: Dentist.password_creation
+  pk: 4
+- fields: {last_change: 2012-12-09, user: 5}
+  model: Dentist.password_creation
+  pk: 5
+- fields: {last_change: 2012-11-05, user: 6}
+  model: Dentist.password_creation
+  pk: 6
+- fields: {last_change: 2012-11-05, user: 7}
+  model: Dentist.password_creation
+  pk: 7
+- fields: {last_change: 2012-11-05, user: 8}
+  model: Dentist.password_creation
+  pk: 8
+- fields: {last_change: 2012-11-05, user: 9}
+  model: Dentist.password_creation
+  pk: 9
+- fields: {last_change: 2012-11-05, user: 10}
+  model: Dentist.password_creation
+  pk: 10
+- fields: {last_change: 2012-11-05, user: 11}
+  model: Dentist.password_creation
+  pk: 11
+- fields: {last_change: 2012-11-05, user: 12}
+  model: Dentist.password_creation
+  pk: 12
+- fields: {last_change: 2012-11-05, user: 13}
+  model: Dentist.password_creation
+  pk: 13
+- fields: {last_change: 2012-11-05, user: 14}
+  model: Dentist.password_creation
+  pk: 14
+- fields: {last_change: 2012-11-05, user: 15}
+  model: Dentist.password_creation
+  pk: 15
+- fields: {last_change: 2012-11-05, user: 16}
+  model: Dentist.password_creation
+  pk: 16
+- fields: {last_change: 2012-11-05, user: 17}
+  model: Dentist.password_creation
+  pk: 17
+- fields: {last_change: 2012-11-05, user: 18}
+  model: Dentist.password_creation
+  pk: 18
+- fields: {last_change: 2012-11-05, user: 19}
+  model: Dentist.password_creation
+  pk: 19
+- fields: {last_change: 2012-11-05, user: 20}
+  model: Dentist.password_creation
+  pk: 20
+- fields: {last_change: 2012-11-05, user: 21}
+  model: Dentist.password_creation
+  pk: 21
+- fields: {last_change: 2012-12-09, user: 22}
+  model: Dentist.password_creation
+  pk: 22
+- fields: {last_change: 2012-11-05, user: 23}
+  model: Dentist.password_creation
+  pk: 23
+- fields: {last_change: 2012-11-05, user: 24}
+  model: Dentist.password_creation
+  pk: 24
+- fields: {last_change: 2012-11-05, user: 25}
+  model: Dentist.password_creation
+  pk: 25
+- fields: {last_change: 2012-11-05, user: 26}
+  model: Dentist.password_creation
+  pk: 26
+- fields: {last_change: 2012-11-05, user: 27}
+  model: Dentist.password_creation
+  pk: 27
+- fields: {last_change: 2012-11-05, user: 28}
+  model: Dentist.password_creation
+  pk: 28
+- fields: {last_change: 2012-11-05, user: 29}
+  model: Dentist.password_creation
+  pk: 29
+- fields: {last_change: 2012-11-05, user: 30}
+  model: Dentist.password_creation
+  pk: 30
+- fields: {last_change: 2012-11-05, user: 31}
+  model: Dentist.password_creation
+  pk: 31
+- fields: {last_change: 2012-11-05, user: 32}
+  model: Dentist.password_creation
+  pk: 32
+- fields: {last_change: 2012-11-05, user: 33}
+  model: Dentist.password_creation
+  pk: 33
+- fields: {last_change: 2012-11-05, user: 34}
+  model: Dentist.password_creation
+  pk: 34
+- fields: {last_change: 2012-11-05, user: 35}
+  model: Dentist.password_creation
+  pk: 35
+- fields: {last_change: 2012-11-05, user: 36}
+  model: Dentist.password_creation
+  pk: 36
+- fields: {last_change: 2012-11-05, user: 37}
+  model: Dentist.password_creation
+  pk: 37
+- fields: {last_change: 2012-11-05, user: 38}
+  model: Dentist.password_creation
+  pk: 38
+- fields: {last_change: 2012-11-05, user: 39}
+  model: Dentist.password_creation
+  pk: 39
+- fields: {last_change: 2012-11-05, user: 40}
+  model: Dentist.password_creation
+  pk: 40
+- fields: {last_change: 2012-11-05, user: 41}
+  model: Dentist.password_creation
+  pk: 41
+- fields: {last_change: 2012-11-05, user: 42}
+  model: Dentist.password_creation
+  pk: 42
+- fields: {last_change: 2012-11-05, user: 43}
+  model: Dentist.password_creation
+  pk: 43
+- fields: {last_change: 2012-11-05, user: 44}
+  model: Dentist.password_creation
+  pk: 44
+- fields: {last_change: 2012-11-05, user: 45}
+  model: Dentist.password_creation
+  pk: 45
+- fields: {last_change: 2012-11-05, user: 46}
+  model: Dentist.password_creation
+  pk: 46
+- fields: {last_change: 2012-11-05, user: 47}
+  model: Dentist.password_creation
+  pk: 47
+- fields: {last_change: 2012-11-05, user: 48}
+  model: Dentist.password_creation
+  pk: 48
+- fields: {last_change: 2012-11-05, user: 49}
+  model: Dentist.password_creation
+  pk: 49
+- fields: {last_change: 2012-11-05, user: 50}
+  model: Dentist.password_creation
+  pk: 50
+- fields: {last_change: 2012-11-05, user: 51}
+  model: Dentist.password_creation
+  pk: 51
+- fields: {last_change: 2012-11-05, user: 52}
+  model: Dentist.password_creation
+  pk: 52
+- fields: {last_change: 2012-11-05, user: 53}
+  model: Dentist.password_creation
+  pk: 53
+- fields: {last_change: 2012-11-05, user: 54}
+  model: Dentist.password_creation
+  pk: 54
+- fields: {last_change: 2012-11-05, user: 55}
+  model: Dentist.password_creation
+  pk: 55
+- fields: {last_change: 2012-11-05, user: 56}
+  model: Dentist.password_creation
+  pk: 56
+- fields: {last_change: 2012-11-05, user: 57}
+  model: Dentist.password_creation
+  pk: 57
+- fields: {last_change: 2012-11-05, user: 58}
+  model: Dentist.password_creation
+  pk: 58
+- fields: {last_change: 2012-11-05, user: 59}
+  model: Dentist.password_creation
+  pk: 59
+- fields: {last_change: 2012-11-05, user: 60}
+  model: Dentist.password_creation
+  pk: 60
+- fields: {last_change: 2012-11-05, user: 61}
+  model: Dentist.password_creation
+  pk: 61
+- fields: {last_change: 2012-11-05, user: 62}
+  model: Dentist.password_creation
+  pk: 62
+- fields: {last_change: 2012-11-05, user: 63}
+  model: Dentist.password_creation
+  pk: 63
+- fields: {last_change: 2012-11-05, user: 64}
+  model: Dentist.password_creation
+  pk: 64
+- fields: {last_change: 2012-11-05, user: 65}
+  model: Dentist.password_creation
+  pk: 65
+- fields: {last_change: 2012-11-05, user: 66}
+  model: Dentist.password_creation
+  pk: 66
+- fields: {last_change: 2012-11-05, user: 67}
+  model: Dentist.password_creation
+  pk: 67
+- fields: {last_change: 2012-11-05, user: 68}
+  model: Dentist.password_creation
+  pk: 68
+- fields: {last_change: 2012-11-05, user: 69}
+  model: Dentist.password_creation
+  pk: 69
+- fields: {last_change: 2012-11-05, user: 70}
+  model: Dentist.password_creation
+  pk: 70
+- fields: {last_change: 2012-11-05, user: 71}
+  model: Dentist.password_creation
+  pk: 71
+- fields: {last_change: 2012-11-05, user: 72}
+  model: Dentist.password_creation
+  pk: 72
+- fields: {last_change: 2012-11-05, user: 73}
+  model: Dentist.password_creation
+  pk: 73
+- fields: {last_change: 2012-11-05, user: 74}
+  model: Dentist.password_creation
+  pk: 74
+- fields: {last_change: 2012-11-05, user: 75}
+  model: Dentist.password_creation
+  pk: 75
+- fields: {last_change: 2012-11-05, user: 76}
+  model: Dentist.password_creation
+  pk: 76
+- fields: {last_change: 2012-11-05, user: 77}
+  model: Dentist.password_creation
+  pk: 77
+- fields: {last_change: 2012-11-05, user: 78}
+  model: Dentist.password_creation
+  pk: 78
+- fields: {last_change: 2012-11-05, user: 79}
+  model: Dentist.password_creation
+  pk: 79
+- fields: {last_change: 2012-11-05, user: 80}
+  model: Dentist.password_creation
+  pk: 80
+- fields: {last_change: 2012-11-05, user: 82}
+  model: Dentist.password_creation
+  pk: 82
+- fields: {last_change: 2012-11-05, user: 83}
+  model: Dentist.password_creation
+  pk: 83
+- fields: {last_change: 2012-11-05, user: 84}
+  model: Dentist.password_creation
+  pk: 84
+- fields: {last_change: 2012-11-05, user: 85}
+  model: Dentist.password_creation
+  pk: 85
+- fields: {last_change: 2012-11-05, user: 86}
+  model: Dentist.password_creation
+  pk: 86
+- fields: {last_change: 2012-11-05, user: 87}
+  model: Dentist.password_creation
+  pk: 87
+- fields: {last_change: 2012-11-05, user: 88}
+  model: Dentist.password_creation
+  pk: 88
+- fields: {last_change: 2012-11-05, user: 89}
+  model: Dentist.password_creation
+  pk: 89
+- fields: {last_change: 2012-11-05, user: 90}
+  model: Dentist.password_creation
+  pk: 90
+- fields: {last_change: 2012-11-05, user: 91}
+  model: Dentist.password_creation
+  pk: 91
+- fields: {last_change: 2012-11-05, user: 92}
+  model: Dentist.password_creation
+  pk: 92
+- fields: {last_change: 2012-11-05, user: 93}
+  model: Dentist.password_creation
+  pk: 93
+- fields: {last_change: 2012-11-05, user: 94}
+  model: Dentist.password_creation
+  pk: 94
+- fields: {last_change: 2012-11-05, user: 95}
+  model: Dentist.password_creation
+  pk: 95
+- fields: {last_change: 2012-11-05, user: 96}
+  model: Dentist.password_creation
+  pk: 96
+- fields: {last_change: 2012-11-05, user: 97}
+  model: Dentist.password_creation
+  pk: 97
+- fields: {last_change: 2012-11-05, user: 98}
+  model: Dentist.password_creation
+  pk: 98
+- fields: {last_change: 2012-11-05, user: 99}
+  model: Dentist.password_creation
+  pk: 99
+- fields: {last_change: 2012-11-05, user: 100}
+  model: Dentist.password_creation
+  pk: 100
+- fields: {last_change: 2012-11-05, user: 101}
+  model: Dentist.password_creation
+  pk: 101
+- fields: {last_change: 2012-11-05, user: 102}
+  model: Dentist.password_creation
+  pk: 102
+- fields: {last_change: 2012-11-05, user: 103}
+  model: Dentist.password_creation
+  pk: 103
+- fields: {last_change: 2012-11-05, user: 104}
+  model: Dentist.password_creation
+  pk: 104
+- fields: {last_change: 2012-11-05, user: 105}
+  model: Dentist.password_creation
+  pk: 105
+- fields: {last_change: 2012-11-05, user: 106}
+  model: Dentist.password_creation
+  pk: 106
+- fields: {last_change: 2012-11-05, user: 107}
+  model: Dentist.password_creation
+  pk: 107
+- fields: {last_change: 2012-11-05, user: 108}
+  model: Dentist.password_creation
+  pk: 108
+- fields: {last_change: 2012-11-05, user: 109}
+  model: Dentist.password_creation
+  pk: 109
+- fields: {last_change: 2012-11-05, user: 110}
+  model: Dentist.password_creation
+  pk: 110
+- fields: {last_change: 2012-11-05, user: 111}
+  model: Dentist.password_creation
+  pk: 111
+- fields: {last_change: 2012-11-05, user: 112}
+  model: Dentist.password_creation
+  pk: 112
+- fields: {last_change: 2012-11-05, user: 113}
+  model: Dentist.password_creation
+  pk: 113
+- fields: {last_change: 2012-11-05, user: 114}
+  model: Dentist.password_creation
+  pk: 114
+- fields: {last_change: 2012-11-05, user: 115}
+  model: Dentist.password_creation
+  pk: 115
+- fields: {last_change: 2012-11-05, user: 116}
+  model: Dentist.password_creation
+  pk: 116
+- fields: {last_change: 2012-11-05, user: 117}
+  model: Dentist.password_creation
+  pk: 117
+- fields: {last_change: 2012-11-05, user: 118}
+  model: Dentist.password_creation
+  pk: 118
+- fields: {last_change: 2012-11-05, user: 119}
+  model: Dentist.password_creation
+  pk: 119
+- fields: {last_change: 2012-11-05, user: 120}
+  model: Dentist.password_creation
+  pk: 120
+- fields: {last_change: 2012-11-05, user: 121}
+  model: Dentist.password_creation
+  pk: 121
+- fields: {last_change: 2012-11-05, user: 122}
+  model: Dentist.password_creation
+  pk: 122
+- fields: {last_change: 2012-11-05, user: 123}
+  model: Dentist.password_creation
+  pk: 123
+- fields: {last_change: 2012-11-05, user: 124}
+  model: Dentist.password_creation
+  pk: 124
+- fields: {last_change: 2012-11-05, user: 125}
+  model: Dentist.password_creation
+  pk: 125
+- fields: {last_change: 2012-11-05, user: 126}
+  model: Dentist.password_creation
+  pk: 126
+- fields: {last_change: 2012-11-05, user: 127}
+  model: Dentist.password_creation
+  pk: 127
+- fields: {last_change: 2012-11-05, user: 128}
+  model: Dentist.password_creation
+  pk: 128
+- fields: {last_change: 2012-11-05, user: 129}
+  model: Dentist.password_creation
+  pk: 129
+- fields: {last_change: 2012-11-05, user: 130}
+  model: Dentist.password_creation
+  pk: 130
+- fields: {last_change: 2012-11-05, user: 131}
+  model: Dentist.password_creation
+  pk: 131
+- fields: {last_change: 2012-11-05, user: 132}
+  model: Dentist.password_creation
+  pk: 132
+- fields: {last_change: 2012-11-05, user: 133}
+  model: Dentist.password_creation
+  pk: 133
+- fields: {last_change: 2012-11-05, user: 134}
+  model: Dentist.password_creation
+  pk: 134
+- fields: {last_change: 2012-11-05, user: 135}
+  model: Dentist.password_creation
+  pk: 135
+- fields: {last_change: 2012-11-05, user: 136}
+  model: Dentist.password_creation
+  pk: 136
+- fields: {last_change: 2012-11-05, user: 137}
+  model: Dentist.password_creation
+  pk: 137
+- fields: {last_change: 2012-11-05, user: 138}
+  model: Dentist.password_creation
+  pk: 138
+- fields: {last_change: 2012-11-05, user: 139}
+  model: Dentist.password_creation
+  pk: 139
+- fields: {last_change: 2012-11-05, user: 140}
+  model: Dentist.password_creation
+  pk: 140
+- fields: {last_change: 2012-11-05, user: 141}
+  model: Dentist.password_creation
+  pk: 141
+- fields: {last_change: 2012-11-05, user: 142}
+  model: Dentist.password_creation
+  pk: 142
+- fields: {last_change: 2012-11-05, user: 143}
+  model: Dentist.password_creation
+  pk: 143
+- fields: {last_change: 2012-11-05, user: 144}
+  model: Dentist.password_creation
+  pk: 144
+- fields: {last_change: 2012-11-05, user: 145}
+  model: Dentist.password_creation
+  pk: 145
+- fields: {last_change: 2012-11-05, user: 146}
+  model: Dentist.password_creation
+  pk: 146
+- fields: {last_change: 2012-11-05, user: 147}
+  model: Dentist.password_creation
+  pk: 147
+- fields: {last_change: 2012-11-05, user: 148}
+  model: Dentist.password_creation
+  pk: 148
+- fields: {last_change: 2012-11-05, user: 149}
+  model: Dentist.password_creation
+  pk: 149
+- fields: {last_change: 2012-11-05, user: 150}
+  model: Dentist.password_creation
+  pk: 150
+- fields: {last_change: 2012-11-05, user: 151}
+  model: Dentist.password_creation
+  pk: 151
+- fields: {last_change: 2012-11-05, user: 152}
+  model: Dentist.password_creation
+  pk: 152
+- fields: {last_change: 2012-11-05, user: 153}
+  model: Dentist.password_creation
+  pk: 153
+- fields: {last_change: 2012-11-05, user: 154}
+  model: Dentist.password_creation
+  pk: 154
+- fields: {last_change: 2012-11-05, user: 155}
+  model: Dentist.password_creation
+  pk: 155
+- fields: {last_change: 2012-11-05, user: 156}
+  model: Dentist.password_creation
+  pk: 156
+- fields: {last_change: 2012-11-05, user: 157}
+  model: Dentist.password_creation
+  pk: 157
+- fields: {last_change: 2012-11-05, user: 158}
+  model: Dentist.password_creation
+  pk: 158
+- fields: {last_change: 2012-11-05, user: 159}
+  model: Dentist.password_creation
+  pk: 159
+- fields: {last_change: 2012-11-05, user: 160}
+  model: Dentist.password_creation
+  pk: 160
+- fields: {last_change: 2012-11-05, user: 161}
+  model: Dentist.password_creation
+  pk: 161
+- fields: {last_change: 2012-11-05, user: 162}
+  model: Dentist.password_creation
+  pk: 162
+- fields: {last_change: 2012-11-05, user: 163}
+  model: Dentist.password_creation
+  pk: 163
+- fields: {last_change: 2012-11-05, user: 164}
+  model: Dentist.password_creation
+  pk: 164
+- fields: {last_change: 2012-11-05, user: 165}
+  model: Dentist.password_creation
+  pk: 165
+- fields: {last_change: 2012-11-05, user: 166}
+  model: Dentist.password_creation
+  pk: 166
+- fields: {last_change: 2012-11-05, user: 167}
+  model: Dentist.password_creation
+  pk: 167
+- fields: {last_change: 2012-11-05, user: 168}
+  model: Dentist.password_creation
+  pk: 168
+- fields: {last_change: 2012-11-05, user: 169}
+  model: Dentist.password_creation
+  pk: 169
+- fields: {last_change: 2012-11-05, user: 170}
+  model: Dentist.password_creation
+  pk: 170
+- fields: {last_change: 2012-11-05, user: 171}
+  model: Dentist.password_creation
+  pk: 171
+- fields: {last_change: 2012-11-05, user: 172}
+  model: Dentist.password_creation
+  pk: 172
+- fields: {last_change: 2012-11-05, user: 173}
+  model: Dentist.password_creation
+  pk: 173
+- fields: {last_change: 2012-11-05, user: 174}
+  model: Dentist.password_creation
+  pk: 174
+- fields: {last_change: 2012-11-05, user: 175}
+  model: Dentist.password_creation
+  pk: 175
+- fields: {last_change: 2012-11-05, user: 176}
+  model: Dentist.password_creation
+  pk: 176
+- fields: {last_change: 2012-11-05, user: 177}
+  model: Dentist.password_creation
+  pk: 177
+- fields: {last_change: 2012-11-05, user: 178}
+  model: Dentist.password_creation
+  pk: 178
+- fields: {last_change: 2012-11-05, user: 179}
+  model: Dentist.password_creation
+  pk: 179
+- fields: {last_change: 2012-11-05, user: 180}
+  model: Dentist.password_creation
+  pk: 180
+- fields: {last_change: 2012-11-05, user: 182}
+  model: Dentist.password_creation
+  pk: 182
+- fields: {last_change: 2012-11-05, user: 183}
+  model: Dentist.password_creation
+  pk: 183
+- fields: {last_change: 2012-11-05, user: 184}
+  model: Dentist.password_creation
+  pk: 184
+- fields: {last_change: 2012-11-05, user: 185}
+  model: Dentist.password_creation
+  pk: 185
+- fields: {last_change: 2012-11-05, user: 186}
+  model: Dentist.password_creation
+  pk: 186
+- fields: {last_change: 2012-11-05, user: 187}
+  model: Dentist.password_creation
+  pk: 187
+- fields: {last_change: 2012-11-05, user: 188}
+  model: Dentist.password_creation
+  pk: 188
+- fields: {last_change: 2012-11-05, user: 189}
+  model: Dentist.password_creation
+  pk: 189
+- fields: {last_change: 2012-11-05, user: 190}
+  model: Dentist.password_creation
+  pk: 190
+- fields: {last_change: 2012-11-05, user: 191}
+  model: Dentist.password_creation
+  pk: 191
+- fields: {last_change: 2012-11-05, user: 192}
+  model: Dentist.password_creation
+  pk: 192
+- fields: {last_change: 2012-11-05, user: 193}
+  model: Dentist.password_creation
+  pk: 193
+- fields: {last_change: 2012-11-05, user: 194}
+  model: Dentist.password_creation
+  pk: 194
+- fields: {last_change: 2012-11-05, user: 195}
+  model: Dentist.password_creation
+  pk: 195
+- fields: {last_change: 2012-11-05, user: 196}
+  model: Dentist.password_creation
+  pk: 196
+- fields: {last_change: 2012-11-05, user: 197}
+  model: Dentist.password_creation
+  pk: 197
+- fields: {last_change: 2012-11-05, user: 198}
+  model: Dentist.password_creation
+  pk: 198
+- fields: {last_change: 2012-11-05, user: 199}
+  model: Dentist.password_creation
+  pk: 199
+- fields: {last_change: 2012-11-05, user: 200}
+  model: Dentist.password_creation
+  pk: 200
+- fields: {last_change: 2012-11-05, user: 201}
+  model: Dentist.password_creation
+  pk: 201
+- fields: {last_change: 2012-11-05, user: 202}
+  model: Dentist.password_creation
+  pk: 202
+- fields: {last_change: 2012-11-05, user: 203}
+  model: Dentist.password_creation
+  pk: 203
+- fields: {last_change: 2012-11-05, user: 204}
+  model: Dentist.password_creation
+  pk: 204
+- fields: {last_change: 2012-11-05, user: 205}
+  model: Dentist.password_creation
+  pk: 205
+- fields: {last_change: 2012-11-05, user: 206}
+  model: Dentist.password_creation
+  pk: 206
+- fields: {last_change: 2012-11-05, user: 207}
+  model: Dentist.password_creation
+  pk: 207
+- fields: {last_change: 2012-11-05, user: 208}
+  model: Dentist.password_creation
+  pk: 208
+- fields: {last_change: 2012-11-05, user: 209}
+  model: Dentist.password_creation
+  pk: 209
+- fields: {last_change: 2012-11-05, user: 210}
+  model: Dentist.password_creation
+  pk: 210
+- fields: {last_change: 2012-11-05, user: 211}
+  model: Dentist.password_creation
+  pk: 211
+- fields: {last_change: 2012-11-05, user: 212}
+  model: Dentist.password_creation
+  pk: 212
+- fields: {last_change: 2012-11-05, user: 213}
+  model: Dentist.password_creation
+  pk: 213
+- fields: {last_change: 2012-11-05, user: 214}
+  model: Dentist.password_creation
+  pk: 214
+- fields: {last_change: 2012-11-05, user: 215}
+  model: Dentist.password_creation
+  pk: 215
+- fields: {last_change: 2012-11-05, user: 216}
+  model: Dentist.password_creation
+  pk: 216
+- fields: {last_change: 2012-11-05, user: 217}
+  model: Dentist.password_creation
+  pk: 217
+- fields: {last_change: 2012-11-05, user: 218}
+  model: Dentist.password_creation
+  pk: 218
+- fields: {last_change: 2012-11-05, user: 219}
+  model: Dentist.password_creation
+  pk: 219
+- fields: {last_change: 2012-11-05, user: 220}
+  model: Dentist.password_creation
+  pk: 220
+- fields: {last_change: 2012-11-05, user: 221}
+  model: Dentist.password_creation
+  pk: 221
+- fields: {last_change: 2012-12-09, user: 222}
+  model: Dentist.password_creation
+  pk: 222
+- fields: {last_change: 2012-12-09, user: 223}
+  model: Dentist.password_creation
+  pk: 223

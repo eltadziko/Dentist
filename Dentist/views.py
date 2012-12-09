@@ -86,7 +86,7 @@ def register_by_receptionist(request):
             patient = form_patient.save()
             for disease2 in request.POST.getlist('diseases'):
                 dis = disease.objects.get(id=disease2)
-                pat_dis = patient_diseases(patient=patient.id, disease=dis, date=datetime.datetime.now().date())
+                pat_dis = patient_diseases(patient=patient, disease=dis, date=datetime.datetime.now().date())
                 pat_dis.save()
             messages.add_message(request, messages.INFO, 'Pomyślnie zarejestrowano pacjenta.')
             return HttpResponseRedirect('/index/')
@@ -255,7 +255,7 @@ def dentist_register(request):
                     
                     is_taken = False
                     for a in appointment.objects.filter(date=appoint.date, dentist=appoint.dentist):
-                        if appoint.hour>=a.hour and appoint.hour<(datetime.datetime.combine(appoint.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
+                        if not a.untimely and appoint.hour>=a.hour and appoint.hour<(datetime.datetime.combine(appoint.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
                             is_taken = True
                     print is_taken
                     if appointment.objects.filter(date=appoint.date, 
@@ -386,7 +386,7 @@ def dentist_register2(request):
                     
                     is_taken = False
                     for a in appointment.objects.filter(date=appoint.date, dentist=appoint.dentist):
-                        if appoint.hour>=a.hour and appoint.hour<(datetime.datetime.combine(appoint.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
+                        if not a.untimely and appoint.hour>=a.hour and appoint.hour<(datetime.datetime.combine(appoint.date, a.hour) + datetime.timedelta(minutes=a.appointment_type.length)).time():
                             is_taken = True
                     
                     if appointment.objects.filter(date=appoint.date, 
@@ -661,7 +661,8 @@ def day_graphic(request):
     dent = dentist.objects.filter(id__in = dents).order_by('last_name')
 
     dent_list = []
-    for i in range(0, dent.count()/4):
+
+    for i in range(0, dent.count()/4+1):
         dent_list.append([])
         for j in range(4*i, 4*i+4):
             if j<dent.count():
