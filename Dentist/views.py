@@ -1032,10 +1032,10 @@ def dates_addition_edit(request):
                 date.end = request.POST['end_1']
                 appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__lt=date.begin)
                 messages_list = []
-                to = 'lukasizuk@gmail.com' #app.patient.user.email
                 subject = "Odwołana wizyta"
                 for app in appointments:
                     print app.patient.user.email
+                    to = 'lukasizuk@gmail.com' #app.patient.user.email
                     text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
                     message=(subject, text, 'dentistzpi@gmail.com', [to] )
                     messages_list.append(message)
@@ -1043,6 +1043,7 @@ def dates_addition_edit(request):
                 appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.end)
                 for app in appointments:
                     print app.patient.user.email
+                    to = 'lukasizuk@gmail.com' #app.patient.user.email
                     text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
                     message=(subject, text, 'dentistzpi@gmail.com', [to] )
                     messages_list.append(message)
@@ -1055,6 +1056,7 @@ def dates_addition_edit(request):
                     end_visit = end_visit.strftime("%H:%M")
                     if end_visit > date.end:
                         print app.patient.user.email
+                        to = 'lukasizuk@gmail.com' #app.patient.user.email
                         text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
                         message=(subject, text, 'dentistzpi@gmail.com', [to] )
                         messages_list.append(message)
