@@ -98,3 +98,8 @@
   fields:
     name: korzeń językowy
     losses: [10, 11, 12, 13, 14]
+- model: Dentist.tooth_part
+  pk: 21
+  fields:
+    name: korzeń mezjalny
+    losses: [10, 11, 12, 13, 14]

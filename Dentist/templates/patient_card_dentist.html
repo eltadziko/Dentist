@@ -294,9 +294,9 @@
 				<tr>
 					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="160px">Dentysta</th><th>Opis</th>
 					{% if a.dentist.user == request.user %}
-						<th width="150px" colspan="2"></th>
+						<th width="160px" colspan="2"></th>
 					{% else %}
-						<th width="80px"></th>
+						<th width="90px"></th>
 					{% endif %}
 				</tr>
 					<tr>
@@ -306,12 +306,12 @@
 						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
 						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
 						{% if a.dentist.user == request.user %}
-							<td class="app2" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
+							<td class="app2" id="{{ a.id }}" width="90px"><div class="edit_patient">Szczegóły({{ a.tooth_loss_set.all.count }})</div></td>
 							<td id="{{ a.id }}" class="app_edit2" width="70px">
 								<div class="edit_patient">Edytuj</div>
 							</td>
 						{% else %}
-							<td class="app2" id="{{ a.id }}"><div class="edit_patient">Szczegóły</div></td>
+							<td class="app2" id="{{ a.id }}"><div class="edit_patient">Szczegóły({{ a.tooth_loss_set.all.count }})</div></td>
 						{% endif %}
 					</tr>
 					<tr>
@@ -373,11 +373,12 @@
 			<strong>Historia zabiegu:</strong>
 			<table>
 				<tr>
-					<th width="300px">Ząb</th><th width="100px">Data</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
+					<th width="120px">Ząb</th><th width="180">Część zęba</th><th width="100px">Data</th><th width="150px">Rozpoznanie</th><th>Komentarz</th>
 				</tr>
 				{% for l in losses %}
 					<tr>
-						{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}/{{ l.tooth_part }}</td>{% endif %}
+						{% if forloop.first %}<td rowspan="{{ losses.count }}">{{ l.tooth }}</td>{% endif %}
+						<td>{{ l.tooth_part }}</td>
 			 			<td>{{ l.appointment.date|date:'Y-m-d' }}</td>
 			 			<td class="left">{{ l.loss_type }}</td>
 			 			<td class="left">{{ l.comment|linebreaksbr }}</td>
@@ -452,7 +453,7 @@
 		<div class="appointment">
 			<table>
 				<tr>
-					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="160px">Dentysta</th><th>Opis</th><th width="150px" colspan="2"></th>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="160px">Dentysta</th><th>Opis</th><th width="160px" colspan="2"></th>
 				</tr>
 				{% for a in appoints %}
 					<tr>
@@ -461,7 +462,7 @@
 						<td class="left">{% if a.untimely|is_false %}{{ a.appointment_type.type }}{% endif %}</td>
 						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
 						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
-						<td class="app" id="{{ a.id }}" width="80px"><div class="edit_patient">Szczegóły</div></td>
+						<td class="app" id="{{ a.id }}" width="90px"><div class="edit_patient">Szczegóły({{ a.tooth_loss_set.all.count }})</div></td>
 						{% if a.dentist.user == request.user %}
 							<td id="{{ a.id }}" class="app_edit" width="70px">
 								<div class="edit_patient">Edytuj</div>

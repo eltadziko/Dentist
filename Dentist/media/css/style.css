@@ -10,7 +10,6 @@ padding: 0px;
 line-height:25px;
 height: 100%;
 color:#373737;
-
 }
 a{
 text-decoration:none;
@@ -346,8 +345,8 @@ visibility:hidden;
     background: #ffc0cb;
 }
 .flash_debug, .flash_info {
-    border: thin solid #ff0;
-    background: #ffe;
+    border: thin solid #fdbf3b;
+    background: #ffebc1;
 }
 .flash_warning {
     border: thin solid #b8860b;
@@ -724,13 +723,11 @@ margin-bottom:10px;
 	float: left;
 	color:white;
 	width: 25px;
-	font-size:18px;
+	font-size:16px;
 	text-align: center;
   	background: url(../img/BG_submenu.jpg) repeat-x;
   	cursor: pointer;
-  	margin:5px 0px 0px 0px;	
-  	height:40px;
-  	line-height:35px;
+  	height:25px;
 }
 
 #month {
@@ -745,9 +742,7 @@ margin-bottom:10px;
 	text-align: center;
 	width: 150px;
 	float: left;
-	margin:5px 0px 0px 0px;
-	height:40px;
-	line-height:35px;
+
 }
 
 #next {
@@ -948,8 +943,8 @@ area {
     clear:		both;
     max-width:	46.923em; /* 610/13 */  
     *max-width:	45.750em; /* 610/13.3333 - for IE */
-    border: thin solid #ff0;
-    background: #ffe;
+    border: thin solid #fdbf3b;
+    background: #ffebc1;
 }
 
 #graphic {

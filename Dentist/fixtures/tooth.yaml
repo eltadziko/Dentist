@@ -94,7 +94,7 @@
     jaw: górna
     side: lewa
     tooth_number: 24
-    parts: [1, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]
+    parts: [1, 21, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16]
 - model: Dentist.tooth
   pk: 13
   fields:

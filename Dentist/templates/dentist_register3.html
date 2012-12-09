@@ -79,6 +79,7 @@
 		 });	 
 		 
 		 $('#prev').click(function() {
+		  {% if not no_back %}
 		 	var month = $('#month2').attr('class')-1;
 		 	var year = {{ year }};
 			if(month == 0) {
@@ -95,7 +96,7 @@
 			  function(data) { 
 				$('#content').html(data);
 			});
-
+		  {% endif %}
 		 	return false;
 		 });
 		 
@@ -128,6 +129,10 @@
 		 {% endif %}
 		 {% if form.dentist.errors %}
 		 	$('.opcje2').css('height', '345');
+		 {% endif %}
+		 
+		 {% if no_back %}
+		 	$('#prev').css('color', 'gray');
 		 {% endif %}
 	});
 	</script>
