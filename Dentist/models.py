@@ -48,7 +48,7 @@ class patient(models.Model):
     address = models.CharField("Adres", max_length=100)
     PESEL = models.CharField("PESEL", max_length=11, unique=True)
     insurance_type = models.ForeignKey(insurance, verbose_name="Typ ubezpieczenia")
-    insurance_number = models.CharField("Nr ubezp.", max_length=100)
+    insurance_number = models.CharField("Ważność ubezp.", max_length=100)
     phone = models.CharField("Telefon", max_length=9, blank=True, null=True)
     comment = models.TextField("Uwagi", blank=True, null=True)
     user = models.OneToOneField(User, verbose_name="User",  blank=True, null=True)
@@ -106,7 +106,7 @@ class hours(models.Model):
         d = dentist.objects.get(id=self.dentist_id)
         user = User.objects.get(id=d.user_id)
         do = dental_office.objects.get(id=self.dental_office_id)
-        return u'%i' % (self.week_day)
+        return u'%s' % (self.dentist)
     
 class dates(models.Model):
     date = models.DateField("Data")

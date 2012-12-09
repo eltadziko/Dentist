@@ -72,7 +72,7 @@
 		<div class="appointment">
 			<table>
 				<tr>
-					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="200px">Dentysta</th><th>Opis</th><th width="80px"></th>
+					<th width="100px">Data</th><th width="120px">Termin</th><th width="150px">Typ wizyty</th><th width="200px">Dentysta</th><th>Opis</th><th width="90px"></th>
 				</tr>
 				{% for a in appoints %}
 					<tr>
@@ -81,7 +81,7 @@
 						<td class="left">{% if a.untimely|is_false %}{{ a.appointment_type.type }}{% endif %}</td>
 						<td class="left">{{ a.dentist.last_name }} {{ a.dentist.first_name }}</td>
 						<td class="left">{% if a.description %}{{ a.description|linebreaksbr }}{% endif %}</td>
-						<td class="app" id="{{ a.id }}"><div class="edit_patient">Szczegóły</div></td>
+						<td class="app" id="{{ a.id }}"><div class="edit_patient">Szczegóły({{ a.tooth_loss_set.all.count }})</div></td>
 					</tr>
 					<tr id="appoint_{{ a.id }}" class="tooth_loss">
 						<td colspan="6">

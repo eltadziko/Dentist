@@ -1,56 +1,56 @@
 - model: Dentist.patient
   pk: 1
   fields:
-    first_name: Katarzyna 
-    last_name: Nielepkowicz
-    birth_date: 1958-09-08
-    address: ul. Balonowa 23/4, 54-129 Wrocław
-    PESEL: 58090869737
-    insurance_type: 1
-    insurance_number: aktualny 
-    phone: 665238987
-    comment: 
+    first_name: Tadeusz 
+    last_name: Cekała
+    birth_date: 1990-10-03
+    address: ul. B. Chrobrego 20F/15, 55-200 Oława
+    PESEL: 90100302359
+    insurance_type: 7
+    insurance_number: 2013-03-30 
+    phone: 796538761
+    comment: Alergia na Acodin
     user: 22
      
 - model: Dentist.patient
   pk: 2
   fields:
-    first_name: Michał
-    last_name: Iwanicki
-    birth_date: 1989-10-08
-    address: Długa 117, 53-633 Wrocław
-    PESEL: 89100837543
-    insurance_type: 2
-    insurance_number: aktualny 
-    phone: 667548988
+    first_name: Łukasz
+    last_name: Iżuk
+    birth_date: 1990-03-15
+    address: Oławsa 24, 55-300 Proszków
+    PESEL: 90031503354
+    insurance_type: 16
+    insurance_number: 2013-03-30 
+    phone: 662978972
     comment:
     user: 23
       
 - model: Dentist.patient
   pk: 3
   fields:
-    first_name: Jacek
-    last_name: Czapiński
-    birth_date: 1974-08-09
+    first_name: Barbara
+    last_name: Hałasa
+    birth_date: 1990-02-13
     address: Borowska 74/07, 50-532 Wrocław
-    PESEL: 74080965395
-    insurance_type: 3
-    insurance_number: aktualny 
+    PESEL: 90021365395
+    insurance_type: 16
+    insurance_number: 2013-03-30 
     comment:
-    phone: 534234876 
+    phone: 534584148 
     user: 24
      
 - model: Dentist.patient
   pk: 4
   fields:
-    first_name: Grzegorz
-    last_name: Gawryś
-    birth_date: 1972-10-08
+    first_name: Bartosz
+    last_name: Bujała
+    birth_date: 1989-03-08
     address: Piękna 20/68, 50-505 Wrocław
-    PESEL: 72100852638
-    insurance_type: 4
-    insurance_number: aktualny 
-    phone: 788345234
+    PESEL: 89030852638
+    insurance_type: 16
+    insurance_number: 2013-03-30 
+    phone: 609376542
     comment:
     user: 25
      

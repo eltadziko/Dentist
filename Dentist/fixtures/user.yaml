@@ -253,8 +253,8 @@
 - model: auth.User
   pk: 22
   fields:
-    username: katarzyna_nielepkowicz
-    email: katarzyna_nielepkowicz@patient.pl
+    username: eltadziko
+    email: eltadziko@gmail.com
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
     is_active: 1
@@ -265,8 +265,8 @@
 - model: auth.User
   pk: 23
   fields:
-    username: eltadziko 
-    email: michal_iwanicki@patient.pl
+    username: 14lukas14
+    email: lukasizuk@gmail.com
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
     is_active: 1
@@ -277,8 +277,8 @@
 - model: auth.User
   pk: 24
   fields:
-    username: jacek_czapinski
-    email: jacek_czapinski@patient.pl
+    username: baasiczek
+    email: baasiczek@gmail.com
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
     is_active: 1
@@ -289,8 +289,8 @@
 - model: auth.User
   pk: 25
   fields:
-    username: grzegorz_gawrys
-    email: grzegorz_gawrys@patient.pl
+    username: bartekb89
+    email: bartekb89@gmail.com
     password: pbkdf2_sha256$10000$95KIxGLopLJt$F/7lf/ndrNEI9QnZ2kIXaP3jLdG7tj998v7gRv/KGcY=
     is_staff: 0
     is_active: 1
