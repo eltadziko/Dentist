@@ -53,5 +53,6 @@ urlpatterns = patterns('',
     url(r'^patient_card/', views.patient_card),
     url(r'^patient_card_dentist/', views.patient_card_dentist),
     url(r'^dentist_profile/', views.dentist_profile),
+    url(r'^send_reminders/', views.send_reminders),
     
 )

@@ -61,10 +61,13 @@ class GenerateDatesForm(forms.Form):
                                                     label="Dentyści",
                                                     empty_label=None)
     information = forms.CharField(label='Terminy przyjęć',
-                                      widget=forms.Textarea(attrs={'readonly':'True', 'rows':'5'}))
-    begin = forms.CharField(label="Od")
-    end = forms.CharField(label="Do")
-    exclude = forms.CharField(label="Wyłączając", required=False)
+                                      widget=forms.Textarea(attrs={'readonly':'True', 'rows':'5', 'style':'width:280px'}))
+    begin = forms.CharField(label="Od",
+                            widget=forms.TextInput(attrs={'style':'width:200px'}))
+    end = forms.CharField(label="Do",
+                            widget=forms.TextInput(attrs={'style':'width:200px'}))
+    exclude = forms.CharField(label="Wyłączając", required=False,
+                            widget=forms.TextInput(attrs={'style':'width:200px'}))
     hidden = forms.CharField(label='Wpisane daty',
                                     required=False,
                                       widget=forms.Textarea(attrs={'readonly':'True', 'hidden':'hidden'}))
@@ -199,11 +202,14 @@ class GenerateDateForm(forms.Form):
                                                     required=False, 
                                                     label="Dentyści",
                                                     empty_label=None)
-    date = forms.CharField(label="Data")
-    begin = forms.CharField(label="Przyjmuje od [gg:mm]")
-    end = forms.CharField(label="Przyjmuje do [gg:mm]")
+    date = forms.CharField(label="Data",
+                            widget=forms.TextInput(attrs={'style':'width:150px'}))
+    begin = forms.CharField(label="Przyjmuje od [gg:mm]",
+                            widget=forms.TextInput(attrs={'style':'width:150px'}))
+    end = forms.CharField(label="Przyjmuje do [gg:mm]",
+                            widget=forms.TextInput(attrs={'style':'width:150px'}))
     room = forms.CharField(label="Pokój",
-                           widget=forms.TextInput(attrs={'maxlength': '5'}))   
+                           widget=forms.TextInput(attrs={'maxlength': '5', 'style':'width:100px'}))   
     hidden = forms.CharField(label='Wpisane daty',
                                     required=False,
                                       widget=forms.Textarea(attrs={'readonly':'True', 'hidden':'hidden'}))    
