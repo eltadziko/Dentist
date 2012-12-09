@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block css %}
+	{{ block.super }}
+	<link href="{{ MEDIA_URL }}/css/jquery_ui.css" rel="stylesheet" media="all" type="text/css" />
+	<style type="text/css">
+		#termins{
+			margin:30px 0px 0px 40px;
+			width:900px;
+			line-height:34px;
+			margin:0 auto;
+		}
+		#termins table{
+		  width:100%;
+		  border: 1px solid black;border-collapse: collapse;
+		}
+		#termins th{
+		  border: 1px solid black;
+		  background-color: #cccccc;  
+		}
+		#termins td{
+		  border: 1px solid black;
+		  text-align:center;
+		}
+		#forms{
+			width:900px;
+		}
+		.center_select{
+			margin:30px 0px 0px 40px;
+			width:600px;
+			line-height:34px;
+			margin:0 auto;
+		}
+	</style>
+{% endblock %}
+
+{% block javascript %}
+	{{ block.super }}
+	<script src="{{ MEDIA_URL }}/js/jquery_ui_min.js"></script>
+	<script>
+	
+	$(document).ready(function() {
+	
+		$("body").bind({
+		    ajaxStart: function() { 
+		        $(this).addClass("loading"); 
+		    },
+		    ajaxStop: function() { 
+		        $(this).removeClass("loading"); 
+		    }    
+		});
+		
+		$('#send_submit').click(function() {
+			$.post('/send_reminders/?type=ajax',
+			{ sended: true,
+			  csrfmiddlewaretoken: '{{ csrf_token }}' },
+			  function(data) { 
+				$('#content').html(data); 
+			}
+			 );
+		 	return false;
+		});		 
+	});
+	</script>
+{% endblock %}
+
+{% block header %}
+	Jutrzejsze wizyty
+{% endblock %}
+
+{% block right_column %}
+<div id="forms">
+<form action="{% url views.send_reminders %}" method="post"> {% csrf_token %}
+	<p><input id="send_submit" name="send_submit" type="submit" value="Wyślij Powiadomienia" class="button2" /></p>
+</form>
+<div id="termins">
+	<table>
+	<tr><th>Data</th><th>Godz</th><th>Pacjent</th><th>Dentysta</th><th>Gabinet</th></tr>
+	{% for app in appointments_list %}
+		<tr>
+			<td>{{ app.date|date:'d-m-Y' }}</td>
+			<td>{{ app.hour|time:'H:i' }}</td>
+			<td>{{ app.patient }}</td>
+			<td>{{ app.dentist }}</td>
+			<td>{{ app.dental_office }}</td>
+		</tr>
+	{% endfor %}
+	</table>
+</div>
+</div>
+<div class="loader"><!-- Place at bottom of page --></div>
+{% endblock %}

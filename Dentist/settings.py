@@ -117,17 +117,17 @@ ROOT_URLCONF = 'Dentist.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'Dentist.wsgi.application'
 
-EMAIL_HOST = 'poczta.o2.pl'
+EMAIL_HOST = 'smtp.gmail.com'
 
-EMAIL_HOST_USER = 'dentist_zpi'
+EMAIL_HOST_USER = 'dentistzpi@gmail.com'
 
 EMAIL_PORT = 587
 
-EMAIL_HOST_PASSWORD = '123456'
+EMAIL_HOST_PASSWORD = '1234abcd1234'
 
 EMAIL_USE_TLS = True
 
-DEFAULT_FROM_EMAIL = "dentist_zpi@o2.pl"
+DEFAULT_FROM_EMAIL = "dentistzpi@gmail.com"
 
 TEMPLATE_DIRS = (
     'E:/workspace/Dentist/Dentist/templates',

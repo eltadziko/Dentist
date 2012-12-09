@@ -21,7 +21,7 @@ from decorators import *
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.core.exceptions import ValidationError
-from django.core.mail import send_mail
+from django.core.mail import send_mail, send_mass_mail
 
 def access_denied(request):
     return render(request, 'access_denied.html')
@@ -981,19 +981,23 @@ def dates_addition_edit(request):
                     form = DatesAdditionEditForm(request.POST['office'], -1)
                 else:
                     form = DatesAdditionEditForm(request.POST['office'], -1, request.POST)
-            today = datetime.datetime.today().date() 
-            dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value)
+            today = datetime.datetime.today().date()
+            dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value, date__gte=today)
         elif 'delete' in request.POST.keys():
             date = dates.objects.get(id=request.POST['delete'])
             appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.begin, hour__lte=date.end)
+            messages_list = []
             for app in appointments:
                 print app.patient.user.email
                 subject = "Odwołana wizyta"
                 text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ lekarz "+str(app.dentist)+" nie przyjmuje pacjentów w tym dniu. Przepraszamy za niedogodności."
-                send_mail(subject, text, 'dentist_zpi@o2.pl', ['lukasizuk@gmail.com'], fail_silently=False)
+                to = 'lukasizuk@gmail.com' #app.patient.user.email
+                message=(subject, text, 'dentistzpi@gmail.com', [to] )
+                messages_list.append(message)
                 app.delete()
+            send_mass_mail(messages_list, fail_silently=False)
             date.delete()
-            messages.add_message(request, messages.INFO, 'Pomyślnie usunięto termin oraz zaplanowane wizyty.')
+            messages.add_message(request, messages.INFO, 'Pomyślnie usunięto termin oraz zaplanowane wizyty. Wysłano również powiadomienia.')
             form = DatesAdditionEditForm(request.POST['o'], request.POST['d'])
             today = datetime.datetime.today().date()    
             dates_list = dates.objects.filter(dentist__id=request.POST['d'], dental_office__id=request.POST['o'], date__gte=today)
@@ -1027,10 +1031,21 @@ def dates_addition_edit(request):
                 date.begin = request.POST['begin_1']
                 date.end = request.POST['end_1']
                 appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__lt=date.begin)
+                messages_list = []
+                to = 'lukasizuk@gmail.com' #app.patient.user.email
+                subject = "Odwołana wizyta"
                 for app in appointments:
+                    print app.patient.user.email
+                    text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
+                    message=(subject, text, 'dentistzpi@gmail.com', [to] )
+                    messages_list.append(message)
                     app.delete()
                 appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office, hour__gte=date.end)
                 for app in appointments:
+                    print app.patient.user.email
+                    text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
+                    message=(subject, text, 'dentistzpi@gmail.com', [to] )
+                    messages_list.append(message)
                     app.delete()
                 appointments = appointment.objects.filter(date=date.date, dentist=date.dentist, dental_office=date.dental_office)
                 for app in appointments:
@@ -1038,11 +1053,15 @@ def dates_addition_edit(request):
                     h = datetime.datetime.combine(date.date, app.hour)
                     end_visit = h + datetime.timedelta(minutes=length)
                     end_visit = end_visit.strftime("%H:%M")
-                    print end_visit
                     if end_visit > date.end:
+                        print app.patient.user.email
+                        text = "Z przykrością informujemy, że wizyta zaplanowana na "+app.date.strftime("%d-%m-%Y")+" "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+" została odwołana, ponieważ zmienione zostały godziny przyjmownia lekarza "+str(app.dentist)+" w tym dniu. Przepraszamy za niedogodności."
+                        message=(subject, text, 'dentistzpi@gmail.com', [to] )
+                        messages_list.append(message)
                         app.delete()
+                send_mass_mail(messages_list, fail_silently=False)
                 date.save()
-                messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano termin oraz usunięto kolidujące wizyty.')
+                messages.add_message(request, messages.INFO, 'Pomyślnie zaktualizowano termin oraz usunięto kolidujące wizyty. Wysłano również powiadomienia.')
                 form = DatesAdditionEditForm(date.dental_office.id, date.dentist.pk)
                 today = datetime.datetime.today().date()    
                 dates_list = dates.objects.filter(dentist__id=date.dentist.id, dental_office__id=date.dental_office.id, date__gte=today)
@@ -1061,6 +1080,28 @@ def dates_addition_edit(request):
         dates_list = dates.objects.filter(dentist__id=form['dentist_man'].value, dental_office__id=form['office'].value, date__gte=today)
     return render(request, 'dates_addition_edit.html', {'form': form, 'dates_list': dates_list, 'header': True})
 
+@login_required
+@user_passes_test(in_receptionist_group, login_url='/access_denied/')
+@user_passes_test(new_password, login_url="/password/")
+def send_reminders(request):
+    today = datetime.datetime.today().date()
+    tomorow = today + datetime.timedelta(days=1)
+    appointments = appointment.objects.filter(date=tomorow)
+    if request.POST:
+        if 'sended' in request.POST.keys():
+            messages_list = []
+            for app in appointments:
+                print app.patient.phone
+                print app.patient.user.email
+                subject = "Przypomnienie wizyty"
+                text = "Przypominamy o wizycie w dniu jutrzejszym ("+app.date.strftime("%d-%m-%Y")+") o godz: "+app.hour.strftime("%H:%M")+" w gabinecie "+str(app.dental_office)+". Lekarz: "+str(app.dentist)+"."
+                to = 'lukasizuk@gmail.com' #app.patient.user.email
+                message=(subject, text, 'dentistzpi@gmail.com', [to] )
+                messages_list.append(message)
+            send_mass_mail(messages_list, fail_silently=False)
+            messages.add_message(request, messages.INFO, 'Wysłano powiadomienia')    
+    return render(request, 'send_reminders.html', {'appointments_list': appointments, 'header': True})
+                 
 @user_passes_test(new_password, login_url="/password/")
 def offices(request):
     offs = dental_office.objects.all().order_by('address')
