@@ -41,15 +41,6 @@
 	
 	$(document).ready(function() {
 	
-		$("body").bind({
-		    ajaxStart: function() { 
-		        $(this).addClass("loading"); 
-		    },
-		    ajaxStop: function() { 
-		        $(this).removeClass("loading"); 
-		    }    
-		});
-	
 	function ConfirmDialog(message, app){
 	    $('<div></div>').appendTo('body')
 	                    .html('<div><h4>'+message+'</h4></div>')

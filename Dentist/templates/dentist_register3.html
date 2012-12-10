@@ -50,6 +50,7 @@
 		 });
 		 			
 		 $("#id_office").change(function() {
+		 	$('body').addClass("loading");
 			$.post('/dentist_register3/?type=ajax',
 			{ office: $(this).val(),
 			  pat: $("#id_pat").val(),
@@ -58,12 +59,14 @@
 			  year: {{ year }},
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
-				$('#content').html(data); 
+				$('#content').html(data);
+				$('body').removeClass("loading"); 
 			});
 		 	return false;
 		 });
 		 
 		 $("input[name=dentist]").change(function() {
+		 	$('body').addClass("loading");
 			$.post('/dentist_register3/?type=ajax',
 			{ office: $('#id_office').val(),
 			  dentist: $(this).val(),
@@ -74,12 +77,14 @@
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			function(data) { 
 				$('#content').html(data);
+				$('body').removeClass("loading");
 			});
 		 	return false;
 		 });	 
 		 
 		 $('#prev').click(function() {
 		  {% if not no_back %}
+		  	$('body').addClass("loading");
 		 	var month = $('#month2').attr('class')-1;
 		 	var year = {{ year }};
 			if(month == 0) {
@@ -95,12 +100,14 @@
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			  function(data) { 
 				$('#content').html(data);
+				$('body').removeClass("loading");
 			});
 		  {% endif %}
 		 	return false;
 		 });
 		 
 		 $('#next').click(function() {
+		 	$('body').addClass("loading");
 		 	var month = $('#month2').attr('class')-1+2;
 		 	var year = {{ year }};
 			if(month == 13) {
@@ -116,6 +123,7 @@
 			  csrfmiddlewaretoken: '{{ csrf_token }}' },
 			  function(data) { 
 				$('#content').html(data);
+				$('body').removeClass("loading");
 			});
 
 		 	return false;

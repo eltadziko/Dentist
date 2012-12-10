@@ -18,6 +18,21 @@ Stomatologia Coldix
 {% block javascript %}
 <script type="text/javascript" src="{{ MEDIA_URL }}/js/jquery.js"></script>
 
+{% if not loader %}
+<script>
+$(document).ready(function() {
+	$("body").ajaxStart(function() { 
+		        $('body').addClass("loading"); 
+		    });
+		    
+	$("body").ajaxStop(function() { 
+		        $('body').removeClass("loading"); 
+		    });
+
+});
+</script>
+{% endif %}
+
 {% if header %}
 	<script>
 		$(document).ready(function() {
@@ -184,6 +199,7 @@ Stomatologia Coldix
 	</div>
 {% block right_column %}
 {% endblock %}
+<div class="loader"><!-- Place at bottom of page --></div>
 </div>
 </div>
 

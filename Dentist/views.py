@@ -183,7 +183,7 @@ def patient_list(request):
         patients2 = paginator.page(1)
     except EmptyPage:
         patients2 = paginator.page(1)
-    return render(request, 'patients.html', {'patients': patients2, 'header': True}) 
+    return render(request, 'patients.html', {'patients': patients2, 'header': True, 'loader': True}) 
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -466,7 +466,7 @@ def dentist_register2(request):
     
     now = datetime.datetime.now().date()
     no_back = (month == now.month and year == now.year)
-    return render(request, 'dentist_register2.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back})
+    return render(request, 'dentist_register2.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back, 'loader': True})
 
 @login_required
 @user_passes_test(in_receptionist_group, login_url='/access_denied/')
@@ -521,7 +521,7 @@ def dentist_register3(request):
 
     now = datetime.datetime.now().date()
     no_back = (month == now.month and year == now.year)
-    return render(request, 'dentist_register3.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back})
+    return render(request, 'dentist_register3.html', {'form': form, 'month': month, 'year': year, 'header': True, 'no_back': no_back, 'loader': True})
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
@@ -1283,7 +1283,7 @@ def reservations(request):
                 patients2 = paginator.page(1)
             except EmptyPage:
                 patients2 = paginator.page(1)
-            return render(request, 'patients.html', {'patients': patients2})
+            return render(request, 'patients.html', {'patients': patients2, 'loader': True})
     return render(request, 'reservations.html', {'reservations': reservations, 'patient': pat, 'header': True})
 
 @login_required
