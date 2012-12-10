@@ -2445,64 +2445,64 @@
     hour: '11:00:00', is_now: -1, patient: 11, untimely: false}
   model: Dentist.appointment
   pk: 69
-- fields: {color: ff0000, type: "pr\xF3chnica"}
+- fields: {color: 666666, type: "pr\xF3chnica"}
   model: Dentist.loss_type
   pk: 1
-- fields: {color: f00000, type: "wype\u0142nienie tymczasowe"}
+- fields: {color: 999999, type: "wype\u0142nienie tymczasowe"}
   model: Dentist.loss_type
   pk: 2
-- fields: {color: 0f0000, type: "wype\u0142nienie ostateczne"}
+- fields: {color: CCCCCC, type: "wype\u0142nienie ostateczne"}
   model: Dentist.loss_type
   pk: 3
-- fields: {color: 00f000, type: "z\u0105b do usuni\u0119cia"}
+- fields: {color: FF3333, type: "z\u0105b do usuni\u0119cia"}
   model: Dentist.loss_type
   pk: 4
-- fields: {color: 000f00, type: "z\u0105b usuni\u0119ty"}
+- fields: {color: CC0000, type: "z\u0105b usuni\u0119ty"}
   model: Dentist.loss_type
   pk: 5
-- fields: {color: 0000f0, type: "z\u0105b zatrzymany"}
+- fields: {color: 660000, type: "z\u0105b zatrzymany"}
   model: Dentist.loss_type
   pk: 6
-- fields: {color: 00000f, type: trepanacja komory}
+- fields: {color: FFFF66, type: trepanacja komory}
   model: Dentist.loss_type
   pk: 7
-- fields: {color: 32aa66, type: dewitalizacja miazgi}
+- fields: {color: 663300, type: dewitalizacja miazgi}
   model: Dentist.loss_type
   pk: 8
-- fields: {color: 66aa11, type: ekstyrpacja miazgi}
+- fields: {color: 996600, type: ekstyrpacja miazgi}
   model: Dentist.loss_type
   pk: 9
-- fields: {color: 9581bb, type: "usuni\u0119cie z\u0142og\xF3w naz\u0119bnych"}
+- fields: {color: FF9900, type: "usuni\u0119cie z\u0142og\xF3w naz\u0119bnych"}
   model: Dentist.loss_type
   pk: 10
-- fields: {color: '937196', type: choroba miazgi}
+- fields: {color: FFCC33, type: choroba miazgi}
   model: Dentist.loss_type
   pk: 11
-- fields: {color: cb48fa, type: "dezynfekcja kana\u0142u"}
+- fields: {color: FFCC99, type: "dezynfekcja kana\u0142u"}
   model: Dentist.loss_type
   pk: 12
-- fields: {color: c893ca, type: "wype\u0142nienie kana\u0142u tymczasowe"}
+- fields: {color: CC9966, type: "wype\u0142nienie kana\u0142u tymczasowe"}
   model: Dentist.loss_type
   pk: 13
-- fields: {color: 29bacd, type: "wype\u0142nienie kana\u0142u ostateczne"}
+- fields: {color: 996633, type: "wype\u0142nienie kana\u0142u ostateczne"}
   model: Dentist.loss_type
   pk: 14
-- fields: {color: '892061', type: "zapalenie dzi\u0105se\u0142"}
+- fields: {color: FF9999, type: "zapalenie dzi\u0105se\u0142"}
   model: Dentist.loss_type
   pk: 15
-- fields: {color: 5ffabc, type: "zapalenie przyz\u0119bia"}
+- fields: {color: FF9999, type: "zapalenie przyz\u0119bia"}
   model: Dentist.loss_type
   pk: 16
-- fields: {color: d446cc, type: "recesja dzi\u0105s\u0142a"}
+- fields: {color: FF9999, type: "recesja dzi\u0105s\u0142a"}
   model: Dentist.loss_type
   pk: 17
-- fields: {color: 77cc33, type: "ropie\u0144 przyz\u0119bny"}
+- fields: {color: FF9999, type: "ropie\u0144 przyz\u0119bny"}
   model: Dentist.loss_type
   pk: 18
-- fields: {color: 5544cc, type: "zesp\xF3\u0142 endo-perio"}
+- fields: {color: FF9999, type: "zesp\xF3\u0142 endo-perio"}
   model: Dentist.loss_type
   pk: 19
-- fields: {color: dd83ca, type: "uraz przyz\u0119bia"}
+- fields: {color: FF9999, type: "uraz przyz\u0119bia"}
   model: Dentist.loss_type
   pk: 20
 - fields:

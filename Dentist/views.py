@@ -1300,7 +1300,7 @@ def patient_card(request):
         losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth'])).filter(tooth_part = tooth_part.objects.get(id = request.POST['tooth_part'])).order_by('-id')
     if 'tooth_all' in request.POST.keys():
             losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth_all'])).order_by('-id')
-    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints, 'losses': losses, 'losses_all': losses_all, 'header': True })
+    return render(request, 'patient_card.html', {'patient': pat, 'appoints': appoints, 'losses': losses, 'losses_all': losses_all, 'header': True, 'loader': True })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
@@ -1359,7 +1359,7 @@ def patient_card_dentist(request):
             loss.save()
         if 'tooth_all' in request.POST.keys():
             losses = losses.filter(tooth = tooth.objects.get(id = request.POST['tooth_all'])).order_by('-id')
-    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True })
+    return render(request, 'patient_card_dentist.html', {'patient': pat, 'appoints': appoints, 'date': request.session['date'], 'graphic': request.session['graphic'], 'appointment': appoint, 'form': form, 'losses': losses, 'losses_all': losses_all, 'header': True, 'loader': True })
 
 @login_required
 @user_passes_test(in_dentist_group, login_url='/access_denied/')
